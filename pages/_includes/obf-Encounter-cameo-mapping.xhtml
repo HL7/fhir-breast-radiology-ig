@@ -1,0 +1,51 @@
+
+<p> </p>
+<p><b>Mapping Source</b></p>
+<p>This structure represents the following mapping definition:</p>
+<pre>
+obf.Encounter maps to Encounter:
+  Language maps to language
+  Narrative maps to text
+  ImplicitRules maps to implicitRules
+  Metadata.VersionId maps to meta.versionId
+  Metadata.SourceSystem maps to meta.source
+  Metadata.Profile maps to meta.profile
+  Metadata.LastUpdated maps to meta.lastUpdated
+  Metadata.SecurityLabel maps to meta.security
+  Metadata.Tag maps to meta.tag
+  Identifier maps to identifier
+  Status maps to status
+  StatusHistory maps to statusHistory
+  StatusHistory.Status maps to statusHistory.status
+  StatusHistory.TimePeriod maps to statusHistory.period
+  EncounterClass maps to class // Min Cardinality changed from 0 to 1
+  ClassHistory maps to classHistory
+  ClassHistory.EncounterClass maps to classHistory.class
+  ClassHistory.TimePeriod maps to classHistory.period
+  Type maps to type
+  PriorityCode maps to priority
+  SubjectOfRecord maps to subject
+  EpisodeOfCare maps to episodeOfCare
+  ReferralBasedOn maps to basedOn  // ReferralRequest changed to basedOn, Added Target Type ServiceRequest
+  Participation maps to participant
+  Participation.ParticipationType maps to participant.type
+  Participation.ParticipationPeriod maps to participant.period
+  Participation.Participant maps to participant.individual // Added Target Type PractitionerRole
+  Appointment maps to appointment // Max Cardinality changed from 1 to *
+  TimePeriod maps to period
+  Duration maps to length
+  ReasonCode maps to reasonCode
+  EncounterReasonReference maps to reasonReference
+  EncounterDiagnosis maps to diagnosis
+  EncounterDiagnosis.DiagnosisCode maps to diagnosis.extension
+  EncounterDiagnosis.Condition maps to diagnosis.condition
+  EncounterDiagnosis.Type maps to diagnosis.use // renamed from role to use
+  EncounterDiagnosis.PriorityRank maps to diagnosis.rank
+  EncounterLocation maps to location
+  EncounterLocation.Location maps to location.location
+  EncounterLocation.Status maps to location.status
+  EncounterLocation.TimePeriod maps to location.period
+  Organization maps to serviceProvider
+  PartOf maps to partOf
+
+</pre>

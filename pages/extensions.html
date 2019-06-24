@@ -1,0 +1,109 @@
+---
+# jekyll header
+---
+{% include header.html %}
+
+<!-- ============BreadCrumb=============== -->
+<div id="segment-breadcrumb" class="segmnt">
+  <!-- segment-breadcrumb -->
+  <div class="container">
+    <!-- container -->
+    <ul class="breadcrumb">
+      <li title="home"><a href="index.html"><b>Home</b></a></li>
+      <li><b>Extensions</b></li>
+    </ul>
+  </div>
+  <!-- /container -->
+</div>
+<!-- /segment-breadcrumb -->
+
+{% include container-start.html %}
+
+<!-- ============CONTENT CONTENT=============== -->
+
+<h2>Primary extensions defined as part of this Implementation Guide</h2>
+
+<table class="codes">
+  <thead>
+    <tr>
+      <td>
+        <b>Name</b>
+      </td>
+      <td>
+        <b>Definition</b>
+      </td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+          <td><a href="StructureDefinition-xxyyz-Breastbodylocation-extension.html">Breastbodylocation</a></td>
+          <td>{% capture md_text %}Location of the breast abnormality.{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        <tr>
+          <td><a href="StructureDefinition-xxyyz-Breastdepth-extension.html">Breastdepth</a></td>
+          <td>{% capture md_text %}BreastDepth{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        <tr>
+          <td><a href="StructureDefinition-xxyyz-Breastlocation-extension.html">Breastlocation</a></td>
+          <td>{% capture md_text %}BreastLocation{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        <tr>
+          <td><a href="StructureDefinition-xxyyz-DistanceFromNipple-extension.html">DistanceFromNipple</a></td>
+          <td>{% capture md_text %}Distance from Nipple{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        <tr>
+          <td><a href="StructureDefinition-shr-core-Laterality-extension.html">Laterality</a></td>
+          <td>{% capture md_text %}Body side of the body location, if needed to distinguish from a similar location on the other side of the body.
+
+The laterality element is part of BodyLocation, a flexible structure that allows the location to be determined by a single code, or a code plus laterality and/or orientation. The body location can also be specified in relation to one or more body landmarks. SNOMED CT is used in all cases.
+
++ Code only: The code should include (precoordinate) laterality and/orientation to the degree necessary to completely specify the body location.
++ Code plus laterality and/or orientation: The basic code augmented by codes specifying the body side and/or anatomical orientation.
++ Relation to landmark: The location relative to a landmark is specified by:
+- Establishing the location and type of landmark using a body site code and optional laterality/orientation, and
+- Specifying the direction and distance from the landmark to the body location.
+
+Note that BodyLocation is a data type (a reusable structure), not a stand-alone entity. The concept is similar to how a postal address can apply to a person, location, or organization. This contrasts with FHIR's stand-alone BodySite (aka BodyStructure in r4) which 'is not ... intended for describing the type of anatomical location but rather a specific body site on a specific patient' (FHIR 3.5).{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        <tr>
+          <td><a href="StructureDefinition-xxyyz-Laterality-extension.html">Laterality</a></td>
+          <td>{% capture md_text %}Laterality{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        <tr>
+          <td><a href="StructureDefinition-shr-core-Orientation-extension.html">Orientation</a></td>
+          <td>{% capture md_text %}Orientation of the body location, if needed to distinguish from a similar location in another orientation.
+The orientation element is part of BodyLocation, a flexible structure that allows the location to be determined by a single code, or a code plus laterality and/or orientation. The body location can also be specified in relation to one or more body landmarks. SNOMED CT is used in all cases.
+
++ Code only: The code should include (precoordinate) laterality and/orientation to the degree necessary to completely specify the body location.
++ Code plus laterality and/or orientation: The basic code augmented by codes specifying the body side and/or anatomical orientation.
++ Relation to landmark: The location relative to a landmark is specified by:
+- Establishing the location and type of landmark using a body site code and optional laterality/orientation, and
+- Specifying the direction and distance from the landmark to the body location.
+
+Note that BodyLocation is a data type (a reusable structure), not a stand-alone entity. The concept is similar to how a postal address can apply to a person, location, or organization. This contrasts with FHIR's stand-alone BodySite (aka BodyStructure in r4) which 'is not ... intended for describing the type of anatomical location but rather a specific body site on a specific patient' (FHIR 3.5).{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        <tr>
+          <td><a href="StructureDefinition-shr-core-RelationToLandmark-extension.html">RelationToLandmark</a></td>
+          <td>{% capture md_text %}The relationship between a landmark that helps determine a body location and the body location itself. The location relative to a landmark is specified by:
+* Specifying the location and type of landmark using a body site code and optional laterality/orientation,
+* Specifying the direction from the landmark to the body location, and
+* Specifying the distance from the landmark to the body location.
+
+The RelationToLandmark element is part of BodyLocation, a flexible structure that allows the location to be determined by a single code, or a code plus laterality and/or orientation. The body location can also be specified in relation to one or more body landmarks. SNOMED CT is used in all cases.
+
++ Code only: The code should include (precoordinate) laterality and/orientation to the degree necessary to completely specify the body location.
++ Code plus laterality and/or orientation: The basic code augmented by codes specifying the body side and/or anatomical orientation.
++ Relation to landmark: The location relative to a landmark is specified by:
+- Establishing the location and type of landmark using a body site code and optional laterality/orientation, and
+- Specifying the direction and distance from the landmark to the body location.
+
+Note that BodyLocation is a data type (a reusable structure), not a stand-alone entity. The concept is similar to how a postal address can apply to a person, location, or organization. This contrasts with FHIR's stand-alone BodySite (aka BodyStructure in r4) which 'is not ... intended for describing the type of anatomical location but rather a specific body site on a specific patient' (FHIR 3.5).{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        
+  </tbody>
+</table>
+
+<!-- ==============END CONTENT END CONTENT=================== -->
+
+{% include container-end.html %}
+{% include footer.html %}

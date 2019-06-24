@@ -1,0 +1,1142 @@
+<ImplementationGuide xmlns="http://hl7.org/fhir">
+    <id value="hl7.fhir.us.brr-0.1" />
+    <url value="http://www.cimi.com/fhir/ImplementationGuide/hl7.fhir.us.brr-0.1" />
+    <name value="Breast_Radiology_Reporting" />
+    <title value="Breast Radiology Reporting" />
+    <status value="draft" />
+    <publisher value="Hl7"/>
+    <contact>
+      <telecom>
+        <system value="url"/>
+        <value value="http://BreastRadReport.com"/>
+      </telecom>
+    </contact>
+
+    <packageId value="hl7.fhir.us.brr"/>
+    <fhirVersion value="4.0.0"/>
+    <definition>
+        <grouping>
+            <name value="Profiles in this Implementation Guide"/>
+            <description value="Profiles in this Implementation Guide"/>
+        </grouping>
+        <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-AccessionIdentifier" />
+          </reference>
+          <name value="obf-AccessionIdentifier" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-ActionPerformed" />
+          </reference>
+          <name value="obf-ActionPerformed" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-ActionRequest" />
+          </reference>
+          <name value="obf-ActionRequest" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-ActionStatement" />
+          </reference>
+          <name value="obf-ActionStatement" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-Annotation" />
+          </reference>
+          <name value="obf-Annotation" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-Appointment" />
+          </reference>
+          <name value="obf-Appointment" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/xxyyz-BreastAbnormality" />
+          </reference>
+          <name value="xxyyz-BreastAbnormality" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/xxyyz-BreastBodyLocation" />
+          </reference>
+          <name value="xxyyz-BreastBodyLocation" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/xxyyz-BreastRadiologyReport" />
+          </reference>
+          <name value="xxyyz-BreastRadiologyReport" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-ClinicalStatement" />
+          </reference>
+          <name value="obf-ClinicalStatement" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-Composition" />
+          </reference>
+          <name value="obf-Composition" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-Condition" />
+          </reference>
+          <name value="obf-Condition" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-Coverage" />
+          </reference>
+          <name value="obf-Coverage" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-Device" />
+          </reference>
+          <name value="obf-Device" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-DiagnosticReport" />
+          </reference>
+          <name value="obf-DiagnosticReport" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-DocumentReference" />
+          </reference>
+          <name value="obf-DocumentReference" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-DomainResource" />
+          </reference>
+          <name value="obf-DomainResource" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-Dosage" />
+          </reference>
+          <name value="obf-Dosage" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/shr-core-Duration" />
+          </reference>
+          <name value="shr-core-Duration" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-Encounter" />
+          </reference>
+          <name value="obf-Encounter" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-EncounterOrEpisode" />
+          </reference>
+          <name value="obf-EncounterOrEpisode" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-Entity" />
+          </reference>
+          <name value="obf-Entity" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-EntityOrRole" />
+          </reference>
+          <name value="obf-EntityOrRole" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-EpisodeOfCare" />
+          </reference>
+          <name value="obf-EpisodeOfCare" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-Group" />
+          </reference>
+          <name value="obf-Group" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-InformationItem" />
+          </reference>
+          <name value="obf-InformationItem" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-Location" />
+          </reference>
+          <name value="obf-Location" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-Media" />
+          </reference>
+          <name value="obf-Media" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-Medication" />
+          </reference>
+          <name value="obf-Medication" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-MedicationAction" />
+          </reference>
+          <name value="obf-MedicationAction" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-MedicationAdministration" />
+          </reference>
+          <name value="obf-MedicationAdministration" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-MedicationDispense" />
+          </reference>
+          <name value="obf-MedicationDispense" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-MedicationRequest" />
+          </reference>
+          <name value="obf-MedicationRequest" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-MedicationStatement" />
+          </reference>
+          <name value="obf-MedicationStatement" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/shr-core-Money" />
+          </reference>
+          <name value="shr-core-Money" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-NationalProviderIdentifier" />
+          </reference>
+          <name value="obf-NationalProviderIdentifier" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-Observation" />
+          </reference>
+          <name value="obf-Observation" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-Organization" />
+          </reference>
+          <name value="obf-Organization" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-Patient" />
+          </reference>
+          <name value="obf-Patient" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-Practitioner" />
+          </reference>
+          <name value="obf-Practitioner" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-Procedure" />
+          </reference>
+          <name value="obf-Procedure" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-ProcedureRequest" />
+          </reference>
+          <name value="obf-ProcedureRequest" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-QuestionnaireResponse" />
+          </reference>
+          <name value="obf-QuestionnaireResponse" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-ReferralRequest" />
+          </reference>
+          <name value="obf-ReferralRequest" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-RelatedPerson" />
+          </reference>
+          <name value="obf-RelatedPerson" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-ResearchStudy" />
+          </reference>
+          <name value="obf-ResearchStudy" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-ResearchSubject" />
+          </reference>
+          <name value="obf-ResearchSubject" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-Role" />
+          </reference>
+          <name value="obf-Role" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/shr-core-SampledData" />
+          </reference>
+          <name value="shr-core-SampledData" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-ServiceRequest" />
+          </reference>
+          <name value="obf-ServiceRequest" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-SituationStatement" />
+          </reference>
+          <name value="obf-SituationStatement" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-Specimen" />
+          </reference>
+          <name value="obf-Specimen" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-Substance" />
+          </reference>
+          <name value="obf-Substance" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-TaxIdentificationNumber" />
+          </reference>
+          <name value="obf-TaxIdentificationNumber" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/shr-core-Timing" />
+          </reference>
+          <name value="shr-core-Timing" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-Additive-extension" />
+          </reference>
+          <name value="obf-Additive" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/shr-core-Address-extension" />
+          </reference>
+          <name value="shr-core-Address" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-AdministrativeGender-extension" />
+          </reference>
+          <name value="obf-AdministrativeGender" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-Alias-extension" />
+          </reference>
+          <name value="obf-Alias" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/shr-core-AnatomicalDirection-extension" />
+          </reference>
+          <name value="shr-core-AnatomicalDirection" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-Annotation-extension" />
+          </reference>
+          <name value="obf-Annotation" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-AppointmentReasonReference-extension" />
+          </reference>
+          <name value="obf-AppointmentReasonReference" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-BasedOn-extension" />
+          </reference>
+          <name value="obf-BasedOn" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/xxyyz-Breastbodylocation-extension" />
+          </reference>
+          <name value="xxyyz-Breastbodylocation" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/xxyyz-Breastdepth-extension" />
+          </reference>
+          <name value="xxyyz-Breastdepth" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/xxyyz-Breastlocation-extension" />
+          </reference>
+          <name value="xxyyz-Breastlocation" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-CareContext-extension" />
+          </reference>
+          <name value="obf-CareContext" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/shr-core-Category-extension" />
+          </reference>
+          <name value="shr-core-Category" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/shr-core-ClockFaceDirection-extension" />
+          </reference>
+          <name value="shr-core-ClockFaceDirection" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/shr-core-Code-extension" />
+          </reference>
+          <name value="shr-core-Code" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/shr-core-CommentOrDescription-extension" />
+          </reference>
+          <name value="shr-core-CommentOrDescription" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/shr-core-Comparator-extension" />
+          </reference>
+          <name value="shr-core-Comparator" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-Condition-extension" />
+          </reference>
+          <name value="obf-Condition" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-ContactPerson-extension" />
+          </reference>
+          <name value="obf-ContactPerson" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/shr-core-ContactPoint-extension" />
+          </reference>
+          <name value="shr-core-ContactPoint" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-DateOfDiagnosis-extension" />
+          </reference>
+          <name value="obf-DateOfDiagnosis" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-DiagnosisCode-extension" />
+          </reference>
+          <name value="obf-DiagnosisCode" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/xxyyz-DistanceFromNipple-extension" />
+          </reference>
+          <name value="xxyyz-DistanceFromNipple" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-Dosage-extension" />
+          </reference>
+          <name value="obf-Dosage" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-DoseSequenceNumber-extension" />
+          </reference>
+          <name value="obf-DoseSequenceNumber" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-EncounterDiagnosis-extension" />
+          </reference>
+          <name value="obf-EncounterDiagnosis" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-ExpectedPerformanceTime-extension" />
+          </reference>
+          <name value="obf-ExpectedPerformanceTime" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-ExpectedPerformer-extension" />
+          </reference>
+          <name value="obf-ExpectedPerformer" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-ExpectedPerformerType-extension" />
+          </reference>
+          <name value="obf-ExpectedPerformerType" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-HandlingRisk-extension" />
+          </reference>
+          <name value="obf-HandlingRisk" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/shr-core-HumanName-extension" />
+          </reference>
+          <name value="shr-core-HumanName" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/shr-core-Identifier-extension" />
+          </reference>
+          <name value="shr-core-Identifier" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-Indication-extension" />
+          </reference>
+          <name value="obf-Indication" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-InstructionCode-extension" />
+          </reference>
+          <name value="obf-InstructionCode" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/shr-core-LandmarkLocation-extension" />
+          </reference>
+          <name value="shr-core-LandmarkLocation" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/shr-core-LandmarkToBodyLocationDirection-extension" />
+          </reference>
+          <name value="shr-core-LandmarkToBodyLocationDirection" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/shr-core-LandmarkToBodyLocationDistance-extension" />
+          </reference>
+          <name value="shr-core-LandmarkToBodyLocationDistance" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/shr-core-LandmarkType-extension" />
+          </reference>
+          <name value="shr-core-LandmarkType" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/shr-core-Laterality-extension" />
+          </reference>
+          <name value="shr-core-Laterality" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/xxyyz-Laterality-extension" />
+          </reference>
+          <name value="xxyyz-Laterality" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-MedicationCodeOrReference-extension" />
+          </reference>
+          <name value="obf-MedicationCodeOrReference" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-Method-extension" />
+          </reference>
+          <name value="obf-Method" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/shr-core-Number-extension" />
+          </reference>
+          <name value="shr-core-Number" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/shr-core-OccurrenceTimeOrPeriod-extension" />
+          </reference>
+          <name value="shr-core-OccurrenceTimeOrPeriod" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-OnBehalfOf-extension" />
+          </reference>
+          <name value="obf-OnBehalfOf" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-Organization-extension" />
+          </reference>
+          <name value="obf-Organization" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/shr-core-Orientation-extension" />
+          </reference>
+          <name value="shr-core-Orientation" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-PartOf-extension" />
+          </reference>
+          <name value="obf-PartOf" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-Participant-extension" />
+          </reference>
+          <name value="obf-Participant" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-Participation-extension" />
+          </reference>
+          <name value="obf-Participation" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-ParticipationPeriod-extension" />
+          </reference>
+          <name value="obf-ParticipationPeriod" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-ParticipationType-extension" />
+          </reference>
+          <name value="obf-ParticipationType" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-PatientInstruction-extension" />
+          </reference>
+          <name value="obf-PatientInstruction" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/shr-core-PriorityCode-extension" />
+          </reference>
+          <name value="shr-core-PriorityCode" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/shr-core-PriorityRank-extension" />
+          </reference>
+          <name value="shr-core-PriorityRank" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-ReasonCode-extension" />
+          </reference>
+          <name value="obf-ReasonCode" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-ReasonReference-extension" />
+          </reference>
+          <name value="obf-ReasonReference" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/shr-core-RelationToLandmark-extension" />
+          </reference>
+          <name value="shr-core-RelationToLandmark" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/shr-core-Relationship-extension" />
+          </reference>
+          <name value="shr-core-Relationship" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-RequestIntent-extension" />
+          </reference>
+          <name value="obf-RequestIntent" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-Requester-extension" />
+          </reference>
+          <name value="obf-Requester" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-SpecialHandling-extension" />
+          </reference>
+          <name value="obf-SpecialHandling" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-SpecimenTreatment-extension" />
+          </reference>
+          <name value="obf-SpecimenTreatment" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-StatementDateTime-extension" />
+          </reference>
+          <name value="obf-StatementDateTime" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-Status-extension" />
+          </reference>
+          <name value="obf-Status" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-StatusHistory-extension" />
+          </reference>
+          <name value="obf-StatusHistory" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-SubjectOfRecord-extension" />
+          </reference>
+          <name value="obf-SubjectOfRecord" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-TerminationReason-extension" />
+          </reference>
+          <name value="obf-TerminationReason" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/shr-core-Text-extension" />
+          </reference>
+          <name value="shr-core-Text" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/shr-core-TimePeriod-extension" />
+          </reference>
+          <name value="shr-core-TimePeriod" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-TreatmentIntent-extension" />
+          </reference>
+          <name value="obf-TreatmentIntent" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/shr-core-Type-extension" />
+          </reference>
+          <name value="shr-core-Type" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/shr-core-Units-extension" />
+          </reference>
+          <name value="shr-core-Units" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="ValueSet/xxyyz-AbnormalityDensityVs" />
+          </reference>
+          <name value="AbnormalityDensityVs" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="ValueSet/xxyyz-AbnormalityTypeVs" />
+          </reference>
+          <name value="AbnormalityTypeVs" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="ValueSet/shr-core-AnatomicalDirectionVS" />
+          </reference>
+          <name value="AnatomicalDirectionVS" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="ValueSet/xxyyz-AsymmetryTypesVs" />
+          </reference>
+          <name value="AsymmetryTypesVs" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="ValueSet/xxyyz-BiRadCodeVs" />
+          </reference>
+          <name value="BiRadCodeVs" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="ValueSet/shr-core-BodyLocationVS" />
+          </reference>
+          <name value="BodyLocationVS" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="ValueSet/xxyyz-ChangeVs" />
+          </reference>
+          <name value="ChangeVs" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="ValueSet/shr-core-ClockFaceDirectionVS" />
+          </reference>
+          <name value="ClockFaceDirectionVS" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="ValueSet/xxyyz-ClockLocationVs" />
+          </reference>
+          <name value="ClockLocationVs" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="ValueSet/obf-ConditionCategoryVS" />
+          </reference>
+          <name value="ConditionCategoryVS" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="ValueSet/xxyyz-CystTypesVs" />
+          </reference>
+          <name value="CystTypesVs" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="ValueSet/xxyyz-DepthVs" />
+          </reference>
+          <name value="DepthVs" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="ValueSet/shr-core-LandmarkTypeVS" />
+          </reference>
+          <name value="LandmarkTypeVS" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="ValueSet/shr-core-LateralityVS" />
+          </reference>
+          <name value="LateralityVS" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="ValueSet/xxyyz-MarginVs" />
+          </reference>
+          <name value="MarginVs" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="ValueSet/xxyyz-MassTypesVs" />
+          </reference>
+          <name value="MassTypesVs" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="ValueSet/xxyyz-NodeTypesVs" />
+          </reference>
+          <name value="NodeTypesVs" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="ValueSet/shr-core-OrientationVS" />
+          </reference>
+          <name value="OrientationVS" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="ValueSet/xxyyz-OrientationVs" />
+          </reference>
+          <name value="OrientationVs" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="ValueSet/obf-ResearchSubjectTerminationReasonVS" />
+          </reference>
+          <name value="ResearchSubjectTerminationReasonVS" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="ValueSet/shr-core-SettingVS" />
+          </reference>
+          <name value="SettingVS" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="ValueSet/xxyyz-ShapeVs" />
+          </reference>
+          <name value="ShapeVs" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="ValueSet/obf-StudyArmTypeVS" />
+          </reference>
+          <name value="StudyArmTypeVS" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="ValueSet/obf-TreatmentIntentVS" />
+          </reference>
+          <name value="TreatmentIntentVS" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="ValueSet/obf-TreatmentTerminationReasonVS" />
+          </reference>
+          <name value="TreatmentTerminationReasonVS" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="ValueSet/shr-core-UnitsOfLengthVS" />
+          </reference>
+          <name value="UnitsOfLengthVS" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="ValueSet/xxyyz-VascularityVs" />
+          </reference>
+          <name value="VascularityVs" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="ValueSet/xxyyz-WallVs" />
+          </reference>
+          <name value="WallVs" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="CodeSystem/BreastRad-basic-resource-type" />
+          </reference>
+          <name value="BreastRad Basic Resource Type CodeSystem" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="CodeSystem/obf-ResearchSubjectTerminationReasonCS" />
+          </reference>
+          <name value="ResearchSubjectTerminationReasonCS" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="CodeSystem/shr-core-SettingCS" />
+          </reference>
+          <name value="SettingCS" />
+      </resource>
+      
+        <page>
+            <nameUrl value="index.html" />
+            <title value="Breast Radiology Reporting" />
+            <generation value="html" />
+        </page>
+    </definition>
+</ImplementationGuide>

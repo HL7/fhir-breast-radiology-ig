@@ -1,0 +1,44 @@
+
+<p> </p>
+<p><b>Mapping Source</b></p>
+<p>This structure represents the following mapping definition:</p>
+<pre>
+obf.DocumentReference maps to DocumentReference:
+  Language maps to language
+  Narrative maps to text
+  ImplicitRules maps to implicitRules
+  Metadata.VersionId maps to meta.versionId
+  Metadata.SourceSystem maps to meta.source
+  Metadata.Profile maps to meta.profile
+  Metadata.LastUpdated maps to meta.lastUpdated
+  Metadata.SecurityLabel maps to meta.security
+  Metadata.Tag maps to meta.tag
+  MasterIdentifier maps to masterIdentifier
+  Identifier maps to identifier
+  Status maps to status
+  DocumentStatus maps to docStatus
+  Type maps to type // Min Cardinality changed from 1 to 0
+  Category maps to category
+  SubjectOfRecord maps to subject
+  StatementDateTime maps to date
+  DocumentAuthor maps to author // Added Target Type PractitionerRole
+  Authenticator maps to authenticator // Added Target Type PractitionerRole
+  ManagingOrganization maps to custodian
+  RelatedDocument maps to relatesTo
+  RelatedDocument.Relationship maps to relatesTo.code
+  RelatedDocument.TargetDocument maps to relatesTo.target
+  CommentOrDescription maps to description
+  SecurityLabel maps to securityLabel
+  DocumentReferenced maps to content
+  DocumentReferenced.Attachment maps to content.attachment
+  DocumentReferenced.Type maps to content.format
+  EventContext maps to context
+  EventContext.CareContext maps to context.encounter // Max Cardinality changed from 1 to *; Added Target Type EpisodeOfCare
+  EventContext.Code maps to context.event
+  EventContext.TimePeriod maps to context.period
+  EventContext.FacilityType maps to context.facilityType
+  EventContext.Setting maps to context.practiceSetting
+  EventContext.Patient maps to context.sourcePatientInfo
+  EventContext.SupportingInformation maps to context.related
+
+</pre>

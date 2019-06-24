@@ -1,0 +1,638 @@
+{
+  "source": "ig.xml",
+  "version": "4.0.0",
+  "fixed-business-version": "0.1",
+  "license": "CC0-1.0",
+  "paths": {
+    "resources": [
+      "resources"
+    ],
+    "pages": "pages",
+    "temp": "temp",
+    "output": "output",
+    "txCache": "txCache",
+    "qa": "qa",
+    "specification": "http://hl7.org/fhir/R4",
+    "history": "http://hl7.org/fhir/us/odh/history.html"
+  },
+  "npm-name": "hl7.fhir.us.brr",
+  "sct-edition": "http://snomed.info/sct/731000124108",
+  "gen-examples": "false",
+  "do-transforms": "false",
+  "canonicalBase": "http://www.cimi.com/fhir",
+  "dependencyList": [
+    {
+      "package": "hl7.fhir.us.core",
+      "version": "current",
+      "name": "uscore",
+      "location": "http://hl7.org/fhir/us/core"
+    }
+  ],
+  "defaults": {
+    "StructureDefinition": {
+      "template-base": "sd.html",
+      "template-mappings": "sd-mappings.html",
+      "template-examples": "sd-examples.html",
+      "template-defns": "sd-definitions.html",
+      "template-format": "sd-format.html"
+    },
+    "CodeSystem": {
+      "template-base": "cs.html"
+    },
+    "ValueSet": {
+      "template-base": "vs.html"
+    },
+    "Any": {
+      "template-format": "format.html",
+      "template-base": "base.html"
+    }
+  },
+  "extraTemplates": [
+    "examples"
+  ],
+  "resources": {
+    "StructureDefinition/obf-AccessionIdentifier": {
+      "base": "StructureDefinition-obf-AccessionIdentifier.html"
+    },
+    "StructureDefinition/obf-ActionPerformed": {
+      "base": "StructureDefinition-obf-ActionPerformed.html"
+    },
+    "StructureDefinition/obf-ActionRequest": {
+      "base": "StructureDefinition-obf-ActionRequest.html"
+    },
+    "StructureDefinition/obf-ActionStatement": {
+      "base": "StructureDefinition-obf-ActionStatement.html"
+    },
+    "StructureDefinition/obf-Annotation": {
+      "base": "StructureDefinition-obf-Annotation.html"
+    },
+    "StructureDefinition/obf-Appointment": {
+      "base": "StructureDefinition-obf-Appointment.html"
+    },
+    "StructureDefinition/xxyyz-BreastAbnormality": {
+      "base": "StructureDefinition-xxyyz-BreastAbnormality.html"
+    },
+    "StructureDefinition/xxyyz-BreastBodyLocation": {
+      "base": "StructureDefinition-xxyyz-BreastBodyLocation.html"
+    },
+    "StructureDefinition/xxyyz-BreastRadiologyReport": {
+      "base": "StructureDefinition-xxyyz-BreastRadiologyReport.html"
+    },
+    "StructureDefinition/obf-ClinicalStatement": {
+      "base": "StructureDefinition-obf-ClinicalStatement.html"
+    },
+    "StructureDefinition/obf-Composition": {
+      "base": "StructureDefinition-obf-Composition.html"
+    },
+    "StructureDefinition/obf-Condition": {
+      "base": "StructureDefinition-obf-Condition.html"
+    },
+    "StructureDefinition/obf-Coverage": {
+      "base": "StructureDefinition-obf-Coverage.html"
+    },
+    "StructureDefinition/obf-Device": {
+      "base": "StructureDefinition-obf-Device.html"
+    },
+    "StructureDefinition/obf-DiagnosticReport": {
+      "base": "StructureDefinition-obf-DiagnosticReport.html"
+    },
+    "StructureDefinition/obf-DocumentReference": {
+      "base": "StructureDefinition-obf-DocumentReference.html"
+    },
+    "StructureDefinition/obf-DomainResource": {
+      "base": "StructureDefinition-obf-DomainResource.html"
+    },
+    "StructureDefinition/obf-Dosage": {
+      "base": "StructureDefinition-obf-Dosage.html"
+    },
+    "StructureDefinition/shr-core-Duration": {
+      "base": "StructureDefinition-shr-core-Duration.html"
+    },
+    "StructureDefinition/obf-Encounter": {
+      "base": "StructureDefinition-obf-Encounter.html"
+    },
+    "StructureDefinition/obf-EncounterOrEpisode": {
+      "base": "StructureDefinition-obf-EncounterOrEpisode.html"
+    },
+    "StructureDefinition/obf-Entity": {
+      "base": "StructureDefinition-obf-Entity.html"
+    },
+    "StructureDefinition/obf-EntityOrRole": {
+      "base": "StructureDefinition-obf-EntityOrRole.html"
+    },
+    "StructureDefinition/obf-EpisodeOfCare": {
+      "base": "StructureDefinition-obf-EpisodeOfCare.html"
+    },
+    "StructureDefinition/obf-Group": {
+      "base": "StructureDefinition-obf-Group.html"
+    },
+    "StructureDefinition/obf-InformationItem": {
+      "base": "StructureDefinition-obf-InformationItem.html"
+    },
+    "StructureDefinition/obf-Location": {
+      "base": "StructureDefinition-obf-Location.html"
+    },
+    "StructureDefinition/obf-Media": {
+      "base": "StructureDefinition-obf-Media.html"
+    },
+    "StructureDefinition/obf-Medication": {
+      "base": "StructureDefinition-obf-Medication.html"
+    },
+    "StructureDefinition/obf-MedicationAction": {
+      "base": "StructureDefinition-obf-MedicationAction.html"
+    },
+    "StructureDefinition/obf-MedicationAdministration": {
+      "base": "StructureDefinition-obf-MedicationAdministration.html"
+    },
+    "StructureDefinition/obf-MedicationDispense": {
+      "base": "StructureDefinition-obf-MedicationDispense.html"
+    },
+    "StructureDefinition/obf-MedicationRequest": {
+      "base": "StructureDefinition-obf-MedicationRequest.html"
+    },
+    "StructureDefinition/obf-MedicationStatement": {
+      "base": "StructureDefinition-obf-MedicationStatement.html"
+    },
+    "StructureDefinition/shr-core-Money": {
+      "base": "StructureDefinition-shr-core-Money.html"
+    },
+    "StructureDefinition/obf-NationalProviderIdentifier": {
+      "base": "StructureDefinition-obf-NationalProviderIdentifier.html"
+    },
+    "StructureDefinition/obf-Observation": {
+      "base": "StructureDefinition-obf-Observation.html"
+    },
+    "StructureDefinition/obf-Organization": {
+      "base": "StructureDefinition-obf-Organization.html"
+    },
+    "StructureDefinition/obf-Patient": {
+      "base": "StructureDefinition-obf-Patient.html"
+    },
+    "StructureDefinition/obf-Practitioner": {
+      "base": "StructureDefinition-obf-Practitioner.html"
+    },
+    "StructureDefinition/obf-Procedure": {
+      "base": "StructureDefinition-obf-Procedure.html"
+    },
+    "StructureDefinition/obf-ProcedureRequest": {
+      "base": "StructureDefinition-obf-ProcedureRequest.html"
+    },
+    "StructureDefinition/obf-QuestionnaireResponse": {
+      "base": "StructureDefinition-obf-QuestionnaireResponse.html"
+    },
+    "StructureDefinition/obf-ReferralRequest": {
+      "base": "StructureDefinition-obf-ReferralRequest.html"
+    },
+    "StructureDefinition/obf-RelatedPerson": {
+      "base": "StructureDefinition-obf-RelatedPerson.html"
+    },
+    "StructureDefinition/obf-ResearchStudy": {
+      "base": "StructureDefinition-obf-ResearchStudy.html"
+    },
+    "StructureDefinition/obf-ResearchSubject": {
+      "base": "StructureDefinition-obf-ResearchSubject.html"
+    },
+    "StructureDefinition/obf-Role": {
+      "base": "StructureDefinition-obf-Role.html"
+    },
+    "StructureDefinition/shr-core-SampledData": {
+      "base": "StructureDefinition-shr-core-SampledData.html"
+    },
+    "StructureDefinition/obf-ServiceRequest": {
+      "base": "StructureDefinition-obf-ServiceRequest.html"
+    },
+    "StructureDefinition/obf-SituationStatement": {
+      "base": "StructureDefinition-obf-SituationStatement.html"
+    },
+    "StructureDefinition/obf-Specimen": {
+      "base": "StructureDefinition-obf-Specimen.html"
+    },
+    "StructureDefinition/obf-Substance": {
+      "base": "StructureDefinition-obf-Substance.html"
+    },
+    "StructureDefinition/obf-TaxIdentificationNumber": {
+      "base": "StructureDefinition-obf-TaxIdentificationNumber.html"
+    },
+    "StructureDefinition/shr-core-Timing": {
+      "base": "StructureDefinition-shr-core-Timing.html"
+    },
+    "StructureDefinition/obf-Additive-extension": {
+      "base": "StructureDefinition-obf-Additive-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/shr-core-Address-extension": {
+      "base": "StructureDefinition-shr-core-Address-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/obf-AdministrativeGender-extension": {
+      "base": "StructureDefinition-obf-AdministrativeGender-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/obf-Alias-extension": {
+      "base": "StructureDefinition-obf-Alias-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/shr-core-AnatomicalDirection-extension": {
+      "base": "StructureDefinition-shr-core-AnatomicalDirection-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/obf-Annotation-extension": {
+      "base": "StructureDefinition-obf-Annotation-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/obf-AppointmentReasonReference-extension": {
+      "base": "StructureDefinition-obf-AppointmentReasonReference-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/obf-BasedOn-extension": {
+      "base": "StructureDefinition-obf-BasedOn-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/xxyyz-Breastbodylocation-extension": {
+      "base": "StructureDefinition-xxyyz-Breastbodylocation-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/xxyyz-Breastdepth-extension": {
+      "base": "StructureDefinition-xxyyz-Breastdepth-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/xxyyz-Breastlocation-extension": {
+      "base": "StructureDefinition-xxyyz-Breastlocation-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/obf-CareContext-extension": {
+      "base": "StructureDefinition-obf-CareContext-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/shr-core-Category-extension": {
+      "base": "StructureDefinition-shr-core-Category-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/shr-core-ClockFaceDirection-extension": {
+      "base": "StructureDefinition-shr-core-ClockFaceDirection-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/shr-core-Code-extension": {
+      "base": "StructureDefinition-shr-core-Code-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/shr-core-CommentOrDescription-extension": {
+      "base": "StructureDefinition-shr-core-CommentOrDescription-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/shr-core-Comparator-extension": {
+      "base": "StructureDefinition-shr-core-Comparator-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/obf-Condition-extension": {
+      "base": "StructureDefinition-obf-Condition-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/obf-ContactPerson-extension": {
+      "base": "StructureDefinition-obf-ContactPerson-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/shr-core-ContactPoint-extension": {
+      "base": "StructureDefinition-shr-core-ContactPoint-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/obf-DateOfDiagnosis-extension": {
+      "base": "StructureDefinition-obf-DateOfDiagnosis-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/obf-DiagnosisCode-extension": {
+      "base": "StructureDefinition-obf-DiagnosisCode-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/xxyyz-DistanceFromNipple-extension": {
+      "base": "StructureDefinition-xxyyz-DistanceFromNipple-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/obf-Dosage-extension": {
+      "base": "StructureDefinition-obf-Dosage-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/obf-DoseSequenceNumber-extension": {
+      "base": "StructureDefinition-obf-DoseSequenceNumber-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/obf-EncounterDiagnosis-extension": {
+      "base": "StructureDefinition-obf-EncounterDiagnosis-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/obf-ExpectedPerformanceTime-extension": {
+      "base": "StructureDefinition-obf-ExpectedPerformanceTime-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/obf-ExpectedPerformer-extension": {
+      "base": "StructureDefinition-obf-ExpectedPerformer-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/obf-ExpectedPerformerType-extension": {
+      "base": "StructureDefinition-obf-ExpectedPerformerType-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/obf-HandlingRisk-extension": {
+      "base": "StructureDefinition-obf-HandlingRisk-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/shr-core-HumanName-extension": {
+      "base": "StructureDefinition-shr-core-HumanName-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/shr-core-Identifier-extension": {
+      "base": "StructureDefinition-shr-core-Identifier-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/obf-Indication-extension": {
+      "base": "StructureDefinition-obf-Indication-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/obf-InstructionCode-extension": {
+      "base": "StructureDefinition-obf-InstructionCode-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/shr-core-LandmarkLocation-extension": {
+      "base": "StructureDefinition-shr-core-LandmarkLocation-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/shr-core-LandmarkToBodyLocationDirection-extension": {
+      "base": "StructureDefinition-shr-core-LandmarkToBodyLocationDirection-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/shr-core-LandmarkToBodyLocationDistance-extension": {
+      "base": "StructureDefinition-shr-core-LandmarkToBodyLocationDistance-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/shr-core-LandmarkType-extension": {
+      "base": "StructureDefinition-shr-core-LandmarkType-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/shr-core-Laterality-extension": {
+      "base": "StructureDefinition-shr-core-Laterality-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/xxyyz-Laterality-extension": {
+      "base": "StructureDefinition-xxyyz-Laterality-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/obf-MedicationCodeOrReference-extension": {
+      "base": "StructureDefinition-obf-MedicationCodeOrReference-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/obf-Method-extension": {
+      "base": "StructureDefinition-obf-Method-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/shr-core-Number-extension": {
+      "base": "StructureDefinition-shr-core-Number-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/shr-core-OccurrenceTimeOrPeriod-extension": {
+      "base": "StructureDefinition-shr-core-OccurrenceTimeOrPeriod-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/obf-OnBehalfOf-extension": {
+      "base": "StructureDefinition-obf-OnBehalfOf-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/obf-Organization-extension": {
+      "base": "StructureDefinition-obf-Organization-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/shr-core-Orientation-extension": {
+      "base": "StructureDefinition-shr-core-Orientation-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/obf-PartOf-extension": {
+      "base": "StructureDefinition-obf-PartOf-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/obf-Participant-extension": {
+      "base": "StructureDefinition-obf-Participant-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/obf-Participation-extension": {
+      "base": "StructureDefinition-obf-Participation-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/obf-ParticipationPeriod-extension": {
+      "base": "StructureDefinition-obf-ParticipationPeriod-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/obf-ParticipationType-extension": {
+      "base": "StructureDefinition-obf-ParticipationType-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/obf-PatientInstruction-extension": {
+      "base": "StructureDefinition-obf-PatientInstruction-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/shr-core-PriorityCode-extension": {
+      "base": "StructureDefinition-shr-core-PriorityCode-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/shr-core-PriorityRank-extension": {
+      "base": "StructureDefinition-shr-core-PriorityRank-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/obf-ReasonCode-extension": {
+      "base": "StructureDefinition-obf-ReasonCode-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/obf-ReasonReference-extension": {
+      "base": "StructureDefinition-obf-ReasonReference-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/shr-core-RelationToLandmark-extension": {
+      "base": "StructureDefinition-shr-core-RelationToLandmark-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/shr-core-Relationship-extension": {
+      "base": "StructureDefinition-shr-core-Relationship-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/obf-RequestIntent-extension": {
+      "base": "StructureDefinition-obf-RequestIntent-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/obf-Requester-extension": {
+      "base": "StructureDefinition-obf-Requester-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/obf-SpecialHandling-extension": {
+      "base": "StructureDefinition-obf-SpecialHandling-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/obf-SpecimenTreatment-extension": {
+      "base": "StructureDefinition-obf-SpecimenTreatment-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/obf-StatementDateTime-extension": {
+      "base": "StructureDefinition-obf-StatementDateTime-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/obf-Status-extension": {
+      "base": "StructureDefinition-obf-Status-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/obf-StatusHistory-extension": {
+      "base": "StructureDefinition-obf-StatusHistory-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/obf-SubjectOfRecord-extension": {
+      "base": "StructureDefinition-obf-SubjectOfRecord-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/obf-TerminationReason-extension": {
+      "base": "StructureDefinition-obf-TerminationReason-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/shr-core-Text-extension": {
+      "base": "StructureDefinition-shr-core-Text-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/shr-core-TimePeriod-extension": {
+      "base": "StructureDefinition-shr-core-TimePeriod-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/obf-TreatmentIntent-extension": {
+      "base": "StructureDefinition-obf-TreatmentIntent-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/shr-core-Type-extension": {
+      "base": "StructureDefinition-shr-core-Type-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/shr-core-Units-extension": {
+      "base": "StructureDefinition-shr-core-Units-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "ValueSet/xxyyz-AbnormalityDensityVs": {
+      "base": "ValueSet-xxyyz-AbnormalityDensityVs.html"
+    },
+    "ValueSet/xxyyz-AbnormalityTypeVs": {
+      "base": "ValueSet-xxyyz-AbnormalityTypeVs.html"
+    },
+    "ValueSet/shr-core-AnatomicalDirectionVS": {
+      "base": "ValueSet-shr-core-AnatomicalDirectionVS.html"
+    },
+    "ValueSet/xxyyz-AsymmetryTypesVs": {
+      "base": "ValueSet-xxyyz-AsymmetryTypesVs.html"
+    },
+    "ValueSet/xxyyz-BiRadCodeVs": {
+      "base": "ValueSet-xxyyz-BiRadCodeVs.html"
+    },
+    "ValueSet/shr-core-BodyLocationVS": {
+      "base": "ValueSet-shr-core-BodyLocationVS.html"
+    },
+    "ValueSet/xxyyz-ChangeVs": {
+      "base": "ValueSet-xxyyz-ChangeVs.html"
+    },
+    "ValueSet/shr-core-ClockFaceDirectionVS": {
+      "base": "ValueSet-shr-core-ClockFaceDirectionVS.html"
+    },
+    "ValueSet/xxyyz-ClockLocationVs": {
+      "base": "ValueSet-xxyyz-ClockLocationVs.html"
+    },
+    "ValueSet/obf-ConditionCategoryVS": {
+      "base": "ValueSet-obf-ConditionCategoryVS.html"
+    },
+    "ValueSet/xxyyz-CystTypesVs": {
+      "base": "ValueSet-xxyyz-CystTypesVs.html"
+    },
+    "ValueSet/xxyyz-DepthVs": {
+      "base": "ValueSet-xxyyz-DepthVs.html"
+    },
+    "ValueSet/shr-core-LandmarkTypeVS": {
+      "base": "ValueSet-shr-core-LandmarkTypeVS.html"
+    },
+    "ValueSet/shr-core-LateralityVS": {
+      "base": "ValueSet-shr-core-LateralityVS.html"
+    },
+    "ValueSet/xxyyz-MarginVs": {
+      "base": "ValueSet-xxyyz-MarginVs.html"
+    },
+    "ValueSet/xxyyz-MassTypesVs": {
+      "base": "ValueSet-xxyyz-MassTypesVs.html"
+    },
+    "ValueSet/xxyyz-NodeTypesVs": {
+      "base": "ValueSet-xxyyz-NodeTypesVs.html"
+    },
+    "ValueSet/shr-core-OrientationVS": {
+      "base": "ValueSet-shr-core-OrientationVS.html"
+    },
+    "ValueSet/xxyyz-OrientationVs": {
+      "base": "ValueSet-xxyyz-OrientationVs.html"
+    },
+    "ValueSet/obf-ResearchSubjectTerminationReasonVS": {
+      "base": "ValueSet-obf-ResearchSubjectTerminationReasonVS.html"
+    },
+    "ValueSet/shr-core-SettingVS": {
+      "base": "ValueSet-shr-core-SettingVS.html"
+    },
+    "ValueSet/xxyyz-ShapeVs": {
+      "base": "ValueSet-xxyyz-ShapeVs.html"
+    },
+    "ValueSet/obf-StudyArmTypeVS": {
+      "base": "ValueSet-obf-StudyArmTypeVS.html"
+    },
+    "ValueSet/obf-TreatmentIntentVS": {
+      "base": "ValueSet-obf-TreatmentIntentVS.html"
+    },
+    "ValueSet/obf-TreatmentTerminationReasonVS": {
+      "base": "ValueSet-obf-TreatmentTerminationReasonVS.html"
+    },
+    "ValueSet/shr-core-UnitsOfLengthVS": {
+      "base": "ValueSet-shr-core-UnitsOfLengthVS.html"
+    },
+    "ValueSet/xxyyz-VascularityVs": {
+      "base": "ValueSet-xxyyz-VascularityVs.html"
+    },
+    "ValueSet/xxyyz-WallVs": {
+      "base": "ValueSet-xxyyz-WallVs.html"
+    },
+    "CodeSystem/BreastRad-basic-resource-type": {
+      "base": "CodeSystem-BreastRad-basic-resource-type.html"
+    },
+    "CodeSystem/obf-ResearchSubjectTerminationReasonCS": {
+      "base": "CodeSystem-obf-ResearchSubjectTerminationReasonCS.html"
+    },
+    "CodeSystem/shr-core-SettingCS": {
+      "base": "CodeSystem-shr-core-SettingCS.html"
+    }
+  },
+  "special-urls": [
+    "http://www.cimi.com/xxyyz/vs/AbnormalityDensityVs",
+    "http://www.cimi.com/xxyyz/vs/AbnormalityTypeVs",
+    "http://www.cimi.com/shr/core/vs/AnatomicalDirectionVS",
+    "http://www.cimi.com/xxyyz/vs/AsymmetryTypesVs",
+    "http://www.cimi.com/xxyyz/vs/BiRadCodeVs",
+    "http://www.cimi.com/shr/core/vs/BodyLocationVS",
+    "http://www.cimi.com/xxyyz/vs/ChangeVs",
+    "http://www.cimi.com/shr/core/vs/ClockFaceDirectionVS",
+    "http://www.cimi.com/xxyyz/vs/ClockLocationVs",
+    "http://www.cimi.com/obf/vs/ConditionCategoryVS",
+    "http://www.cimi.com/xxyyz/vs/CystTypesVs",
+    "http://www.cimi.com/xxyyz/vs/DepthVs",
+    "http://www.cimi.com/shr/core/vs/LandmarkTypeVS",
+    "http://www.cimi.com/shr/core/vs/LateralityVS",
+    "http://www.cimi.com/xxyyz/vs/MarginVs",
+    "http://www.cimi.com/xxyyz/vs/MassTypesVs",
+    "http://www.cimi.com/xxyyz/vs/NodeTypesVs",
+    "http://www.cimi.com/shr/core/vs/OrientationVS",
+    "http://www.cimi.com/xxyyz/vs/OrientationVs",
+    "http://www.cimi.com/obf/vs/ResearchSubjectTerminationReasonVS",
+    "http://www.cimi.com/shr/core/vs/SettingVS",
+    "http://www.cimi.com/xxyyz/vs/ShapeVs",
+    "http://www.cimi.com/obf/vs/StudyArmTypeVS",
+    "http://www.cimi.com/obf/vs/TreatmentIntentVS",
+    "http://www.cimi.com/obf/vs/TreatmentTerminationReasonVS",
+    "http://www.cimi.com/shr/core/vs/UnitsOfLengthVS",
+    "http://www.cimi.com/xxyyz/vs/VascularityVs",
+    "http://www.cimi.com/xxyyz/vs/WallVs",
+    "http://www.cimi.com/obf/cs/ResearchSubjectTerminationReasonCS",
+    "http://www.cimi.com/shr/core/cs/SettingCS"
+  ],
+  "tool": "jekyll"
+}
