@@ -3,12 +3,12 @@
   "id": "obf-ServiceRequest",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>ServiceRequest Profile</b></p>\n  <p>A record of a request for service such as diagnostic investigations, treatments, or operations to be performed.</p>\n  <p><b>Mapping Summary</b></p>\n  <p><pre>obf.ServiceRequest maps to ServiceRequest:\n  Language maps to language\n  Narrative maps to text\n  ImplicitRules maps to implicitRules\n  Metadata.VersionId maps to meta.versionId\n  Metadata.SourceSystem maps to meta.source\n  Metadata.Profile maps to meta.profile\n  Metadata.LastUpdated maps to meta.lastUpdated\n  Metadata.SecurityLabel maps to meta.security\n  Metadata.Tag maps to meta.tag\n  Identifier maps to identifier\n  ServiceBasedOn maps to basedOn\n  Replaces maps to replaces\n  GroupIdentifier maps to requisition\n  Status maps to status\n  RequestIntent maps to intent\n  Category maps to category\n  PriorityCode maps to priority\n  DoNotPerform maps to doNotPerform\n  Code maps to code\n  ServiceDetails maps to orderDetail\n  RequestQuantity maps to quantity[x]\n  RequestSubjectOfRecord maps to subject\n  CareContext maps to encounter\n  ExpectedPerformanceTime maps to occurrence[x]\n  AsNeeded maps to asNeeded[x]\n  StatementDateTime maps to authoredOn\n  Requester maps to requester\n  ExpectedPerformerType maps to performerType\n  ExpectedPerformer maps to performer\n  LocationType maps to locationCode\n  Location maps to locationReference\n  ReasonCode maps to reasonCode\n  ServiceReasonReference maps to reasonReference\n  Insurance maps to insurance\n  SupportingInformation maps to supportingInfo\n  Specimen maps to specimen\n  BodyLocation.Code maps to bodySite\n  BodyLocation.Laterality maps to bodySite.extension\n  BodyLocation.Orientation maps to bodySite.extension\n  BodyLocation.RelationToLandmark maps to bodySite.extension\n  Annotation maps to note\n  PatientInstruction maps to patientInstruction\n</pre></p>\n</div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>ServiceRequest Profile</b></p>\n  <p>A record of a request for service such as diagnostic investigations, treatments, or operations to be performed.</p>\n  <p><b>Mapping Summary</b></p>\n  <p><pre>obf.ServiceRequest maps to ServiceRequest:\n  Language maps to language\n  ImplicitRules maps to implicitRules\n  Metadata.VersionId maps to meta.versionId\n  Metadata.SourceSystem maps to meta.source\n  Metadata.Profile maps to meta.profile\n  Metadata.LastUpdated maps to meta.lastUpdated\n  Metadata.SecurityLabel maps to meta.security\n  Metadata.Tag maps to meta.tag\n  Narrative maps to text\n  Identifier maps to identifier\n  ServiceBasedOn maps to basedOn\n  Replaces maps to replaces\n  GroupIdentifier maps to requisition\n  Status maps to status\n  RequestIntent maps to intent\n  Category maps to category\n  PriorityCode maps to priority\n  DoNotPerform maps to doNotPerform\n  Code maps to code\n  ServiceDetails maps to orderDetail\n  RequestQuantity maps to quantity[x]\n  RequestSubjectOfRecord maps to subject\n  CareContext maps to encounter\n  ExpectedPerformanceTime maps to occurrence[x]\n  AsNeeded maps to asNeeded[x]\n  StatementDateTime maps to authoredOn\n  Requester maps to requester\n  ExpectedPerformerType maps to performerType\n  ExpectedPerformer maps to performer\n  LocationType maps to locationCode\n  Location maps to locationReference\n  ReasonCode maps to reasonCode\n  ServiceReasonReference maps to reasonReference\n  Insurance maps to insurance\n  SupportingInformation maps to supportingInfo\n  Specimen maps to specimen\n  BodyLocation.Code maps to bodySite\n  BodyLocation.Laterality maps to bodySite.extension\n  BodyLocation.Orientation maps to bodySite.extension\n  BodyLocation.RelationToLandmark maps to bodySite.extension\n  Annotation maps to note\n  PatientInstruction maps to patientInstruction\n</pre></p>\n</div>"
   },
   "url": "http://www.cimi.com/fhir/StructureDefinition/obf-ServiceRequest",
   "name": "ServiceRequest",
   "status": "draft",
-  "date": "2019-06-24",
+  "date": "2019-07-17",
   "publisher": "Hl7",
   "contact": [
     {
@@ -540,8 +540,8 @@
       {
         "id": "ServiceRequest:obf-ServiceRequest.basedOn",
         "path": "ServiceRequest.basedOn",
-        "short": "What request fulfills",
-        "definition": "Plan/proposal/order fulfilled by this request.",
+        "short": "The original or initiating plan, proposal, or request",
+        "definition": "The original or initiating plan, proposal, or request.",
         "alias": [
           "fulfills"
         ],
@@ -1564,7 +1564,7 @@
         "id": "ServiceRequest:obf-ServiceRequest.reasonReference",
         "path": "ServiceRequest.reasonReference",
         "short": "Explanation/Justification for service or service",
-        "definition": "Indicates another resource that provides a justification for why this service is being requested.   May relate to the resources referred to in `supportingInfo`.",
+        "definition": "Explanation/Justification for service or service",
         "comment": "This element represents why the referral is being made and may be used to decide how the service will be performed, or even if it will be performed at all.    To be as specific as possible,  a reference to  *Observation* or *Condition* should be used if available.  Otherwise when referencing  *DiagnosticReport*  it should contain a finding  in `DiagnosticReport.conclusion` and/or `DiagnosticReport.conclusionCode`.   When using a reference to *DocumentReference*, the target document should contain clear findings language providing the relevant reason for this service request.  Use  the CodeableConcept text element in `ServiceRequest.reasonCode` if the data is free (uncoded) text as shown in the [CT Scan example](servicerequest-example-di.html).",
         "min": 0,
         "max": "1",
@@ -1663,7 +1663,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://www.cimi.com/fhir/StructureDefinition/obf-DomainResource"
+              "http://hl7.org/fhir/StructureDefinition/Resource"
             ]
           }
         ],
@@ -2151,7 +2151,9 @@
               "http://www.cimi.com/fhir/StructureDefinition/obf-ProcedureRequest"
             ]
           }
-        ]
+        ],
+        "short": "The original or initiating plan, proposal, or request",
+        "definition": "The original or initiating plan, proposal, or request."
       },
       {
         "id": "ServiceRequest:obf-ServiceRequest.replaces",
@@ -2291,7 +2293,8 @@
               "http://www.cimi.com/fhir/StructureDefinition/obf-DocumentReference"
             ]
           }
-        ]
+        ],
+        "definition": "Explanation/Justification for service or service"
       },
       {
         "id": "ServiceRequest:obf-ServiceRequest.insurance",
@@ -2301,18 +2304,6 @@
             "code": "Reference",
             "targetProfile": [
               "http://www.cimi.com/fhir/StructureDefinition/obf-Coverage"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "ServiceRequest:obf-ServiceRequest.supportingInfo",
-        "path": "ServiceRequest.supportingInfo",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://www.cimi.com/fhir/StructureDefinition/obf-DomainResource"
             ]
           }
         ]
@@ -2420,11 +2411,5 @@
       }
     ]
   },
-  "identifier": [
-    {
-      "system": "http://www.cimi.com",
-      "value": "obf.ServiceRequest"
-    }
-  ],
   "title": "obf-ServiceRequest"
 }

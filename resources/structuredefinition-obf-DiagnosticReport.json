@@ -3,12 +3,13 @@
   "id": "obf-DiagnosticReport",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>DiagnosticReport Profile</b></p>\n  <p></p>\n  <p><b>Mapping Summary</b></p>\n  <p><pre>obf.DiagnosticReport maps to DiagnosticReport:\n  Language maps to language\n  Narrative maps to text\n  ImplicitRules maps to implicitRules\n  Metadata.VersionId maps to meta.versionId\n  Metadata.SourceSystem maps to meta.source\n  Metadata.Profile maps to meta.profile\n  Metadata.LastUpdated maps to meta.lastUpdated\n  Metadata.SecurityLabel maps to meta.security\n  Metadata.Tag maps to meta.tag\n  Identifier maps to identifier\n  BasedOn maps to basedOn\n  Status maps to status\n  Category maps to category\n  ObservationSubjectOfRecord maps to subject\n  Code maps to code\n  CareContext maps to encounter\n  RelevantTime maps to effective[x]\n  StatementDateTime maps to issued\n  DiagnosticReportPerformer maps to performer\n  ResultsInterpreter maps to resultsInterpreter\n  Specimen maps to specimen\n  Observation maps to result (slice on = target.reference.resolve(); slice on type = profile; slice strategy = includes)\n  MediaIncluded.CommentOrDescription maps to media.comment\n  MediaIncluded.Media maps to media.link\n  ConclusionText maps to conclusion\n  ConclusionCode maps to conclusionCode\n  PresentedForm maps to presentedForm\n</pre></p>\n</div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>DiagnosticReport Profile</b></p>\n  <p>The findings and interpretation of diagnostic tests performed on patients, groups of patients, devices, and locations, and/or specimens derived from these. The report includes clinical context such as requesting and provider information, and some mix of atomic results, images, textual and coded interpretations, and formatted representation of diagnostic reports.</p>\n  <p><b>Mapping Summary</b></p>\n  <p><pre>obf.DiagnosticReport maps to http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note:\n  Language maps to language\n  ImplicitRules maps to implicitRules\n  Metadata.VersionId maps to meta.versionId\n  Metadata.SourceSystem maps to meta.source\n  Metadata.Profile maps to meta.profile\n  Metadata.LastUpdated maps to meta.lastUpdated\n  Metadata.SecurityLabel maps to meta.security\n  Metadata.Tag maps to meta.tag\n  Narrative maps to text\n  Identifier maps to identifier\n  BasedOn maps to basedOn\n  Status maps to status\n  Category maps to category\n  ObservationSubjectOfRecord maps to subject\n  Code maps to code\n  CareContext maps to encounter\n  RelevantTime maps to effective[x]\n  StatementDateTime maps to issued\n  DiagnosticReportPerformer maps to performer\n  ResultsInterpreter maps to resultsInterpreter\n  Specimen maps to specimen\n  Observation maps to result (slice on = reference.resolve(); slice on type = profile; slice strategy = includes)\n  MediaIncluded.CommentOrDescription maps to media.comment\n  MediaIncluded.Media maps to media.link\n  ConclusionText maps to conclusion\n  ConclusionCode maps to conclusionCode\n  PresentedForm maps to presentedForm\n</pre></p>\n</div>"
   },
   "url": "http://www.cimi.com/fhir/StructureDefinition/obf-DiagnosticReport",
   "name": "DiagnosticReport",
-  "status": "draft",
-  "date": "2019-06-24",
+  "title": "obf-DiagnosticReport",
+  "status": "active",
+  "date": "2019-07-17",
   "publisher": "Hl7",
   "contact": [
     {
@@ -20,7 +21,18 @@
       ]
     }
   ],
-  "purpose": "To support reporting for any diagnostic report into a clinical data repository.",
+  "description": "The findings and interpretation of diagnostic tests performed on patients, groups of patients, devices, and locations, and/or specimens derived from these. The report includes clinical context such as requesting and provider information, and some mix of atomic results, images, textual and coded interpretations, and formatted representation of diagnostic reports.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "urn:iso:std:iso:3166",
+          "code": "US",
+          "display": "United States of America"
+        }
+      ]
+    }
+  ],
   "fhirVersion": "4.0.0",
   "mapping": [
     {
@@ -47,7 +59,7 @@
   "kind": "resource",
   "abstract": false,
   "type": "DiagnosticReport",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/DiagnosticReport",
+  "baseDefinition": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note",
   "derivation": "constraint",
   "snapshot": {
     "element": [
@@ -55,7 +67,7 @@
         "id": "DiagnosticReport:obf-DiagnosticReport",
         "path": "DiagnosticReport",
         "short": "obf-DiagnosticReport",
-        "definition": "The findings and interpretation of diagnostic  tests performed on patients, groups of patients, devices, and locations, and/or specimens derived from these. The report includes clinical context such as requesting and provider information, and some mix of atomic results, images, textual and coded interpretations, and formatted representation of diagnostic reports.",
+        "definition": "The findings and interpretation of diagnostic tests performed on patients, groups of patients, devices, and locations, and/or specimens derived from these. The report includes clinical context such as requesting and provider information, and some mix of atomic results, images, textual and coded interpretations, and formatted representation of diagnostic reports.",
         "comment": "This is intended to capture a single report and is not suitable for use in displaying summary information that covers multiple reports.  For example, this resource has not been designed for laboratory cumulative reporting formats nor detailed structured reports for sequencing.",
         "alias": [
           "Report",
@@ -63,7 +75,9 @@
           "Result",
           "Results",
           "Labs",
-          "Laboratory"
+          "Laboratory",
+          "Imaging Report",
+          "Radiology Report"
         ],
         "min": 0,
         "max": "*",
@@ -124,6 +138,7 @@
             "source": "DomainResource"
           }
         ],
+        "mustSupport": false,
         "isModifier": false,
         "isSummary": false,
         "mapping": [
@@ -350,7 +365,7 @@
         "short": "Extensions that cannot be ignored",
         "definition": "May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
         "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
-        "requirements": "Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](extensibility.html#modifierExtension).",
+        "requirements": "Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](http://hl7.org/fhir/R4/extensibility.html#modifierExtension).",
         "alias": [
           "extensions",
           "user content"
@@ -485,19 +500,13 @@
             "code": "code"
           }
         ],
+        "mustSupport": true,
         "isModifier": true,
         "isModifierReason": "This element is labeled as a modifier because it is a status element that contains status entered-in-error which means that the resource should not be treated as valid",
         "isSummary": true,
         "binding": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-              "valueString": "DiagnosticReportStatus"
-            }
-          ],
           "strength": "required",
-          "description": "The status of the diagnostic report.",
-          "valueSet": "http://hl7.org/fhir/ValueSet/diagnostic-report-status|4.0.0"
+          "valueSet": "http://hl7.org/fhir/ValueSet/diagnostic-report-status"
         },
         "mapping": [
           {
@@ -528,9 +537,11 @@
           "Department",
           "Sub-department",
           "Service",
-          "Discipline"
+          "Discipline",
+          "service",
+          "discipline"
         ],
-        "min": 0,
+        "min": 1,
         "max": "1",
         "base": {
           "path": "DiagnosticReport.category",
@@ -542,18 +553,12 @@
             "code": "CodeableConcept"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": true,
         "binding": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-              "valueString": "DiagnosticServiceSection"
-            }
-          ],
-          "strength": "example",
-          "description": "Codes for diagnostic service sections.",
-          "valueSet": "http://hl7.org/fhir/ValueSet/diagnostic-service-sections"
+          "strength": "extensible",
+          "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-diagnosticreport-category"
         },
         "mapping": [
           {
@@ -573,8 +578,9 @@
       {
         "id": "DiagnosticReport:obf-DiagnosticReport.code",
         "path": "DiagnosticReport.code",
-        "short": "Name/Code for this diagnostic report",
-        "definition": "A code or name that describes this diagnostic report.",
+        "short": "US Core Report Code",
+        "definition": "The test, panel, report, or note that was ordered.",
+        "comment": "UsageNote= The typical patterns for codes are:  1)  a LOINC code either as a  translation from a \"local\" code or as a primary code, or 2)  a local code only if no suitable LOINC exists,  or 3)  both the local and the LOINC translation.   Systems SHALL be capable of sending the local code if one exists.",
         "alias": [
           "Type"
         ],
@@ -590,17 +596,11 @@
             "code": "CodeableConcept"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": true,
         "binding": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-              "valueString": "DiagnosticReportCodes"
-            }
-          ],
-          "strength": "preferred",
-          "description": "Codes that describe Diagnostic Reports.",
+          "strength": "extensible",
           "valueSet": "http://hl7.org/fhir/ValueSet/report-codes"
         },
         "mapping": [
@@ -625,13 +625,13 @@
       {
         "id": "DiagnosticReport:obf-DiagnosticReport.subject",
         "path": "DiagnosticReport.subject",
-        "short": "The subject of the report - usually, but not always, the patient",
-        "definition": "The subject of the report. Usually, but not always, this is a patient. However, diagnostic services also perform analyses on specimens collected from a variety of other sources.",
+        "short": "The subject of an observation",
+        "definition": "The subject of an observation.",
         "requirements": "SHALL know the subject context.",
         "alias": [
           "Patient"
         ],
-        "min": 0,
+        "min": 1,
         "max": "1",
         "base": {
           "path": "DiagnosticReport.subject",
@@ -642,13 +642,11 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://www.cimi.com/fhir/StructureDefinition/obf-Patient",
-              "http://www.cimi.com/fhir/StructureDefinition/obf-Group",
-              "http://www.cimi.com/fhir/StructureDefinition/obf-Device",
-              "http://www.cimi.com/fhir/StructureDefinition/obf-Location"
+              "http://www.cimi.com/fhir/StructureDefinition/obf-Patient"
             ]
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": true,
         "mapping": [
@@ -699,6 +697,7 @@
             ]
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": true,
         "mapping": [
@@ -723,8 +722,8 @@
       {
         "id": "DiagnosticReport:obf-DiagnosticReport.effective[x]",
         "path": "DiagnosticReport.effective[x]",
-        "short": "Clinically relevant time/time-period for report",
-        "definition": "The time or time-period the observed values are related to. When the subject of the report is a patient, this is usually either the time of the procedure or of specimen collection(s), but very often the source of the date/time is not known, only the date/time itself.",
+        "short": "Time of the report or note",
+        "definition": "This is the Datetime or Period when the report or note was written.",
         "comment": "If the diagnostic procedure was performed on the patient, this is the time it was performed. If there are specimens, the diagnostically relevant time can be derived from the specimen collection times, but the specimen information is not always available, and the exact relationship between the specimens and the diagnostically relevant time is not always automatic.",
         "requirements": "Need to know where in the patient history to file/present this report.",
         "alias": [
@@ -732,7 +731,7 @@
           "Effective Time",
           "Occurrence"
         ],
-        "min": 0,
+        "min": 1,
         "max": "1",
         "base": {
           "path": "DiagnosticReport.effective[x]",
@@ -747,6 +746,7 @@
             "code": "Period"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": true,
         "mapping": [
@@ -792,6 +792,7 @@
             "code": "instant"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": true,
         "mapping": [
@@ -841,6 +842,7 @@
             ]
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": true,
         "mapping": [
@@ -949,7 +951,7 @@
         "id": "DiagnosticReport:obf-DiagnosticReport.result",
         "path": "DiagnosticReport.result",
         "short": "Observations",
-        "definition": "[Observations](observation.html)  that are part of this diagnostic report.",
+        "definition": "[Observations](http://hl7.org/fhir/R4/observation.html)  that are part of this diagnostic report.",
         "comment": "Observations can contain observations.",
         "requirements": "Need to support individual results, or  groups of results, where the result grouping is arbitrary, but meaningful.",
         "alias": [
@@ -1054,6 +1056,7 @@
             "source": "Element"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": true,
         "mapping": [
@@ -1133,7 +1136,7 @@
         "short": "Extensions that cannot be ignored even if unrecognized",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
         "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
-        "requirements": "Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](extensibility.html#modifierExtension).",
+        "requirements": "Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](http://hl7.org/fhir/R4/extensibility.html#modifierExtension).",
         "alias": [
           "extensions",
           "user content",
@@ -1312,6 +1315,7 @@
             "code": "Attachment"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false,
         "mapping": [
@@ -1333,7 +1337,8 @@
         "id": "DiagnosticReport:obf-DiagnosticReport",
         "path": "DiagnosticReport",
         "short": "obf-DiagnosticReport",
-        "definition": "The findings and interpretation of diagnostic  tests performed on patients, groups of patients, devices, and locations, and/or specimens derived from these. The report includes clinical context such as requesting and provider information, and some mix of atomic results, images, textual and coded interpretations, and formatted representation of diagnostic reports.",
+        "definition": "The findings and interpretation of diagnostic tests performed on patients, groups of patients, devices, and locations, and/or specimens derived from these. The report includes clinical context such as requesting and provider information, and some mix of atomic results, images, textual and coded interpretations, and formatted representation of diagnostic reports.",
+        "mustSupport": false,
         "isModifier": false,
         "isSummary": false
       },
@@ -1355,8 +1360,16 @@
       {
         "id": "DiagnosticReport:obf-DiagnosticReport.category",
         "path": "DiagnosticReport.category",
-        "min": 0,
+        "min": 1,
         "max": "1"
+      },
+      {
+        "id": "DiagnosticReport:obf-DiagnosticReport.code",
+        "path": "DiagnosticReport.code",
+        "binding": {
+          "strength": "extensible",
+          "valueSet": "http://hl7.org/fhir/ValueSet/report-codes"
+        }
       },
       {
         "id": "DiagnosticReport:obf-DiagnosticReport.subject",
@@ -1365,13 +1378,12 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://www.cimi.com/fhir/StructureDefinition/obf-Patient",
-              "http://www.cimi.com/fhir/StructureDefinition/obf-Group",
-              "http://www.cimi.com/fhir/StructureDefinition/obf-Device",
-              "http://www.cimi.com/fhir/StructureDefinition/obf-Location"
+              "http://www.cimi.com/fhir/StructureDefinition/obf-Patient"
             ]
           }
-        ]
+        ],
+        "short": "The subject of an observation",
+        "definition": "The subject of an observation."
       },
       {
         "id": "DiagnosticReport:obf-DiagnosticReport.encounter",
@@ -1462,12 +1474,5 @@
         ]
       }
     ]
-  },
-  "identifier": [
-    {
-      "system": "http://www.cimi.com",
-      "value": "obf.DiagnosticReport"
-    }
-  ],
-  "title": "obf-DiagnosticReport"
+  }
 }

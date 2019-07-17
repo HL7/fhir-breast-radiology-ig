@@ -40,19 +40,19 @@
   </thead>
   <tbody>
     <tr>
-      <td><a href="StructureDefinition-xxyyz-BreastAbnormality.html">BreastAbnormality</a></td>
+      <td><a href="StructureDefinition-breastrad-BreastAbnormality.html">BreastAbnormality</a></td>
       <td><a href="http://hl7.org/fhir/R4/observation.html">Observation</a></td>
       <td>{% capture md_text %}Breast Abnormality Form{% endcapture %}{{ md_text | markdownify }}</td>
     </tr>
     <tr>
-      <td><a href="StructureDefinition-xxyyz-BreastBodyLocation.html">BreastBodyLocation</a></td>
-      <td><a href="http://hl7.org/fhir/R4/basic.html">Basic</a></td>
-      <td>{% capture md_text %}BreastBodyLocation{% endcapture %}{{ md_text | markdownify }}</td>
-    </tr>
-    <tr>
-      <td><a href="StructureDefinition-xxyyz-BreastRadiologyReport.html">BreastRadiologyReport</a></td>
+      <td><a href="StructureDefinition-breastrad-BreastRadiologyDocument.html">BreastRadiologyDocument</a></td>
       <td><a href="http://hl7.org/fhir/R4/composition.html">Composition</a></td>
       <td>{% capture md_text %}Breast Radiology Report{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
+      <td><a href="StructureDefinition-breastrad-BreastRadiologyReport.html">BreastRadiologyReport</a></td>
+      <td><a href="http://hl7.org/fhir/R4/diagnosticreport.html">DiagnosticReport</a></td>
+      <td>{% capture md_text %}Breast Radiology Diagnostic Report. Detailed information about the reports document is contained in the Breast Radiology Document [resultComposition]{% endcapture %}{{ md_text | markdownify }}</td>
     </tr>
     
   </tbody>
@@ -138,7 +138,7 @@ Device type has extensible mappings to different value sets in Argonaut and US-C
     <tr>
       <td><a href="StructureDefinition-obf-DiagnosticReport.html">DiagnosticReport</a></td>
       <td><a href="http://hl7.org/fhir/R4/diagnosticreport.html">DiagnosticReport</a></td>
-      <td></td>
+      <td>{% capture md_text %}The findings and interpretation of diagnostic tests performed on patients, groups of patients, devices, and locations, and/or specimens derived from these. The report includes clinical context such as requesting and provider information, and some mix of atomic results, images, textual and coded interpretations, and formatted representation of diagnostic reports.{% endcapture %}{{ md_text | markdownify }}</td>
     </tr>
     <tr>
       <td><a href="StructureDefinition-obf-DocumentReference.html">DocumentReference</a></td>

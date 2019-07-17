@@ -3,12 +3,14 @@
   "id": "obf-Procedure",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>Procedure Profile</b></p>\n  <p>An action that is or was performed on or for a patient. This can be a physical intervention like an operation, or less invasive like long term services, counseling, or hypnotherapy.</p>\n  <p><b>Mapping Summary</b></p>\n  <p><pre>obf.Procedure maps to Procedure:\n  Language maps to language\n  Narrative maps to text\n  ImplicitRules maps to implicitRules\n  Metadata.VersionId maps to meta.versionId\n  Metadata.SourceSystem maps to meta.source\n  Metadata.Profile maps to meta.profile\n  Metadata.LastUpdated maps to meta.lastUpdated\n  Metadata.SecurityLabel maps to meta.security\n  Metadata.Tag maps to meta.tag\n  Identifier maps to identifier\n  ProcedureBasedOn maps to basedOn\n  ProcedurePartOf maps to partOf  // add Observation, MedicationAdministration\n  Status maps to status\n  StatusReason maps to statusReason\n  Category maps to category\n  Code maps to code\n  SubjectOfRecord maps to subject\n  CareContext maps to encounter\n  OccurrenceTimeOrPeriod maps to performed[x]  // Types string, Age, Range -- not implemented in SHR\n  PersonAuthor maps to recorder\n  PersonInformationSource maps to asserter\n  Participation maps to performer\n  Participation.Participant maps to performer.actor  // Added Target Type PractitionerRole -- not implemented\n  Participation.ParticipationType maps to performer.function  // renamed role to function in R4\n  Participation.OnBehalfOf maps to performer.onBehalfOf\n  Location maps to location\n  ReasonCode maps to reasonCode\n  ProcedureReasonReference maps to reasonReference\n  BodyLocation.Code maps to bodySite\n  BodyLocation.Laterality maps to bodySite.extension\n  BodyLocation.Orientation maps to bodySite.extension\n  BodyLocation.RelationToLandmark maps to bodySite.extension\n  Annotation maps to note\n  Outcome maps to outcome\n  DiagnosticReport maps to report\n  ComplicationCode maps to complication\n  ComplicationReference maps to complicationDetail\n  FollowUp maps to followUp\n  FocalDevice maps to focalDevice\n  FocalDevice.Device maps to focalDevice.manipulated\n  FocalDevice.FocalDeviceAction maps to focalDevice.action\n  MaterialUsedReference maps to usedReference\n  UsedCode maps to usedCode\n</pre></p>\n</div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>Procedure Profile</b></p>\n  <p>An action that is or was performed on or for a patient. This can be a physical intervention like an operation, or less invasive like long term services, counseling, or hypnotherapy.</p>\n  <p><b>Mapping Summary</b></p>\n  <p><pre>obf.Procedure maps to http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure:\n  Language maps to language\n  ImplicitRules maps to implicitRules\n  Metadata.VersionId maps to meta.versionId\n  Metadata.SourceSystem maps to meta.source\n  Metadata.Profile maps to meta.profile\n  Metadata.LastUpdated maps to meta.lastUpdated\n  Metadata.SecurityLabel maps to meta.security\n  Metadata.Tag maps to meta.tag\n  Narrative maps to text\n  Identifier maps to identifier\n  ProcedureBasedOn maps to basedOn\n  ProcedurePartOf maps to partOf  // add Observation, MedicationAdministration\n  Status maps to status\n  StatusReason maps to statusReason\n  Category maps to category\n  Code maps to code\n  SubjectOfRecord maps to subject\n  CareContext maps to encounter\n  OccurrenceTimeOrPeriod maps to performed[x]  // Types string, Age, Range -- not implemented in SHR\n  PersonAuthor maps to recorder\n  PersonInformationSource maps to asserter\n  Participation maps to performer\n  Participation.Participant maps to performer.actor  // Added Target Type PractitionerRole -- not implemented\n  Participation.ParticipationType maps to performer.function  // renamed role to function in R4\n  Participation.OnBehalfOf maps to performer.onBehalfOf\n  Location maps to location\n  ReasonCode maps to reasonCode\n  ProcedureReasonReference maps to reasonReference\n  BodyLocation.Code maps to bodySite\n  BodyLocation.Laterality maps to bodySite.extension\n  BodyLocation.Orientation maps to bodySite.extension\n  BodyLocation.RelationToLandmark maps to bodySite.extension\n  Annotation maps to note\n  Outcome maps to outcome\n  DiagnosticReport maps to report\n  ComplicationCode maps to complication\n  ComplicationReference maps to complicationDetail\n  FollowUp maps to followUp\n  FocalDevice maps to focalDevice\n  FocalDevice.Device maps to focalDevice.manipulated\n  FocalDevice.FocalDeviceAction maps to focalDevice.action\n  MaterialUsedReference maps to usedReference\n  UsedCode maps to usedCode\n</pre></p>\n</div>"
   },
   "url": "http://www.cimi.com/fhir/StructureDefinition/obf-Procedure",
   "name": "Procedure",
-  "status": "draft",
-  "date": "2019-06-24",
+  "title": "obf-Procedure",
+  "status": "active",
+  "experimental": false,
+  "date": "2019-07-17",
   "publisher": "Hl7",
   "contact": [
     {
@@ -21,8 +23,24 @@
     }
   ],
   "description": "An action that is or was performed on or for a patient. This can be a physical intervention like an operation, or less invasive like long term services, counseling, or hypnotherapy.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "urn:iso:std:iso:3166",
+          "code": "US",
+          "display": "United States of America"
+        }
+      ]
+    }
+  ],
   "fhirVersion": "4.0.0",
   "mapping": [
+    {
+      "identity": "argonaut-dq-dstu2",
+      "uri": "http://unknown.org/Argonaut-DQ-DSTU2",
+      "name": "Argonaut-DQ-DSTU2"
+    },
     {
       "identity": "workflow",
       "uri": "http://hl7.org/fhir/workflow",
@@ -47,7 +65,7 @@
   "kind": "resource",
   "abstract": false,
   "type": "Procedure",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Procedure",
+  "baseDefinition": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure",
   "derivation": "constraint",
   "snapshot": {
     "element": [
@@ -115,6 +133,7 @@
             "source": "DomainResource"
           }
         ],
+        "mustSupport": false,
         "isModifier": false,
         "isSummary": false,
         "mapping": [
@@ -129,6 +148,10 @@
           {
             "identity": "rim",
             "map": "Procedure[moodCode=EVN]"
+          },
+          {
+            "identity": "argonaut-dq-dstu2",
+            "map": "Procedure"
           }
         ]
       },
@@ -394,7 +417,7 @@
         "short": "Extensions that cannot be ignored",
         "definition": "May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
         "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
-        "requirements": "Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](extensibility.html#modifierExtension).",
+        "requirements": "Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](http://hl7.org/fhir/R4/extensibility.html#modifierExtension).",
         "alias": [
           "extensions",
           "user content"
@@ -426,7 +449,7 @@
         "path": "Procedure.identifier",
         "short": "External Identifiers for this procedure",
         "definition": "Business identifiers assigned to this procedure by the performer or other systems which remain constant as the resource is updated and is propagated from server to server.",
-        "comment": "This is a business identifier, not a resource identifier (see [discussion](resource.html#identifiers)).  It is best practice for the identifier to only appear on a single resource instance, however business practices may occasionally dictate that multiple resource instances with the same identifier can exist - possibly even with different resource types.  For example, multiple Patient and Person resource instances might share the same social insurance number.",
+        "comment": "This is a business identifier, not a resource identifier (see [discussion](http://hl7.org/fhir/R4/resource.html#identifiers)).  It is best practice for the identifier to only appear on a single resource instance, however business practices may occasionally dictate that multiple resource instances with the same identifier can exist - possibly even with different resource types.  For example, multiple Patient and Person resource instances might share the same social insurance number.",
         "requirements": "Allows identification of the procedure as it is known by various participating systems and in a way that remains consistent across servers.",
         "min": 0,
         "max": "*",
@@ -533,7 +556,7 @@
         "id": "Procedure:obf-Procedure.basedOn",
         "path": "Procedure.basedOn",
         "short": "A request for this procedure",
-        "definition": "A reference to a resource that contains details of the request for this procedure.",
+        "definition": "A request for this procedure.",
         "alias": [
           "fulfills"
         ],
@@ -624,19 +647,13 @@
             "code": "code"
           }
         ],
+        "mustSupport": true,
         "isModifier": true,
         "isModifierReason": "This element is labelled as a modifier because it is a status element that contains status entered-in-error which means that the resource should not be treated as valid",
         "isSummary": true,
         "binding": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-              "valueString": "ProcedureStatus"
-            }
-          ],
           "strength": "required",
-          "description": "A code specifying the state of the procedure.",
-          "valueSet": "http://hl7.org/fhir/ValueSet/event-status|4.0.0"
+          "valueSet": "http://hl7.org/fhir/ValueSet/event-status"
         },
         "mapping": [
           {
@@ -650,6 +667,10 @@
           {
             "identity": "rim",
             "map": "statusCode"
+          },
+          {
+            "identity": "argonaut-dq-dstu2",
+            "map": "Procedure.status"
           }
         ]
       },
@@ -743,7 +764,7 @@
       {
         "id": "Procedure:obf-Procedure.code",
         "path": "Procedure.code",
-        "short": "Identification of the procedure",
+        "short": "SNOMED-CT | ICD-10 | CPT-4",
         "definition": "The specific procedure that is performed. Use text if the exact nature of the procedure cannot be coded (e.g. \"Laparoscopic Appendectomy\").",
         "requirements": "0..1 to account for primarily narrative only resources.",
         "alias": [
@@ -761,10 +782,18 @@
             "code": "CodeableConcept"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": true,
         "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet",
+              "valueCanonical": "http://hl7.org/fhir/us/core/ValueSet/us-core-procedure-code"
+            }
+          ],
           "strength": "extensible",
+          "description": "Codes describing the type of  Procedure",
           "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-procedure-code"
         },
         "mapping": [
@@ -783,6 +812,10 @@
           {
             "identity": "rim",
             "map": ".code"
+          },
+          {
+            "identity": "argonaut-dq-dstu2",
+            "map": "Procedure.code"
           }
         ]
       },
@@ -809,6 +842,7 @@
             ]
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": true,
         "mapping": [
@@ -831,6 +865,10 @@
           {
             "identity": "w5",
             "map": "FiveWs.subject"
+          },
+          {
+            "identity": "argonaut-dq-dstu2",
+            "map": "Procedure.subject"
           }
         ]
       },
@@ -897,6 +935,7 @@
             "code": "Period"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": true,
         "mapping": [
@@ -915,14 +954,18 @@
           {
             "identity": "rim",
             "map": ".effectiveTime"
+          },
+          {
+            "identity": "argonaut-dq-dstu2",
+            "map": "Procedure.performed[x]"
           }
         ]
       },
       {
         "id": "Procedure:obf-Procedure.recorder",
         "path": "Procedure.recorder",
-        "short": "Who recorded the procedure",
-        "definition": "Individual who recorded the record and takes responsibility for its content.",
+        "short": "A human author, patient, practitioner, or related person, as opposed to an organization or device",
+        "definition": "A human author, patient, practitioner, or related person, as opposed to an organization or device.",
         "min": 0,
         "max": "1",
         "base": {
@@ -956,8 +999,8 @@
       {
         "id": "Procedure:obf-Procedure.asserter",
         "path": "Procedure.asserter",
-        "short": "Person who asserts this procedure",
-        "definition": "Individual who is making the procedure statement.",
+        "short": "The person who provided the information, not necessarily the patient",
+        "definition": "The person who provided the information, not necessarily the patient.",
         "min": 0,
         "max": "1",
         "base": {
@@ -1094,7 +1137,7 @@
         "short": "Extensions that cannot be ignored even if unrecognized",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
         "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
-        "requirements": "Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](extensibility.html#modifierExtension).",
+        "requirements": "Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](http://hl7.org/fhir/R4/extensibility.html#modifierExtension).",
         "alias": [
           "extensions",
           "user content",
@@ -1171,8 +1214,8 @@
       {
         "id": "Procedure:obf-Procedure.performer.actor",
         "path": "Procedure.performer.actor",
-        "short": "The reference to the practitioner",
-        "definition": "The practitioner who was involved in the procedure.",
+        "short": "Constrains participants to classes that are accepted by FHIR as actors in procedures in STU 3",
+        "definition": "Constrains participants to classes that are accepted by FHIR as actors in procedures in STU 3.",
         "requirements": "A reference to Device supports use cases, such as pacemakers.",
         "min": 1,
         "max": "1",
@@ -1328,7 +1371,7 @@
         "id": "Procedure:obf-Procedure.reasonReference",
         "path": "Procedure.reasonReference",
         "short": "The justification that the procedure was performed",
-        "definition": "The justification of why the procedure was performed.",
+        "definition": "The justification that the procedure was performed.",
         "comment": "It is possible for a procedure to be a reason (such as C-Section) for another procedure (such as an epidural). Other examples include endoscopy for dilatation and biopsy (a combination of diagnostic and therapeutic use). \nUse Procedure.reasonCode when a code sufficiently describes the reason.  Use Procedure.reasonReference when referencing a resource, which allows more information to be conveyed, such as onset date. Procedure.reasonCode and Procedure.reasonReference are not meant to be duplicative.  For a single reason, either Procedure.reasonCode or Procedure.reasonReference can be used.  Procedure.reasonCode may be a summary code, or Procedure.reasonReference may be used to reference a very precise definition of the reason using Condition | Observation | Procedure | DiagnosticReport | DocumentReference.  Both Procedure.reasonCode and Procedure.reasonReference can be used if they are describing different reasons for the procedure.",
         "min": 0,
         "max": "1",
@@ -1371,7 +1414,7 @@
         "path": "Procedure.bodySite",
         "short": "Target body sites",
         "definition": "Detailed and structured anatomical location information. Multiple locations are allowed - e.g. multiple punch biopsies of a lesion.",
-        "comment": "If the use case requires attributes from the BodySite resource (e.g. to identify and track separately) then use the standard extension [procedure-targetbodystructure](extension-procedure-targetbodystructure.html).",
+        "comment": "If the use case requires attributes from the BodySite resource (e.g. to identify and track separately) then use the standard extension [procedure-targetbodystructure](http://hl7.org/fhir/R4/extension-procedure-targetbodystructure.html).",
         "min": 0,
         "max": "*",
         "base": {
@@ -1930,7 +1973,7 @@
         "short": "Extensions that cannot be ignored even if unrecognized",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
         "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
-        "requirements": "Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](extensibility.html#modifierExtension).",
+        "requirements": "Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](http://hl7.org/fhir/R4/extensibility.html#modifierExtension).",
         "alias": [
           "extensions",
           "user content",
@@ -2104,6 +2147,7 @@
         "path": "Procedure",
         "short": "obf-Procedure",
         "definition": "An action that is or was performed on or for a patient. This can be a physical intervention like an operation, or less invasive like long term services, counseling, or hypnotherapy.",
+        "mustSupport": false,
         "isModifier": false,
         "isSummary": false
       },
@@ -2182,7 +2226,8 @@
               "http://www.cimi.com/fhir/StructureDefinition/obf-ServiceRequest"
             ]
           }
-        ]
+        ],
+        "definition": "A request for this procedure."
       },
       {
         "id": "Procedure:obf-Procedure.partOf",
@@ -2199,16 +2244,6 @@
             ]
           }
         ]
-      },
-      {
-        "id": "Procedure:obf-Procedure.code",
-        "path": "Procedure.code",
-        "min": 1,
-        "max": "1",
-        "binding": {
-          "strength": "extensible",
-          "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-procedure-code"
-        }
       },
       {
         "id": "Procedure:obf-Procedure.subject",
@@ -2235,20 +2270,6 @@
         ]
       },
       {
-        "id": "Procedure:obf-Procedure.performed[x]",
-        "path": "Procedure.performed[x]",
-        "min": 1,
-        "max": "1",
-        "type": [
-          {
-            "code": "dateTime"
-          },
-          {
-            "code": "Period"
-          }
-        ]
-      },
-      {
         "id": "Procedure:obf-Procedure.recorder",
         "path": "Procedure.recorder",
         "type": [
@@ -2260,7 +2281,9 @@
               "http://www.cimi.com/fhir/StructureDefinition/obf-RelatedPerson"
             ]
           }
-        ]
+        ],
+        "short": "A human author, patient, practitioner, or related person, as opposed to an organization or device",
+        "definition": "A human author, patient, practitioner, or related person, as opposed to an organization or device."
       },
       {
         "id": "Procedure:obf-Procedure.asserter",
@@ -2274,7 +2297,9 @@
               "http://www.cimi.com/fhir/StructureDefinition/obf-RelatedPerson"
             ]
           }
-        ]
+        ],
+        "short": "The person who provided the information, not necessarily the patient",
+        "definition": "The person who provided the information, not necessarily the patient."
       },
       {
         "id": "Procedure:obf-Procedure.performer",
@@ -2294,7 +2319,9 @@
               "http://www.cimi.com/fhir/StructureDefinition/obf-Device"
             ]
           }
-        ]
+        ],
+        "short": "Constrains participants to classes that are accepted by FHIR as actors in procedures in STU 3",
+        "definition": "Constrains participants to classes that are accepted by FHIR as actors in procedures in STU 3."
       },
       {
         "id": "Procedure:obf-Procedure.performer.onBehalfOf",
@@ -2342,7 +2369,8 @@
               "http://www.cimi.com/fhir/StructureDefinition/obf-DocumentReference"
             ]
           }
-        ]
+        ],
+        "definition": "The justification that the procedure was performed."
       },
       {
         "id": "Procedure:obf-Procedure.bodySite",
@@ -2503,12 +2531,5 @@
         ]
       }
     ]
-  },
-  "identifier": [
-    {
-      "system": "http://www.cimi.com",
-      "value": "obf.Procedure"
-    }
-  ],
-  "title": "obf-Procedure"
+  }
 }

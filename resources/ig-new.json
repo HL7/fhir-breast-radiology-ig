@@ -1,0 +1,1324 @@
+{
+  "resourceType" : "ImplementationGuide",
+  "id" : "hl7.fhir.us.brr-0.1",
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource",
+    "valueString" : "C:\\Development\\MITRE\\cimpl\\Fhir-BreastRadiologyReport\\out\\fhir\\guide\\resources"
+  },
+  {
+    "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages",
+    "valueString" : "C:\\Development\\MITRE\\cimpl\\Fhir-BreastRadiologyReport\\out\\fhir\\guide\\pages"
+  }],
+  "url" : "http://www.cimi.com/fhir/ImplementationGuide/hl7.fhir.us.brr-0.1",
+  "version" : "0.1",
+  "name" : "Breast_Radiology_Reporting",
+  "title" : "Breast Radiology Reporting",
+  "status" : "draft",
+  "publisher" : "Hl7",
+  "contact" : [{
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://BreastRadReport.com"
+    }]
+  }],
+  "packageId" : "hl7.fhir.us.brr",
+  "license" : "CC0-1.0",
+  "fhirVersion" : ["4.0.0",
+  "4.0.0"],
+  "dependsOn" : [{
+    "id" : "uscore",
+    "uri" : "http://hl7.org/fhir/us/core",
+    "packageId" : "hl7.fhir.us.core",
+    "version" : "3.0.0"
+  }],
+  "definition" : {
+    "grouping" : [{
+      "name" : "Profiles in this Implementation Guide",
+      "description" : "Profiles in this Implementation Guide"
+    }],
+    "resource" : [{
+      "reference" : {
+        "reference" : "StructureDefinition/obf-AccessionIdentifier"
+      },
+      "name" : "obf-AccessionIdentifier",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-ActionPerformed"
+      },
+      "name" : "obf-ActionPerformed",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-ActionRequest"
+      },
+      "name" : "obf-ActionRequest",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-ActionStatement"
+      },
+      "name" : "obf-ActionStatement",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-Annotation"
+      },
+      "name" : "obf-Annotation",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-Appointment"
+      },
+      "name" : "obf-Appointment",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/breastrad-BreastAbnormality"
+      },
+      "name" : "breastrad-BreastAbnormality",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/breastrad-BreastRadiologyDocument"
+      },
+      "name" : "breastrad-BreastRadiologyDocument",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/breastrad-BreastRadiologyReport"
+      },
+      "name" : "breastrad-BreastRadiologyReport",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-ClinicalStatement"
+      },
+      "name" : "obf-ClinicalStatement",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-Composition"
+      },
+      "name" : "obf-Composition",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-Condition"
+      },
+      "name" : "obf-Condition",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-Coverage"
+      },
+      "name" : "obf-Coverage",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-Device"
+      },
+      "name" : "obf-Device",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-DiagnosticReport"
+      },
+      "name" : "obf-DiagnosticReport",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-DocumentReference"
+      },
+      "name" : "obf-DocumentReference",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-DomainResource"
+      },
+      "name" : "obf-DomainResource",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-Dosage"
+      },
+      "name" : "obf-Dosage",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/shr-core-Duration"
+      },
+      "name" : "shr-core-Duration",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-Encounter"
+      },
+      "name" : "obf-Encounter",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-EncounterOrEpisode"
+      },
+      "name" : "obf-EncounterOrEpisode",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-Entity"
+      },
+      "name" : "obf-Entity",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-EntityOrRole"
+      },
+      "name" : "obf-EntityOrRole",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-EpisodeOfCare"
+      },
+      "name" : "obf-EpisodeOfCare",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-Group"
+      },
+      "name" : "obf-Group",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-InformationItem"
+      },
+      "name" : "obf-InformationItem",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-Location"
+      },
+      "name" : "obf-Location",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-Media"
+      },
+      "name" : "obf-Media",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-Medication"
+      },
+      "name" : "obf-Medication",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-MedicationAction"
+      },
+      "name" : "obf-MedicationAction",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-MedicationAdministration"
+      },
+      "name" : "obf-MedicationAdministration",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-MedicationDispense"
+      },
+      "name" : "obf-MedicationDispense",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-MedicationRequest"
+      },
+      "name" : "obf-MedicationRequest",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-MedicationStatement"
+      },
+      "name" : "obf-MedicationStatement",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/shr-core-Money"
+      },
+      "name" : "shr-core-Money",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-NationalProviderIdentifier"
+      },
+      "name" : "obf-NationalProviderIdentifier",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-Observation"
+      },
+      "name" : "obf-Observation",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-Organization"
+      },
+      "name" : "obf-Organization",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-Patient"
+      },
+      "name" : "obf-Patient",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-Practitioner"
+      },
+      "name" : "obf-Practitioner",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-Procedure"
+      },
+      "name" : "obf-Procedure",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-ProcedureRequest"
+      },
+      "name" : "obf-ProcedureRequest",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-QuestionnaireResponse"
+      },
+      "name" : "obf-QuestionnaireResponse",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-ReferralRequest"
+      },
+      "name" : "obf-ReferralRequest",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-RelatedPerson"
+      },
+      "name" : "obf-RelatedPerson",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-ResearchStudy"
+      },
+      "name" : "obf-ResearchStudy",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-ResearchSubject"
+      },
+      "name" : "obf-ResearchSubject",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-Role"
+      },
+      "name" : "obf-Role",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/shr-core-SampledData"
+      },
+      "name" : "shr-core-SampledData",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-ServiceRequest"
+      },
+      "name" : "obf-ServiceRequest",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-SituationStatement"
+      },
+      "name" : "obf-SituationStatement",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-Specimen"
+      },
+      "name" : "obf-Specimen",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-Substance"
+      },
+      "name" : "obf-Substance",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-TaxIdentificationNumber"
+      },
+      "name" : "obf-TaxIdentificationNumber",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/shr-core-Timing"
+      },
+      "name" : "shr-core-Timing",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-Additive-extension"
+      },
+      "name" : "obf-Additive",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/shr-core-Address-extension"
+      },
+      "name" : "shr-core-Address",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-AdministrativeGender-extension"
+      },
+      "name" : "obf-AdministrativeGender",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-Alias-extension"
+      },
+      "name" : "obf-Alias",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/shr-core-AnatomicalDirection-extension"
+      },
+      "name" : "shr-core-AnatomicalDirection",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-Annotation-extension"
+      },
+      "name" : "obf-Annotation",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-AppointmentReasonReference-extension"
+      },
+      "name" : "obf-AppointmentReasonReference",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-BasedOn-extension"
+      },
+      "name" : "obf-BasedOn",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/breastrad-BreastExamTechnique-extension"
+      },
+      "name" : "breastrad-BreastExamTechnique",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-CareContext-extension"
+      },
+      "name" : "obf-CareContext",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/shr-core-Category-extension"
+      },
+      "name" : "shr-core-Category",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/shr-core-ClockFaceDirection-extension"
+      },
+      "name" : "shr-core-ClockFaceDirection",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/shr-core-Code-extension"
+      },
+      "name" : "shr-core-Code",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/shr-core-CommentOrDescription-extension"
+      },
+      "name" : "shr-core-CommentOrDescription",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/shr-core-Comparator-extension"
+      },
+      "name" : "shr-core-Comparator",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-ConclusionCode-extension"
+      },
+      "name" : "obf-ConclusionCode",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-ConclusionText-extension"
+      },
+      "name" : "obf-ConclusionText",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-Condition-extension"
+      },
+      "name" : "obf-Condition",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-ContactPerson-extension"
+      },
+      "name" : "obf-ContactPerson",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/shr-core-ContactPoint-extension"
+      },
+      "name" : "shr-core-ContactPoint",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-DateOfDiagnosis-extension"
+      },
+      "name" : "obf-DateOfDiagnosis",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-DiagnosisCode-extension"
+      },
+      "name" : "obf-DiagnosisCode",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-DiagnosticReportPerformer-extension"
+      },
+      "name" : "obf-DiagnosticReportPerformer",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-Dosage-extension"
+      },
+      "name" : "obf-Dosage",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-DoseSequenceNumber-extension"
+      },
+      "name" : "obf-DoseSequenceNumber",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-EncounterDiagnosis-extension"
+      },
+      "name" : "obf-EncounterDiagnosis",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-ExpectedPerformanceTime-extension"
+      },
+      "name" : "obf-ExpectedPerformanceTime",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-ExpectedPerformer-extension"
+      },
+      "name" : "obf-ExpectedPerformer",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-ExpectedPerformerType-extension"
+      },
+      "name" : "obf-ExpectedPerformerType",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-HandlingRisk-extension"
+      },
+      "name" : "obf-HandlingRisk",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/shr-core-HumanName-extension"
+      },
+      "name" : "shr-core-HumanName",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/shr-core-Identifier-extension"
+      },
+      "name" : "shr-core-Identifier",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-ImplicitRules-extension"
+      },
+      "name" : "obf-ImplicitRules",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-Indication-extension"
+      },
+      "name" : "obf-Indication",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-InstructionCode-extension"
+      },
+      "name" : "obf-InstructionCode",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/shr-core-LandmarkLocation-extension"
+      },
+      "name" : "shr-core-LandmarkLocation",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/shr-core-LandmarkToBodyLocationDirection-extension"
+      },
+      "name" : "shr-core-LandmarkToBodyLocationDirection",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/shr-core-LandmarkToBodyLocationDistance-extension"
+      },
+      "name" : "shr-core-LandmarkToBodyLocationDistance",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/shr-core-LandmarkType-extension"
+      },
+      "name" : "shr-core-LandmarkType",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/shr-core-Language-extension"
+      },
+      "name" : "shr-core-Language",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-LastUpdated-extension"
+      },
+      "name" : "obf-LastUpdated",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/shr-core-Laterality-extension"
+      },
+      "name" : "shr-core-Laterality",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/breastrad-MassTypes-extension"
+      },
+      "name" : "breastrad-MassTypes",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-Media-extension"
+      },
+      "name" : "obf-Media",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-MediaIncluded-extension"
+      },
+      "name" : "obf-MediaIncluded",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-MedicationCodeOrReference-extension"
+      },
+      "name" : "obf-MedicationCodeOrReference",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-Metadata-extension"
+      },
+      "name" : "obf-Metadata",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-Method-extension"
+      },
+      "name" : "obf-Method",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-Narrative-extension"
+      },
+      "name" : "obf-Narrative",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-NarrativeQualifier-extension"
+      },
+      "name" : "obf-NarrativeQualifier",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-NarrativeText-extension"
+      },
+      "name" : "obf-NarrativeText",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/shr-core-Number-extension"
+      },
+      "name" : "shr-core-Number",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-Observation-extension"
+      },
+      "name" : "obf-Observation",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-ObservationSubjectOfRecord-extension"
+      },
+      "name" : "obf-ObservationSubjectOfRecord",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/shr-core-OccurrenceTimeOrPeriod-extension"
+      },
+      "name" : "shr-core-OccurrenceTimeOrPeriod",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-OnBehalfOf-extension"
+      },
+      "name" : "obf-OnBehalfOf",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-Organization-extension"
+      },
+      "name" : "obf-Organization",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/shr-core-Orientation-extension"
+      },
+      "name" : "shr-core-Orientation",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-PartOf-extension"
+      },
+      "name" : "obf-PartOf",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-Participant-extension"
+      },
+      "name" : "obf-Participant",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-Participation-extension"
+      },
+      "name" : "obf-Participation",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-ParticipationPeriod-extension"
+      },
+      "name" : "obf-ParticipationPeriod",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-ParticipationType-extension"
+      },
+      "name" : "obf-ParticipationType",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-PatientInstruction-extension"
+      },
+      "name" : "obf-PatientInstruction",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-PresentedForm-extension"
+      },
+      "name" : "obf-PresentedForm",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/shr-core-PriorityCode-extension"
+      },
+      "name" : "shr-core-PriorityCode",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/shr-core-PriorityRank-extension"
+      },
+      "name" : "shr-core-PriorityRank",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-Profile-extension"
+      },
+      "name" : "obf-Profile",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-ReasonCode-extension"
+      },
+      "name" : "obf-ReasonCode",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-ReasonReference-extension"
+      },
+      "name" : "obf-ReasonReference",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/shr-core-RelationToLandmark-extension"
+      },
+      "name" : "shr-core-RelationToLandmark",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/shr-core-Relationship-extension"
+      },
+      "name" : "shr-core-Relationship",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-RelevantTime-extension"
+      },
+      "name" : "obf-RelevantTime",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-RequestIntent-extension"
+      },
+      "name" : "obf-RequestIntent",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-Requester-extension"
+      },
+      "name" : "obf-Requester",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/breastrad-ResultComposition-extension"
+      },
+      "name" : "breastrad-ResultComposition",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-ResultsInterpreter-extension"
+      },
+      "name" : "obf-ResultsInterpreter",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-SecurityLabel-extension"
+      },
+      "name" : "obf-SecurityLabel",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-SourceSystem-extension"
+      },
+      "name" : "obf-SourceSystem",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-SpecialHandling-extension"
+      },
+      "name" : "obf-SpecialHandling",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-Specimen-extension"
+      },
+      "name" : "obf-Specimen",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-SpecimenTreatment-extension"
+      },
+      "name" : "obf-SpecimenTreatment",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-StatementDateTime-extension"
+      },
+      "name" : "obf-StatementDateTime",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-Status-extension"
+      },
+      "name" : "obf-Status",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-StatusHistory-extension"
+      },
+      "name" : "obf-StatusHistory",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-SubjectOfRecord-extension"
+      },
+      "name" : "obf-SubjectOfRecord",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/breastrad-SummaryBiRadCode-extension"
+      },
+      "name" : "breastrad-SummaryBiRadCode",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-Tag-extension"
+      },
+      "name" : "obf-Tag",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-TerminationReason-extension"
+      },
+      "name" : "obf-TerminationReason",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/shr-core-TimePeriod-extension"
+      },
+      "name" : "shr-core-TimePeriod",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-TreatmentIntent-extension"
+      },
+      "name" : "obf-TreatmentIntent",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/shr-core-Type-extension"
+      },
+      "name" : "shr-core-Type",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/shr-core-Units-extension"
+      },
+      "name" : "shr-core-Units",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/obf-VersionId-extension"
+      },
+      "name" : "obf-VersionId",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "ValueSet/breastrad-AbnormalityDensityVs"
+      },
+      "name" : "AbnormalityDensityVs",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "ValueSet/breastrad-AbnormalityTypeVs"
+      },
+      "name" : "AbnormalityTypeVs",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "ValueSet/shr-core-AnatomicalDirectionVS"
+      },
+      "name" : "AnatomicalDirectionVS",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "ValueSet/breastrad-AsymmetryTypesVs"
+      },
+      "name" : "AsymmetryTypesVs",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "ValueSet/breastrad-BiRadCodeVs"
+      },
+      "name" : "BiRadCodeVs",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "ValueSet/shr-core-BodyLocationVS"
+      },
+      "name" : "BodyLocationVS",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "ValueSet/breastrad-BreastDensityVs"
+      },
+      "name" : "BreastDensityVs",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "ValueSet/breastrad-BreastdepthVs"
+      },
+      "name" : "BreastdepthVs",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "ValueSet/breastrad-ChangeVs"
+      },
+      "name" : "ChangeVs",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "ValueSet/shr-core-ClockFaceDirectionVS"
+      },
+      "name" : "ClockFaceDirectionVS",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "ValueSet/obf-ConditionCategoryVS"
+      },
+      "name" : "ConditionCategoryVS",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "ValueSet/breastrad-CystTypesVs"
+      },
+      "name" : "CystTypesVs",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "ValueSet/breastrad-DepthVs"
+      },
+      "name" : "DepthVs",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "ValueSet/breastrad-DiagnosticTechniqueVs"
+      },
+      "name" : "DiagnosticTechniqueVs",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "ValueSet/shr-core-LandmarkTypeVS"
+      },
+      "name" : "LandmarkTypeVS",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "ValueSet/shr-core-LateralityVS"
+      },
+      "name" : "LateralityVS",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "ValueSet/breastrad-MarginVs"
+      },
+      "name" : "MarginVs",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "ValueSet/breastrad-MassTypesVs"
+      },
+      "name" : "MassTypesVs",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "ValueSet/breastrad-NodeTypesVs"
+      },
+      "name" : "NodeTypesVs",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "ValueSet/shr-core-OrientationVS"
+      },
+      "name" : "OrientationVS",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "ValueSet/breastrad-OrientationVs"
+      },
+      "name" : "OrientationVs",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "ValueSet/obf-ResearchSubjectTerminationReasonVS"
+      },
+      "name" : "ResearchSubjectTerminationReasonVS",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "ValueSet/shr-core-SettingVS"
+      },
+      "name" : "SettingVS",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "ValueSet/breastrad-ShapeVs"
+      },
+      "name" : "ShapeVs",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "ValueSet/obf-StudyArmTypeVS"
+      },
+      "name" : "StudyArmTypeVS",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "ValueSet/obf-TreatmentIntentVS"
+      },
+      "name" : "TreatmentIntentVS",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "ValueSet/obf-TreatmentTerminationReasonVS"
+      },
+      "name" : "TreatmentTerminationReasonVS",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "ValueSet/shr-core-UnitsOfLengthVS"
+      },
+      "name" : "UnitsOfLengthVS",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "ValueSet/breastrad-VascularityVs"
+      },
+      "name" : "VascularityVs",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "ValueSet/breastrad-WallVs"
+      },
+      "name" : "WallVs",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "CodeSystem/obf-ResearchSubjectTerminationReasonCS"
+      },
+      "name" : "ResearchSubjectTerminationReasonCS",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "CodeSystem/shr-core-SettingCS"
+      },
+      "name" : "SettingCS",
+      "exampleBoolean" : false
+    }],
+    "page" : {
+      "nameUrl" : "index.html",
+      "title" : "Breast Radiology Reporting",
+      "generation" : "html"
+    },
+    "parameter" : [{
+      "code" : "apply",
+      "value" : "version"
+    },
+    {
+      "code" : "generate",
+      "value" : "xml"
+    },
+    {
+      "code" : "generate",
+      "value" : "JSON"
+    }]
+  }
+}

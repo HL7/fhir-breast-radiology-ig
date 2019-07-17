@@ -36,20 +36,64 @@
   </thead>
   <tbody>
     <tr>
-          <td><a href="StructureDefinition-xxyyz-Breastbodylocation-extension.html">Breastbodylocation</a></td>
-          <td>{% capture md_text %}Location of the breast abnormality.{% endcapture %}{{ md_text | markdownify }}</td>
+          <td><a href="StructureDefinition-obf-BasedOn-extension.html">BasedOn</a></td>
+          <td>{% capture md_text %}The proposal, order, or plan that is partly or wholly fulfilled by this item.{% endcapture %}{{ md_text | markdownify }}</td>
         </tr>
         <tr>
-          <td><a href="StructureDefinition-xxyyz-Breastdepth-extension.html">Breastdepth</a></td>
-          <td>{% capture md_text %}BreastDepth{% endcapture %}{{ md_text | markdownify }}</td>
+          <td><a href="StructureDefinition-breastrad-BreastExamTechnique-extension.html">BreastExamTechnique</a></td>
+          <td>{% capture md_text %}Technique used during breast examination.{% endcapture %}{{ md_text | markdownify }}</td>
         </tr>
         <tr>
-          <td><a href="StructureDefinition-xxyyz-Breastlocation-extension.html">Breastlocation</a></td>
-          <td>{% capture md_text %}BreastLocation{% endcapture %}{{ md_text | markdownify }}</td>
+          <td><a href="StructureDefinition-obf-CareContext-extension.html">CareContext</a></td>
+          <td>{% capture md_text %}The encounter or episode of care{% endcapture %}{{ md_text | markdownify }}</td>
         </tr>
         <tr>
-          <td><a href="StructureDefinition-xxyyz-DistanceFromNipple-extension.html">DistanceFromNipple</a></td>
-          <td>{% capture md_text %}Distance from Nipple{% endcapture %}{{ md_text | markdownify }}</td>
+          <td><a href="StructureDefinition-shr-core-Category-extension.html">Category</a></td>
+          <td>{% capture md_text %}The general type or class of this item.{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        <tr>
+          <td><a href="StructureDefinition-shr-core-Code-extension.html">Code</a></td>
+          <td>{% capture md_text %}The main type identifier for a lab, procedure, condition, etc., usually drawn from a controlled vocabulary.{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        <tr>
+          <td><a href="StructureDefinition-obf-ConclusionCode-extension.html">ConclusionCode</a></td>
+          <td>{% capture md_text %}One or more codes that represent the summary conclusion (interpretation/impression) of the diagnostic report.{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        <tr>
+          <td><a href="StructureDefinition-obf-ConclusionText-extension.html">ConclusionText</a></td>
+          <td>{% capture md_text %}Concise and clinically contextualized impression / summary of the diagnostic report.{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        <tr>
+          <td><a href="StructureDefinition-obf-DiagnosticReportPerformer-extension.html">DiagnosticReportPerformer</a></td>
+          <td>{% capture md_text %}The diagnostic service that is responsible for issuing the report.{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        <tr>
+          <td><a href="StructureDefinition-shr-core-Identifier-extension.html">Identifier</a></td>
+          <td>{% capture md_text %}Business identifier or external id for this resource.{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        <tr>
+          <td><a href="StructureDefinition-obf-ImplicitRules-extension.html">ImplicitRules</a></td>
+          <td>{% capture md_text %}A set of rules under which this content was created{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        <tr>
+          <td><a href="StructureDefinition-shr-core-LandmarkLocation-extension.html">LandmarkLocation</a></td>
+          <td>{% capture md_text %}The body location of the landmark, specified by a location code and optional laterality and orientation.{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        <tr>
+          <td><a href="StructureDefinition-shr-core-LandmarkToBodyLocationDirection-extension.html">LandmarkToBodyLocationDirection</a></td>
+          <td>{% capture md_text %}The direction from the landmark to the body location of interest, given as a clockface direction or anatomical direction.{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        <tr>
+          <td><a href="StructureDefinition-shr-core-LandmarkToBodyLocationDistance-extension.html">LandmarkToBodyLocationDistance</a></td>
+          <td>{% capture md_text %}How far the body location of interest is from the given landmark.{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        <tr>
+          <td><a href="StructureDefinition-shr-core-LandmarkType-extension.html">LandmarkType</a></td>
+          <td>{% capture md_text %}The type of feature that constitutes the landmark, particularly if the landmark is an acquired body structure or physical object.{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        <tr>
+          <td><a href="StructureDefinition-shr-core-Language-extension.html">Language</a></td>
+          <td>{% capture md_text %}A human language, spoken or written.{% endcapture %}{{ md_text | markdownify }}</td>
         </tr>
         <tr>
           <td><a href="StructureDefinition-shr-core-Laterality-extension.html">Laterality</a></td>
@@ -66,8 +110,24 @@ The laterality element is part of BodyLocation, a flexible structure that allows
 Note that BodyLocation is a data type (a reusable structure), not a stand-alone entity. The concept is similar to how a postal address can apply to a person, location, or organization. This contrasts with FHIR's stand-alone BodySite (aka BodyStructure in r4) which 'is not ... intended for describing the type of anatomical location but rather a specific body site on a specific patient' (FHIR 3.5).{% endcapture %}{{ md_text | markdownify }}</td>
         </tr>
         <tr>
-          <td><a href="StructureDefinition-xxyyz-Laterality-extension.html">Laterality</a></td>
-          <td>{% capture md_text %}Laterality{% endcapture %}{{ md_text | markdownify }}</td>
+          <td><a href="StructureDefinition-breastrad-MassTypes-extension.html">MassTypes</a></td>
+          <td>{% capture md_text %}Mass Types{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        <tr>
+          <td><a href="StructureDefinition-obf-MediaIncluded-extension.html">MediaIncluded</a></td>
+          <td>{% capture md_text %}A list of key images associated with this report. The images are generally created during the diagnostic process, and may be directly of the patient, or of treated specimens (i.e. slides of interest).{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        <tr>
+          <td><a href="StructureDefinition-obf-Metadata-extension.html">Metadata</a></td>
+          <td>{% capture md_text %}Elements that belong to all information items.{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        <tr>
+          <td><a href="StructureDefinition-obf-Narrative-extension.html">Narrative</a></td>
+          <td>{% capture md_text %}A human-readable narrative, potentially including images, that contains a summary of the resource, and may be used to represent the content of the resource to a human.{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        <tr>
+          <td><a href="StructureDefinition-obf-ObservationSubjectOfRecord-extension.html">ObservationSubjectOfRecord</a></td>
+          <td>{% capture md_text %}The subject of an observation.{% endcapture %}{{ md_text | markdownify }}</td>
         </tr>
         <tr>
           <td><a href="StructureDefinition-shr-core-Orientation-extension.html">Orientation</a></td>
@@ -81,6 +141,10 @@ The orientation element is part of BodyLocation, a flexible structure that allow
 - Specifying the direction and distance from the landmark to the body location.
 
 Note that BodyLocation is a data type (a reusable structure), not a stand-alone entity. The concept is similar to how a postal address can apply to a person, location, or organization. This contrasts with FHIR's stand-alone BodySite (aka BodyStructure in r4) which 'is not ... intended for describing the type of anatomical location but rather a specific body site on a specific patient' (FHIR 3.5).{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        <tr>
+          <td><a href="StructureDefinition-obf-PresentedForm-extension.html">PresentedForm</a></td>
+          <td>{% capture md_text %}Fully formatted representation of the entire result as issued by the diagnostic service. Multiple formats are allowed but they SHALL be semantically equivalent.{% endcapture %}{{ md_text | markdownify }}</td>
         </tr>
         <tr>
           <td><a href="StructureDefinition-shr-core-RelationToLandmark-extension.html">RelationToLandmark</a></td>
@@ -98,6 +162,31 @@ The RelationToLandmark element is part of BodyLocation, a flexible structure tha
 - Specifying the direction and distance from the landmark to the body location.
 
 Note that BodyLocation is a data type (a reusable structure), not a stand-alone entity. The concept is similar to how a postal address can apply to a person, location, or organization. This contrasts with FHIR's stand-alone BodySite (aka BodyStructure in r4) which 'is not ... intended for describing the type of anatomical location but rather a specific body site on a specific patient' (FHIR 3.5).{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        <tr>
+          <td><a href="StructureDefinition-obf-RelevantTime-extension.html">RelevantTime</a></td>
+          <td>{% capture md_text %}The time or time period that the statement addresses.
+The clinically relevant time is not necessarily when the information is gathered or when a test is carried out, but for example, when a specimen was collected, or the time period referred to by the question. Use a TimePeriod for a measurement or specimen collection continued over a significant period of time (e.g. 24 hour Urine Sodium).{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        <tr>
+          <td><a href="StructureDefinition-breastrad-ResultComposition-extension.html">ResultComposition</a></td>
+          <td>{% capture md_text %}Reference to the document containing detailed information about the breast radiology report, including assocated sections{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        <tr>
+          <td><a href="StructureDefinition-obf-ResultsInterpreter-extension.html">ResultsInterpreter</a></td>
+          <td>{% capture md_text %}The practitioner or organization that is responsible for the report's conclusions and interpretations.{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        <tr>
+          <td><a href="StructureDefinition-obf-StatementDateTime-extension.html">StatementDateTime</a></td>
+          <td>{% capture md_text %}The point in time when the statement was created.{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        <tr>
+          <td><a href="StructureDefinition-obf-Status-extension.html">Status</a></td>
+          <td>{% capture md_text %}A state that relates to the workflow or interpretation of this resource. Certain status values can modify the meaning of the resource, for example, entered-in-error. When a boolean value is used, Status of true indicates the record is active, false means inactive.{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        <tr>
+          <td><a href="StructureDefinition-breastrad-SummaryBiRadCode-extension.html">SummaryBiRadCode</a></td>
+          <td>{% capture md_text %}BiRd code that summarizes a set of BiRad codes in a the document. Generally the most concerning/important BiRad code in the document.{% endcapture %}{{ md_text | markdownify }}</td>
         </tr>
         
   </tbody>

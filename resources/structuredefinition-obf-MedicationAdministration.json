@@ -3,12 +3,12 @@
   "id": "obf-MedicationAdministration",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>MedicationAdministration Profile</b></p>\n  <p>A record of the use of a medication. If the medication is given as part of a course of treatment, the PartOf attribute should refer to the CourseOfTreatment.\nAlthough FHIR MedicationAdministration supports date of administration, information source, performer, it lacks common provenance elements, statement creation date, author, and recorder. These are supported as optional extensions.\nFHIR DSTU2 lacks a category attribute, which is provided as an extension in that version.\nSHR does not allow the &#039;not given&#039; attributes from DSTU2 and STU3, since they are dropped in R4. The status element is used to document medications not given.</p>\n  <p><b>Mapping Summary</b></p>\n  <p><pre>obf.MedicationAdministration maps to MedicationAdministration:\n  Language maps to language\n  Narrative maps to text\n  ImplicitRules maps to implicitRules\n  Metadata.VersionId maps to meta.versionId\n  Metadata.SourceSystem maps to meta.source\n  Metadata.Profile maps to meta.profile\n  Metadata.LastUpdated maps to meta.lastUpdated\n  Metadata.SecurityLabel maps to meta.security\n  Metadata.Tag maps to meta.tag\n  Identifier maps to identifier\n  MedicationAdministrationPartOf maps to partOf\n  Status maps to status\n  StatusReason maps to statusReason\n  Category maps to category\n  MedicationReasonReference maps to reasonReference\n  SubjectOfRecord maps to subject\n  CareContext maps to context\n  SupportingInformation maps to supportingInformation\n  OccurrenceTimeOrPeriod maps to effective[x]\n  Participation maps to performer\n  Participation.Participant maps to performer.actor // Added Target Type PractitionerRole\n  Participation.ParticipationType maps to performer.function\n  Participation.OnBehalfOf maps to performer.extension\n  ReasonCode maps to reasonCode\n  MedicationAdministrationBasedOn maps to request // renamed prescription to request\n  Device maps to device\n  Annotation maps to note\n  Dosage maps to dosage\n  Dosage.InstructionText maps to dosage.text\n  Dosage.AdministrationSite maps to dosage.site\n  Dosage.RouteIntoBody maps to dosage.route\n  Dosage.Method maps to dosage.method\n  Dosage.DoseAndRate.DoseAmount maps to dosage.dose\n  Dosage.DoseAndRate.DoseRate maps to dosage.rate[x] // Ratio, Range, SimpleQuantity maps to Ratio, Quantity\n  Dosage.DoseSequenceNumber maps to dosage.extension\n  Dosage.InstructionCode maps to dosage.extension\n</pre></p>\n</div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>MedicationAdministration Profile</b></p>\n  <p>A record of the use of a medication. If the medication is given as part of a course of treatment, the PartOf attribute should refer to the CourseOfTreatment.\nAlthough FHIR MedicationAdministration supports date of administration, information source, performer, it lacks common provenance elements, statement creation date, author, and recorder. These are supported as optional extensions.\nFHIR DSTU2 lacks a category attribute, which is provided as an extension in that version.\nSHR does not allow the &#039;not given&#039; attributes from DSTU2 and STU3, since they are dropped in R4. The status element is used to document medications not given.</p>\n  <p><b>Mapping Summary</b></p>\n  <p><pre>obf.MedicationAdministration maps to MedicationAdministration:\n  Language maps to language\n  ImplicitRules maps to implicitRules\n  Metadata.VersionId maps to meta.versionId\n  Metadata.SourceSystem maps to meta.source\n  Metadata.Profile maps to meta.profile\n  Metadata.LastUpdated maps to meta.lastUpdated\n  Metadata.SecurityLabel maps to meta.security\n  Metadata.Tag maps to meta.tag\n  Narrative maps to text\n  Identifier maps to identifier\n  MedicationAdministrationPartOf maps to partOf\n  Status maps to status\n  StatusReason maps to statusReason\n  Category maps to category\n  MedicationReasonReference maps to reasonReference\n  SubjectOfRecord maps to subject\n  CareContext maps to context\n  SupportingInformation maps to supportingInformation\n  OccurrenceTimeOrPeriod maps to effective[x]\n  Participation maps to performer\n  Participation.Participant maps to performer.actor // Added Target Type PractitionerRole\n  Participation.ParticipationType maps to performer.function\n  Participation.OnBehalfOf maps to performer.extension\n  ReasonCode maps to reasonCode\n  MedicationAdministrationBasedOn maps to request // renamed prescription to request\n  Device maps to device\n  Annotation maps to note\n  Dosage maps to dosage\n  Dosage.InstructionText maps to dosage.text\n  Dosage.AdministrationSite maps to dosage.site\n  Dosage.RouteIntoBody maps to dosage.route\n  Dosage.Method maps to dosage.method\n  Dosage.DoseAndRate.DoseAmount maps to dosage.dose\n  Dosage.DoseAndRate.DoseRate maps to dosage.rate[x] // Ratio, Range, SimpleQuantity maps to Ratio, Quantity\n  Dosage.DoseSequenceNumber maps to dosage.extension\n  Dosage.InstructionCode maps to dosage.extension\n</pre></p>\n</div>"
   },
   "url": "http://www.cimi.com/fhir/StructureDefinition/obf-MedicationAdministration",
   "name": "MedicationAdministration",
   "status": "draft",
-  "date": "2019-06-24",
+  "date": "2019-07-17",
   "publisher": "Hl7",
   "contact": [
     {
@@ -817,7 +817,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://www.cimi.com/fhir/StructureDefinition/obf-DomainResource"
+              "http://hl7.org/fhir/StructureDefinition/Resource"
             ]
           }
         ],
@@ -1088,8 +1088,8 @@
       {
         "id": "MedicationAdministration:obf-MedicationAdministration.performer.actor",
         "path": "MedicationAdministration.performer.actor",
-        "short": "Who performed the medication administration",
-        "definition": "Indicates who or what performed the medication administration.",
+        "short": "A choice of Patient, Practitioner and RelatedPerson as participant",
+        "definition": "A choice of Patient, Practitioner and RelatedPerson as participant.",
         "min": 1,
         "max": "1",
         "base": {
@@ -1168,8 +1168,8 @@
       {
         "id": "MedicationAdministration:obf-MedicationAdministration.reasonReference",
         "path": "MedicationAdministration.reasonReference",
-        "short": "Condition or observation that supports why the medication was administered",
-        "definition": "Condition or observation that supports why the medication was administered.",
+        "short": "Condition or observation that supports why the medication is being/was taken",
+        "definition": "Condition or observation that supports why the medication is being/was taken",
         "comment": "This is a reference to a condition that is the reason for the medication request.  If only a code exists, use reasonCode.",
         "min": 0,
         "max": "*",
@@ -1843,18 +1843,6 @@
         ]
       },
       {
-        "id": "MedicationAdministration:obf-MedicationAdministration.supportingInformation",
-        "path": "MedicationAdministration.supportingInformation",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://www.cimi.com/fhir/StructureDefinition/obf-DomainResource"
-            ]
-          }
-        ]
-      },
-      {
         "id": "MedicationAdministration:obf-MedicationAdministration.performer",
         "path": "MedicationAdministration.performer",
         "min": 0,
@@ -1918,7 +1906,9 @@
               "http://www.cimi.com/fhir/StructureDefinition/obf-RelatedPerson"
             ]
           }
-        ]
+        ],
+        "short": "A choice of Patient, Practitioner and RelatedPerson as participant",
+        "definition": "A choice of Patient, Practitioner and RelatedPerson as participant."
       },
       {
         "id": "MedicationAdministration:obf-MedicationAdministration.reasonReference",
@@ -1932,7 +1922,9 @@
               "http://www.cimi.com/fhir/StructureDefinition/obf-DiagnosticReport"
             ]
           }
-        ]
+        ],
+        "short": "Condition or observation that supports why the medication is being/was taken",
+        "definition": "Condition or observation that supports why the medication is being/was taken"
       },
       {
         "id": "MedicationAdministration:obf-MedicationAdministration.request",
@@ -2052,11 +2044,5 @@
       }
     ]
   },
-  "identifier": [
-    {
-      "system": "http://www.cimi.com",
-      "value": "obf.MedicationAdministration"
-    }
-  ],
   "title": "obf-MedicationAdministration"
 }

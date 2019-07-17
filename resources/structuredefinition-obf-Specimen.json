@@ -3,12 +3,12 @@
   "id": "obf-Specimen",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>Specimen Profile</b></p>\n  <p>A specimen is a substance, physical object, or collection of objects, that the laboratory considers a single discrete, uniquely identified unit that is the subject of one or more steps in the laboratory workflow. A specimen may include multiple physical pieces as long as they are considered a single unit within the laboratory workflow. A specimen results from one to many specimen collection procedures, and may be contained in multiple specimen containers. Specimen may have one or more processing activities.</p>\n  <p><b>Mapping Summary</b></p>\n  <p><pre>obf.Specimen maps to Specimen:\n  Language maps to language\n  Narrative maps to text\n  ImplicitRules maps to implicitRules\n  Metadata.VersionId maps to meta.versionId\n  Metadata.SourceSystem maps to meta.source\n  Metadata.Profile maps to meta.profile\n  Metadata.LastUpdated maps to meta.lastUpdated\n  Metadata.SecurityLabel maps to meta.security\n  Metadata.Tag maps to meta.tag\n  Identifier maps to identifier\n  SpecimenType maps to type\n  AccessionIdentifier maps to accessionIdentifier\n  Status maps to status // Change value set from http://hl7.org/fhir/ValueSet/specimen-status to http://hl7.org/fhir/ValueSet/specimen-status|4.0.0\n  CollectionSource maps to subject // Min Cardinality changed from 1 to 0; Added Target Type Location\n  PartOf maps to parent\n  ReceivedTime maps to receivedTime\n  AmountOrSize maps to collection.quantity\n  CollectionSite.BodyLocation.Code maps to collection.bodySite\n  CollectionSite.BodyLocation.Laterality maps to collection.bodySite.extension\n  CollectionSite.BodyLocation.Orientation maps to collection.bodySite.extension\n  CollectionSite.BodyLocation.RelationToLandmark maps to collection.bodySite.extension\n  CollectionTime maps to collection.collected[x]\n  CollectionMethod maps to collection.method\n  SpecimenContainer.Identifier maps to container.identifier\n  SpecimenContainer.CommentOrDescription maps to container.description\n  SpecimenContainer.Type maps to container.type\n  SpecimenContainer.Capacity maps to container.capacity\n  SpecimenContainer.SpecimenQuantity maps to container.specimenQuantity\n  SpecimenContainer.Additive maps to container.additive[x]\n</pre></p>\n</div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>Specimen Profile</b></p>\n  <p>A specimen is a substance, physical object, or collection of objects, that the laboratory considers a single discrete, uniquely identified unit that is the subject of one or more steps in the laboratory workflow. A specimen may include multiple physical pieces as long as they are considered a single unit within the laboratory workflow. A specimen results from one to many specimen collection procedures, and may be contained in multiple specimen containers. Specimen may have one or more processing activities.</p>\n  <p><b>Mapping Summary</b></p>\n  <p><pre>obf.Specimen maps to Specimen:\n  Language maps to language\n  ImplicitRules maps to implicitRules\n  Metadata.VersionId maps to meta.versionId\n  Metadata.SourceSystem maps to meta.source\n  Metadata.Profile maps to meta.profile\n  Metadata.LastUpdated maps to meta.lastUpdated\n  Metadata.SecurityLabel maps to meta.security\n  Metadata.Tag maps to meta.tag\n  Narrative maps to text\n  Identifier maps to identifier\n  SpecimenType maps to type\n  AccessionIdentifier maps to accessionIdentifier\n  Status maps to status // Change value set from http://hl7.org/fhir/ValueSet/specimen-status to http://hl7.org/fhir/ValueSet/specimen-status|4.0.0\n  CollectionSource maps to subject // Min Cardinality changed from 1 to 0; Added Target Type Location\n  PartOf maps to parent\n  ReceivedTime maps to receivedTime\n  AmountOrSize maps to collection.quantity\n  CollectionSite.BodyLocation.Code maps to collection.bodySite\n  CollectionSite.BodyLocation.Laterality maps to collection.bodySite.extension\n  CollectionSite.BodyLocation.Orientation maps to collection.bodySite.extension\n  CollectionSite.BodyLocation.RelationToLandmark maps to collection.bodySite.extension\n  CollectionTime maps to collection.collected[x]\n  CollectionMethod maps to collection.method\n  SpecimenContainer.Identifier maps to container.identifier\n  SpecimenContainer.CommentOrDescription maps to container.description\n  SpecimenContainer.Type maps to container.type\n  SpecimenContainer.Capacity maps to container.capacity\n  SpecimenContainer.SpecimenQuantity maps to container.specimenQuantity\n  SpecimenContainer.Additive maps to container.additive[x]\n</pre></p>\n</div>"
   },
   "url": "http://www.cimi.com/fhir/StructureDefinition/obf-Specimen",
   "name": "Specimen",
   "status": "draft",
-  "date": "2019-06-24",
+  "date": "2019-07-17",
   "publisher": "Hl7",
   "contact": [
     {
@@ -574,8 +574,15 @@
         "isModifier": false,
         "isSummary": true,
         "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "SpecimenType"
+            }
+          ],
           "strength": "example",
-          "valueSet": "http://hl7.org/fhir/ValueSet/v2-0487"
+          "description": "The type of the specimen.",
+          "valueSet": "http://terminology.hl7.org/ValueSet/v2-0487"
         },
         "mapping": [
           {
@@ -2114,11 +2121,7 @@
         "id": "Specimen:obf-Specimen.type",
         "path": "Specimen.type",
         "min": 1,
-        "max": "1",
-        "binding": {
-          "strength": "example",
-          "valueSet": "http://hl7.org/fhir/ValueSet/v2-0487"
-        }
+        "max": "1"
       },
       {
         "id": "Specimen:obf-Specimen.subject",
@@ -2251,11 +2254,5 @@
       }
     ]
   },
-  "identifier": [
-    {
-      "system": "http://www.cimi.com",
-      "value": "obf.Specimen"
-    }
-  ],
   "title": "obf-Specimen"
 }

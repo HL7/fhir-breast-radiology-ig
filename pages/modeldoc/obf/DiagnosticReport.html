@@ -61,7 +61,7 @@ if (location.href.indexOf('is-external=true') == -1) {
       <dl>
         <dt>Documentation:</dt>
         <dd>
-          <div class="block"></div>
+          <div class="block"><p>The findings and interpretation of diagnostic tests performed on patients, groups of patients, devices, and locations, and/or specimens derived from these. The report includes clinical context such as requesting and provider information, and some mix of atomic results, images, textual and coded interpretations, and formatted representation of diagnostic reports.</p></div>
         </dd>
       </dl>
       <dl>
@@ -126,6 +126,15 @@ if (location.href.indexOf('is-external=true') == -1) {
                       </ul>
         </dd>
               </dl>
+            <dl>
+        <dt>Direct Descendants:</dt>
+        <dd>
+          <ul class="class_list">
+                          <li>
+                <a href="../breastrad/BreastRadiologyReport.html">BreastRadiologyReport</a>              </li>
+                      </ul>
+        </dd>
+      </dl>
       
             <dl>
         <dt>Used By:</dt>
@@ -213,7 +222,7 @@ if (location.href.indexOf('is-external=true') == -1) {
                       <a href="../shr-core/Category.html">Category</a>
                     
         </div>
-                        <div class="block">0..1</div>
+                        <div class="block">1..1</div>
             </td>
 </tr>                        
   <tr class="rowColor">
@@ -495,6 +504,28 @@ For an Observation, the Code describes the aspect or property of the subject bei
         
       </td>
       <td class="colMiddle">
+        <code><strong>Cardinality</strong></code>
+        
+          <div class="block">Constrained in <a href="../obf/DiagnosticReport.html">DiagnosticReport</a></div>
+        
+      </td>
+      <td class="colLast">
+                  <div class="block">1..1</div>
+              </td>
+      <!-- <td class="colLast">
+        <div class="block">DiagnosticReport</div>
+      </td> -->
+    </tr>
+      
+      <tr class="altColor">
+    
+      <td class="colFirst">
+        <code><strong>SubjectOfRecord</strong></code>
+        
+          <div class="block">Defined in <a href="../obf/ClinicalStatement.html">ClinicalStatement</a></div>
+        
+      </td>
+      <td class="colMiddle">
         <code><strong>DataType</strong></code>
         
           <div class="block">Constrained in <a href="../obf/DiagnosticReport.html">DiagnosticReport</a></div>
@@ -512,7 +543,7 @@ For an Observation, the Code describes the aspect or property of the subject bei
       </td> -->
     </tr>
       
-      <tr class="altColor">
+      <tr class="rowColor">
     
       <td class="colFirst">
         <code><strong>CareContext</strong></code>
@@ -538,7 +569,7 @@ For an Observation, the Code describes the aspect or property of the subject bei
       </td> -->
     </tr>
       
-      <tr class="rowColor">
+      <tr class="altColor">
     
       <td class="colFirst">
         <code><strong>StatementDateTime</strong></code>
@@ -560,7 +591,7 @@ For an Observation, the Code describes the aspect or property of the subject bei
       </td> -->
     </tr>
       
-      <tr class="altColor">
+      <tr class="rowColor">
     
       <td class="colFirst">
         <code><strong>Code</strong></code>
@@ -575,7 +606,7 @@ For an Observation, the Code describes the aspect or property of the subject bei
         
       </td>
       <td class="colLast">
-                  <div class="block">http://hl7.org/fhir/ValueSet/report-codes (PREFERRED)</div>
+                  <div class="block">http://hl7.org/fhir/ValueSet/report-codes (EXTENSIBLE)</div>
               </td>
       <!-- <td class="colLast">
         <div class="block">DiagnosticReport</div>

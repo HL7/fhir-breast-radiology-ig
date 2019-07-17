@@ -3,12 +3,14 @@
   "id": "obf-Condition",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>Condition Profile</b></p>\n  <p>A condition that is or may be present in a subject. &#039;Condition&#039; is interpreted broadly and could be a disorder, abnormality, problem, injury, complaint, functionality, illness, disease, ailment, sickness, affliction, upset, difficulty, disorder, symptom, worry, or trouble.\nThe Observation-based class, ConditionAbsent, should be used to describe conditions that are not present or negative findings.\nSHR Condition uses the SHR BodyLocation structure that includes not only a code, but optional laterality, direction, clock direction, and distance. If included, the distance is measured from the location specified by the code, laterality, and direction.</p>\n  <p><b>Mapping Summary</b></p>\n  <p><pre>obf.Condition maps to Condition:\n  Language maps to language\n  Narrative maps to text\n  ImplicitRules maps to implicitRules\n  Metadata.VersionId maps to meta.versionId\n  Metadata.SourceSystem maps to meta.source\n  Metadata.Profile maps to meta.profile\n  Metadata.LastUpdated maps to meta.lastUpdated\n  Metadata.SecurityLabel maps to meta.security\n  Metadata.Tag maps to meta.tag\n  Identifier maps to identifier\n  ClinicalStatus maps to clinicalStatus\n  Status maps to verificationStatus\n  Category maps to category\n  Severity maps to severity\n  Code maps to code\n  BodyLocation.Code maps to bodySite\n  BodyLocation.Laterality maps to bodySite.extension\n  BodyLocation.Orientation maps to bodySite.extension\n  BodyLocation.RelationToLandmark maps to bodySite.extension\n  SubjectOfRecord maps to subject\n  CareContext maps to encounter\n  Onset maps to onset[x]\n  Abatement maps to abatement[x]\n  StatementDateTime maps to recordedDate\n  Author maps to recorder\n  PersonInformationSource maps to asserter\n  StageInformation maps to stage\n  StageInformation.StageSummary maps to stage.summary\n  StageInformation.StageDetail maps to stage.assessment\n  StageInformation.Type maps to stage.type\n  Evidence.Manifestation maps to evidence.code\n  Evidence.DomainResource maps to evidence.detail\n  Annotation maps to note\n  DateOfDiagnosis maps to extension\n</pre></p>\n</div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>Condition Profile</b></p>\n  <p>A condition that is or may be present in a subject. &#039;Condition&#039; is interpreted broadly and could be a disorder, abnormality, problem, injury, complaint, functionality, illness, disease, ailment, sickness, affliction, upset, difficulty, disorder, symptom, worry, or trouble.\nThe Observation-based class, ConditionAbsent, should be used to describe conditions that are not present or negative findings.\nSHR Condition uses the SHR BodyLocation structure that includes not only a code, but optional laterality, direction, clock direction, and distance. If included, the distance is measured from the location specified by the code, laterality, and direction.</p>\n  <p><b>Mapping Summary</b></p>\n  <p><pre>obf.Condition maps to http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition:\n  Language maps to language\n  ImplicitRules maps to implicitRules\n  Metadata.VersionId maps to meta.versionId\n  Metadata.SourceSystem maps to meta.source\n  Metadata.Profile maps to meta.profile\n  Metadata.LastUpdated maps to meta.lastUpdated\n  Metadata.SecurityLabel maps to meta.security\n  Metadata.Tag maps to meta.tag\n  Narrative maps to text\n  Identifier maps to identifier\n  ClinicalStatus maps to clinicalStatus\n  Status maps to verificationStatus\n  Category maps to category\n  Severity maps to severity\n  Code maps to code\n  BodyLocation.Code maps to bodySite\n  BodyLocation.Laterality maps to bodySite.extension\n  BodyLocation.Orientation maps to bodySite.extension\n  BodyLocation.RelationToLandmark maps to bodySite.extension\n  SubjectOfRecord maps to subject\n  CareContext maps to encounter\n  Onset maps to onset[x]\n  Abatement maps to abatement[x]\n  StatementDateTime maps to recordedDate\n  Author maps to recorder\n  PersonInformationSource maps to asserter\n  StageInformation maps to stage\n  StageInformation.StageSummary maps to stage.summary\n  StageInformation.StageDetail maps to stage.assessment\n  StageInformation.Type maps to stage.type\n  Evidence.Manifestation maps to evidence.code\n  Evidence.Resource maps to evidence.detail\n  Annotation maps to note\n  DateOfDiagnosis maps to extension\n</pre></p>\n</div>"
   },
   "url": "http://www.cimi.com/fhir/StructureDefinition/obf-Condition",
   "name": "Condition",
-  "status": "draft",
-  "date": "2019-06-24",
+  "title": "obf-Condition",
+  "status": "active",
+  "experimental": false,
+  "date": "2019-07-17",
   "publisher": "Hl7",
   "contact": [
     {
@@ -21,8 +23,24 @@
     }
   ],
   "description": "A condition that is or may be present in a subject. 'Condition' is interpreted broadly and could be a disorder, abnormality, problem, injury, complaint, functionality, illness, disease, ailment, sickness, affliction, upset, difficulty, disorder, symptom, worry, or trouble.\nThe Observation-based class, ConditionAbsent, should be used to describe conditions that are not present or negative findings.\nSHR Condition uses the SHR BodyLocation structure that includes not only a code, but optional laterality, direction, clock direction, and distance. If included, the distance is measured from the location specified by the code, laterality, and direction.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "urn:iso:std:iso:3166",
+          "code": "US",
+          "display": "United States of America"
+        }
+      ]
+    }
+  ],
   "fhirVersion": "4.0.0",
   "mapping": [
+    {
+      "identity": "argonaut-dq-dstu2",
+      "uri": "http://unknown.org/Argonaut-DQ-DSTU2",
+      "name": "Argonaut-DQ-DSTU2"
+    },
     {
       "identity": "workflow",
       "uri": "http://hl7.org/fhir/workflow",
@@ -57,7 +75,7 @@
   "kind": "resource",
   "abstract": false,
   "type": "Condition",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Condition",
+  "baseDefinition": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition",
   "derivation": "constraint",
   "snapshot": {
     "element": [
@@ -129,14 +147,16 @@
             "severity": "error",
             "human": "Condition.clinicalStatus SHALL NOT be present if verification Status is entered-in-error",
             "expression": "verificationStatus.coding.where(system='http://terminology.hl7.org/CodeSystem/condition-ver-status' and code='entered-in-error').empty() or clinicalStatus.empty()",
-            "xpath": "not(exists(f:verificationStatus/f:coding[f:system/@value='http://terminology.hl7.org/CodeSystem/condition-ver-status' and f:code/@value='entered-in-error'])) or not(exists(f:clinicalStatus))"
+            "xpath": "not(exists(f:verificationStatus/f:coding[f:system/@value='http://terminology.hl7.org/CodeSystem/condition-ver-status' and f:code/@value='entered-in-error'])) or not(exists(f:clinicalStatus))",
+            "source": "Condition"
           },
           {
             "key": "con-4",
             "severity": "error",
             "human": "If condition is abated, then clinicalStatus must be either inactive, resolved, or remission",
             "expression": "abatement.empty() or clinicalStatus.coding.where(system='http://terminology.hl7.org/CodeSystem/condition-clinical' and (code='resolved' or code='remission' or code='inactive')).exists()",
-            "xpath": "not(exists(*[starts-with(local-name(.), 'abatement')])) or exists(f:clinicalStatus/f:coding[f:system/@value='http://terminology.hl7.org/CodeSystem/condition-clinical' and f:code/@value=('resolved', 'remission', 'inactive')])"
+            "xpath": "not(exists(*[starts-with(local-name(.), 'abatement')])) or exists(f:clinicalStatus/f:coding[f:system/@value='http://terminology.hl7.org/CodeSystem/condition-clinical' and f:code/@value=('resolved', 'remission', 'inactive')])",
+            "source": "Condition"
           },
           {
             "extension": [
@@ -153,9 +173,24 @@
             "severity": "warning",
             "human": "Condition.clinicalStatus SHALL be present if verificationStatus is not entered-in-error and category is problem-list-item",
             "expression": "clinicalStatus.exists() or verificationStatus='entered-in-error' or category.select($this='problem-list-item').empty()",
-            "xpath": "exists(f:clinicalStatus) or f:verificationStatus/@value='entered-in-error' or not(exists(category[@value='problem-list-item']))"
+            "xpath": "exists(f:clinicalStatus) or f:verificationStatus/@value='entered-in-error' or not(exists(category[@value='problem-list-item']))",
+            "source": "Condition"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice",
+                "valueBoolean": true
+              }
+            ],
+            "key": "us-core-1",
+            "severity": "warning",
+            "human": "A code in Condition.category SHOULD be from US Core Condition Category Codes value set.",
+            "expression": "where(category in 'http://hl7.org/fhir/us/core/ValueSet/us-core-condition-category').exists()",
+            "xpath": "(no xpath equivalent)"
           }
         ],
+        "mustSupport": false,
         "isModifier": false,
         "isSummary": false,
         "mapping": [
@@ -178,6 +213,10 @@
           {
             "identity": "rim",
             "map": "Observation[classCode=OBS, moodCode=EVN, code=ASSERTION, value<Diagnosis]"
+          },
+          {
+            "identity": "argonaut-dq-dstu2",
+            "map": "Condition"
           }
         ]
       },
@@ -420,7 +459,7 @@
         "short": "Extensions that cannot be ignored",
         "definition": "May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
         "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
-        "requirements": "Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](extensibility.html#modifierExtension).",
+        "requirements": "Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](http://hl7.org/fhir/R4/extensibility.html#modifierExtension).",
         "alias": [
           "extensions",
           "user content"
@@ -452,7 +491,7 @@
         "path": "Condition.identifier",
         "short": "External Ids for this condition",
         "definition": "Business identifiers assigned to this condition by the performer or other systems which remain constant as the resource is updated and propagates from server to server.",
-        "comment": "This is a business identifier, not a resource identifier (see [discussion](resource.html#identifiers)).  It is best practice for the identifier to only appear on a single resource instance, however business practices may occasionally dictate that multiple resource instances with the same identifier can exist - possibly even with different resource types.  For example, multiple Patient and a Person resource instance might share the same social insurance number.",
+        "comment": "This is a business identifier, not a resource identifier (see [discussion](http://hl7.org/fhir/R4/resource.html#identifiers)).  It is best practice for the identifier to only appear on a single resource instance, however business practices may occasionally dictate that multiple resource instances with the same identifier can exist - possibly even with different resource types.  For example, multiple Patient and a Person resource instance might share the same social insurance number.",
         "requirements": "Allows identification of the condition as it is known by various participating systems and in a way that remains consistent across servers.",
         "min": 0,
         "max": "*",
@@ -506,19 +545,13 @@
           "con-4",
           "con-5"
         ],
+        "mustSupport": true,
         "isModifier": true,
         "isModifierReason": "This element is labeled as a modifier because the status contains codes that mark the condition as no longer active.",
         "isSummary": true,
         "binding": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-              "valueString": "ConditionClinicalStatus"
-            }
-          ],
           "strength": "required",
-          "description": "The clinical status of the condition or diagnosis.",
-          "valueSet": "http://hl7.org/fhir/ValueSet/condition-clinical|4.0.0"
+          "valueSet": "http://hl7.org/fhir/ValueSet/condition-clinical"
         },
         "mapping": [
           {
@@ -540,6 +573,10 @@
           {
             "identity": "rim",
             "map": "Observation ACT\n.inboundRelationship[typeCode=COMP].source[classCode=OBS, code=\"clinicalStatus\", moodCode=EVN].value"
+          },
+          {
+            "identity": "argonaut-dq-dstu2",
+            "map": "Condition.clinicalStatus"
           }
         ]
       },
@@ -565,19 +602,13 @@
           "con-3",
           "con-5"
         ],
+        "mustSupport": true,
         "isModifier": true,
         "isModifierReason": "This element is labeled as a modifier because the status contains the code refuted and entered-in-error that mark the Condition as not currently valid.",
         "isSummary": true,
         "binding": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-              "valueString": "ConditionVerificationStatus"
-            }
-          ],
           "strength": "required",
-          "description": "The verification status to support or decline the clinical status of the condition or diagnosis.",
-          "valueSet": "http://hl7.org/fhir/ValueSet/condition-ver-status|4.0.0"
+          "valueSet": "http://hl7.org/fhir/ValueSet/condition-ver-status"
         },
         "mapping": [
           {
@@ -603,6 +634,10 @@
           {
             "identity": "sct-attr",
             "map": "408729009"
+          },
+          {
+            "identity": "argonaut-dq-dstu2",
+            "map": "Condition.verificationStatus"
           }
         ]
       },
@@ -624,6 +659,7 @@
             "code": "CodeableConcept"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false,
         "binding": {
@@ -646,6 +682,10 @@
           {
             "identity": "rim",
             "map": ".code"
+          },
+          {
+            "identity": "argonaut-dq-dstu2",
+            "map": "Condition.category"
           }
         ]
       },
@@ -724,10 +764,12 @@
             "code": "CodeableConcept"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": true,
         "binding": {
           "strength": "extensible",
+          "description": "Valueset to describe the actual problem experienced by the patient",
           "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-problem"
         },
         "mapping": [
@@ -754,6 +796,10 @@
           {
             "identity": "sct-attr",
             "map": "246090004"
+          },
+          {
+            "identity": "argonaut-dq-dstu2",
+            "map": "Condition.code"
           }
         ]
       },
@@ -762,7 +808,7 @@
         "path": "Condition.bodySite",
         "short": "Anatomical location, if relevant",
         "definition": "The anatomical location where this condition manifests itself.",
-        "comment": "Only used if not implicit in code found in Condition.code. If the use case requires attributes from the BodySite resource (e.g. to identify and track separately) then use the standard extension [bodySite](extension-bodysite.html).  May be a summary code, or a reference to a very precise definition of the location, or both.",
+        "comment": "Only used if not implicit in code found in Condition.code. If the use case requires attributes from the BodySite resource (e.g. to identify and track separately) then use the standard extension [bodySite](http://hl7.org/fhir/R4/extension-bodysite.html).  May be a summary code, or a reference to a very precise definition of the location, or both.",
         "min": 0,
         "max": "*",
         "base": {
@@ -1037,6 +1083,7 @@
             ]
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": true,
         "mapping": [
@@ -1059,6 +1106,10 @@
           {
             "identity": "w5",
             "map": "FiveWs.subject"
+          },
+          {
+            "identity": "argonaut-dq-dstu2",
+            "map": "Condition.patient"
           }
         ]
       },
@@ -1251,8 +1302,9 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://www.cimi.com/fhir/StructureDefinition/obf-Patient",
               "http://www.cimi.com/fhir/StructureDefinition/obf-Practitioner",
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole",
+              "http://www.cimi.com/fhir/StructureDefinition/obf-Patient",
               "http://www.cimi.com/fhir/StructureDefinition/obf-RelatedPerson"
             ]
           }
@@ -1418,7 +1470,7 @@
         "short": "Extensions that cannot be ignored even if unrecognized",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
         "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
-        "requirements": "Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](extensibility.html#modifierExtension).",
+        "requirements": "Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](http://hl7.org/fhir/R4/extensibility.html#modifierExtension).",
         "alias": [
           "extensions",
           "user content",
@@ -1674,7 +1726,7 @@
         "short": "Extensions that cannot be ignored even if unrecognized",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
         "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
-        "requirements": "Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](extensibility.html#modifierExtension).",
+        "requirements": "Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](http://hl7.org/fhir/R4/extensibility.html#modifierExtension).",
         "alias": [
           "extensions",
           "user content",
@@ -1763,7 +1815,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://www.cimi.com/fhir/StructureDefinition/obf-DomainResource"
+              "http://hl7.org/fhir/StructureDefinition/Resource"
             ]
           }
         ],
@@ -1829,6 +1881,7 @@
         "path": "Condition",
         "short": "obf-Condition",
         "definition": "A condition that is or may be present in a subject. 'Condition' is interpreted broadly and could be a disorder, abnormality, problem, injury, complaint, functionality, illness, disease, ailment, sickness, affliction, upset, difficulty, disorder, symptom, worry, or trouble.\nThe Observation-based class, ConditionAbsent, should be used to describe conditions that are not present or negative findings.\nSHR Condition uses the SHR BodyLocation structure that includes not only a code, but optional laterality, direction, clock direction, and distance. If included, the distance is measured from the location specified by the code, laterality, and direction.",
+        "mustSupport": false,
         "isModifier": false,
         "isSummary": false
       },
@@ -1890,16 +1943,6 @@
         "binding": {
           "strength": "extensible",
           "valueSet": "http://www.cimi.com/obf/vs/ConditionCategoryVS"
-        }
-      },
-      {
-        "id": "Condition:obf-Condition.code",
-        "path": "Condition.code",
-        "min": 1,
-        "max": "1",
-        "binding": {
-          "strength": "extensible",
-          "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-problem"
         }
       },
       {
@@ -2010,8 +2053,9 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://www.cimi.com/fhir/StructureDefinition/obf-Patient",
               "http://www.cimi.com/fhir/StructureDefinition/obf-Practitioner",
+              "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole",
+              "http://www.cimi.com/fhir/StructureDefinition/obf-Patient",
               "http://www.cimi.com/fhir/StructureDefinition/obf-RelatedPerson"
             ]
           }
@@ -2065,18 +2109,6 @@
         }
       },
       {
-        "id": "Condition:obf-Condition.evidence.detail",
-        "path": "Condition.evidence.detail",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://www.cimi.com/fhir/StructureDefinition/obf-DomainResource"
-            ]
-          }
-        ]
-      },
-      {
         "id": "Condition:obf-Condition.note",
         "path": "Condition.note",
         "type": [
@@ -2089,12 +2121,5 @@
         ]
       }
     ]
-  },
-  "identifier": [
-    {
-      "system": "http://www.cimi.com",
-      "value": "obf.Condition"
-    }
-  ],
-  "title": "obf-Condition"
+  }
 }

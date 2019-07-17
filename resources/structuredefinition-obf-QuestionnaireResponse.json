@@ -3,12 +3,12 @@
   "id": "obf-QuestionnaireResponse",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>QuestionnaireResponse Profile</b></p>\n  <p>A structured set of questions and their answers. The questions are ordered and grouped into coherent subsets, corresponding to the structure of the grouping of the questionnaire being responded to. As in Structured Data Capture (SDC), the questionnaire subject is restricted to be a Patient.</p>\n  <p><b>Mapping Summary</b></p>\n  <p><pre>obf.QuestionnaireResponse maps to QuestionnaireResponse:\n  Language maps to language\n  Narrative maps to text\n  ImplicitRules maps to implicitRules\n  Metadata.VersionId maps to meta.versionId\n  Metadata.SourceSystem maps to meta.source\n  Metadata.Profile maps to meta.profile\n  Metadata.LastUpdated maps to meta.lastUpdated\n  Metadata.SecurityLabel maps to meta.security\n  Metadata.Tag maps to meta.tag\n  Identifier maps to identifier\n  QuestionnaireResponseBasedOn maps to basedOn  // Type Reference -- Added Ref(ServiceRequest), removed Ref(ReferralRequest) and Ref(ProcedureRequest)\n  QuestionnaireResponsePartOf maps to partOf\n  QuestionnaireCanonical maps to questionnaire // Type changed from Reference(Questionnaire) to canonical(Questionnaire)\n  Status maps to status\n  SubjectOfRecord maps to subject\n  CareContext maps to encounter  // changed from context to encounter\n  StatementDateTime maps to authored\n  QuestionnaireResponseRecorder maps to author  // Added Target Types Ref(PractitionerRole) and ref(Organization)\n  PersonInformationSource maps to source  // Added Target Type PractitionerRole\n  QuestionnaireResponseItem maps to item\n  QuestionnaireResponseItem.IdentifierString maps to item.linkId\n  QuestionnaireResponseItem.DetailsUri maps to item.definition\n  QuestionnaireResponseItem.Question maps to item.text\n  QuestionnaireResponseItem.Answer maps to item.answer\n  QuestionnaireResponseItem.QuestionnaireResponseItem maps to item.item\n  QuestionnaireResponseItem.Answer.AnswerValue maps to item.answer.value[x]\n  QuestionnaireResponseItem.Answer.QuestionnaireResponseItem maps to item.answer.item\n</pre></p>\n</div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>QuestionnaireResponse Profile</b></p>\n  <p>A structured set of questions and their answers. The questions are ordered and grouped into coherent subsets, corresponding to the structure of the grouping of the questionnaire being responded to. As in Structured Data Capture (SDC), the questionnaire subject is restricted to be a Patient.</p>\n  <p><b>Mapping Summary</b></p>\n  <p><pre>obf.QuestionnaireResponse maps to QuestionnaireResponse:\n  Language maps to language\n  ImplicitRules maps to implicitRules\n  Metadata.VersionId maps to meta.versionId\n  Metadata.SourceSystem maps to meta.source\n  Metadata.Profile maps to meta.profile\n  Metadata.LastUpdated maps to meta.lastUpdated\n  Metadata.SecurityLabel maps to meta.security\n  Metadata.Tag maps to meta.tag\n  Narrative maps to text\n  Identifier maps to identifier\n  QuestionnaireResponseBasedOn maps to basedOn  // Type Reference -- Added Ref(ServiceRequest), removed Ref(ReferralRequest) and Ref(ProcedureRequest)\n  QuestionnaireResponsePartOf maps to partOf\n  QuestionnaireCanonical maps to questionnaire // Type changed from Reference(Questionnaire) to canonical(Questionnaire)\n  Status maps to status\n  SubjectOfRecord maps to subject\n  CareContext maps to encounter  // changed from context to encounter\n  StatementDateTime maps to authored\n  QuestionnaireResponseRecorder maps to author  // Added Target Types Ref(PractitionerRole) and ref(Organization)\n  PersonInformationSource maps to source  // Added Target Type PractitionerRole\n  QuestionnaireResponseItem maps to item\n  QuestionnaireResponseItem.IdentifierString maps to item.linkId\n  QuestionnaireResponseItem.DetailsUri maps to item.definition\n  QuestionnaireResponseItem.Question maps to item.text\n  QuestionnaireResponseItem.Answer maps to item.answer\n  QuestionnaireResponseItem.QuestionnaireResponseItem maps to item.item\n  QuestionnaireResponseItem.Answer.AnswerValue maps to item.answer.value[x]\n  QuestionnaireResponseItem.Answer.QuestionnaireResponseItem maps to item.answer.item\n</pre></p>\n</div>"
   },
   "url": "http://www.cimi.com/fhir/StructureDefinition/obf-QuestionnaireResponse",
   "name": "QuestionnaireResponse",
   "status": "draft",
-  "date": "2019-06-24",
+  "date": "2019-07-17",
   "publisher": "Hl7",
   "contact": [
     {
@@ -1174,7 +1174,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://www.cimi.com/fhir/StructureDefinition/obf-DomainResource"
+              "http://hl7.org/fhir/StructureDefinition/Resource"
             ]
           }
         ],
@@ -2245,18 +2245,12 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://www.cimi.com/fhir/StructureDefinition/obf-DomainResource"
+              "http://hl7.org/fhir/StructureDefinition/Resource"
             ]
           }
         ]
       }
     ]
   },
-  "identifier": [
-    {
-      "system": "http://www.cimi.com",
-      "value": "obf.QuestionnaireResponse"
-    }
-  ],
   "title": "obf-QuestionnaireResponse"
 }

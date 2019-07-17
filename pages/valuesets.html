@@ -36,50 +36,56 @@
   </thead>
   <tbody>
     <tr>
-          <td><a href="ValueSet-xxyyz-AbnormalityDensityVs.html">AbnormalityDensityVs</a></td>
+          <td><a href="ValueSet-breastrad-AbnormalityDensityVs.html">AbnormalityDensityVs</a></td>
           <td>{% capture md_text %}Abnormal Density Description{% endcapture %}{{ md_text | markdownify }}</td>
         </tr>
         <tr>
-          <td><a href="ValueSet-xxyyz-AbnormalityTypeVs.html">AbnormalityTypeVs</a></td>
+          <td><a href="ValueSet-breastrad-AbnormalityTypeVs.html">AbnormalityTypeVs</a></td>
           <td>{% capture md_text %}Abnormality Type value{% endcapture %}{{ md_text | markdownify }}</td>
         </tr>
         <tr>
-          <td><a href="ValueSet-xxyyz-AsymmetryTypesVs.html">AsymmetryTypesVs</a></td>
+          <td><a href="ValueSet-breastrad-AsymmetryTypesVs.html">AsymmetryTypesVs</a></td>
           <td>{% capture md_text %}Asymetry Type value{% endcapture %}{{ md_text | markdownify }}</td>
         </tr>
         <tr>
-          <td><a href="ValueSet-xxyyz-BiRadCodeVs.html">BiRadCodeVs</a></td>
+          <td><a href="ValueSet-breastrad-BiRadCodeVs.html">BiRadCodeVs</a></td>
           <td>{% capture md_text %}Bi-Rad code value{% endcapture %}{{ md_text | markdownify }}</td>
         </tr>
         <tr>
-          <td><a href="ValueSet-shr-core-BodyLocationVS.html">BodyLocationVS</a></td>
-          <td>{% capture md_text %}Codes that describe normal and pathologic anatomic systems, regions, cavities, and spaces. The code set includes codes from the SNOMED CT hierarchy descending from 123037004 'Body Structure'.
+          <td><a href="ValueSet-breastrad-BreastDensityVs.html">BreastDensityVs</a></td>
+          <td>{% capture md_text %}Breast density values{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        <tr>
+          <td><a href="ValueSet-breastrad-BreastdepthVs.html">BreastdepthVs</a></td>
+          <td>{% capture md_text %}Depth in breast of abnormality{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        <tr>
+          <td><a href="ValueSet-breastrad-ChangeVs.html">ChangeVs</a></td>
+          <td>{% capture md_text %}Change value{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        <tr>
+          <td><a href="ValueSet-breastrad-CystTypesVs.html">CystTypesVs</a></td>
+          <td>{% capture md_text %}Cyst Types{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        <tr>
+          <td><a href="ValueSet-breastrad-DepthVs.html">DepthVs</a></td>
+          <td>{% capture md_text %}Depth{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        <tr>
+          <td><a href="ValueSet-breastrad-DiagnosticTechniqueVs.html">DiagnosticTechniqueVs</a></td>
+          <td>{% capture md_text %}Breast exam diagnostic technique{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        <tr>
+          <td><a href="ValueSet-shr-core-LandmarkTypeVS.html">LandmarkTypeVS</a></td>
+          <td>{% capture md_text %}The type of feature that constitutes the landmark, for example, particularly if the landmark is an acquired body structure or physical object. The landmark type value set is part of BodyLocation, a flexible structure that allows the location to be determined by a single code, or a code plus laterality and/or orientation. The body location can also be specified in relation to one or more body landmarks. SNOMED CT is used in all cases.
 
-Body location is a flexible structure that allows the location to be determined by a single code, or a code plus laterality and/or orientation. The body location can also be specified in relation to one or more body landmarks. SNOMED CT is used in all cases.
-
-* Code only: The code should include (precoordinate) laterality and/orientation to the degree necessary to completely specify the body location.
-* Code plus laterality and/or orientation: The basic code augmented by codes specifying the body side and/or anatomical orientation.
-* Relation to landmark: The location relative to a landmark is specified by:
++ Code only: The code should include (precoordinate) laterality and/orientation to the degree necessary to completely specify the body location.
++ Code plus laterality and/or orientation: The basic code augmented by codes specifying the body side and/or anatomical orientation.
++ Relation to landmark: The location relative to a landmark is specified by:
 - Establishing the location and type of landmark using a body site code and optional laterality/orientation, and
 - Specifying the direction and distance from the landmark to the body location.
 
 Note that BodyLocation is a data type (a reusable structure), not a stand-alone entity. The concept is similar to how a postal address can apply to a person, location, or organization. This contrasts with FHIR's stand-alone BodySite (aka BodyStructure in r4) which 'is not ... intended for describing the type of anatomical location but rather a specific body site on a specific patient' (FHIR 3.5).{% endcapture %}{{ md_text | markdownify }}</td>
-        </tr>
-        <tr>
-          <td><a href="ValueSet-xxyyz-ChangeVs.html">ChangeVs</a></td>
-          <td>{% capture md_text %}Change value{% endcapture %}{{ md_text | markdownify }}</td>
-        </tr>
-        <tr>
-          <td><a href="ValueSet-xxyyz-ClockLocationVs.html">ClockLocationVs</a></td>
-          <td>{% capture md_text %}Clock location value{% endcapture %}{{ md_text | markdownify }}</td>
-        </tr>
-        <tr>
-          <td><a href="ValueSet-xxyyz-CystTypesVs.html">CystTypesVs</a></td>
-          <td>{% capture md_text %}Cyst Types{% endcapture %}{{ md_text | markdownify }}</td>
-        </tr>
-        <tr>
-          <td><a href="ValueSet-xxyyz-DepthVs.html">DepthVs</a></td>
-          <td>{% capture md_text %}Depth{% endcapture %}{{ md_text | markdownify }}</td>
         </tr>
         <tr>
           <td><a href="ValueSet-shr-core-LateralityVS.html">LateralityVS</a></td>
@@ -94,15 +100,15 @@ Note that BodyLocation is a data type (a reusable structure), not a stand-alone 
 Note that BodyLocation is a data type (a reusable structure), not a stand-alone entity. The concept is similar to how a postal address can apply to a person, location, or organization. This contrasts with FHIR's stand-alone BodySite (aka BodyStructure in r4) which 'is not ... intended for describing the type of anatomical location but rather a specific body site on a specific patient' (FHIR 3.5).{% endcapture %}{{ md_text | markdownify }}</td>
         </tr>
         <tr>
-          <td><a href="ValueSet-xxyyz-MarginVs.html">MarginVs</a></td>
+          <td><a href="ValueSet-breastrad-MarginVs.html">MarginVs</a></td>
           <td>{% capture md_text %}Margin{% endcapture %}{{ md_text | markdownify }}</td>
         </tr>
         <tr>
-          <td><a href="ValueSet-xxyyz-MassTypesVs.html">MassTypesVs</a></td>
+          <td><a href="ValueSet-breastrad-MassTypesVs.html">MassTypesVs</a></td>
           <td>{% capture md_text %}Mass Types{% endcapture %}{{ md_text | markdownify }}</td>
         </tr>
         <tr>
-          <td><a href="ValueSet-xxyyz-NodeTypesVs.html">NodeTypesVs</a></td>
+          <td><a href="ValueSet-breastrad-NodeTypesVs.html">NodeTypesVs</a></td>
           <td>{% capture md_text %}Node Types{% endcapture %}{{ md_text | markdownify }}</td>
         </tr>
         <tr>
@@ -118,19 +124,23 @@ Note that BodyLocation is a data type (a reusable structure), not a stand-alone 
 Note that BodyLocation is a data type (a reusable structure), not a stand-alone entity. The concept is similar to how a postal address can apply to a person, location, or organization. This contrasts with FHIR's stand-alone BodySite (aka BodyStructure in r4) which 'is not ... intended for describing the type of anatomical location but rather a specific body site on a specific patient' (FHIR 3.5).{% endcapture %}{{ md_text | markdownify }}</td>
         </tr>
         <tr>
-          <td><a href="ValueSet-xxyyz-OrientationVs.html">OrientationVs</a></td>
+          <td><a href="ValueSet-breastrad-OrientationVs.html">OrientationVs</a></td>
           <td>{% capture md_text %}Orientation{% endcapture %}{{ md_text | markdownify }}</td>
         </tr>
         <tr>
-          <td><a href="ValueSet-xxyyz-ShapeVs.html">ShapeVs</a></td>
+          <td><a href="ValueSet-breastrad-ShapeVs.html">ShapeVs</a></td>
           <td>{% capture md_text %}Shape{% endcapture %}{{ md_text | markdownify }}</td>
         </tr>
         <tr>
-          <td><a href="ValueSet-xxyyz-VascularityVs.html">VascularityVs</a></td>
+          <td><a href="ValueSet-shr-core-UnitsOfLengthVS.html">UnitsOfLengthVS</a></td>
+          <td>{% capture md_text %}Units of measure related to length or distance.{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        <tr>
+          <td><a href="ValueSet-breastrad-VascularityVs.html">VascularityVs</a></td>
           <td>{% capture md_text %}Vascularity{% endcapture %}{{ md_text | markdownify }}</td>
         </tr>
         <tr>
-          <td><a href="ValueSet-xxyyz-WallVs.html">WallVs</a></td>
+          <td><a href="ValueSet-breastrad-WallVs.html">WallVs</a></td>
           <td>{% capture md_text %}Wall{% endcapture %}{{ md_text | markdownify }}</td>
         </tr>
         
@@ -152,10 +162,6 @@ Note that BodyLocation is a data type (a reusable structure), not a stand-alone 
   </thead>
   <tbody>
     <tr>
-        <td><a href="http://hl7.org/fhir/ValueSet/basic-resource-type">BasicResourceTypes</a></td>
-        <td>{% capture md_text %}This value set defines codes for resources not yet supported by (or which will never be supported by) FHIR.  Many of the codes listed here will eventually be turned into official resources.  However, there is no guarantee that any particular resource will be created nor that the scope will be exactly as defined by the codes presented here.  Codes in this set will be deprecated if/when formal resources are defined that encompass these concepts.{% endcapture %}{{ md_text | markdownify }}</td>
-      </tr>
-      <tr>
         <td><a href="http://hl7.org/fhir/ValueSet/languages">CommonLanguages</a></td>
         <td>{% capture md_text %}This value set includes common codes from BCP-47 (http://tools.ietf.org/html/bcp47){% endcapture %}{{ md_text | markdownify }}</td>
       </tr>
@@ -170,6 +176,18 @@ Note that BodyLocation is a data type (a reusable structure), not a stand-alone 
       <tr>
         <td><a href="http://hl7.org/fhir/ValueSet/data-absent-reason">DataAbsentReason</a></td>
         <td>{% capture md_text %}Used to specify why the normally expected content of the data element is missing.{% endcapture %}{{ md_text | markdownify }}</td>
+      </tr>
+      <tr>
+        <td><a href="http://hl7.org/fhir/ValueSet/diagnostic-report-status">DiagnosticReportStatus</a></td>
+        <td>{% capture md_text %}The status of the diagnostic report.{% endcapture %}{{ md_text | markdownify }}</td>
+      </tr>
+      <tr>
+        <td><a href="http://hl7.org/fhir/ValueSet/diagnostic-report-status">DiagnosticReportStatus</a></td>
+        <td>{% capture md_text %}The status of the diagnostic report.{% endcapture %}{{ md_text | markdownify }}</td>
+      </tr>
+      <tr>
+        <td><a href="http://hl7.org/fhir/ValueSet/diagnostic-service-sections">DiagnosticServiceSectionCodes</a></td>
+        <td>{% capture md_text %}This value set includes all the codes in HL7 V2 table 0074.{% endcapture %}{{ md_text | markdownify }}</td>
       </tr>
       <tr>
         <td><a href="http://hl7.org/fhir/ValueSet/document-classcodes">DocumentClassValueSet</a></td>
@@ -190,6 +208,10 @@ Note that BodyLocation is a data type (a reusable structure), not a stand-alone 
       <tr>
         <td><a href="http://hl7.org/fhir/ValueSet/observation-codes">LOINCCodes</a></td>
         <td>{% capture md_text %}This value set includes all LOINC codes{% endcapture %}{{ md_text | markdownify }}</td>
+      </tr>
+      <tr>
+        <td><a href="http://hl7.org/fhir/ValueSet/report-codes">LOINCDiagnosticReportCodes</a></td>
+        <td>{% capture md_text %}This value set includes LOINC codes that relate to Diagnostic Observations.{% endcapture %}{{ md_text | markdownify }}</td>
       </tr>
       <tr>
         <td><a href="http://hl7.org/fhir/ValueSet/list-empty-reason">ListEmptyReasons</a></td>
@@ -232,7 +254,19 @@ Note that BodyLocation is a data type (a reusable structure), not a stand-alone 
         <td>{% capture md_text %}Codes providing the status of an observation.{% endcapture %}{{ md_text | markdownify }}</td>
       </tr>
       <tr>
-        <td><a href="http://hl7.org/fhir/ValueSet/v3-ActCode">http://hl7.org/fhir/ValueSet/v3-ActCode</a></td>
+        <td><a href="http://hl7.org/fhir/ValueSet/quantity-comparator">QuantityComparator</a></td>
+        <td>{% capture md_text %}How the Quantity should be understood and represented.{% endcapture %}{{ md_text | markdownify }}</td>
+      </tr>
+      <tr>
+        <td><a href="http://hl7.org/fhir/ValueSet/body-site">SNOMEDCTBodyStructures</a></td>
+        <td>{% capture md_text %}This value set includes all codes from [SNOMED CT](http://snomed.info/sct) where concept is-a 442083009 (Anatomical or acquired body site (body structure)).{% endcapture %}{{ md_text | markdownify }}</td>
+      </tr>
+      <tr>
+        <td><a href="http://hl7.org/fhir/ValueSet/clinical-findings">SNOMEDCTClinicalFindings</a></td>
+        <td>{% capture md_text %}This value set includes all the "Clinical finding" [SNOMED CT](http://snomed.info/sct) codes - concepts where concept is-a 404684003 (Clinical finding (finding)).{% endcapture %}{{ md_text | markdownify }}</td>
+      </tr>
+      <tr>
+        <td><a href="http://terminology.hl7.org/ValueSet/v3-ActCode">http://terminology.hl7.org/ValueSet/v3-ActCode</a></td>
         <td></td>
       </tr>
       <tr>

@@ -3,12 +3,14 @@
   "id": "obf-DocumentReference",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>DocumentReference Profile</b></p>\n  <p>A reference to a document, used to describe a document that is made available to a healthcare system. A document is some sequence of bytes that is identifiable, establishes its own context (e.g., what subject, author, etc. can be displayed to the user), and has defined update management. The DocumentReference resource can be used with any document format that has a recognized mime type and that conforms to this definition.\n\nCompatibility: US Core</p>\n  <p><b>Mapping Summary</b></p>\n  <p><pre>obf.DocumentReference maps to DocumentReference:\n  Language maps to language\n  Narrative maps to text\n  ImplicitRules maps to implicitRules\n  Metadata.VersionId maps to meta.versionId\n  Metadata.SourceSystem maps to meta.source\n  Metadata.Profile maps to meta.profile\n  Metadata.LastUpdated maps to meta.lastUpdated\n  Metadata.SecurityLabel maps to meta.security\n  Metadata.Tag maps to meta.tag\n  MasterIdentifier maps to masterIdentifier\n  Identifier maps to identifier\n  Status maps to status\n  DocumentStatus maps to docStatus\n  Type maps to type // Min Cardinality changed from 1 to 0\n  Category maps to category\n  SubjectOfRecord maps to subject\n  StatementDateTime maps to date\n  DocumentAuthor maps to author // Added Target Type PractitionerRole\n  Authenticator maps to authenticator // Added Target Type PractitionerRole\n  ManagingOrganization maps to custodian\n  RelatedDocument maps to relatesTo\n  RelatedDocument.Relationship maps to relatesTo.code\n  RelatedDocument.TargetDocument maps to relatesTo.target\n  CommentOrDescription maps to description\n  SecurityLabel maps to securityLabel\n  DocumentReferenced maps to content\n  DocumentReferenced.Attachment maps to content.attachment\n  DocumentReferenced.Type maps to content.format\n  EventContext maps to context\n  EventContext.CareContext maps to context.encounter // Max Cardinality changed from 1 to *; Added Target Type EpisodeOfCare\n  EventContext.Code maps to context.event\n  EventContext.TimePeriod maps to context.period\n  EventContext.FacilityType maps to context.facilityType\n  EventContext.Setting maps to context.practiceSetting\n  EventContext.Patient maps to context.sourcePatientInfo\n  EventContext.SupportingInformation maps to context.related\n</pre></p>\n</div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>DocumentReference Profile</b></p>\n  <p>A reference to a document, used to describe a document that is made available to a healthcare system. A document is some sequence of bytes that is identifiable, establishes its own context (e.g., what subject, author, etc. can be displayed to the user), and has defined update management. The DocumentReference resource can be used with any document format that has a recognized mime type and that conforms to this definition.\n\nCompatibility: US Core</p>\n  <p><b>Mapping Summary</b></p>\n  <p><pre>obf.DocumentReference maps to http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference:\n  Language maps to language\n  ImplicitRules maps to implicitRules\n  Metadata.VersionId maps to meta.versionId\n  Metadata.SourceSystem maps to meta.source\n  Metadata.Profile maps to meta.profile\n  Metadata.LastUpdated maps to meta.lastUpdated\n  Metadata.SecurityLabel maps to meta.security\n  Metadata.Tag maps to meta.tag\n  Narrative maps to text\n  MasterIdentifier maps to masterIdentifier\n  Identifier maps to identifier\n  Status maps to status\n  DocumentStatus maps to docStatus\n  Type maps to type // Min Cardinality changed from 1 to 0\n  Category maps to category\n  SubjectOfRecord maps to subject\n  StatementDateTime maps to date\n  DocumentAuthor maps to author // Added Target Type PractitionerRole\n  Authenticator maps to authenticator // Added Target Type PractitionerRole\n  ManagingOrganization maps to custodian\n  RelatedDocument maps to relatesTo\n  RelatedDocument.Relationship maps to relatesTo.code\n  RelatedDocument.TargetDocument maps to relatesTo.target\n  CommentOrDescription maps to description\n  SecurityLabel maps to securityLabel\n  DocumentReferenced maps to content\n  DocumentReferenced.Attachment maps to content.attachment\n  DocumentReferenced.Type maps to content.format\n  EventContext maps to context\n  EventContext.CareContext maps to context.encounter // Max Cardinality changed from 1 to *; Added Target Type EpisodeOfCare\n  EventContext.Code maps to context.event\n  EventContext.TimePeriod maps to context.period\n  EventContext.FacilityType maps to context.facilityType\n  EventContext.Setting maps to context.practiceSetting\n  EventContext.Patient maps to context.sourcePatientInfo\n  EventContext.SupportingInformation maps to context.related\n</pre></p>\n</div>"
   },
   "url": "http://www.cimi.com/fhir/StructureDefinition/obf-DocumentReference",
   "name": "DocumentReference",
-  "status": "draft",
-  "date": "2019-06-24",
+  "title": "obf-DocumentReference",
+  "status": "active",
+  "experimental": false,
+  "date": "2019-07-17",
   "publisher": "Hl7",
   "contact": [
     {
@@ -21,6 +23,17 @@
     }
   ],
   "description": "A reference to a document, used to describe a document that is made available to a healthcare system. A document is some sequence of bytes that is identifiable, establishes its own context (e.g., what subject, author, etc. can be displayed to the user), and has defined update management. The DocumentReference resource can be used with any document format that has a recognized mime type and that conforms to this definition.\n\nCompatibility: US Core",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "urn:iso:std:iso:3166",
+          "code": "US",
+          "display": "United States of America"
+        }
+      ]
+    }
+  ],
   "fhirVersion": "4.0.0",
   "mapping": [
     {
@@ -62,7 +75,7 @@
   "kind": "resource",
   "abstract": false,
   "type": "DocumentReference",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/DocumentReference",
+  "baseDefinition": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference",
   "derivation": "constraint",
   "snapshot": {
     "element": [
@@ -131,6 +144,7 @@
             "source": "DomainResource"
           }
         ],
+        "mustSupport": false,
         "isModifier": false,
         "isSummary": false,
         "mapping": [
@@ -395,7 +409,7 @@
         "short": "Extensions that cannot be ignored",
         "definition": "May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
         "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
-        "requirements": "Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](extensibility.html#modifierExtension).",
+        "requirements": "Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](http://hl7.org/fhir/R4/extensibility.html#modifierExtension).",
         "alias": [
           "extensions",
           "user content"
@@ -480,7 +494,7 @@
         "short": "Other identifiers for the document",
         "definition": "Other identifiers associated with the document, including version independent identifiers.",
         "min": 0,
-        "max": "*",
+        "max": "1",
         "base": {
           "path": "DocumentReference.identifier",
           "min": 0,
@@ -491,6 +505,7 @@
             "code": "Identifier"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": true,
         "mapping": [
@@ -534,23 +549,13 @@
             "code": "code"
           }
         ],
+        "mustSupport": true,
         "isModifier": true,
         "isModifierReason": "This element is labelled as a modifier because it is a status element that contains status entered-in-error which means that the resource should not be treated as valid",
         "isSummary": true,
         "binding": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-              "valueString": "DocumentReferenceStatus"
-            },
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding",
-              "valueBoolean": true
-            }
-          ],
           "strength": "required",
-          "description": "The status of the document reference.",
-          "valueSet": "http://hl7.org/fhir/ValueSet/document-reference-status|4.0.0"
+          "valueSet": "http://hl7.org/fhir/ValueSet/document-reference-status"
         },
         "mapping": [
           {
@@ -643,18 +648,19 @@
             "code": "CodeableConcept"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": true,
         "binding": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-              "valueString": "DocumentC80Type"
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-minValueSet",
+              "valueCanonical": "http://hl7.org/fhir/us/core/ValueSet/us-core-clinical-note-type"
             }
           ],
           "strength": "required",
-          "description": "Precise type of clinical document.",
-          "valueSet": "http://hl7.org/fhir/ValueSet/c80-doc-typecodes"
+          "description": "All LOINC  values whose SCALE is DOC in the LOINC database and the HL7 v3 Code System NullFlavor concept 'unknown'",
+          "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-documentreference-type"
         },
         "mapping": [
           {
@@ -696,7 +702,7 @@
         "alias": [
           "claxs"
         ],
-        "min": 0,
+        "min": 1,
         "max": "1",
         "base": {
           "path": "DocumentReference.category",
@@ -708,11 +714,13 @@
             "code": "CodeableConcept"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": true,
         "binding": {
-          "strength": "required",
-          "valueSet": "http://hl7.org/fhir/ValueSet/c80-doc-classcodes"
+          "strength": "extensible",
+          "description": "The US Core DocumentReferences Type Value Set is a &#39;starter set&#39; of categories supported for fetching and storing clinical notes.",
+          "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-documentreference-category"
         },
         "mapping": [
           {
@@ -742,7 +750,7 @@
         "path": "DocumentReference.subject",
         "short": "Who/what is the subject of the document",
         "definition": "Who or what the document is about. The document can be about a person, (patient or healthcare practitioner), a device (e.g. a machine) or even a group of subjects (such as a document about a herd of farm animals, or a set of patients that share a common exposure).",
-        "min": 0,
+        "min": 1,
         "max": "1",
         "base": {
           "path": "DocumentReference.subject",
@@ -757,6 +765,7 @@
             ]
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": true,
         "mapping": [
@@ -815,6 +824,7 @@
             "code": "instant"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": true,
         "mapping": [
@@ -861,6 +871,7 @@
             ]
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": true,
         "mapping": [
@@ -966,6 +977,7 @@
             ]
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false,
         "mapping": [
@@ -1094,7 +1106,7 @@
         "short": "Extensions that cannot be ignored even if unrecognized",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
         "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
-        "requirements": "Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](extensibility.html#modifierExtension).",
+        "requirements": "Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](http://hl7.org/fhir/R4/extensibility.html#modifierExtension).",
         "alias": [
           "extensions",
           "user content",
@@ -1306,7 +1318,7 @@
         "short": "Document referenced",
         "definition": "The document and format referenced. There may be multiple content element repetitions, each with a different format.",
         "min": 1,
-        "max": "*",
+        "max": "1",
         "base": {
           "path": "DocumentReference.content",
           "min": 1,
@@ -1327,6 +1339,7 @@
             "source": "Element"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": true,
         "mapping": [
@@ -1406,7 +1419,7 @@
         "short": "Extensions that cannot be ignored even if unrecognized",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
         "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
-        "requirements": "Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](extensibility.html#modifierExtension).",
+        "requirements": "Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](http://hl7.org/fhir/R4/extensibility.html#modifierExtension).",
         "alias": [
           "extensions",
           "user content",
@@ -1451,6 +1464,16 @@
             "code": "Attachment"
           }
         ],
+        "constraint": [
+          {
+            "key": "us-core-6",
+            "severity": "error",
+            "human": "DocumentReference.content.attachment.url or  DocumentReference.content.attachment.data or both SHALL be present.",
+            "expression": "url.exists() or data.exists()",
+            "xpath": "f:url or f:content"
+          }
+        ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": true,
         "mapping": [
@@ -1494,17 +1517,11 @@
             "code": "Coding"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": true,
         "binding": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-              "valueString": "DocumentFormat"
-            }
-          ],
           "strength": "extensible",
-          "description": "Document Format Codes.",
           "valueSet": "http://hl7.org/fhir/ValueSet/formatcodes"
         },
         "mapping": [
@@ -1554,6 +1571,7 @@
             "source": "Element"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": true,
         "mapping": [
@@ -1629,7 +1647,7 @@
         "short": "Extensions that cannot be ignored even if unrecognized",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
         "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
-        "requirements": "Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](extensibility.html#modifierExtension).",
+        "requirements": "Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](http://hl7.org/fhir/R4/extensibility.html#modifierExtension).",
         "alias": [
           "extensions",
           "user content",
@@ -1673,11 +1691,11 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://www.cimi.com/fhir/StructureDefinition/obf-Encounter",
-              "http://www.cimi.com/fhir/StructureDefinition/obf-EpisodeOfCare"
+              "http://www.cimi.com/fhir/StructureDefinition/obf-Encounter"
             ]
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false,
         "mapping": [
@@ -1720,8 +1738,15 @@
         "isModifier": false,
         "isSummary": false,
         "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "DocumentEventType"
+            }
+          ],
           "strength": "example",
-          "valueSet": "http://hl7.org/fhir/ValueSet/v3-ActCode"
+          "description": "This list of codes represents the main clinical acts being documented.",
+          "valueSet": "http://terminology.hl7.org/ValueSet/v3-ActCode"
         },
         "mapping": [
           {
@@ -1755,6 +1780,7 @@
             "code": "Period"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": true,
         "mapping": [
@@ -1927,7 +1953,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://www.cimi.com/fhir/StructureDefinition/obf-DomainResource"
+              "http://hl7.org/fhir/StructureDefinition/Resource"
             ]
           }
         ],
@@ -1961,6 +1987,7 @@
         "path": "DocumentReference",
         "short": "obf-DocumentReference",
         "definition": "A reference to a document, used to describe a document that is made available to a healthcare system. A document is some sequence of bytes that is identifiable, establishes its own context (e.g., what subject, author, etc. can be displayed to the user), and has defined update management. The DocumentReference resource can be used with any document format that has a recognized mime type and that conforms to this definition.\n\nCompatibility: US Core",
+        "mustSupport": false,
         "isModifier": false,
         "isSummary": false
       },
@@ -2003,31 +2030,10 @@
         "sliceName": "carecontext"
       },
       {
-        "id": "DocumentReference:obf-DocumentReference.type",
-        "path": "DocumentReference.type",
-        "min": 1,
-        "max": "1",
-        "binding": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-              "valueString": "DocumentC80Type"
-            }
-          ],
-          "strength": "required",
-          "description": "Precise type of clinical document.",
-          "valueSet": "http://hl7.org/fhir/ValueSet/c80-doc-typecodes"
-        }
-      },
-      {
         "id": "DocumentReference:obf-DocumentReference.category",
         "path": "DocumentReference.category",
-        "min": 0,
-        "max": "1",
-        "binding": {
-          "strength": "required",
-          "valueSet": "http://hl7.org/fhir/ValueSet/c80-doc-classcodes"
-        }
+        "min": 1,
+        "max": "1"
       },
       {
         "id": "DocumentReference:obf-DocumentReference.subject",
@@ -2105,50 +2111,20 @@
         ]
       },
       {
-        "id": "DocumentReference:obf-DocumentReference.content",
-        "path": "DocumentReference.content"
-      },
-      {
-        "id": "DocumentReference:obf-DocumentReference.content.format",
-        "path": "DocumentReference.content.format",
-        "binding": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-              "valueString": "DocumentFormat"
-            }
-          ],
-          "strength": "extensible",
-          "description": "Document Format Codes.",
-          "valueSet": "http://hl7.org/fhir/ValueSet/formatcodes"
-        }
-      },
-      {
         "id": "DocumentReference:obf-DocumentReference.context",
         "path": "DocumentReference.context"
       },
       {
         "id": "DocumentReference:obf-DocumentReference.context.encounter",
         "path": "DocumentReference.context.encounter",
-        "min": 0,
-        "max": "1",
         "type": [
           {
             "code": "Reference",
             "targetProfile": [
-              "http://www.cimi.com/fhir/StructureDefinition/obf-Encounter",
-              "http://www.cimi.com/fhir/StructureDefinition/obf-EpisodeOfCare"
+              "http://www.cimi.com/fhir/StructureDefinition/obf-Encounter"
             ]
           }
         ]
-      },
-      {
-        "id": "DocumentReference:obf-DocumentReference.context.event",
-        "path": "DocumentReference.context.event",
-        "binding": {
-          "strength": "example",
-          "valueSet": "http://hl7.org/fhir/ValueSet/v3-ActCode"
-        }
       },
       {
         "id": "DocumentReference:obf-DocumentReference.context.practiceSetting",
@@ -2169,26 +2145,7 @@
             ]
           }
         ]
-      },
-      {
-        "id": "DocumentReference:obf-DocumentReference.context.related",
-        "path": "DocumentReference.context.related",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://www.cimi.com/fhir/StructureDefinition/obf-DomainResource"
-            ]
-          }
-        ]
       }
     ]
-  },
-  "identifier": [
-    {
-      "system": "http://www.cimi.com",
-      "value": "obf.DocumentReference"
-    }
-  ],
-  "title": "obf-DocumentReference"
+  }
 }

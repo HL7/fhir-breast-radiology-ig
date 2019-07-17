@@ -3,12 +3,14 @@
   "id": "obf-Device",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>Device Profile</b></p>\n  <p>A specific durable physical device used in diagnosis or treatment. The value is the coding for a type of device, for example, a CPAP machine. The same device might be used on multiple patients.\nDevice status cannot be reconciled between Argonaut and US-Core, each having different required value sets.\nDevice type has extensible mappings to different value sets in Argonaut and US-Core, however both value sets have identical SNOMED content (descendants of 49062001 (Device). We adopt the US-Core value set, which is allowable because the binding is extensible.</p>\n  <p><b>Mapping Summary</b></p>\n  <p><pre>obf.Device maps to Device:\n  Language maps to language\n  Narrative maps to text\n  ImplicitRules maps to implicitRules\n  Metadata.VersionId maps to meta.versionId\n  Metadata.SourceSystem maps to meta.source\n  Metadata.Profile maps to meta.profile\n  Metadata.LastUpdated maps to meta.lastUpdated\n  Metadata.SecurityLabel maps to meta.security\n  Metadata.Tag maps to meta.tag\n  Identifier maps to identifier\n  UdiCarrier.DeviceIdentifier maps to udiCarrier.deviceIdentifier\n  UdiCarrier.CarrierAIDC maps to udiCarrier.carrierAIDC\n  UdiCarrier.CarrierHRF maps to udiCarrier.carrierHRF\n  UdiCarrier.Type maps to udiCarrier.entryType\n  Status maps to status\n  StatusReason maps to statusReason\n  DistinctIdentifier maps to distinctIdentifier\n  ManufacturerName maps to manufacturer\n  ManufactureDate maps to manufactureDate\n  ExpirationDate maps to expirationDate\n  LotNumber maps to lotNumber\n  SerialNumber maps to serialNumber\n  DeviceDesignation.DeviceName maps to deviceName.name\n  DeviceDesignation.Type maps to deviceName.type\n  ModelNumber maps to modelNumber // changed from model\n  Type maps to type\n  constrain version to 0..1\n  VersionString maps to version.value\n  Patient maps to patient\n  Owner maps to owner\n  ContactPoint maps to contact\n  Location maps to location\n  Url maps to url\n  Annotation maps to note\n  Safety maps to safety\n  PartOf maps to parent\n</pre></p>\n</div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>Device Profile</b></p>\n  <p>A specific durable physical device used in diagnosis or treatment. The value is the coding for a type of device, for example, a CPAP machine. The same device might be used on multiple patients.\nDevice status cannot be reconciled between Argonaut and US-Core, each having different required value sets.\nDevice type has extensible mappings to different value sets in Argonaut and US-Core, however both value sets have identical SNOMED content (descendants of 49062001 (Device). We adopt the US-Core value set, which is allowable because the binding is extensible.</p>\n  <p><b>Mapping Summary</b></p>\n  <p><pre>obf.Device maps to http://hl7.org/fhir/us/core/StructureDefinition/us-core-device:\n  Language maps to language\n  ImplicitRules maps to implicitRules\n  Metadata.VersionId maps to meta.versionId\n  Metadata.SourceSystem maps to meta.source\n  Metadata.Profile maps to meta.profile\n  Metadata.LastUpdated maps to meta.lastUpdated\n  Metadata.SecurityLabel maps to meta.security\n  Metadata.Tag maps to meta.tag\n  Narrative maps to text\n  Identifier maps to identifier\n  UdiCarrier.DeviceIdentifier maps to udiCarrier.deviceIdentifier\n  UdiCarrier.CarrierAIDC maps to udiCarrier.carrierAIDC\n  UdiCarrier.CarrierHRF maps to udiCarrier.carrierHRF\n  UdiCarrier.Type maps to udiCarrier.entryType\n  Status maps to status\n  StatusReason maps to statusReason\n  DistinctIdentifier maps to distinctIdentifier\n  ManufacturerName maps to manufacturer\n  ManufactureDate maps to manufactureDate\n  ExpirationDate maps to expirationDate\n  LotNumber maps to lotNumber\n  SerialNumber maps to serialNumber\n  DeviceDesignation.DeviceName maps to deviceName.name\n  DeviceDesignation.Type maps to deviceName.type\n  ModelNumber maps to modelNumber // changed from model\n  Type maps to type\n  constrain version to 0..1\n  VersionString maps to version.value\n  Patient maps to patient\n  Owner maps to owner\n  ContactPoint maps to contact\n  Location maps to location\n  Url maps to url\n  Annotation maps to note\n  Safety maps to safety\n  PartOf maps to parent\n</pre></p>\n</div>"
   },
   "url": "http://www.cimi.com/fhir/StructureDefinition/obf-Device",
   "name": "Device",
-  "status": "draft",
-  "date": "2019-06-24",
+  "title": "obf-Device",
+  "status": "active",
+  "experimental": false,
+  "date": "2019-07-17",
   "publisher": "Hl7",
   "contact": [
     {
@@ -21,9 +23,24 @@
     }
   ],
   "description": "A specific durable physical device used in diagnosis or treatment. The value is the coding for a type of device, for example, a CPAP machine. The same device might be used on multiple patients.\nDevice status cannot be reconciled between Argonaut and US-Core, each having different required value sets.\nDevice type has extensible mappings to different value sets in Argonaut and US-Core, however both value sets have identical SNOMED content (descendants of 49062001 (Device). We adopt the US-Core value set, which is allowable because the binding is extensible.",
-  "purpose": "Allows institutions to track their devices.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "urn:iso:std:iso:3166",
+          "code": "US",
+          "display": "United States of America"
+        }
+      ]
+    }
+  ],
   "fhirVersion": "4.0.0",
   "mapping": [
+    {
+      "identity": "argonaut-dq-dstu2",
+      "uri": "http://unknown.org/Argonaut-DQ-DSTU2",
+      "name": "Argonaut-DQ-DSTU2"
+    },
     {
       "identity": "rim",
       "uri": "http://hl7.org/v3",
@@ -43,7 +60,7 @@
   "kind": "resource",
   "abstract": false,
   "type": "Device",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Device",
+  "baseDefinition": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-device",
   "derivation": "constraint",
   "snapshot": {
     "element": [
@@ -111,6 +128,7 @@
             "source": "DomainResource"
           }
         ],
+        "mustSupport": false,
         "isModifier": false,
         "isSummary": false,
         "mapping": [
@@ -120,6 +138,10 @@
           },
           {
             "identity": "rim",
+            "map": "Device"
+          },
+          {
+            "identity": "argonaut-dq-dstu2",
             "map": "Device"
           }
         ]
@@ -329,7 +351,7 @@
         "short": "Extensions that cannot be ignored",
         "definition": "May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
         "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
-        "requirements": "Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](extensibility.html#modifierExtension).",
+        "requirements": "Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](http://hl7.org/fhir/R4/extensibility.html#modifierExtension).",
         "alias": [
           "extensions",
           "user content"
@@ -419,9 +441,9 @@
         "path": "Device.udiCarrier",
         "short": "Unique Device Identifier (UDI) Barcode string",
         "definition": "Unique device identifier (UDI) assigned to device label or package.  Note that the Device may include multiple udiCarriers as it either may include just the udiCarrier for the jurisdiction it is sold, or for multiple jurisdictions it could have been sold.",
-        "comment": "UDI may identify an unique instance of a device, or it may only identify the type of the device.  See [UDI mappings](device-mappings.html#udi) for a complete mapping of UDI parts to Device.",
+        "comment": "Some devices may not have UDI information (for example. historical data or patient reported data).",
         "min": 0,
-        "max": "*",
+        "max": "1",
         "base": {
           "path": "Device.udiCarrier",
           "min": 0,
@@ -442,6 +464,7 @@
             "source": "Element"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": true,
         "mapping": [
@@ -452,6 +475,10 @@
           {
             "identity": "rim",
             "map": ".id and .code"
+          },
+          {
+            "identity": "argonaut-dq-dstu2",
+            "map": "Device.udi"
           }
         ]
       },
@@ -521,7 +548,7 @@
         "short": "Extensions that cannot be ignored even if unrecognized",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
         "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
-        "requirements": "Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](extensibility.html#modifierExtension).",
+        "requirements": "Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](http://hl7.org/fhir/R4/extensibility.html#modifierExtension).",
         "alias": [
           "extensions",
           "user content",
@@ -653,7 +680,9 @@
         "definition": "The full UDI carrier of the Automatic Identification and Data Capture (AIDC) technology representation of the barcode string as printed on the packaging of the device - e.g., a barcode or RFID.   Because of limitations on character sets in XML and the need to round-trip JSON data through XML, AIDC Formats *SHALL* be base64 encoded.",
         "comment": "The AIDC form of UDIs should be scanned or otherwise used for the identification of the device whenever possible to minimize errors in records resulting from manual transcriptions. If separate barcodes for DI and PI are present, concatenate the string with DI first and in order of human readable expression on label.",
         "alias": [
-          "Automatic Identification and Data Capture"
+          "Automatic Identification and Data Capture",
+          "UDI",
+          "Barcode String"
         ],
         "min": 0,
         "max": "1",
@@ -667,6 +696,7 @@
             "code": "base64Binary"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": true,
         "mapping": [
@@ -677,6 +707,10 @@
           {
             "identity": "udi",
             "map": "A unique device identifier (UDI) on a device label a form that uses automatic identification and data capture (AIDC) technology."
+          },
+          {
+            "identity": "argonaut-dq-dstu2",
+            "map": "NA (not Supoorted)"
           }
         ]
       },
@@ -687,7 +721,9 @@
         "definition": "The full UDI carrier as the human readable form (HRF) representation of the barcode string as printed on the packaging of the device.",
         "comment": "If separate barcodes for DI and PI are present, concatenate the string with DI first and in order of human readable expression on label.",
         "alias": [
-          "Human Readable Form"
+          "Human Readable Form",
+          "UDI",
+          "Barcode String"
         ],
         "min": 0,
         "max": "1",
@@ -701,6 +737,7 @@
             "code": "string"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": true,
         "mapping": [
@@ -711,6 +748,10 @@
           {
             "identity": "udi",
             "map": "A unique device identifier (UDI) on a device label in plain text"
+          },
+          {
+            "identity": "argonaut-dq-dstu2",
+            "map": "Device.udi"
           }
         ]
       },
@@ -1133,7 +1174,7 @@
         "short": "Extensions that cannot be ignored even if unrecognized",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
         "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
-        "requirements": "Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](extensibility.html#modifierExtension).",
+        "requirements": "Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](http://hl7.org/fhir/R4/extensibility.html#modifierExtension).",
         "alias": [
           "extensions",
           "user content",
@@ -1303,12 +1344,20 @@
             "code": "CodeableConcept"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false,
         "binding": {
           "strength": "required",
+          "description": "Codes to identify medical devices",
           "valueSet": "http://hl7.org/fhir/ValueSet/device-kind"
-        }
+        },
+        "mapping": [
+          {
+            "identity": "argonaut-dq-dstu2",
+            "map": "Device.type"
+          }
+        ]
       },
       {
         "id": "Device:obf-Device.specialization",
@@ -1406,7 +1455,7 @@
         "short": "Extensions that cannot be ignored even if unrecognized",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
         "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
-        "requirements": "Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](extensibility.html#modifierExtension).",
+        "requirements": "Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](http://hl7.org/fhir/R4/extensibility.html#modifierExtension).",
         "alias": [
           "extensions",
           "user content",
@@ -1579,7 +1628,7 @@
         "short": "Extensions that cannot be ignored even if unrecognized",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
         "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
-        "requirements": "Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](extensibility.html#modifierExtension).",
+        "requirements": "Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](http://hl7.org/fhir/R4/extensibility.html#modifierExtension).",
         "alias": [
           "extensions",
           "user content",
@@ -1772,7 +1821,7 @@
         "short": "Extensions that cannot be ignored even if unrecognized",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
         "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
-        "requirements": "Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](extensibility.html#modifierExtension).",
+        "requirements": "Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](http://hl7.org/fhir/R4/extensibility.html#modifierExtension).",
         "alias": [
           "extensions",
           "user content",
@@ -1881,6 +1930,7 @@
             ]
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": false,
         "mapping": [
@@ -1895,6 +1945,10 @@
           {
             "identity": "w5",
             "map": "FiveWs.subject"
+          },
+          {
+            "identity": "argonaut-dq-dstu2",
+            "map": "Device.patient"
           }
         ]
       },
@@ -2114,16 +2168,16 @@
         "path": "Device",
         "short": "obf-Device",
         "definition": "A specific durable physical device used in diagnosis or treatment. The value is the coding for a type of device, for example, a CPAP machine. The same device might be used on multiple patients.\nDevice status cannot be reconciled between Argonaut and US-Core, each having different required value sets.\nDevice type has extensible mappings to different value sets in Argonaut and US-Core, however both value sets have identical SNOMED content (descendants of 49062001 (Device). We adopt the US-Core value set, which is allowable because the binding is extensible.",
+        "mustSupport": false,
         "isModifier": false,
         "isSummary": false
       },
       {
         "id": "Device:obf-Device.type",
         "path": "Device.type",
-        "min": 1,
-        "max": "1",
         "binding": {
           "strength": "required",
+          "description": "Codes to identify medical devices",
           "valueSet": "http://hl7.org/fhir/ValueSet/device-kind"
         }
       },
@@ -2136,8 +2190,6 @@
       {
         "id": "Device:obf-Device.patient",
         "path": "Device.patient",
-        "min": 1,
-        "max": "1",
         "type": [
           {
             "code": "Reference",
@@ -2196,12 +2248,5 @@
         ]
       }
     ]
-  },
-  "identifier": [
-    {
-      "system": "http://www.cimi.com",
-      "value": "obf.Device"
-    }
-  ],
-  "title": "obf-Device"
+  }
 }

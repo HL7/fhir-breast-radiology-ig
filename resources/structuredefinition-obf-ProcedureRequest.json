@@ -3,12 +3,12 @@
   "id": "obf-ProcedureRequest",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>ProcedureRequest Profile</b></p>\n  <p>A request for a procedure to be performed. May be a proposal or an order.</p>\n  <p><b>Mapping Summary</b></p>\n  <p><pre>obf.ProcedureRequest maps to ServiceRequest:\n  Language maps to language\n  Narrative maps to text\n  ImplicitRules maps to implicitRules\n  Metadata.VersionId maps to meta.versionId\n  Metadata.SourceSystem maps to meta.source\n  Metadata.Profile maps to meta.profile\n  Metadata.LastUpdated maps to meta.lastUpdated\n  Metadata.SecurityLabel maps to meta.security\n  Metadata.Tag maps to meta.tag\n  Identifier maps to identifier\n  ServiceBasedOn maps to basedOn\n  Replaces maps to replaces\n  GroupIdentifier maps to requisition\n  Status maps to status\n  RequestIntent maps to intent\n  Category maps to category\n  PriorityCode maps to priority\n  DoNotPerform maps to doNotPerform\n  Code maps to code\n  ServiceDetails maps to orderDetail\n  RequestQuantity maps to quantity[x]\n  ProcedureRequestSubjectOfRecord maps to subject\n  CareContext maps to encounter\n  ExpectedPerformanceTime maps to occurrence[x]\n  AsNeeded maps to asNeeded[x]\n  StatementDateTime maps to authoredOn\n  ProcedureRequester maps to requester\n  ExpectedPerformerType maps to performerType\n  ExpectedPerformer maps to performer\n  LocationType maps to locationCode\n  Location maps to locationReference\n  ReasonCode maps to reasonCode\n  ProcedureRequestReasonReference maps to reasonReference\n  Insurance maps to insurance\n  SupportingInformation maps to supportingInfo\n  Specimen maps to specimen\n  BodyLocation.Code maps to bodySite\n  BodyLocation.Laterality maps to bodySite.extension\n  BodyLocation.Orientation maps to bodySite.extension\n  BodyLocation.RelationToLandmark maps to bodySite.extension\n  Annotation maps to note\n  PatientInstruction maps to patientInstruction\n</pre></p>\n</div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>ProcedureRequest Profile</b></p>\n  <p>A request for a procedure to be performed. May be a proposal or an order.</p>\n  <p><b>Mapping Summary</b></p>\n  <p><pre>obf.ProcedureRequest maps to ServiceRequest:\n  Language maps to language\n  ImplicitRules maps to implicitRules\n  Metadata.VersionId maps to meta.versionId\n  Metadata.SourceSystem maps to meta.source\n  Metadata.Profile maps to meta.profile\n  Metadata.LastUpdated maps to meta.lastUpdated\n  Metadata.SecurityLabel maps to meta.security\n  Metadata.Tag maps to meta.tag\n  Narrative maps to text\n  Identifier maps to identifier\n  ServiceBasedOn maps to basedOn\n  Replaces maps to replaces\n  GroupIdentifier maps to requisition\n  Status maps to status\n  RequestIntent maps to intent\n  Category maps to category\n  PriorityCode maps to priority\n  DoNotPerform maps to doNotPerform\n  Code maps to code\n  ServiceDetails maps to orderDetail\n  RequestQuantity maps to quantity[x]\n  ProcedureRequestSubjectOfRecord maps to subject\n  CareContext maps to encounter\n  ExpectedPerformanceTime maps to occurrence[x]\n  AsNeeded maps to asNeeded[x]\n  StatementDateTime maps to authoredOn\n  ProcedureRequester maps to requester\n  ExpectedPerformerType maps to performerType\n  ExpectedPerformer maps to performer\n  LocationType maps to locationCode\n  Location maps to locationReference\n  ReasonCode maps to reasonCode\n  ProcedureRequestReasonReference maps to reasonReference\n  Insurance maps to insurance\n  SupportingInformation maps to supportingInfo\n  Specimen maps to specimen\n  BodyLocation.Code maps to bodySite\n  BodyLocation.Laterality maps to bodySite.extension\n  BodyLocation.Orientation maps to bodySite.extension\n  BodyLocation.RelationToLandmark maps to bodySite.extension\n  Annotation maps to note\n  PatientInstruction maps to patientInstruction\n</pre></p>\n</div>"
   },
   "url": "http://www.cimi.com/fhir/StructureDefinition/obf-ProcedureRequest",
   "name": "ProcedureRequest",
   "status": "draft",
-  "date": "2019-06-24",
+  "date": "2019-07-17",
   "publisher": "Hl7",
   "contact": [
     {
@@ -514,7 +514,7 @@
       {
         "id": "ServiceRequest:obf-ProcedureRequest.extension:partof.valueReference",
         "path": "ServiceRequest.extension.valueReference",
-        "short": "Procedure",
+        "short": "Procedure: An action that is or was performed on or for a patient",
         "definition": "An action that is or was performed on or for a patient. This can be a physical intervention like an operation, or less invasive like long term services, counseling, or hypnotherapy.",
         "min": 1,
         "max": "1",
@@ -716,8 +716,8 @@
       {
         "id": "ServiceRequest:obf-ProcedureRequest.basedOn",
         "path": "ServiceRequest.basedOn",
-        "short": "What request fulfills",
-        "definition": "Plan/proposal/order fulfilled by this request.",
+        "short": "The original or initiating plan, proposal, or request",
+        "definition": "The original or initiating plan, proposal, or request.",
         "alias": [
           "fulfills"
         ],
@@ -1209,8 +1209,8 @@
       {
         "id": "ServiceRequest:obf-ProcedureRequest.subject",
         "path": "ServiceRequest.subject",
-        "short": "Individual or Entity the service is ordered for",
-        "definition": "On whom or what the service is to be performed. This is usually a human patient, but can also be requested on animals, groups of humans or animals, devices such as dialysis machines, or even locations (typically for environmental scans).",
+        "short": "A choice of Patient or Group. These are the potential subjects for Procedure and ReferralRequest resources.",
+        "definition": "A choice of Patient or Group. These are the potential subjects for Procedure and ReferralRequest resources.",
         "min": 1,
         "max": "1",
         "base": {
@@ -1450,8 +1450,8 @@
       {
         "id": "ServiceRequest:obf-ProcedureRequest.requester",
         "path": "ServiceRequest.requester",
-        "short": "Who/what is requesting service",
-        "definition": "The individual who initiated the request and has responsibility for its activation.",
+        "short": "The agent requesting the procedure",
+        "definition": "The agent requesting the procedure. Allows Practitioner and Device, since these represent the intersection between DSTU 2 and STU 3. DSTU 2 allows Organization, and STU 3 allows Patient and RelatedPerson.",
         "comment": "This not the dispatcher, but rather who is the authorizer.  This element is not intended to handle delegation which would generally be managed through the Provenance resource.",
         "alias": [
           "author",
@@ -1727,8 +1727,8 @@
       {
         "id": "ServiceRequest:obf-ProcedureRequest.reasonReference",
         "path": "ServiceRequest.reasonReference",
-        "short": "Explanation/Justification for service or service",
-        "definition": "Indicates another resource that provides a justification for why this service is being requested.   May relate to the resources referred to in `supportingInfo`.",
+        "short": "The justification that the procedure was performed",
+        "definition": "The justification that the procedure was performed",
         "comment": "This element represents why the referral is being made and may be used to decide how the service will be performed, or even if it will be performed at all.    To be as specific as possible,  a reference to  *Observation* or *Condition* should be used if available.  Otherwise when referencing  *DiagnosticReport*  it should contain a finding  in `DiagnosticReport.conclusion` and/or `DiagnosticReport.conclusionCode`.   When using a reference to *DocumentReference*, the target document should contain clear findings language providing the relevant reason for this service request.  Use  the CodeableConcept text element in `ServiceRequest.reasonCode` if the data is free (uncoded) text as shown in the [CT Scan example](servicerequest-example-di.html).",
         "min": 0,
         "max": "1",
@@ -1825,7 +1825,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://www.cimi.com/fhir/StructureDefinition/obf-DomainResource"
+              "http://hl7.org/fhir/StructureDefinition/Resource"
             ]
           }
         ],
@@ -2327,7 +2327,7 @@
       {
         "id": "ServiceRequest:obf-ProcedureRequest.extension:partof.valueReference",
         "path": "ServiceRequest.extension.valueReference",
-        "short": "Procedure",
+        "short": "Procedure: An action that is or was performed on or for a patient",
         "definition": "An action that is or was performed on or for a patient. This can be a physical intervention like an operation, or less invasive like long term services, counseling, or hypnotherapy.",
         "type": [
           {
@@ -2373,7 +2373,9 @@
               "http://www.cimi.com/fhir/StructureDefinition/obf-ProcedureRequest"
             ]
           }
-        ]
+        ],
+        "short": "The original or initiating plan, proposal, or request",
+        "definition": "The original or initiating plan, proposal, or request."
       },
       {
         "id": "ServiceRequest:obf-ProcedureRequest.replaces",
@@ -2422,7 +2424,9 @@
               "http://www.cimi.com/fhir/StructureDefinition/obf-Group"
             ]
           }
-        ]
+        ],
+        "short": "A choice of Patient or Group. These are the potential subjects for Procedure and ReferralRequest resources.",
+        "definition": "A choice of Patient or Group. These are the potential subjects for Procedure and ReferralRequest resources."
       },
       {
         "id": "ServiceRequest:obf-ProcedureRequest.encounter",
@@ -2465,7 +2469,9 @@
               "http://www.cimi.com/fhir/StructureDefinition/obf-Device"
             ]
           }
-        ]
+        ],
+        "short": "The agent requesting the procedure",
+        "definition": "The agent requesting the procedure. Allows Practitioner and Device, since these represent the intersection between DSTU 2 and STU 3. DSTU 2 allows Organization, and STU 3 allows Patient and RelatedPerson."
       },
       {
         "id": "ServiceRequest:obf-ProcedureRequest.performer",
@@ -2516,7 +2522,9 @@
               "http://www.cimi.com/fhir/StructureDefinition/obf-Observation"
             ]
           }
-        ]
+        ],
+        "short": "The justification that the procedure was performed",
+        "definition": "The justification that the procedure was performed"
       },
       {
         "id": "ServiceRequest:obf-ProcedureRequest.insurance",
@@ -2526,18 +2534,6 @@
             "code": "Reference",
             "targetProfile": [
               "http://www.cimi.com/fhir/StructureDefinition/obf-Coverage"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "ServiceRequest:obf-ProcedureRequest.supportingInfo",
-        "path": "ServiceRequest.supportingInfo",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://www.cimi.com/fhir/StructureDefinition/obf-DomainResource"
             ]
           }
         ]
@@ -2645,11 +2641,5 @@
       }
     ]
   },
-  "identifier": [
-    {
-      "system": "http://www.cimi.com",
-      "value": "obf.ProcedureRequest"
-    }
-  ],
   "title": "obf-ProcedureRequest"
 }

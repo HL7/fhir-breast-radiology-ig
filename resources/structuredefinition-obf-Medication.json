@@ -3,12 +3,14 @@
   "id": "obf-Medication",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>Medication Profile</b></p>\n  <p>A type of prescription drug or over-the-counter drug that is used to prevent, treat, or relieve symptoms of a disease or abnormal condition, but excluding vaccines.\nIn FHIR DSTU2 and STU3, Medication lacks the identifier attribute, which is included in SHR as an extension.\nDSTU2 lacks the status attribute, which is required by US-Core.\nBatch is 0..1 in FHIR R4, and accordingly is restricted here.</p>\n  <p><b>Mapping Summary</b></p>\n  <p><pre>obf.Medication maps to Medication:\n  Language maps to language\n  Narrative maps to text\n  ImplicitRules maps to implicitRules\n  Metadata.VersionId maps to meta.versionId\n  Metadata.SourceSystem maps to meta.source\n  Metadata.Profile maps to meta.profile\n  Metadata.LastUpdated maps to meta.lastUpdated\n  Metadata.SecurityLabel maps to meta.security\n  Metadata.Tag maps to meta.tag\n  Identifier maps to identifier  // added identifier\n  Code maps to code\n  Status maps to status\n  DoseForm maps to form\n  PackageAmount maps to amount\n  Ingredient.SubstanceOrCode maps to ingredient.item[x]\n  Ingredient.IngredientStrength maps to ingredient.strength\n  Ingredient.IsActiveIngredient maps to ingredient.isActive\n  Manufacturer maps to manufacturer\n  LotNumber maps to batch.lotNumber // deleted package, added lotNumber\n  ExpirationDate maps to batch.expirationDate // deleted package, added expirationDate\n</pre></p>\n</div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>Medication Profile</b></p>\n  <p>A type of prescription drug or over-the-counter drug that is used to prevent, treat, or relieve symptoms of a disease or abnormal condition, but excluding vaccines.\nIn FHIR DSTU2 and STU3, Medication lacks the identifier attribute, which is included in SHR as an extension.\nDSTU2 lacks the status attribute, which is required by US-Core.\nBatch is 0..1 in FHIR R4, and accordingly is restricted here.</p>\n  <p><b>Mapping Summary</b></p>\n  <p><pre>obf.Medication maps to http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication:\n  Language maps to language\n  ImplicitRules maps to implicitRules\n  Metadata.VersionId maps to meta.versionId\n  Metadata.SourceSystem maps to meta.source\n  Metadata.Profile maps to meta.profile\n  Metadata.LastUpdated maps to meta.lastUpdated\n  Metadata.SecurityLabel maps to meta.security\n  Metadata.Tag maps to meta.tag\n  Narrative maps to text\n  Identifier maps to identifier  // added identifier\n  Code maps to code\n  Status maps to status\n  DoseForm maps to form\n  PackageAmount maps to amount\n  Ingredient.SubstanceOrCode maps to ingredient.item[x]\n  Ingredient.IngredientStrength maps to ingredient.strength\n  Ingredient.IsActiveIngredient maps to ingredient.isActive\n  Manufacturer maps to manufacturer\n  LotNumber maps to batch.lotNumber // deleted package, added lotNumber\n  ExpirationDate maps to batch.expirationDate // deleted package, added expirationDate\n</pre></p>\n</div>"
   },
   "url": "http://www.cimi.com/fhir/StructureDefinition/obf-Medication",
   "name": "Medication",
-  "status": "draft",
-  "date": "2019-06-24",
+  "title": "obf-Medication",
+  "status": "active",
+  "experimental": false,
+  "date": "2019-07-17",
   "publisher": "Hl7",
   "contact": [
     {
@@ -21,8 +23,24 @@
     }
   ],
   "description": "A type of prescription drug or over-the-counter drug that is used to prevent, treat, or relieve symptoms of a disease or abnormal condition, but excluding vaccines.\nIn FHIR DSTU2 and STU3, Medication lacks the identifier attribute, which is included in SHR as an extension.\nDSTU2 lacks the status attribute, which is required by US-Core.\nBatch is 0..1 in FHIR R4, and accordingly is restricted here.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "urn:iso:std:iso:3166",
+          "code": "US",
+          "display": "United States of America"
+        }
+      ]
+    }
+  ],
   "fhirVersion": "4.0.0",
   "mapping": [
+    {
+      "identity": "argonaut-dq-dstu2",
+      "uri": "http://unknown.org/Argonaut-DQ-DSTU2",
+      "name": "Argonaut-DQ-DSTU2"
+    },
     {
       "identity": "script10.6",
       "uri": "http://ncpdp.org/SCRIPT10_6",
@@ -47,7 +65,7 @@
   "kind": "resource",
   "abstract": false,
   "type": "Medication",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Medication",
+  "baseDefinition": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication",
   "derivation": "constraint",
   "snapshot": {
     "element": [
@@ -115,6 +133,7 @@
             "source": "DomainResource"
           }
         ],
+        "mustSupport": false,
         "isModifier": false,
         "isSummary": false,
         "mapping": [
@@ -129,6 +148,10 @@
           {
             "identity": "rim",
             "map": "ManufacturedProduct[classCode=ADMM]"
+          },
+          {
+            "identity": "argonaut-dq-dstu2",
+            "map": "Medication"
           }
         ]
       },
@@ -371,7 +394,7 @@
         "short": "Extensions that cannot be ignored",
         "definition": "May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
         "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
-        "requirements": "Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](extensibility.html#modifierExtension).",
+        "requirements": "Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](http://hl7.org/fhir/R4/extensibility.html#modifierExtension).",
         "alias": [
           "extensions",
           "user content"
@@ -447,10 +470,12 @@
             "code": "CodeableConcept"
           }
         ],
+        "mustSupport": true,
         "isModifier": false,
         "isSummary": true,
         "binding": {
           "strength": "extensible",
+          "description": "Prescribable medications",
           "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-medication-codes"
         },
         "mapping": [
@@ -469,6 +494,10 @@
           {
             "identity": "rim",
             "map": ".code"
+          },
+          {
+            "identity": "argonaut-dq-dstu2",
+            "map": "Medication.code"
           }
         ]
       },
@@ -727,7 +756,7 @@
         "short": "Extensions that cannot be ignored even if unrecognized",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
         "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
-        "requirements": "Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](extensibility.html#modifierExtension).",
+        "requirements": "Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](http://hl7.org/fhir/R4/extensibility.html#modifierExtension).",
         "alias": [
           "extensions",
           "user content",
@@ -964,7 +993,7 @@
         "short": "Extensions that cannot be ignored even if unrecognized",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
         "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
-        "requirements": "Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](extensibility.html#modifierExtension).",
+        "requirements": "Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](http://hl7.org/fhir/R4/extensibility.html#modifierExtension).",
         "alias": [
           "extensions",
           "user content",
@@ -1069,6 +1098,7 @@
         "path": "Medication",
         "short": "obf-Medication",
         "definition": "A type of prescription drug or over-the-counter drug that is used to prevent, treat, or relieve symptoms of a disease or abnormal condition, but excluding vaccines.\nIn FHIR DSTU2 and STU3, Medication lacks the identifier attribute, which is included in SHR as an extension.\nDSTU2 lacks the status attribute, which is required by US-Core.\nBatch is 0..1 in FHIR R4, and accordingly is restricted here.",
+        "mustSupport": false,
         "isModifier": false,
         "isSummary": false
       },
@@ -1109,16 +1139,6 @@
         "isModifier": false,
         "isSummary": false,
         "sliceName": "partof"
-      },
-      {
-        "id": "Medication:obf-Medication.code",
-        "path": "Medication.code",
-        "min": 1,
-        "max": "1",
-        "binding": {
-          "strength": "extensible",
-          "valueSet": "http://hl7.org/fhir/us/core/ValueSet/us-core-medication-codes"
-        }
       },
       {
         "id": "Medication:obf-Medication.manufacturer",
@@ -1168,18 +1188,5 @@
         ]
       }
     ]
-  },
-  "identifier": [
-    {
-      "system": "http://www.cimi.com",
-      "value": "obf.Medication"
-    }
-  ],
-  "title": "obf-Medication",
-  "keyword": [
-    {
-      "system": "http://ncimeta.nci.nih.gov",
-      "code": "C0013227"
-    }
-  ]
+  }
 }

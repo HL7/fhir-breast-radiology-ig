@@ -5,7 +5,6 @@
 <pre>
 obf.Composition maps to Composition:
   Language maps to language
-  Narrative maps to text
   ImplicitRules maps to implicitRules
   Metadata.VersionId maps to meta.versionId
   Metadata.SourceSystem maps to meta.source
@@ -13,6 +12,7 @@ obf.Composition maps to Composition:
   Metadata.LastUpdated maps to meta.lastUpdated
   Metadata.SecurityLabel maps to meta.security
   Metadata.Tag maps to meta.tag
+  Narrative maps to text
   Identifier maps to identifier
   Status maps to status
   Type maps to type
@@ -32,7 +32,7 @@ obf.Composition maps to Composition:
   EventContext.Code maps to event.code
   EventContext.TimePeriod maps to event.period
   EventContext.SupportingInformation maps to event.detail
-  Section maps to section
+  Section maps to section (slice on = code; slice strategy = includes)
   Section.Title maps to section.title
   Section.Code maps to section.code
   Section.Author maps to section.author
@@ -40,7 +40,7 @@ obf.Composition maps to Composition:
   Section.Narrative maps to section.text
   Section.Type maps to section.mode
   Section.SortOrder maps to section.orderedBy // terrible FHIR name!
-  Section.DomainResource maps to section.entry  (slice on = reference.resolve(); slice on type = profile; slice strategy = includes)
+  Section.Resource maps to section.entry  (slice on = reference.resolve(); slice on type = profile; slice strategy = includes)
   Section.EmptyReason maps to section.emptyReason
   Section.Section maps to section.section
 

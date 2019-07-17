@@ -3,12 +3,12 @@
   "id": "obf-Appointment",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>Appointment Profile</b></p>\n  <p>A booking of a healthcare event among patient(s), practitioner(s), related person(s) and/or device(s) for a specific date/time.</p>\n  <p><b>Mapping Summary</b></p>\n  <p><pre>obf.Appointment maps to Appointment:\n  Language maps to language\n  Narrative maps to text\n  ImplicitRules maps to implicitRules\n  Metadata.VersionId maps to meta.versionId\n  Metadata.SourceSystem maps to meta.source\n  Metadata.Profile maps to meta.profile\n  Metadata.LastUpdated maps to meta.lastUpdated\n  Metadata.SecurityLabel maps to meta.security\n  Metadata.Tag maps to meta.tag\n  Identifier maps to identifier\n  Status maps to status // Change value set from http://hl7.org/fhir/ValueSet/appointmentstatus to http://hl7.org/fhir/ValueSet/appointmentstatus|4.0.0\n  ServiceCategory maps to serviceCategory\n  ServiceDetails maps to serviceType\n  Specialty maps to specialty\n  Type maps to appointmentType\n  ReasonCode maps to reasonCode\n  AppointmentReasonReference maps to extension\n  PriorityRank maps to priority\n  SupportingInformation maps to supportingInformation\n  TimePeriod.BeginDateTime maps to start\n  TimePeriod.EndDateTime maps to end\n  StatementDateTime maps to created\n  ReferralBasedOn maps to basedOn // name changed to basedOn\n  AppointmentParticipation maps to participant\n  AppointmentParticipation.ParticipationType maps to participant.type\n  AppointmentParticipation.AppointmentParticipant maps to participant.actor // Added Target Type PractitionerRole\n  AppointmentParticipation.Need maps to participant.required // Change value set from http://hl7.org/fhir/ValueSet/participantrequired to http://hl7.org/fhir/ValueSet/participantrequired|4.0.0\n  AppointmentParticipation.Status maps to participant.status // Change value set from http://hl7.org/fhir/ValueSet/participationstatus to http://hl7.org/fhir/ValueSet/participationstatus|4.0.0\n  ExpectedPerformanceTime maps to requestedPeriod\n</pre></p>\n</div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>Appointment Profile</b></p>\n  <p>A booking of a healthcare event among patient(s), practitioner(s), related person(s) and/or device(s) for a specific date/time.</p>\n  <p><b>Mapping Summary</b></p>\n  <p><pre>obf.Appointment maps to Appointment:\n  Language maps to language\n  ImplicitRules maps to implicitRules\n  Metadata.VersionId maps to meta.versionId\n  Metadata.SourceSystem maps to meta.source\n  Metadata.Profile maps to meta.profile\n  Metadata.LastUpdated maps to meta.lastUpdated\n  Metadata.SecurityLabel maps to meta.security\n  Metadata.Tag maps to meta.tag\n  Narrative maps to text\n  Identifier maps to identifier\n  Status maps to status // Change value set from http://hl7.org/fhir/ValueSet/appointmentstatus to http://hl7.org/fhir/ValueSet/appointmentstatus|4.0.0\n  ServiceCategory maps to serviceCategory\n  ServiceDetails maps to serviceType\n  Specialty maps to specialty\n  Type maps to appointmentType\n  ReasonCode maps to reasonCode\n  AppointmentReasonReference maps to extension\n  PriorityRank maps to priority\n  SupportingInformation maps to supportingInformation\n  TimePeriod.BeginDateTime maps to start\n  TimePeriod.EndDateTime maps to end\n  StatementDateTime maps to created\n  ReferralBasedOn maps to basedOn // name changed to basedOn\n  AppointmentParticipation maps to participant\n  AppointmentParticipation.ParticipationType maps to participant.type\n  AppointmentParticipation.AppointmentParticipant maps to participant.actor // Added Target Type PractitionerRole\n  AppointmentParticipation.Need maps to participant.required // Change value set from http://hl7.org/fhir/ValueSet/participantrequired to http://hl7.org/fhir/ValueSet/participantrequired|4.0.0\n  AppointmentParticipation.Status maps to participant.status // Change value set from http://hl7.org/fhir/ValueSet/participationstatus to http://hl7.org/fhir/ValueSet/participationstatus|4.0.0\n  ExpectedPerformanceTime maps to requestedPeriod\n</pre></p>\n</div>"
   },
   "url": "http://www.cimi.com/fhir/StructureDefinition/obf-Appointment",
   "name": "Appointment",
   "status": "draft",
-  "date": "2019-06-24",
+  "date": "2019-07-17",
   "publisher": "Hl7",
   "contact": [
     {
@@ -771,8 +771,14 @@
         "isModifier": false,
         "isSummary": true,
         "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "appointment-type"
+            }
+          ],
           "strength": "preferred",
-          "valueSet": "http://hl7.org/fhir/ValueSet/v2-0276"
+          "valueSet": "http://terminology.hl7.org/ValueSet/v2-0276"
         },
         "mapping": [
           {
@@ -963,7 +969,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://www.cimi.com/fhir/StructureDefinition/obf-DomainResource"
+              "http://hl7.org/fhir/StructureDefinition/Resource"
             ]
           }
         ],
@@ -1246,8 +1252,8 @@
       {
         "id": "Appointment:obf-Appointment.basedOn",
         "path": "Appointment.basedOn",
-        "short": "The service request this appointment is allocated to assess",
-        "definition": "The service request this appointment is allocated to assess (e.g. incoming referral or procedure request).",
+        "short": "Indicates any plans, proposals or orders that this request is intended to satisfy - in whole or in part",
+        "definition": "Indicates any plans, proposals or orders that this request is intended to satisfy - in whole or in part.",
         "alias": [
           "incomingReferral"
         ],
@@ -1477,8 +1483,8 @@
       {
         "id": "Appointment:obf-Appointment.participant.actor",
         "path": "Appointment.participant.actor",
-        "short": "Person, Location/HealthcareService or Device",
-        "definition": "A Person, Location/HealthcareService or Device that is participating in the appointment.",
+        "short": "A choice of Person (in any role) or Organization, Device or Location as participants",
+        "definition": "A choice of Person (in any role) or Organization, Device or Location as participants.",
         "min": 0,
         "max": "1",
         "base": {
@@ -1792,30 +1798,10 @@
         "max": "1"
       },
       {
-        "id": "Appointment:obf-Appointment.appointmentType",
-        "path": "Appointment.appointmentType",
-        "binding": {
-          "strength": "preferred",
-          "valueSet": "http://hl7.org/fhir/ValueSet/v2-0276"
-        }
-      },
-      {
         "id": "Appointment:obf-Appointment.reasonCode",
         "path": "Appointment.reasonCode",
         "min": 0,
         "max": "1"
-      },
-      {
-        "id": "Appointment:obf-Appointment.supportingInformation",
-        "path": "Appointment.supportingInformation",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://www.cimi.com/fhir/StructureDefinition/obf-DomainResource"
-            ]
-          }
-        ]
       },
       {
         "id": "Appointment:obf-Appointment.basedOn",
@@ -1827,7 +1813,9 @@
               "http://www.cimi.com/fhir/StructureDefinition/obf-ReferralRequest"
             ]
           }
-        ]
+        ],
+        "short": "Indicates any plans, proposals or orders that this request is intended to satisfy - in whole or in part",
+        "definition": "Indicates any plans, proposals or orders that this request is intended to satisfy - in whole or in part."
       },
       {
         "id": "Appointment:obf-Appointment.participant",
@@ -1864,15 +1852,11 @@
               "http://www.cimi.com/fhir/StructureDefinition/obf-Location"
             ]
           }
-        ]
+        ],
+        "short": "A choice of Person (in any role) or Organization, Device or Location as participants",
+        "definition": "A choice of Person (in any role) or Organization, Device or Location as participants."
       }
     ]
   },
-  "identifier": [
-    {
-      "system": "http://www.cimi.com",
-      "value": "obf.Appointment"
-    }
-  ],
   "title": "obf-Appointment"
 }

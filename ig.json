@@ -23,7 +23,7 @@
   "dependencyList": [
     {
       "package": "hl7.fhir.us.core",
-      "version": "current",
+      "version": "3.0.0",
       "name": "uscore",
       "location": "http://hl7.org/fhir/us/core"
     }
@@ -69,14 +69,14 @@
     "StructureDefinition/obf-Appointment": {
       "base": "StructureDefinition-obf-Appointment.html"
     },
-    "StructureDefinition/xxyyz-BreastAbnormality": {
-      "base": "StructureDefinition-xxyyz-BreastAbnormality.html"
+    "StructureDefinition/breastrad-BreastAbnormality": {
+      "base": "StructureDefinition-breastrad-BreastAbnormality.html"
     },
-    "StructureDefinition/xxyyz-BreastBodyLocation": {
-      "base": "StructureDefinition-xxyyz-BreastBodyLocation.html"
+    "StructureDefinition/breastrad-BreastRadiologyDocument": {
+      "base": "StructureDefinition-breastrad-BreastRadiologyDocument.html"
     },
-    "StructureDefinition/xxyyz-BreastRadiologyReport": {
-      "base": "StructureDefinition-xxyyz-BreastRadiologyReport.html"
+    "StructureDefinition/breastrad-BreastRadiologyReport": {
+      "base": "StructureDefinition-breastrad-BreastRadiologyReport.html"
     },
     "StructureDefinition/obf-ClinicalStatement": {
       "base": "StructureDefinition-obf-ClinicalStatement.html"
@@ -248,16 +248,8 @@
       "base": "StructureDefinition-obf-BasedOn-extension.html",
       "template-base": "sd-extension.html"
     },
-    "StructureDefinition/xxyyz-Breastbodylocation-extension": {
-      "base": "StructureDefinition-xxyyz-Breastbodylocation-extension.html",
-      "template-base": "sd-extension.html"
-    },
-    "StructureDefinition/xxyyz-Breastdepth-extension": {
-      "base": "StructureDefinition-xxyyz-Breastdepth-extension.html",
-      "template-base": "sd-extension.html"
-    },
-    "StructureDefinition/xxyyz-Breastlocation-extension": {
-      "base": "StructureDefinition-xxyyz-Breastlocation-extension.html",
+    "StructureDefinition/breastrad-BreastExamTechnique-extension": {
+      "base": "StructureDefinition-breastrad-BreastExamTechnique-extension.html",
       "template-base": "sd-extension.html"
     },
     "StructureDefinition/obf-CareContext-extension": {
@@ -284,6 +276,14 @@
       "base": "StructureDefinition-shr-core-Comparator-extension.html",
       "template-base": "sd-extension.html"
     },
+    "StructureDefinition/obf-ConclusionCode-extension": {
+      "base": "StructureDefinition-obf-ConclusionCode-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/obf-ConclusionText-extension": {
+      "base": "StructureDefinition-obf-ConclusionText-extension.html",
+      "template-base": "sd-extension.html"
+    },
     "StructureDefinition/obf-Condition-extension": {
       "base": "StructureDefinition-obf-Condition-extension.html",
       "template-base": "sd-extension.html"
@@ -304,8 +304,8 @@
       "base": "StructureDefinition-obf-DiagnosisCode-extension.html",
       "template-base": "sd-extension.html"
     },
-    "StructureDefinition/xxyyz-DistanceFromNipple-extension": {
-      "base": "StructureDefinition-xxyyz-DistanceFromNipple-extension.html",
+    "StructureDefinition/obf-DiagnosticReportPerformer-extension": {
+      "base": "StructureDefinition-obf-DiagnosticReportPerformer-extension.html",
       "template-base": "sd-extension.html"
     },
     "StructureDefinition/obf-Dosage-extension": {
@@ -344,6 +344,10 @@
       "base": "StructureDefinition-shr-core-Identifier-extension.html",
       "template-base": "sd-extension.html"
     },
+    "StructureDefinition/obf-ImplicitRules-extension": {
+      "base": "StructureDefinition-obf-ImplicitRules-extension.html",
+      "template-base": "sd-extension.html"
+    },
     "StructureDefinition/obf-Indication-extension": {
       "base": "StructureDefinition-obf-Indication-extension.html",
       "template-base": "sd-extension.html"
@@ -368,24 +372,64 @@
       "base": "StructureDefinition-shr-core-LandmarkType-extension.html",
       "template-base": "sd-extension.html"
     },
+    "StructureDefinition/shr-core-Language-extension": {
+      "base": "StructureDefinition-shr-core-Language-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/obf-LastUpdated-extension": {
+      "base": "StructureDefinition-obf-LastUpdated-extension.html",
+      "template-base": "sd-extension.html"
+    },
     "StructureDefinition/shr-core-Laterality-extension": {
       "base": "StructureDefinition-shr-core-Laterality-extension.html",
       "template-base": "sd-extension.html"
     },
-    "StructureDefinition/xxyyz-Laterality-extension": {
-      "base": "StructureDefinition-xxyyz-Laterality-extension.html",
+    "StructureDefinition/breastrad-MassTypes-extension": {
+      "base": "StructureDefinition-breastrad-MassTypes-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/obf-Media-extension": {
+      "base": "StructureDefinition-obf-Media-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/obf-MediaIncluded-extension": {
+      "base": "StructureDefinition-obf-MediaIncluded-extension.html",
       "template-base": "sd-extension.html"
     },
     "StructureDefinition/obf-MedicationCodeOrReference-extension": {
       "base": "StructureDefinition-obf-MedicationCodeOrReference-extension.html",
       "template-base": "sd-extension.html"
     },
+    "StructureDefinition/obf-Metadata-extension": {
+      "base": "StructureDefinition-obf-Metadata-extension.html",
+      "template-base": "sd-extension.html"
+    },
     "StructureDefinition/obf-Method-extension": {
       "base": "StructureDefinition-obf-Method-extension.html",
       "template-base": "sd-extension.html"
     },
+    "StructureDefinition/obf-Narrative-extension": {
+      "base": "StructureDefinition-obf-Narrative-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/obf-NarrativeQualifier-extension": {
+      "base": "StructureDefinition-obf-NarrativeQualifier-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/obf-NarrativeText-extension": {
+      "base": "StructureDefinition-obf-NarrativeText-extension.html",
+      "template-base": "sd-extension.html"
+    },
     "StructureDefinition/shr-core-Number-extension": {
       "base": "StructureDefinition-shr-core-Number-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/obf-Observation-extension": {
+      "base": "StructureDefinition-obf-Observation-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/obf-ObservationSubjectOfRecord-extension": {
+      "base": "StructureDefinition-obf-ObservationSubjectOfRecord-extension.html",
       "template-base": "sd-extension.html"
     },
     "StructureDefinition/shr-core-OccurrenceTimeOrPeriod-extension": {
@@ -428,12 +472,20 @@
       "base": "StructureDefinition-obf-PatientInstruction-extension.html",
       "template-base": "sd-extension.html"
     },
+    "StructureDefinition/obf-PresentedForm-extension": {
+      "base": "StructureDefinition-obf-PresentedForm-extension.html",
+      "template-base": "sd-extension.html"
+    },
     "StructureDefinition/shr-core-PriorityCode-extension": {
       "base": "StructureDefinition-shr-core-PriorityCode-extension.html",
       "template-base": "sd-extension.html"
     },
     "StructureDefinition/shr-core-PriorityRank-extension": {
       "base": "StructureDefinition-shr-core-PriorityRank-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/obf-Profile-extension": {
+      "base": "StructureDefinition-obf-Profile-extension.html",
       "template-base": "sd-extension.html"
     },
     "StructureDefinition/obf-ReasonCode-extension": {
@@ -452,6 +504,10 @@
       "base": "StructureDefinition-shr-core-Relationship-extension.html",
       "template-base": "sd-extension.html"
     },
+    "StructureDefinition/obf-RelevantTime-extension": {
+      "base": "StructureDefinition-obf-RelevantTime-extension.html",
+      "template-base": "sd-extension.html"
+    },
     "StructureDefinition/obf-RequestIntent-extension": {
       "base": "StructureDefinition-obf-RequestIntent-extension.html",
       "template-base": "sd-extension.html"
@@ -460,8 +516,28 @@
       "base": "StructureDefinition-obf-Requester-extension.html",
       "template-base": "sd-extension.html"
     },
+    "StructureDefinition/breastrad-ResultComposition-extension": {
+      "base": "StructureDefinition-breastrad-ResultComposition-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/obf-ResultsInterpreter-extension": {
+      "base": "StructureDefinition-obf-ResultsInterpreter-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/obf-SecurityLabel-extension": {
+      "base": "StructureDefinition-obf-SecurityLabel-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/obf-SourceSystem-extension": {
+      "base": "StructureDefinition-obf-SourceSystem-extension.html",
+      "template-base": "sd-extension.html"
+    },
     "StructureDefinition/obf-SpecialHandling-extension": {
       "base": "StructureDefinition-obf-SpecialHandling-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/obf-Specimen-extension": {
+      "base": "StructureDefinition-obf-Specimen-extension.html",
       "template-base": "sd-extension.html"
     },
     "StructureDefinition/obf-SpecimenTreatment-extension": {
@@ -484,12 +560,16 @@
       "base": "StructureDefinition-obf-SubjectOfRecord-extension.html",
       "template-base": "sd-extension.html"
     },
-    "StructureDefinition/obf-TerminationReason-extension": {
-      "base": "StructureDefinition-obf-TerminationReason-extension.html",
+    "StructureDefinition/breastrad-SummaryBiRadCode-extension": {
+      "base": "StructureDefinition-breastrad-SummaryBiRadCode-extension.html",
       "template-base": "sd-extension.html"
     },
-    "StructureDefinition/shr-core-Text-extension": {
-      "base": "StructureDefinition-shr-core-Text-extension.html",
+    "StructureDefinition/obf-Tag-extension": {
+      "base": "StructureDefinition-obf-Tag-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/obf-TerminationReason-extension": {
+      "base": "StructureDefinition-obf-TerminationReason-extension.html",
       "template-base": "sd-extension.html"
     },
     "StructureDefinition/shr-core-TimePeriod-extension": {
@@ -508,41 +588,51 @@
       "base": "StructureDefinition-shr-core-Units-extension.html",
       "template-base": "sd-extension.html"
     },
-    "ValueSet/xxyyz-AbnormalityDensityVs": {
-      "base": "ValueSet-xxyyz-AbnormalityDensityVs.html"
+    "StructureDefinition/obf-VersionId-extension": {
+      "base": "StructureDefinition-obf-VersionId-extension.html",
+      "template-base": "sd-extension.html"
     },
-    "ValueSet/xxyyz-AbnormalityTypeVs": {
-      "base": "ValueSet-xxyyz-AbnormalityTypeVs.html"
+    "ValueSet/breastrad-AbnormalityDensityVs": {
+      "base": "ValueSet-breastrad-AbnormalityDensityVs.html"
+    },
+    "ValueSet/breastrad-AbnormalityTypeVs": {
+      "base": "ValueSet-breastrad-AbnormalityTypeVs.html"
     },
     "ValueSet/shr-core-AnatomicalDirectionVS": {
       "base": "ValueSet-shr-core-AnatomicalDirectionVS.html"
     },
-    "ValueSet/xxyyz-AsymmetryTypesVs": {
-      "base": "ValueSet-xxyyz-AsymmetryTypesVs.html"
+    "ValueSet/breastrad-AsymmetryTypesVs": {
+      "base": "ValueSet-breastrad-AsymmetryTypesVs.html"
     },
-    "ValueSet/xxyyz-BiRadCodeVs": {
-      "base": "ValueSet-xxyyz-BiRadCodeVs.html"
+    "ValueSet/breastrad-BiRadCodeVs": {
+      "base": "ValueSet-breastrad-BiRadCodeVs.html"
     },
     "ValueSet/shr-core-BodyLocationVS": {
       "base": "ValueSet-shr-core-BodyLocationVS.html"
     },
-    "ValueSet/xxyyz-ChangeVs": {
-      "base": "ValueSet-xxyyz-ChangeVs.html"
+    "ValueSet/breastrad-BreastDensityVs": {
+      "base": "ValueSet-breastrad-BreastDensityVs.html"
+    },
+    "ValueSet/breastrad-BreastdepthVs": {
+      "base": "ValueSet-breastrad-BreastdepthVs.html"
+    },
+    "ValueSet/breastrad-ChangeVs": {
+      "base": "ValueSet-breastrad-ChangeVs.html"
     },
     "ValueSet/shr-core-ClockFaceDirectionVS": {
       "base": "ValueSet-shr-core-ClockFaceDirectionVS.html"
     },
-    "ValueSet/xxyyz-ClockLocationVs": {
-      "base": "ValueSet-xxyyz-ClockLocationVs.html"
-    },
     "ValueSet/obf-ConditionCategoryVS": {
       "base": "ValueSet-obf-ConditionCategoryVS.html"
     },
-    "ValueSet/xxyyz-CystTypesVs": {
-      "base": "ValueSet-xxyyz-CystTypesVs.html"
+    "ValueSet/breastrad-CystTypesVs": {
+      "base": "ValueSet-breastrad-CystTypesVs.html"
     },
-    "ValueSet/xxyyz-DepthVs": {
-      "base": "ValueSet-xxyyz-DepthVs.html"
+    "ValueSet/breastrad-DepthVs": {
+      "base": "ValueSet-breastrad-DepthVs.html"
+    },
+    "ValueSet/breastrad-DiagnosticTechniqueVs": {
+      "base": "ValueSet-breastrad-DiagnosticTechniqueVs.html"
     },
     "ValueSet/shr-core-LandmarkTypeVS": {
       "base": "ValueSet-shr-core-LandmarkTypeVS.html"
@@ -550,20 +640,20 @@
     "ValueSet/shr-core-LateralityVS": {
       "base": "ValueSet-shr-core-LateralityVS.html"
     },
-    "ValueSet/xxyyz-MarginVs": {
-      "base": "ValueSet-xxyyz-MarginVs.html"
+    "ValueSet/breastrad-MarginVs": {
+      "base": "ValueSet-breastrad-MarginVs.html"
     },
-    "ValueSet/xxyyz-MassTypesVs": {
-      "base": "ValueSet-xxyyz-MassTypesVs.html"
+    "ValueSet/breastrad-MassTypesVs": {
+      "base": "ValueSet-breastrad-MassTypesVs.html"
     },
-    "ValueSet/xxyyz-NodeTypesVs": {
-      "base": "ValueSet-xxyyz-NodeTypesVs.html"
+    "ValueSet/breastrad-NodeTypesVs": {
+      "base": "ValueSet-breastrad-NodeTypesVs.html"
     },
     "ValueSet/shr-core-OrientationVS": {
       "base": "ValueSet-shr-core-OrientationVS.html"
     },
-    "ValueSet/xxyyz-OrientationVs": {
-      "base": "ValueSet-xxyyz-OrientationVs.html"
+    "ValueSet/breastrad-OrientationVs": {
+      "base": "ValueSet-breastrad-OrientationVs.html"
     },
     "ValueSet/obf-ResearchSubjectTerminationReasonVS": {
       "base": "ValueSet-obf-ResearchSubjectTerminationReasonVS.html"
@@ -571,8 +661,8 @@
     "ValueSet/shr-core-SettingVS": {
       "base": "ValueSet-shr-core-SettingVS.html"
     },
-    "ValueSet/xxyyz-ShapeVs": {
-      "base": "ValueSet-xxyyz-ShapeVs.html"
+    "ValueSet/breastrad-ShapeVs": {
+      "base": "ValueSet-breastrad-ShapeVs.html"
     },
     "ValueSet/obf-StudyArmTypeVS": {
       "base": "ValueSet-obf-StudyArmTypeVS.html"
@@ -586,14 +676,11 @@
     "ValueSet/shr-core-UnitsOfLengthVS": {
       "base": "ValueSet-shr-core-UnitsOfLengthVS.html"
     },
-    "ValueSet/xxyyz-VascularityVs": {
-      "base": "ValueSet-xxyyz-VascularityVs.html"
+    "ValueSet/breastrad-VascularityVs": {
+      "base": "ValueSet-breastrad-VascularityVs.html"
     },
-    "ValueSet/xxyyz-WallVs": {
-      "base": "ValueSet-xxyyz-WallVs.html"
-    },
-    "CodeSystem/BreastRad-basic-resource-type": {
-      "base": "CodeSystem-BreastRad-basic-resource-type.html"
+    "ValueSet/breastrad-WallVs": {
+      "base": "ValueSet-breastrad-WallVs.html"
     },
     "CodeSystem/obf-ResearchSubjectTerminationReasonCS": {
       "base": "CodeSystem-obf-ResearchSubjectTerminationReasonCS.html"
@@ -603,34 +690,36 @@
     }
   },
   "special-urls": [
-    "http://www.cimi.com/xxyyz/vs/AbnormalityDensityVs",
-    "http://www.cimi.com/xxyyz/vs/AbnormalityTypeVs",
+    "http://www.cimi.com/breastrad/vs/AbnormalityDensityVs",
+    "http://www.cimi.com/breastrad/vs/AbnormalityTypeVs",
     "http://www.cimi.com/shr/core/vs/AnatomicalDirectionVS",
-    "http://www.cimi.com/xxyyz/vs/AsymmetryTypesVs",
-    "http://www.cimi.com/xxyyz/vs/BiRadCodeVs",
+    "http://www.cimi.com/breastrad/vs/AsymmetryTypesVs",
+    "http://www.cimi.com/breastrad/vs/BiRadCodeVs",
     "http://www.cimi.com/shr/core/vs/BodyLocationVS",
-    "http://www.cimi.com/xxyyz/vs/ChangeVs",
+    "http://www.cimi.com/breastrad/vs/BreastDensityVs",
+    "http://www.cimi.com/breastrad/vs/BreastdepthVs",
+    "http://www.cimi.com/breastrad/vs/ChangeVs",
     "http://www.cimi.com/shr/core/vs/ClockFaceDirectionVS",
-    "http://www.cimi.com/xxyyz/vs/ClockLocationVs",
     "http://www.cimi.com/obf/vs/ConditionCategoryVS",
-    "http://www.cimi.com/xxyyz/vs/CystTypesVs",
-    "http://www.cimi.com/xxyyz/vs/DepthVs",
+    "http://www.cimi.com/breastrad/vs/CystTypesVs",
+    "http://www.cimi.com/breastrad/vs/DepthVs",
+    "http://www.cimi.com/breastrad/vs/DiagnosticTechniqueVs",
     "http://www.cimi.com/shr/core/vs/LandmarkTypeVS",
     "http://www.cimi.com/shr/core/vs/LateralityVS",
-    "http://www.cimi.com/xxyyz/vs/MarginVs",
-    "http://www.cimi.com/xxyyz/vs/MassTypesVs",
-    "http://www.cimi.com/xxyyz/vs/NodeTypesVs",
+    "http://www.cimi.com/breastrad/vs/MarginVs",
+    "http://www.cimi.com/breastrad/vs/MassTypesVs",
+    "http://www.cimi.com/breastrad/vs/NodeTypesVs",
     "http://www.cimi.com/shr/core/vs/OrientationVS",
-    "http://www.cimi.com/xxyyz/vs/OrientationVs",
+    "http://www.cimi.com/breastrad/vs/OrientationVs",
     "http://www.cimi.com/obf/vs/ResearchSubjectTerminationReasonVS",
     "http://www.cimi.com/shr/core/vs/SettingVS",
-    "http://www.cimi.com/xxyyz/vs/ShapeVs",
+    "http://www.cimi.com/breastrad/vs/ShapeVs",
     "http://www.cimi.com/obf/vs/StudyArmTypeVS",
     "http://www.cimi.com/obf/vs/TreatmentIntentVS",
     "http://www.cimi.com/obf/vs/TreatmentTerminationReasonVS",
     "http://www.cimi.com/shr/core/vs/UnitsOfLengthVS",
-    "http://www.cimi.com/xxyyz/vs/VascularityVs",
-    "http://www.cimi.com/xxyyz/vs/WallVs",
+    "http://www.cimi.com/breastrad/vs/VascularityVs",
+    "http://www.cimi.com/breastrad/vs/WallVs",
     "http://www.cimi.com/obf/cs/ResearchSubjectTerminationReasonCS",
     "http://www.cimi.com/shr/core/cs/SettingCS"
   ],

@@ -3,12 +3,12 @@
   "id": "obf-Annotation",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>Annotation Profile</b></p>\n  <p>An added or follow-up note, often after the fact, that contains metadata about who made the statement and when.</p>\n  <p><b>Mapping Summary</b></p>\n  <p><pre>obf.Annotation maps to Annotation:\n  PersonAuthor maps to author[x]\n  OccurrenceTime maps to time\n</pre></p>\n</div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>Annotation Profile</b></p>\n  <p>An added or follow-up note, often after the fact, that contains metadata about who made the statement and when.</p>\n  <p><b>Mapping Summary</b></p>\n  <p><pre>obf.Annotation maps to Annotation:\n  TextMarkdown maps to text\n  PersonAuthor maps to author[x]\n  OccurrenceTime maps to time\n</pre></p>\n</div>"
   },
   "url": "http://www.cimi.com/fhir/StructureDefinition/obf-Annotation",
   "name": "Annotation",
   "status": "active",
-  "date": "2019-06-24",
+  "date": "2019-07-17",
   "publisher": "Hl7",
   "contact": [
     {
@@ -142,7 +142,7 @@
           "extensions",
           "user content"
         ],
-        "min": 1,
+        "min": 0,
         "max": "*",
         "base": {
           "path": "Element.extension",
@@ -162,29 +162,6 @@
             "map": "n/a"
           }
         ]
-      },
-      {
-        "id": "Annotation:obf-Annotation.extension:text",
-        "path": "Annotation.extension",
-        "definition": "A simple string.",
-        "min": 1,
-        "max": "1",
-        "base": {
-          "path": "Element.extension",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "http://www.cimi.com/fhir/StructureDefinition/shr-core-Text-extension"
-            ]
-          }
-        ],
-        "isModifier": false,
-        "isSummary": false,
-        "sliceName": "text"
       },
       {
         "id": "Annotation:obf-Annotation.authorReference",
@@ -294,35 +271,6 @@
         "isModifier": false
       },
       {
-        "id": "Annotation:obf-Annotation.extension",
-        "path": "Annotation.extension",
-        "min": 1,
-        "max": "*"
-      },
-      {
-        "id": "Annotation:obf-Annotation.extension:text",
-        "path": "Annotation.extension",
-        "definition": "A simple string.",
-        "min": 1,
-        "max": "1",
-        "base": {
-          "path": "Element.extension",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "http://www.cimi.com/fhir/StructureDefinition/shr-core-Text-extension"
-            ]
-          }
-        ],
-        "isModifier": false,
-        "isSummary": false,
-        "sliceName": "text"
-      },
-      {
         "id": "Annotation:obf-Annotation.authorReference",
         "path": "Annotation.authorReference",
         "min": 1,
@@ -340,11 +288,5 @@
       }
     ]
   },
-  "identifier": [
-    {
-      "system": "http://www.cimi.com",
-      "value": "obf.Annotation"
-    }
-  ],
   "title": "obf-Annotation"
 }
