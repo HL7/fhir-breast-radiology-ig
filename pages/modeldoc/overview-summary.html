@@ -271,6 +271,27 @@
         <tr class="altColor">
       
         <td class="colFirst">
+          <a href="shr-core/AnatomicalOrientation.html">AnatomicalOrientation</a>
+        </td>
+        <td class="colLast">
+          <div class="block"><p>AnatomicalOrientation of the body location, if needed to distinguish from a similar location in another orientation.
+The orientation element is part of BodyLocation, a flexible structure that allows the location to be determined by a single code, or a code plus laterality and/or orientation. The body location can also be specified in relation to one or more body landmarks. SNOMED CT is used in all cases.</p>
+<ul>
+<li>Code only: The code should include (precoordinate) laterality and/orientation to the degree necessary to completely specify the body location.</li>
+<li>Code plus laterality and/or orientation: The basic code augmented by codes specifying the body side and/or anatomical orientation.</li>
+<li>Relation to landmark: The location relative to a landmark is specified by:</li>
+</ul>
+<ol>
+<li>Establishing the location and type of landmark using a body site code and optional laterality/orientation, and</li>
+<li>Specifying the direction and distance from the landmark to the body location.</li>
+</ol>
+<p>Note that BodyLocation is a data type (a reusable structure), not a stand-alone entity. The concept is similar to how a postal address can apply to a person, location, or organization. This contrasts with FHIR's stand-alone BodySite (aka BodyStructure in r4) which 'is not … intended for describing the type of anatomical location but rather a specific body site on a specific patient' (FHIR 3.5).</p></div>
+        </td>
+      </tr>
+      
+        <tr class="altColor">
+      
+        <td class="colFirst">
           <a href="obf/Annotation.html">Annotation</a>
         </td>
         <td class="colLast">
@@ -549,10 +570,12 @@
 <li>Code only: The code should include (precoordinate) laterality and/orientation to the degree necessary to completely specify the body location.</li>
 <li>Code plus laterality and/or orientation: The basic code augmented by codes specifying the body side and/or anatomical orientation.</li>
 <li>Relation to landmark: The location relative to a landmark is specified by:</li>
+</ul>
+<ol>
 <li>Establishing the location and type of landmark using a body site code and optional laterality/orientation, and</li>
 <li>Specifying the direction and distance from the landmark to the body location.
 Note that BodyLocation is a data type, a reusable structure, not a stand-alone entity. The concept is similar to how a postal address can apply to a person, location, or organization. This contrasts with FHIR's stand-alone BodySite (aka BodyStructure in r4) which 'is not … intended for describing the type of anatomical location but rather a specific body site on a specific patient' (FHIR 3.5).</li>
-</ul></div>
+</ol></div>
         </td>
       </tr>
       
@@ -2304,9 +2327,11 @@ Device type has extensible mappings to different value sets in Argonaut and US-C
 <li>Code only: The code should include (precoordinate) laterality and/orientation to the degree necessary to completely specify the body location.</li>
 <li>Code plus laterality and/or orientation: The basic code augmented by codes specifying the body side and/or anatomical orientation.</li>
 <li>Relation to landmark: The location relative to a landmark is specified by:</li>
+</ul>
+<ol>
 <li>Establishing the location and type of landmark using a body site code and optional laterality/orientation, and</li>
 <li>Specifying the direction and distance from the landmark to the body location.</li>
-</ul>
+</ol>
 <p>Note that BodyLocation is a data type (a reusable structure), not a stand-alone entity. The concept is similar to how a postal address can apply to a person, location, or organization. This contrasts with FHIR's stand-alone BodySite (aka BodyStructure in r4) which 'is not … intended for describing the type of anatomical location but rather a specific body site on a specific patient' (FHIR 3.5).</p></div>
         </td>
       </tr>
@@ -3071,25 +3096,6 @@ For an Observation, the Code describes the aspect or property of the subject bei
         <tr class="altColor">
       
         <td class="colFirst">
-          <a href="shr-core/Orientation.html">Orientation</a>
-        </td>
-        <td class="colLast">
-          <div class="block"><p>Orientation of the body location, if needed to distinguish from a similar location in another orientation.
-The orientation element is part of BodyLocation, a flexible structure that allows the location to be determined by a single code, or a code plus laterality and/or orientation. The body location can also be specified in relation to one or more body landmarks. SNOMED CT is used in all cases.</p>
-<ul>
-<li>Code only: The code should include (precoordinate) laterality and/orientation to the degree necessary to completely specify the body location.</li>
-<li>Code plus laterality and/or orientation: The basic code augmented by codes specifying the body side and/or anatomical orientation.</li>
-<li>Relation to landmark: The location relative to a landmark is specified by:</li>
-<li>Establishing the location and type of landmark using a body site code and optional laterality/orientation, and</li>
-<li>Specifying the direction and distance from the landmark to the body location.</li>
-</ul>
-<p>Note that BodyLocation is a data type (a reusable structure), not a stand-alone entity. The concept is similar to how a postal address can apply to a person, location, or organization. This contrasts with FHIR's stand-alone BodySite (aka BodyStructure in r4) which 'is not … intended for describing the type of anatomical location but rather a specific body site on a specific patient' (FHIR 3.5).</p></div>
-        </td>
-      </tr>
-      
-        <tr class="altColor">
-      
-        <td class="colFirst">
           <a href="shr-core/Origin.html">Origin</a>
         </td>
         <td class="colLast">
@@ -3838,9 +3844,11 @@ Reason is a string or CodeableConcept in DSTU2 but in later versions only a Code
 <li>Code only: The code should include (precoordinate) laterality and/orientation to the degree necessary to completely specify the body location.</li>
 <li>Code plus laterality and/or orientation: The basic code augmented by codes specifying the body side and/or anatomical orientation.</li>
 <li>Relation to landmark: The location relative to a landmark is specified by:</li>
+</ul>
+<ol>
 <li>Establishing the location and type of landmark using a body site code and optional laterality/orientation, and</li>
 <li>Specifying the direction and distance from the landmark to the body location.</li>
-</ul>
+</ol>
 <p>Note that BodyLocation is a data type (a reusable structure), not a stand-alone entity. The concept is similar to how a postal address can apply to a person, location, or organization. This contrasts with FHIR's stand-alone BodySite (aka BodyStructure in r4) which 'is not … intended for describing the type of anatomical location but rather a specific body site on a specific patient' (FHIR 3.5).</p></div>
         </td>
       </tr>

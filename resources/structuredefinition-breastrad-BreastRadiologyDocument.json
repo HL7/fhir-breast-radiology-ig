@@ -7,8 +7,9 @@
   },
   "url": "http://www.cimi.com/fhir/StructureDefinition/breastrad-BreastRadiologyDocument",
   "name": "BreastRadiologyDocument",
+  "title": "breastrad-BreastRadiologyDocument",
   "status": "draft",
-  "date": "2019-07-17",
+  "date": "2019-07-18",
   "publisher": "Hl7",
   "contact": [
     {
@@ -318,6 +319,17 @@
       {
         "id": "Composition:breastrad-BreastRadiologyDocument.extension",
         "path": "Composition.extension",
+        "slicing": {
+          "id": "9",
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
         "short": "Additional content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
         "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
@@ -344,22 +356,12 @@
             "identity": "rim",
             "map": "N/A"
           }
-        ],
-        "slicing": {
-          "id": "9",
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        }
+        ]
       },
       {
         "id": "Composition:breastrad-BreastRadiologyDocument.extension:summarybiradcode",
         "path": "Composition.extension",
+        "sliceName": "summarybiradcode",
         "definition": "BiRd code that summarizes a set of BiRad codes in a the document. Generally the most concerning/important BiRad code in the document.",
         "min": 1,
         "max": "1",
@@ -377,12 +379,12 @@
           }
         ],
         "isModifier": false,
-        "isSummary": false,
-        "sliceName": "summarybiradcode"
+        "isSummary": false
       },
       {
         "id": "Composition:breastrad-BreastRadiologyDocument.extension:breastexamtechnique",
         "path": "Composition.extension",
+        "sliceName": "breastexamtechnique",
         "definition": "Technique used during breast examination.",
         "min": 1,
         "max": "*",
@@ -400,8 +402,7 @@
           }
         ],
         "isModifier": false,
-        "isSummary": false,
-        "sliceName": "breastexamtechnique"
+        "isSummary": false
       },
       {
         "id": "Composition:breastrad-BreastRadiologyDocument.modifierExtension",
@@ -1695,6 +1696,17 @@
           }
         ],
         "path": "Composition.section",
+        "slicing": {
+          "id": "1",
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "code"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
         "short": "Composition is broken into sections",
         "definition": "The root of the sections that make up the composition.",
         "min": 0,
@@ -1744,18 +1756,7 @@
             "identity": "cda",
             "map": ".component.structuredBody.component.section"
           }
-        ],
-        "slicing": {
-          "id": "1",
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "code"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        }
+        ]
       },
       {
         "id": "Composition:breastrad-BreastRadiologyDocument.section:breastrad-PatientHistory",
@@ -1766,6 +1767,7 @@
           }
         ],
         "path": "Composition.section",
+        "sliceName": "breastrad-PatientHistory",
         "short": "PatientHistory: Patient History Section",
         "definition": "Patient History Section",
         "min": 0,
@@ -1815,8 +1817,7 @@
             "identity": "cda",
             "map": ".component.structuredBody.component.section"
           }
-        ],
-        "sliceName": "breastrad-PatientHistory"
+        ]
       },
       {
         "id": "Composition:breastrad-BreastRadiologyDocument.section:breastrad-PatientHistory.id",
@@ -1936,6 +1937,7 @@
             "code": "string"
           }
         ],
+        "fixedString": "Patient History",
         "isModifier": false,
         "isSummary": false,
         "mapping": [
@@ -2065,6 +2067,17 @@
       {
         "id": "Composition:breastrad-BreastRadiologyDocument.section:breastrad-PatientHistory.code.coding",
         "path": "Composition.section.code.coding",
+        "slicing": {
+          "id": "2",
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "code"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
         "short": "Code defined by a terminology system",
         "definition": "A reference to a code defined by a terminology system.",
         "comment": "Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true.",
@@ -2096,18 +2109,7 @@
             "identity": "orim",
             "map": "fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding"
           }
-        ],
-        "slicing": {
-          "id": "2",
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "code"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        }
+        ]
       },
       {
         "id": "Composition:breastrad-BreastRadiologyDocument.section:breastrad-PatientHistory.code.coding:Fixed_34117-2",
@@ -2218,6 +2220,7 @@
             "code": "uri"
           }
         ],
+        "fixedUri": "http://loinc.org",
         "isModifier": false,
         "isSummary": true,
         "mapping": [
@@ -2233,8 +2236,7 @@
             "identity": "orim",
             "map": "fhir:Coding.system rdfs:subPropertyOf dt:CDCoding.codeSystem"
           }
-        ],
-        "fixedUri": "http://loinc.org"
+        ]
       },
       {
         "id": "Composition:breastrad-BreastRadiologyDocument.section:breastrad-PatientHistory.code.coding:Fixed_34117-2.version",
@@ -2289,6 +2291,7 @@
             "code": "code"
           }
         ],
+        "fixedCode": "34117-2",
         "isModifier": false,
         "isSummary": true,
         "mapping": [
@@ -2304,8 +2307,7 @@
             "identity": "orim",
             "map": "fhir:Coding.code rdfs:subPropertyOf dt:CDCoding.code"
           }
-        ],
-        "fixedCode": "34117-2"
+        ]
       },
       {
         "id": "Composition:breastrad-BreastRadiologyDocument.section:breastrad-PatientHistory.code.coding:Fixed_34117-2.display",
@@ -2719,6 +2721,11 @@
           "min": 0,
           "max": "*"
         },
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
         "condition": [
           "cmp-1"
         ],
@@ -2732,11 +2739,6 @@
           {
             "identity": "cda",
             "map": ".component.section"
-          }
-        ],
-        "type": [
-          {
-            "code": "BackboneElement"
           }
         ]
       },
@@ -3207,6 +3209,11 @@
           "min": 0,
           "max": "*"
         },
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
         "condition": [
           "cmp-1"
         ],
@@ -3220,11 +3227,6 @@
           {
             "identity": "cda",
             "map": ".component.section"
-          }
-        ],
-        "type": [
-          {
-            "code": "BackboneElement"
           }
         ]
       },
@@ -3721,6 +3723,7 @@
           }
         ],
         "path": "Composition.section",
+        "sliceName": "breastrad-Findings",
         "short": "Findings: Findings section",
         "definition": "Findings section",
         "min": 0,
@@ -3770,8 +3773,7 @@
             "identity": "cda",
             "map": ".component.structuredBody.component.section"
           }
-        ],
-        "sliceName": "breastrad-Findings"
+        ]
       },
       {
         "id": "Composition:breastrad-BreastRadiologyDocument.section:breastrad-Findings.id",
@@ -3891,6 +3893,7 @@
             "code": "string"
           }
         ],
+        "fixedString": "Findings",
         "isModifier": false,
         "isSummary": false,
         "mapping": [
@@ -4020,6 +4023,17 @@
       {
         "id": "Composition:breastrad-BreastRadiologyDocument.section:breastrad-Findings.code.coding",
         "path": "Composition.section.code.coding",
+        "slicing": {
+          "id": "3",
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "code"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
         "short": "Code defined by a terminology system",
         "definition": "A reference to a code defined by a terminology system.",
         "comment": "Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true.",
@@ -4051,18 +4065,7 @@
             "identity": "orim",
             "map": "fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding"
           }
-        ],
-        "slicing": {
-          "id": "3",
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "code"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        }
+        ]
       },
       {
         "id": "Composition:breastrad-BreastRadiologyDocument.section:breastrad-Findings.code.coding:Fixed_34117-2",
@@ -4173,6 +4176,7 @@
             "code": "uri"
           }
         ],
+        "fixedUri": "http://loinc.org",
         "isModifier": false,
         "isSummary": true,
         "mapping": [
@@ -4188,8 +4192,7 @@
             "identity": "orim",
             "map": "fhir:Coding.system rdfs:subPropertyOf dt:CDCoding.codeSystem"
           }
-        ],
-        "fixedUri": "http://loinc.org"
+        ]
       },
       {
         "id": "Composition:breastrad-BreastRadiologyDocument.section:breastrad-Findings.code.coding:Fixed_34117-2.version",
@@ -4244,6 +4247,7 @@
             "code": "code"
           }
         ],
+        "fixedCode": "34117-2",
         "isModifier": false,
         "isSummary": true,
         "mapping": [
@@ -4259,8 +4263,7 @@
             "identity": "orim",
             "map": "fhir:Coding.code rdfs:subPropertyOf dt:CDCoding.code"
           }
-        ],
-        "fixedCode": "34117-2"
+        ]
       },
       {
         "id": "Composition:breastrad-BreastRadiologyDocument.section:breastrad-Findings.code.coding:Fixed_34117-2.display",
@@ -4664,36 +4667,6 @@
       {
         "id": "Composition:breastrad-BreastRadiologyDocument.section:breastrad-Findings.section",
         "path": "Composition.section.section",
-        "short": "Nested Section",
-        "definition": "A nested sub-section within this section.",
-        "comment": "Nested sections are primarily used to help human readers navigate to particular portions of the document.",
-        "min": 0,
-        "max": "*",
-        "base": {
-          "path": "Composition.section.section",
-          "min": 0,
-          "max": "*"
-        },
-        "condition": [
-          "cmp-1"
-        ],
-        "isModifier": false,
-        "isSummary": false,
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "./outboundRelationship[typeCode=\"COMP\" and isNormalActRelationship()]/target[moodCode=\"EVN\" and classCode=\"DOCSECT\" and isNormalAct]"
-          },
-          {
-            "identity": "cda",
-            "map": ".component.section"
-          }
-        ],
-        "type": [
-          {
-            "code": "BackboneElement"
-          }
-        ],
         "slicing": {
           "id": "6",
           "discriminator": [
@@ -4704,20 +4677,22 @@
           ],
           "ordered": false,
           "rules": "open"
-        }
-      },
-      {
-        "id": "Composition:breastrad-BreastRadiologyDocument.section:breastrad-Findings.section:breastrad-FindingsLeftBreast",
-        "path": "Composition.section.section",
-        "short": "FindingsLeftBreast: Findings Left Breast Section",
-        "definition": "Findings Left Breast Section",
+        },
+        "short": "Nested Section",
+        "definition": "A nested sub-section within this section.",
+        "comment": "Nested sections are primarily used to help human readers navigate to particular portions of the document.",
         "min": 0,
-        "max": "1",
+        "max": "*",
         "base": {
           "path": "Composition.section.section",
           "min": 0,
           "max": "*"
         },
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
         "condition": [
           "cmp-1"
         ],
@@ -4732,13 +4707,42 @@
             "identity": "cda",
             "map": ".component.section"
           }
-        ],
+        ]
+      },
+      {
+        "id": "Composition:breastrad-BreastRadiologyDocument.section:breastrad-Findings.section:breastrad-FindingsLeftBreast",
+        "path": "Composition.section.section",
+        "sliceName": "breastrad-FindingsLeftBreast",
+        "short": "FindingsLeftBreast: Findings Left Breast Section",
+        "definition": "Findings Left Breast Section",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Composition.section.section",
+          "min": 0,
+          "max": "*"
+        },
         "type": [
           {
             "code": "BackboneElement"
           }
         ],
-        "sliceName": "breastrad-FindingsLeftBreast"
+        "fixedString": "Findings Left Breast",
+        "condition": [
+          "cmp-1"
+        ],
+        "isModifier": false,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "./outboundRelationship[typeCode=\"COMP\" and isNormalActRelationship()]/target[moodCode=\"EVN\" and classCode=\"DOCSECT\" and isNormalAct]"
+          },
+          {
+            "identity": "cda",
+            "map": ".component.section"
+          }
+        ]
       },
       {
         "id": "Composition:breastrad-BreastRadiologyDocument.section:breastrad-Findings.section:breastrad-FindingsLeftBreast.id",
@@ -4987,6 +4991,17 @@
       {
         "id": "Composition:breastrad-BreastRadiologyDocument.section:breastrad-Findings.section:breastrad-FindingsLeftBreast.code.coding",
         "path": "Composition.section.section.code.coding",
+        "slicing": {
+          "id": "7",
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "code"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
         "short": "Code defined by a terminology system",
         "definition": "A reference to a code defined by a terminology system.",
         "comment": "Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true.",
@@ -5018,18 +5033,7 @@
             "identity": "orim",
             "map": "fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding"
           }
-        ],
-        "slicing": {
-          "id": "7",
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "code"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        }
+        ]
       },
       {
         "id": "Composition:breastrad-BreastRadiologyDocument.section:breastrad-Findings.section:breastrad-FindingsLeftBreast.code.coding:Fixed_26215-4",
@@ -5140,6 +5144,7 @@
             "code": "uri"
           }
         ],
+        "fixedUri": "http://loinc.org",
         "isModifier": false,
         "isSummary": true,
         "mapping": [
@@ -5155,8 +5160,7 @@
             "identity": "orim",
             "map": "fhir:Coding.system rdfs:subPropertyOf dt:CDCoding.codeSystem"
           }
-        ],
-        "fixedUri": "http://loinc.org"
+        ]
       },
       {
         "id": "Composition:breastrad-BreastRadiologyDocument.section:breastrad-Findings.section:breastrad-FindingsLeftBreast.code.coding:Fixed_26215-4.version",
@@ -5211,6 +5215,7 @@
             "code": "code"
           }
         ],
+        "fixedCode": "26215-4",
         "isModifier": false,
         "isSummary": true,
         "mapping": [
@@ -5226,8 +5231,7 @@
             "identity": "orim",
             "map": "fhir:Coding.code rdfs:subPropertyOf dt:CDCoding.code"
           }
-        ],
-        "fixedCode": "26215-4"
+        ]
       },
       {
         "id": "Composition:breastrad-BreastRadiologyDocument.section:breastrad-Findings.section:breastrad-FindingsLeftBreast.code.coding:Fixed_26215-4.display",
@@ -5641,6 +5645,11 @@
           "min": 0,
           "max": "*"
         },
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
         "condition": [
           "cmp-1"
         ],
@@ -5654,11 +5663,6 @@
           {
             "identity": "cda",
             "map": ".component.section"
-          }
-        ],
-        "type": [
-          {
-            "code": "BackboneElement"
           }
         ]
       },
@@ -6149,6 +6153,7 @@
       {
         "id": "Composition:breastrad-BreastRadiologyDocument.section:breastrad-Findings.section:breastrad-FindingsRightBreast",
         "path": "Composition.section.section",
+        "sliceName": "breastrad-FindingsRightBreast",
         "short": "FindingsRightBreast: Findings Right Breast Section",
         "definition": "Findings Right Breast Section",
         "min": 0,
@@ -6158,6 +6163,12 @@
           "min": 0,
           "max": "*"
         },
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "fixedString": "Findings Right Breast",
         "condition": [
           "cmp-1"
         ],
@@ -6172,13 +6183,7 @@
             "identity": "cda",
             "map": ".component.section"
           }
-        ],
-        "type": [
-          {
-            "code": "BackboneElement"
-          }
-        ],
-        "sliceName": "breastrad-FindingsRightBreast"
+        ]
       },
       {
         "id": "Composition:breastrad-BreastRadiologyDocument.section:breastrad-Findings.section:breastrad-FindingsRightBreast.id",
@@ -6427,6 +6432,17 @@
       {
         "id": "Composition:breastrad-BreastRadiologyDocument.section:breastrad-Findings.section:breastrad-FindingsRightBreast.code.coding",
         "path": "Composition.section.section.code.coding",
+        "slicing": {
+          "id": "8",
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "code"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
         "short": "Code defined by a terminology system",
         "definition": "A reference to a code defined by a terminology system.",
         "comment": "Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true.",
@@ -6458,18 +6474,7 @@
             "identity": "orim",
             "map": "fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding"
           }
-        ],
-        "slicing": {
-          "id": "8",
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "code"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        }
+        ]
       },
       {
         "id": "Composition:breastrad-BreastRadiologyDocument.section:breastrad-Findings.section:breastrad-FindingsRightBreast.code.coding:Fixed_26216-2",
@@ -6580,6 +6585,7 @@
             "code": "uri"
           }
         ],
+        "fixedUri": "http://loinc.org",
         "isModifier": false,
         "isSummary": true,
         "mapping": [
@@ -6595,8 +6601,7 @@
             "identity": "orim",
             "map": "fhir:Coding.system rdfs:subPropertyOf dt:CDCoding.codeSystem"
           }
-        ],
-        "fixedUri": "http://loinc.org"
+        ]
       },
       {
         "id": "Composition:breastrad-BreastRadiologyDocument.section:breastrad-Findings.section:breastrad-FindingsRightBreast.code.coding:Fixed_26216-2.version",
@@ -6651,6 +6656,7 @@
             "code": "code"
           }
         ],
+        "fixedCode": "26216-2",
         "isModifier": false,
         "isSummary": true,
         "mapping": [
@@ -6666,8 +6672,7 @@
             "identity": "orim",
             "map": "fhir:Coding.code rdfs:subPropertyOf dt:CDCoding.code"
           }
-        ],
-        "fixedCode": "26216-2"
+        ]
       },
       {
         "id": "Composition:breastrad-BreastRadiologyDocument.section:breastrad-Findings.section:breastrad-FindingsRightBreast.code.coding:Fixed_26216-2.display",
@@ -7081,6 +7086,11 @@
           "min": 0,
           "max": "*"
         },
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
         "condition": [
           "cmp-1"
         ],
@@ -7094,11 +7104,6 @@
           {
             "identity": "cda",
             "map": ".component.section"
-          }
-        ],
-        "type": [
-          {
-            "code": "BackboneElement"
           }
         ]
       },
@@ -7595,6 +7600,7 @@
           }
         ],
         "path": "Composition.section",
+        "sliceName": "breastrad-Impressions",
         "short": "Impressions: Clinical Impressions Section",
         "definition": "Clinical Impressions Section",
         "min": 0,
@@ -7644,8 +7650,7 @@
             "identity": "cda",
             "map": ".component.structuredBody.component.section"
           }
-        ],
-        "sliceName": "breastrad-Impressions"
+        ]
       },
       {
         "id": "Composition:breastrad-BreastRadiologyDocument.section:breastrad-Impressions.id",
@@ -7765,6 +7770,7 @@
             "code": "string"
           }
         ],
+        "fixedString": "Clinical Impressions",
         "isModifier": false,
         "isSummary": false,
         "mapping": [
@@ -7894,6 +7900,17 @@
       {
         "id": "Composition:breastrad-BreastRadiologyDocument.section:breastrad-Impressions.code.coding",
         "path": "Composition.section.code.coding",
+        "slicing": {
+          "id": "4",
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "code"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
         "short": "Code defined by a terminology system",
         "definition": "A reference to a code defined by a terminology system.",
         "comment": "Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true.",
@@ -7925,18 +7942,7 @@
             "identity": "orim",
             "map": "fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding"
           }
-        ],
-        "slicing": {
-          "id": "4",
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "code"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        }
+        ]
       },
       {
         "id": "Composition:breastrad-BreastRadiologyDocument.section:breastrad-Impressions.code.coding:Fixed_19005-8",
@@ -8047,6 +8053,7 @@
             "code": "uri"
           }
         ],
+        "fixedUri": "http://loinc.org",
         "isModifier": false,
         "isSummary": true,
         "mapping": [
@@ -8062,8 +8069,7 @@
             "identity": "orim",
             "map": "fhir:Coding.system rdfs:subPropertyOf dt:CDCoding.codeSystem"
           }
-        ],
-        "fixedUri": "http://loinc.org"
+        ]
       },
       {
         "id": "Composition:breastrad-BreastRadiologyDocument.section:breastrad-Impressions.code.coding:Fixed_19005-8.version",
@@ -8118,6 +8124,7 @@
             "code": "code"
           }
         ],
+        "fixedCode": "19005-8",
         "isModifier": false,
         "isSummary": true,
         "mapping": [
@@ -8133,8 +8140,7 @@
             "identity": "orim",
             "map": "fhir:Coding.code rdfs:subPropertyOf dt:CDCoding.code"
           }
-        ],
-        "fixedCode": "19005-8"
+        ]
       },
       {
         "id": "Composition:breastrad-BreastRadiologyDocument.section:breastrad-Impressions.code.coding:Fixed_19005-8.display",
@@ -8548,6 +8554,11 @@
           "min": 0,
           "max": "*"
         },
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
         "condition": [
           "cmp-1"
         ],
@@ -8561,11 +8572,6 @@
           {
             "identity": "cda",
             "map": ".component.section"
-          }
-        ],
-        "type": [
-          {
-            "code": "BackboneElement"
           }
         ]
       },
@@ -9036,6 +9042,11 @@
           "min": 0,
           "max": "*"
         },
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
         "condition": [
           "cmp-1"
         ],
@@ -9049,11 +9060,6 @@
           {
             "identity": "cda",
             "map": ".component.section"
-          }
-        ],
-        "type": [
-          {
-            "code": "BackboneElement"
           }
         ]
       },
@@ -9550,6 +9556,7 @@
           }
         ],
         "path": "Composition.section",
+        "sliceName": "breastrad-Recommendations",
         "short": "Recommendations: Recommendations Section",
         "definition": "Recommendations Section",
         "min": 0,
@@ -9599,8 +9606,7 @@
             "identity": "cda",
             "map": ".component.structuredBody.component.section"
           }
-        ],
-        "sliceName": "breastrad-Recommendations"
+        ]
       },
       {
         "id": "Composition:breastrad-BreastRadiologyDocument.section:breastrad-Recommendations.id",
@@ -9720,6 +9726,7 @@
             "code": "string"
           }
         ],
+        "fixedString": "Recommendations",
         "isModifier": false,
         "isSummary": false,
         "mapping": [
@@ -9849,6 +9856,17 @@
       {
         "id": "Composition:breastrad-BreastRadiologyDocument.section:breastrad-Recommendations.code.coding",
         "path": "Composition.section.code.coding",
+        "slicing": {
+          "id": "5",
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "code"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
         "short": "Code defined by a terminology system",
         "definition": "A reference to a code defined by a terminology system.",
         "comment": "Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true.",
@@ -9880,18 +9898,7 @@
             "identity": "orim",
             "map": "fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding"
           }
-        ],
-        "slicing": {
-          "id": "5",
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "code"
-            }
-          ],
-          "ordered": false,
-          "rules": "open"
-        }
+        ]
       },
       {
         "id": "Composition:breastrad-BreastRadiologyDocument.section:breastrad-Recommendations.code.coding:Fixed_18783-1",
@@ -10002,6 +10009,7 @@
             "code": "uri"
           }
         ],
+        "fixedUri": "http://loinc.org",
         "isModifier": false,
         "isSummary": true,
         "mapping": [
@@ -10017,8 +10025,7 @@
             "identity": "orim",
             "map": "fhir:Coding.system rdfs:subPropertyOf dt:CDCoding.codeSystem"
           }
-        ],
-        "fixedUri": "http://loinc.org"
+        ]
       },
       {
         "id": "Composition:breastrad-BreastRadiologyDocument.section:breastrad-Recommendations.code.coding:Fixed_18783-1.version",
@@ -10073,6 +10080,7 @@
             "code": "code"
           }
         ],
+        "fixedCode": "18783-1",
         "isModifier": false,
         "isSummary": true,
         "mapping": [
@@ -10088,8 +10096,7 @@
             "identity": "orim",
             "map": "fhir:Coding.code rdfs:subPropertyOf dt:CDCoding.code"
           }
-        ],
-        "fixedCode": "18783-1"
+        ]
       },
       {
         "id": "Composition:breastrad-BreastRadiologyDocument.section:breastrad-Recommendations.code.coding:Fixed_18783-1.display",
@@ -10503,6 +10510,11 @@
           "min": 0,
           "max": "*"
         },
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
         "condition": [
           "cmp-1"
         ],
@@ -10516,11 +10528,6 @@
           {
             "identity": "cda",
             "map": ".component.section"
-          }
-        ],
-        "type": [
-          {
-            "code": "BackboneElement"
           }
         ]
       },
@@ -10991,6 +10998,11 @@
           "min": 0,
           "max": "*"
         },
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
         "condition": [
           "cmp-1"
         ],
@@ -11004,11 +11016,6 @@
           {
             "identity": "cda",
             "map": ".component.section"
-          }
-        ],
-        "type": [
-          {
-            "code": "BackboneElement"
           }
         ]
       },
@@ -11528,6 +11535,7 @@
       {
         "id": "Composition:breastrad-BreastRadiologyDocument.extension:summarybiradcode",
         "path": "Composition.extension",
+        "sliceName": "summarybiradcode",
         "definition": "BiRd code that summarizes a set of BiRad codes in a the document. Generally the most concerning/important BiRad code in the document.",
         "min": 1,
         "max": "1",
@@ -11545,12 +11553,12 @@
           }
         ],
         "isModifier": false,
-        "isSummary": false,
-        "sliceName": "summarybiradcode"
+        "isSummary": false
       },
       {
         "id": "Composition:breastrad-BreastRadiologyDocument.extension:breastexamtechnique",
         "path": "Composition.extension",
+        "sliceName": "breastexamtechnique",
         "definition": "Technique used during breast examination.",
         "min": 1,
         "max": "*",
@@ -11568,8 +11576,7 @@
           }
         ],
         "isModifier": false,
-        "isSummary": false,
-        "sliceName": "breastexamtechnique"
+        "isSummary": false
       },
       {
         "id": "Composition:breastrad-BreastRadiologyDocument.category",
@@ -11901,7 +11908,8 @@
         "short": "FindingsLeftBreast: Findings Left Breast Section",
         "definition": "Findings Left Breast Section",
         "min": 0,
-        "max": "1"
+        "max": "1",
+        "fixedString": "Findings Left Breast"
       },
       {
         "id": "Composition:breastrad-BreastRadiologyDocument.section:breastrad-Findings.section:breastrad-FindingsLeftBreast.code",
@@ -11996,7 +12004,8 @@
         "short": "FindingsRightBreast: Findings Right Breast Section",
         "definition": "Findings Right Breast Section",
         "min": 0,
-        "max": "1"
+        "max": "1",
+        "fixedString": "Findings Right Breast"
       },
       {
         "id": "Composition:breastrad-BreastRadiologyDocument.section:breastrad-Findings.section:breastrad-FindingsRightBreast.code",
@@ -12307,8 +12316,27 @@
             ]
           }
         ]
+      },
+      {
+        "id": "Composition:breastrad-BreastRadiologyDocument.section:breastrad-PatientHistory.title",
+        "path": "Composition.section.title",
+        "fixedString": "Patient History"
+      },
+      {
+        "id": "Composition:breastrad-BreastRadiologyDocument.section:breastrad-Findings.title",
+        "path": "Composition.section.title",
+        "fixedString": "Findings"
+      },
+      {
+        "id": "Composition:breastrad-BreastRadiologyDocument.section:breastrad-Impressions.title",
+        "path": "Composition.section.title",
+        "fixedString": "Clinical Impressions"
+      },
+      {
+        "id": "Composition:breastrad-BreastRadiologyDocument.section:breastrad-Recommendations.title",
+        "path": "Composition.section.title",
+        "fixedString": "Recommendations"
       }
     ]
-  },
-  "title": "breastrad-BreastRadiologyDocument"
+  }
 }

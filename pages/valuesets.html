@@ -44,6 +44,18 @@
           <td>{% capture md_text %}Abnormality Type value{% endcapture %}{{ md_text | markdownify }}</td>
         </tr>
         <tr>
+          <td><a href="ValueSet-shr-core-AnatomicalOrientationVS.html">AnatomicalOrientationVS</a></td>
+          <td>{% capture md_text %}Terms that specify anatomical orientation. The orientation value set is part of BodyLocation, a flexible structure that allows the location to be determined by a single code, or a code plus laterality and/or orientation. The body location can also be specified in relation to one or more body landmarks. SNOMED CT is used in all cases.
+
+* Code only: The code should include (precoordinate) laterality and/orientation to the degree necessary to completely specify the body location.
+* Code plus laterality and/or orientation: The basic code augmented by codes specifying the body side and/or anatomical orientation.
+* Relation to landmark: The location relative to a landmark is specified by:
+1. Establishing the location and type of landmark using a body site code and optional laterality/orientation, and
+2. Specifying the direction and distance from the landmark to the body location.
+
+Note that BodyLocation is a data type (a reusable structure), not a stand-alone entity. The concept is similar to how a postal address can apply to a person, location, or organization. This contrasts with FHIR's stand-alone BodySite (aka BodyStructure in r4) which 'is not ... intended for describing the type of anatomical location but rather a specific body site on a specific patient' (FHIR 3.5).{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        <tr>
           <td><a href="ValueSet-breastrad-AsymmetryTypesVs.html">AsymmetryTypesVs</a></td>
           <td>{% capture md_text %}Asymetry Type value{% endcapture %}{{ md_text | markdownify }}</td>
         </tr>
@@ -79,23 +91,11 @@
           <td><a href="ValueSet-shr-core-LandmarkTypeVS.html">LandmarkTypeVS</a></td>
           <td>{% capture md_text %}The type of feature that constitutes the landmark, for example, particularly if the landmark is an acquired body structure or physical object. The landmark type value set is part of BodyLocation, a flexible structure that allows the location to be determined by a single code, or a code plus laterality and/or orientation. The body location can also be specified in relation to one or more body landmarks. SNOMED CT is used in all cases.
 
-+ Code only: The code should include (precoordinate) laterality and/orientation to the degree necessary to completely specify the body location.
-+ Code plus laterality and/or orientation: The basic code augmented by codes specifying the body side and/or anatomical orientation.
-+ Relation to landmark: The location relative to a landmark is specified by:
-- Establishing the location and type of landmark using a body site code and optional laterality/orientation, and
-- Specifying the direction and distance from the landmark to the body location.
-
-Note that BodyLocation is a data type (a reusable structure), not a stand-alone entity. The concept is similar to how a postal address can apply to a person, location, or organization. This contrasts with FHIR's stand-alone BodySite (aka BodyStructure in r4) which 'is not ... intended for describing the type of anatomical location but rather a specific body site on a specific patient' (FHIR 3.5).{% endcapture %}{{ md_text | markdownify }}</td>
-        </tr>
-        <tr>
-          <td><a href="ValueSet-shr-core-LateralityVS.html">LateralityVS</a></td>
-          <td>{% capture md_text %}Terms that specify the side of the body. The laterality value set is part of BodyLocation, a flexible structure that allows the location to be determined by a single code, or a code plus laterality and/or orientation. The body location can also be specified in relation to one or more body landmarks. SNOMED CT is used in all cases.
-
-+ Code only: The code should include (precoordinate) laterality and/orientation to the degree necessary to completely specify the body location.
-+ Code plus laterality and/or orientation: The basic code augmented by codes specifying the body side and/or anatomical orientation.
-+ Relation to landmark: The location relative to a landmark is specified by:
-- Establishing the location and type of landmark using a body site code and optional laterality/orientation, and
-- Specifying the direction and distance from the landmark to the body location.
+* Code only: The code should include (precoordinate) laterality and/orientation to the degree necessary to completely specify the body location.
+* Code plus laterality and/or orientation: The basic code augmented by codes specifying the body side and/or anatomical orientation.
+* Relation to landmark: The location relative to a landmark is specified by:
+1. Establishing the location and type of landmark using a body site code and optional laterality/orientation, and
+2. Specifying the direction and distance from the landmark to the body location.
 
 Note that BodyLocation is a data type (a reusable structure), not a stand-alone entity. The concept is similar to how a postal address can apply to a person, location, or organization. This contrasts with FHIR's stand-alone BodySite (aka BodyStructure in r4) which 'is not ... intended for describing the type of anatomical location but rather a specific body site on a specific patient' (FHIR 3.5).{% endcapture %}{{ md_text | markdownify }}</td>
         </tr>
@@ -110,18 +110,6 @@ Note that BodyLocation is a data type (a reusable structure), not a stand-alone 
         <tr>
           <td><a href="ValueSet-breastrad-NodeTypesVs.html">NodeTypesVs</a></td>
           <td>{% capture md_text %}Node Types{% endcapture %}{{ md_text | markdownify }}</td>
-        </tr>
-        <tr>
-          <td><a href="ValueSet-shr-core-OrientationVS.html">OrientationVS</a></td>
-          <td>{% capture md_text %}Terms that specify anatomical orientation. The orientation value set is part of BodyLocation, a flexible structure that allows the location to be determined by a single code, or a code plus laterality and/or orientation. The body location can also be specified in relation to one or more body landmarks. SNOMED CT is used in all cases.
-
-+ Code only: The code should include (precoordinate) laterality and/orientation to the degree necessary to completely specify the body location.
-+ Code plus laterality and/or orientation: The basic code augmented by codes specifying the body side and/or anatomical orientation.
-+ Relation to landmark: The location relative to a landmark is specified by:
-- Establishing the location and type of landmark using a body site code and optional laterality/orientation, and
-- Specifying the direction and distance from the landmark to the body location.
-
-Note that BodyLocation is a data type (a reusable structure), not a stand-alone entity. The concept is similar to how a postal address can apply to a person, location, or organization. This contrasts with FHIR's stand-alone BodySite (aka BodyStructure in r4) which 'is not ... intended for describing the type of anatomical location but rather a specific body site on a specific patient' (FHIR 3.5).{% endcapture %}{{ md_text | markdownify }}</td>
         </tr>
         <tr>
           <td><a href="ValueSet-breastrad-OrientationVs.html">OrientationVs</a></td>
@@ -212,6 +200,10 @@ Note that BodyLocation is a data type (a reusable structure), not a stand-alone 
       <tr>
         <td><a href="http://hl7.org/fhir/ValueSet/report-codes">LOINCDiagnosticReportCodes</a></td>
         <td>{% capture md_text %}This value set includes LOINC codes that relate to Diagnostic Observations.{% endcapture %}{{ md_text | markdownify }}</td>
+      </tr>
+      <tr>
+        <td><a href="http://hl7.org/fhir/ValueSet/bodysite-laterality">Laterality</a></td>
+        <td>{% capture md_text %}Laterality: SNOMED-CT concepts for 'left', 'right', and 'bilateral'{% endcapture %}{{ md_text | markdownify }}</td>
       </tr>
       <tr>
         <td><a href="http://hl7.org/fhir/ValueSet/list-empty-reason">ListEmptyReasons</a></td>
