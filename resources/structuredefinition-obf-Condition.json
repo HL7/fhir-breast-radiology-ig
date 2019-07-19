@@ -5,12 +5,12 @@
     "status": "generated",
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>Condition Profile</b></p>\n  <p>A condition that is or may be present in a subject. &#039;Condition&#039; is interpreted broadly and could be a disorder, abnormality, problem, injury, complaint, functionality, illness, disease, ailment, sickness, affliction, upset, difficulty, disorder, symptom, worry, or trouble.\nThe Observation-based class, ConditionAbsent, should be used to describe conditions that are not present or negative findings.\nSHR Condition uses the SHR BodyLocation structure that includes not only a code, but optional laterality, direction, clock direction, and distance. If included, the distance is measured from the location specified by the code, laterality, and direction.</p>\n  <p><b>Mapping Summary</b></p>\n  <p><pre>obf.Condition maps to http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition:\n  Language maps to language\n  ImplicitRules maps to implicitRules\n  Metadata.VersionId maps to meta.versionId\n  Metadata.SourceSystem maps to meta.source\n  Metadata.Profile maps to meta.profile\n  Metadata.LastUpdated maps to meta.lastUpdated\n  Metadata.SecurityLabel maps to meta.security\n  Metadata.Tag maps to meta.tag\n  Narrative maps to text\n  Identifier maps to identifier\n  ClinicalStatus maps to clinicalStatus\n  Status maps to verificationStatus\n  Category maps to category\n  Severity maps to severity\n  Code maps to code\n  BodyLocation.Code maps to bodySite\n  BodyLocation.Laterality maps to bodySite.extension\n  BodyLocation.AnatomicalOrientation maps to bodySite.extension\n  BodyLocation.RelationToLandmark maps to bodySite.extension\n  SubjectOfRecord maps to subject\n  CareContext maps to encounter\n  Onset maps to onset[x]\n  Abatement maps to abatement[x]\n  StatementDateTime maps to recordedDate\n  Author maps to recorder\n  PersonInformationSource maps to asserter\n  StageInformation maps to stage\n  StageInformation.StageSummary maps to stage.summary\n  StageInformation.StageDetail maps to stage.assessment\n  StageInformation.Type maps to stage.type\n  Evidence.Manifestation maps to evidence.code\n  Evidence.Resource maps to evidence.detail\n  Annotation maps to note\n  DateOfDiagnosis maps to http://hl7.org/fhir/StructureDefinition/condition-assertedDate\n</pre></p>\n</div>"
   },
-  "url": "http://www.cimi.com/fhir/StructureDefinition/obf-Condition",
+  "url": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Condition",
   "name": "Condition",
   "title": "obf-Condition",
   "status": "active",
   "experimental": false,
-  "date": "2019-07-18",
+  "date": "2019-07-19",
   "publisher": "Hl7",
   "contact": [
     {
@@ -664,7 +664,7 @@
         "isSummary": false,
         "binding": {
           "strength": "extensible",
-          "valueSet": "http://www.cimi.com/obf/vs/ConditionCategoryVS"
+          "valueSet": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig/obf/vs/ConditionCategoryVS"
         },
         "mapping": [
           {
@@ -825,7 +825,7 @@
         "isSummary": true,
         "binding": {
           "strength": "preferred",
-          "valueSet": "http://www.cimi.com/shr/core/vs/BodyLocationVS"
+          "valueSet": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig/shr/core/vs/BodyLocationVS"
         },
         "mapping": [
           {
@@ -927,7 +927,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://www.cimi.com/fhir/StructureDefinition/shr-core-Laterality-extension"
+              "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-Laterality-extension"
             ]
           }
         ],
@@ -950,7 +950,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://www.cimi.com/fhir/StructureDefinition/shr-core-AnatomicalOrientation-extension"
+              "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-AnatomicalOrientation-extension"
             ]
           }
         ],
@@ -973,7 +973,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://www.cimi.com/fhir/StructureDefinition/shr-core-RelationToLandmark-extension"
+              "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-RelationToLandmark-extension"
             ]
           }
         ],
@@ -1079,7 +1079,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://www.cimi.com/fhir/StructureDefinition/obf-Patient"
+              "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Patient"
             ]
           }
         ],
@@ -1130,7 +1130,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://www.cimi.com/fhir/StructureDefinition/obf-Encounter"
+              "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Encounter"
             ]
           }
         ],
@@ -1302,10 +1302,10 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://www.cimi.com/fhir/StructureDefinition/obf-Practitioner",
+              "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Practitioner",
               "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole",
-              "http://www.cimi.com/fhir/StructureDefinition/obf-Patient",
-              "http://www.cimi.com/fhir/StructureDefinition/obf-RelatedPerson"
+              "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Patient",
+              "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-RelatedPerson"
             ]
           }
         ],
@@ -1338,9 +1338,9 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://www.cimi.com/fhir/StructureDefinition/obf-Patient",
-              "http://www.cimi.com/fhir/StructureDefinition/obf-Practitioner",
-              "http://www.cimi.com/fhir/StructureDefinition/obf-RelatedPerson"
+              "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Patient",
+              "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Practitioner",
+              "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-RelatedPerson"
             ]
           }
         ],
@@ -1562,8 +1562,8 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://www.cimi.com/fhir/StructureDefinition/obf-Observation",
-              "http://www.cimi.com/fhir/StructureDefinition/obf-DiagnosticReport"
+              "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Observation",
+              "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-DiagnosticReport"
             ]
           }
         ],
@@ -1851,7 +1851,7 @@
           {
             "code": "Annotation",
             "profile": [
-              "http://www.cimi.com/fhir/StructureDefinition/obf-Annotation"
+              "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Annotation"
             ]
           }
         ],
@@ -1942,7 +1942,7 @@
         "max": "1",
         "binding": {
           "strength": "extensible",
-          "valueSet": "http://www.cimi.com/obf/vs/ConditionCategoryVS"
+          "valueSet": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig/obf/vs/ConditionCategoryVS"
         }
       },
       {
@@ -1950,7 +1950,7 @@
         "path": "Condition.bodySite",
         "binding": {
           "strength": "preferred",
-          "valueSet": "http://www.cimi.com/shr/core/vs/BodyLocationVS"
+          "valueSet": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig/shr/core/vs/BodyLocationVS"
         }
       },
       {
@@ -1968,7 +1968,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://www.cimi.com/fhir/StructureDefinition/shr-core-Laterality-extension"
+              "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-Laterality-extension"
             ]
           }
         ],
@@ -1991,7 +1991,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://www.cimi.com/fhir/StructureDefinition/shr-core-AnatomicalOrientation-extension"
+              "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-AnatomicalOrientation-extension"
             ]
           }
         ],
@@ -2014,7 +2014,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://www.cimi.com/fhir/StructureDefinition/shr-core-RelationToLandmark-extension"
+              "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-RelationToLandmark-extension"
             ]
           }
         ],
@@ -2029,7 +2029,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://www.cimi.com/fhir/StructureDefinition/obf-Patient"
+              "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Patient"
             ]
           }
         ]
@@ -2041,7 +2041,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://www.cimi.com/fhir/StructureDefinition/obf-Encounter"
+              "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Encounter"
             ]
           }
         ]
@@ -2053,10 +2053,10 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://www.cimi.com/fhir/StructureDefinition/obf-Practitioner",
+              "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Practitioner",
               "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitionerrole",
-              "http://www.cimi.com/fhir/StructureDefinition/obf-Patient",
-              "http://www.cimi.com/fhir/StructureDefinition/obf-RelatedPerson"
+              "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Patient",
+              "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-RelatedPerson"
             ]
           }
         ]
@@ -2068,9 +2068,9 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://www.cimi.com/fhir/StructureDefinition/obf-Patient",
-              "http://www.cimi.com/fhir/StructureDefinition/obf-Practitioner",
-              "http://www.cimi.com/fhir/StructureDefinition/obf-RelatedPerson"
+              "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Patient",
+              "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Practitioner",
+              "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-RelatedPerson"
             ]
           }
         ]
@@ -2090,8 +2090,8 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://www.cimi.com/fhir/StructureDefinition/obf-Observation",
-              "http://www.cimi.com/fhir/StructureDefinition/obf-DiagnosticReport"
+              "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Observation",
+              "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-DiagnosticReport"
             ]
           }
         ]
@@ -2115,7 +2115,7 @@
           {
             "code": "Annotation",
             "profile": [
-              "http://www.cimi.com/fhir/StructureDefinition/obf-Annotation"
+              "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Annotation"
             ]
           }
         ]

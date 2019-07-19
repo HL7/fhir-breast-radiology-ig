@@ -5,10 +5,10 @@
     "status": "generated",
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>Specimen Profile</b></p>\n  <p>A specimen is a substance, physical object, or collection of objects, that the laboratory considers a single discrete, uniquely identified unit that is the subject of one or more steps in the laboratory workflow. A specimen may include multiple physical pieces as long as they are considered a single unit within the laboratory workflow. A specimen results from one to many specimen collection procedures, and may be contained in multiple specimen containers. Specimen may have one or more processing activities.</p>\n  <p><b>Mapping Summary</b></p>\n  <p><pre>obf.Specimen maps to Specimen:\n  Language maps to language\n  ImplicitRules maps to implicitRules\n  Metadata.VersionId maps to meta.versionId\n  Metadata.SourceSystem maps to meta.source\n  Metadata.Profile maps to meta.profile\n  Metadata.LastUpdated maps to meta.lastUpdated\n  Metadata.SecurityLabel maps to meta.security\n  Metadata.Tag maps to meta.tag\n  Narrative maps to text\n  Identifier maps to identifier\n  SpecimenType maps to type\n  AccessionIdentifier maps to accessionIdentifier\n  Status maps to status // Change value set from http://hl7.org/fhir/ValueSet/specimen-status to http://hl7.org/fhir/ValueSet/specimen-status|4.0.0\n  CollectionSource maps to subject // Min Cardinality changed from 1 to 0; Added Target Type Location\n  PartOf maps to parent\n  ReceivedTime maps to receivedTime\n  AmountOrSize maps to collection.quantity\n  CollectionSite.BodyLocation.Code maps to collection.bodySite\n  CollectionSite.BodyLocation.Laterality maps to collection.bodySite.extension\n  CollectionSite.BodyLocation.AnatomicalOrientation maps to collection.bodySite.extension\n  CollectionSite.BodyLocation.RelationToLandmark maps to collection.bodySite.extension\n  CollectionTime maps to collection.collected[x]\n  CollectionMethod maps to collection.method\n  SpecimenContainer.Identifier maps to container.identifier\n  SpecimenContainer.CommentOrDescription maps to container.description\n  SpecimenContainer.Type maps to container.type\n  SpecimenContainer.Capacity maps to container.capacity\n  SpecimenContainer.SpecimenQuantity maps to container.specimenQuantity\n  SpecimenContainer.Additive maps to container.additive[x]\n</pre></p>\n</div>"
   },
-  "url": "http://www.cimi.com/fhir/StructureDefinition/obf-Specimen",
+  "url": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Specimen",
   "name": "Specimen",
   "status": "draft",
-  "date": "2019-07-18",
+  "date": "2019-07-19",
   "publisher": "Hl7",
   "contact": [
     {
@@ -348,7 +348,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://www.cimi.com/fhir/StructureDefinition/obf-SpecimenTreatment-extension"
+              "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-SpecimenTreatment-extension"
             ]
           }
         ],
@@ -371,7 +371,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://www.cimi.com/fhir/StructureDefinition/obf-HandlingRisk-extension"
+              "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-HandlingRisk-extension"
             ]
           }
         ],
@@ -394,7 +394,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://www.cimi.com/fhir/StructureDefinition/obf-SpecialHandling-extension"
+              "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-SpecialHandling-extension"
             ]
           }
         ],
@@ -485,7 +485,7 @@
           {
             "code": "Identifier",
             "profile": [
-              "http://www.cimi.com/fhir/StructureDefinition/obf-AccessionIdentifier"
+              "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-AccessionIdentifier"
             ]
           }
         ],
@@ -616,10 +616,10 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://www.cimi.com/fhir/StructureDefinition/obf-Patient",
-              "http://www.cimi.com/fhir/StructureDefinition/obf-Group",
-              "http://www.cimi.com/fhir/StructureDefinition/obf-Device",
-              "http://www.cimi.com/fhir/StructureDefinition/obf-Substance"
+              "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Patient",
+              "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Group",
+              "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Device",
+              "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Substance"
             ]
           }
         ],
@@ -691,7 +691,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://www.cimi.com/fhir/StructureDefinition/obf-Specimen"
+              "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Specimen"
             ]
           }
         ],
@@ -1073,7 +1073,7 @@
         "isSummary": false,
         "binding": {
           "strength": "preferred",
-          "valueSet": "http://www.cimi.com/shr/core/vs/BodyLocationVS"
+          "valueSet": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig/shr/core/vs/BodyLocationVS"
         },
         "mapping": [
           {
@@ -1171,7 +1171,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://www.cimi.com/fhir/StructureDefinition/shr-core-Laterality-extension"
+              "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-Laterality-extension"
             ]
           }
         ],
@@ -1194,7 +1194,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://www.cimi.com/fhir/StructureDefinition/shr-core-AnatomicalOrientation-extension"
+              "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-AnatomicalOrientation-extension"
             ]
           }
         ],
@@ -1217,7 +1217,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://www.cimi.com/fhir/StructureDefinition/shr-core-RelationToLandmark-extension"
+              "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-RelationToLandmark-extension"
             ]
           }
         ],
@@ -1912,7 +1912,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://www.cimi.com/fhir/StructureDefinition/obf-Substance"
+              "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Substance"
             ]
           }
         ],
@@ -2051,7 +2051,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://www.cimi.com/fhir/StructureDefinition/obf-SpecimenTreatment-extension"
+              "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-SpecimenTreatment-extension"
             ]
           }
         ],
@@ -2074,7 +2074,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://www.cimi.com/fhir/StructureDefinition/obf-HandlingRisk-extension"
+              "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-HandlingRisk-extension"
             ]
           }
         ],
@@ -2097,7 +2097,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://www.cimi.com/fhir/StructureDefinition/obf-SpecialHandling-extension"
+              "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-SpecialHandling-extension"
             ]
           }
         ],
@@ -2112,7 +2112,7 @@
           {
             "code": "Identifier",
             "profile": [
-              "http://www.cimi.com/fhir/StructureDefinition/obf-AccessionIdentifier"
+              "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-AccessionIdentifier"
             ]
           }
         ]
@@ -2130,10 +2130,10 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://www.cimi.com/fhir/StructureDefinition/obf-Patient",
-              "http://www.cimi.com/fhir/StructureDefinition/obf-Group",
-              "http://www.cimi.com/fhir/StructureDefinition/obf-Device",
-              "http://www.cimi.com/fhir/StructureDefinition/obf-Substance"
+              "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Patient",
+              "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Group",
+              "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Device",
+              "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Substance"
             ]
           }
         ]
@@ -2147,7 +2147,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://www.cimi.com/fhir/StructureDefinition/obf-Specimen"
+              "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Specimen"
             ]
           }
         ]
@@ -2161,7 +2161,7 @@
         "path": "Specimen.collection.bodySite",
         "binding": {
           "strength": "preferred",
-          "valueSet": "http://www.cimi.com/shr/core/vs/BodyLocationVS"
+          "valueSet": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig/shr/core/vs/BodyLocationVS"
         }
       },
       {
@@ -2179,7 +2179,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://www.cimi.com/fhir/StructureDefinition/shr-core-Laterality-extension"
+              "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-Laterality-extension"
             ]
           }
         ],
@@ -2202,7 +2202,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://www.cimi.com/fhir/StructureDefinition/shr-core-AnatomicalOrientation-extension"
+              "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-AnatomicalOrientation-extension"
             ]
           }
         ],
@@ -2225,7 +2225,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://www.cimi.com/fhir/StructureDefinition/shr-core-RelationToLandmark-extension"
+              "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-RelationToLandmark-extension"
             ]
           }
         ],
@@ -2247,7 +2247,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://www.cimi.com/fhir/StructureDefinition/obf-Substance"
+              "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Substance"
             ]
           }
         ]

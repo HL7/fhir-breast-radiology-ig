@@ -5,10 +5,10 @@
     "status": "generated",
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>Dosage Profile</b></p>\n  <p>The dosage of the medication. The data structure is flexible and can describe a dosage prescribed, administered, or reported.</p>\n  <p><b>Mapping Summary</b></p>\n  <p><pre>obf.Dosage maps to Dosage:\n  DoseSequenceNumber maps to sequence\n  InstructionText maps to text\n  InstructionCode maps to additionalInstruction\n  PatientInstruction maps to patientInstruction\n  Timing maps to timing\n  AsNeeded maps to asNeeded[x]\n  AdministrationSite maps to site\n  RouteIntoBody maps to route\n  Method maps to method\n  MaxDosePerPeriod maps to maxDosePerPeriod\n  MaxDosePerAdministration maps to maxDosePerAdministration\n  MaxDosePerLifetime maps to maxDosePerLifetime\n  constrain doseAndRate to 0..1\n  DoseAndRate.DoseAmount maps to doseAndRate.dose[x]\n  DoseAndRate.DoseRate maps to doseAndRate.rate[x]\n</pre></p>\n</div>"
   },
-  "url": "http://www.cimi.com/fhir/StructureDefinition/obf-Dosage",
+  "url": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Dosage",
   "name": "Dosage",
   "status": "draft",
-  "date": "2019-07-18",
+  "date": "2019-07-19",
   "publisher": "Hl7",
   "contact": [
     {
@@ -328,7 +328,7 @@
           {
             "code": "Timing",
             "profile": [
-              "http://www.cimi.com/fhir/StructureDefinition/shr-core-Timing"
+              "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-Timing"
             ]
           }
         ],
@@ -409,7 +409,7 @@
         "isSummary": true,
         "binding": {
           "strength": "example",
-          "valueSet": "http://www.cimi.com/shr/core/vs/BodyLocationVS"
+          "valueSet": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig/shr/core/vs/BodyLocationVS"
         },
         "mapping": [
           {
@@ -654,7 +654,7 @@
           {
             "code": "Timing",
             "profile": [
-              "http://www.cimi.com/fhir/StructureDefinition/shr-core-Timing"
+              "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-Timing"
             ]
           }
         ]
@@ -664,7 +664,7 @@
         "path": "Dosage.site",
         "binding": {
           "strength": "example",
-          "valueSet": "http://www.cimi.com/shr/core/vs/BodyLocationVS"
+          "valueSet": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig/shr/core/vs/BodyLocationVS"
         }
       },
       {

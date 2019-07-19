@@ -5,12 +5,12 @@
     "status": "generated",
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>Medication Profile</b></p>\n  <p>A type of prescription drug or over-the-counter drug that is used to prevent, treat, or relieve symptoms of a disease or abnormal condition, but excluding vaccines.\nIn FHIR DSTU2 and STU3, Medication lacks the identifier attribute, which is included in SHR as an extension.\nDSTU2 lacks the status attribute, which is required by US-Core.\nBatch is 0..1 in FHIR R4, and accordingly is restricted here.</p>\n  <p><b>Mapping Summary</b></p>\n  <p><pre>obf.Medication maps to http://hl7.org/fhir/us/core/StructureDefinition/us-core-medication:\n  Language maps to language\n  ImplicitRules maps to implicitRules\n  Metadata.VersionId maps to meta.versionId\n  Metadata.SourceSystem maps to meta.source\n  Metadata.Profile maps to meta.profile\n  Metadata.LastUpdated maps to meta.lastUpdated\n  Metadata.SecurityLabel maps to meta.security\n  Metadata.Tag maps to meta.tag\n  Narrative maps to text\n  Identifier maps to identifier  // added identifier\n  Code maps to code\n  Status maps to status\n  DoseForm maps to form\n  PackageAmount maps to amount\n  Ingredient.SubstanceOrCode maps to ingredient.item[x]\n  Ingredient.IngredientStrength maps to ingredient.strength\n  Ingredient.IsActiveIngredient maps to ingredient.isActive\n  Manufacturer maps to manufacturer\n  LotNumber maps to batch.lotNumber // deleted package, added lotNumber\n  ExpirationDate maps to batch.expirationDate // deleted package, added expirationDate\n</pre></p>\n</div>"
   },
-  "url": "http://www.cimi.com/fhir/StructureDefinition/obf-Medication",
+  "url": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Medication",
   "name": "Medication",
   "title": "obf-Medication",
   "status": "active",
   "experimental": false,
-  "date": "2019-07-18",
+  "date": "2019-07-19",
   "publisher": "Hl7",
   "contact": [
     {
@@ -380,7 +380,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://www.cimi.com/fhir/StructureDefinition/obf-PartOf-extension"
+              "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-PartOf-extension"
             ]
           }
         ],
@@ -556,7 +556,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://www.cimi.com/fhir/StructureDefinition/obf-Organization"
+              "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Organization"
             ]
           }
         ],
@@ -804,8 +804,8 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://www.cimi.com/fhir/StructureDefinition/obf-Substance",
-              "http://www.cimi.com/fhir/StructureDefinition/obf-Medication"
+              "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Substance",
+              "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Medication"
             ]
           }
         ],
@@ -1132,7 +1132,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://www.cimi.com/fhir/StructureDefinition/obf-PartOf-extension"
+              "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-PartOf-extension"
             ]
           }
         ],
@@ -1147,7 +1147,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://www.cimi.com/fhir/StructureDefinition/obf-Organization"
+              "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Organization"
             ]
           }
         ]
@@ -1181,8 +1181,8 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://www.cimi.com/fhir/StructureDefinition/obf-Substance",
-              "http://www.cimi.com/fhir/StructureDefinition/obf-Medication"
+              "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Substance",
+              "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Medication"
             ]
           }
         ]
