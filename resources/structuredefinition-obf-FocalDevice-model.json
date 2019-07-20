@@ -1,0 +1,172 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "obf-FocalDevice-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>FocalDevice Logical Model</b></p>\n  <p>Activity involving a device that is implanted, removed or otherwise manipulated (e.g., calibration, battery replacement, fitting a prosthesis, attaching a wound-vac, etc.) as a focal portion of the Procedure.</p>\n</div>"
+  },
+  "url": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-FocalDevice-model",
+  "identifier": [
+    {
+      "system": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig",
+      "value": "obf.FocalDevice"
+    }
+  ],
+  "name": "FocalDevice",
+  "title": "obf-FocalDevice",
+  "status": "draft",
+  "date": "2019-07-19",
+  "publisher": "Hl7",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://BreastRadReport.com"
+        }
+      ]
+    }
+  ],
+  "description": "Activity involving a device that is implanted, removed or otherwise manipulated (e.g., calibration, battery replacement, fitting a prosthesis, attaching a wound-vac, etc.) as a focal portion of the Procedure.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "obf-FocalDevice-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "obf-FocalDevice-model",
+        "path": "obf-FocalDevice-model",
+        "definition": "Activity involving a device that is implanted, removed or otherwise manipulated (e.g., calibration, battery replacement, fitting a prosthesis, attaching a wound-vac, etc.) as a focal portion of the Procedure.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-FocalDevice-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-FocalDevice-model.device",
+        "path": "obf-FocalDevice-model.device",
+        "short": "A specific durable physical device used in diagnosis or treatment. The value is the coding for a type of device, for example, a CPAP machine. The same device might be used on multiple patients.",
+        "definition": "A specific durable physical device used in diagnosis or treatment. The value is the coding for a type of device, for example, a CPAP machine. The same device might be used on multiple patients.\nDevice status cannot be reconciled between Argonaut and US-Core, each having different required value sets.\nDevice type has extensible mappings to different value sets in Argonaut and US-Core, however both value sets have identical SNOMED content (descendants of 49062001 (Device). We adopt the US-Core value set, which is allowable because the binding is extensible.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-FocalDevice-model.device",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Device-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-FocalDevice-model.focalDeviceAction",
+        "path": "obf-FocalDevice-model.focalDeviceAction",
+        "short": "The kind of change that happened to the device during the procedure.",
+        "definition": "The kind of change that happened to the device during the procedure.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-FocalDevice-model.focalDeviceAction",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/device-action"
+          }
+        }
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "obf-FocalDevice-model",
+        "path": "obf-FocalDevice-model",
+        "definition": "Activity involving a device that is implanted, removed or otherwise manipulated (e.g., calibration, battery replacement, fitting a prosthesis, attaching a wound-vac, etc.) as a focal portion of the Procedure.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-FocalDevice-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-FocalDevice-model.device",
+        "path": "obf-FocalDevice-model.device",
+        "short": "A specific durable physical device used in diagnosis or treatment. The value is the coding for a type of device, for example, a CPAP machine. The same device might be used on multiple patients.",
+        "definition": "A specific durable physical device used in diagnosis or treatment. The value is the coding for a type of device, for example, a CPAP machine. The same device might be used on multiple patients.\nDevice status cannot be reconciled between Argonaut and US-Core, each having different required value sets.\nDevice type has extensible mappings to different value sets in Argonaut and US-Core, however both value sets have identical SNOMED content (descendants of 49062001 (Device). We adopt the US-Core value set, which is allowable because the binding is extensible.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-FocalDevice-model.device",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Device-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-FocalDevice-model.focalDeviceAction",
+        "path": "obf-FocalDevice-model.focalDeviceAction",
+        "short": "The kind of change that happened to the device during the procedure.",
+        "definition": "The kind of change that happened to the device during the procedure.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-FocalDevice-model.focalDeviceAction",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/device-action"
+          }
+        }
+      }
+    ]
+  }
+}

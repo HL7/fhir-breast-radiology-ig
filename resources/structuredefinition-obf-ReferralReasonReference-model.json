@@ -1,0 +1,126 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "obf-ReferralReasonReference-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>ReferralReasonReference Logical Model</b></p>\n  <p>Indicates another resource whose existence justifies this request.</p>\n</div>"
+  },
+  "url": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-ReferralReasonReference-model",
+  "identifier": [
+    {
+      "system": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig",
+      "value": "obf.ReferralReasonReference"
+    }
+  ],
+  "name": "ReferralReasonReference",
+  "title": "obf-ReferralReasonReference",
+  "status": "draft",
+  "date": "2019-07-19",
+  "publisher": "Hl7",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://BreastRadReport.com"
+        }
+      ]
+    }
+  ],
+  "description": "Indicates another resource whose existence justifies this request.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "obf-ReferralReasonReference-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "obf-ReferralReasonReference-model",
+        "path": "obf-ReferralReasonReference-model",
+        "definition": "Indicates another resource whose existence justifies this request.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-ReferralReasonReference-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-ReferralReasonReference-model.value[x]",
+        "path": "obf-ReferralReasonReference-model.value[x]",
+        "short": "Condition or Observation representing indicates another resource whose existence justifies this request.",
+        "definition": "Condition or Observation representing indicates another resource whose existence justifies this request.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-ReferralReasonReference-model.value[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Condition-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Observation-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "obf-ReferralReasonReference-model",
+        "path": "obf-ReferralReasonReference-model",
+        "definition": "Indicates another resource whose existence justifies this request.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-ReferralReasonReference-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-ReferralReasonReference-model.value[x]",
+        "path": "obf-ReferralReasonReference-model.value[x]",
+        "short": "Condition or Observation representing indicates another resource whose existence justifies this request.",
+        "definition": "Condition or Observation representing indicates another resource whose existence justifies this request.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-ReferralReasonReference-model.value[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Condition-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Observation-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

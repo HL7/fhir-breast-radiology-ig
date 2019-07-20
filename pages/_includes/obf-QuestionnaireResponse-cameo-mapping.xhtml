@@ -7,22 +7,22 @@ obf.QuestionnaireResponse maps to QuestionnaireResponse:
   Language maps to language
   ImplicitRules maps to implicitRules
   Metadata.VersionId maps to meta.versionId
-  Metadata.SourceSystem maps to meta.source
+  Metadata.SourceSystem maps to meta.extension
   Metadata.Profile maps to meta.profile
   Metadata.LastUpdated maps to meta.lastUpdated
   Metadata.SecurityLabel maps to meta.security
   Metadata.Tag maps to meta.tag
   Narrative maps to text
   Identifier maps to identifier
-  QuestionnaireResponseBasedOn maps to basedOn  // Type Reference -- Added Ref(ServiceRequest), removed Ref(ReferralRequest) and Ref(ProcedureRequest)
-  QuestionnaireResponsePartOf maps to partOf
-  QuestionnaireCanonical maps to questionnaire // Type changed from Reference(Questionnaire) to canonical(Questionnaire)
+  QuestionnaireResponseBasedOn maps to basedOn
+  QuestionnaireResponsePartOf maps to parent
+  QuestionnaireCanonical maps to extension
   Status maps to status
   SubjectOfRecord maps to subject
-  CareContext maps to encounter  // changed from context to encounter
-  StatementDateTime maps to authored
-  QuestionnaireResponseRecorder maps to author  // Added Target Types Ref(PractitionerRole) and ref(Organization)
-  PersonInformationSource maps to source  // Added Target Type PractitionerRole
+  CareContext maps to context
+  StatementDateTime maps to authored // authored = authoredOn
+  QuestionnaireResponseRecorder maps to author
+  PersonInformationSource maps to source
   QuestionnaireResponseItem maps to item
   QuestionnaireResponseItem.IdentifierString maps to item.linkId
   QuestionnaireResponseItem.DetailsUri maps to item.definition

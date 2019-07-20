@@ -7,7 +7,7 @@ breastrad.BreastRadiologyDocument maps to Composition:
   Language maps to language
   ImplicitRules maps to implicitRules
   Metadata.VersionId maps to meta.versionId
-  Metadata.SourceSystem maps to meta.source
+  Metadata.SourceSystem maps to meta.extension
   Metadata.Profile maps to meta.profile
   Metadata.LastUpdated maps to meta.lastUpdated
   Metadata.SecurityLabel maps to meta.security
@@ -16,9 +16,9 @@ breastrad.BreastRadiologyDocument maps to Composition:
   Identifier maps to identifier
   Status maps to status
   Type maps to type
-  Category maps to category
+  Category maps to class
   FocalSubject maps to subject
-  CareContext maps to encounter
+  CareContext maps to encounter // this will probably not work and R4 not be able to have EpisodeOfCare
   StatementDateTime maps to date
   Author maps to author
   Title maps to title
@@ -35,8 +35,8 @@ breastrad.BreastRadiologyDocument maps to Composition:
   Section maps to section (slice on = code; slice strategy = includes)
   Section.Title maps to section.title
   Section.Code maps to section.code
-  Section.Author maps to section.author
-  Section.FocalSubject maps to section.focus
+  Section.Author maps to section.extension
+  Section.FocalSubject maps to section.modifierExtension
   Section.Narrative maps to section.text
   Section.Type maps to section.mode
   Section.SortOrder maps to section.orderedBy // terrible FHIR name!
@@ -45,8 +45,6 @@ breastrad.BreastRadiologyDocument maps to Composition:
   Section.Section maps to section.section (slice on = code; slice strategy = includes)
   Section.Section.Title maps to section.section.title
   Section.Section.Code maps to section.section.code
-  Section.Section.Author maps to section.section.author
-  Section.Section.FocalSubject maps to section.section.focus
   Section.Section.Narrative maps to section.section.text
   Section.Section.Type maps to section.section.mode
   Section.Section.SortOrder maps to section.section.orderedBy

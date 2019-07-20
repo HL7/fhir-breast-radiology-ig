@@ -1,0 +1,1202 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "obf-Appointment-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>Appointment Logical Model</b></p>\n  <p>A booking of a healthcare event among patient(s), practitioner(s), related person(s) and/or device(s) for a specific date/time.</p>\n</div>"
+  },
+  "url": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Appointment-model",
+  "identifier": [
+    {
+      "system": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig",
+      "value": "obf.Appointment"
+    }
+  ],
+  "name": "Appointment",
+  "title": "obf-Appointment",
+  "status": "draft",
+  "date": "2019-07-19",
+  "publisher": "Hl7",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://BreastRadReport.com"
+        }
+      ]
+    }
+  ],
+  "description": "A booking of a healthcare event among patient(s), practitioner(s), related person(s) and/or device(s) for a specific date/time.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "obf-Appointment-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "obf-Appointment-model",
+        "path": "obf-Appointment-model",
+        "definition": "A booking of a healthcare event among patient(s), practitioner(s), related person(s) and/or device(s) for a specific date/time.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Appointment-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Appointment-model.metadata",
+        "path": "obf-Appointment-model.metadata",
+        "short": "Elements that belong to all information items.",
+        "definition": "Elements that belong to all information items.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Appointment-model.metadata",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Metadata-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Appointment-model.language",
+        "path": "obf-Appointment-model.language",
+        "short": "A human language, spoken or written.",
+        "definition": "A human language, spoken or written.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Appointment-model.language",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Appointment-model.implicitRules",
+        "path": "obf-Appointment-model.implicitRules",
+        "short": "A set of rules under which this content was created",
+        "definition": "A set of rules under which this content was created",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Appointment-model.implicitRules",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Appointment-model.narrative",
+        "path": "obf-Appointment-model.narrative",
+        "short": "A human-readable narrative, potentially including images, that contains a summary of the resource, and may be used to represent the content of the resource to a human.",
+        "definition": "A human-readable narrative, potentially including images, that contains a summary of the resource, and may be used to represent the content of the resource to a human.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Appointment-model.narrative",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Narrative-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Appointment-model.status",
+        "path": "obf-Appointment-model.status",
+        "short": "A state that relates to the workflow or interpretation of this resource. Certain status values can modify the meaning of the resource, for example, entered-in-error. When a boolean value is used, Status of true indicates the record is active, false means inactive.",
+        "definition": "A state that relates to the workflow or interpretation of this resource. Certain status values can modify the meaning of the resource, for example, entered-in-error. When a boolean value is used, Status of true indicates the record is active, false means inactive.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-Appointment-model.status",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/appointmentstatus"
+          }
+        }
+      },
+      {
+        "id": "obf-Appointment-model.identifier",
+        "path": "obf-Appointment-model.identifier",
+        "short": "Business identifier or external id for this resource.",
+        "definition": "Business identifier or external id for this resource.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Appointment-model.identifier",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-Identifier-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Appointment-model.serviceCategory",
+        "path": "obf-Appointment-model.serviceCategory",
+        "short": "A broad categorization of the service (ordered, planned, or performed).",
+        "definition": "A broad categorization of the service (ordered, planned, or performed).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Appointment-model.serviceCategory",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "example",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/service-category"
+          }
+        }
+      },
+      {
+        "id": "obf-Appointment-model.serviceDetails",
+        "path": "obf-Appointment-model.serviceDetails",
+        "short": "A service requested or performed. Additional details and instructions about the service requested or performed. For example, and order for a urinary catheter may have an order detail for an external or indwelling catheter, or an order for a bandage may require additional instructions specifying how the bandage should be applied.",
+        "definition": "A service requested or performed. Additional details and instructions about the service requested or performed. For example, and order for a urinary catheter may have an order detail for an external or indwelling catheter, or an order for a bandage may require additional instructions specifying how the bandage should be applied.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Appointment-model.serviceDetails",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "example",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/service-type"
+          }
+        }
+      },
+      {
+        "id": "obf-Appointment-model.specialty",
+        "path": "obf-Appointment-model.specialty",
+        "short": "The specialty of a practitioner who (should, will, or did) perform a service.",
+        "definition": "The specialty of a practitioner who (should, will, or did) perform a service.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Appointment-model.specialty",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "preferred",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/c80-practice-codes"
+          }
+        }
+      },
+      {
+        "id": "obf-Appointment-model.type",
+        "path": "obf-Appointment-model.type",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0332307"
+          }
+        ],
+        "short": "A code describing the item at a greater level of detail.",
+        "definition": "A code describing the item at a greater level of detail.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Appointment-model.type",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "preferred",
+          "valueSetReference": {
+            "reference": "http://terminology.hl7.org/ValueSet/v2-0276"
+          }
+        }
+      },
+      {
+        "id": "obf-Appointment-model.reasonCode",
+        "path": "obf-Appointment-model.reasonCode",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0566251"
+          }
+        ],
+        "short": "The explanation or justification for the current item or action, as a code.",
+        "definition": "The explanation or justification for the current item or action, as a code.\nReason is a string or CodeableConcept in DSTU2 but in later versions only a CodeableConcept.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Appointment-model.reasonCode",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Appointment-model.appointmentReasonReference[x]",
+        "path": "obf-Appointment-model.appointmentReasonReference[x]",
+        "short": "Reason the appointment is to take place (resource)",
+        "definition": "Reason the appointment is to take place (resource)",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Appointment-model.appointmentReasonReference[x]",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Condition-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Procedure-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Observation-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Appointment-model.indication[x]",
+        "path": "obf-Appointment-model.indication[x]",
+        "short": "Conditions or situations where the procedure is recommended. In the Performed context, the actual indication should be reported.",
+        "definition": "Conditions or situations where the procedure is recommended. In the Performed context, the actual indication should be reported.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Appointment-model.indication[x]",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Condition-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Procedure-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Appointment-model.priorityRank",
+        "path": "obf-Appointment-model.priorityRank",
+        "short": "The priority of the procedure, as a number (1 being the highest priority)",
+        "definition": "The priority of the procedure, as a number (1 being the highest priority)",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Appointment-model.priorityRank",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "positiveInt"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Appointment-model.commentOrDescription",
+        "path": "obf-Appointment-model.commentOrDescription",
+        "short": "A text note containing additional details, explanation, description, comment, or summarization.",
+        "definition": "A text note containing additional details, explanation, description, comment, or summarization.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Appointment-model.commentOrDescription",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Appointment-model.patientInstruction",
+        "path": "obf-Appointment-model.patientInstruction",
+        "short": "Patient or consumer-oriented instructions.",
+        "definition": "Patient or consumer-oriented instructions.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Appointment-model.patientInstruction",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Appointment-model.supportingInformation",
+        "path": "obf-Appointment-model.supportingInformation",
+        "short": "Additional information to support this request.",
+        "definition": "Additional information to support this request.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Appointment-model.supportingInformation",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Resource-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Appointment-model.referralBasedOn[x]",
+        "path": "obf-Appointment-model.referralBasedOn[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "short": "Indicates any plans, proposals or orders that this request is intended to satisfy - in whole or in part.",
+        "definition": "Indicates any plans, proposals or orders that this request is intended to satisfy - in whole or in part.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Appointment-model.referralBasedOn[x]",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-ReferralRequest-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Appointment-model.referralBasedOnObf-ReferralRequest-model:ReferralRequest",
+        "path": "obf-Appointment-model.referralBasedOnObf-ReferralRequest-model",
+        "sliceName": "ReferralRequest",
+        "short": "Used to record and send details about a request for referral service or transfer of a patient to the care of another provider or provider organization.",
+        "definition": "Used to record and send details about a request for referral service or transfer of a patient to the care of another provider or provider organization.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-Appointment-model.referralBasedOn[x]",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-ReferralRequest-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Appointment-model.appointmentParticipation",
+        "path": "obf-Appointment-model.appointmentParticipation",
+        "short": "Participants involved in appointment",
+        "definition": "Participants involved in appointment",
+        "min": 1,
+        "max": "*",
+        "base": {
+          "path": "obf-Appointment-model.appointmentParticipation",
+          "min": 1,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-AppointmentParticipation-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Appointment-model.timePeriod",
+        "path": "obf-Appointment-model.timePeriod",
+        "short": "A period of time defined by a start and end time, date, or year.",
+        "definition": "A period of time defined by a start and end time, date, or year.\nIf the start date/time is missing, the start of the period is not known. If the end date/time is missing, it means that the period is ongoing.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Appointment-model.timePeriod",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-TimePeriod-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Appointment-model.expectedPerformanceTime[x]",
+        "path": "obf-Appointment-model.expectedPerformanceTime[x]",
+        "short": "When an action should be done. If the action is a series or recurs (e.g. daily blood sugar testing in the morning) then a Timing can be used to describe the periodicity.",
+        "definition": "When an action should be done. If the action is a series or recurs (e.g. daily blood sugar testing in the morning) then a Timing can be used to describe the periodicity.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Appointment-model.expectedPerformanceTime[x]",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          },
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-TimePeriod-model"
+          },
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-Timing-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Appointment-model.statementDateTime",
+        "path": "obf-Appointment-model.statementDateTime",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C3669169"
+          }
+        ],
+        "short": "The point in time when the statement was created.",
+        "definition": "The point in time when the statement was created.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Appointment-model.statementDateTime",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "obf-Appointment-model",
+        "path": "obf-Appointment-model",
+        "definition": "A booking of a healthcare event among patient(s), practitioner(s), related person(s) and/or device(s) for a specific date/time.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Appointment-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Appointment-model.metadata",
+        "path": "obf-Appointment-model.metadata",
+        "short": "Elements that belong to all information items.",
+        "definition": "Elements that belong to all information items.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Appointment-model.metadata",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Metadata-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Appointment-model.language",
+        "path": "obf-Appointment-model.language",
+        "short": "A human language, spoken or written.",
+        "definition": "A human language, spoken or written.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Appointment-model.language",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Appointment-model.implicitRules",
+        "path": "obf-Appointment-model.implicitRules",
+        "short": "A set of rules under which this content was created",
+        "definition": "A set of rules under which this content was created",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Appointment-model.implicitRules",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Appointment-model.narrative",
+        "path": "obf-Appointment-model.narrative",
+        "short": "A human-readable narrative, potentially including images, that contains a summary of the resource, and may be used to represent the content of the resource to a human.",
+        "definition": "A human-readable narrative, potentially including images, that contains a summary of the resource, and may be used to represent the content of the resource to a human.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Appointment-model.narrative",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Narrative-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Appointment-model.status",
+        "path": "obf-Appointment-model.status",
+        "short": "A state that relates to the workflow or interpretation of this resource. Certain status values can modify the meaning of the resource, for example, entered-in-error. When a boolean value is used, Status of true indicates the record is active, false means inactive.",
+        "definition": "A state that relates to the workflow or interpretation of this resource. Certain status values can modify the meaning of the resource, for example, entered-in-error. When a boolean value is used, Status of true indicates the record is active, false means inactive.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-Appointment-model.status",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/appointmentstatus"
+          }
+        }
+      },
+      {
+        "id": "obf-Appointment-model.identifier",
+        "path": "obf-Appointment-model.identifier",
+        "short": "Business identifier or external id for this resource.",
+        "definition": "Business identifier or external id for this resource.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Appointment-model.identifier",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-Identifier-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Appointment-model.serviceCategory",
+        "path": "obf-Appointment-model.serviceCategory",
+        "short": "A broad categorization of the service (ordered, planned, or performed).",
+        "definition": "A broad categorization of the service (ordered, planned, or performed).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Appointment-model.serviceCategory",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "example",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/service-category"
+          }
+        }
+      },
+      {
+        "id": "obf-Appointment-model.serviceDetails",
+        "path": "obf-Appointment-model.serviceDetails",
+        "short": "A service requested or performed. Additional details and instructions about the service requested or performed. For example, and order for a urinary catheter may have an order detail for an external or indwelling catheter, or an order for a bandage may require additional instructions specifying how the bandage should be applied.",
+        "definition": "A service requested or performed. Additional details and instructions about the service requested or performed. For example, and order for a urinary catheter may have an order detail for an external or indwelling catheter, or an order for a bandage may require additional instructions specifying how the bandage should be applied.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Appointment-model.serviceDetails",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "example",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/service-type"
+          }
+        }
+      },
+      {
+        "id": "obf-Appointment-model.specialty",
+        "path": "obf-Appointment-model.specialty",
+        "short": "The specialty of a practitioner who (should, will, or did) perform a service.",
+        "definition": "The specialty of a practitioner who (should, will, or did) perform a service.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Appointment-model.specialty",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "preferred",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/c80-practice-codes"
+          }
+        }
+      },
+      {
+        "id": "obf-Appointment-model.type",
+        "path": "obf-Appointment-model.type",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0332307"
+          }
+        ],
+        "short": "A code describing the item at a greater level of detail.",
+        "definition": "A code describing the item at a greater level of detail.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Appointment-model.type",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "preferred",
+          "valueSetReference": {
+            "reference": "http://terminology.hl7.org/ValueSet/v2-0276"
+          }
+        }
+      },
+      {
+        "id": "obf-Appointment-model.reasonCode",
+        "path": "obf-Appointment-model.reasonCode",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0566251"
+          }
+        ],
+        "short": "The explanation or justification for the current item or action, as a code.",
+        "definition": "The explanation or justification for the current item or action, as a code.\nReason is a string or CodeableConcept in DSTU2 but in later versions only a CodeableConcept.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Appointment-model.reasonCode",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Appointment-model.appointmentReasonReference[x]",
+        "path": "obf-Appointment-model.appointmentReasonReference[x]",
+        "short": "Reason the appointment is to take place (resource)",
+        "definition": "Reason the appointment is to take place (resource)",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Appointment-model.appointmentReasonReference[x]",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Condition-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Procedure-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Observation-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Appointment-model.indication[x]",
+        "path": "obf-Appointment-model.indication[x]",
+        "short": "Conditions or situations where the procedure is recommended. In the Performed context, the actual indication should be reported.",
+        "definition": "Conditions or situations where the procedure is recommended. In the Performed context, the actual indication should be reported.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Appointment-model.indication[x]",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Condition-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Procedure-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Appointment-model.priorityRank",
+        "path": "obf-Appointment-model.priorityRank",
+        "short": "The priority of the procedure, as a number (1 being the highest priority)",
+        "definition": "The priority of the procedure, as a number (1 being the highest priority)",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Appointment-model.priorityRank",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "positiveInt"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Appointment-model.commentOrDescription",
+        "path": "obf-Appointment-model.commentOrDescription",
+        "short": "A text note containing additional details, explanation, description, comment, or summarization.",
+        "definition": "A text note containing additional details, explanation, description, comment, or summarization.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Appointment-model.commentOrDescription",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Appointment-model.patientInstruction",
+        "path": "obf-Appointment-model.patientInstruction",
+        "short": "Patient or consumer-oriented instructions.",
+        "definition": "Patient or consumer-oriented instructions.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Appointment-model.patientInstruction",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Appointment-model.supportingInformation",
+        "path": "obf-Appointment-model.supportingInformation",
+        "short": "Additional information to support this request.",
+        "definition": "Additional information to support this request.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Appointment-model.supportingInformation",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Resource-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Appointment-model.referralBasedOn[x]",
+        "path": "obf-Appointment-model.referralBasedOn[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "short": "Indicates any plans, proposals or orders that this request is intended to satisfy - in whole or in part.",
+        "definition": "Indicates any plans, proposals or orders that this request is intended to satisfy - in whole or in part.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Appointment-model.referralBasedOn[x]",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-ReferralRequest-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Appointment-model.referralBasedOnObf-ReferralRequest-model:ReferralRequest",
+        "path": "obf-Appointment-model.referralBasedOnObf-ReferralRequest-model",
+        "sliceName": "ReferralRequest",
+        "short": "Used to record and send details about a request for referral service or transfer of a patient to the care of another provider or provider organization.",
+        "definition": "Used to record and send details about a request for referral service or transfer of a patient to the care of another provider or provider organization.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-Appointment-model.referralBasedOn[x]",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-ReferralRequest-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Appointment-model.appointmentParticipation",
+        "path": "obf-Appointment-model.appointmentParticipation",
+        "short": "Participants involved in appointment",
+        "definition": "Participants involved in appointment",
+        "min": 1,
+        "max": "*",
+        "base": {
+          "path": "obf-Appointment-model.appointmentParticipation",
+          "min": 1,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-AppointmentParticipation-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Appointment-model.timePeriod",
+        "path": "obf-Appointment-model.timePeriod",
+        "short": "A period of time defined by a start and end time, date, or year.",
+        "definition": "A period of time defined by a start and end time, date, or year.\nIf the start date/time is missing, the start of the period is not known. If the end date/time is missing, it means that the period is ongoing.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Appointment-model.timePeriod",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-TimePeriod-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Appointment-model.expectedPerformanceTime[x]",
+        "path": "obf-Appointment-model.expectedPerformanceTime[x]",
+        "short": "When an action should be done. If the action is a series or recurs (e.g. daily blood sugar testing in the morning) then a Timing can be used to describe the periodicity.",
+        "definition": "When an action should be done. If the action is a series or recurs (e.g. daily blood sugar testing in the morning) then a Timing can be used to describe the periodicity.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Appointment-model.expectedPerformanceTime[x]",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          },
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-TimePeriod-model"
+          },
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-Timing-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Appointment-model.statementDateTime",
+        "path": "obf-Appointment-model.statementDateTime",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C3669169"
+          }
+        ],
+        "short": "The point in time when the statement was created.",
+        "definition": "The point in time when the statement was created.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Appointment-model.statementDateTime",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

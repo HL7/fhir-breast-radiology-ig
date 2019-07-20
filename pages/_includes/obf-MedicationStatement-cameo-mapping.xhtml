@@ -7,7 +7,7 @@ obf.MedicationStatement maps to http://hl7.org/fhir/us/core/StructureDefinition/
   Language maps to language
   ImplicitRules maps to implicitRules
   Metadata.VersionId maps to meta.versionId
-  Metadata.SourceSystem maps to meta.source
+  Metadata.SourceSystem maps to meta.extension
   Metadata.Profile maps to meta.profile
   Metadata.LastUpdated maps to meta.lastUpdated
   Metadata.SecurityLabel maps to meta.security
@@ -16,16 +16,19 @@ obf.MedicationStatement maps to http://hl7.org/fhir/us/core/StructureDefinition/
   Identifier maps to identifier
   MedicationBasedOn maps to basedOn
   MedicationStatementPartOf maps to partOf
+  CareContext maps to context
   Status maps to status
-  StatusReason maps to statusReason
+  StatusReason maps to extension
   Category maps to category
   MedicationCodeOrReference maps to medication[x]
-  SubjectOfRecord maps to subject
-  CareContext maps to context
   OccurrenceTimeOrPeriod maps to effective[x]
   StatementDateTime maps to dateAsserted
   MedicationInformationSource maps to informationSource
-  SupportingInformation maps to derivedFrom  //erroneous attribute name in FHIR STU3, R4
+  SubjectOfRecord maps to subject
+  SupportingInformation maps to derivedFrom
+  fix taken to #y
+  constrain reasonNotTaken to 0..0
+  constrain dosage to 0..1
   ReasonCode maps to reasonCode
   MedicationReasonReference maps to reasonReference
   Annotation maps to note

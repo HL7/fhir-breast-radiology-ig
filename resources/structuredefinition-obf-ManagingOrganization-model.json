@@ -1,0 +1,118 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "obf-ManagingOrganization-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>ManagingOrganization Logical Model</b></p>\n  <p>The organization that manages a patient, activity, facility, document, or service provision.</p>\n</div>"
+  },
+  "url": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-ManagingOrganization-model",
+  "identifier": [
+    {
+      "system": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig",
+      "value": "obf.ManagingOrganization"
+    }
+  ],
+  "name": "ManagingOrganization",
+  "title": "obf-ManagingOrganization",
+  "status": "draft",
+  "date": "2019-07-19",
+  "publisher": "Hl7",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://BreastRadReport.com"
+        }
+      ]
+    }
+  ],
+  "description": "The organization that manages a patient, activity, facility, document, or service provision.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "obf-ManagingOrganization-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "obf-ManagingOrganization-model",
+        "path": "obf-ManagingOrganization-model",
+        "definition": "The organization that manages a patient, activity, facility, document, or service provision.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-ManagingOrganization-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-ManagingOrganization-model.value",
+        "path": "obf-ManagingOrganization-model.value",
+        "short": "Organization representing the organization that manages a patient, activity, facility, document, or service provision.",
+        "definition": "Organization representing the organization that manages a patient, activity, facility, document, or service provision.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-ManagingOrganization-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Organization-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "obf-ManagingOrganization-model",
+        "path": "obf-ManagingOrganization-model",
+        "definition": "The organization that manages a patient, activity, facility, document, or service provision.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-ManagingOrganization-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-ManagingOrganization-model.value",
+        "path": "obf-ManagingOrganization-model.value",
+        "short": "Organization representing the organization that manages a patient, activity, facility, document, or service provision.",
+        "definition": "Organization representing the organization that manages a patient, activity, facility, document, or service provision.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-ManagingOrganization-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Organization-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

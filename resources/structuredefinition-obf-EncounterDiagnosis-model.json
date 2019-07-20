@@ -1,0 +1,268 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "obf-EncounterDiagnosis-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>EncounterDiagnosis Logical Model</b></p>\n  <p>A diagnosis, which is a disease or injury determined to be present through evaluation of patient history, examination, and/or review of laboratory data. This element is not a stand-alone representation of the condition that was diagnosed, but is meant to be used as an sub-structure in a resource, such as Encounter.</p>\n</div>"
+  },
+  "url": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-EncounterDiagnosis-model",
+  "identifier": [
+    {
+      "system": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig",
+      "value": "obf.EncounterDiagnosis"
+    }
+  ],
+  "name": "EncounterDiagnosis",
+  "title": "obf-EncounterDiagnosis",
+  "status": "draft",
+  "date": "2019-07-19",
+  "publisher": "Hl7",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://BreastRadReport.com"
+        }
+      ]
+    }
+  ],
+  "description": "A diagnosis, which is a disease or injury determined to be present through evaluation of patient history, examination, and/or review of laboratory data. This element is not a stand-alone representation of the condition that was diagnosed, but is meant to be used as an sub-structure in a resource, such as Encounter.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "obf-EncounterDiagnosis-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "obf-EncounterDiagnosis-model",
+        "path": "obf-EncounterDiagnosis-model",
+        "definition": "A diagnosis, which is a disease or injury determined to be present through evaluation of patient history, examination, and/or review of laboratory data. This element is not a stand-alone representation of the condition that was diagnosed, but is meant to be used as an sub-structure in a resource, such as Encounter.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-EncounterDiagnosis-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-EncounterDiagnosis-model.diagnosisCode",
+        "path": "obf-EncounterDiagnosis-model.diagnosisCode",
+        "short": "Codes for a diagnosis.",
+        "definition": "Codes for a diagnosis.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-EncounterDiagnosis-model.diagnosisCode",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-EncounterDiagnosis-model.condition",
+        "path": "obf-EncounterDiagnosis-model.condition",
+        "short": "A condition that is or may be present in a subject. 'Condition' is interpreted broadly and could be a disorder, abnormality, problem, injury, complaint, functionality, illness, disease, ailment, sickness, affliction, upset, difficulty, disorder, symptom, worry, or trouble.",
+        "definition": "A condition that is or may be present in a subject. 'Condition' is interpreted broadly and could be a disorder, abnormality, problem, injury, complaint, functionality, illness, disease, ailment, sickness, affliction, upset, difficulty, disorder, symptom, worry, or trouble.\nThe Observation-based class, ConditionAbsent, should be used to describe conditions that are not present or negative findings.\nSHR Condition uses the SHR BodyLocation structure that includes not only a code, but optional laterality, direction, clock direction, and distance. If included, the distance is measured from the location specified by the code, laterality, and direction.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-EncounterDiagnosis-model.condition",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Condition-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-EncounterDiagnosis-model.priorityRank",
+        "path": "obf-EncounterDiagnosis-model.priorityRank",
+        "short": "The priority of the procedure, as a number (1 being the highest priority)",
+        "definition": "The priority of the procedure, as a number (1 being the highest priority)",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-EncounterDiagnosis-model.priorityRank",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "positiveInt"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-EncounterDiagnosis-model.type",
+        "path": "obf-EncounterDiagnosis-model.type",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0332307"
+          }
+        ],
+        "short": "A code describing the item at a greater level of detail.",
+        "definition": "A code describing the item at a greater level of detail.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-EncounterDiagnosis-model.type",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "preferred",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/diagnosis-role"
+          }
+        }
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "obf-EncounterDiagnosis-model",
+        "path": "obf-EncounterDiagnosis-model",
+        "definition": "A diagnosis, which is a disease or injury determined to be present through evaluation of patient history, examination, and/or review of laboratory data. This element is not a stand-alone representation of the condition that was diagnosed, but is meant to be used as an sub-structure in a resource, such as Encounter.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-EncounterDiagnosis-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-EncounterDiagnosis-model.diagnosisCode",
+        "path": "obf-EncounterDiagnosis-model.diagnosisCode",
+        "short": "Codes for a diagnosis.",
+        "definition": "Codes for a diagnosis.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-EncounterDiagnosis-model.diagnosisCode",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-EncounterDiagnosis-model.condition",
+        "path": "obf-EncounterDiagnosis-model.condition",
+        "short": "A condition that is or may be present in a subject. 'Condition' is interpreted broadly and could be a disorder, abnormality, problem, injury, complaint, functionality, illness, disease, ailment, sickness, affliction, upset, difficulty, disorder, symptom, worry, or trouble.",
+        "definition": "A condition that is or may be present in a subject. 'Condition' is interpreted broadly and could be a disorder, abnormality, problem, injury, complaint, functionality, illness, disease, ailment, sickness, affliction, upset, difficulty, disorder, symptom, worry, or trouble.\nThe Observation-based class, ConditionAbsent, should be used to describe conditions that are not present or negative findings.\nSHR Condition uses the SHR BodyLocation structure that includes not only a code, but optional laterality, direction, clock direction, and distance. If included, the distance is measured from the location specified by the code, laterality, and direction.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-EncounterDiagnosis-model.condition",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Condition-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-EncounterDiagnosis-model.priorityRank",
+        "path": "obf-EncounterDiagnosis-model.priorityRank",
+        "short": "The priority of the procedure, as a number (1 being the highest priority)",
+        "definition": "The priority of the procedure, as a number (1 being the highest priority)",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-EncounterDiagnosis-model.priorityRank",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "positiveInt"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-EncounterDiagnosis-model.type",
+        "path": "obf-EncounterDiagnosis-model.type",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0332307"
+          }
+        ],
+        "short": "A code describing the item at a greater level of detail.",
+        "definition": "A code describing the item at a greater level of detail.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-EncounterDiagnosis-model.type",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "preferred",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/diagnosis-role"
+          }
+        }
+      }
+    ]
+  }
+}

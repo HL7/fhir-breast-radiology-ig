@@ -1,0 +1,118 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "obf-PanelMembers-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>PanelMembers Logical Model</b></p>\n  <p>PanelMembers represent the elements of a group of a related but independent evaluations.\n\nExamples are the measurements that compose a complete blood count (CBC), or the elements of a pathology report. Each member is an independent evaluation, but the grouping reflects a composite lab order, shared specimen, or a single report author. Typically the  are not given for individual findings that are part of the panel, but rather given at the level of the panel itself.</p>\n</div>"
+  },
+  "url": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-PanelMembers-model",
+  "identifier": [
+    {
+      "system": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig",
+      "value": "obf.PanelMembers"
+    }
+  ],
+  "name": "PanelMembers",
+  "title": "obf-PanelMembers",
+  "status": "draft",
+  "date": "2019-07-19",
+  "publisher": "Hl7",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://BreastRadReport.com"
+        }
+      ]
+    }
+  ],
+  "description": "PanelMembers represent the elements of a group of a related but independent evaluations.\n\nExamples are the measurements that compose a complete blood count (CBC), or the elements of a pathology report. Each member is an independent evaluation, but the grouping reflects a composite lab order, shared specimen, or a single report author. Typically the  are not given for individual findings that are part of the panel, but rather given at the level of the panel itself.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "obf-PanelMembers-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "obf-PanelMembers-model",
+        "path": "obf-PanelMembers-model",
+        "definition": "PanelMembers represent the elements of a group of a related but independent evaluations.\n\nExamples are the measurements that compose a complete blood count (CBC), or the elements of a pathology report. Each member is an independent evaluation, but the grouping reflects a composite lab order, shared specimen, or a single report author. Typically the  are not given for individual findings that are part of the panel, but rather given at the level of the panel itself.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-PanelMembers-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-PanelMembers-model.observation",
+        "path": "obf-PanelMembers-model.observation",
+        "short": "Represents the result of evaluations (measurements, tests, or questions) that have been performed.",
+        "definition": "Represents the result of evaluations (measurements, tests, or questions) that have been performed.\nObservation has a value representing the result (answer), or an DataAbsentReason indicating why the value is not present. Things observed about the subject can include social and behavioral factors, subjective and objective observations, and assessments.\nFor an Observation, the Code describes the aspect or property of the subject being observed or measured. The Code is the 'question code' that pairs to the 'answer' contained in the Value.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-PanelMembers-model.observation",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Observation-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "obf-PanelMembers-model",
+        "path": "obf-PanelMembers-model",
+        "definition": "PanelMembers represent the elements of a group of a related but independent evaluations.\n\nExamples are the measurements that compose a complete blood count (CBC), or the elements of a pathology report. Each member is an independent evaluation, but the grouping reflects a composite lab order, shared specimen, or a single report author. Typically the  are not given for individual findings that are part of the panel, but rather given at the level of the panel itself.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-PanelMembers-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-PanelMembers-model.observation",
+        "path": "obf-PanelMembers-model.observation",
+        "short": "Represents the result of evaluations (measurements, tests, or questions) that have been performed.",
+        "definition": "Represents the result of evaluations (measurements, tests, or questions) that have been performed.\nObservation has a value representing the result (answer), or an DataAbsentReason indicating why the value is not present. Things observed about the subject can include social and behavioral factors, subjective and objective observations, and assessments.\nFor an Observation, the Code describes the aspect or property of the subject being observed or measured. The Code is the 'question code' that pairs to the 'answer' contained in the Value.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-PanelMembers-model.observation",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Observation-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

@@ -3,48 +3,26 @@
 <p><b>Mapping Source</b></p>
 <p>This structure represents the following mapping definition:</p>
 <pre>
-obf.ReferralRequest maps to ServiceRequest:
-  Language maps to language
-  ImplicitRules maps to implicitRules
-  Metadata.VersionId maps to meta.versionId
-  Metadata.SourceSystem maps to meta.source
-  Metadata.Profile maps to meta.profile
-  Metadata.LastUpdated maps to meta.lastUpdated
-  Metadata.SecurityLabel maps to meta.security
-  Metadata.Tag maps to meta.tag
-  Narrative maps to text
+obf.ReferralRequest maps to ReferralRequest:
   Identifier maps to identifier
   ServiceBasedOn maps to basedOn
   Replaces maps to replaces
-  GroupIdentifier maps to requisition
+  GroupIdentifier maps to groupIdentifier
   Status maps to status
   RequestIntent maps to intent
-  Category maps to category
+  Code maps to type
   PriorityCode maps to priority
-  DoNotPerform maps to doNotPerform
-  Code maps to code
-  ServiceDetails maps to orderDetail
-  RequestQuantity maps to quantity[x]
+  ServiceDetails maps to serviceRequested
   ReferralRequestSubjectOfRecord maps to subject
-  CareContext maps to encounter
+  CareContext maps to context
   ExpectedPerformanceTime maps to occurrence[x]
-  AsNeeded maps to asNeeded[x]
   StatementDateTime maps to authoredOn
-  ReferralRequester maps to requester
-  ExpectedPerformerType maps to performerType
-  ReferralRecipient maps to performer
-  LocationType maps to locationCode
-  Location maps to locationReference
+  ReferralRequester maps to requester.agent
+  ExpectedPerformerType maps to specialty
+  ReferralRecipient maps to recipient
   ReasonCode maps to reasonCode
   ReferralReasonReference maps to reasonReference
-  Insurance maps to insurance
   SupportingInformation maps to supportingInfo
-  Specimen maps to specimen
-  BodyLocation.Code maps to bodySite
-  BodyLocation.Laterality maps to bodySite.extension
-  BodyLocation.AnatomicalOrientation maps to bodySite.extension
-  BodyLocation.RelationToLandmark maps to bodySite.extension
   Annotation maps to note
-  PatientInstruction maps to patientInstruction
 
 </pre>

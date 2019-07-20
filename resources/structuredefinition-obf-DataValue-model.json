@@ -1,0 +1,164 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "obf-DataValue-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>DataValue Logical Model</b></p>\n  <p>The value or result of a test, evaluation, or judgment, for example, a systolic blood pressure, or if a condition or body structure is present or absent.</p>\n</div>"
+  },
+  "url": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-DataValue-model",
+  "identifier": [
+    {
+      "system": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig",
+      "value": "obf.DataValue"
+    }
+  ],
+  "name": "DataValue",
+  "title": "obf-DataValue",
+  "status": "draft",
+  "date": "2019-07-19",
+  "publisher": "Hl7",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://BreastRadReport.com"
+        }
+      ]
+    }
+  ],
+  "description": "The value or result of a test, evaluation, or judgment, for example, a systolic blood pressure, or if a condition or body structure is present or absent.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "obf-DataValue-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "obf-DataValue-model",
+        "path": "obf-DataValue-model",
+        "definition": "The value or result of a test, evaluation, or judgment, for example, a systolic blood pressure, or if a condition or body structure is present or absent.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-DataValue-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-DataValue-model.value[x]",
+        "path": "obf-DataValue-model.value[x]",
+        "short": "Choice of types representing the value or result of a test, evaluation, or judgment, for example, a systolic blood pressure, or if a condition or body structure is present or absent.",
+        "definition": "Choice of types representing the value or result of a test, evaluation, or judgment, for example, a systolic blood pressure, or if a condition or body structure is present or absent.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-DataValue-model.value[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          },
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-Quantity-model"
+          },
+          {
+            "code": "string"
+          },
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-Range-model"
+          },
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-Ratio-model"
+          },
+          {
+            "code": "time"
+          },
+          {
+            "code": "dateTime"
+          },
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-TimePeriod-model"
+          },
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-SampledData-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "obf-DataValue-model",
+        "path": "obf-DataValue-model",
+        "definition": "The value or result of a test, evaluation, or judgment, for example, a systolic blood pressure, or if a condition or body structure is present or absent.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-DataValue-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-DataValue-model.value[x]",
+        "path": "obf-DataValue-model.value[x]",
+        "short": "Choice of types representing the value or result of a test, evaluation, or judgment, for example, a systolic blood pressure, or if a condition or body structure is present or absent.",
+        "definition": "Choice of types representing the value or result of a test, evaluation, or judgment, for example, a systolic blood pressure, or if a condition or body structure is present or absent.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-DataValue-model.value[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          },
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-Quantity-model"
+          },
+          {
+            "code": "string"
+          },
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-Range-model"
+          },
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-Ratio-model"
+          },
+          {
+            "code": "time"
+          },
+          {
+            "code": "dateTime"
+          },
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-TimePeriod-model"
+          },
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-SampledData-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

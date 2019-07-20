@@ -1,0 +1,115 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "shr-core-Age",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>Age Profile</b></p>\n  <p>How long someone has been alive, or something has existed.</p>\n  <p><b>Mapping Summary</b></p>\n  <p><pre>shr.core.Age maps to Age:\n  Number maps to value\n  Units maps to code\n  Comparator maps to comparator\n</pre></p>\n</div>"
+  },
+  "url": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-Age",
+  "name": "Age",
+  "status": "draft",
+  "date": "2019-07-19",
+  "publisher": "Hl7",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://BreastRadReport.com"
+        }
+      ]
+    }
+  ],
+  "description": "How long someone has been alive, or something has existed.",
+  "fhirVersion": "3.0.1",
+  "mapping": [
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    },
+    {
+      "identity": "v2",
+      "uri": "http://hl7.org/v2",
+      "name": "HL7 v2 Mapping"
+    }
+  ],
+  "kind": "complex-type",
+  "abstract": false,
+  "type": "Age",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Age",
+  "derivation": "constraint",
+  "snapshot": {
+    "element": [
+      {
+        "id": "Age:shr-core-Age",
+        "path": "Age",
+        "short": "shr-core-Age",
+        "definition": "How long someone has been alive, or something has existed.",
+        "comment": "The context of use may frequently define what kind of quantity this is and therefore what kind of units can be used. The context of use may also restrict the values for the comparator.",
+        "min": 0,
+        "max": "*",
+        "constraint": [
+          {
+            "key": "qty-3",
+            "severity": "error",
+            "human": "If a code for the unit is present, the system SHALL also be present",
+            "expression": "code.empty() or system.exists()",
+            "xpath": "not(exists(f:code)) or exists(f:system)",
+            "source": "Quantity"
+          },
+          {
+            "key": "age-1",
+            "severity": "error",
+            "human": "There SHALL be a code if there is a value and it SHALL be an expression of time.  If system is present, it SHALL be UCUM.  If value is present, it SHALL be positive.",
+            "expression": "(code or value.empty()) and (system.empty() or system = %ucum) and (value.empty() or value > 0)",
+            "xpath": "(f:code or not(f:value)) and (not(exists(f:system)) or f:system/@value='http://unitsofmeasure.org') and (not(f:value/@value) or f:value/@value >=0)"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "SN (see also Range) or CQ"
+          },
+          {
+            "identity": "rim",
+            "map": "PQ, IVL<PQ>, MO, CO, depending on the values"
+          },
+          {
+            "identity": "rim",
+            "map": "PQ"
+          }
+        ],
+        "binding": {
+          "strength": "extensible",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/age-units"
+          }
+        }
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "Age:shr-core-Age",
+        "path": "Age",
+        "short": "shr-core-Age",
+        "definition": "How long someone has been alive, or something has existed.",
+        "binding": {
+          "strength": "extensible",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/age-units"
+          }
+        }
+      }
+    ]
+  },
+  "title": "shr-core-Age",
+  "keyword": [
+    {
+      "system": "http://ncimeta.nci.nih.gov",
+      "code": "C0001779"
+    }
+  ]
+}

@@ -1,0 +1,416 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "obf-EventContext-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>EventContext Logical Model</b></p>\n  <p>Clinical context or event being documented, for example, a colonoscopy or an appendectomy.</p>\n</div>"
+  },
+  "url": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-EventContext-model",
+  "identifier": [
+    {
+      "system": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig",
+      "value": "obf.EventContext"
+    }
+  ],
+  "name": "EventContext",
+  "title": "obf-EventContext",
+  "status": "draft",
+  "date": "2019-07-19",
+  "publisher": "Hl7",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://BreastRadReport.com"
+        }
+      ]
+    }
+  ],
+  "description": "Clinical context or event being documented, for example, a colonoscopy or an appendectomy.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "obf-EventContext-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "obf-EventContext-model",
+        "path": "obf-EventContext-model",
+        "definition": "Clinical context or event being documented, for example, a colonoscopy or an appendectomy.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-EventContext-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-EventContext-model.careContext[x]",
+        "path": "obf-EventContext-model.careContext[x]",
+        "short": "The encounter or episode of care",
+        "definition": "The encounter or episode of care",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-EventContext-model.careContext[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Encounter-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-EpisodeOfCare-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-EventContext-model.code",
+        "path": "obf-EventContext-model.code",
+        "short": "The main type identifier for a lab, procedure, condition, etc., usually drawn from a controlled vocabulary.",
+        "definition": "The main type identifier for a lab, procedure, condition, etc., usually drawn from a controlled vocabulary.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-EventContext-model.code",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "example",
+          "valueSetReference": {
+            "reference": "http://terminology.hl7.org/ValueSet/v3-ActCode"
+          }
+        }
+      },
+      {
+        "id": "obf-EventContext-model.timePeriod",
+        "path": "obf-EventContext-model.timePeriod",
+        "short": "A period of time defined by a start and end time, date, or year.",
+        "definition": "A period of time defined by a start and end time, date, or year.\nIf the start date/time is missing, the start of the period is not known. If the end date/time is missing, it means that the period is ongoing.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-EventContext-model.timePeriod",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-TimePeriod-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-EventContext-model.facilityType",
+        "path": "obf-EventContext-model.facilityType",
+        "short": "Kind of facility where patient was seen",
+        "definition": "Kind of facility where patient was seen",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-EventContext-model.facilityType",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "example",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/c80-facilitycodes"
+          }
+        }
+      },
+      {
+        "id": "obf-EventContext-model.setting",
+        "path": "obf-EventContext-model.setting",
+        "short": "Description of the place or type of surroundings where something is positioned or where an event takes place.",
+        "definition": "Description of the place or type of surroundings where something is positioned or where an event takes place.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-EventContext-model.setting",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig/shr/core/vs/SettingVS"
+          }
+        }
+      },
+      {
+        "id": "obf-EventContext-model.patient",
+        "path": "obf-EventContext-model.patient",
+        "short": "A person in the role of a patient. Sometimes, the patient is not the subject of information in a clinical statement where the Patient is the SubjectOfRecord.",
+        "definition": "A person in the role of a patient. Sometimes, the patient is not the subject of information in a clinical statement where the Patient is the SubjectOfRecord.\n\nCompatibility: Lies at the intersection of Argonaut and US Core Patient. MaritalStatus has a required binding in Argonaut, but an extensible binding in US-Core. To be feasible under both DSTU2 Argonaut and STU3 US-Core, the required binding strength is adopted.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-EventContext-model.patient",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Patient-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-EventContext-model.supportingInformation",
+        "path": "obf-EventContext-model.supportingInformation",
+        "short": "Additional information to support this request.",
+        "definition": "Additional information to support this request.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-EventContext-model.supportingInformation",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Resource-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "obf-EventContext-model",
+        "path": "obf-EventContext-model",
+        "definition": "Clinical context or event being documented, for example, a colonoscopy or an appendectomy.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-EventContext-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-EventContext-model.careContext[x]",
+        "path": "obf-EventContext-model.careContext[x]",
+        "short": "The encounter or episode of care",
+        "definition": "The encounter or episode of care",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-EventContext-model.careContext[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Encounter-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-EpisodeOfCare-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-EventContext-model.code",
+        "path": "obf-EventContext-model.code",
+        "short": "The main type identifier for a lab, procedure, condition, etc., usually drawn from a controlled vocabulary.",
+        "definition": "The main type identifier for a lab, procedure, condition, etc., usually drawn from a controlled vocabulary.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-EventContext-model.code",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "example",
+          "valueSetReference": {
+            "reference": "http://terminology.hl7.org/ValueSet/v3-ActCode"
+          }
+        }
+      },
+      {
+        "id": "obf-EventContext-model.timePeriod",
+        "path": "obf-EventContext-model.timePeriod",
+        "short": "A period of time defined by a start and end time, date, or year.",
+        "definition": "A period of time defined by a start and end time, date, or year.\nIf the start date/time is missing, the start of the period is not known. If the end date/time is missing, it means that the period is ongoing.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-EventContext-model.timePeriod",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-TimePeriod-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-EventContext-model.facilityType",
+        "path": "obf-EventContext-model.facilityType",
+        "short": "Kind of facility where patient was seen",
+        "definition": "Kind of facility where patient was seen",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-EventContext-model.facilityType",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "example",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/c80-facilitycodes"
+          }
+        }
+      },
+      {
+        "id": "obf-EventContext-model.setting",
+        "path": "obf-EventContext-model.setting",
+        "short": "Description of the place or type of surroundings where something is positioned or where an event takes place.",
+        "definition": "Description of the place or type of surroundings where something is positioned or where an event takes place.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-EventContext-model.setting",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig/shr/core/vs/SettingVS"
+          }
+        }
+      },
+      {
+        "id": "obf-EventContext-model.patient",
+        "path": "obf-EventContext-model.patient",
+        "short": "A person in the role of a patient. Sometimes, the patient is not the subject of information in a clinical statement where the Patient is the SubjectOfRecord.",
+        "definition": "A person in the role of a patient. Sometimes, the patient is not the subject of information in a clinical statement where the Patient is the SubjectOfRecord.\n\nCompatibility: Lies at the intersection of Argonaut and US Core Patient. MaritalStatus has a required binding in Argonaut, but an extensible binding in US-Core. To be feasible under both DSTU2 Argonaut and STU3 US-Core, the required binding strength is adopted.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-EventContext-model.patient",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Patient-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-EventContext-model.supportingInformation",
+        "path": "obf-EventContext-model.supportingInformation",
+        "short": "Additional information to support this request.",
+        "definition": "Additional information to support this request.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-EventContext-model.supportingInformation",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Resource-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

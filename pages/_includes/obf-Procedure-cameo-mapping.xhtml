@@ -7,7 +7,7 @@ obf.Procedure maps to http://hl7.org/fhir/us/core/StructureDefinition/us-core-pr
   Language maps to language
   ImplicitRules maps to implicitRules
   Metadata.VersionId maps to meta.versionId
-  Metadata.SourceSystem maps to meta.source
+  Metadata.SourceSystem maps to meta.extension
   Metadata.Profile maps to meta.profile
   Metadata.LastUpdated maps to meta.lastUpdated
   Metadata.SecurityLabel maps to meta.security
@@ -17,17 +17,17 @@ obf.Procedure maps to http://hl7.org/fhir/us/core/StructureDefinition/us-core-pr
   ProcedureBasedOn maps to basedOn
   ProcedurePartOf maps to partOf  // add Observation, MedicationAdministration
   Status maps to status
-  StatusReason maps to statusReason
+  StatusReason maps to extension
+  constrain notDone to 0..0
+  constrain notDoneReason to 0..0
   Category maps to category
   Code maps to code
   SubjectOfRecord maps to subject
-  CareContext maps to encounter
-  OccurrenceTimeOrPeriod maps to performed[x]  // Types string, Age, Range -- not implemented in SHR
-  PersonAuthor maps to recorder
-  PersonInformationSource maps to asserter
+  CareContext maps to context
+  OccurrenceTimeOrPeriod maps to performed[x]
   Participation maps to performer
-  Participation.Participant maps to performer.actor  // Added Target Type PractitionerRole -- not implemented
-  Participation.ParticipationType maps to performer.function  // renamed role to function in R4
+  Participation.Participant maps to performer.actor
+  Participation.ParticipationType maps to performer.role
   Participation.OnBehalfOf maps to performer.onBehalfOf
   Location maps to location
   ReasonCode maps to reasonCode
@@ -36,12 +36,12 @@ obf.Procedure maps to http://hl7.org/fhir/us/core/StructureDefinition/us-core-pr
   BodyLocation.Laterality maps to bodySite.extension
   BodyLocation.AnatomicalOrientation maps to bodySite.extension
   BodyLocation.RelationToLandmark maps to bodySite.extension
-  Annotation maps to note
   Outcome maps to outcome
   DiagnosticReport maps to report
   ComplicationCode maps to complication
   ComplicationReference maps to complicationDetail
   FollowUp maps to followUp
+  Annotation maps to note
   FocalDevice maps to focalDevice
   FocalDevice.Device maps to focalDevice.manipulated
   FocalDevice.FocalDeviceAction maps to focalDevice.action

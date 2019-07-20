@@ -1,0 +1,1016 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "obf-Coverage-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>Coverage Logical Model</b></p>\n  <p>Health insurance coverage available (even if not used for payment for a given encounter).</p>\n</div>"
+  },
+  "url": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Coverage-model",
+  "identifier": [
+    {
+      "system": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig",
+      "value": "obf.Coverage"
+    }
+  ],
+  "name": "Coverage",
+  "title": "obf-Coverage",
+  "status": "draft",
+  "date": "2019-07-19",
+  "publisher": "Hl7",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://BreastRadReport.com"
+        }
+      ]
+    }
+  ],
+  "description": "Health insurance coverage available (even if not used for payment for a given encounter).",
+  "kind": "logical",
+  "abstract": false,
+  "type": "obf-Coverage-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "obf-Coverage-model",
+        "path": "obf-Coverage-model",
+        "definition": "Health insurance coverage available (even if not used for payment for a given encounter).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Coverage-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Coverage-model.metadata",
+        "path": "obf-Coverage-model.metadata",
+        "short": "Elements that belong to all information items.",
+        "definition": "Elements that belong to all information items.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Coverage-model.metadata",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Metadata-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Coverage-model.language",
+        "path": "obf-Coverage-model.language",
+        "short": "A human language, spoken or written.",
+        "definition": "A human language, spoken or written.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Coverage-model.language",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Coverage-model.implicitRules",
+        "path": "obf-Coverage-model.implicitRules",
+        "short": "A set of rules under which this content was created",
+        "definition": "A set of rules under which this content was created",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Coverage-model.implicitRules",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Coverage-model.narrative",
+        "path": "obf-Coverage-model.narrative",
+        "short": "A human-readable narrative, potentially including images, that contains a summary of the resource, and may be used to represent the content of the resource to a human.",
+        "definition": "A human-readable narrative, potentially including images, that contains a summary of the resource, and may be used to represent the content of the resource to a human.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Coverage-model.narrative",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Narrative-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Coverage-model.status",
+        "path": "obf-Coverage-model.status",
+        "short": "A state that relates to the workflow or interpretation of this resource. Certain status values can modify the meaning of the resource, for example, entered-in-error. When a boolean value is used, Status of true indicates the record is active, false means inactive.",
+        "definition": "A state that relates to the workflow or interpretation of this resource. Certain status values can modify the meaning of the resource, for example, entered-in-error. When a boolean value is used, Status of true indicates the record is active, false means inactive.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-Coverage-model.status",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/fm-status"
+          }
+        }
+      },
+      {
+        "id": "obf-Coverage-model.identifier",
+        "path": "obf-Coverage-model.identifier",
+        "short": "Business identifier or external id for this resource.",
+        "definition": "Business identifier or external id for this resource.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Coverage-model.identifier",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-Identifier-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Coverage-model.coverageType",
+        "path": "obf-Coverage-model.coverageType",
+        "short": "Coverage category such as medical or accident.",
+        "definition": "Coverage category such as medical or accident.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Coverage-model.coverageType",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "preferred",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/coverage-type"
+          }
+        }
+      },
+      {
+        "id": "obf-Coverage-model.policyHolder[x]",
+        "path": "obf-Coverage-model.policyHolder[x]",
+        "short": "Owner of the policy",
+        "definition": "Owner of the policy",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Coverage-model.policyHolder[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Patient-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-RelatedPerson-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Organization-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Coverage-model.subscriber[x]",
+        "path": "obf-Coverage-model.subscriber[x]",
+        "short": "The party who has signed-up for or 'owns' the contractual relationship to the policy or to whom the benefit of the policy for services rendered to them or their family is due.",
+        "definition": "The party who has signed-up for or 'owns' the contractual relationship to the policy or to whom the benefit of the policy for services rendered to them or their family is due.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Coverage-model.subscriber[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Patient-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-RelatedPerson-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Coverage-model.subscriberId[x]",
+        "path": "obf-Coverage-model.subscriberId[x]",
+        "short": "The insurer assigned ID for the Subscriber.",
+        "definition": "The insurer assigned ID for the Subscriber.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Coverage-model.subscriberId[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          },
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-Identifier-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Coverage-model.beneficiary",
+        "path": "obf-Coverage-model.beneficiary",
+        "short": "The party who benefits from the insurance coverage., the patient when services are provided.",
+        "definition": "The party who benefits from the insurance coverage., the patient when services are provided.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-Coverage-model.beneficiary",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Patient-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Coverage-model.beneficiaryRelationship",
+        "path": "obf-Coverage-model.beneficiaryRelationship",
+        "short": "The relationship of beneficiary (patient) to the subscriber.",
+        "definition": "The relationship of beneficiary (patient) to the subscriber.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Coverage-model.beneficiaryRelationship",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "extensible",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/subscriber-relationship"
+          }
+        }
+      },
+      {
+        "id": "obf-Coverage-model.dependentIdentifier",
+        "path": "obf-Coverage-model.dependentIdentifier",
+        "short": "A unique identifier for a dependent under the coverage.",
+        "definition": "A unique identifier for a dependent under the coverage.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Coverage-model.dependentIdentifier",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Coverage-model.effectiveTimePeriod",
+        "path": "obf-Coverage-model.effectiveTimePeriod",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C2985763"
+          }
+        ],
+        "short": "The date and time span for which something is active, valid, or in force.",
+        "definition": "The date and time span for which something is active, valid, or in force.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Coverage-model.effectiveTimePeriod",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-EffectiveTimePeriod-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Coverage-model.payor[x]",
+        "path": "obf-Coverage-model.payor[x]",
+        "short": "The program or plan underwriter or payor including both insurance and non-insurance agreements, such as patient-pay agreements.",
+        "definition": "The program or plan underwriter or payor including both insurance and non-insurance agreements, such as patient-pay agreements.",
+        "min": 1,
+        "max": "*",
+        "base": {
+          "path": "obf-Coverage-model.payor[x]",
+          "min": 1,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Organization-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Patient-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-RelatedPerson-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Coverage-model.coverageClassification",
+        "path": "obf-Coverage-model.coverageClassification",
+        "short": "A suite of underwriter specific classifiers.",
+        "definition": "A suite of underwriter specific classifiers.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Coverage-model.coverageClassification",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-CoverageClassification-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Coverage-model.priorityRank",
+        "path": "obf-Coverage-model.priorityRank",
+        "short": "The priority of the procedure, as a number (1 being the highest priority)",
+        "definition": "The priority of the procedure, as a number (1 being the highest priority)",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Coverage-model.priorityRank",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "positiveInt"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Coverage-model.insurerNetwork",
+        "path": "obf-Coverage-model.insurerNetwork",
+        "short": "The insurer-specific identifier for the insurer-defined network of providers to which the beneficiary may seek treatment which will be covered at the 'in-network' rate, otherwise 'out of network' terms and conditions apply.",
+        "definition": "The insurer-specific identifier for the insurer-defined network of providers to which the beneficiary may seek treatment which will be covered at the 'in-network' rate, otherwise 'out of network' terms and conditions apply.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Coverage-model.insurerNetwork",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Coverage-model.costToBeneficiary",
+        "path": "obf-Coverage-model.costToBeneficiary",
+        "short": "A suite of codes indicating the cost category and associated amount which have been detailed in the policy and may have been included on the health card. Alternate names include co-pay, deductible, exceptions.",
+        "definition": "A suite of codes indicating the cost category and associated amount which have been detailed in the policy and may have been included on the health card. Alternate names include co-pay, deductible, exceptions.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Coverage-model.costToBeneficiary",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-CostToBeneficiary-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Coverage-model.subrogation",
+        "path": "obf-Coverage-model.subrogation",
+        "short": "Reimbursement to insurer. When 'subrogation=true' this insurance instance has been included not for adjudication but to provide insurers with the details to recover costs.",
+        "definition": "Reimbursement to insurer. When 'subrogation=true' this insurance instance has been included not for adjudication but to provide insurers with the details to recover costs.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Coverage-model.subrogation",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "obf-Coverage-model",
+        "path": "obf-Coverage-model",
+        "definition": "Health insurance coverage available (even if not used for payment for a given encounter).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Coverage-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Coverage-model.metadata",
+        "path": "obf-Coverage-model.metadata",
+        "short": "Elements that belong to all information items.",
+        "definition": "Elements that belong to all information items.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Coverage-model.metadata",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Metadata-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Coverage-model.language",
+        "path": "obf-Coverage-model.language",
+        "short": "A human language, spoken or written.",
+        "definition": "A human language, spoken or written.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Coverage-model.language",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Coverage-model.implicitRules",
+        "path": "obf-Coverage-model.implicitRules",
+        "short": "A set of rules under which this content was created",
+        "definition": "A set of rules under which this content was created",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Coverage-model.implicitRules",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Coverage-model.narrative",
+        "path": "obf-Coverage-model.narrative",
+        "short": "A human-readable narrative, potentially including images, that contains a summary of the resource, and may be used to represent the content of the resource to a human.",
+        "definition": "A human-readable narrative, potentially including images, that contains a summary of the resource, and may be used to represent the content of the resource to a human.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Coverage-model.narrative",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Narrative-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Coverage-model.status",
+        "path": "obf-Coverage-model.status",
+        "short": "A state that relates to the workflow or interpretation of this resource. Certain status values can modify the meaning of the resource, for example, entered-in-error. When a boolean value is used, Status of true indicates the record is active, false means inactive.",
+        "definition": "A state that relates to the workflow or interpretation of this resource. Certain status values can modify the meaning of the resource, for example, entered-in-error. When a boolean value is used, Status of true indicates the record is active, false means inactive.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-Coverage-model.status",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/fm-status"
+          }
+        }
+      },
+      {
+        "id": "obf-Coverage-model.identifier",
+        "path": "obf-Coverage-model.identifier",
+        "short": "Business identifier or external id for this resource.",
+        "definition": "Business identifier or external id for this resource.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Coverage-model.identifier",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-Identifier-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Coverage-model.coverageType",
+        "path": "obf-Coverage-model.coverageType",
+        "short": "Coverage category such as medical or accident.",
+        "definition": "Coverage category such as medical or accident.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Coverage-model.coverageType",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "preferred",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/coverage-type"
+          }
+        }
+      },
+      {
+        "id": "obf-Coverage-model.policyHolder[x]",
+        "path": "obf-Coverage-model.policyHolder[x]",
+        "short": "Owner of the policy",
+        "definition": "Owner of the policy",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Coverage-model.policyHolder[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Patient-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-RelatedPerson-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Organization-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Coverage-model.subscriber[x]",
+        "path": "obf-Coverage-model.subscriber[x]",
+        "short": "The party who has signed-up for or 'owns' the contractual relationship to the policy or to whom the benefit of the policy for services rendered to them or their family is due.",
+        "definition": "The party who has signed-up for or 'owns' the contractual relationship to the policy or to whom the benefit of the policy for services rendered to them or their family is due.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Coverage-model.subscriber[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Patient-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-RelatedPerson-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Coverage-model.subscriberId[x]",
+        "path": "obf-Coverage-model.subscriberId[x]",
+        "short": "The insurer assigned ID for the Subscriber.",
+        "definition": "The insurer assigned ID for the Subscriber.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Coverage-model.subscriberId[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          },
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-Identifier-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Coverage-model.beneficiary",
+        "path": "obf-Coverage-model.beneficiary",
+        "short": "The party who benefits from the insurance coverage., the patient when services are provided.",
+        "definition": "The party who benefits from the insurance coverage., the patient when services are provided.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-Coverage-model.beneficiary",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Patient-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Coverage-model.beneficiaryRelationship",
+        "path": "obf-Coverage-model.beneficiaryRelationship",
+        "short": "The relationship of beneficiary (patient) to the subscriber.",
+        "definition": "The relationship of beneficiary (patient) to the subscriber.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Coverage-model.beneficiaryRelationship",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "extensible",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/subscriber-relationship"
+          }
+        }
+      },
+      {
+        "id": "obf-Coverage-model.dependentIdentifier",
+        "path": "obf-Coverage-model.dependentIdentifier",
+        "short": "A unique identifier for a dependent under the coverage.",
+        "definition": "A unique identifier for a dependent under the coverage.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Coverage-model.dependentIdentifier",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Coverage-model.effectiveTimePeriod",
+        "path": "obf-Coverage-model.effectiveTimePeriod",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C2985763"
+          }
+        ],
+        "short": "The date and time span for which something is active, valid, or in force.",
+        "definition": "The date and time span for which something is active, valid, or in force.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Coverage-model.effectiveTimePeriod",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-EffectiveTimePeriod-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Coverage-model.payor[x]",
+        "path": "obf-Coverage-model.payor[x]",
+        "short": "The program or plan underwriter or payor including both insurance and non-insurance agreements, such as patient-pay agreements.",
+        "definition": "The program or plan underwriter or payor including both insurance and non-insurance agreements, such as patient-pay agreements.",
+        "min": 1,
+        "max": "*",
+        "base": {
+          "path": "obf-Coverage-model.payor[x]",
+          "min": 1,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Organization-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Patient-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-RelatedPerson-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Coverage-model.coverageClassification",
+        "path": "obf-Coverage-model.coverageClassification",
+        "short": "A suite of underwriter specific classifiers.",
+        "definition": "A suite of underwriter specific classifiers.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Coverage-model.coverageClassification",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-CoverageClassification-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Coverage-model.priorityRank",
+        "path": "obf-Coverage-model.priorityRank",
+        "short": "The priority of the procedure, as a number (1 being the highest priority)",
+        "definition": "The priority of the procedure, as a number (1 being the highest priority)",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Coverage-model.priorityRank",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "positiveInt"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Coverage-model.insurerNetwork",
+        "path": "obf-Coverage-model.insurerNetwork",
+        "short": "The insurer-specific identifier for the insurer-defined network of providers to which the beneficiary may seek treatment which will be covered at the 'in-network' rate, otherwise 'out of network' terms and conditions apply.",
+        "definition": "The insurer-specific identifier for the insurer-defined network of providers to which the beneficiary may seek treatment which will be covered at the 'in-network' rate, otherwise 'out of network' terms and conditions apply.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Coverage-model.insurerNetwork",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Coverage-model.costToBeneficiary",
+        "path": "obf-Coverage-model.costToBeneficiary",
+        "short": "A suite of codes indicating the cost category and associated amount which have been detailed in the policy and may have been included on the health card. Alternate names include co-pay, deductible, exceptions.",
+        "definition": "A suite of codes indicating the cost category and associated amount which have been detailed in the policy and may have been included on the health card. Alternate names include co-pay, deductible, exceptions.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Coverage-model.costToBeneficiary",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-CostToBeneficiary-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Coverage-model.subrogation",
+        "path": "obf-Coverage-model.subrogation",
+        "short": "Reimbursement to insurer. When 'subrogation=true' this insurance instance has been included not for adjudication but to provide insurers with the details to recover costs.",
+        "definition": "Reimbursement to insurer. When 'subrogation=true' this insurance instance has been included not for adjudication but to provide insurers with the details to recover costs.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Coverage-model.subrogation",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

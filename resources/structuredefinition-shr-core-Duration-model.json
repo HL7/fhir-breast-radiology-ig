@@ -1,0 +1,224 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "shr-core-Duration-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>Duration Logical Model</b></p>\n  <p>The length of time that something continues.</p>\n</div>"
+  },
+  "url": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-Duration-model",
+  "identifier": [
+    {
+      "system": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig",
+      "value": "shr.core.Duration"
+    }
+  ],
+  "name": "Duration",
+  "title": "shr-core-Duration",
+  "status": "draft",
+  "date": "2019-07-19",
+  "publisher": "Hl7",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://BreastRadReport.com"
+        }
+      ]
+    }
+  ],
+  "description": "The length of time that something continues.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "shr-core-Duration-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "shr-core-Duration-model",
+        "path": "shr-core-Duration-model",
+        "definition": "The length of time that something continues.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "shr-core-Duration-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "shr-core-Duration-model.number",
+        "path": "shr-core-Duration-model.number",
+        "short": "A decimal value.",
+        "definition": "A decimal value.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "shr-core-Duration-model.number",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "decimal"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "shr-core-Duration-model.comparator",
+        "path": "shr-core-Duration-model.comparator",
+        "short": "A code indicated if the value represents an upper or lower bound",
+        "definition": "A code indicated if the value represents an upper or lower bound",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "shr-core-Duration-model.comparator",
+          "min": 0,
+          "max": "0"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/quantity-comparator"
+          }
+        }
+      },
+      {
+        "id": "shr-core-Duration-model.units",
+        "path": "shr-core-Duration-model.units",
+        "short": "The unit of measure of the quantity.",
+        "definition": "The unit of measure of the quantity.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "shr-core-Duration-model.units",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "extensible",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/duration-units"
+          }
+        }
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "shr-core-Duration-model",
+        "path": "shr-core-Duration-model",
+        "definition": "The length of time that something continues.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "shr-core-Duration-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "shr-core-Duration-model.number",
+        "path": "shr-core-Duration-model.number",
+        "short": "A decimal value.",
+        "definition": "A decimal value.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "shr-core-Duration-model.number",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "decimal"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "shr-core-Duration-model.comparator",
+        "path": "shr-core-Duration-model.comparator",
+        "short": "A code indicated if the value represents an upper or lower bound",
+        "definition": "A code indicated if the value represents an upper or lower bound",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "shr-core-Duration-model.comparator",
+          "min": 0,
+          "max": "0"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/quantity-comparator"
+          }
+        }
+      },
+      {
+        "id": "shr-core-Duration-model.units",
+        "path": "shr-core-Duration-model.units",
+        "short": "The unit of measure of the quantity.",
+        "definition": "The unit of measure of the quantity.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "shr-core-Duration-model.units",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "extensible",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/duration-units"
+          }
+        }
+      }
+    ]
+  }
+}

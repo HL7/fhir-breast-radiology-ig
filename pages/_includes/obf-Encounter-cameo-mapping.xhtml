@@ -3,11 +3,11 @@
 <p><b>Mapping Source</b></p>
 <p>This structure represents the following mapping definition:</p>
 <pre>
-obf.Encounter maps to http://hl7.org/fhir/us/core/StructureDefinition/us-core-encounter:
+obf.Encounter maps to Encounter:
   Language maps to language
   ImplicitRules maps to implicitRules
   Metadata.VersionId maps to meta.versionId
-  Metadata.SourceSystem maps to meta.source
+  Metadata.SourceSystem maps to meta.extension
   Metadata.Profile maps to meta.profile
   Metadata.LastUpdated maps to meta.lastUpdated
   Metadata.SecurityLabel maps to meta.security
@@ -18,7 +18,7 @@ obf.Encounter maps to http://hl7.org/fhir/us/core/StructureDefinition/us-core-en
   StatusHistory maps to statusHistory
   StatusHistory.Status maps to statusHistory.status
   StatusHistory.TimePeriod maps to statusHistory.period
-  EncounterClass maps to class // Min Cardinality changed from 0 to 1
+  EncounterClass maps to class
   ClassHistory maps to classHistory
   ClassHistory.EncounterClass maps to classHistory.class
   ClassHistory.TimePeriod maps to classHistory.period
@@ -26,20 +26,19 @@ obf.Encounter maps to http://hl7.org/fhir/us/core/StructureDefinition/us-core-en
   PriorityCode maps to priority
   SubjectOfRecord maps to subject
   EpisodeOfCare maps to episodeOfCare
-  ReferralBasedOn maps to basedOn  // ReferralRequest changed to basedOn, Added Target Type ServiceRequest
+  ReferralBasedOn maps to incomingReferral
   Participation maps to participant
   Participation.ParticipationType maps to participant.type
   Participation.ParticipationPeriod maps to participant.period
-  Participation.Participant maps to participant.individual // Added Target Type PractitionerRole
-  Appointment maps to appointment // Max Cardinality changed from 1 to *
+  Participation.Participant maps to participant.individual
+  Appointment maps to appointment
   TimePeriod maps to period
   Duration maps to length
-  ReasonCode maps to reasonCode
-  EncounterReasonReference maps to reasonReference
+  ReasonCode maps to reason
   EncounterDiagnosis maps to diagnosis
   EncounterDiagnosis.DiagnosisCode maps to diagnosis.extension
   EncounterDiagnosis.Condition maps to diagnosis.condition
-  EncounterDiagnosis.Type maps to diagnosis.use // renamed from role to use
+  EncounterDiagnosis.Type maps to diagnosis.role
   EncounterDiagnosis.PriorityRank maps to diagnosis.rank
   EncounterLocation maps to location
   EncounterLocation.Location maps to location.location

@@ -1,0 +1,122 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "shr-core-LandmarkToBodyLocationDirection-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>LandmarkToBodyLocationDirection Logical Model</b></p>\n  <p>The direction from the landmark to the body location of interest, given as a clockface direction or anatomical direction.</p>\n</div>"
+  },
+  "url": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-LandmarkToBodyLocationDirection-model",
+  "identifier": [
+    {
+      "system": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig",
+      "value": "shr.core.LandmarkToBodyLocationDirection"
+    }
+  ],
+  "name": "LandmarkToBodyLocationDirection",
+  "title": "shr-core-LandmarkToBodyLocationDirection",
+  "status": "draft",
+  "date": "2019-07-19",
+  "publisher": "Hl7",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://BreastRadReport.com"
+        }
+      ]
+    }
+  ],
+  "description": "The direction from the landmark to the body location of interest, given as a clockface direction or anatomical direction.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "shr-core-LandmarkToBodyLocationDirection-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "shr-core-LandmarkToBodyLocationDirection-model",
+        "path": "shr-core-LandmarkToBodyLocationDirection-model",
+        "definition": "The direction from the landmark to the body location of interest, given as a clockface direction or anatomical direction.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "shr-core-LandmarkToBodyLocationDirection-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "shr-core-LandmarkToBodyLocationDirection-model.value[x]",
+        "path": "shr-core-LandmarkToBodyLocationDirection-model.value[x]",
+        "short": "ClockFaceDirection or AnatomicalDirection representing the direction from the landmark to the body location of interest, given as a clockface direction or anatomical direction.",
+        "definition": "ClockFaceDirection or AnatomicalDirection representing the direction from the landmark to the body location of interest, given as a clockface direction or anatomical direction.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "shr-core-LandmarkToBodyLocationDirection-model.value[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-ClockFaceDirection-model"
+          },
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-AnatomicalDirection-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "shr-core-LandmarkToBodyLocationDirection-model",
+        "path": "shr-core-LandmarkToBodyLocationDirection-model",
+        "definition": "The direction from the landmark to the body location of interest, given as a clockface direction or anatomical direction.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "shr-core-LandmarkToBodyLocationDirection-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "shr-core-LandmarkToBodyLocationDirection-model.value[x]",
+        "path": "shr-core-LandmarkToBodyLocationDirection-model.value[x]",
+        "short": "ClockFaceDirection or AnatomicalDirection representing the direction from the landmark to the body location of interest, given as a clockface direction or anatomical direction.",
+        "definition": "ClockFaceDirection or AnatomicalDirection representing the direction from the landmark to the body location of interest, given as a clockface direction or anatomical direction.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "shr-core-LandmarkToBodyLocationDirection-model.value[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-ClockFaceDirection-model"
+          },
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-AnatomicalDirection-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

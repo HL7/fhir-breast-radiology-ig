@@ -1,0 +1,146 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "obf-Abatement-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>Abatement Logical Model</b></p>\n  <p>The end, remission or resolution.</p>\n</div>"
+  },
+  "url": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Abatement-model",
+  "identifier": [
+    {
+      "system": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig",
+      "value": "obf.Abatement"
+    }
+  ],
+  "name": "Abatement",
+  "title": "obf-Abatement",
+  "status": "draft",
+  "date": "2019-07-19",
+  "publisher": "Hl7",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://BreastRadReport.com"
+        }
+      ]
+    }
+  ],
+  "description": "The end, remission or resolution.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "obf-Abatement-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "obf-Abatement-model",
+        "path": "obf-Abatement-model",
+        "definition": "The end, remission or resolution.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Abatement-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Abatement-model.value[x]",
+        "path": "obf-Abatement-model.value[x]",
+        "short": "Choice of types representing the end, remission or resolution.",
+        "definition": "Choice of types representing the end, remission or resolution.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-Abatement-model.value[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          },
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-Age-model"
+          },
+          {
+            "code": "boolean"
+          },
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-TimePeriod-model"
+          },
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-Range-model"
+          },
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "obf-Abatement-model",
+        "path": "obf-Abatement-model",
+        "definition": "The end, remission or resolution.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Abatement-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Abatement-model.value[x]",
+        "path": "obf-Abatement-model.value[x]",
+        "short": "Choice of types representing the end, remission or resolution.",
+        "definition": "Choice of types representing the end, remission or resolution.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-Abatement-model.value[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          },
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-Age-model"
+          },
+          {
+            "code": "boolean"
+          },
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-TimePeriod-model"
+          },
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-Range-model"
+          },
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,247 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "obf-QuestionnaireResponseBasedOn-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>QuestionnaireResponseBasedOn Logical Model</b></p>\n  <p></p>\n</div>"
+  },
+  "url": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-QuestionnaireResponseBasedOn-model",
+  "identifier": [
+    {
+      "system": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig",
+      "value": "obf.QuestionnaireResponseBasedOn"
+    }
+  ],
+  "name": "QuestionnaireResponseBasedOn",
+  "title": "obf-QuestionnaireResponseBasedOn",
+  "status": "draft",
+  "date": "2019-07-19",
+  "publisher": "Hl7",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://BreastRadReport.com"
+        }
+      ]
+    }
+  ],
+  "kind": "logical",
+  "abstract": false,
+  "type": "obf-QuestionnaireResponseBasedOn-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "obf-QuestionnaireResponseBasedOn-model",
+        "path": "obf-QuestionnaireResponseBasedOn-model",
+        "short": "QuestionnaireResponseBasedOn",
+        "definition": "QuestionnaireResponseBasedOn",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-QuestionnaireResponseBasedOn-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-QuestionnaireResponseBasedOn-model.value[x]",
+        "path": "obf-QuestionnaireResponseBasedOn-model.value[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "short": "Choice of types representing the logical model instance",
+        "definition": "Choice of types representing the logical model instance",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-QuestionnaireResponseBasedOn-model.value[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-ServiceRequest-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-ReferralRequest-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-ProcedureRequest-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-QuestionnaireResponseBasedOn-model.valueObf-ProcedureRequest-model:ProcedureRequest",
+        "path": "obf-QuestionnaireResponseBasedOn-model.valueObf-ProcedureRequest-model",
+        "sliceName": "ProcedureRequest",
+        "short": "A request for a procedure to be performed. May be a proposal or an order.",
+        "definition": "A request for a procedure to be performed. May be a proposal or an order.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-QuestionnaireResponseBasedOn-model.value[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-ProcedureRequest-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-QuestionnaireResponseBasedOn-model.valueObf-ReferralRequest-model:ReferralRequest",
+        "path": "obf-QuestionnaireResponseBasedOn-model.valueObf-ReferralRequest-model",
+        "sliceName": "ReferralRequest",
+        "short": "Used to record and send details about a request for referral service or transfer of a patient to the care of another provider or provider organization.",
+        "definition": "Used to record and send details about a request for referral service or transfer of a patient to the care of another provider or provider organization.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-QuestionnaireResponseBasedOn-model.value[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-ReferralRequest-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "obf-QuestionnaireResponseBasedOn-model",
+        "path": "obf-QuestionnaireResponseBasedOn-model",
+        "short": "QuestionnaireResponseBasedOn",
+        "definition": "QuestionnaireResponseBasedOn",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-QuestionnaireResponseBasedOn-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-QuestionnaireResponseBasedOn-model.value[x]",
+        "path": "obf-QuestionnaireResponseBasedOn-model.value[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "short": "Choice of types representing the logical model instance",
+        "definition": "Choice of types representing the logical model instance",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-QuestionnaireResponseBasedOn-model.value[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-ServiceRequest-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-ReferralRequest-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-ProcedureRequest-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-QuestionnaireResponseBasedOn-model.valueObf-ProcedureRequest-model:ProcedureRequest",
+        "path": "obf-QuestionnaireResponseBasedOn-model.valueObf-ProcedureRequest-model",
+        "sliceName": "ProcedureRequest",
+        "short": "A request for a procedure to be performed. May be a proposal or an order.",
+        "definition": "A request for a procedure to be performed. May be a proposal or an order.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-QuestionnaireResponseBasedOn-model.value[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-ProcedureRequest-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-QuestionnaireResponseBasedOn-model.valueObf-ReferralRequest-model:ReferralRequest",
+        "path": "obf-QuestionnaireResponseBasedOn-model.valueObf-ReferralRequest-model",
+        "sliceName": "ReferralRequest",
+        "short": "Used to record and send details about a request for referral service or transfer of a patient to the care of another provider or provider organization.",
+        "definition": "Used to record and send details about a request for referral service or transfer of a patient to the care of another provider or provider organization.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-QuestionnaireResponseBasedOn-model.value[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-ReferralRequest-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

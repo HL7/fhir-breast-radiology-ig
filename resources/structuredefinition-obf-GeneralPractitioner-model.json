@@ -1,0 +1,126 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "obf-GeneralPractitioner-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>GeneralPractitioner Logical Model</b></p>\n  <p>Patient&#039;s nominated primary care provider.</p>\n</div>"
+  },
+  "url": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-GeneralPractitioner-model",
+  "identifier": [
+    {
+      "system": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig",
+      "value": "obf.GeneralPractitioner"
+    }
+  ],
+  "name": "GeneralPractitioner",
+  "title": "obf-GeneralPractitioner",
+  "status": "draft",
+  "date": "2019-07-19",
+  "publisher": "Hl7",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://BreastRadReport.com"
+        }
+      ]
+    }
+  ],
+  "description": "Patient's nominated primary care provider.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "obf-GeneralPractitioner-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "obf-GeneralPractitioner-model",
+        "path": "obf-GeneralPractitioner-model",
+        "definition": "Patient's nominated primary care provider.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-GeneralPractitioner-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-GeneralPractitioner-model.value[x]",
+        "path": "obf-GeneralPractitioner-model.value[x]",
+        "short": "Organization or Practitioner representing patient's nominated primary care provider.",
+        "definition": "Organization or Practitioner representing patient's nominated primary care provider.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-GeneralPractitioner-model.value[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Organization-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Practitioner-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "obf-GeneralPractitioner-model",
+        "path": "obf-GeneralPractitioner-model",
+        "definition": "Patient's nominated primary care provider.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-GeneralPractitioner-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-GeneralPractitioner-model.value[x]",
+        "path": "obf-GeneralPractitioner-model.value[x]",
+        "short": "Organization or Practitioner representing patient's nominated primary care provider.",
+        "definition": "Organization or Practitioner representing patient's nominated primary care provider.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-GeneralPractitioner-model.value[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Organization-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Practitioner-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

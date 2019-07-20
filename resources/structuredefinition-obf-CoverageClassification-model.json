@@ -1,0 +1,224 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "obf-CoverageClassification-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>CoverageClassification Logical Model</b></p>\n  <p>A suite of underwriter specific classifiers.</p>\n</div>"
+  },
+  "url": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-CoverageClassification-model",
+  "identifier": [
+    {
+      "system": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig",
+      "value": "obf.CoverageClassification"
+    }
+  ],
+  "name": "CoverageClassification",
+  "title": "obf-CoverageClassification",
+  "status": "draft",
+  "date": "2019-07-19",
+  "publisher": "Hl7",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://BreastRadReport.com"
+        }
+      ]
+    }
+  ],
+  "description": "A suite of underwriter specific classifiers.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "obf-CoverageClassification-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "obf-CoverageClassification-model",
+        "path": "obf-CoverageClassification-model",
+        "definition": "A suite of underwriter specific classifiers.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-CoverageClassification-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-CoverageClassification-model.type",
+        "path": "obf-CoverageClassification-model.type",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0332307"
+          }
+        ],
+        "short": "A code describing the item at a greater level of detail.",
+        "definition": "A code describing the item at a greater level of detail.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-CoverageClassification-model.type",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "extensible",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/coverage-class"
+          }
+        }
+      },
+      {
+        "id": "obf-CoverageClassification-model.identifierString",
+        "path": "obf-CoverageClassification-model.identifierString",
+        "short": "An id for the item expressed as a string.",
+        "definition": "An id for the item expressed as a string.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-CoverageClassification-model.identifierString",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-CoverageClassification-model.name",
+        "path": "obf-CoverageClassification-model.name",
+        "short": "The name as plain unstructured or semi-structured text.",
+        "definition": "The name as plain unstructured or semi-structured text.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-CoverageClassification-model.name",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "obf-CoverageClassification-model",
+        "path": "obf-CoverageClassification-model",
+        "definition": "A suite of underwriter specific classifiers.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-CoverageClassification-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-CoverageClassification-model.type",
+        "path": "obf-CoverageClassification-model.type",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0332307"
+          }
+        ],
+        "short": "A code describing the item at a greater level of detail.",
+        "definition": "A code describing the item at a greater level of detail.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-CoverageClassification-model.type",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "extensible",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/coverage-class"
+          }
+        }
+      },
+      {
+        "id": "obf-CoverageClassification-model.identifierString",
+        "path": "obf-CoverageClassification-model.identifierString",
+        "short": "An id for the item expressed as a string.",
+        "definition": "An id for the item expressed as a string.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-CoverageClassification-model.identifierString",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-CoverageClassification-model.name",
+        "path": "obf-CoverageClassification-model.name",
+        "short": "The name as plain unstructured or semi-structured text.",
+        "definition": "The name as plain unstructured or semi-structured text.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-CoverageClassification-model.name",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

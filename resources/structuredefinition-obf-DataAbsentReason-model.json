@@ -1,0 +1,128 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "obf-DataAbsentReason-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>DataAbsentReason Logical Model</b></p>\n  <p>Reason that a value associated with a test or other finding is missing.</p>\n</div>"
+  },
+  "url": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-DataAbsentReason-model",
+  "identifier": [
+    {
+      "system": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig",
+      "value": "obf.DataAbsentReason"
+    }
+  ],
+  "name": "DataAbsentReason",
+  "title": "obf-DataAbsentReason",
+  "status": "draft",
+  "date": "2019-07-19",
+  "publisher": "Hl7",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://BreastRadReport.com"
+        }
+      ]
+    }
+  ],
+  "description": "Reason that a value associated with a test or other finding is missing.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "obf-DataAbsentReason-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "obf-DataAbsentReason-model",
+        "path": "obf-DataAbsentReason-model",
+        "definition": "Reason that a value associated with a test or other finding is missing.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-DataAbsentReason-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-DataAbsentReason-model.value",
+        "path": "obf-DataAbsentReason-model.value",
+        "short": "Concept representing reason that a value associated with a test or other finding is missing.",
+        "definition": "Concept representing reason that a value associated with a test or other finding is missing.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-DataAbsentReason-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "extensible",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/data-absent-reason"
+          }
+        }
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "obf-DataAbsentReason-model",
+        "path": "obf-DataAbsentReason-model",
+        "definition": "Reason that a value associated with a test or other finding is missing.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-DataAbsentReason-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-DataAbsentReason-model.value",
+        "path": "obf-DataAbsentReason-model.value",
+        "short": "Concept representing reason that a value associated with a test or other finding is missing.",
+        "definition": "Concept representing reason that a value associated with a test or other finding is missing.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-DataAbsentReason-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "extensible",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/data-absent-reason"
+          }
+        }
+      }
+    ]
+  }
+}

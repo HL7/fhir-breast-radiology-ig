@@ -7,7 +7,7 @@ obf.MedicationAdministration maps to MedicationAdministration:
   Language maps to language
   ImplicitRules maps to implicitRules
   Metadata.VersionId maps to meta.versionId
-  Metadata.SourceSystem maps to meta.source
+  Metadata.SourceSystem maps to meta.extension
   Metadata.Profile maps to meta.profile
   Metadata.LastUpdated maps to meta.lastUpdated
   Metadata.SecurityLabel maps to meta.security
@@ -16,7 +16,7 @@ obf.MedicationAdministration maps to MedicationAdministration:
   Identifier maps to identifier
   MedicationAdministrationPartOf maps to partOf
   Status maps to status
-  StatusReason maps to statusReason
+  StatusReason maps to extension
   Category maps to category
   MedicationReasonReference maps to reasonReference
   SubjectOfRecord maps to subject
@@ -24,11 +24,13 @@ obf.MedicationAdministration maps to MedicationAdministration:
   SupportingInformation maps to supportingInformation
   OccurrenceTimeOrPeriod maps to effective[x]
   Participation maps to performer
-  Participation.Participant maps to performer.actor // Added Target Type PractitionerRole
-  Participation.ParticipationType maps to performer.function
-  Participation.OnBehalfOf maps to performer.extension
+  Participation.Participant maps to performer.actor
+  Participation.ParticipationType maps to performer.extension
+  Participation.OnBehalfOf maps to performer.onBehalfOf
+  constrain notGiven to 0..0
+  constrain reasonNotGiven to 0..0
   ReasonCode maps to reasonCode
-  MedicationAdministrationBasedOn maps to request // renamed prescription to request
+  MedicationAdministrationBasedOn maps to prescription
   Device maps to device
   Annotation maps to note
   Dosage maps to dosage

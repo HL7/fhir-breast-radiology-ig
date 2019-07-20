@@ -1,0 +1,134 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "obf-PersonAuthor-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>PersonAuthor Logical Model</b></p>\n  <p>A human author, patient, practitioner, or related person, as opposed to an organization or device.</p>\n</div>"
+  },
+  "url": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-PersonAuthor-model",
+  "identifier": [
+    {
+      "system": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig",
+      "value": "obf.PersonAuthor"
+    }
+  ],
+  "name": "PersonAuthor",
+  "title": "obf-PersonAuthor",
+  "status": "draft",
+  "date": "2019-07-19",
+  "publisher": "Hl7",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://BreastRadReport.com"
+        }
+      ]
+    }
+  ],
+  "description": "A human author, patient, practitioner, or related person, as opposed to an organization or device.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "obf-PersonAuthor-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "obf-PersonAuthor-model",
+        "path": "obf-PersonAuthor-model",
+        "definition": "A human author, patient, practitioner, or related person, as opposed to an organization or device.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-PersonAuthor-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-PersonAuthor-model.value[x]",
+        "path": "obf-PersonAuthor-model.value[x]",
+        "short": "Choice of types representing a human author, patient, practitioner, or related person, as opposed to an organization or device.",
+        "definition": "Choice of types representing a human author, patient, practitioner, or related person, as opposed to an organization or device.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-PersonAuthor-model.value[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Patient-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Practitioner-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-RelatedPerson-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "obf-PersonAuthor-model",
+        "path": "obf-PersonAuthor-model",
+        "definition": "A human author, patient, practitioner, or related person, as opposed to an organization or device.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-PersonAuthor-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-PersonAuthor-model.value[x]",
+        "path": "obf-PersonAuthor-model.value[x]",
+        "short": "Choice of types representing a human author, patient, practitioner, or related person, as opposed to an organization or device.",
+        "definition": "Choice of types representing a human author, patient, practitioner, or related person, as opposed to an organization or device.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-PersonAuthor-model.value[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Patient-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Practitioner-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-RelatedPerson-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

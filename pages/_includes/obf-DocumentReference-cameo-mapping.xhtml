@@ -3,11 +3,11 @@
 <p><b>Mapping Source</b></p>
 <p>This structure represents the following mapping definition:</p>
 <pre>
-obf.DocumentReference maps to http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference:
+obf.DocumentReference maps to DocumentReference:
   Language maps to language
   ImplicitRules maps to implicitRules
   Metadata.VersionId maps to meta.versionId
-  Metadata.SourceSystem maps to meta.source
+  Metadata.SourceSystem maps to meta.extension
   Metadata.Profile maps to meta.profile
   Metadata.LastUpdated maps to meta.lastUpdated
   Metadata.SecurityLabel maps to meta.security
@@ -17,12 +17,12 @@ obf.DocumentReference maps to http://hl7.org/fhir/us/core/StructureDefinition/us
   Identifier maps to identifier
   Status maps to status
   DocumentStatus maps to docStatus
-  Type maps to type // Min Cardinality changed from 1 to 0
-  Category maps to category
+  Type maps to type
+  Category maps to class
   SubjectOfRecord maps to subject
-  StatementDateTime maps to date
-  DocumentAuthor maps to author // Added Target Type PractitionerRole
-  Authenticator maps to authenticator // Added Target Type PractitionerRole
+  StatementDateTime maps to indexed
+  DocumentAuthor maps to author
+  Authenticator maps to authenticator
   ManagingOrganization maps to custodian
   RelatedDocument maps to relatesTo
   RelatedDocument.Relationship maps to relatesTo.code
@@ -33,12 +33,12 @@ obf.DocumentReference maps to http://hl7.org/fhir/us/core/StructureDefinition/us
   DocumentReferenced.Attachment maps to content.attachment
   DocumentReferenced.Type maps to content.format
   EventContext maps to context
-  EventContext.CareContext maps to context.encounter // Max Cardinality changed from 1 to *; Added Target Type EpisodeOfCare
+  EventContext.CareContext maps to context.encounter
   EventContext.Code maps to context.event
   EventContext.TimePeriod maps to context.period
   EventContext.FacilityType maps to context.facilityType
   EventContext.Setting maps to context.practiceSetting
   EventContext.Patient maps to context.sourcePatientInfo
-  EventContext.SupportingInformation maps to context.related
+  EventContext.SupportingInformation maps to context.related.ref
 
 </pre>

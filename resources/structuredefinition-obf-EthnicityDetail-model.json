@@ -1,0 +1,128 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "obf-EthnicityDetail-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>EthnicityDetail Logical Model</b></p>\n  <p>Additional description of ethnicity.</p>\n</div>"
+  },
+  "url": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-EthnicityDetail-model",
+  "identifier": [
+    {
+      "system": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig",
+      "value": "obf.EthnicityDetail"
+    }
+  ],
+  "name": "EthnicityDetail",
+  "title": "obf-EthnicityDetail",
+  "status": "draft",
+  "date": "2019-07-19",
+  "publisher": "Hl7",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://BreastRadReport.com"
+        }
+      ]
+    }
+  ],
+  "description": "Additional description of ethnicity.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "obf-EthnicityDetail-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "obf-EthnicityDetail-model",
+        "path": "obf-EthnicityDetail-model",
+        "definition": "Additional description of ethnicity.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-EthnicityDetail-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-EthnicityDetail-model.value",
+        "path": "obf-EthnicityDetail-model.value",
+        "short": "Concept representing additional description of ethnicity.",
+        "definition": "Concept representing additional description of ethnicity.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-EthnicityDetail-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/us/core/ValueSet/detailed-ethnicity"
+          }
+        }
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "obf-EthnicityDetail-model",
+        "path": "obf-EthnicityDetail-model",
+        "definition": "Additional description of ethnicity.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-EthnicityDetail-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-EthnicityDetail-model.value",
+        "path": "obf-EthnicityDetail-model.value",
+        "short": "Concept representing additional description of ethnicity.",
+        "definition": "Concept representing additional description of ethnicity.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-EthnicityDetail-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/us/core/ValueSet/detailed-ethnicity"
+          }
+        }
+      }
+    ]
+  }
+}

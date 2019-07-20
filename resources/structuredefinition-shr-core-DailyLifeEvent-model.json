@@ -1,0 +1,128 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "shr-core-DailyLifeEvent-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>DailyLifeEvent Logical Model</b></p>\n  <p>An approximate time period during the day, potentially linked to an event of daily living that indicates when the action should occur.</p>\n</div>"
+  },
+  "url": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-DailyLifeEvent-model",
+  "identifier": [
+    {
+      "system": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig",
+      "value": "shr.core.DailyLifeEvent"
+    }
+  ],
+  "name": "DailyLifeEvent",
+  "title": "shr-core-DailyLifeEvent",
+  "status": "draft",
+  "date": "2019-07-19",
+  "publisher": "Hl7",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://BreastRadReport.com"
+        }
+      ]
+    }
+  ],
+  "description": "An approximate time period during the day, potentially linked to an event of daily living that indicates when the action should occur.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "shr-core-DailyLifeEvent-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "shr-core-DailyLifeEvent-model",
+        "path": "shr-core-DailyLifeEvent-model",
+        "definition": "An approximate time period during the day, potentially linked to an event of daily living that indicates when the action should occur.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "shr-core-DailyLifeEvent-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "shr-core-DailyLifeEvent-model.value",
+        "path": "shr-core-DailyLifeEvent-model.value",
+        "short": "Concept representing an approximate time period during the day, potentially linked to an event of daily living that indicates when the action should occur.",
+        "definition": "Concept representing an approximate time period during the day, potentially linked to an event of daily living that indicates when the action should occur.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "shr-core-DailyLifeEvent-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/event-timing"
+          }
+        }
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "shr-core-DailyLifeEvent-model",
+        "path": "shr-core-DailyLifeEvent-model",
+        "definition": "An approximate time period during the day, potentially linked to an event of daily living that indicates when the action should occur.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "shr-core-DailyLifeEvent-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "shr-core-DailyLifeEvent-model.value",
+        "path": "shr-core-DailyLifeEvent-model.value",
+        "short": "Concept representing an approximate time period during the day, potentially linked to an event of daily living that indicates when the action should occur.",
+        "definition": "Concept representing an approximate time period during the day, potentially linked to an event of daily living that indicates when the action should occur.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "shr-core-DailyLifeEvent-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/event-timing"
+          }
+        }
+      }
+    ]
+  }
+}

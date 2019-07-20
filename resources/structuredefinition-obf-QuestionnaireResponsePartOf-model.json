@@ -1,0 +1,238 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "obf-QuestionnaireResponsePartOf-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>QuestionnaireResponsePartOf Logical Model</b></p>\n  <p>A procedure or observation that this questionnaire was performed as part of the execution of. For example, the surgery a checklist was executed as part of.</p>\n</div>"
+  },
+  "url": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-QuestionnaireResponsePartOf-model",
+  "identifier": [
+    {
+      "system": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig",
+      "value": "obf.QuestionnaireResponsePartOf"
+    }
+  ],
+  "name": "QuestionnaireResponsePartOf",
+  "title": "obf-QuestionnaireResponsePartOf",
+  "status": "draft",
+  "date": "2019-07-19",
+  "publisher": "Hl7",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://BreastRadReport.com"
+        }
+      ]
+    }
+  ],
+  "description": "A procedure or observation that this questionnaire was performed as part of the execution of. For example, the surgery a checklist was executed as part of.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "obf-QuestionnaireResponsePartOf-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "obf-QuestionnaireResponsePartOf-model",
+        "path": "obf-QuestionnaireResponsePartOf-model",
+        "definition": "A procedure or observation that this questionnaire was performed as part of the execution of. For example, the surgery a checklist was executed as part of.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-QuestionnaireResponsePartOf-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-QuestionnaireResponsePartOf-model.value[x]",
+        "path": "obf-QuestionnaireResponsePartOf-model.value[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "short": "Resource or Resource representing a procedure or observation that this questionnaire was performed as part of the execution of. For example, the surgery a checklist was executed as part of.",
+        "definition": "Resource or Resource representing a procedure or observation that this questionnaire was performed as part of the execution of. For example, the surgery a checklist was executed as part of.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-QuestionnaireResponsePartOf-model.value[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Observation-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Procedure-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-QuestionnaireResponsePartOf-model.valueObf-Procedure-model:Procedure",
+        "path": "obf-QuestionnaireResponsePartOf-model.valueObf-Procedure-model",
+        "sliceName": "Procedure",
+        "short": "An action that is or was performed on or for a patient. This can be a physical intervention like an operation, or less invasive like long term services, counseling, or hypnotherapy.",
+        "definition": "An action that is or was performed on or for a patient. This can be a physical intervention like an operation, or less invasive like long term services, counseling, or hypnotherapy.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-QuestionnaireResponsePartOf-model.value[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Procedure-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-QuestionnaireResponsePartOf-model.valueObf-Observation-model:Observation",
+        "path": "obf-QuestionnaireResponsePartOf-model.valueObf-Observation-model",
+        "sliceName": "Observation",
+        "short": "Represents the result of evaluations (measurements, tests, or questions) that have been performed.",
+        "definition": "Represents the result of evaluations (measurements, tests, or questions) that have been performed.\nObservation has a value representing the result (answer), or an DataAbsentReason indicating why the value is not present. Things observed about the subject can include social and behavioral factors, subjective and objective observations, and assessments.\nFor an Observation, the Code describes the aspect or property of the subject being observed or measured. The Code is the 'question code' that pairs to the 'answer' contained in the Value.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-QuestionnaireResponsePartOf-model.value[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Observation-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "obf-QuestionnaireResponsePartOf-model",
+        "path": "obf-QuestionnaireResponsePartOf-model",
+        "definition": "A procedure or observation that this questionnaire was performed as part of the execution of. For example, the surgery a checklist was executed as part of.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-QuestionnaireResponsePartOf-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-QuestionnaireResponsePartOf-model.value[x]",
+        "path": "obf-QuestionnaireResponsePartOf-model.value[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "short": "Resource or Resource representing a procedure or observation that this questionnaire was performed as part of the execution of. For example, the surgery a checklist was executed as part of.",
+        "definition": "Resource or Resource representing a procedure or observation that this questionnaire was performed as part of the execution of. For example, the surgery a checklist was executed as part of.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-QuestionnaireResponsePartOf-model.value[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Observation-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Procedure-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-QuestionnaireResponsePartOf-model.valueObf-Procedure-model:Procedure",
+        "path": "obf-QuestionnaireResponsePartOf-model.valueObf-Procedure-model",
+        "sliceName": "Procedure",
+        "short": "An action that is or was performed on or for a patient. This can be a physical intervention like an operation, or less invasive like long term services, counseling, or hypnotherapy.",
+        "definition": "An action that is or was performed on or for a patient. This can be a physical intervention like an operation, or less invasive like long term services, counseling, or hypnotherapy.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-QuestionnaireResponsePartOf-model.value[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Procedure-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-QuestionnaireResponsePartOf-model.valueObf-Observation-model:Observation",
+        "path": "obf-QuestionnaireResponsePartOf-model.valueObf-Observation-model",
+        "sliceName": "Observation",
+        "short": "Represents the result of evaluations (measurements, tests, or questions) that have been performed.",
+        "definition": "Represents the result of evaluations (measurements, tests, or questions) that have been performed.\nObservation has a value representing the result (answer), or an DataAbsentReason indicating why the value is not present. Things observed about the subject can include social and behavioral factors, subjective and objective observations, and assessments.\nFor an Observation, the Code describes the aspect or property of the subject being observed or measured. The Code is the 'question code' that pairs to the 'answer' contained in the Value.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-QuestionnaireResponsePartOf-model.value[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Observation-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,128 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "obf-AdministrationSite-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>AdministrationSite Logical Model</b></p>\n  <p>The anatomic site at which the medication applied.</p>\n</div>"
+  },
+  "url": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-AdministrationSite-model",
+  "identifier": [
+    {
+      "system": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig",
+      "value": "obf.AdministrationSite"
+    }
+  ],
+  "name": "AdministrationSite",
+  "title": "obf-AdministrationSite",
+  "status": "draft",
+  "date": "2019-07-19",
+  "publisher": "Hl7",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://BreastRadReport.com"
+        }
+      ]
+    }
+  ],
+  "description": "The anatomic site at which the medication applied.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "obf-AdministrationSite-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "obf-AdministrationSite-model",
+        "path": "obf-AdministrationSite-model",
+        "definition": "The anatomic site at which the medication applied.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-AdministrationSite-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-AdministrationSite-model.value",
+        "path": "obf-AdministrationSite-model.value",
+        "short": "Concept representing the anatomic site at which the medication applied.",
+        "definition": "Concept representing the anatomic site at which the medication applied.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-AdministrationSite-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "example",
+          "valueSetReference": {
+            "reference": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig/shr/core/vs/BodyLocationVS"
+          }
+        }
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "obf-AdministrationSite-model",
+        "path": "obf-AdministrationSite-model",
+        "definition": "The anatomic site at which the medication applied.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-AdministrationSite-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-AdministrationSite-model.value",
+        "path": "obf-AdministrationSite-model.value",
+        "short": "Concept representing the anatomic site at which the medication applied.",
+        "definition": "Concept representing the anatomic site at which the medication applied.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-AdministrationSite-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "example",
+          "valueSetReference": {
+            "reference": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig/shr/core/vs/BodyLocationVS"
+          }
+        }
+      }
+    ]
+  }
+}

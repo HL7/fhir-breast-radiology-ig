@@ -1,0 +1,186 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "obf-RelatedDocument-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>RelatedDocument Logical Model</b></p>\n  <p>Documents related to this one.</p>\n</div>"
+  },
+  "url": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-RelatedDocument-model",
+  "identifier": [
+    {
+      "system": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig",
+      "value": "obf.RelatedDocument"
+    }
+  ],
+  "name": "RelatedDocument",
+  "title": "obf-RelatedDocument",
+  "status": "draft",
+  "date": "2019-07-19",
+  "publisher": "Hl7",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://BreastRadReport.com"
+        }
+      ]
+    }
+  ],
+  "description": "Documents related to this one.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "obf-RelatedDocument-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "obf-RelatedDocument-model",
+        "path": "obf-RelatedDocument-model",
+        "definition": "Documents related to this one.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-RelatedDocument-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-RelatedDocument-model.relationship",
+        "path": "obf-RelatedDocument-model.relationship",
+        "short": "A description of the association between people or items.",
+        "definition": "A description of the association between people or items.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-RelatedDocument-model.relationship",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/document-relationship-type"
+          }
+        }
+      },
+      {
+        "id": "obf-RelatedDocument-model.targetDocument[x]",
+        "path": "obf-RelatedDocument-model.targetDocument[x]",
+        "short": "The target document of this relationship.",
+        "definition": "The target document of this relationship.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-RelatedDocument-model.targetDocument[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-DocumentReference-model"
+          },
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-Identifier-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Composition-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "obf-RelatedDocument-model",
+        "path": "obf-RelatedDocument-model",
+        "definition": "Documents related to this one.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-RelatedDocument-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-RelatedDocument-model.relationship",
+        "path": "obf-RelatedDocument-model.relationship",
+        "short": "A description of the association between people or items.",
+        "definition": "A description of the association between people or items.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-RelatedDocument-model.relationship",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/document-relationship-type"
+          }
+        }
+      },
+      {
+        "id": "obf-RelatedDocument-model.targetDocument[x]",
+        "path": "obf-RelatedDocument-model.targetDocument[x]",
+        "short": "The target document of this relationship.",
+        "definition": "The target document of this relationship.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-RelatedDocument-model.targetDocument[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-DocumentReference-model"
+          },
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-Identifier-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Composition-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,134 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "obf-MaritalStatus-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>MaritalStatus Logical Model</b></p>\n  <p>The most recent marital status of a person.</p>\n</div>"
+  },
+  "url": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-MaritalStatus-model",
+  "identifier": [
+    {
+      "system": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig",
+      "value": "obf.MaritalStatus"
+    }
+  ],
+  "name": "MaritalStatus",
+  "title": "obf-MaritalStatus",
+  "status": "draft",
+  "date": "2019-07-19",
+  "publisher": "Hl7",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://BreastRadReport.com"
+        }
+      ]
+    }
+  ],
+  "description": "The most recent marital status of a person.",
+  "keyword": [
+    {
+      "system": "http://ncimeta.nci.nih.gov",
+      "code": "C0024819"
+    }
+  ],
+  "kind": "logical",
+  "abstract": false,
+  "type": "obf-MaritalStatus-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "obf-MaritalStatus-model",
+        "path": "obf-MaritalStatus-model",
+        "definition": "The most recent marital status of a person.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-MaritalStatus-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-MaritalStatus-model.value",
+        "path": "obf-MaritalStatus-model.value",
+        "short": "Concept representing the most recent marital status of a person.",
+        "definition": "Concept representing the most recent marital status of a person.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-MaritalStatus-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/marital-status"
+          }
+        }
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "obf-MaritalStatus-model",
+        "path": "obf-MaritalStatus-model",
+        "definition": "The most recent marital status of a person.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-MaritalStatus-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-MaritalStatus-model.value",
+        "path": "obf-MaritalStatus-model.value",
+        "short": "Concept representing the most recent marital status of a person.",
+        "definition": "Concept representing the most recent marital status of a person.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-MaritalStatus-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/marital-status"
+          }
+        }
+      }
+    ]
+  }
+}

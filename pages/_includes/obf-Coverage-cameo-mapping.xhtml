@@ -7,7 +7,7 @@ obf.Coverage maps to Coverage:
   Language maps to language
   ImplicitRules maps to implicitRules
   Metadata.VersionId maps to meta.versionId
-  Metadata.SourceSystem maps to meta.source
+  Metadata.SourceSystem maps to meta.extension
   Metadata.Profile maps to meta.profile
   Metadata.LastUpdated maps to meta.lastUpdated
   Metadata.SecurityLabel maps to meta.security
@@ -19,23 +19,15 @@ obf.Coverage maps to Coverage:
   PolicyHolder maps to policyHolder
   Subscriber maps to subscriber
   SubscriberId maps to subscriberId
-  Beneficiary maps to beneficiary  // Min Cardinality changed from 0 to 1
-  DependentIdentifier maps to dependent
+  Beneficiary maps to beneficiary
   BeneficiaryRelationship maps to relationship
   EffectiveTimePeriod maps to period
   Payor maps to payor
-  CoverageClassification maps to class
-  CoverageClassification.Type maps to class.type
-  CoverageClassification.IdentifierString maps to class.value  // bad FHIR naming
-  CoverageClassification.Name maps to class.name
-  PriorityRank maps to order // bad FHIR name
+  CoverageClassification maps to extension
+  DependentIdentifier maps to dependent
+  PriorityRank maps to order
   InsurerNetwork maps to network
-  CostToBeneficiary maps to costToBeneficiary
-  CostToBeneficiary.Type maps to costToBeneficiary.type
-  CostToBeneficiary.CostOrPercentage maps to costToBeneficiary.value[x]
-  CostToBeneficiary.Exception maps to costToBeneficiary.exception
-  CostToBeneficiary.Exception.Type maps to costToBeneficiary.exception.type
-  CostToBeneficiary.Exception.EffectiveTimePeriod maps to costToBeneficiary.exception.period
-  Subrogation maps to subrogation
+  CostToBeneficiary maps to extension
+  Subrogation maps to extension
 
 </pre>

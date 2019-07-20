@@ -7,31 +7,26 @@ obf.Device maps to http://hl7.org/fhir/us/core/StructureDefinition/us-core-devic
   Language maps to language
   ImplicitRules maps to implicitRules
   Metadata.VersionId maps to meta.versionId
-  Metadata.SourceSystem maps to meta.source
+  Metadata.SourceSystem maps to meta.extension
   Metadata.Profile maps to meta.profile
   Metadata.LastUpdated maps to meta.lastUpdated
   Metadata.SecurityLabel maps to meta.security
   Metadata.Tag maps to meta.tag
   Narrative maps to text
   Identifier maps to identifier
-  UdiCarrier.DeviceIdentifier maps to udiCarrier.deviceIdentifier
-  UdiCarrier.CarrierAIDC maps to udiCarrier.carrierAIDC
-  UdiCarrier.CarrierHRF maps to udiCarrier.carrierHRF
-  UdiCarrier.Type maps to udiCarrier.entryType
+  UdiCarrier.DeviceIdentifier maps to udi.deviceIdentifier
+  UdiCarrier.CarrierAIDC maps to udi.carrierAIDC
+  UdiCarrier.CarrierHRF maps to udi.carrierHRF
+  UdiCarrier.Type maps to udi.entryType
   Status maps to status
-  StatusReason maps to statusReason
-  DistinctIdentifier maps to distinctIdentifier
+  StatusReason maps to extension
+  Type maps to type
+  LotNumber maps to lotNumber
   ManufacturerName maps to manufacturer
   ManufactureDate maps to manufactureDate
   ExpirationDate maps to expirationDate
-  LotNumber maps to lotNumber
-  SerialNumber maps to serialNumber
-  DeviceDesignation.DeviceName maps to deviceName.name
-  DeviceDesignation.Type maps to deviceName.type
-  ModelNumber maps to modelNumber // changed from model
-  Type maps to type
-  constrain version to 0..1
-  VersionString maps to version.value
+  ModelNumber maps to model
+  VersionString maps to version
   Patient maps to patient
   Owner maps to owner
   ContactPoint maps to contact
@@ -39,6 +34,9 @@ obf.Device maps to http://hl7.org/fhir/us/core/StructureDefinition/us-core-devic
   Url maps to url
   Annotation maps to note
   Safety maps to safety
-  PartOf maps to parent
+  DistinctIdentifier maps to extension
+  SerialNumber maps to extension
+  DeviceDesignation maps to extension
+  PartOf maps to extension
 
 </pre>

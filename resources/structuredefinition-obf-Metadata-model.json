@@ -1,0 +1,354 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "obf-Metadata-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>Metadata Logical Model</b></p>\n  <p>Elements that belong to all information items.</p>\n</div>"
+  },
+  "url": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Metadata-model",
+  "identifier": [
+    {
+      "system": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig",
+      "value": "obf.Metadata"
+    }
+  ],
+  "name": "Metadata",
+  "title": "obf-Metadata",
+  "status": "draft",
+  "date": "2019-07-19",
+  "publisher": "Hl7",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://BreastRadReport.com"
+        }
+      ]
+    }
+  ],
+  "description": "Elements that belong to all information items.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "obf-Metadata-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "obf-Metadata-model",
+        "path": "obf-Metadata-model",
+        "definition": "Elements that belong to all information items.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Metadata-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Metadata-model.versionId",
+        "path": "obf-Metadata-model.versionId",
+        "short": "An identifier associated with the product that denotes a particular release iteration.",
+        "definition": "An identifier associated with the product that denotes a particular release iteration.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Metadata-model.versionId",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "id"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Metadata-model.lastUpdated",
+        "path": "obf-Metadata-model.lastUpdated",
+        "short": "The most recent date the information item was changed.",
+        "definition": "The most recent date the information item was changed.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Metadata-model.lastUpdated",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Metadata-model.profile",
+        "path": "obf-Metadata-model.profile",
+        "short": "The name of the FHIR profile this resource claims to conform to.",
+        "definition": "The name of the FHIR profile this resource claims to conform to.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Metadata-model.profile",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Metadata-model.sourceSystem",
+        "path": "obf-Metadata-model.sourceSystem",
+        "short": "FHIR: This provides a minimal amount of Provenance information that can be used to track or differentiate the source of information in the resource. The source may identify another FHIR server, document, message, database, etc.",
+        "definition": "FHIR: This provides a minimal amount of Provenance information that can be used to track or differentiate the source of information in the resource. The source may identify another FHIR server, document, message, database, etc.\nFHIM: Identifies the computer system that created the medical record. This optional field may also be used to indicate that the medical record was originally created by a different organization from the one that is currently storing or utilizing the record in that the assigning authority of the Id could be set to that originating organization. This property is optional, as some systems will assume that all records that it contains originated in that system, however it is anticipated that it will become increasingly commonplace for records from multiple systems and organizations will be comingled in order to provide a complete picture of the patient's health record.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Metadata-model.sourceSystem",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Metadata-model.securityLabel",
+        "path": "obf-Metadata-model.securityLabel",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C3858779",
+            "display": "security classification"
+          }
+        ],
+        "short": "A code that connects the entry to a security policy. Security labels can be updated when the resource changes, or whenever the security sub-system chooses to.",
+        "definition": "A code that connects the entry to a security policy. Security labels can be updated when the resource changes, or whenever the security sub-system chooses to.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Metadata-model.securityLabel",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Metadata-model.tag",
+        "path": "obf-Metadata-model.tag",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C4280044",
+            "display": "Metatags"
+          }
+        ],
+        "short": "A code used to relate entries to categories or workflows. Applications are not required to consider the tags when interpreting the meaning of an entry.",
+        "definition": "A code used to relate entries to categories or workflows. Applications are not required to consider the tags when interpreting the meaning of an entry.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Metadata-model.tag",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "obf-Metadata-model",
+        "path": "obf-Metadata-model",
+        "definition": "Elements that belong to all information items.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Metadata-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Metadata-model.versionId",
+        "path": "obf-Metadata-model.versionId",
+        "short": "An identifier associated with the product that denotes a particular release iteration.",
+        "definition": "An identifier associated with the product that denotes a particular release iteration.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Metadata-model.versionId",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "id"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Metadata-model.lastUpdated",
+        "path": "obf-Metadata-model.lastUpdated",
+        "short": "The most recent date the information item was changed.",
+        "definition": "The most recent date the information item was changed.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Metadata-model.lastUpdated",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Metadata-model.profile",
+        "path": "obf-Metadata-model.profile",
+        "short": "The name of the FHIR profile this resource claims to conform to.",
+        "definition": "The name of the FHIR profile this resource claims to conform to.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Metadata-model.profile",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Metadata-model.sourceSystem",
+        "path": "obf-Metadata-model.sourceSystem",
+        "short": "FHIR: This provides a minimal amount of Provenance information that can be used to track or differentiate the source of information in the resource. The source may identify another FHIR server, document, message, database, etc.",
+        "definition": "FHIR: This provides a minimal amount of Provenance information that can be used to track or differentiate the source of information in the resource. The source may identify another FHIR server, document, message, database, etc.\nFHIM: Identifies the computer system that created the medical record. This optional field may also be used to indicate that the medical record was originally created by a different organization from the one that is currently storing or utilizing the record in that the assigning authority of the Id could be set to that originating organization. This property is optional, as some systems will assume that all records that it contains originated in that system, however it is anticipated that it will become increasingly commonplace for records from multiple systems and organizations will be comingled in order to provide a complete picture of the patient's health record.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Metadata-model.sourceSystem",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Metadata-model.securityLabel",
+        "path": "obf-Metadata-model.securityLabel",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C3858779",
+            "display": "security classification"
+          }
+        ],
+        "short": "A code that connects the entry to a security policy. Security labels can be updated when the resource changes, or whenever the security sub-system chooses to.",
+        "definition": "A code that connects the entry to a security policy. Security labels can be updated when the resource changes, or whenever the security sub-system chooses to.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Metadata-model.securityLabel",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Metadata-model.tag",
+        "path": "obf-Metadata-model.tag",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C4280044",
+            "display": "Metatags"
+          }
+        ],
+        "short": "A code used to relate entries to categories or workflows. Applications are not required to consider the tags when interpreting the meaning of an entry.",
+        "definition": "A code used to relate entries to categories or workflows. Applications are not required to consider the tags when interpreting the meaning of an entry.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Metadata-model.tag",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,854 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "obf-Practitioner-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>Practitioner Logical Model</b></p>\n  <p>A person who practices a healing art.\nHumanName is limited to one required value by US-Core. Gender is required by US-Core. US-Core required an identifier, either a NPI (preferred) or tax id.</p>\n</div>"
+  },
+  "url": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Practitioner-model",
+  "identifier": [
+    {
+      "system": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig",
+      "value": "obf.Practitioner"
+    }
+  ],
+  "name": "Practitioner",
+  "title": "obf-Practitioner",
+  "status": "draft",
+  "date": "2019-07-19",
+  "publisher": "Hl7",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://BreastRadReport.com"
+        }
+      ]
+    }
+  ],
+  "description": "A person who practices a healing art.\nHumanName is limited to one required value by US-Core. Gender is required by US-Core. US-Core required an identifier, either a NPI (preferred) or tax id.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "obf-Practitioner-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "obf-Practitioner-model",
+        "path": "obf-Practitioner-model",
+        "definition": "A person who practices a healing art.\nHumanName is limited to one required value by US-Core. Gender is required by US-Core. US-Core required an identifier, either a NPI (preferred) or tax id.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Practitioner-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Practitioner-model.metadata",
+        "path": "obf-Practitioner-model.metadata",
+        "short": "Elements that belong to all information items.",
+        "definition": "Elements that belong to all information items.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Practitioner-model.metadata",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Metadata-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Practitioner-model.language",
+        "path": "obf-Practitioner-model.language",
+        "short": "A human language, spoken or written.",
+        "definition": "A human language, spoken or written.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Practitioner-model.language",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Practitioner-model.implicitRules",
+        "path": "obf-Practitioner-model.implicitRules",
+        "short": "A set of rules under which this content was created",
+        "definition": "A set of rules under which this content was created",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Practitioner-model.implicitRules",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Practitioner-model.narrative",
+        "path": "obf-Practitioner-model.narrative",
+        "short": "A human-readable narrative, potentially including images, that contains a summary of the resource, and may be used to represent the content of the resource to a human.",
+        "definition": "A human-readable narrative, potentially including images, that contains a summary of the resource, and may be used to represent the content of the resource to a human.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Practitioner-model.narrative",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Narrative-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Practitioner-model.status",
+        "path": "obf-Practitioner-model.status",
+        "short": "A state that relates to the workflow or interpretation of this resource. Certain status values can modify the meaning of the resource, for example, entered-in-error. When a boolean value is used, Status of true indicates the record is active, false means inactive.",
+        "definition": "A state that relates to the workflow or interpretation of this resource. Certain status values can modify the meaning of the resource, for example, entered-in-error. When a boolean value is used, Status of true indicates the record is active, false means inactive.",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "obf-Practitioner-model.status",
+          "min": 0,
+          "max": "0"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Practitioner-model.identifier",
+        "path": "obf-Practitioner-model.identifier",
+        "short": "Business identifier or external id for this resource.",
+        "definition": "Business identifier or external id for this resource.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-Practitioner-model.identifier",
+          "min": 1,
+          "max": "1"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Practitioner-model.identifier.nationalProviderIdentifier",
+        "path": "obf-Practitioner-model.identifier.nationalProviderIdentifier",
+        "short": "NPI: a unique 10 digit number to allow US healthcare providers to identify themselves in a standard way throughout the healthcare industry.",
+        "definition": "NPI: a unique 10 digit number to allow US healthcare providers to identify themselves in a standard way throughout the healthcare industry.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Practitioner-model.identifier.nationalProviderIdentifier",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-NationalProviderIdentifier-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Practitioner-model.identifier.taxIdentificationNumber",
+        "path": "obf-Practitioner-model.identifier.taxIdentificationNumber",
+        "short": "Tax identification number for the practitioner.",
+        "definition": "Tax identification number for the practitioner.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Practitioner-model.identifier.taxIdentificationNumber",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-TaxIdentificationNumber-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Practitioner-model.active",
+        "path": "obf-Practitioner-model.active",
+        "short": "Whether the record is in use (true) or retired (false).",
+        "definition": "Whether the record is in use (true) or retired (false).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Practitioner-model.active",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Practitioner-model.humanName",
+        "path": "obf-Practitioner-model.humanName",
+        "short": "A name used by a human being, written as it would be typically expressed. May include a breakdown of the various elements of the name (family name, given name, etc.).",
+        "definition": "A name used by a human being, written as it would be typically expressed. May include a breakdown of the various elements of the name (family name, given name, etc.).",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-Practitioner-model.humanName",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-HumanName-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Practitioner-model.contactPoint",
+        "path": "obf-Practitioner-model.contactPoint",
+        "short": "An electronic means of contacting an organization or individual.",
+        "definition": "An electronic means of contacting an organization or individual.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Practitioner-model.contactPoint",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-ContactPoint-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Practitioner-model.address",
+        "path": "obf-Practitioner-model.address",
+        "short": "An address expressed using postal conventions (as opposed to GPS or other location definition formats). This data type may be used to convey addresses for use in delivering mail as well as for visiting locations and which might not be valid for mail delivery. There are a variety of postal address formats defined around the world. (Source: HL7 FHIR).",
+        "definition": "An address expressed using postal conventions (as opposed to GPS or other location definition formats). This data type may be used to convey addresses for use in delivering mail as well as for visiting locations and which might not be valid for mail delivery. There are a variety of postal address formats defined around the world. (Source: HL7 FHIR).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Practitioner-model.address",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-Address-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Practitioner-model.administrativeGender",
+        "path": "obf-Practitioner-model.administrativeGender",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C1550327"
+          }
+        ],
+        "short": "A gender classification used for administrative purposes. Administrative gender is not necessarily the same as a biological description or a gender identity. This attribute does not include terms related to clinical gender.",
+        "definition": "A gender classification used for administrative purposes. Administrative gender is not necessarily the same as a biological description or a gender identity. This attribute does not include terms related to clinical gender.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Practitioner-model.administrativeGender",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/administrative-gender"
+          }
+        }
+      },
+      {
+        "id": "obf-Practitioner-model.birthDate[x]",
+        "path": "obf-Practitioner-model.birthDate[x]",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C2919018"
+          },
+          {
+            "system": "http://loinc.org",
+            "code": "21112-8"
+          }
+        ],
+        "short": "A date of birth or approximate year or period (year or date range), if estimated.",
+        "definition": "A date of birth or approximate year or period (year or date range), if estimated.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Practitioner-model.birthDate[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "date"
+          },
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-TimePeriod-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Practitioner-model.photographicImage",
+        "path": "obf-Practitioner-model.photographicImage",
+        "code": [
+          {
+            "system": "http://loinc.org",
+            "code": "72170-4",
+            "display": "Photographic image\t[Attachment]"
+          }
+        ],
+        "short": "An attachment of a photographic type. The mime type should be either bmp, gif, jpeg, png, svg, or tiff.",
+        "definition": "An attachment of a photographic type. The mime type should be either bmp, gif, jpeg, png, svg, or tiff.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Practitioner-model.photographicImage",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-PhotographicImage-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Practitioner-model.qualification",
+        "path": "obf-Practitioner-model.qualification",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0037778"
+          }
+        ],
+        "short": "A right to practice medicine obtained by training and certification.",
+        "definition": "A right to practice medicine obtained by training and certification.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Practitioner-model.qualification",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Qualification-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Practitioner-model.communication",
+        "path": "obf-Practitioner-model.communication",
+        "short": "Language used for communication by a human, either the subject of record, parent, or other involved person.",
+        "definition": "Language used for communication by a human, either the subject of record, parent, or other involved person.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Practitioner-model.communication",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Communication-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "obf-Practitioner-model",
+        "path": "obf-Practitioner-model",
+        "definition": "A person who practices a healing art.\nHumanName is limited to one required value by US-Core. Gender is required by US-Core. US-Core required an identifier, either a NPI (preferred) or tax id.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Practitioner-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Practitioner-model.metadata",
+        "path": "obf-Practitioner-model.metadata",
+        "short": "Elements that belong to all information items.",
+        "definition": "Elements that belong to all information items.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Practitioner-model.metadata",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Metadata-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Practitioner-model.language",
+        "path": "obf-Practitioner-model.language",
+        "short": "A human language, spoken or written.",
+        "definition": "A human language, spoken or written.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Practitioner-model.language",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Practitioner-model.implicitRules",
+        "path": "obf-Practitioner-model.implicitRules",
+        "short": "A set of rules under which this content was created",
+        "definition": "A set of rules under which this content was created",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Practitioner-model.implicitRules",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Practitioner-model.narrative",
+        "path": "obf-Practitioner-model.narrative",
+        "short": "A human-readable narrative, potentially including images, that contains a summary of the resource, and may be used to represent the content of the resource to a human.",
+        "definition": "A human-readable narrative, potentially including images, that contains a summary of the resource, and may be used to represent the content of the resource to a human.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Practitioner-model.narrative",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Narrative-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Practitioner-model.status",
+        "path": "obf-Practitioner-model.status",
+        "short": "A state that relates to the workflow or interpretation of this resource. Certain status values can modify the meaning of the resource, for example, entered-in-error. When a boolean value is used, Status of true indicates the record is active, false means inactive.",
+        "definition": "A state that relates to the workflow or interpretation of this resource. Certain status values can modify the meaning of the resource, for example, entered-in-error. When a boolean value is used, Status of true indicates the record is active, false means inactive.",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "obf-Practitioner-model.status",
+          "min": 0,
+          "max": "0"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Practitioner-model.identifier",
+        "path": "obf-Practitioner-model.identifier",
+        "short": "Business identifier or external id for this resource.",
+        "definition": "Business identifier or external id for this resource.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-Practitioner-model.identifier",
+          "min": 1,
+          "max": "1"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Practitioner-model.identifier.nationalProviderIdentifier",
+        "path": "obf-Practitioner-model.identifier.nationalProviderIdentifier",
+        "short": "NPI: a unique 10 digit number to allow US healthcare providers to identify themselves in a standard way throughout the healthcare industry.",
+        "definition": "NPI: a unique 10 digit number to allow US healthcare providers to identify themselves in a standard way throughout the healthcare industry.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Practitioner-model.identifier.nationalProviderIdentifier",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-NationalProviderIdentifier-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Practitioner-model.identifier.taxIdentificationNumber",
+        "path": "obf-Practitioner-model.identifier.taxIdentificationNumber",
+        "short": "Tax identification number for the practitioner.",
+        "definition": "Tax identification number for the practitioner.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Practitioner-model.identifier.taxIdentificationNumber",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-TaxIdentificationNumber-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Practitioner-model.active",
+        "path": "obf-Practitioner-model.active",
+        "short": "Whether the record is in use (true) or retired (false).",
+        "definition": "Whether the record is in use (true) or retired (false).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Practitioner-model.active",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Practitioner-model.humanName",
+        "path": "obf-Practitioner-model.humanName",
+        "short": "A name used by a human being, written as it would be typically expressed. May include a breakdown of the various elements of the name (family name, given name, etc.).",
+        "definition": "A name used by a human being, written as it would be typically expressed. May include a breakdown of the various elements of the name (family name, given name, etc.).",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-Practitioner-model.humanName",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-HumanName-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Practitioner-model.contactPoint",
+        "path": "obf-Practitioner-model.contactPoint",
+        "short": "An electronic means of contacting an organization or individual.",
+        "definition": "An electronic means of contacting an organization or individual.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Practitioner-model.contactPoint",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-ContactPoint-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Practitioner-model.address",
+        "path": "obf-Practitioner-model.address",
+        "short": "An address expressed using postal conventions (as opposed to GPS or other location definition formats). This data type may be used to convey addresses for use in delivering mail as well as for visiting locations and which might not be valid for mail delivery. There are a variety of postal address formats defined around the world. (Source: HL7 FHIR).",
+        "definition": "An address expressed using postal conventions (as opposed to GPS or other location definition formats). This data type may be used to convey addresses for use in delivering mail as well as for visiting locations and which might not be valid for mail delivery. There are a variety of postal address formats defined around the world. (Source: HL7 FHIR).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Practitioner-model.address",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-Address-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Practitioner-model.administrativeGender",
+        "path": "obf-Practitioner-model.administrativeGender",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C1550327"
+          }
+        ],
+        "short": "A gender classification used for administrative purposes. Administrative gender is not necessarily the same as a biological description or a gender identity. This attribute does not include terms related to clinical gender.",
+        "definition": "A gender classification used for administrative purposes. Administrative gender is not necessarily the same as a biological description or a gender identity. This attribute does not include terms related to clinical gender.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Practitioner-model.administrativeGender",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/administrative-gender"
+          }
+        }
+      },
+      {
+        "id": "obf-Practitioner-model.birthDate[x]",
+        "path": "obf-Practitioner-model.birthDate[x]",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C2919018"
+          },
+          {
+            "system": "http://loinc.org",
+            "code": "21112-8"
+          }
+        ],
+        "short": "A date of birth or approximate year or period (year or date range), if estimated.",
+        "definition": "A date of birth or approximate year or period (year or date range), if estimated.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Practitioner-model.birthDate[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "date"
+          },
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-TimePeriod-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Practitioner-model.photographicImage",
+        "path": "obf-Practitioner-model.photographicImage",
+        "code": [
+          {
+            "system": "http://loinc.org",
+            "code": "72170-4",
+            "display": "Photographic image\t[Attachment]"
+          }
+        ],
+        "short": "An attachment of a photographic type. The mime type should be either bmp, gif, jpeg, png, svg, or tiff.",
+        "definition": "An attachment of a photographic type. The mime type should be either bmp, gif, jpeg, png, svg, or tiff.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Practitioner-model.photographicImage",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-PhotographicImage-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Practitioner-model.qualification",
+        "path": "obf-Practitioner-model.qualification",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0037778"
+          }
+        ],
+        "short": "A right to practice medicine obtained by training and certification.",
+        "definition": "A right to practice medicine obtained by training and certification.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Practitioner-model.qualification",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Qualification-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Practitioner-model.communication",
+        "path": "obf-Practitioner-model.communication",
+        "short": "Language used for communication by a human, either the subject of record, parent, or other involved person.",
+        "definition": "Language used for communication by a human, either the subject of record, parent, or other involved person.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Practitioner-model.communication",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Communication-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

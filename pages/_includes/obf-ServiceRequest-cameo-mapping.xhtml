@@ -3,48 +3,49 @@
 <p><b>Mapping Source</b></p>
 <p>This structure represents the following mapping definition:</p>
 <pre>
-obf.ServiceRequest maps to ServiceRequest:
+obf.ServiceRequest maps to ProcedureRequest:
   Language maps to language
   ImplicitRules maps to implicitRules
   Metadata.VersionId maps to meta.versionId
-  Metadata.SourceSystem maps to meta.source
+  Metadata.SourceSystem maps to meta.extension
   Metadata.Profile maps to meta.profile
   Metadata.LastUpdated maps to meta.lastUpdated
   Metadata.SecurityLabel maps to meta.security
   Metadata.Tag maps to meta.tag
   Narrative maps to text
   Identifier maps to identifier
-  ServiceBasedOn maps to basedOn
-  Replaces maps to replaces
-  GroupIdentifier maps to requisition
-  Status maps to status
-  RequestIntent maps to intent
-  Category maps to category
-  PriorityCode maps to priority
-  DoNotPerform maps to doNotPerform
-  Code maps to code
-  ServiceDetails maps to orderDetail
-  RequestQuantity maps to quantity[x]
-  RequestSubjectOfRecord maps to subject
-  CareContext maps to encounter
-  ExpectedPerformanceTime maps to occurrence[x]
-  AsNeeded maps to asNeeded[x]
   StatementDateTime maps to authoredOn
-  Requester maps to requester
-  ExpectedPerformerType maps to performerType
-  ExpectedPerformer maps to performer
-  LocationType maps to locationCode
-  Location maps to locationReference
-  ReasonCode maps to reasonCode
-  ServiceReasonReference maps to reasonReference
-  Insurance maps to insurance
-  SupportingInformation maps to supportingInfo
-  Specimen maps to specimen
+  Requester maps to requester.agent
+  Code maps to code
+  Category maps to category
+  constrain doNotPerform to 0..0
+  RequestSubjectOfRecord maps to subject
   BodyLocation.Code maps to bodySite
   BodyLocation.Laterality maps to bodySite.extension
   BodyLocation.AnatomicalOrientation maps to bodySite.extension
   BodyLocation.RelationToLandmark maps to bodySite.extension
+  CareContext maps to context
+  ReasonCode maps to reasonCode
+  ServiceReasonReference maps to reasonReference
+  Status maps to status
+  RequestIntent maps to intent
+  ExpectedPerformanceTime maps to occurrence[x]
+  ExpectedPerformerType maps to performerType
+  ExpectedPerformer maps to performer
+  PriorityCode maps to priority
   Annotation maps to note
-  PatientInstruction maps to patientInstruction
+  ServiceBasedOn maps to extension
+  Replaces maps to extension
+  GroupIdentifier maps to extension
+  DoNotPerform maps to extension
+  ServiceDetails maps to extension
+  RequestQuantity maps to extension
+  AsNeeded maps to extension
+  LocationType maps to extension
+  Location maps to extension
+  Insurance maps to extension
+  SupportingInformation maps to extension
+  Specimen maps to extension
+  PatientInstruction maps to extension
 
 </pre>

@@ -7,22 +7,22 @@ obf.Medication maps to http://hl7.org/fhir/us/core/StructureDefinition/us-core-m
   Language maps to language
   ImplicitRules maps to implicitRules
   Metadata.VersionId maps to meta.versionId
-  Metadata.SourceSystem maps to meta.source
+  Metadata.SourceSystem maps to meta.extension
   Metadata.Profile maps to meta.profile
   Metadata.LastUpdated maps to meta.lastUpdated
   Metadata.SecurityLabel maps to meta.security
   Metadata.Tag maps to meta.tag
   Narrative maps to text
-  Identifier maps to identifier  // added identifier
+  Identifier maps to extension
   Code maps to code
   Status maps to status
   DoseForm maps to form
-  PackageAmount maps to amount
   Ingredient.SubstanceOrCode maps to ingredient.item[x]
-  Ingredient.IngredientStrength maps to ingredient.strength
+  Ingredient.IngredientStrength maps to ingredient.amount
   Ingredient.IsActiveIngredient maps to ingredient.isActive
   Manufacturer maps to manufacturer
-  LotNumber maps to batch.lotNumber // deleted package, added lotNumber
-  ExpirationDate maps to batch.expirationDate // deleted package, added expirationDate
+  constrain package.batch to 0..1
+  LotNumber maps to package.batch.lotNumber
+  ExpirationDate maps to package.batch.expirationDate
 
 </pre>
