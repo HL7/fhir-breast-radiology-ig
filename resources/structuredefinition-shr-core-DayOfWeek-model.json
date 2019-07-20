@@ -1,0 +1,128 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "shr-core-DayOfWeek-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>DayOfWeek Logical Model</b></p>\n  <p>If one or more days of week is provided, then the action happens only on the specified day(s).</p>\n</div>"
+  },
+  "url": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-DayOfWeek-model",
+  "identifier": [
+    {
+      "system": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig",
+      "value": "shr.core.DayOfWeek"
+    }
+  ],
+  "name": "DayOfWeek",
+  "title": "shr-core-DayOfWeek",
+  "status": "draft",
+  "date": "2019-07-20",
+  "publisher": "Hl7",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://BreastRadReport.com"
+        }
+      ]
+    }
+  ],
+  "description": "If one or more days of week is provided, then the action happens only on the specified day(s).",
+  "kind": "logical",
+  "abstract": false,
+  "type": "shr-core-DayOfWeek-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "shr-core-DayOfWeek-model",
+        "path": "shr-core-DayOfWeek-model",
+        "definition": "If one or more days of week is provided, then the action happens only on the specified day(s).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "shr-core-DayOfWeek-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "shr-core-DayOfWeek-model.value",
+        "path": "shr-core-DayOfWeek-model.value",
+        "short": "Concept representing if one or more days of week is provided, then the action happens only on the specified day(s).",
+        "definition": "Concept representing if one or more days of week is provided, then the action happens only on the specified day(s).",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "shr-core-DayOfWeek-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/days-of-week"
+          }
+        }
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "shr-core-DayOfWeek-model",
+        "path": "shr-core-DayOfWeek-model",
+        "definition": "If one or more days of week is provided, then the action happens only on the specified day(s).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "shr-core-DayOfWeek-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "shr-core-DayOfWeek-model.value",
+        "path": "shr-core-DayOfWeek-model.value",
+        "short": "Concept representing if one or more days of week is provided, then the action happens only on the specified day(s).",
+        "definition": "Concept representing if one or more days of week is provided, then the action happens only on the specified day(s).",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "shr-core-DayOfWeek-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/days-of-week"
+          }
+        }
+      }
+    ]
+  }
+}

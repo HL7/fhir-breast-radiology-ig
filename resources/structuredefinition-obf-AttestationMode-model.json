@@ -1,0 +1,128 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "obf-AttestationMode-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>AttestationMode Logical Model</b></p>\n  <p>The type of attestation the authenticator offers.</p>\n</div>"
+  },
+  "url": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-AttestationMode-model",
+  "identifier": [
+    {
+      "system": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig",
+      "value": "obf.AttestationMode"
+    }
+  ],
+  "name": "AttestationMode",
+  "title": "obf-AttestationMode",
+  "status": "draft",
+  "date": "2019-07-20",
+  "publisher": "Hl7",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://BreastRadReport.com"
+        }
+      ]
+    }
+  ],
+  "description": "The type of attestation the authenticator offers.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "obf-AttestationMode-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "obf-AttestationMode-model",
+        "path": "obf-AttestationMode-model",
+        "definition": "The type of attestation the authenticator offers.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-AttestationMode-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-AttestationMode-model.value",
+        "path": "obf-AttestationMode-model.value",
+        "short": "Concept representing the type of attestation the authenticator offers.",
+        "definition": "Concept representing the type of attestation the authenticator offers.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-AttestationMode-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/composition-attestation-mode"
+          }
+        }
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "obf-AttestationMode-model",
+        "path": "obf-AttestationMode-model",
+        "definition": "The type of attestation the authenticator offers.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-AttestationMode-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-AttestationMode-model.value",
+        "path": "obf-AttestationMode-model.value",
+        "short": "Concept representing the type of attestation the authenticator offers.",
+        "definition": "Concept representing the type of attestation the authenticator offers.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-AttestationMode-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/composition-attestation-mode"
+          }
+        }
+      }
+    ]
+  }
+}

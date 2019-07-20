@@ -1,0 +1,182 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "obf-DeviceDesignation-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>DeviceDesignation Logical Model</b></p>\n  <p>A name of the device as given by the manufacturer, along with a type of name.</p>\n</div>"
+  },
+  "url": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-DeviceDesignation-model",
+  "identifier": [
+    {
+      "system": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig",
+      "value": "obf.DeviceDesignation"
+    }
+  ],
+  "name": "DeviceDesignation",
+  "title": "obf-DeviceDesignation",
+  "status": "draft",
+  "date": "2019-07-20",
+  "publisher": "Hl7",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://BreastRadReport.com"
+        }
+      ]
+    }
+  ],
+  "description": "A name of the device as given by the manufacturer, along with a type of name.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "obf-DeviceDesignation-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "obf-DeviceDesignation-model",
+        "path": "obf-DeviceDesignation-model",
+        "definition": "A name of the device as given by the manufacturer, along with a type of name.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-DeviceDesignation-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-DeviceDesignation-model.deviceName",
+        "path": "obf-DeviceDesignation-model.deviceName",
+        "short": "The name of the device.",
+        "definition": "The name of the device.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-DeviceDesignation-model.deviceName",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-DeviceDesignation-model.type",
+        "path": "obf-DeviceDesignation-model.type",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0332307"
+          }
+        ],
+        "short": "A code describing the item at a greater level of detail.",
+        "definition": "A code describing the item at a greater level of detail.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-DeviceDesignation-model.type",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/device-nametype"
+          }
+        }
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "obf-DeviceDesignation-model",
+        "path": "obf-DeviceDesignation-model",
+        "definition": "A name of the device as given by the manufacturer, along with a type of name.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-DeviceDesignation-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-DeviceDesignation-model.deviceName",
+        "path": "obf-DeviceDesignation-model.deviceName",
+        "short": "The name of the device.",
+        "definition": "The name of the device.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-DeviceDesignation-model.deviceName",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-DeviceDesignation-model.type",
+        "path": "obf-DeviceDesignation-model.type",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0332307"
+          }
+        ],
+        "short": "A code describing the item at a greater level of detail.",
+        "definition": "A code describing the item at a greater level of detail.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-DeviceDesignation-model.type",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/device-nametype"
+          }
+        }
+      }
+    ]
+  }
+}

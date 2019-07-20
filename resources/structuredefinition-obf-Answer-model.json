@@ -1,0 +1,218 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "obf-Answer-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>Answer Logical Model</b></p>\n  <p>The respondent&#039;s answer(s) to the question.</p>\n</div>"
+  },
+  "url": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Answer-model",
+  "identifier": [
+    {
+      "system": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig",
+      "value": "obf.Answer"
+    }
+  ],
+  "name": "Answer",
+  "title": "obf-Answer",
+  "status": "draft",
+  "date": "2019-07-20",
+  "publisher": "Hl7",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://BreastRadReport.com"
+        }
+      ]
+    }
+  ],
+  "description": "The respondent's answer(s) to the question.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "obf-Answer-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "obf-Answer-model",
+        "path": "obf-Answer-model",
+        "definition": "The respondent's answer(s) to the question.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Answer-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Answer-model.answerValue[x]",
+        "path": "obf-Answer-model.answerValue[x]",
+        "short": "The answer to a question.",
+        "definition": "The answer to a question.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Answer-model.answerValue[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "boolean"
+          },
+          {
+            "code": "decimal"
+          },
+          {
+            "code": "integer"
+          },
+          {
+            "code": "date"
+          },
+          {
+            "code": "dateTime"
+          },
+          {
+            "code": "time"
+          },
+          {
+            "code": "string"
+          },
+          {
+            "code": "uri"
+          },
+          {
+            "code": "Coding"
+          },
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-Quantity-model"
+          },
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Resource-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Answer-model.questionnaireResponseItem",
+        "path": "obf-Answer-model.questionnaireResponseItem",
+        "short": "Questions and sections within the Questionnaire.",
+        "definition": "Questions and sections within the Questionnaire.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Answer-model.questionnaireResponseItem",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-QuestionnaireResponseItem-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "obf-Answer-model",
+        "path": "obf-Answer-model",
+        "definition": "The respondent's answer(s) to the question.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Answer-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Answer-model.answerValue[x]",
+        "path": "obf-Answer-model.answerValue[x]",
+        "short": "The answer to a question.",
+        "definition": "The answer to a question.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Answer-model.answerValue[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "boolean"
+          },
+          {
+            "code": "decimal"
+          },
+          {
+            "code": "integer"
+          },
+          {
+            "code": "date"
+          },
+          {
+            "code": "dateTime"
+          },
+          {
+            "code": "time"
+          },
+          {
+            "code": "string"
+          },
+          {
+            "code": "uri"
+          },
+          {
+            "code": "Coding"
+          },
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-Quantity-model"
+          },
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Resource-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Answer-model.questionnaireResponseItem",
+        "path": "obf-Answer-model.questionnaireResponseItem",
+        "short": "Questions and sections within the Questionnaire.",
+        "definition": "Questions and sections within the Questionnaire.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Answer-model.questionnaireResponseItem",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-QuestionnaireResponseItem-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

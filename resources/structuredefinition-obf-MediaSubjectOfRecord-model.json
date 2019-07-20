@@ -1,0 +1,150 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "obf-MediaSubjectOfRecord-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>MediaSubjectOfRecord Logical Model</b></p>\n  <p>A choice of Patient, Practitioner, Group, Device or Specimen. These are choices for subject of Media resource.</p>\n</div>"
+  },
+  "url": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-MediaSubjectOfRecord-model",
+  "identifier": [
+    {
+      "system": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig",
+      "value": "obf.MediaSubjectOfRecord"
+    }
+  ],
+  "name": "MediaSubjectOfRecord",
+  "title": "obf-MediaSubjectOfRecord",
+  "status": "draft",
+  "date": "2019-07-20",
+  "publisher": "Hl7",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://BreastRadReport.com"
+        }
+      ]
+    }
+  ],
+  "description": "A choice of Patient, Practitioner, Group, Device or Specimen. These are choices for subject of Media resource.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "obf-MediaSubjectOfRecord-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "obf-MediaSubjectOfRecord-model",
+        "path": "obf-MediaSubjectOfRecord-model",
+        "definition": "A choice of Patient, Practitioner, Group, Device or Specimen. These are choices for subject of Media resource.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-MediaSubjectOfRecord-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-MediaSubjectOfRecord-model.value[x]",
+        "path": "obf-MediaSubjectOfRecord-model.value[x]",
+        "short": "Choice of types representing a choice of Patient, Practitioner, Group, Device or Specimen. These are choices for subject of Media resource.",
+        "definition": "Choice of types representing a choice of Patient, Practitioner, Group, Device or Specimen. These are choices for subject of Media resource.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-MediaSubjectOfRecord-model.value[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Patient-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Practitioner-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Group-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Device-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Specimen-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "obf-MediaSubjectOfRecord-model",
+        "path": "obf-MediaSubjectOfRecord-model",
+        "definition": "A choice of Patient, Practitioner, Group, Device or Specimen. These are choices for subject of Media resource.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-MediaSubjectOfRecord-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-MediaSubjectOfRecord-model.value[x]",
+        "path": "obf-MediaSubjectOfRecord-model.value[x]",
+        "short": "Choice of types representing a choice of Patient, Practitioner, Group, Device or Specimen. These are choices for subject of Media resource.",
+        "definition": "Choice of types representing a choice of Patient, Practitioner, Group, Device or Specimen. These are choices for subject of Media resource.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-MediaSubjectOfRecord-model.value[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Patient-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Practitioner-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Group-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Device-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Specimen-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

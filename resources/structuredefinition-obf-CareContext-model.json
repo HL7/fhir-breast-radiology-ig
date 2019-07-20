@@ -1,0 +1,126 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "obf-CareContext-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>CareContext Logical Model</b></p>\n  <p>The encounter or episode of care</p>\n</div>"
+  },
+  "url": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-CareContext-model",
+  "identifier": [
+    {
+      "system": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig",
+      "value": "obf.CareContext"
+    }
+  ],
+  "name": "CareContext",
+  "title": "obf-CareContext",
+  "status": "draft",
+  "date": "2019-07-20",
+  "publisher": "Hl7",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://BreastRadReport.com"
+        }
+      ]
+    }
+  ],
+  "description": "The encounter or episode of care",
+  "kind": "logical",
+  "abstract": false,
+  "type": "obf-CareContext-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "obf-CareContext-model",
+        "path": "obf-CareContext-model",
+        "definition": "The encounter or episode of care",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-CareContext-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-CareContext-model.value[x]",
+        "path": "obf-CareContext-model.value[x]",
+        "short": "Encounter or EpisodeOfCare representing the encounter or episode of care",
+        "definition": "Encounter or EpisodeOfCare representing the encounter or episode of care",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-CareContext-model.value[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Encounter-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-EpisodeOfCare-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "obf-CareContext-model",
+        "path": "obf-CareContext-model",
+        "definition": "The encounter or episode of care",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-CareContext-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-CareContext-model.value[x]",
+        "path": "obf-CareContext-model.value[x]",
+        "short": "Encounter or EpisodeOfCare representing the encounter or episode of care",
+        "definition": "Encounter or EpisodeOfCare representing the encounter or episode of care",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-CareContext-model.value[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Encounter-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-EpisodeOfCare-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

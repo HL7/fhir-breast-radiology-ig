@@ -1,0 +1,184 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "obf-ReferralBasedOn-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>ReferralBasedOn Logical Model</b></p>\n  <p>Indicates any plans, proposals or orders that this request is intended to satisfy - in whole or in part.</p>\n</div>"
+  },
+  "url": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-ReferralBasedOn-model",
+  "identifier": [
+    {
+      "system": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig",
+      "value": "obf.ReferralBasedOn"
+    }
+  ],
+  "name": "ReferralBasedOn",
+  "title": "obf-ReferralBasedOn",
+  "status": "draft",
+  "date": "2019-07-20",
+  "publisher": "Hl7",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://BreastRadReport.com"
+        }
+      ]
+    }
+  ],
+  "description": "Indicates any plans, proposals or orders that this request is intended to satisfy - in whole or in part.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "obf-ReferralBasedOn-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "obf-ReferralBasedOn-model",
+        "path": "obf-ReferralBasedOn-model",
+        "definition": "Indicates any plans, proposals or orders that this request is intended to satisfy - in whole or in part.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-ReferralBasedOn-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-ReferralBasedOn-model.value[x]",
+        "path": "obf-ReferralBasedOn-model.value[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "short": "ServiceRequest representing indicates any plans, proposals or orders that this request is intended to satisfy - in whole or in part.",
+        "definition": "ServiceRequest representing indicates any plans, proposals or orders that this request is intended to satisfy - in whole or in part.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-ReferralBasedOn-model.value[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-ReferralRequest-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-ReferralBasedOn-model.valueObf-ReferralRequest-model:ReferralRequest",
+        "path": "obf-ReferralBasedOn-model.valueObf-ReferralRequest-model",
+        "sliceName": "ReferralRequest",
+        "short": "Used to record and send details about a request for referral service or transfer of a patient to the care of another provider or provider organization.",
+        "definition": "Used to record and send details about a request for referral service or transfer of a patient to the care of another provider or provider organization.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-ReferralBasedOn-model.value[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-ReferralRequest-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "obf-ReferralBasedOn-model",
+        "path": "obf-ReferralBasedOn-model",
+        "definition": "Indicates any plans, proposals or orders that this request is intended to satisfy - in whole or in part.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-ReferralBasedOn-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-ReferralBasedOn-model.value[x]",
+        "path": "obf-ReferralBasedOn-model.value[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "short": "ServiceRequest representing indicates any plans, proposals or orders that this request is intended to satisfy - in whole or in part.",
+        "definition": "ServiceRequest representing indicates any plans, proposals or orders that this request is intended to satisfy - in whole or in part.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-ReferralBasedOn-model.value[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-ReferralRequest-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-ReferralBasedOn-model.valueObf-ReferralRequest-model:ReferralRequest",
+        "path": "obf-ReferralBasedOn-model.valueObf-ReferralRequest-model",
+        "sliceName": "ReferralRequest",
+        "short": "Used to record and send details about a request for referral service or transfer of a patient to the care of another provider or provider organization.",
+        "definition": "Used to record and send details about a request for referral service or transfer of a patient to the care of another provider or provider organization.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-ReferralBasedOn-model.value[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-ReferralRequest-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,142 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "obf-MedicationInformationSource-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>MedicationInformationSource Logical Model</b></p>\n  <p>The informant for this medication statement.</p>\n</div>"
+  },
+  "url": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-MedicationInformationSource-model",
+  "identifier": [
+    {
+      "system": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig",
+      "value": "obf.MedicationInformationSource"
+    }
+  ],
+  "name": "MedicationInformationSource",
+  "title": "obf-MedicationInformationSource",
+  "status": "draft",
+  "date": "2019-07-20",
+  "publisher": "Hl7",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://BreastRadReport.com"
+        }
+      ]
+    }
+  ],
+  "description": "The informant for this medication statement.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "obf-MedicationInformationSource-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "obf-MedicationInformationSource-model",
+        "path": "obf-MedicationInformationSource-model",
+        "definition": "The informant for this medication statement.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-MedicationInformationSource-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-MedicationInformationSource-model.value[x]",
+        "path": "obf-MedicationInformationSource-model.value[x]",
+        "short": "Choice of types representing the informant for this medication statement.",
+        "definition": "Choice of types representing the informant for this medication statement.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-MedicationInformationSource-model.value[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Patient-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Practitioner-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-RelatedPerson-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Organization-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "obf-MedicationInformationSource-model",
+        "path": "obf-MedicationInformationSource-model",
+        "definition": "The informant for this medication statement.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-MedicationInformationSource-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-MedicationInformationSource-model.value[x]",
+        "path": "obf-MedicationInformationSource-model.value[x]",
+        "short": "Choice of types representing the informant for this medication statement.",
+        "definition": "Choice of types representing the informant for this medication statement.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-MedicationInformationSource-model.value[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Patient-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Practitioner-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-RelatedPerson-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Organization-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

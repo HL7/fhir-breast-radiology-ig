@@ -1,0 +1,1242 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "obf-Patient-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>Patient Logical Model</b></p>\n  <p>A person in the role of a patient. Sometimes, the patient is not the subject of information in a clinical statement where the Patient is the SubjectOfRecord.\n\nCompatibility: Lies at the intersection of Argonaut and US Core Patient. MaritalStatus has a required binding in Argonaut, but an extensible binding in US-Core. To be feasible under both DSTU2 Argonaut and STU3 US-Core, the required binding strength is adopted.</p>\n</div>"
+  },
+  "url": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Patient-model",
+  "identifier": [
+    {
+      "system": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig",
+      "value": "obf.Patient"
+    }
+  ],
+  "name": "Patient",
+  "title": "obf-Patient",
+  "status": "draft",
+  "date": "2019-07-20",
+  "publisher": "Hl7",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://BreastRadReport.com"
+        }
+      ]
+    }
+  ],
+  "description": "A person in the role of a patient. Sometimes, the patient is not the subject of information in a clinical statement where the Patient is the SubjectOfRecord.\n\nCompatibility: Lies at the intersection of Argonaut and US Core Patient. MaritalStatus has a required binding in Argonaut, but an extensible binding in US-Core. To be feasible under both DSTU2 Argonaut and STU3 US-Core, the required binding strength is adopted.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "obf-Patient-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "obf-Patient-model",
+        "path": "obf-Patient-model",
+        "definition": "A person in the role of a patient. Sometimes, the patient is not the subject of information in a clinical statement where the Patient is the SubjectOfRecord.\n\nCompatibility: Lies at the intersection of Argonaut and US Core Patient. MaritalStatus has a required binding in Argonaut, but an extensible binding in US-Core. To be feasible under both DSTU2 Argonaut and STU3 US-Core, the required binding strength is adopted.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Patient-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Patient-model.metadata",
+        "path": "obf-Patient-model.metadata",
+        "short": "Elements that belong to all information items.",
+        "definition": "Elements that belong to all information items.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Patient-model.metadata",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Metadata-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Patient-model.language",
+        "path": "obf-Patient-model.language",
+        "short": "A human language, spoken or written.",
+        "definition": "A human language, spoken or written.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Patient-model.language",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Patient-model.implicitRules",
+        "path": "obf-Patient-model.implicitRules",
+        "short": "A set of rules under which this content was created",
+        "definition": "A set of rules under which this content was created",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Patient-model.implicitRules",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Patient-model.narrative",
+        "path": "obf-Patient-model.narrative",
+        "short": "A human-readable narrative, potentially including images, that contains a summary of the resource, and may be used to represent the content of the resource to a human.",
+        "definition": "A human-readable narrative, potentially including images, that contains a summary of the resource, and may be used to represent the content of the resource to a human.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Patient-model.narrative",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Narrative-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Patient-model.status",
+        "path": "obf-Patient-model.status",
+        "short": "A state that relates to the workflow or interpretation of this resource. Certain status values can modify the meaning of the resource, for example, entered-in-error. When a boolean value is used, Status of true indicates the record is active, false means inactive.",
+        "definition": "A state that relates to the workflow or interpretation of this resource. Certain status values can modify the meaning of the resource, for example, entered-in-error. When a boolean value is used, Status of true indicates the record is active, false means inactive.",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "obf-Patient-model.status",
+          "min": 0,
+          "max": "0"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Patient-model.identifier",
+        "path": "obf-Patient-model.identifier",
+        "short": "Business identifier or external id for this resource.",
+        "definition": "Business identifier or external id for this resource.",
+        "min": 1,
+        "max": "*",
+        "base": {
+          "path": "obf-Patient-model.identifier",
+          "min": 1,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-Identifier-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Patient-model.active",
+        "path": "obf-Patient-model.active",
+        "short": "Whether the record is in use (true) or retired (false).",
+        "definition": "Whether the record is in use (true) or retired (false).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Patient-model.active",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Patient-model.humanName",
+        "path": "obf-Patient-model.humanName",
+        "short": "A name used by a human being, written as it would be typically expressed. May include a breakdown of the various elements of the name (family name, given name, etc.).",
+        "definition": "A name used by a human being, written as it would be typically expressed. May include a breakdown of the various elements of the name (family name, given name, etc.).",
+        "min": 1,
+        "max": "*",
+        "base": {
+          "path": "obf-Patient-model.humanName",
+          "min": 1,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-HumanName-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Patient-model.contactPoint",
+        "path": "obf-Patient-model.contactPoint",
+        "short": "An electronic means of contacting an organization or individual.",
+        "definition": "An electronic means of contacting an organization or individual.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Patient-model.contactPoint",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-ContactPoint-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Patient-model.administrativeGender",
+        "path": "obf-Patient-model.administrativeGender",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C1550327"
+          }
+        ],
+        "short": "A gender classification used for administrative purposes. Administrative gender is not necessarily the same as a biological description or a gender identity. This attribute does not include terms related to clinical gender.",
+        "definition": "A gender classification used for administrative purposes. Administrative gender is not necessarily the same as a biological description or a gender identity. This attribute does not include terms related to clinical gender.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-Patient-model.administrativeGender",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/administrative-gender"
+          }
+        }
+      },
+      {
+        "id": "obf-Patient-model.birthDate[x]",
+        "path": "obf-Patient-model.birthDate[x]",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C2919018"
+          },
+          {
+            "system": "http://loinc.org",
+            "code": "21112-8"
+          }
+        ],
+        "short": "A date of birth or approximate year or period (year or date range), if estimated.",
+        "definition": "A date of birth or approximate year or period (year or date range), if estimated.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Patient-model.birthDate[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "date"
+          },
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-TimePeriod-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Patient-model.deceased[x]",
+        "path": "obf-Patient-model.deceased[x]",
+        "short": "An indication that the person is no longer living, given by a date of death, or boolean value. The latter, when true, indicates the person is deceased.",
+        "definition": "An indication that the person is no longer living, given by a date of death, or boolean value. The latter, when true, indicates the person is deceased.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Patient-model.deceased[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "boolean"
+          },
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Patient-model.address",
+        "path": "obf-Patient-model.address",
+        "short": "An address expressed using postal conventions (as opposed to GPS or other location definition formats). This data type may be used to convey addresses for use in delivering mail as well as for visiting locations and which might not be valid for mail delivery. There are a variety of postal address formats defined around the world. (Source: HL7 FHIR).",
+        "definition": "An address expressed using postal conventions (as opposed to GPS or other location definition formats). This data type may be used to convey addresses for use in delivering mail as well as for visiting locations and which might not be valid for mail delivery. There are a variety of postal address formats defined around the world. (Source: HL7 FHIR).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Patient-model.address",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-Address-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Patient-model.maritalStatus",
+        "path": "obf-Patient-model.maritalStatus",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0024819"
+          }
+        ],
+        "short": "The most recent marital status of a person.",
+        "definition": "The most recent marital status of a person.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Patient-model.maritalStatus",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/marital-status"
+          }
+        }
+      },
+      {
+        "id": "obf-Patient-model.multipleBirth[x]",
+        "path": "obf-Patient-model.multipleBirth[x]",
+        "short": "If the person was part of a multiple birth event, and if so in which order.",
+        "definition": "If the person was part of a multiple birth event, and if so in which order.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Patient-model.multipleBirth[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "boolean"
+          },
+          {
+            "code": "integer"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Patient-model.photographicImage",
+        "path": "obf-Patient-model.photographicImage",
+        "code": [
+          {
+            "system": "http://loinc.org",
+            "code": "72170-4",
+            "display": "Photographic image\t[Attachment]"
+          }
+        ],
+        "short": "An attachment of a photographic type. The mime type should be either bmp, gif, jpeg, png, svg, or tiff.",
+        "definition": "An attachment of a photographic type. The mime type should be either bmp, gif, jpeg, png, svg, or tiff.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Patient-model.photographicImage",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-PhotographicImage-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Patient-model.contactPerson",
+        "path": "obf-Patient-model.contactPerson",
+        "short": "A contact party (e.g. guardian, partner, friend) for the person",
+        "definition": "A contact party (e.g. guardian, partner, friend) for the person",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Patient-model.contactPerson",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-ContactPerson-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Patient-model.communication",
+        "path": "obf-Patient-model.communication",
+        "short": "Language used for communication by a human, either the subject of record, parent, or other involved person.",
+        "definition": "Language used for communication by a human, either the subject of record, parent, or other involved person.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Patient-model.communication",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Communication-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Patient-model.generalPractitioner[x]",
+        "path": "obf-Patient-model.generalPractitioner[x]",
+        "short": "Patient's nominated primary care provider.",
+        "definition": "Patient's nominated primary care provider.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Patient-model.generalPractitioner[x]",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Organization-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Practitioner-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Patient-model.managingOrganization",
+        "path": "obf-Patient-model.managingOrganization",
+        "short": "The organization that manages a patient, activity, facility, document, or service provision.",
+        "definition": "The organization that manages a patient, activity, facility, document, or service provision.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Patient-model.managingOrganization",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Organization-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Patient-model.samePersonAs",
+        "path": "obf-Patient-model.samePersonAs",
+        "short": "Link to another patient resource that concerns the same actual patient.",
+        "definition": "Link to another patient resource that concerns the same actual patient.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Patient-model.samePersonAs",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-SamePersonAs-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Patient-model.birthSex",
+        "path": "obf-Patient-model.birthSex",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C4086849"
+          }
+        ],
+        "short": "Administrative sex assigned at birth and recorded on birth certificate.",
+        "definition": "Administrative sex assigned at birth and recorded on birth certificate.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Patient-model.birthSex",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/us/core/ValueSet/us-core-birthsex"
+          }
+        }
+      },
+      {
+        "id": "obf-Patient-model.race",
+        "path": "obf-Patient-model.race",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0034510"
+          }
+        ],
+        "short": "Subjective association of a person with a named category of humans sharing common history, traits, place of family origin, nationality, tribe, or other inherited background.",
+        "definition": "Subjective association of a person with a named category of humans sharing common history, traits, place of family origin, nationality, tribe, or other inherited background.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Patient-model.race",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Race-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Patient-model.ethnicity",
+        "path": "obf-Patient-model.ethnicity",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0015031"
+          }
+        ],
+        "short": "Indicator of Hispanic or Latino origin.",
+        "definition": "Indicator of Hispanic or Latino origin.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Patient-model.ethnicity",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Ethnicity-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "obf-Patient-model",
+        "path": "obf-Patient-model",
+        "definition": "A person in the role of a patient. Sometimes, the patient is not the subject of information in a clinical statement where the Patient is the SubjectOfRecord.\n\nCompatibility: Lies at the intersection of Argonaut and US Core Patient. MaritalStatus has a required binding in Argonaut, but an extensible binding in US-Core. To be feasible under both DSTU2 Argonaut and STU3 US-Core, the required binding strength is adopted.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Patient-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Patient-model.metadata",
+        "path": "obf-Patient-model.metadata",
+        "short": "Elements that belong to all information items.",
+        "definition": "Elements that belong to all information items.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Patient-model.metadata",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Metadata-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Patient-model.language",
+        "path": "obf-Patient-model.language",
+        "short": "A human language, spoken or written.",
+        "definition": "A human language, spoken or written.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Patient-model.language",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Patient-model.implicitRules",
+        "path": "obf-Patient-model.implicitRules",
+        "short": "A set of rules under which this content was created",
+        "definition": "A set of rules under which this content was created",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Patient-model.implicitRules",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Patient-model.narrative",
+        "path": "obf-Patient-model.narrative",
+        "short": "A human-readable narrative, potentially including images, that contains a summary of the resource, and may be used to represent the content of the resource to a human.",
+        "definition": "A human-readable narrative, potentially including images, that contains a summary of the resource, and may be used to represent the content of the resource to a human.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Patient-model.narrative",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Narrative-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Patient-model.status",
+        "path": "obf-Patient-model.status",
+        "short": "A state that relates to the workflow or interpretation of this resource. Certain status values can modify the meaning of the resource, for example, entered-in-error. When a boolean value is used, Status of true indicates the record is active, false means inactive.",
+        "definition": "A state that relates to the workflow or interpretation of this resource. Certain status values can modify the meaning of the resource, for example, entered-in-error. When a boolean value is used, Status of true indicates the record is active, false means inactive.",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "obf-Patient-model.status",
+          "min": 0,
+          "max": "0"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Patient-model.identifier",
+        "path": "obf-Patient-model.identifier",
+        "short": "Business identifier or external id for this resource.",
+        "definition": "Business identifier or external id for this resource.",
+        "min": 1,
+        "max": "*",
+        "base": {
+          "path": "obf-Patient-model.identifier",
+          "min": 1,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-Identifier-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Patient-model.active",
+        "path": "obf-Patient-model.active",
+        "short": "Whether the record is in use (true) or retired (false).",
+        "definition": "Whether the record is in use (true) or retired (false).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Patient-model.active",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Patient-model.humanName",
+        "path": "obf-Patient-model.humanName",
+        "short": "A name used by a human being, written as it would be typically expressed. May include a breakdown of the various elements of the name (family name, given name, etc.).",
+        "definition": "A name used by a human being, written as it would be typically expressed. May include a breakdown of the various elements of the name (family name, given name, etc.).",
+        "min": 1,
+        "max": "*",
+        "base": {
+          "path": "obf-Patient-model.humanName",
+          "min": 1,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-HumanName-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Patient-model.contactPoint",
+        "path": "obf-Patient-model.contactPoint",
+        "short": "An electronic means of contacting an organization or individual.",
+        "definition": "An electronic means of contacting an organization or individual.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Patient-model.contactPoint",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-ContactPoint-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Patient-model.administrativeGender",
+        "path": "obf-Patient-model.administrativeGender",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C1550327"
+          }
+        ],
+        "short": "A gender classification used for administrative purposes. Administrative gender is not necessarily the same as a biological description or a gender identity. This attribute does not include terms related to clinical gender.",
+        "definition": "A gender classification used for administrative purposes. Administrative gender is not necessarily the same as a biological description or a gender identity. This attribute does not include terms related to clinical gender.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-Patient-model.administrativeGender",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/administrative-gender"
+          }
+        }
+      },
+      {
+        "id": "obf-Patient-model.birthDate[x]",
+        "path": "obf-Patient-model.birthDate[x]",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C2919018"
+          },
+          {
+            "system": "http://loinc.org",
+            "code": "21112-8"
+          }
+        ],
+        "short": "A date of birth or approximate year or period (year or date range), if estimated.",
+        "definition": "A date of birth or approximate year or period (year or date range), if estimated.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Patient-model.birthDate[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "date"
+          },
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-TimePeriod-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Patient-model.deceased[x]",
+        "path": "obf-Patient-model.deceased[x]",
+        "short": "An indication that the person is no longer living, given by a date of death, or boolean value. The latter, when true, indicates the person is deceased.",
+        "definition": "An indication that the person is no longer living, given by a date of death, or boolean value. The latter, when true, indicates the person is deceased.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Patient-model.deceased[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "boolean"
+          },
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Patient-model.address",
+        "path": "obf-Patient-model.address",
+        "short": "An address expressed using postal conventions (as opposed to GPS or other location definition formats). This data type may be used to convey addresses for use in delivering mail as well as for visiting locations and which might not be valid for mail delivery. There are a variety of postal address formats defined around the world. (Source: HL7 FHIR).",
+        "definition": "An address expressed using postal conventions (as opposed to GPS or other location definition formats). This data type may be used to convey addresses for use in delivering mail as well as for visiting locations and which might not be valid for mail delivery. There are a variety of postal address formats defined around the world. (Source: HL7 FHIR).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Patient-model.address",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-Address-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Patient-model.maritalStatus",
+        "path": "obf-Patient-model.maritalStatus",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0024819"
+          }
+        ],
+        "short": "The most recent marital status of a person.",
+        "definition": "The most recent marital status of a person.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Patient-model.maritalStatus",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/marital-status"
+          }
+        }
+      },
+      {
+        "id": "obf-Patient-model.multipleBirth[x]",
+        "path": "obf-Patient-model.multipleBirth[x]",
+        "short": "If the person was part of a multiple birth event, and if so in which order.",
+        "definition": "If the person was part of a multiple birth event, and if so in which order.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Patient-model.multipleBirth[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "boolean"
+          },
+          {
+            "code": "integer"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Patient-model.photographicImage",
+        "path": "obf-Patient-model.photographicImage",
+        "code": [
+          {
+            "system": "http://loinc.org",
+            "code": "72170-4",
+            "display": "Photographic image\t[Attachment]"
+          }
+        ],
+        "short": "An attachment of a photographic type. The mime type should be either bmp, gif, jpeg, png, svg, or tiff.",
+        "definition": "An attachment of a photographic type. The mime type should be either bmp, gif, jpeg, png, svg, or tiff.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Patient-model.photographicImage",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-PhotographicImage-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Patient-model.contactPerson",
+        "path": "obf-Patient-model.contactPerson",
+        "short": "A contact party (e.g. guardian, partner, friend) for the person",
+        "definition": "A contact party (e.g. guardian, partner, friend) for the person",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Patient-model.contactPerson",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-ContactPerson-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Patient-model.communication",
+        "path": "obf-Patient-model.communication",
+        "short": "Language used for communication by a human, either the subject of record, parent, or other involved person.",
+        "definition": "Language used for communication by a human, either the subject of record, parent, or other involved person.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Patient-model.communication",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Communication-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Patient-model.generalPractitioner[x]",
+        "path": "obf-Patient-model.generalPractitioner[x]",
+        "short": "Patient's nominated primary care provider.",
+        "definition": "Patient's nominated primary care provider.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Patient-model.generalPractitioner[x]",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Organization-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Practitioner-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Patient-model.managingOrganization",
+        "path": "obf-Patient-model.managingOrganization",
+        "short": "The organization that manages a patient, activity, facility, document, or service provision.",
+        "definition": "The organization that manages a patient, activity, facility, document, or service provision.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Patient-model.managingOrganization",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Organization-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Patient-model.samePersonAs",
+        "path": "obf-Patient-model.samePersonAs",
+        "short": "Link to another patient resource that concerns the same actual patient.",
+        "definition": "Link to another patient resource that concerns the same actual patient.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Patient-model.samePersonAs",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-SamePersonAs-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Patient-model.birthSex",
+        "path": "obf-Patient-model.birthSex",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C4086849"
+          }
+        ],
+        "short": "Administrative sex assigned at birth and recorded on birth certificate.",
+        "definition": "Administrative sex assigned at birth and recorded on birth certificate.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Patient-model.birthSex",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/us/core/ValueSet/us-core-birthsex"
+          }
+        }
+      },
+      {
+        "id": "obf-Patient-model.race",
+        "path": "obf-Patient-model.race",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0034510"
+          }
+        ],
+        "short": "Subjective association of a person with a named category of humans sharing common history, traits, place of family origin, nationality, tribe, or other inherited background.",
+        "definition": "Subjective association of a person with a named category of humans sharing common history, traits, place of family origin, nationality, tribe, or other inherited background.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Patient-model.race",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Race-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Patient-model.ethnicity",
+        "path": "obf-Patient-model.ethnicity",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0015031"
+          }
+        ],
+        "short": "Indicator of Hispanic or Latino origin.",
+        "definition": "Indicator of Hispanic or Latino origin.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Patient-model.ethnicity",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Ethnicity-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

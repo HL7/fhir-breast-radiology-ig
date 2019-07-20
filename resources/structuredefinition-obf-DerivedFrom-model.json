@@ -1,0 +1,148 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "obf-DerivedFrom-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>DerivedFrom Logical Model</b></p>\n  <p>Indicates the source of information in the case the Entry has been created by logical extension or modification of one or more source entries.</p>\n</div>"
+  },
+  "url": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-DerivedFrom-model",
+  "identifier": [
+    {
+      "system": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig",
+      "value": "obf.DerivedFrom"
+    }
+  ],
+  "name": "DerivedFrom",
+  "title": "obf-DerivedFrom",
+  "status": "draft",
+  "date": "2019-07-20",
+  "publisher": "Hl7",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://BreastRadReport.com"
+        }
+      ]
+    }
+  ],
+  "description": "Indicates the source of information in the case the Entry has been created by logical extension or modification of one or more source entries.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "obf-DerivedFrom-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "obf-DerivedFrom-model",
+        "path": "obf-DerivedFrom-model",
+        "definition": "Indicates the source of information in the case the Entry has been created by logical extension or modification of one or more source entries.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-DerivedFrom-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-DerivedFrom-model.value[x]",
+        "path": "obf-DerivedFrom-model.value[x]",
+        "short": "Choice of types representing indicates the source of information in the case the Entry has been created by logical extension or modification of one or more source entries.",
+        "definition": "Choice of types representing indicates the source of information in the case the Entry has been created by logical extension or modification of one or more source entries.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-DerivedFrom-model.value[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-DocumentReference-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Media-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-QuestionnaireResponse-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Observation-model"
+          },
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-CanonicalUrl-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "obf-DerivedFrom-model",
+        "path": "obf-DerivedFrom-model",
+        "definition": "Indicates the source of information in the case the Entry has been created by logical extension or modification of one or more source entries.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-DerivedFrom-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-DerivedFrom-model.value[x]",
+        "path": "obf-DerivedFrom-model.value[x]",
+        "short": "Choice of types representing indicates the source of information in the case the Entry has been created by logical extension or modification of one or more source entries.",
+        "definition": "Choice of types representing indicates the source of information in the case the Entry has been created by logical extension or modification of one or more source entries.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-DerivedFrom-model.value[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-DocumentReference-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Media-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-QuestionnaireResponse-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Observation-model"
+          },
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-CanonicalUrl-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

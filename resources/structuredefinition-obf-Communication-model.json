@@ -1,0 +1,158 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "obf-Communication-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>Communication Logical Model</b></p>\n  <p>Language used for communication by a human, either the subject of record, parent, or other involved person.</p>\n</div>"
+  },
+  "url": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Communication-model",
+  "identifier": [
+    {
+      "system": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig",
+      "value": "obf.Communication"
+    }
+  ],
+  "name": "Communication",
+  "title": "obf-Communication",
+  "status": "draft",
+  "date": "2019-07-20",
+  "publisher": "Hl7",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://BreastRadReport.com"
+        }
+      ]
+    }
+  ],
+  "description": "Language used for communication by a human, either the subject of record, parent, or other involved person.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "obf-Communication-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "obf-Communication-model",
+        "path": "obf-Communication-model",
+        "definition": "Language used for communication by a human, either the subject of record, parent, or other involved person.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Communication-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Communication-model.language",
+        "path": "obf-Communication-model.language",
+        "short": "A human language, spoken or written.",
+        "definition": "A human language, spoken or written.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-Communication-model.language",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Communication-model.preferred",
+        "path": "obf-Communication-model.preferred",
+        "short": "Indicates preference.",
+        "definition": "Indicates preference.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Communication-model.preferred",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "obf-Communication-model",
+        "path": "obf-Communication-model",
+        "definition": "Language used for communication by a human, either the subject of record, parent, or other involved person.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Communication-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Communication-model.language",
+        "path": "obf-Communication-model.language",
+        "short": "A human language, spoken or written.",
+        "definition": "A human language, spoken or written.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-Communication-model.language",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Communication-model.preferred",
+        "path": "obf-Communication-model.preferred",
+        "short": "Indicates preference.",
+        "definition": "Indicates preference.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Communication-model.preferred",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

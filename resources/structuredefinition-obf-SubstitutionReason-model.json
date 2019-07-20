@@ -1,0 +1,128 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "obf-SubstitutionReason-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>SubstitutionReason Logical Model</b></p>\n  <p>Why should (not) substitution be made.</p>\n</div>"
+  },
+  "url": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-SubstitutionReason-model",
+  "identifier": [
+    {
+      "system": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig",
+      "value": "obf.SubstitutionReason"
+    }
+  ],
+  "name": "SubstitutionReason",
+  "title": "obf-SubstitutionReason",
+  "status": "draft",
+  "date": "2019-07-20",
+  "publisher": "Hl7",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://BreastRadReport.com"
+        }
+      ]
+    }
+  ],
+  "description": "Why should (not) substitution be made.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "obf-SubstitutionReason-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "obf-SubstitutionReason-model",
+        "path": "obf-SubstitutionReason-model",
+        "definition": "Why should (not) substitution be made.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-SubstitutionReason-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-SubstitutionReason-model.value",
+        "path": "obf-SubstitutionReason-model.value",
+        "short": "Concept representing why should (not) substitution be made.",
+        "definition": "Concept representing why should (not) substitution be made.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-SubstitutionReason-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "example",
+          "valueSetReference": {
+            "reference": "http://terminology.hl7.org/ValueSet/v3-SubstanceAdminSubstitutionReason"
+          }
+        }
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "obf-SubstitutionReason-model",
+        "path": "obf-SubstitutionReason-model",
+        "definition": "Why should (not) substitution be made.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-SubstitutionReason-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-SubstitutionReason-model.value",
+        "path": "obf-SubstitutionReason-model.value",
+        "short": "Concept representing why should (not) substitution be made.",
+        "definition": "Concept representing why should (not) substitution be made.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-SubstitutionReason-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "example",
+          "valueSetReference": {
+            "reference": "http://terminology.hl7.org/ValueSet/v3-SubstanceAdminSubstitutionReason"
+          }
+        }
+      }
+    ]
+  }
+}

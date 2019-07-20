@@ -1,0 +1,126 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "obf-Indication-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>Indication Logical Model</b></p>\n  <p>Conditions or situations where the procedure is recommended. In the Performed context, the actual indication should be reported.</p>\n</div>"
+  },
+  "url": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Indication-model",
+  "identifier": [
+    {
+      "system": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig",
+      "value": "obf.Indication"
+    }
+  ],
+  "name": "Indication",
+  "title": "obf-Indication",
+  "status": "draft",
+  "date": "2019-07-20",
+  "publisher": "Hl7",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://BreastRadReport.com"
+        }
+      ]
+    }
+  ],
+  "description": "Conditions or situations where the procedure is recommended. In the Performed context, the actual indication should be reported.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "obf-Indication-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "obf-Indication-model",
+        "path": "obf-Indication-model",
+        "definition": "Conditions or situations where the procedure is recommended. In the Performed context, the actual indication should be reported.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Indication-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Indication-model.value[x]",
+        "path": "obf-Indication-model.value[x]",
+        "short": "Condition or Procedure representing conditions or situations where the procedure is recommended. In the Performed context, the actual indication should be reported.",
+        "definition": "Condition or Procedure representing conditions or situations where the procedure is recommended. In the Performed context, the actual indication should be reported.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-Indication-model.value[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Condition-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Procedure-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "obf-Indication-model",
+        "path": "obf-Indication-model",
+        "definition": "Conditions or situations where the procedure is recommended. In the Performed context, the actual indication should be reported.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Indication-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Indication-model.value[x]",
+        "path": "obf-Indication-model.value[x]",
+        "short": "Condition or Procedure representing conditions or situations where the procedure is recommended. In the Performed context, the actual indication should be reported.",
+        "definition": "Condition or Procedure representing conditions or situations where the procedure is recommended. In the Performed context, the actual indication should be reported.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-Indication-model.value[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Condition-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Procedure-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,388 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "obf-SpecimenContainer-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>SpecimenContainer Logical Model</b></p>\n  <p>Direct container of specimen (slide, etc.)</p>\n</div>"
+  },
+  "url": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-SpecimenContainer-model",
+  "identifier": [
+    {
+      "system": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig",
+      "value": "obf.SpecimenContainer"
+    }
+  ],
+  "name": "SpecimenContainer",
+  "title": "obf-SpecimenContainer",
+  "status": "draft",
+  "date": "2019-07-20",
+  "publisher": "Hl7",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://BreastRadReport.com"
+        }
+      ]
+    }
+  ],
+  "description": "Direct container of specimen (slide, etc.)",
+  "kind": "logical",
+  "abstract": false,
+  "type": "obf-SpecimenContainer-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "obf-SpecimenContainer-model",
+        "path": "obf-SpecimenContainer-model",
+        "definition": "Direct container of specimen (slide, etc.)",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-SpecimenContainer-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-SpecimenContainer-model.identifier",
+        "path": "obf-SpecimenContainer-model.identifier",
+        "short": "Business identifier or external id for this resource.",
+        "definition": "Business identifier or external id for this resource.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-SpecimenContainer-model.identifier",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-Identifier-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-SpecimenContainer-model.type",
+        "path": "obf-SpecimenContainer-model.type",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0332307"
+          }
+        ],
+        "short": "A code describing the item at a greater level of detail.",
+        "definition": "A code describing the item at a greater level of detail.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-SpecimenContainer-model.type",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-SpecimenContainer-model.commentOrDescription",
+        "path": "obf-SpecimenContainer-model.commentOrDescription",
+        "short": "A text note containing additional details, explanation, description, comment, or summarization.",
+        "definition": "A text note containing additional details, explanation, description, comment, or summarization.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-SpecimenContainer-model.commentOrDescription",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-SpecimenContainer-model.capacity",
+        "path": "obf-SpecimenContainer-model.capacity",
+        "short": "Container volume or size.",
+        "definition": "Container volume or size.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-SpecimenContainer-model.capacity",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-SimpleQuantity-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-SpecimenContainer-model.specimenQuantity",
+        "path": "obf-SpecimenContainer-model.specimenQuantity",
+        "short": "Quantity of specimen within container.",
+        "definition": "Quantity of specimen within container.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-SpecimenContainer-model.specimenQuantity",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-SimpleQuantity-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-SpecimenContainer-model.additive[x]",
+        "path": "obf-SpecimenContainer-model.additive[x]",
+        "short": "Additive associated with container.",
+        "definition": "Additive associated with container.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-SpecimenContainer-model.additive[x]",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Substance-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-SpecimenContainer-model.sequenceNumber",
+        "path": "obf-SpecimenContainer-model.sequenceNumber",
+        "short": "The sequence number for this specimen in a collection of specimens.",
+        "definition": "The sequence number for this specimen in a collection of specimens.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-SpecimenContainer-model.sequenceNumber",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "obf-SpecimenContainer-model",
+        "path": "obf-SpecimenContainer-model",
+        "definition": "Direct container of specimen (slide, etc.)",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-SpecimenContainer-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-SpecimenContainer-model.identifier",
+        "path": "obf-SpecimenContainer-model.identifier",
+        "short": "Business identifier or external id for this resource.",
+        "definition": "Business identifier or external id for this resource.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-SpecimenContainer-model.identifier",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-Identifier-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-SpecimenContainer-model.type",
+        "path": "obf-SpecimenContainer-model.type",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0332307"
+          }
+        ],
+        "short": "A code describing the item at a greater level of detail.",
+        "definition": "A code describing the item at a greater level of detail.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-SpecimenContainer-model.type",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-SpecimenContainer-model.commentOrDescription",
+        "path": "obf-SpecimenContainer-model.commentOrDescription",
+        "short": "A text note containing additional details, explanation, description, comment, or summarization.",
+        "definition": "A text note containing additional details, explanation, description, comment, or summarization.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-SpecimenContainer-model.commentOrDescription",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-SpecimenContainer-model.capacity",
+        "path": "obf-SpecimenContainer-model.capacity",
+        "short": "Container volume or size.",
+        "definition": "Container volume or size.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-SpecimenContainer-model.capacity",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-SimpleQuantity-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-SpecimenContainer-model.specimenQuantity",
+        "path": "obf-SpecimenContainer-model.specimenQuantity",
+        "short": "Quantity of specimen within container.",
+        "definition": "Quantity of specimen within container.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-SpecimenContainer-model.specimenQuantity",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-SimpleQuantity-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-SpecimenContainer-model.additive[x]",
+        "path": "obf-SpecimenContainer-model.additive[x]",
+        "short": "Additive associated with container.",
+        "definition": "Additive associated with container.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-SpecimenContainer-model.additive[x]",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Substance-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-SpecimenContainer-model.sequenceNumber",
+        "path": "obf-SpecimenContainer-model.sequenceNumber",
+        "short": "The sequence number for this specimen in a collection of specimens.",
+        "definition": "The sequence number for this specimen in a collection of specimens.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-SpecimenContainer-model.sequenceNumber",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

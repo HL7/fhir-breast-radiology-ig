@@ -1,0 +1,128 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "breastrad-MassTypes-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>MassTypes Logical Model</b></p>\n  <p>Mass Types</p>\n</div>"
+  },
+  "url": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/breastrad-MassTypes-model",
+  "identifier": [
+    {
+      "system": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig",
+      "value": "breastrad.MassTypes"
+    }
+  ],
+  "name": "MassTypes",
+  "title": "breastrad-MassTypes",
+  "status": "draft",
+  "date": "2019-07-20",
+  "publisher": "Hl7",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://BreastRadReport.com"
+        }
+      ]
+    }
+  ],
+  "description": "Mass Types",
+  "kind": "logical",
+  "abstract": false,
+  "type": "breastrad-MassTypes-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "breastrad-MassTypes-model",
+        "path": "breastrad-MassTypes-model",
+        "definition": "Mass Types",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "breastrad-MassTypes-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "breastrad-MassTypes-model.value",
+        "path": "breastrad-MassTypes-model.value",
+        "short": "Concept representing mass Types",
+        "definition": "Concept representing mass Types",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "breastrad-MassTypes-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig/breastrad/vs/MassTypesVs"
+          }
+        }
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "breastrad-MassTypes-model",
+        "path": "breastrad-MassTypes-model",
+        "definition": "Mass Types",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "breastrad-MassTypes-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "breastrad-MassTypes-model.value",
+        "path": "breastrad-MassTypes-model.value",
+        "short": "Concept representing mass Types",
+        "definition": "Concept representing mass Types",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "breastrad-MassTypes-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig/breastrad/vs/MassTypesVs"
+          }
+        }
+      }
+    ]
+  }
+}

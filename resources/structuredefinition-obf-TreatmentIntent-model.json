@@ -1,0 +1,135 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "obf-TreatmentIntent-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>TreatmentIntent Logical Model</b></p>\n  <p>The purpose of a treatment.</p>\n</div>"
+  },
+  "url": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-TreatmentIntent-model",
+  "identifier": [
+    {
+      "system": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig",
+      "value": "obf.TreatmentIntent"
+    }
+  ],
+  "name": "TreatmentIntent",
+  "title": "obf-TreatmentIntent",
+  "status": "draft",
+  "date": "2019-07-20",
+  "publisher": "Hl7",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://BreastRadReport.com"
+        }
+      ]
+    }
+  ],
+  "description": "The purpose of a treatment.",
+  "keyword": [
+    {
+      "system": "http://snomed.info/sct",
+      "code": "395077000",
+      "display": "Treatment intent (situation)"
+    }
+  ],
+  "kind": "logical",
+  "abstract": false,
+  "type": "obf-TreatmentIntent-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "obf-TreatmentIntent-model",
+        "path": "obf-TreatmentIntent-model",
+        "definition": "The purpose of a treatment.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-TreatmentIntent-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-TreatmentIntent-model.value",
+        "path": "obf-TreatmentIntent-model.value",
+        "short": "Concept representing the purpose of a treatment.",
+        "definition": "Concept representing the purpose of a treatment.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-TreatmentIntent-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig/obf/vs/TreatmentIntentVS"
+          }
+        }
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "obf-TreatmentIntent-model",
+        "path": "obf-TreatmentIntent-model",
+        "definition": "The purpose of a treatment.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-TreatmentIntent-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-TreatmentIntent-model.value",
+        "path": "obf-TreatmentIntent-model.value",
+        "short": "Concept representing the purpose of a treatment.",
+        "definition": "Concept representing the purpose of a treatment.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-TreatmentIntent-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig/obf/vs/TreatmentIntentVS"
+          }
+        }
+      }
+    ]
+  }
+}

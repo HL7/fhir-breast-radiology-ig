@@ -1,0 +1,272 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "obf-GroupCharacteristic-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>GroupCharacteristic Logical Model</b></p>\n  <p>An inclusion or exclusion criterion as part of defining a cohort.</p>\n</div>"
+  },
+  "url": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-GroupCharacteristic-model",
+  "identifier": [
+    {
+      "system": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig",
+      "value": "obf.GroupCharacteristic"
+    }
+  ],
+  "name": "GroupCharacteristic",
+  "title": "obf-GroupCharacteristic",
+  "status": "draft",
+  "date": "2019-07-20",
+  "publisher": "Hl7",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://BreastRadReport.com"
+        }
+      ]
+    }
+  ],
+  "description": "An inclusion or exclusion criterion as part of defining a cohort.",
+  "keyword": [
+    {
+      "system": "http://ncimeta.nci.nih.gov",
+      "code": "C0599755"
+    }
+  ],
+  "kind": "logical",
+  "abstract": false,
+  "type": "obf-GroupCharacteristic-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "obf-GroupCharacteristic-model",
+        "path": "obf-GroupCharacteristic-model",
+        "definition": "An inclusion or exclusion criterion as part of defining a cohort.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-GroupCharacteristic-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-GroupCharacteristic-model.code",
+        "path": "obf-GroupCharacteristic-model.code",
+        "short": "The main type identifier for a lab, procedure, condition, etc., usually drawn from a controlled vocabulary.",
+        "definition": "The main type identifier for a lab, procedure, condition, etc., usually drawn from a controlled vocabulary.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-GroupCharacteristic-model.code",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-GroupCharacteristic-model.groupCharacteristicValue[x]",
+        "path": "obf-GroupCharacteristic-model.groupCharacteristicValue[x]",
+        "short": "The value or range of the characteristic.",
+        "definition": "The value or range of the characteristic.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-GroupCharacteristic-model.groupCharacteristicValue[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "boolean"
+          },
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-Quantity-model"
+          },
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-Range-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-GroupCharacteristic-model.excludeFlag",
+        "path": "obf-GroupCharacteristic-model.excludeFlag",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0680251"
+          }
+        ],
+        "short": "If true, exclude the subjects that match the criterion.",
+        "definition": "If true, exclude the subjects that match the criterion.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-GroupCharacteristic-model.excludeFlag",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-GroupCharacteristic-model.timePeriod",
+        "path": "obf-GroupCharacteristic-model.timePeriod",
+        "short": "A period of time defined by a start and end time, date, or year.",
+        "definition": "A period of time defined by a start and end time, date, or year.\nIf the start date/time is missing, the start of the period is not known. If the end date/time is missing, it means that the period is ongoing.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-GroupCharacteristic-model.timePeriod",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-TimePeriod-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "obf-GroupCharacteristic-model",
+        "path": "obf-GroupCharacteristic-model",
+        "definition": "An inclusion or exclusion criterion as part of defining a cohort.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-GroupCharacteristic-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-GroupCharacteristic-model.code",
+        "path": "obf-GroupCharacteristic-model.code",
+        "short": "The main type identifier for a lab, procedure, condition, etc., usually drawn from a controlled vocabulary.",
+        "definition": "The main type identifier for a lab, procedure, condition, etc., usually drawn from a controlled vocabulary.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-GroupCharacteristic-model.code",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-GroupCharacteristic-model.groupCharacteristicValue[x]",
+        "path": "obf-GroupCharacteristic-model.groupCharacteristicValue[x]",
+        "short": "The value or range of the characteristic.",
+        "definition": "The value or range of the characteristic.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-GroupCharacteristic-model.groupCharacteristicValue[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "boolean"
+          },
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-Quantity-model"
+          },
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-Range-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-GroupCharacteristic-model.excludeFlag",
+        "path": "obf-GroupCharacteristic-model.excludeFlag",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0680251"
+          }
+        ],
+        "short": "If true, exclude the subjects that match the criterion.",
+        "definition": "If true, exclude the subjects that match the criterion.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-GroupCharacteristic-model.excludeFlag",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-GroupCharacteristic-model.timePeriod",
+        "path": "obf-GroupCharacteristic-model.timePeriod",
+        "short": "A period of time defined by a start and end time, date, or year.",
+        "definition": "A period of time defined by a start and end time, date, or year.\nIf the start date/time is missing, the start of the period is not known. If the end date/time is missing, it means that the period is ongoing.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-GroupCharacteristic-model.timePeriod",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-TimePeriod-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

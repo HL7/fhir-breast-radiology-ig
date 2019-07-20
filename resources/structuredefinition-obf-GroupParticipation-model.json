@@ -1,0 +1,440 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "obf-GroupParticipation-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>GroupParticipation Logical Model</b></p>\n  <p>A person or entity in a group.</p>\n</div>"
+  },
+  "url": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-GroupParticipation-model",
+  "identifier": [
+    {
+      "system": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig",
+      "value": "obf.GroupParticipation"
+    }
+  ],
+  "name": "GroupParticipation",
+  "title": "obf-GroupParticipation",
+  "status": "draft",
+  "date": "2019-07-20",
+  "publisher": "Hl7",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://BreastRadReport.com"
+        }
+      ]
+    }
+  ],
+  "description": "A person or entity in a group.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "obf-GroupParticipation-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "obf-GroupParticipation-model",
+        "path": "obf-GroupParticipation-model",
+        "definition": "A person or entity in a group.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-GroupParticipation-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-GroupParticipation-model.participant[x]",
+        "path": "obf-GroupParticipation-model.participant[x]",
+        "short": "An entity (usually a Practitioner, Patient, or Organization but potentially a device or other entity) that participates in a healthcare task or activity. The participant is not necessarily the performer, and the role (ParticipationType), the ParticipationPeriod, and other details of the participation are by the Participation structure.",
+        "definition": "An entity (usually a Practitioner, Patient, or Organization but potentially a device or other entity) that participates in a healthcare task or activity. The participant is not necessarily the performer, and the role (ParticipationType), the ParticipationPeriod, and other details of the participation are by the Participation structure.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-GroupParticipation-model.participant[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Patient-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Practitioner-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-RelatedPerson-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Organization-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Device-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Group-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Location-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-GroupParticipation-model.participationType",
+        "path": "obf-GroupParticipation-model.participationType",
+        "short": "The role played by the participant engaged in the action, for example, as the attending physician, surgical assistant, etc.",
+        "definition": "The role played by the participant engaged in the action, for example, as the attending physician, surgical assistant, etc.",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "obf-GroupParticipation-model.participationType",
+          "min": 0,
+          "max": "0"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "example",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/performer-role"
+          }
+        }
+      },
+      {
+        "id": "obf-GroupParticipation-model.participationPeriod",
+        "path": "obf-GroupParticipation-model.participationPeriod",
+        "short": "The point in time or span of time the participant is involved.",
+        "definition": "The point in time or span of time the participant is involved.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-GroupParticipation-model.participationPeriod",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-TimePeriod-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-GroupParticipation-model.onBehalfOf[x]",
+        "path": "obf-GroupParticipation-model.onBehalfOf[x]",
+        "short": "The party represented by the actual participant.",
+        "definition": "The party represented by the actual participant.",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "obf-GroupParticipation-model.onBehalfOf[x]",
+          "min": 0,
+          "max": "0"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Practitioner-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-RelatedPerson-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Patient-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Device-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Organization-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-GroupParticipation-model.groupParticipant[x]",
+        "path": "obf-GroupParticipation-model.groupParticipant[x]",
+        "short": "A person or entity in a group.",
+        "definition": "A person or entity in a group.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-GroupParticipation-model.groupParticipant[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Patient-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Practitioner-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Device-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-GroupParticipation-model.inactive",
+        "path": "obf-GroupParticipation-model.inactive",
+        "short": "A flag that indicates whether this item is inactive.",
+        "definition": "A flag that indicates whether this item is inactive.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-GroupParticipation-model.inactive",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "obf-GroupParticipation-model",
+        "path": "obf-GroupParticipation-model",
+        "definition": "A person or entity in a group.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-GroupParticipation-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-GroupParticipation-model.participant[x]",
+        "path": "obf-GroupParticipation-model.participant[x]",
+        "short": "An entity (usually a Practitioner, Patient, or Organization but potentially a device or other entity) that participates in a healthcare task or activity. The participant is not necessarily the performer, and the role (ParticipationType), the ParticipationPeriod, and other details of the participation are by the Participation structure.",
+        "definition": "An entity (usually a Practitioner, Patient, or Organization but potentially a device or other entity) that participates in a healthcare task or activity. The participant is not necessarily the performer, and the role (ParticipationType), the ParticipationPeriod, and other details of the participation are by the Participation structure.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-GroupParticipation-model.participant[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Patient-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Practitioner-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-RelatedPerson-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Organization-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Device-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Group-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Location-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-GroupParticipation-model.participationType",
+        "path": "obf-GroupParticipation-model.participationType",
+        "short": "The role played by the participant engaged in the action, for example, as the attending physician, surgical assistant, etc.",
+        "definition": "The role played by the participant engaged in the action, for example, as the attending physician, surgical assistant, etc.",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "obf-GroupParticipation-model.participationType",
+          "min": 0,
+          "max": "0"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "example",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/performer-role"
+          }
+        }
+      },
+      {
+        "id": "obf-GroupParticipation-model.participationPeriod",
+        "path": "obf-GroupParticipation-model.participationPeriod",
+        "short": "The point in time or span of time the participant is involved.",
+        "definition": "The point in time or span of time the participant is involved.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-GroupParticipation-model.participationPeriod",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-TimePeriod-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-GroupParticipation-model.onBehalfOf[x]",
+        "path": "obf-GroupParticipation-model.onBehalfOf[x]",
+        "short": "The party represented by the actual participant.",
+        "definition": "The party represented by the actual participant.",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "obf-GroupParticipation-model.onBehalfOf[x]",
+          "min": 0,
+          "max": "0"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Practitioner-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-RelatedPerson-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Patient-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Device-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Organization-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-GroupParticipation-model.groupParticipant[x]",
+        "path": "obf-GroupParticipation-model.groupParticipant[x]",
+        "short": "A person or entity in a group.",
+        "definition": "A person or entity in a group.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-GroupParticipation-model.groupParticipant[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Patient-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Practitioner-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Device-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-GroupParticipation-model.inactive",
+        "path": "obf-GroupParticipation-model.inactive",
+        "short": "A flag that indicates whether this item is inactive.",
+        "definition": "A flag that indicates whether this item is inactive.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-GroupParticipation-model.inactive",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

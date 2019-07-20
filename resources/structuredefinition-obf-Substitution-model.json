@@ -1,0 +1,176 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "obf-Substitution-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>Substitution Logical Model</b></p>\n  <p>Indicates whether or not substitution can or should be part of the dispense. In some cases, substitution must happen, in other cases substitution must not happen. This block explains the prescriber&#039;s intent. If nothing is specified substitution may be done.</p>\n</div>"
+  },
+  "url": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Substitution-model",
+  "identifier": [
+    {
+      "system": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig",
+      "value": "obf.Substitution"
+    }
+  ],
+  "name": "Substitution",
+  "title": "obf-Substitution",
+  "status": "draft",
+  "date": "2019-07-20",
+  "publisher": "Hl7",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://BreastRadReport.com"
+        }
+      ]
+    }
+  ],
+  "description": "Indicates whether or not substitution can or should be part of the dispense. In some cases, substitution must happen, in other cases substitution must not happen. This block explains the prescriber's intent. If nothing is specified substitution may be done.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "obf-Substitution-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "obf-Substitution-model",
+        "path": "obf-Substitution-model",
+        "definition": "Indicates whether or not substitution can or should be part of the dispense. In some cases, substitution must happen, in other cases substitution must not happen. This block explains the prescriber's intent. If nothing is specified substitution may be done.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Substitution-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Substitution-model.substitutionAllowed[x]",
+        "path": "obf-Substitution-model.substitutionAllowed[x]",
+        "short": "Whether substitution is allowed or not.",
+        "definition": "Whether substitution is allowed or not.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-Substitution-model.substitutionAllowed[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "boolean"
+          },
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Substitution-model.substitutionReason",
+        "path": "obf-Substitution-model.substitutionReason",
+        "short": "Why should (not) substitution be made.",
+        "definition": "Why should (not) substitution be made.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Substitution-model.substitutionReason",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "example",
+          "valueSetReference": {
+            "reference": "http://terminology.hl7.org/ValueSet/v3-SubstanceAdminSubstitutionReason"
+          }
+        }
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "obf-Substitution-model",
+        "path": "obf-Substitution-model",
+        "definition": "Indicates whether or not substitution can or should be part of the dispense. In some cases, substitution must happen, in other cases substitution must not happen. This block explains the prescriber's intent. If nothing is specified substitution may be done.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Substitution-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Substitution-model.substitutionAllowed[x]",
+        "path": "obf-Substitution-model.substitutionAllowed[x]",
+        "short": "Whether substitution is allowed or not.",
+        "definition": "Whether substitution is allowed or not.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-Substitution-model.substitutionAllowed[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "boolean"
+          },
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Substitution-model.substitutionReason",
+        "path": "obf-Substitution-model.substitutionReason",
+        "short": "Why should (not) substitution be made.",
+        "definition": "Why should (not) substitution be made.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Substitution-model.substitutionReason",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "example",
+          "valueSetReference": {
+            "reference": "http://terminology.hl7.org/ValueSet/v3-SubstanceAdminSubstitutionReason"
+          }
+        }
+      }
+    ]
+  }
+}

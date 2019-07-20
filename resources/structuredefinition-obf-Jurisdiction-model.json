@@ -1,0 +1,128 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "obf-Jurisdiction-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>Jurisdiction Logical Model</b></p>\n  <p>The country, state or other region taking legal responsibility.</p>\n</div>"
+  },
+  "url": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Jurisdiction-model",
+  "identifier": [
+    {
+      "system": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig",
+      "value": "obf.Jurisdiction"
+    }
+  ],
+  "name": "Jurisdiction",
+  "title": "obf-Jurisdiction",
+  "status": "draft",
+  "date": "2019-07-20",
+  "publisher": "Hl7",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://BreastRadReport.com"
+        }
+      ]
+    }
+  ],
+  "description": "The country, state or other region taking legal responsibility.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "obf-Jurisdiction-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "obf-Jurisdiction-model",
+        "path": "obf-Jurisdiction-model",
+        "definition": "The country, state or other region taking legal responsibility.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Jurisdiction-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Jurisdiction-model.value",
+        "path": "obf-Jurisdiction-model.value",
+        "short": "Concept representing the country, state or other region taking legal responsibility.",
+        "definition": "Concept representing the country, state or other region taking legal responsibility.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-Jurisdiction-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "extensible",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/jurisdiction"
+          }
+        }
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "obf-Jurisdiction-model",
+        "path": "obf-Jurisdiction-model",
+        "definition": "The country, state or other region taking legal responsibility.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Jurisdiction-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Jurisdiction-model.value",
+        "path": "obf-Jurisdiction-model.value",
+        "short": "Concept representing the country, state or other region taking legal responsibility.",
+        "definition": "Concept representing the country, state or other region taking legal responsibility.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-Jurisdiction-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "extensible",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/jurisdiction"
+          }
+        }
+      }
+    ]
+  }
+}

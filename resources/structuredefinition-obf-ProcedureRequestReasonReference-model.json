@@ -1,0 +1,126 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "obf-ProcedureRequestReasonReference-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>ProcedureRequestReasonReference Logical Model</b></p>\n  <p>The justification that the procedure was performed</p>\n</div>"
+  },
+  "url": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-ProcedureRequestReasonReference-model",
+  "identifier": [
+    {
+      "system": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig",
+      "value": "obf.ProcedureRequestReasonReference"
+    }
+  ],
+  "name": "ProcedureRequestReasonReference",
+  "title": "obf-ProcedureRequestReasonReference",
+  "status": "draft",
+  "date": "2019-07-20",
+  "publisher": "Hl7",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://BreastRadReport.com"
+        }
+      ]
+    }
+  ],
+  "description": "The justification that the procedure was performed",
+  "kind": "logical",
+  "abstract": false,
+  "type": "obf-ProcedureRequestReasonReference-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "obf-ProcedureRequestReasonReference-model",
+        "path": "obf-ProcedureRequestReasonReference-model",
+        "definition": "The justification that the procedure was performed",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-ProcedureRequestReasonReference-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-ProcedureRequestReasonReference-model.value[x]",
+        "path": "obf-ProcedureRequestReasonReference-model.value[x]",
+        "short": "Condition or Observation representing the justification that the procedure was performed",
+        "definition": "Condition or Observation representing the justification that the procedure was performed",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-ProcedureRequestReasonReference-model.value[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Condition-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Observation-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "obf-ProcedureRequestReasonReference-model",
+        "path": "obf-ProcedureRequestReasonReference-model",
+        "definition": "The justification that the procedure was performed",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-ProcedureRequestReasonReference-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-ProcedureRequestReasonReference-model.value[x]",
+        "path": "obf-ProcedureRequestReasonReference-model.value[x]",
+        "short": "Condition or Observation representing the justification that the procedure was performed",
+        "definition": "Condition or Observation representing the justification that the procedure was performed",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-ProcedureRequestReasonReference-model.value[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Condition-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Observation-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}
