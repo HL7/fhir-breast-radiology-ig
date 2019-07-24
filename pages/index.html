@@ -30,13 +30,12 @@
 <li><a href="#Scope">Scope</a></li>
 <li><a href="#Contents">Implementation Guide Contents</a></li>
 <li><a href="#Modeling">Modeling Approach</a></li>
-<li><a href="#Terminology">Terminology Approach</a></li>
 <li><a href="#Tooling">Open Source Tooling</a></li>
 <li><a href="#CIMI">Relationship to CIMI</a></li>
 <li><a href="#Disclaimers">Disclaimers</a></li>
-<li><a href="#TerminologySources">Terminolog Sources</a></li>
+<li><a href="#TerminologySources">Terminology Sources</a></li>
 </ul>
-<h2><a name="Guidance"></a>Guidance for HL7 Voters</h2>
+<h2><a name="Guidance"/>Guidance for HL7 Voters</h2>
 <p>Breast Radiology Reporting has long been an outlier in the radiology space in that structured guidelines for consistent reporting of the clinical data are well documented and non controversial, so the clinical content has been authored to fully align with accepted practices.</p>
 <p>The authors of this Implementation Guide must humbly admit that we are uncomfortable with some of the modeling options that are represented herein and are asking the FHIR community to constructively contribute to the consideration of issues which we believe to be cross-cutting challenges to a broad constituency of similar use cases.</p>
 <p>Our primary goal of this first ballot cycle is to seek comments on the fundamental FHIR patterns that we have used in order to express what is today a written report with a well known and established pattern of Sections and Sub-Sections each containing different forms of clinical information with each having it own context.  Very different information will be contained within the Impressions and Recommendations sections of the document and we have attempted to express this in FHIR in the least awkward way available using the existing FHIR Resources available.</p>
@@ -57,14 +56,14 @@
 <li>If DiagnosticReport is dropped in favor of Composition, should all the other Resources within FHIR that currently support the referencing of DiagnosticReport be modified to also allow for Composition to be references as well?</li>
 </ol>
 <p>These concerns are discussed further in the <a href="#Modeling">Modeling Approach</a> section.</p>
-<h2><a name="Purpose"></a>Purpose</h2>
+<h2><a name="Purpose"/>Purpose</h2>
 <p>The Breast Cancer Interoperability FHIR Implementation Guide (IG) contains a subset of logical models for breast radiology reporting with a particular focus on data elements used for breast screening, diagnosis and cancer staging. FHIR profiles are provided as an example physical representation of the logical models.</p>
-<h2><a name="Background"></a>Background</h2>
+<h2><a name="Background"/>Background</h2>
 <p>The Cancer Interoperability Project aims to address the need within the radiology community to quickly provide consistent and high quality FHIR Implementation guide to push forward interoperability and research.    We passionately believe that modeling cancer data in a way that can be used for the diagnosis, treatment, and research of cancer can address many of the challenges that patients and caregivers face today. The project is a collaboration of a diverse multidisciplinary group involved in the diagnosis, treatment, research, and surveillance of cancer.</p>
-<h2><a name="Scope"></a>Scope</h2>
+<h2><a name="Scope"/>Scope</h2>
 <p>The IG covers breast radiology reporting data necessary support breast cancer screening, diagnosis and research, focusing first and foremost on data driving clinical decision-making for medical and surgical oncologists.</p>
 <p>Over time, we expect this IG and others will incrementally evolve to cover a wider range of clinical domains (e.g. pathology, oncology, clinical genomics, surgery, interventional radiology, etc), and expand its scope to include other key areas for breast cancer treatment (e.g. radiation therapy, chemotherapy), while supporting secondary data use in for clinical research and cancer registry reporting.</p>
-<h2><a name="Contents"></a>Implementation Guide Contents</h2>
+<h2><a name="Contents"/>Implementation Guide Contents</h2>
 <p>The IG contains several different elements, accessed using the top level navigation tabs:</p>
 <ol>
 <li><a href="logical.html">Logical Models</a>. The objective of logical models is to help gather and interpret requirements from stakeholders, particularly clinicians, but also registries, researchers, and others. The logical models document the requirements without the added complication of alignment with FHIR. The breast cancer logical models use reproducible patterns.
@@ -80,7 +79,7 @@
 <li><a href="downloads.html">Downloads</a>. Formal class definitions, in StructureDefinition form, can be downloaded here.</li>
 <li><a href="modeldoc/index.html">Reference Model</a>. FHIR does not have a class hierarchy, but our logical models do. Since the breast cancer models are based on CIMI, they derive from CIMI's class hierarchy as much as possible with the committment that as CIMI's models evolve this content will be evolved to keep it in sync.</li>
 </ol>
-<h2><a name="Modeling"></a>Modeling Approach</h2>
+<h2><a name="Modeling"/>Modeling Approach</h2>
 <h3>Major sources of information</h3>
 <p>Specifications consulted for the development of this IG include:</p>
 <ul>
@@ -100,7 +99,7 @@ Invasive Carcinoma of the Breast</a></li>
 <p>In addition to sources specifically providing clinical content related to breast radiology, from a modeling perspective, CIMI and FHIR models were also used as a source.</p>
 <h3>Logical Modeling</h3>
 <p>The intention of a logical model is to represent the structure of the model without implementation-specific considerations. The logical model can then be transformed into one or more implementable forms, for example, V2 messages, FHIR profies, C-CDA templates, etc. In theory, this allows logical model retain its value, while implementation fashions come and go.</p>
-<h2><a name="Tooling"></a>Open Source Tooling</h2>
+<h2><a name="Tooling"/>Open Source Tooling</h2>
 <p>The tools used to define the models and produce the logical models and the FHIR profiles are open source or freely available for open use online.</p>
 <p>The <a href="http://standardhealthrecord.org/">Standard Health Record (SHR) Initiative</a>. The SHR tooling consists of several elements:</p>
 <ul>
@@ -109,27 +108,17 @@ Invasive Carcinoma of the Breast</a></li>
 Modeling lab is an experimental and free web-application that focuses on the specification of clinical requirements through an interface that is reasonably familiar to most clinicians - a clinical data entry form.  The ultimate goal of the ModelingLab effort is to have an ecosystem of integrated tooling options that allows less technical clinical domain experts us a graphical web-application to draft and review content that can then be fed to a much more sophisticated by programmer friendly option like CIMPL so that each community can work in a metaphore that is familiar.  Modeling lab is a work in progress but we have ambitiously hopes for the project.</li>
 </ul>
 <p>The final form of the Implementation Guide (the html pages you see here) was produced using the standard FHIR Implementation Guide Publisher (IGPub).</p>
-<h2><a name="CIMI"></a>Relationship to CIMI</h2>
+<h2><a name="CIMI"/>Relationship to CIMI</h2>
 <p>The Clinical Information Modeling Initiative (CIMI) is an HL7 Work Group that is producing detailed clinical information models to enable interoperability of health care information systems. The goal of CIMI is to create a shared repository of detailed clinical information models, all based on the same core reference model and data types, with formal bindings to standard coded terminologies. CIMI models are logical abstractions, independent of any specific programming language, implementation technology, or type of database.</p>
 <p>The CIMI modeling hierarchy is still a work in progress but the authoring team has made the committment to maintain and evolve the underlying modeling structured to align and match the official CIMI hierarch as it matures.</p>
 <p>While the goal is to eventually submit the Breast Radiology models for review and ultimate CIMI conformance, a process which is still in development. One certain aspect of CIMI Conformance is the requirement to serialize domain logical models into Basic Metamodel (BMM) and Archetype Description Language (ADL) files.  This should be considered as part of the Breast Radiology modeling teams committment to CIMI.</p>
-<h2><a name="Disclaimers"></a>Disclaimers</h2>
+<h2><a name="Disclaimers"/>&gt;Disclaimers</h2>
 <p>This specification may contain and/or reference intellectual property owned by third parties (&quot;Third Party IP&quot;). Acceptance of the FHIR Licensing Terms does not grant any rights with respect to Third Party IP. The licensee alone is responsible for identifying and obtaining any necessary licenses or authorizations to utilize Third Party IP in connection with the specification or otherwise.</p>
 <p>Any actions, claims or suits brought by a third party resulting from a breach of any Third Party IP right by the Licensee remains the Licensee’s liability. Following is a non-exhaustive list of third-party terminologies that may require a separate license:</p>
-<h2><a name="Terminology Sources"></a>Terminology</h2>
+<h2><a name="TerminologySources"/>Terminology Sources</h2>
 <ul>
-<li>
-<p>SNOMED CT</p>
-</li>
-<li>
-<p><a href="https://www.snomed.org/snomed-ct/get-snomed-ct">SNOMED International</a></p>
-</li>
-<li>
-<p>LOINC</p>
-</li>
-<li>
-<p><a href="https://loinc.org/license/">Regenstrief Institute</a></p>
-</li>
+<li>SNOMED CT  <a href="https://www.snomed.org/snomed-ct/get-snomed-ct">SNOMED International</a></li>
+<li>LOINC      <a href="https://loinc.org/license/">Regenstrief Institute</a></li>
 </ul>
 
 
