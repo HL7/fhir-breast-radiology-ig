@@ -8,7 +8,7 @@
   "url": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Device",
   "name": "Device",
   "status": "draft",
-  "date": "2019-07-24",
+  "date": "2019-07-26",
   "publisher": "Hl7",
   "contact": [
     {
@@ -62,7 +62,7 @@
   "snapshot": {
     "element": [
       {
-        "id": "Device:obf-Device",
+        "id": "Device",
         "path": "Device",
         "short": "obf-Device",
         "definition": "A specific durable physical device used in diagnosis or treatment. The value is the coding for a type of device, for example, a CPAP machine. The same device might be used on multiple patients.\nDevice status cannot be reconciled between Argonaut and US-Core, each having different required value sets.\nDevice type has extensible mappings to different value sets in Argonaut and US-Core, however both value sets have identical SNOMED content (descendants of 49062001 (Device). We adopt the US-Core value set, which is allowable because the binding is extensible.",
@@ -128,7 +128,7 @@
         ]
       },
       {
-        "id": "Device:obf-Device.id",
+        "id": "Device.id",
         "path": "Device.id",
         "short": "Logical id of this artifact",
         "definition": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.",
@@ -148,7 +148,7 @@
         "isSummary": true
       },
       {
-        "id": "Device:obf-Device.meta",
+        "id": "Device.meta",
         "path": "Device.meta",
         "short": "Metadata about the resource",
         "definition": "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource.",
@@ -167,7 +167,7 @@
         "isSummary": true
       },
       {
-        "id": "Device:obf-Device.meta.id",
+        "id": "Device.meta.id",
         "path": "Device.meta.id",
         "representation": [
           "xmlAttr"
@@ -194,7 +194,7 @@
         ]
       },
       {
-        "id": "Device:obf-Device.meta.extension",
+        "id": "Device.meta.extension",
         "path": "Device.meta.extension",
         "slicing": {
           "discriminator": [
@@ -233,7 +233,7 @@
         ]
       },
       {
-        "id": "Device:obf-Device.meta.extension:sourcesystem",
+        "id": "Device.meta.extension:sourcesystem",
         "path": "Device.meta.extension",
         "definition": "FHIR: This provides a minimal amount of Provenance information that can be used to track or differentiate the source of information in the resource. The source may identify another FHIR server, document, message, database, etc.\nFHIM: Identifies the computer system that created the medical record. This optional field may also be used to indicate that the medical record was originally created by a different organization from the one that is currently storing or utilizing the record in that the assigning authority of the Id could be set to that originating organization. This property is optional, as some systems will assume that all records that it contains originated in that system, however it is anticipated that it will become increasingly commonplace for records from multiple systems and organizations will be comingled in order to provide a complete picture of the patient's health record.",
         "min": 0,
@@ -252,7 +252,7 @@
         "sliceName": "sourcesystem"
       },
       {
-        "id": "Device:obf-Device.meta.versionId",
+        "id": "Device.meta.versionId",
         "path": "Device.meta.versionId",
         "short": "Version specific identifier",
         "definition": "The version specific identifier, as it appears in the version portion of the URL. This values changes when the resource is created, updated, or deleted.",
@@ -267,7 +267,7 @@
         "isSummary": true
       },
       {
-        "id": "Device:obf-Device.meta.lastUpdated",
+        "id": "Device.meta.lastUpdated",
         "path": "Device.meta.lastUpdated",
         "short": "When the resource version last changed",
         "definition": "When the resource last changed - e.g. when the version changed.",
@@ -282,7 +282,7 @@
         "isSummary": true
       },
       {
-        "id": "Device:obf-Device.meta.profile",
+        "id": "Device.meta.profile",
         "path": "Device.meta.profile",
         "short": "Profiles this resource claims to conform to",
         "definition": "A list of profiles (references to [StructureDefinition](structuredefinition.html#) resources) that this resource claims to conform to. The URL is a reference to [StructureDefinition.url]().",
@@ -297,7 +297,7 @@
         "isSummary": true
       },
       {
-        "id": "Device:obf-Device.meta.security",
+        "id": "Device.meta.security",
         "path": "Device.meta.security",
         "short": "Security Labels applied to this resource",
         "definition": "Security labels applied to this resource. These tags connect specific resources to the overall security policy and infrastructure.",
@@ -329,7 +329,7 @@
         }
       },
       {
-        "id": "Device:obf-Device.meta.tag",
+        "id": "Device.meta.tag",
         "path": "Device.meta.tag",
         "short": "Tags applied to this resource",
         "definition": "Tags applied to this resource. Tags are intended to be used to identify and relate resources to process and workflow, and applications are not required to consider the tags when interpreting the meaning of a resource.",
@@ -357,7 +357,7 @@
         }
       },
       {
-        "id": "Device:obf-Device.implicitRules",
+        "id": "Device.implicitRules",
         "path": "Device.implicitRules",
         "short": "A set of rules under which this content was created",
         "definition": "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content.",
@@ -378,7 +378,7 @@
         "isSummary": true
       },
       {
-        "id": "Device:obf-Device.language",
+        "id": "Device.language",
         "path": "Device.language",
         "short": "Language of the resource content",
         "definition": "The base language in which the resource is written.",
@@ -420,7 +420,7 @@
         }
       },
       {
-        "id": "Device:obf-Device.text",
+        "id": "Device.text",
         "path": "Device.text",
         "short": "Text summary of the resource, for human interpretation",
         "definition": "A human-readable narrative that contains a summary of the resource, and may be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.",
@@ -454,7 +454,7 @@
         ]
       },
       {
-        "id": "Device:obf-Device.contained",
+        "id": "Device.contained",
         "path": "Device.contained",
         "short": "Contained, inline Resources",
         "definition": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.",
@@ -484,7 +484,7 @@
         ]
       },
       {
-        "id": "Device:obf-Device.extension",
+        "id": "Device.extension",
         "path": "Device.extension",
         "short": "Additional Content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the resource. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
@@ -524,7 +524,7 @@
         }
       },
       {
-        "id": "Device:obf-Device.extension:statusreason",
+        "id": "Device.extension:statusreason",
         "path": "Device.extension",
         "definition": "Captures the reason for the current state of the procedure.",
         "min": 0,
@@ -543,7 +543,7 @@
         "sliceName": "statusreason"
       },
       {
-        "id": "Device:obf-Device.extension:statusreason.id",
+        "id": "Device.extension:statusreason.id",
         "path": "Device.extension.id",
         "representation": [
           "xmlAttr"
@@ -570,7 +570,7 @@
         ]
       },
       {
-        "id": "Device:obf-Device.extension:statusreason.extension",
+        "id": "Device.extension:statusreason.extension",
         "path": "Device.extension.extension",
         "slicing": {
           "discriminator": [
@@ -609,7 +609,7 @@
         ]
       },
       {
-        "id": "Device:obf-Device.extension:statusreason.url",
+        "id": "Device.extension:statusreason.url",
         "path": "Device.extension.url",
         "representation": [
           "xmlAttr"
@@ -638,7 +638,7 @@
         "fixedUri": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-StatusReason-extension"
       },
       {
-        "id": "Device:obf-Device.extension:statusreason.valueCodeableConcept",
+        "id": "Device.extension:statusreason.valueCodeableConcept",
         "path": "Device.extension.valueCodeableConcept",
         "short": "Value of extension",
         "definition": "Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).",
@@ -668,7 +668,7 @@
         }
       },
       {
-        "id": "Device:obf-Device.extension:distinctidentifier",
+        "id": "Device.extension:distinctidentifier",
         "path": "Device.extension",
         "definition": "The distinct identification string as required by regulation for a human cell, tissue, or cellular and tissue-based product.",
         "min": 0,
@@ -687,7 +687,7 @@
         "sliceName": "distinctidentifier"
       },
       {
-        "id": "Device:obf-Device.extension:serialnumber",
+        "id": "Device.extension:serialnumber",
         "path": "Device.extension",
         "definition": "Serial number assigned by the manufacturer.",
         "min": 0,
@@ -706,7 +706,7 @@
         "sliceName": "serialnumber"
       },
       {
-        "id": "Device:obf-Device.extension:devicedesignation",
+        "id": "Device.extension:devicedesignation",
         "path": "Device.extension",
         "definition": "A name of the device as given by the manufacturer, along with a type of name.",
         "min": 0,
@@ -725,7 +725,7 @@
         "sliceName": "devicedesignation"
       },
       {
-        "id": "Device:obf-Device.extension:partof",
+        "id": "Device.extension:partof",
         "path": "Device.extension",
         "definition": "The larger entity that the asserted item is a portion of. For example, an organization part of a larger organization, or an encounter with a hospitalist might be part of a larger hospitalization encounter.",
         "min": 0,
@@ -744,7 +744,7 @@
         "sliceName": "partof"
       },
       {
-        "id": "Device:obf-Device.extension:partof.id",
+        "id": "Device.extension:partof.id",
         "path": "Device.extension.id",
         "representation": [
           "xmlAttr"
@@ -771,7 +771,7 @@
         ]
       },
       {
-        "id": "Device:obf-Device.extension:partof.extension",
+        "id": "Device.extension:partof.extension",
         "path": "Device.extension.extension",
         "slicing": {
           "discriminator": [
@@ -810,7 +810,7 @@
         ]
       },
       {
-        "id": "Device:obf-Device.extension:partof.url",
+        "id": "Device.extension:partof.url",
         "path": "Device.extension.url",
         "representation": [
           "xmlAttr"
@@ -839,7 +839,7 @@
         "fixedUri": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-PartOf-extension"
       },
       {
-        "id": "Device:obf-Device.extension:partof.valueReference",
+        "id": "Device.extension:partof.valueReference",
         "path": "Device.extension.valueReference",
         "short": "Device: A specific durable physical device used in diagnosis or treatment",
         "definition": "A specific durable physical device used in diagnosis or treatment. The value is the coding for a type of device, for example, a CPAP machine. The same device might be used on multiple patients.\nDevice status cannot be reconciled between Argonaut and US-Core, each having different required value sets.\nDevice type has extensible mappings to different value sets in Argonaut and US-Core, however both value sets have identical SNOMED content (descendants of 49062001 (Device). We adopt the US-Core value set, which is allowable because the binding is extensible.",
@@ -864,7 +864,7 @@
         ]
       },
       {
-        "id": "Device:obf-Device.modifierExtension",
+        "id": "Device.modifierExtension",
         "path": "Device.modifierExtension",
         "short": "Extensions that cannot be ignored",
         "definition": "May be used to represent additional information that is not part of the basic definition of the resource, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
@@ -894,7 +894,7 @@
         ]
       },
       {
-        "id": "Device:obf-Device.identifier",
+        "id": "Device.identifier",
         "path": "Device.identifier",
         "short": "Instance identifier",
         "definition": "Unique instance identifiers assigned to a device by manufacturers other organizations or owners.",
@@ -930,7 +930,7 @@
         ]
       },
       {
-        "id": "Device:obf-Device.udi",
+        "id": "Device.udi",
         "path": "Device.udi",
         "short": "Unique Device Identifier (UDI) Barcode string",
         "definition": "[Unique device identifier (UDI)](device.html#5.11.3.2.2) assigned to device label or package.",
@@ -975,7 +975,7 @@
         ]
       },
       {
-        "id": "Device:obf-Device.udi.id",
+        "id": "Device.udi.id",
         "path": "Device.udi.id",
         "representation": [
           "xmlAttr"
@@ -1002,7 +1002,7 @@
         ]
       },
       {
-        "id": "Device:obf-Device.udi.extension",
+        "id": "Device.udi.extension",
         "path": "Device.udi.extension",
         "short": "Additional Content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
@@ -1031,7 +1031,7 @@
         ]
       },
       {
-        "id": "Device:obf-Device.udi.modifierExtension",
+        "id": "Device.udi.modifierExtension",
         "path": "Device.udi.modifierExtension",
         "short": "Extensions that cannot be ignored",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
@@ -1063,7 +1063,7 @@
         ]
       },
       {
-        "id": "Device:obf-Device.udi.deviceIdentifier",
+        "id": "Device.udi.deviceIdentifier",
         "path": "Device.udi.deviceIdentifier",
         "short": "Mandatory fixed portion of UDI",
         "definition": "The device identifier (DI) is a mandatory, fixed portion of a UDI that identifies the labeler and the specific version or model of a device.",
@@ -1099,7 +1099,7 @@
         ]
       },
       {
-        "id": "Device:obf-Device.udi.name",
+        "id": "Device.udi.name",
         "path": "Device.udi.name",
         "short": "Device Name as appears on UDI label",
         "definition": "Name of device as used in labeling or catalog.",
@@ -1136,7 +1136,7 @@
         ]
       },
       {
-        "id": "Device:obf-Device.udi.jurisdiction",
+        "id": "Device.udi.jurisdiction",
         "path": "Device.udi.jurisdiction",
         "short": "Regional UDI authority",
         "definition": "The identity of the authoritative source for UDI generation within a  jurisdiction.  All UDIs are globally unique within a single namespace. with the appropriate repository uri as the system.  For example,  UDIs of devices managed in the U.S. by the FDA, the value is  http://hl7.org/fhir/NamingSystem/fda-udi.",
@@ -1161,7 +1161,7 @@
         ]
       },
       {
-        "id": "Device:obf-Device.udi.carrierHRF",
+        "id": "Device.udi.carrierHRF",
         "path": "Device.udi.carrierHRF",
         "short": "UDI Human Readable Barcode String",
         "definition": "The full UDI carrier as the human readable form (HRF) representation of the barcode string as printed on the packaging of the device.",
@@ -1201,7 +1201,7 @@
         ]
       },
       {
-        "id": "Device:obf-Device.udi.carrierAIDC",
+        "id": "Device.udi.carrierAIDC",
         "path": "Device.udi.carrierAIDC",
         "short": "UDI Machine Readable Barcode String",
         "definition": "The full UDI carrier of the Automatic Identification and Data Capture (AIDC) technology representation of the barcode string as printed on the packaging of the device - E.g a barcode or RFID.   Because of limitations on character sets in XML and the need to round-trip JSON data through XML, AIDC Formats *SHALL* be base64 encoded.",
@@ -1241,7 +1241,7 @@
         ]
       },
       {
-        "id": "Device:obf-Device.udi.issuer",
+        "id": "Device.udi.issuer",
         "path": "Device.udi.issuer",
         "short": "UDI Issuing Organization",
         "definition": "Organization that is charged with issuing UDIs for devices.  For example, the US FDA issuers include :\n1) GS1: \nhttp://hl7.org/fhir/NamingSystem/gs1-di, \n2) HIBCC:\nhttp://hl7.org/fhir/NamingSystem/hibcc-dI, \n3) ICCBBA for blood containers:\nhttp://hl7.org/fhir/NamingSystem/iccbba-blood-di, \n4) ICCBA for other devices:\nhttp://hl7.org/fhir/NamingSystem/iccbba-other-di.",
@@ -1272,7 +1272,7 @@
         ]
       },
       {
-        "id": "Device:obf-Device.udi.entryType",
+        "id": "Device.udi.entryType",
         "path": "Device.udi.entryType",
         "short": "barcode | rfid | manual +",
         "definition": "A coded entry to indicate how the data was entered.",
@@ -1310,7 +1310,7 @@
         ]
       },
       {
-        "id": "Device:obf-Device.status",
+        "id": "Device.status",
         "path": "Device.status",
         "short": "active | inactive | entered-in-error | unknown",
         "definition": "Status of the Device availability.",
@@ -1354,7 +1354,7 @@
         ]
       },
       {
-        "id": "Device:obf-Device.type",
+        "id": "Device.type",
         "path": "Device.type",
         "short": "What kind of device this is",
         "definition": "Code or identifier to identify a kind of device.",
@@ -1398,7 +1398,7 @@
         ]
       },
       {
-        "id": "Device:obf-Device.lotNumber",
+        "id": "Device.lotNumber",
         "path": "Device.lotNumber",
         "short": "Lot number of manufacture",
         "definition": "Lot number assigned by the manufacturer.",
@@ -1430,7 +1430,7 @@
         ]
       },
       {
-        "id": "Device:obf-Device.manufacturer",
+        "id": "Device.manufacturer",
         "path": "Device.manufacturer",
         "short": "Name of device manufacturer",
         "definition": "A name of the manufacturer.",
@@ -1462,7 +1462,7 @@
         ]
       },
       {
-        "id": "Device:obf-Device.manufactureDate",
+        "id": "Device.manufactureDate",
         "path": "Device.manufactureDate",
         "short": "Date when the device was made",
         "definition": "The date and time when the device was manufactured.",
@@ -1494,7 +1494,7 @@
         ]
       },
       {
-        "id": "Device:obf-Device.expirationDate",
+        "id": "Device.expirationDate",
         "path": "Device.expirationDate",
         "short": "Date and time of expiry of this device (if applicable)",
         "definition": "The date and time beyond which this device is no longer valid or should not be used (if applicable).",
@@ -1526,7 +1526,7 @@
         ]
       },
       {
-        "id": "Device:obf-Device.model",
+        "id": "Device.model",
         "path": "Device.model",
         "short": "Model id assigned by the manufacturer",
         "definition": "The \"model\" is an identifier assigned by the manufacturer to identify the product by its type. This number is shared by the all devices sold as the same type.",
@@ -1554,7 +1554,7 @@
         ]
       },
       {
-        "id": "Device:obf-Device.version",
+        "id": "Device.version",
         "path": "Device.version",
         "short": "Version number (i.e. software)",
         "definition": "The version of the device, if the device has multiple releases under the same model, or if the device is software or carries firmware.",
@@ -1582,7 +1582,7 @@
         ]
       },
       {
-        "id": "Device:obf-Device.patient",
+        "id": "Device.patient",
         "path": "Device.patient",
         "short": "Patient to whom Device is affixed",
         "definition": "Patient information, If the device is affixed to a person.",
@@ -1617,7 +1617,7 @@
         ]
       },
       {
-        "id": "Device:obf-Device.owner",
+        "id": "Device.owner",
         "path": "Device.owner",
         "short": "Organization responsible for device",
         "definition": "An organization that is responsible for the provision and ongoing maintenance of the device.",
@@ -1646,7 +1646,7 @@
         ]
       },
       {
-        "id": "Device:obf-Device.contact",
+        "id": "Device.contact",
         "path": "Device.contact",
         "short": "Details for human/organization for support",
         "definition": "Contact details for an organization or a particular human that is responsible for the device.",
@@ -1675,7 +1675,7 @@
         ]
       },
       {
-        "id": "Device:obf-Device.location",
+        "id": "Device.location",
         "path": "Device.location",
         "short": "Where the resource is found",
         "definition": "The place where the device can be found.",
@@ -1705,7 +1705,7 @@
         ]
       },
       {
-        "id": "Device:obf-Device.url",
+        "id": "Device.url",
         "path": "Device.url",
         "short": "Network address to contact device",
         "definition": "A network address on which the device may be contacted directly.",
@@ -1734,7 +1734,7 @@
         ]
       },
       {
-        "id": "Device:obf-Device.note",
+        "id": "Device.note",
         "path": "Device.note",
         "short": "Device notes and comments",
         "definition": "Descriptive information, usage information or implantation information that is not captured in an existing element.",
@@ -1759,7 +1759,7 @@
         ]
       },
       {
-        "id": "Device:obf-Device.safety",
+        "id": "Device.safety",
         "path": "Device.safety",
         "short": "Safety Characteristics of Device",
         "definition": "Provides additional safety characteristics about a medical device.  For example devices containing latex.",
@@ -1801,18 +1801,18 @@
   "differential": {
     "element": [
       {
-        "id": "Device:obf-Device",
+        "id": "Device",
         "path": "Device",
         "short": "obf-Device",
         "definition": "A specific durable physical device used in diagnosis or treatment. The value is the coding for a type of device, for example, a CPAP machine. The same device might be used on multiple patients.\nDevice status cannot be reconciled between Argonaut and US-Core, each having different required value sets.\nDevice type has extensible mappings to different value sets in Argonaut and US-Core, however both value sets have identical SNOMED content (descendants of 49062001 (Device). We adopt the US-Core value set, which is allowable because the binding is extensible.",
         "mustSupport": false
       },
       {
-        "id": "Device:obf-Device.meta",
+        "id": "Device.meta",
         "path": "Device.meta"
       },
       {
-        "id": "Device:obf-Device.meta.extension:sourcesystem",
+        "id": "Device.meta.extension:sourcesystem",
         "path": "Device.meta.extension",
         "definition": "FHIR: This provides a minimal amount of Provenance information that can be used to track or differentiate the source of information in the resource. The source may identify another FHIR server, document, message, database, etc.\nFHIM: Identifies the computer system that created the medical record. This optional field may also be used to indicate that the medical record was originally created by a different organization from the one that is currently storing or utilizing the record in that the assigning authority of the Id could be set to that originating organization. This property is optional, as some systems will assume that all records that it contains originated in that system, however it is anticipated that it will become increasingly commonplace for records from multiple systems and organizations will be comingled in order to provide a complete picture of the patient's health record.",
         "min": 0,
@@ -1831,7 +1831,7 @@
         "sliceName": "sourcesystem"
       },
       {
-        "id": "Device:obf-Device.extension",
+        "id": "Device.extension",
         "path": "Device.extension",
         "slicing": {
           "id": "1",
@@ -1846,7 +1846,7 @@
         }
       },
       {
-        "id": "Device:obf-Device.extension:statusreason",
+        "id": "Device.extension:statusreason",
         "path": "Device.extension",
         "definition": "Captures the reason for the current state of the procedure.",
         "min": 0,
@@ -1865,7 +1865,7 @@
         "sliceName": "statusreason"
       },
       {
-        "id": "Device:obf-Device.extension:statusreason.valueCodeableConcept",
+        "id": "Device.extension:statusreason.valueCodeableConcept",
         "path": "Device.extension.valueCodeableConcept",
         "binding": {
           "strength": "extensible",
@@ -1875,7 +1875,7 @@
         }
       },
       {
-        "id": "Device:obf-Device.extension:distinctidentifier",
+        "id": "Device.extension:distinctidentifier",
         "path": "Device.extension",
         "definition": "The distinct identification string as required by regulation for a human cell, tissue, or cellular and tissue-based product.",
         "min": 0,
@@ -1894,7 +1894,7 @@
         "sliceName": "distinctidentifier"
       },
       {
-        "id": "Device:obf-Device.extension:serialnumber",
+        "id": "Device.extension:serialnumber",
         "path": "Device.extension",
         "definition": "Serial number assigned by the manufacturer.",
         "min": 0,
@@ -1913,7 +1913,7 @@
         "sliceName": "serialnumber"
       },
       {
-        "id": "Device:obf-Device.extension:devicedesignation",
+        "id": "Device.extension:devicedesignation",
         "path": "Device.extension",
         "definition": "A name of the device as given by the manufacturer, along with a type of name.",
         "min": 0,
@@ -1932,7 +1932,7 @@
         "sliceName": "devicedesignation"
       },
       {
-        "id": "Device:obf-Device.extension:partof",
+        "id": "Device.extension:partof",
         "path": "Device.extension",
         "definition": "The larger entity that the asserted item is a portion of. For example, an organization part of a larger organization, or an encounter with a hospitalist might be part of a larger hospitalization encounter.",
         "min": 0,
@@ -1951,7 +1951,7 @@
         "sliceName": "partof"
       },
       {
-        "id": "Device:obf-Device.extension:partof.valueReference",
+        "id": "Device.extension:partof.valueReference",
         "path": "Device.extension.valueReference",
         "short": "Device: A specific durable physical device used in diagnosis or treatment",
         "definition": "A specific durable physical device used in diagnosis or treatment. The value is the coding for a type of device, for example, a CPAP machine. The same device might be used on multiple patients.\nDevice status cannot be reconciled between Argonaut and US-Core, each having different required value sets.\nDevice type has extensible mappings to different value sets in Argonaut and US-Core, however both value sets have identical SNOMED content (descendants of 49062001 (Device). We adopt the US-Core value set, which is allowable because the binding is extensible.",
@@ -1963,7 +1963,7 @@
         ]
       },
       {
-        "id": "Device:obf-Device.type",
+        "id": "Device.type",
         "path": "Device.type",
         "binding": {
           "strength": "required",
@@ -1974,7 +1974,7 @@
         }
       },
       {
-        "id": "Device:obf-Device.patient",
+        "id": "Device.patient",
         "path": "Device.patient",
         "type": [
           {
@@ -1984,7 +1984,7 @@
         ]
       },
       {
-        "id": "Device:obf-Device.owner",
+        "id": "Device.owner",
         "path": "Device.owner",
         "type": [
           {
@@ -1994,7 +1994,7 @@
         ]
       },
       {
-        "id": "Device:obf-Device.location",
+        "id": "Device.location",
         "path": "Device.location",
         "type": [
           {
@@ -2004,7 +2004,7 @@
         ]
       },
       {
-        "id": "Device:obf-Device.note",
+        "id": "Device.note",
         "path": "Device.note",
         "type": [
           {

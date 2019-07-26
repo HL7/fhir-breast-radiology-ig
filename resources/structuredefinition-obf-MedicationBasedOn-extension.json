@@ -9,7 +9,7 @@
   "name": "MedicationBasedOn",
   "title": "obf-MedicationBasedOn",
   "status": "draft",
-  "date": "2019-07-24",
+  "date": "2019-07-26",
   "publisher": "Hl7",
   "contact": [
     {
@@ -34,7 +34,7 @@
   "snapshot": {
     "element": [
       {
-        "id": "Extension:medicationbasedon",
+        "id": "Extension",
         "path": "Extension",
         "short": "MedicationBasedOn",
         "definition": "MedicationBasedOn",
@@ -77,7 +77,7 @@
         ]
       },
       {
-        "id": "Extension:medicationbasedon.id",
+        "id": "Extension.id",
         "path": "Extension.id",
         "representation": [
           "xmlAttr"
@@ -104,7 +104,7 @@
         ]
       },
       {
-        "id": "Extension:medicationbasedon.extension",
+        "id": "Extension.extension",
         "path": "Extension.extension",
         "slicing": {
           "discriminator": [
@@ -143,7 +143,7 @@
         ]
       },
       {
-        "id": "Extension:medicationbasedon.url",
+        "id": "Extension.url",
         "path": "Extension.url",
         "representation": [
           "xmlAttr"
@@ -172,7 +172,7 @@
         "fixedUri": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-MedicationBasedOn-extension"
       },
       {
-        "id": "Extension:medicationbasedon.value[x]",
+        "id": "Extension.value[x]",
         "path": "Extension.value[x]",
         "short": "Value of extension",
         "definition": "Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).",
@@ -212,7 +212,7 @@
         }
       },
       {
-        "id": "Extension:medicationbasedon.valueReference:obf-ProcedureRequest",
+        "id": "Extension.valueReference:obf-ProcedureRequest",
         "path": "Extension.valueReference",
         "sliceName": "obf-ProcedureRequest",
         "short": "Value of extension",
@@ -233,7 +233,7 @@
         ]
       },
       {
-        "id": "Extension:medicationbasedon.valueReference:obf-ReferralRequest",
+        "id": "Extension.valueReference:obf-ReferralRequest",
         "path": "Extension.valueReference",
         "sliceName": "obf-ReferralRequest",
         "short": "Value of extension",
@@ -258,7 +258,7 @@
   "differential": {
     "element": [
       {
-        "id": "Extension:medicationbasedon",
+        "id": "Extension",
         "path": "Extension",
         "short": "MedicationBasedOn",
         "definition": "MedicationBasedOn",
@@ -266,18 +266,18 @@
         "max": "*"
       },
       {
-        "id": "Extension:medicationbasedon.extension",
+        "id": "Extension.extension",
         "path": "Extension.extension",
         "min": 0,
         "max": "0"
       },
       {
-        "id": "Extension:medicationbasedon.url",
+        "id": "Extension.url",
         "path": "Extension.url",
         "fixedUri": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-MedicationBasedOn-extension"
       },
       {
-        "id": "Extension:medicationbasedon.value[x]",
+        "id": "Extension.value[x]",
         "path": "Extension.value[x]",
         "min": 1,
         "type": [
@@ -303,7 +303,7 @@
         }
       },
       {
-        "id": "Extension:medicationbasedon.valueReference:obf-ProcedureRequest",
+        "id": "Extension.valueReference:obf-ProcedureRequest",
         "path": "Extension.valueReference",
         "base": {
           "path": "Extension.value[x]",
@@ -319,7 +319,7 @@
         ]
       },
       {
-        "id": "Extension:medicationbasedon.valueReference:obf-ReferralRequest",
+        "id": "Extension.valueReference:obf-ReferralRequest",
         "path": "Extension.valueReference",
         "base": {
           "path": "Extension.value[x]",

@@ -8,7 +8,7 @@
   "url": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-Duration",
   "name": "Duration",
   "status": "draft",
-  "date": "2019-07-24",
+  "date": "2019-07-26",
   "publisher": "Hl7",
   "contact": [
     {
@@ -42,7 +42,7 @@
   "snapshot": {
     "element": [
       {
-        "id": "Duration:shr-core-Duration",
+        "id": "Duration",
         "path": "Duration",
         "short": "shr-core-Duration",
         "definition": "The length of time that something continues.",
@@ -82,7 +82,7 @@
         ]
       },
       {
-        "id": "Duration:shr-core-Duration.id",
+        "id": "Duration.id",
         "path": "Duration.id",
         "representation": [
           "xmlAttr"
@@ -109,7 +109,7 @@
         ]
       },
       {
-        "id": "Duration:shr-core-Duration.extension",
+        "id": "Duration.extension",
         "path": "Duration.extension",
         "slicing": {
           "discriminator": [
@@ -148,7 +148,7 @@
         ]
       },
       {
-        "id": "Duration:shr-core-Duration.extension:number",
+        "id": "Duration.extension:number",
         "path": "Duration.extension",
         "definition": "A decimal value.",
         "min": 0,
@@ -167,7 +167,7 @@
         "sliceName": "number"
       },
       {
-        "id": "Duration:shr-core-Duration.extension:units",
+        "id": "Duration.extension:units",
         "path": "Duration.extension",
         "definition": "The unit of measure of the quantity.",
         "min": 0,
@@ -186,7 +186,7 @@
         "sliceName": "units"
       },
       {
-        "id": "Duration:shr-core-Duration.extension:units.id",
+        "id": "Duration.extension:units.id",
         "path": "Duration.extension.id",
         "representation": [
           "xmlAttr"
@@ -213,7 +213,7 @@
         ]
       },
       {
-        "id": "Duration:shr-core-Duration.extension:units.extension",
+        "id": "Duration.extension:units.extension",
         "path": "Duration.extension.extension",
         "slicing": {
           "discriminator": [
@@ -252,7 +252,7 @@
         ]
       },
       {
-        "id": "Duration:shr-core-Duration.extension:units.url",
+        "id": "Duration.extension:units.url",
         "path": "Duration.extension.url",
         "representation": [
           "xmlAttr"
@@ -281,7 +281,7 @@
         "fixedUri": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-Units-extension"
       },
       {
-        "id": "Duration:shr-core-Duration.extension:units.valueCodeableConcept",
+        "id": "Duration.extension:units.valueCodeableConcept",
         "path": "Duration.extension.valueCodeableConcept",
         "short": "Value of extension",
         "definition": "Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).",
@@ -311,7 +311,7 @@
         }
       },
       {
-        "id": "Duration:shr-core-Duration.value",
+        "id": "Duration.value",
         "path": "Duration.value",
         "short": "Numerical value (with implicit precision)",
         "definition": "The value of the measured amount. The value includes an implicit precision in the presentation of the value.",
@@ -342,7 +342,7 @@
         ]
       },
       {
-        "id": "Duration:shr-core-Duration.comparator",
+        "id": "Duration.comparator",
         "path": "Duration.comparator",
         "short": "< | <= | >= | > - how to understand the value",
         "definition": "How the value should be understood and represented - whether the actual value is greater or less than the stated value due to measurement issues; e.g. if the comparator is \"<\" , then the real value is < stated value.",
@@ -388,7 +388,7 @@
         ]
       },
       {
-        "id": "Duration:shr-core-Duration.unit",
+        "id": "Duration.unit",
         "extension": [
           {
             "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
@@ -424,7 +424,7 @@
         ]
       },
       {
-        "id": "Duration:shr-core-Duration.system",
+        "id": "Duration.system",
         "path": "Duration.system",
         "short": "System that defines coded unit form",
         "definition": "The identification of the system that provides the coded form of the unit.",
@@ -457,7 +457,7 @@
         ]
       },
       {
-        "id": "Duration:shr-core-Duration.code",
+        "id": "Duration.code",
         "path": "Duration.code",
         "short": "Coded form of the unit",
         "definition": "A computer processable form of the unit in some unit representation system.",
@@ -492,13 +492,13 @@
   "differential": {
     "element": [
       {
-        "id": "Duration:shr-core-Duration",
+        "id": "Duration",
         "path": "Duration",
         "short": "shr-core-Duration",
         "definition": "The length of time that something continues."
       },
       {
-        "id": "Duration:shr-core-Duration.extension:number",
+        "id": "Duration.extension:number",
         "path": "Duration.extension",
         "definition": "A decimal value.",
         "min": 0,
@@ -517,7 +517,7 @@
         "sliceName": "number"
       },
       {
-        "id": "Duration:shr-core-Duration.extension:units",
+        "id": "Duration.extension:units",
         "path": "Duration.extension",
         "definition": "The unit of measure of the quantity.",
         "min": 0,
@@ -536,7 +536,7 @@
         "sliceName": "units"
       },
       {
-        "id": "Duration:shr-core-Duration.extension:units.valueCodeableConcept",
+        "id": "Duration.extension:units.valueCodeableConcept",
         "path": "Duration.extension.valueCodeableConcept",
         "binding": {
           "strength": "extensible",

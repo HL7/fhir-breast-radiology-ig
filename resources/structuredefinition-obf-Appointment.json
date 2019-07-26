@@ -8,7 +8,7 @@
   "url": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Appointment",
   "name": "Appointment",
   "status": "draft",
-  "date": "2019-07-24",
+  "date": "2019-07-26",
   "publisher": "Hl7",
   "contact": [
     {
@@ -52,7 +52,7 @@
   "snapshot": {
     "element": [
       {
-        "id": "Appointment:obf-Appointment",
+        "id": "Appointment",
         "path": "Appointment",
         "short": "obf-Appointment",
         "definition": "A booking of a healthcare event among patient(s), practitioner(s), related person(s) and/or device(s) for a specific date/time.",
@@ -126,7 +126,7 @@
         ]
       },
       {
-        "id": "Appointment:obf-Appointment.id",
+        "id": "Appointment.id",
         "path": "Appointment.id",
         "short": "Logical id of this artifact",
         "definition": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.",
@@ -146,7 +146,7 @@
         "isSummary": true
       },
       {
-        "id": "Appointment:obf-Appointment.meta",
+        "id": "Appointment.meta",
         "path": "Appointment.meta",
         "short": "Metadata about the resource",
         "definition": "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource.",
@@ -165,7 +165,7 @@
         "isSummary": true
       },
       {
-        "id": "Appointment:obf-Appointment.meta.id",
+        "id": "Appointment.meta.id",
         "path": "Appointment.meta.id",
         "representation": [
           "xmlAttr"
@@ -192,7 +192,7 @@
         ]
       },
       {
-        "id": "Appointment:obf-Appointment.meta.extension",
+        "id": "Appointment.meta.extension",
         "path": "Appointment.meta.extension",
         "slicing": {
           "discriminator": [
@@ -231,7 +231,7 @@
         ]
       },
       {
-        "id": "Appointment:obf-Appointment.meta.extension:sourcesystem",
+        "id": "Appointment.meta.extension:sourcesystem",
         "path": "Appointment.meta.extension",
         "definition": "FHIR: This provides a minimal amount of Provenance information that can be used to track or differentiate the source of information in the resource. The source may identify another FHIR server, document, message, database, etc.\nFHIM: Identifies the computer system that created the medical record. This optional field may also be used to indicate that the medical record was originally created by a different organization from the one that is currently storing or utilizing the record in that the assigning authority of the Id could be set to that originating organization. This property is optional, as some systems will assume that all records that it contains originated in that system, however it is anticipated that it will become increasingly commonplace for records from multiple systems and organizations will be comingled in order to provide a complete picture of the patient's health record.",
         "min": 0,
@@ -250,7 +250,7 @@
         "sliceName": "sourcesystem"
       },
       {
-        "id": "Appointment:obf-Appointment.meta.versionId",
+        "id": "Appointment.meta.versionId",
         "path": "Appointment.meta.versionId",
         "short": "Version specific identifier",
         "definition": "The version specific identifier, as it appears in the version portion of the URL. This values changes when the resource is created, updated, or deleted.",
@@ -265,7 +265,7 @@
         "isSummary": true
       },
       {
-        "id": "Appointment:obf-Appointment.meta.lastUpdated",
+        "id": "Appointment.meta.lastUpdated",
         "path": "Appointment.meta.lastUpdated",
         "short": "When the resource version last changed",
         "definition": "When the resource last changed - e.g. when the version changed.",
@@ -280,7 +280,7 @@
         "isSummary": true
       },
       {
-        "id": "Appointment:obf-Appointment.meta.profile",
+        "id": "Appointment.meta.profile",
         "path": "Appointment.meta.profile",
         "short": "Profiles this resource claims to conform to",
         "definition": "A list of profiles (references to [StructureDefinition](structuredefinition.html#) resources) that this resource claims to conform to. The URL is a reference to [StructureDefinition.url]().",
@@ -295,7 +295,7 @@
         "isSummary": true
       },
       {
-        "id": "Appointment:obf-Appointment.meta.security",
+        "id": "Appointment.meta.security",
         "path": "Appointment.meta.security",
         "short": "Security Labels applied to this resource",
         "definition": "Security labels applied to this resource. These tags connect specific resources to the overall security policy and infrastructure.",
@@ -327,7 +327,7 @@
         }
       },
       {
-        "id": "Appointment:obf-Appointment.meta.tag",
+        "id": "Appointment.meta.tag",
         "path": "Appointment.meta.tag",
         "short": "Tags applied to this resource",
         "definition": "Tags applied to this resource. Tags are intended to be used to identify and relate resources to process and workflow, and applications are not required to consider the tags when interpreting the meaning of a resource.",
@@ -355,7 +355,7 @@
         }
       },
       {
-        "id": "Appointment:obf-Appointment.implicitRules",
+        "id": "Appointment.implicitRules",
         "path": "Appointment.implicitRules",
         "short": "A set of rules under which this content was created",
         "definition": "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content.",
@@ -376,7 +376,7 @@
         "isSummary": true
       },
       {
-        "id": "Appointment:obf-Appointment.language",
+        "id": "Appointment.language",
         "path": "Appointment.language",
         "short": "Language of the resource content",
         "definition": "The base language in which the resource is written.",
@@ -418,7 +418,7 @@
         }
       },
       {
-        "id": "Appointment:obf-Appointment.text",
+        "id": "Appointment.text",
         "path": "Appointment.text",
         "short": "Text summary of the resource, for human interpretation",
         "definition": "A human-readable narrative that contains a summary of the resource, and may be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.",
@@ -452,7 +452,7 @@
         ]
       },
       {
-        "id": "Appointment:obf-Appointment.contained",
+        "id": "Appointment.contained",
         "path": "Appointment.contained",
         "short": "Contained, inline Resources",
         "definition": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.",
@@ -482,7 +482,7 @@
         ]
       },
       {
-        "id": "Appointment:obf-Appointment.extension",
+        "id": "Appointment.extension",
         "path": "Appointment.extension",
         "short": "Additional Content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the resource. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
@@ -522,7 +522,7 @@
         }
       },
       {
-        "id": "Appointment:obf-Appointment.extension:appointmentreasonreference",
+        "id": "Appointment.extension:appointmentreasonreference",
         "path": "Appointment.extension",
         "definition": "Reason the appointment is to take place (resource)",
         "min": 0,
@@ -541,7 +541,7 @@
         "sliceName": "appointmentreasonreference"
       },
       {
-        "id": "Appointment:obf-Appointment.extension:patientinstruction",
+        "id": "Appointment.extension:patientinstruction",
         "path": "Appointment.extension",
         "definition": "Patient or consumer-oriented instructions.",
         "min": 0,
@@ -560,7 +560,7 @@
         "sliceName": "patientinstruction"
       },
       {
-        "id": "Appointment:obf-Appointment.modifierExtension",
+        "id": "Appointment.modifierExtension",
         "path": "Appointment.modifierExtension",
         "short": "Extensions that cannot be ignored",
         "definition": "May be used to represent additional information that is not part of the basic definition of the resource, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
@@ -590,7 +590,7 @@
         ]
       },
       {
-        "id": "Appointment:obf-Appointment.identifier",
+        "id": "Appointment.identifier",
         "path": "Appointment.identifier",
         "short": "External Ids for this item",
         "definition": "This records identifiers associated with this appointment concern that are defined by business processes and/or used to refer to it when a direct URL reference to the resource itself is not appropriate (e.g. in CDA documents, or in written / printed documentation).",
@@ -622,7 +622,7 @@
         ]
       },
       {
-        "id": "Appointment:obf-Appointment.status",
+        "id": "Appointment.status",
         "path": "Appointment.status",
         "short": "proposed | pending | booked | arrived | fulfilled | cancelled | noshow | entered-in-error",
         "definition": "The overall status of the Appointment. Each of the participants has their own participation status which indicates their involvement in the process, however this status indicates the shared status.",
@@ -665,7 +665,7 @@
         ]
       },
       {
-        "id": "Appointment:obf-Appointment.serviceCategory",
+        "id": "Appointment.serviceCategory",
         "path": "Appointment.serviceCategory",
         "short": "A broad categorisation of the service that is to be performed during this appointment",
         "definition": "A broad categorisation of the service that is to be performed during this appointment.",
@@ -697,7 +697,7 @@
         ]
       },
       {
-        "id": "Appointment:obf-Appointment.serviceType",
+        "id": "Appointment.serviceType",
         "path": "Appointment.serviceType",
         "short": "The specific service that is to be performed during this appointment",
         "definition": "The specific service that is to be performed during this appointment.",
@@ -729,7 +729,7 @@
         ]
       },
       {
-        "id": "Appointment:obf-Appointment.specialty",
+        "id": "Appointment.specialty",
         "path": "Appointment.specialty",
         "short": "The specialty of a practitioner that would be required to perform the service requested in this appointment",
         "definition": "The specialty of a practitioner that would be required to perform the service requested in this appointment.",
@@ -765,7 +765,7 @@
         ]
       },
       {
-        "id": "Appointment:obf-Appointment.appointmentType",
+        "id": "Appointment.appointmentType",
         "path": "Appointment.appointmentType",
         "short": "The style of appointment or patient that has been booked in the slot (not service type)",
         "definition": "The style of appointment or patient that has been booked in the slot (not service type).",
@@ -795,7 +795,7 @@
         ]
       },
       {
-        "id": "Appointment:obf-Appointment.reason",
+        "id": "Appointment.reason",
         "path": "Appointment.reason",
         "short": "Reason this appointment is scheduled",
         "definition": "The reason that this appointment is being scheduled. This is more clinical than administrative.",
@@ -837,7 +837,7 @@
         }
       },
       {
-        "id": "Appointment:obf-Appointment.indication",
+        "id": "Appointment.indication",
         "path": "Appointment.indication",
         "short": "Reason the appointment is to takes place (resource)",
         "definition": "Reason the appointment has been scheduled to take place, as specified using information from another resource. When the patient arrives and the encounter begins it may be used as the admission diagnosis. The indication will typically be a Condition (with other resources referenced in the evidence.detail), or a Procedure.",
@@ -861,7 +861,7 @@
         ]
       },
       {
-        "id": "Appointment:obf-Appointment.priority",
+        "id": "Appointment.priority",
         "path": "Appointment.priority",
         "short": "Used to make informed decisions if needing to re-prioritize",
         "definition": "The priority of the appointment. Can be used to make informed decisions if needing to re-prioritize appointments. (The iCal Standard specifies 0 as undefined, 1 as highest, 9 as lowest priority).",
@@ -893,7 +893,7 @@
         ]
       },
       {
-        "id": "Appointment:obf-Appointment.description",
+        "id": "Appointment.description",
         "path": "Appointment.description",
         "short": "Shown on a subject line in a meeting request, or appointment list",
         "definition": "The brief description of the appointment as would be shown on a subject line in a meeting request, or appointment list. Detailed or expanded information should be put in the comment field.",
@@ -920,7 +920,7 @@
         ]
       },
       {
-        "id": "Appointment:obf-Appointment.supportingInformation",
+        "id": "Appointment.supportingInformation",
         "path": "Appointment.supportingInformation",
         "short": "Additional information to support the appointment",
         "definition": "Additional information to support the appointment provided when making the appointment.",
@@ -944,7 +944,7 @@
         ]
       },
       {
-        "id": "Appointment:obf-Appointment.start",
+        "id": "Appointment.start",
         "path": "Appointment.start",
         "short": "When appointment is to take place",
         "definition": "Date/Time that the appointment is to take place.",
@@ -972,7 +972,7 @@
         ]
       },
       {
-        "id": "Appointment:obf-Appointment.end",
+        "id": "Appointment.end",
         "path": "Appointment.end",
         "short": "When appointment is to conclude",
         "definition": "Date/Time that the appointment is to conclude.",
@@ -1000,7 +1000,7 @@
         ]
       },
       {
-        "id": "Appointment:obf-Appointment.minutesDuration",
+        "id": "Appointment.minutesDuration",
         "path": "Appointment.minutesDuration",
         "short": "Can be less than start/end (e.g. estimate)",
         "definition": "Number of minutes that the appointment is to take. This can be less than the duration between the start and end times (where actual time of appointment is only an estimate or is a planned appointment request).",
@@ -1019,7 +1019,7 @@
         ]
       },
       {
-        "id": "Appointment:obf-Appointment.slot",
+        "id": "Appointment.slot",
         "path": "Appointment.slot",
         "short": "The slots that this appointment is filling",
         "definition": "The slots from the participants' schedules that will be filled by the appointment.",
@@ -1039,7 +1039,7 @@
         ]
       },
       {
-        "id": "Appointment:obf-Appointment.created",
+        "id": "Appointment.created",
         "path": "Appointment.created",
         "short": "The date that this appointment was initially created",
         "definition": "The date that this appointment was initially created. This could be different to the meta.lastModified value on the initial entry, as this could have been before the resource was created on the FHIR server, and should remain unchanged over the lifespan of the appointment.",
@@ -1059,7 +1059,7 @@
         ]
       },
       {
-        "id": "Appointment:obf-Appointment.comment",
+        "id": "Appointment.comment",
         "path": "Appointment.comment",
         "short": "Additional comments",
         "definition": "Additional comments about the appointment.",
@@ -1087,7 +1087,7 @@
         ]
       },
       {
-        "id": "Appointment:obf-Appointment.incomingReferral",
+        "id": "Appointment.incomingReferral",
         "path": "Appointment.incomingReferral",
         "short": "Indicates any plans, proposals or orders that this request is intended to satisfy - in whole or in part",
         "definition": "Indicates any plans, proposals or orders that this request is intended to satisfy - in whole or in part.",
@@ -1107,7 +1107,7 @@
         ]
       },
       {
-        "id": "Appointment:obf-Appointment.participant",
+        "id": "Appointment.participant",
         "path": "Appointment.participant",
         "short": "Participants involved in appointment",
         "definition": "List of participants involved in the appointment.",
@@ -1151,7 +1151,7 @@
         ]
       },
       {
-        "id": "Appointment:obf-Appointment.participant.id",
+        "id": "Appointment.participant.id",
         "path": "Appointment.participant.id",
         "representation": [
           "xmlAttr"
@@ -1178,7 +1178,7 @@
         ]
       },
       {
-        "id": "Appointment:obf-Appointment.participant.extension",
+        "id": "Appointment.participant.extension",
         "path": "Appointment.participant.extension",
         "short": "Additional Content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
@@ -1207,7 +1207,7 @@
         ]
       },
       {
-        "id": "Appointment:obf-Appointment.participant.modifierExtension",
+        "id": "Appointment.participant.modifierExtension",
         "path": "Appointment.participant.modifierExtension",
         "short": "Extensions that cannot be ignored",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
@@ -1239,7 +1239,7 @@
         ]
       },
       {
-        "id": "Appointment:obf-Appointment.participant.type",
+        "id": "Appointment.participant.type",
         "path": "Appointment.participant.type",
         "short": "Role of participant in the appointment",
         "definition": "Role of participant in the appointment.",
@@ -1286,7 +1286,7 @@
         }
       },
       {
-        "id": "Appointment:obf-Appointment.participant.actor",
+        "id": "Appointment.participant.actor",
         "path": "Appointment.participant.actor",
         "short": "A choice of Person (in any role) or Organization, Device or Location as participants",
         "definition": "A choice of Person (in any role) or Organization, Device or Location as participants.",
@@ -1335,7 +1335,7 @@
         ]
       },
       {
-        "id": "Appointment:obf-Appointment.participant.required",
+        "id": "Appointment.participant.required",
         "path": "Appointment.participant.required",
         "short": "required | optional | information-only",
         "definition": "Is this participant required to be present at the meeting. This covers a use-case where 2 doctors need to meet to discuss the results for a specific patient, and the patient is not required to be present.",
@@ -1372,7 +1372,7 @@
         ]
       },
       {
-        "id": "Appointment:obf-Appointment.participant.status",
+        "id": "Appointment.participant.status",
         "path": "Appointment.participant.status",
         "short": "accepted | declined | tentative | needs-action",
         "definition": "Participation status of the actor.",
@@ -1412,7 +1412,7 @@
         ]
       },
       {
-        "id": "Appointment:obf-Appointment.requestedPeriod",
+        "id": "Appointment.requestedPeriod",
         "path": "Appointment.requestedPeriod",
         "short": "Potential date/time interval(s) requested to allocate the appointment within",
         "definition": "A set of date ranges (potentially including times) that the appointment is preferred to be scheduled within. When using these values, the minutes duration should be provided to indicate the length of the appointment to fill and populate the start/end times for the actual allocated time.",
@@ -1440,17 +1440,17 @@
   "differential": {
     "element": [
       {
-        "id": "Appointment:obf-Appointment",
+        "id": "Appointment",
         "path": "Appointment",
         "short": "obf-Appointment",
         "definition": "A booking of a healthcare event among patient(s), practitioner(s), related person(s) and/or device(s) for a specific date/time."
       },
       {
-        "id": "Appointment:obf-Appointment.meta",
+        "id": "Appointment.meta",
         "path": "Appointment.meta"
       },
       {
-        "id": "Appointment:obf-Appointment.meta.extension:sourcesystem",
+        "id": "Appointment.meta.extension:sourcesystem",
         "path": "Appointment.meta.extension",
         "definition": "FHIR: This provides a minimal amount of Provenance information that can be used to track or differentiate the source of information in the resource. The source may identify another FHIR server, document, message, database, etc.\nFHIM: Identifies the computer system that created the medical record. This optional field may also be used to indicate that the medical record was originally created by a different organization from the one that is currently storing or utilizing the record in that the assigning authority of the Id could be set to that originating organization. This property is optional, as some systems will assume that all records that it contains originated in that system, however it is anticipated that it will become increasingly commonplace for records from multiple systems and organizations will be comingled in order to provide a complete picture of the patient's health record.",
         "min": 0,
@@ -1469,7 +1469,7 @@
         "sliceName": "sourcesystem"
       },
       {
-        "id": "Appointment:obf-Appointment.extension",
+        "id": "Appointment.extension",
         "path": "Appointment.extension",
         "slicing": {
           "id": "1",
@@ -1484,7 +1484,7 @@
         }
       },
       {
-        "id": "Appointment:obf-Appointment.extension:appointmentreasonreference",
+        "id": "Appointment.extension:appointmentreasonreference",
         "path": "Appointment.extension",
         "definition": "Reason the appointment is to take place (resource)",
         "min": 0,
@@ -1503,7 +1503,7 @@
         "sliceName": "appointmentreasonreference"
       },
       {
-        "id": "Appointment:obf-Appointment.extension:patientinstruction",
+        "id": "Appointment.extension:patientinstruction",
         "path": "Appointment.extension",
         "definition": "Patient or consumer-oriented instructions.",
         "min": 0,
@@ -1522,7 +1522,7 @@
         "sliceName": "patientinstruction"
       },
       {
-        "id": "Appointment:obf-Appointment.appointmentType",
+        "id": "Appointment.appointmentType",
         "path": "Appointment.appointmentType",
         "binding": {
           "strength": "preferred",
@@ -1532,7 +1532,7 @@
         }
       },
       {
-        "id": "Appointment:obf-Appointment.reason",
+        "id": "Appointment.reason",
         "path": "Appointment.reason",
         "min": 0,
         "max": "1",
@@ -1543,7 +1543,7 @@
         }
       },
       {
-        "id": "Appointment:obf-Appointment.indication",
+        "id": "Appointment.indication",
         "path": "Appointment.indication",
         "type": [
           {
@@ -1557,7 +1557,7 @@
         ]
       },
       {
-        "id": "Appointment:obf-Appointment.supportingInformation",
+        "id": "Appointment.supportingInformation",
         "path": "Appointment.supportingInformation",
         "type": [
           {
@@ -1567,7 +1567,7 @@
         ]
       },
       {
-        "id": "Appointment:obf-Appointment.incomingReferral",
+        "id": "Appointment.incomingReferral",
         "path": "Appointment.incomingReferral",
         "type": [
           {
@@ -1579,11 +1579,11 @@
         "definition": "Indicates any plans, proposals or orders that this request is intended to satisfy - in whole or in part."
       },
       {
-        "id": "Appointment:obf-Appointment.participant",
+        "id": "Appointment.participant",
         "path": "Appointment.participant"
       },
       {
-        "id": "Appointment:obf-Appointment.participant.type",
+        "id": "Appointment.participant.type",
         "path": "Appointment.participant.type",
         "min": 1,
         "max": "*",
@@ -1607,7 +1607,7 @@
         }
       },
       {
-        "id": "Appointment:obf-Appointment.participant.actor",
+        "id": "Appointment.participant.actor",
         "path": "Appointment.participant.actor",
         "type": [
           {

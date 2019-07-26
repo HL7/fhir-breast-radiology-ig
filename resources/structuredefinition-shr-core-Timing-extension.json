@@ -9,7 +9,7 @@
   "name": "Timing",
   "title": "shr-core-Timing",
   "status": "draft",
-  "date": "2019-07-24",
+  "date": "2019-07-26",
   "publisher": "Hl7",
   "contact": [
     {
@@ -35,7 +35,7 @@
   "snapshot": {
     "element": [
       {
-        "id": "Extension:timing",
+        "id": "Extension",
         "path": "Extension",
         "short": "Timing",
         "definition": "A timing schedule that specifies an event that may occur multiple times.\nTiming offers a choice of multiple OccurrenceTime (used is used to specify specific times), or recurrence patterns.",
@@ -78,7 +78,7 @@
         ]
       },
       {
-        "id": "Extension:timing.id",
+        "id": "Extension.id",
         "path": "Extension.id",
         "representation": [
           "xmlAttr"
@@ -105,7 +105,7 @@
         ]
       },
       {
-        "id": "Extension:timing.extension",
+        "id": "Extension.extension",
         "path": "Extension.extension",
         "slicing": {
           "discriminator": [
@@ -144,7 +144,7 @@
         ]
       },
       {
-        "id": "Extension:timing.url",
+        "id": "Extension.url",
         "path": "Extension.url",
         "representation": [
           "xmlAttr"
@@ -173,7 +173,7 @@
         "fixedUri": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-Timing-extension"
       },
       {
-        "id": "Extension:timing.valueTiming",
+        "id": "Extension.valueTiming",
         "path": "Extension.valueTiming",
         "short": "Value of extension",
         "definition": "Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).",
@@ -202,7 +202,7 @@
   "differential": {
     "element": [
       {
-        "id": "Extension:timing",
+        "id": "Extension",
         "path": "Extension",
         "short": "Timing",
         "definition": "A timing schedule that specifies an event that may occur multiple times.\nTiming offers a choice of multiple OccurrenceTime (used is used to specify specific times), or recurrence patterns.",
@@ -210,18 +210,18 @@
         "max": "*"
       },
       {
-        "id": "Extension:timing.extension",
+        "id": "Extension.extension",
         "path": "Extension.extension",
         "min": 0,
         "max": "0"
       },
       {
-        "id": "Extension:timing.url",
+        "id": "Extension.url",
         "path": "Extension.url",
         "fixedUri": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-Timing-extension"
       },
       {
-        "id": "Extension:timing.valueTiming",
+        "id": "Extension.valueTiming",
         "path": "Extension.valueTiming",
         "min": 1,
         "type": [

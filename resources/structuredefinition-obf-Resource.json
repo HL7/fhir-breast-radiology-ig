@@ -8,7 +8,7 @@
   "url": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Resource",
   "name": "Resource",
   "status": "draft",
-  "date": "2019-07-24",
+  "date": "2019-07-26",
   "publisher": "Hl7",
   "contact": [
     {
@@ -35,7 +35,7 @@
   "snapshot": {
     "element": [
       {
-        "id": "Resource:obf-Resource",
+        "id": "Resource",
         "path": "Resource",
         "short": "obf-Resource",
         "definition": "Parent class for any item in clinical or administrative health-related system. Contains metadata attributes that apply to any item represented in the standard health record. An DomainResource can belong to a single person's health record, or represent an entity that surfaces in multiple records, such as organizations, providers, payments, decision support artifacts, etc.",
@@ -49,7 +49,7 @@
         ]
       },
       {
-        "id": "Resource:obf-Resource.id",
+        "id": "Resource.id",
         "path": "Resource.id",
         "short": "Logical id of this artifact",
         "definition": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.",
@@ -64,7 +64,7 @@
         "isSummary": true
       },
       {
-        "id": "Resource:obf-Resource.meta",
+        "id": "Resource.meta",
         "path": "Resource.meta",
         "short": "Metadata about the resource",
         "definition": "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource.",
@@ -78,7 +78,7 @@
         "isSummary": true
       },
       {
-        "id": "Resource:obf-Resource.meta.id",
+        "id": "Resource.meta.id",
         "path": "Resource.meta.id",
         "representation": [
           "xmlAttr"
@@ -105,7 +105,7 @@
         ]
       },
       {
-        "id": "Resource:obf-Resource.meta.extension",
+        "id": "Resource.meta.extension",
         "path": "Resource.meta.extension",
         "slicing": {
           "discriminator": [
@@ -144,7 +144,7 @@
         ]
       },
       {
-        "id": "Resource:obf-Resource.meta.extension:sourcesystem",
+        "id": "Resource.meta.extension:sourcesystem",
         "path": "Resource.meta.extension",
         "definition": "FHIR: This provides a minimal amount of Provenance information that can be used to track or differentiate the source of information in the resource. The source may identify another FHIR server, document, message, database, etc.\nFHIM: Identifies the computer system that created the medical record. This optional field may also be used to indicate that the medical record was originally created by a different organization from the one that is currently storing or utilizing the record in that the assigning authority of the Id could be set to that originating organization. This property is optional, as some systems will assume that all records that it contains originated in that system, however it is anticipated that it will become increasingly commonplace for records from multiple systems and organizations will be comingled in order to provide a complete picture of the patient's health record.",
         "min": 0,
@@ -163,7 +163,7 @@
         "sliceName": "sourcesystem"
       },
       {
-        "id": "Resource:obf-Resource.meta.versionId",
+        "id": "Resource.meta.versionId",
         "path": "Resource.meta.versionId",
         "short": "Version specific identifier",
         "definition": "The version specific identifier, as it appears in the version portion of the URL. This values changes when the resource is created, updated, or deleted.",
@@ -178,7 +178,7 @@
         "isSummary": true
       },
       {
-        "id": "Resource:obf-Resource.meta.lastUpdated",
+        "id": "Resource.meta.lastUpdated",
         "path": "Resource.meta.lastUpdated",
         "short": "When the resource version last changed",
         "definition": "When the resource last changed - e.g. when the version changed.",
@@ -193,7 +193,7 @@
         "isSummary": true
       },
       {
-        "id": "Resource:obf-Resource.meta.profile",
+        "id": "Resource.meta.profile",
         "path": "Resource.meta.profile",
         "short": "Profiles this resource claims to conform to",
         "definition": "A list of profiles (references to [StructureDefinition](structuredefinition.html#) resources) that this resource claims to conform to. The URL is a reference to [StructureDefinition.url]().",
@@ -208,7 +208,7 @@
         "isSummary": true
       },
       {
-        "id": "Resource:obf-Resource.meta.security",
+        "id": "Resource.meta.security",
         "path": "Resource.meta.security",
         "short": "Security Labels applied to this resource",
         "definition": "Security labels applied to this resource. These tags connect specific resources to the overall security policy and infrastructure.",
@@ -240,7 +240,7 @@
         }
       },
       {
-        "id": "Resource:obf-Resource.meta.tag",
+        "id": "Resource.meta.tag",
         "path": "Resource.meta.tag",
         "short": "Tags applied to this resource",
         "definition": "Tags applied to this resource. Tags are intended to be used to identify and relate resources to process and workflow, and applications are not required to consider the tags when interpreting the meaning of a resource.",
@@ -268,7 +268,7 @@
         }
       },
       {
-        "id": "Resource:obf-Resource.implicitRules",
+        "id": "Resource.implicitRules",
         "path": "Resource.implicitRules",
         "short": "A set of rules under which this content was created",
         "definition": "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content.",
@@ -284,7 +284,7 @@
         "isSummary": true
       },
       {
-        "id": "Resource:obf-Resource.language",
+        "id": "Resource.language",
         "path": "Resource.language",
         "short": "Language of the resource content",
         "definition": "The base language in which the resource is written.",
@@ -325,17 +325,17 @@
   "differential": {
     "element": [
       {
-        "id": "Resource:obf-Resource",
+        "id": "Resource",
         "path": "Resource",
         "short": "obf-Resource",
         "definition": "Parent class for any item in clinical or administrative health-related system. Contains metadata attributes that apply to any item represented in the standard health record. An DomainResource can belong to a single person's health record, or represent an entity that surfaces in multiple records, such as organizations, providers, payments, decision support artifacts, etc."
       },
       {
-        "id": "Resource:obf-Resource.meta",
+        "id": "Resource.meta",
         "path": "Resource.meta"
       },
       {
-        "id": "Resource:obf-Resource.meta.extension:sourcesystem",
+        "id": "Resource.meta.extension:sourcesystem",
         "path": "Resource.meta.extension",
         "definition": "FHIR: This provides a minimal amount of Provenance information that can be used to track or differentiate the source of information in the resource. The source may identify another FHIR server, document, message, database, etc.\nFHIM: Identifies the computer system that created the medical record. This optional field may also be used to indicate that the medical record was originally created by a different organization from the one that is currently storing or utilizing the record in that the assigning authority of the Id could be set to that originating organization. This property is optional, as some systems will assume that all records that it contains originated in that system, however it is anticipated that it will become increasingly commonplace for records from multiple systems and organizations will be comingled in order to provide a complete picture of the patient's health record.",
         "min": 0,

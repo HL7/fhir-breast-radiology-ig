@@ -8,7 +8,7 @@
   "url": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-MedicationAdministration",
   "name": "MedicationAdministration",
   "status": "draft",
-  "date": "2019-07-24",
+  "date": "2019-07-26",
   "publisher": "Hl7",
   "contact": [
     {
@@ -57,7 +57,7 @@
   "snapshot": {
     "element": [
       {
-        "id": "MedicationAdministration:obf-MedicationAdministration",
+        "id": "MedicationAdministration",
         "path": "MedicationAdministration",
         "short": "obf-MedicationAdministration",
         "definition": "A record of the use of a medication. If the medication is given as part of a course of treatment, the PartOf attribute should refer to the CourseOfTreatment.\nAlthough FHIR MedicationAdministration supports date of administration, information source, performer, it lacks common provenance elements, statement creation date, author, and recorder. These are supported as optional extensions.\nFHIR DSTU2 lacks a category attribute, which is provided as an extension in that version.\nSHR does not allow the 'not given' attributes from DSTU2 and STU3, since they are dropped in R4. The status element is used to document medications not given.",
@@ -132,7 +132,7 @@
         ]
       },
       {
-        "id": "MedicationAdministration:obf-MedicationAdministration.id",
+        "id": "MedicationAdministration.id",
         "path": "MedicationAdministration.id",
         "short": "Logical id of this artifact",
         "definition": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.",
@@ -152,7 +152,7 @@
         "isSummary": true
       },
       {
-        "id": "MedicationAdministration:obf-MedicationAdministration.meta",
+        "id": "MedicationAdministration.meta",
         "path": "MedicationAdministration.meta",
         "short": "Metadata about the resource",
         "definition": "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource.",
@@ -171,7 +171,7 @@
         "isSummary": true
       },
       {
-        "id": "MedicationAdministration:obf-MedicationAdministration.meta.id",
+        "id": "MedicationAdministration.meta.id",
         "path": "MedicationAdministration.meta.id",
         "representation": [
           "xmlAttr"
@@ -198,7 +198,7 @@
         ]
       },
       {
-        "id": "MedicationAdministration:obf-MedicationAdministration.meta.extension",
+        "id": "MedicationAdministration.meta.extension",
         "path": "MedicationAdministration.meta.extension",
         "slicing": {
           "discriminator": [
@@ -237,7 +237,7 @@
         ]
       },
       {
-        "id": "MedicationAdministration:obf-MedicationAdministration.meta.extension:sourcesystem",
+        "id": "MedicationAdministration.meta.extension:sourcesystem",
         "path": "MedicationAdministration.meta.extension",
         "definition": "FHIR: This provides a minimal amount of Provenance information that can be used to track or differentiate the source of information in the resource. The source may identify another FHIR server, document, message, database, etc.\nFHIM: Identifies the computer system that created the medical record. This optional field may also be used to indicate that the medical record was originally created by a different organization from the one that is currently storing or utilizing the record in that the assigning authority of the Id could be set to that originating organization. This property is optional, as some systems will assume that all records that it contains originated in that system, however it is anticipated that it will become increasingly commonplace for records from multiple systems and organizations will be comingled in order to provide a complete picture of the patient's health record.",
         "min": 0,
@@ -256,7 +256,7 @@
         "sliceName": "sourcesystem"
       },
       {
-        "id": "MedicationAdministration:obf-MedicationAdministration.meta.versionId",
+        "id": "MedicationAdministration.meta.versionId",
         "path": "MedicationAdministration.meta.versionId",
         "short": "Version specific identifier",
         "definition": "The version specific identifier, as it appears in the version portion of the URL. This values changes when the resource is created, updated, or deleted.",
@@ -271,7 +271,7 @@
         "isSummary": true
       },
       {
-        "id": "MedicationAdministration:obf-MedicationAdministration.meta.lastUpdated",
+        "id": "MedicationAdministration.meta.lastUpdated",
         "path": "MedicationAdministration.meta.lastUpdated",
         "short": "When the resource version last changed",
         "definition": "When the resource last changed - e.g. when the version changed.",
@@ -286,7 +286,7 @@
         "isSummary": true
       },
       {
-        "id": "MedicationAdministration:obf-MedicationAdministration.meta.profile",
+        "id": "MedicationAdministration.meta.profile",
         "path": "MedicationAdministration.meta.profile",
         "short": "Profiles this resource claims to conform to",
         "definition": "A list of profiles (references to [StructureDefinition](structuredefinition.html#) resources) that this resource claims to conform to. The URL is a reference to [StructureDefinition.url]().",
@@ -301,7 +301,7 @@
         "isSummary": true
       },
       {
-        "id": "MedicationAdministration:obf-MedicationAdministration.meta.security",
+        "id": "MedicationAdministration.meta.security",
         "path": "MedicationAdministration.meta.security",
         "short": "Security Labels applied to this resource",
         "definition": "Security labels applied to this resource. These tags connect specific resources to the overall security policy and infrastructure.",
@@ -333,7 +333,7 @@
         }
       },
       {
-        "id": "MedicationAdministration:obf-MedicationAdministration.meta.tag",
+        "id": "MedicationAdministration.meta.tag",
         "path": "MedicationAdministration.meta.tag",
         "short": "Tags applied to this resource",
         "definition": "Tags applied to this resource. Tags are intended to be used to identify and relate resources to process and workflow, and applications are not required to consider the tags when interpreting the meaning of a resource.",
@@ -361,7 +361,7 @@
         }
       },
       {
-        "id": "MedicationAdministration:obf-MedicationAdministration.implicitRules",
+        "id": "MedicationAdministration.implicitRules",
         "path": "MedicationAdministration.implicitRules",
         "short": "A set of rules under which this content was created",
         "definition": "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content.",
@@ -382,7 +382,7 @@
         "isSummary": true
       },
       {
-        "id": "MedicationAdministration:obf-MedicationAdministration.language",
+        "id": "MedicationAdministration.language",
         "path": "MedicationAdministration.language",
         "short": "Language of the resource content",
         "definition": "The base language in which the resource is written.",
@@ -424,7 +424,7 @@
         }
       },
       {
-        "id": "MedicationAdministration:obf-MedicationAdministration.text",
+        "id": "MedicationAdministration.text",
         "path": "MedicationAdministration.text",
         "short": "Text summary of the resource, for human interpretation",
         "definition": "A human-readable narrative that contains a summary of the resource, and may be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.",
@@ -458,7 +458,7 @@
         ]
       },
       {
-        "id": "MedicationAdministration:obf-MedicationAdministration.contained",
+        "id": "MedicationAdministration.contained",
         "path": "MedicationAdministration.contained",
         "short": "Contained, inline Resources",
         "definition": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.",
@@ -488,7 +488,7 @@
         ]
       },
       {
-        "id": "MedicationAdministration:obf-MedicationAdministration.extension",
+        "id": "MedicationAdministration.extension",
         "path": "MedicationAdministration.extension",
         "short": "Additional Content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the resource. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
@@ -528,7 +528,7 @@
         }
       },
       {
-        "id": "MedicationAdministration:obf-MedicationAdministration.extension:statusreason",
+        "id": "MedicationAdministration.extension:statusreason",
         "path": "MedicationAdministration.extension",
         "definition": "Captures the reason for the current state of the procedure.",
         "min": 0,
@@ -547,7 +547,7 @@
         "sliceName": "statusreason"
       },
       {
-        "id": "MedicationAdministration:obf-MedicationAdministration.extension:statementdatetime",
+        "id": "MedicationAdministration.extension:statementdatetime",
         "path": "MedicationAdministration.extension",
         "definition": "The point in time when the statement was created.",
         "min": 0,
@@ -566,7 +566,7 @@
         "sliceName": "statementdatetime"
       },
       {
-        "id": "MedicationAdministration:obf-MedicationAdministration.extension:medicationcodeorreference",
+        "id": "MedicationAdministration.extension:medicationcodeorreference",
         "path": "MedicationAdministration.extension",
         "definition": "A choice of a medication code or reference.",
         "min": 1,
@@ -585,7 +585,7 @@
         "sliceName": "medicationcodeorreference"
       },
       {
-        "id": "MedicationAdministration:obf-MedicationAdministration.modifierExtension",
+        "id": "MedicationAdministration.modifierExtension",
         "path": "MedicationAdministration.modifierExtension",
         "short": "Extensions that cannot be ignored",
         "definition": "May be used to represent additional information that is not part of the basic definition of the resource, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
@@ -615,7 +615,7 @@
         ]
       },
       {
-        "id": "MedicationAdministration:obf-MedicationAdministration.identifier",
+        "id": "MedicationAdministration.identifier",
         "path": "MedicationAdministration.identifier",
         "short": "External identifier",
         "definition": "External identifier - FHIR will generate its own internal identifiers (probably URLs) which do not need to be explicitly managed by the resource.  The identifier here is one that would be used by another non-FHIR system - for example an automated medication pump would provide a record each time it operated; an administration while the patient was off the ward might be made with a different system and entered after the event.  Particularly important if these records have to be updated.",
@@ -642,7 +642,7 @@
         ]
       },
       {
-        "id": "MedicationAdministration:obf-MedicationAdministration.definition",
+        "id": "MedicationAdministration.definition",
         "path": "MedicationAdministration.definition",
         "short": "Instantiates protocol or definition",
         "definition": "A protocol, guideline, orderset or other definition that was adhered to in whole or in part by this event.",
@@ -671,7 +671,7 @@
         ]
       },
       {
-        "id": "MedicationAdministration:obf-MedicationAdministration.partOf",
+        "id": "MedicationAdministration.partOf",
         "path": "MedicationAdministration.partOf",
         "short": "Part of referenced event",
         "definition": "A larger event of which this particular event is a component or step.",
@@ -700,7 +700,7 @@
         ]
       },
       {
-        "id": "MedicationAdministration:obf-MedicationAdministration.status",
+        "id": "MedicationAdministration.status",
         "path": "MedicationAdministration.status",
         "short": "in-progress | on-hold | completed | entered-in-error | stopped | unknown",
         "definition": "Will generally be set to show that the administration has been completed.  For some long running administrations such as infusions it is possible for an administration to be started but not completed or it may be paused while some other process is under way.",
@@ -747,7 +747,7 @@
         ]
       },
       {
-        "id": "MedicationAdministration:obf-MedicationAdministration.category",
+        "id": "MedicationAdministration.category",
         "path": "MedicationAdministration.category",
         "short": "Type of medication usage",
         "definition": "Indicates the type of medication administration and where the medication is expected to be consumed or administered.",
@@ -779,7 +779,7 @@
         ]
       },
       {
-        "id": "MedicationAdministration:obf-MedicationAdministration.medication[x]",
+        "id": "MedicationAdministration.medication[x]",
         "path": "MedicationAdministration.medication[x]",
         "short": "What was administered",
         "definition": "Identifies the medication that was administered. This is either a link to a resource representing the details of the medication or a simple attribute carrying a code that identifies the medication from a known list of medications.",
@@ -829,7 +829,7 @@
         ]
       },
       {
-        "id": "MedicationAdministration:obf-MedicationAdministration.subject",
+        "id": "MedicationAdministration.subject",
         "path": "MedicationAdministration.subject",
         "short": "Who received medication",
         "definition": "The person or animal or group receiving the medication.",
@@ -867,7 +867,7 @@
         }
       },
       {
-        "id": "MedicationAdministration:obf-MedicationAdministration.context",
+        "id": "MedicationAdministration.context",
         "path": "MedicationAdministration.context",
         "short": "Encounter or Episode of Care administered as part of",
         "definition": "The visit, admission or other contact between patient and health care provider the medication administration was performed as part of.",
@@ -903,7 +903,7 @@
         ]
       },
       {
-        "id": "MedicationAdministration:obf-MedicationAdministration.supportingInformation",
+        "id": "MedicationAdministration.supportingInformation",
         "path": "MedicationAdministration.supportingInformation",
         "short": "Additional information to support administration",
         "definition": "Additional information (for example, patient height and weight) that supports the administration of the medication.",
@@ -927,7 +927,7 @@
         ]
       },
       {
-        "id": "MedicationAdministration:obf-MedicationAdministration.effective[x]",
+        "id": "MedicationAdministration.effective[x]",
         "path": "MedicationAdministration.effective[x]",
         "short": "Start and end time of administration",
         "definition": "A specific date/time or interval of time during which the administration took place (or did not take place, when the 'notGiven' attribute is true). For many administrations, such as swallowing a tablet the use of dateTime is more appropriate.",
@@ -967,7 +967,7 @@
         }
       },
       {
-        "id": "MedicationAdministration:obf-MedicationAdministration.performer",
+        "id": "MedicationAdministration.performer",
         "path": "MedicationAdministration.performer",
         "short": "Who administered substance",
         "definition": "The individual who was responsible for giving the medication to the patient.",
@@ -1014,7 +1014,7 @@
         }
       },
       {
-        "id": "MedicationAdministration:obf-MedicationAdministration.performer.id",
+        "id": "MedicationAdministration.performer.id",
         "path": "MedicationAdministration.performer.id",
         "representation": [
           "xmlAttr"
@@ -1041,7 +1041,7 @@
         ]
       },
       {
-        "id": "MedicationAdministration:obf-MedicationAdministration.performer.extension",
+        "id": "MedicationAdministration.performer.extension",
         "path": "MedicationAdministration.performer.extension",
         "short": "Additional Content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
@@ -1081,7 +1081,7 @@
         }
       },
       {
-        "id": "MedicationAdministration:obf-MedicationAdministration.performer.extension:participationtype",
+        "id": "MedicationAdministration.performer.extension:participationtype",
         "path": "MedicationAdministration.performer.extension",
         "definition": "The role played by the participant engaged in the action, for example, as the attending physician, surgical assistant, etc.",
         "min": 0,
@@ -1100,7 +1100,7 @@
         "sliceName": "participationtype"
       },
       {
-        "id": "MedicationAdministration:obf-MedicationAdministration.performer.modifierExtension",
+        "id": "MedicationAdministration.performer.modifierExtension",
         "path": "MedicationAdministration.performer.modifierExtension",
         "short": "Extensions that cannot be ignored",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
@@ -1132,7 +1132,7 @@
         ]
       },
       {
-        "id": "MedicationAdministration:obf-MedicationAdministration.performer.actor",
+        "id": "MedicationAdministration.performer.actor",
         "path": "MedicationAdministration.performer.actor",
         "short": "A choice of Patient, Practitioner and RelatedPerson as participant",
         "definition": "A choice of Patient, Practitioner and RelatedPerson as participant.",
@@ -1165,7 +1165,7 @@
         ]
       },
       {
-        "id": "MedicationAdministration:obf-MedicationAdministration.performer.onBehalfOf",
+        "id": "MedicationAdministration.performer.onBehalfOf",
         "path": "MedicationAdministration.performer.onBehalfOf",
         "short": "Organization organization was acting for",
         "definition": "The organization the device or practitioner was acting on behalf of.",
@@ -1189,7 +1189,7 @@
         ]
       },
       {
-        "id": "MedicationAdministration:obf-MedicationAdministration.notGiven",
+        "id": "MedicationAdministration.notGiven",
         "path": "MedicationAdministration.notGiven",
         "short": "True if medication not administered",
         "definition": "Set this to true if the record is saying that the medication was NOT administered.",
@@ -1225,7 +1225,7 @@
         }
       },
       {
-        "id": "MedicationAdministration:obf-MedicationAdministration.reasonNotGiven",
+        "id": "MedicationAdministration.reasonNotGiven",
         "path": "MedicationAdministration.reasonNotGiven",
         "short": "Reason administration not performed",
         "definition": "A code indicating why the administration was not performed.",
@@ -1273,7 +1273,7 @@
         }
       },
       {
-        "id": "MedicationAdministration:obf-MedicationAdministration.reasonCode",
+        "id": "MedicationAdministration.reasonCode",
         "path": "MedicationAdministration.reasonCode",
         "short": "Reason administration performed",
         "definition": "A code indicating why the medication was given.",
@@ -1316,7 +1316,7 @@
         ]
       },
       {
-        "id": "MedicationAdministration:obf-MedicationAdministration.reasonReference",
+        "id": "MedicationAdministration.reasonReference",
         "path": "MedicationAdministration.reasonReference",
         "short": "Condition or observation that supports why the medication is being/was taken",
         "definition": "Condition or observation that supports why the medication is being/was taken",
@@ -1353,7 +1353,7 @@
         ]
       },
       {
-        "id": "MedicationAdministration:obf-MedicationAdministration.prescription",
+        "id": "MedicationAdministration.prescription",
         "path": "MedicationAdministration.prescription",
         "short": "Request administration performed against",
         "definition": "The original request, instruction or authority to perform the administration.",
@@ -1381,7 +1381,7 @@
         ]
       },
       {
-        "id": "MedicationAdministration:obf-MedicationAdministration.device",
+        "id": "MedicationAdministration.device",
         "path": "MedicationAdministration.device",
         "short": "Device used to administer",
         "definition": "The device used in administering the medication to the patient.  For example, a particular infusion pump.",
@@ -1405,7 +1405,7 @@
         ]
       },
       {
-        "id": "MedicationAdministration:obf-MedicationAdministration.note",
+        "id": "MedicationAdministration.note",
         "path": "MedicationAdministration.note",
         "short": "Information about the administration",
         "definition": "Extra information about the medication administration that is not conveyed by the other attributes.",
@@ -1429,7 +1429,7 @@
         ]
       },
       {
-        "id": "MedicationAdministration:obf-MedicationAdministration.dosage",
+        "id": "MedicationAdministration.dosage",
         "path": "MedicationAdministration.dosage",
         "short": "Details of how medication was taken",
         "definition": "Describes the medication dosage information details e.g. dose, rate, site, route, etc.",
@@ -1465,7 +1465,7 @@
         ]
       },
       {
-        "id": "MedicationAdministration:obf-MedicationAdministration.dosage.id",
+        "id": "MedicationAdministration.dosage.id",
         "path": "MedicationAdministration.dosage.id",
         "representation": [
           "xmlAttr"
@@ -1492,7 +1492,7 @@
         ]
       },
       {
-        "id": "MedicationAdministration:obf-MedicationAdministration.dosage.extension",
+        "id": "MedicationAdministration.dosage.extension",
         "path": "MedicationAdministration.dosage.extension",
         "short": "Additional Content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
@@ -1532,7 +1532,7 @@
         }
       },
       {
-        "id": "MedicationAdministration:obf-MedicationAdministration.dosage.extension:dosesequencenumber",
+        "id": "MedicationAdministration.dosage.extension:dosesequencenumber",
         "path": "MedicationAdministration.dosage.extension",
         "definition": "Dose number within series.",
         "min": 0,
@@ -1551,7 +1551,7 @@
         "sliceName": "dosesequencenumber"
       },
       {
-        "id": "MedicationAdministration:obf-MedicationAdministration.dosage.modifierExtension",
+        "id": "MedicationAdministration.dosage.modifierExtension",
         "path": "MedicationAdministration.dosage.modifierExtension",
         "short": "Extensions that cannot be ignored",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
@@ -1583,7 +1583,7 @@
         ]
       },
       {
-        "id": "MedicationAdministration:obf-MedicationAdministration.dosage.text",
+        "id": "MedicationAdministration.dosage.text",
         "path": "MedicationAdministration.dosage.text",
         "short": "Free text dosage instructions e.g. SIG",
         "definition": "Free text dosage can be used for cases where the dosage administered is too complex to code. When coded dosage is present, the free text dosage may still be present for display to humans.\r\rThe dosage instructions should reflect the dosage of the medication that was administered.",
@@ -1602,7 +1602,7 @@
         ]
       },
       {
-        "id": "MedicationAdministration:obf-MedicationAdministration.dosage.site",
+        "id": "MedicationAdministration.dosage.site",
         "path": "MedicationAdministration.dosage.site",
         "short": "Body site administered to",
         "definition": "A coded specification of the anatomic site where the medication first entered the body.  For example, \"left arm\".",
@@ -1632,7 +1632,7 @@
         ]
       },
       {
-        "id": "MedicationAdministration:obf-MedicationAdministration.dosage.route",
+        "id": "MedicationAdministration.dosage.route",
         "path": "MedicationAdministration.dosage.route",
         "short": "Path of substance into body",
         "definition": "A code specifying the route or physiological path of administration of a therapeutic agent into or onto the patient.  For example, topical, intravenous, etc.",
@@ -1668,7 +1668,7 @@
         ]
       },
       {
-        "id": "MedicationAdministration:obf-MedicationAdministration.dosage.method",
+        "id": "MedicationAdministration.dosage.method",
         "path": "MedicationAdministration.dosage.method",
         "short": "How drug was administered",
         "definition": "A coded value indicating the method by which the medication is intended to be or was introduced into or on the body.  This attribute will most often NOT be populated.  It is most commonly used for injections.  For example, Slow Push, Deep IV.",
@@ -1705,7 +1705,7 @@
         ]
       },
       {
-        "id": "MedicationAdministration:obf-MedicationAdministration.dosage.dose",
+        "id": "MedicationAdministration.dosage.dose",
         "path": "MedicationAdministration.dosage.dose",
         "short": "Amount of medication per dose",
         "definition": "The amount of the medication given at one administration event.   Use this value when the administration is essentially an instantaneous event such as a swallowing a tablet or giving an injection.",
@@ -1730,7 +1730,7 @@
         ]
       },
       {
-        "id": "MedicationAdministration:obf-MedicationAdministration.dosage.rate[x]",
+        "id": "MedicationAdministration.dosage.rate[x]",
         "path": "MedicationAdministration.dosage.rate[x]",
         "short": "Dose quantity per unit of time",
         "definition": "Identifies the speed with which the medication was or will be introduced into the patient.  Typically the rate for an infusion e.g. 100 ml per 1 hour or 100 ml/hr.  May also be expressed as a rate per unit of time e.g. 500 ml per 2 hours.  Other examples:  200 mcg/min or 200 mcg/1 minute; 1 liter/8 hours.",
@@ -1758,7 +1758,7 @@
         ]
       },
       {
-        "id": "MedicationAdministration:obf-MedicationAdministration.eventHistory",
+        "id": "MedicationAdministration.eventHistory",
         "path": "MedicationAdministration.eventHistory",
         "short": "A list of events of interest in the lifecycle",
         "definition": "A summary of the events of interest that have occurred, such as when the administration was verified.",
@@ -1783,17 +1783,17 @@
   "differential": {
     "element": [
       {
-        "id": "MedicationAdministration:obf-MedicationAdministration",
+        "id": "MedicationAdministration",
         "path": "MedicationAdministration",
         "short": "obf-MedicationAdministration",
         "definition": "A record of the use of a medication. If the medication is given as part of a course of treatment, the PartOf attribute should refer to the CourseOfTreatment.\nAlthough FHIR MedicationAdministration supports date of administration, information source, performer, it lacks common provenance elements, statement creation date, author, and recorder. These are supported as optional extensions.\nFHIR DSTU2 lacks a category attribute, which is provided as an extension in that version.\nSHR does not allow the 'not given' attributes from DSTU2 and STU3, since they are dropped in R4. The status element is used to document medications not given."
       },
       {
-        "id": "MedicationAdministration:obf-MedicationAdministration.meta",
+        "id": "MedicationAdministration.meta",
         "path": "MedicationAdministration.meta"
       },
       {
-        "id": "MedicationAdministration:obf-MedicationAdministration.meta.extension:sourcesystem",
+        "id": "MedicationAdministration.meta.extension:sourcesystem",
         "path": "MedicationAdministration.meta.extension",
         "definition": "FHIR: This provides a minimal amount of Provenance information that can be used to track or differentiate the source of information in the resource. The source may identify another FHIR server, document, message, database, etc.\nFHIM: Identifies the computer system that created the medical record. This optional field may also be used to indicate that the medical record was originally created by a different organization from the one that is currently storing or utilizing the record in that the assigning authority of the Id could be set to that originating organization. This property is optional, as some systems will assume that all records that it contains originated in that system, however it is anticipated that it will become increasingly commonplace for records from multiple systems and organizations will be comingled in order to provide a complete picture of the patient's health record.",
         "min": 0,
@@ -1812,7 +1812,7 @@
         "sliceName": "sourcesystem"
       },
       {
-        "id": "MedicationAdministration:obf-MedicationAdministration.extension",
+        "id": "MedicationAdministration.extension",
         "path": "MedicationAdministration.extension",
         "slicing": {
           "id": "2",
@@ -1829,7 +1829,7 @@
         "max": "*"
       },
       {
-        "id": "MedicationAdministration:obf-MedicationAdministration.extension:statusreason",
+        "id": "MedicationAdministration.extension:statusreason",
         "path": "MedicationAdministration.extension",
         "definition": "Captures the reason for the current state of the procedure.",
         "min": 0,
@@ -1848,7 +1848,7 @@
         "sliceName": "statusreason"
       },
       {
-        "id": "MedicationAdministration:obf-MedicationAdministration.extension:statementdatetime",
+        "id": "MedicationAdministration.extension:statementdatetime",
         "path": "MedicationAdministration.extension",
         "definition": "The point in time when the statement was created.",
         "min": 0,
@@ -1867,7 +1867,7 @@
         "sliceName": "statementdatetime"
       },
       {
-        "id": "MedicationAdministration:obf-MedicationAdministration.extension:medicationcodeorreference",
+        "id": "MedicationAdministration.extension:medicationcodeorreference",
         "path": "MedicationAdministration.extension",
         "definition": "A choice of a medication code or reference.",
         "min": 1,
@@ -1886,7 +1886,7 @@
         "sliceName": "medicationcodeorreference"
       },
       {
-        "id": "MedicationAdministration:obf-MedicationAdministration.partOf",
+        "id": "MedicationAdministration.partOf",
         "path": "MedicationAdministration.partOf",
         "type": [
           {
@@ -1900,7 +1900,7 @@
         ]
       },
       {
-        "id": "MedicationAdministration:obf-MedicationAdministration.subject",
+        "id": "MedicationAdministration.subject",
         "path": "MedicationAdministration.subject",
         "base": {
           "path": "MedicationAdministration.subject",
@@ -1915,7 +1915,7 @@
         ]
       },
       {
-        "id": "MedicationAdministration:obf-MedicationAdministration.context",
+        "id": "MedicationAdministration.context",
         "path": "MedicationAdministration.context",
         "type": [
           {
@@ -1929,7 +1929,7 @@
         ]
       },
       {
-        "id": "MedicationAdministration:obf-MedicationAdministration.supportingInformation",
+        "id": "MedicationAdministration.supportingInformation",
         "path": "MedicationAdministration.supportingInformation",
         "type": [
           {
@@ -1939,7 +1939,7 @@
         ]
       },
       {
-        "id": "MedicationAdministration:obf-MedicationAdministration.effective[x]",
+        "id": "MedicationAdministration.effective[x]",
         "path": "MedicationAdministration.effective[x]",
         "base": {
           "path": "MedicationAdministration.effective[x]",
@@ -1948,7 +1948,7 @@
         }
       },
       {
-        "id": "MedicationAdministration:obf-MedicationAdministration.performer",
+        "id": "MedicationAdministration.performer",
         "path": "MedicationAdministration.performer",
         "min": 0,
         "max": "1",
@@ -1959,7 +1959,7 @@
         }
       },
       {
-        "id": "MedicationAdministration:obf-MedicationAdministration.performer.extension",
+        "id": "MedicationAdministration.performer.extension",
         "path": "MedicationAdministration.performer.extension",
         "slicing": {
           "id": "3",
@@ -1974,7 +1974,7 @@
         }
       },
       {
-        "id": "MedicationAdministration:obf-MedicationAdministration.performer.extension:participationtype",
+        "id": "MedicationAdministration.performer.extension:participationtype",
         "path": "MedicationAdministration.performer.extension",
         "definition": "The role played by the participant engaged in the action, for example, as the attending physician, surgical assistant, etc.",
         "min": 0,
@@ -1993,7 +1993,7 @@
         "sliceName": "participationtype"
       },
       {
-        "id": "MedicationAdministration:obf-MedicationAdministration.performer.actor",
+        "id": "MedicationAdministration.performer.actor",
         "path": "MedicationAdministration.performer.actor",
         "type": [
           {
@@ -2013,7 +2013,7 @@
         "definition": "A choice of Patient, Practitioner and RelatedPerson as participant."
       },
       {
-        "id": "MedicationAdministration:obf-MedicationAdministration.performer.onBehalfOf",
+        "id": "MedicationAdministration.performer.onBehalfOf",
         "path": "MedicationAdministration.performer.onBehalfOf",
         "type": [
           {
@@ -2023,7 +2023,7 @@
         ]
       },
       {
-        "id": "MedicationAdministration:obf-MedicationAdministration.notGiven",
+        "id": "MedicationAdministration.notGiven",
         "path": "MedicationAdministration.notGiven",
         "min": 0,
         "max": "0",
@@ -2034,7 +2034,7 @@
         }
       },
       {
-        "id": "MedicationAdministration:obf-MedicationAdministration.reasonNotGiven",
+        "id": "MedicationAdministration.reasonNotGiven",
         "path": "MedicationAdministration.reasonNotGiven",
         "min": 0,
         "max": "0",
@@ -2045,7 +2045,7 @@
         }
       },
       {
-        "id": "MedicationAdministration:obf-MedicationAdministration.reasonReference",
+        "id": "MedicationAdministration.reasonReference",
         "path": "MedicationAdministration.reasonReference",
         "type": [
           {
@@ -2061,7 +2061,7 @@
         "definition": "Condition or observation that supports why the medication is being/was taken"
       },
       {
-        "id": "MedicationAdministration:obf-MedicationAdministration.prescription",
+        "id": "MedicationAdministration.prescription",
         "path": "MedicationAdministration.prescription",
         "type": [
           {
@@ -2071,7 +2071,7 @@
         ]
       },
       {
-        "id": "MedicationAdministration:obf-MedicationAdministration.device",
+        "id": "MedicationAdministration.device",
         "path": "MedicationAdministration.device",
         "type": [
           {
@@ -2081,7 +2081,7 @@
         ]
       },
       {
-        "id": "MedicationAdministration:obf-MedicationAdministration.note",
+        "id": "MedicationAdministration.note",
         "path": "MedicationAdministration.note",
         "type": [
           {
@@ -2091,11 +2091,11 @@
         ]
       },
       {
-        "id": "MedicationAdministration:obf-MedicationAdministration.dosage",
+        "id": "MedicationAdministration.dosage",
         "path": "MedicationAdministration.dosage"
       },
       {
-        "id": "MedicationAdministration:obf-MedicationAdministration.dosage.extension",
+        "id": "MedicationAdministration.dosage.extension",
         "path": "MedicationAdministration.dosage.extension",
         "slicing": {
           "id": "1",
@@ -2110,7 +2110,7 @@
         }
       },
       {
-        "id": "MedicationAdministration:obf-MedicationAdministration.dosage.extension:dosesequencenumber",
+        "id": "MedicationAdministration.dosage.extension:dosesequencenumber",
         "path": "MedicationAdministration.dosage.extension",
         "definition": "Dose number within series.",
         "min": 0,
@@ -2129,7 +2129,7 @@
         "sliceName": "dosesequencenumber"
       },
       {
-        "id": "MedicationAdministration:obf-MedicationAdministration.dosage.site",
+        "id": "MedicationAdministration.dosage.site",
         "path": "MedicationAdministration.dosage.site",
         "binding": {
           "strength": "example",
@@ -2139,7 +2139,7 @@
         }
       },
       {
-        "id": "MedicationAdministration:obf-MedicationAdministration.dosage.route",
+        "id": "MedicationAdministration.dosage.route",
         "path": "MedicationAdministration.dosage.route",
         "binding": {
           "extension": [
@@ -2156,7 +2156,7 @@
         }
       },
       {
-        "id": "MedicationAdministration:obf-MedicationAdministration.dosage.method",
+        "id": "MedicationAdministration.dosage.method",
         "path": "MedicationAdministration.dosage.method",
         "binding": {
           "extension": [

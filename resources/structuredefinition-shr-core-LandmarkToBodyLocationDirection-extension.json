@@ -9,7 +9,7 @@
   "name": "LandmarkToBodyLocationDirection",
   "title": "shr-core-LandmarkToBodyLocationDirection",
   "status": "draft",
-  "date": "2019-07-24",
+  "date": "2019-07-26",
   "publisher": "Hl7",
   "contact": [
     {
@@ -35,7 +35,7 @@
   "snapshot": {
     "element": [
       {
-        "id": "Extension:landmarktobodylocationdirection",
+        "id": "Extension",
         "path": "Extension",
         "short": "LandmarkToBodyLocationDirection",
         "definition": "The direction from the landmark to the body location of interest, given as a clockface direction or anatomical direction.",
@@ -84,7 +84,7 @@
         ]
       },
       {
-        "id": "Extension:landmarktobodylocationdirection.id",
+        "id": "Extension.id",
         "path": "Extension.id",
         "representation": [
           "xmlAttr"
@@ -111,7 +111,7 @@
         ]
       },
       {
-        "id": "Extension:landmarktobodylocationdirection.extension",
+        "id": "Extension.extension",
         "path": "Extension.extension",
         "slicing": {
           "discriminator": [
@@ -150,7 +150,7 @@
         ]
       },
       {
-        "id": "Extension:landmarktobodylocationdirection.extension:clockfacedirection",
+        "id": "Extension.extension:clockfacedirection",
         "path": "Extension.extension",
         "definition": "A direction indicated by an angle relative to 12 o'clock.",
         "min": 0,
@@ -175,7 +175,7 @@
         "sliceName": "clockfacedirection"
       },
       {
-        "id": "Extension:landmarktobodylocationdirection.extension:anatomicaldirection",
+        "id": "Extension.extension:anatomicaldirection",
         "path": "Extension.extension",
         "definition": "A direction based on planes, surfaces, and orientations of the body.",
         "min": 0,
@@ -200,7 +200,7 @@
         "sliceName": "anatomicaldirection"
       },
       {
-        "id": "Extension:landmarktobodylocationdirection.url",
+        "id": "Extension.url",
         "path": "Extension.url",
         "representation": [
           "xmlAttr"
@@ -229,7 +229,7 @@
         "fixedUri": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-LandmarkToBodyLocationDirection-extension"
       },
       {
-        "id": "Extension:landmarktobodylocationdirection.value[x]",
+        "id": "Extension.value[x]",
         "path": "Extension.value[x]",
         "short": "Value of extension",
         "definition": "Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).",
@@ -368,7 +368,7 @@
   "differential": {
     "element": [
       {
-        "id": "Extension:landmarktobodylocationdirection",
+        "id": "Extension",
         "path": "Extension",
         "short": "LandmarkToBodyLocationDirection",
         "definition": "The direction from the landmark to the body location of interest, given as a clockface direction or anatomical direction.",
@@ -384,7 +384,7 @@
         ]
       },
       {
-        "id": "Extension:landmarktobodylocationdirection.extension:clockfacedirection",
+        "id": "Extension.extension:clockfacedirection",
         "path": "Extension.extension",
         "definition": "A direction indicated by an angle relative to 12 o'clock.",
         "min": 0,
@@ -409,7 +409,7 @@
         "sliceName": "clockfacedirection"
       },
       {
-        "id": "Extension:landmarktobodylocationdirection.extension:anatomicaldirection",
+        "id": "Extension.extension:anatomicaldirection",
         "path": "Extension.extension",
         "definition": "A direction based on planes, surfaces, and orientations of the body.",
         "min": 0,
@@ -434,12 +434,12 @@
         "sliceName": "anatomicaldirection"
       },
       {
-        "id": "Extension:landmarktobodylocationdirection.url",
+        "id": "Extension.url",
         "path": "Extension.url",
         "fixedUri": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-LandmarkToBodyLocationDirection-extension"
       },
       {
-        "id": "Extension:landmarktobodylocationdirection.value[x]",
+        "id": "Extension.value[x]",
         "path": "Extension.value[x]",
         "min": 0,
         "max": "0"

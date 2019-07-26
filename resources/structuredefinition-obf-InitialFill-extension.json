@@ -9,7 +9,7 @@
   "name": "InitialFill",
   "title": "obf-InitialFill",
   "status": "draft",
-  "date": "2019-07-24",
+  "date": "2019-07-26",
   "publisher": "Hl7",
   "contact": [
     {
@@ -35,7 +35,7 @@
   "snapshot": {
     "element": [
       {
-        "id": "Extension:initialfill",
+        "id": "Extension",
         "path": "Extension",
         "short": "InitialFill",
         "definition": "Indicates the quantity or duration for the first dispense of the medication.",
@@ -78,7 +78,7 @@
         ]
       },
       {
-        "id": "Extension:initialfill.id",
+        "id": "Extension.id",
         "path": "Extension.id",
         "representation": [
           "xmlAttr"
@@ -105,7 +105,7 @@
         ]
       },
       {
-        "id": "Extension:initialfill.extension",
+        "id": "Extension.extension",
         "path": "Extension.extension",
         "slicing": {
           "discriminator": [
@@ -144,7 +144,7 @@
         ]
       },
       {
-        "id": "Extension:initialfill.extension:simplequantity",
+        "id": "Extension.extension:simplequantity",
         "path": "Extension.extension",
         "definition": "A quantity where the comparator is not used, as defined in FHIR",
         "min": 0,
@@ -169,7 +169,7 @@
         "sliceName": "simplequantity"
       },
       {
-        "id": "Extension:initialfill.extension:duration",
+        "id": "Extension.extension:duration",
         "path": "Extension.extension",
         "definition": "The length of time that something continues.",
         "min": 0,
@@ -194,7 +194,7 @@
         "sliceName": "duration"
       },
       {
-        "id": "Extension:initialfill.url",
+        "id": "Extension.url",
         "path": "Extension.url",
         "representation": [
           "xmlAttr"
@@ -223,7 +223,7 @@
         "fixedUri": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-InitialFill-extension"
       },
       {
-        "id": "Extension:initialfill.value[x]",
+        "id": "Extension.value[x]",
         "path": "Extension.value[x]",
         "short": "Value of extension",
         "definition": "Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).",
@@ -362,7 +362,7 @@
   "differential": {
     "element": [
       {
-        "id": "Extension:initialfill",
+        "id": "Extension",
         "path": "Extension",
         "short": "InitialFill",
         "definition": "Indicates the quantity or duration for the first dispense of the medication.",
@@ -370,7 +370,7 @@
         "max": "*"
       },
       {
-        "id": "Extension:initialfill.extension:simplequantity",
+        "id": "Extension.extension:simplequantity",
         "path": "Extension.extension",
         "definition": "A quantity where the comparator is not used, as defined in FHIR",
         "min": 0,
@@ -395,7 +395,7 @@
         "sliceName": "simplequantity"
       },
       {
-        "id": "Extension:initialfill.extension:duration",
+        "id": "Extension.extension:duration",
         "path": "Extension.extension",
         "definition": "The length of time that something continues.",
         "min": 0,
@@ -420,12 +420,12 @@
         "sliceName": "duration"
       },
       {
-        "id": "Extension:initialfill.url",
+        "id": "Extension.url",
         "path": "Extension.url",
         "fixedUri": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-InitialFill-extension"
       },
       {
-        "id": "Extension:initialfill.value[x]",
+        "id": "Extension.value[x]",
         "path": "Extension.value[x]",
         "min": 0,
         "max": "0"

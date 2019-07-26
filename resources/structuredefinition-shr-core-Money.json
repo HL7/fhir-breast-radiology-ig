@@ -8,7 +8,7 @@
   "url": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-Money",
   "name": "Money",
   "status": "draft",
-  "date": "2019-07-24",
+  "date": "2019-07-26",
   "publisher": "Hl7",
   "contact": [
     {
@@ -43,7 +43,7 @@
   "snapshot": {
     "element": [
       {
-        "id": "Quantity:shr-core-Money",
+        "id": "Quantity",
         "path": "Quantity",
         "short": "shr-core-Money",
         "definition": "Representation of an amount of currency or monetary value.",
@@ -86,7 +86,7 @@
         ]
       },
       {
-        "id": "Quantity:shr-core-Money.id",
+        "id": "Quantity.id",
         "path": "Quantity.id",
         "representation": [
           "xmlAttr"
@@ -113,7 +113,7 @@
         ]
       },
       {
-        "id": "Quantity:shr-core-Money.extension",
+        "id": "Quantity.extension",
         "path": "Quantity.extension",
         "slicing": {
           "discriminator": [
@@ -152,7 +152,7 @@
         ]
       },
       {
-        "id": "Quantity:shr-core-Money.extension:moneyamount",
+        "id": "Quantity.extension:moneyamount",
         "path": "Quantity.extension",
         "definition": "Numerical value (with implicit precision)",
         "min": 0,
@@ -171,7 +171,7 @@
         "sliceName": "moneyamount"
       },
       {
-        "id": "Quantity:shr-core-Money.extension:currency",
+        "id": "Quantity.extension:currency",
         "path": "Quantity.extension",
         "definition": "ISO 4217 Currency Code",
         "min": 0,
@@ -190,7 +190,7 @@
         "sliceName": "currency"
       },
       {
-        "id": "Quantity:shr-core-Money.value",
+        "id": "Quantity.value",
         "path": "Quantity.value",
         "short": "Numerical value (with implicit precision)",
         "definition": "The value of the measured amount. The value includes an implicit precision in the presentation of the value.",
@@ -216,7 +216,7 @@
         ]
       },
       {
-        "id": "Quantity:shr-core-Money.comparator",
+        "id": "Quantity.comparator",
         "path": "Quantity.comparator",
         "short": "< | <= | >= | > - how to understand the value",
         "definition": "How the value should be understood and represented - whether the actual value is greater or less than the stated value due to measurement issues; e.g. if the comparator is \"<\" , then the real value is < stated value.",
@@ -257,7 +257,7 @@
         ]
       },
       {
-        "id": "Quantity:shr-core-Money.unit",
+        "id": "Quantity.unit",
         "extension": [
           {
             "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
@@ -288,7 +288,7 @@
         ]
       },
       {
-        "id": "Quantity:shr-core-Money.system",
+        "id": "Quantity.system",
         "path": "Quantity.system",
         "short": "System that defines coded unit form",
         "definition": "The identification of the system that provides the coded form of the unit.",
@@ -316,7 +316,7 @@
         ]
       },
       {
-        "id": "Quantity:shr-core-Money.code",
+        "id": "Quantity.code",
         "path": "Quantity.code",
         "short": "Coded form of the unit",
         "definition": "A computer processable form of the unit in some unit representation system.",
@@ -346,13 +346,13 @@
   "differential": {
     "element": [
       {
-        "id": "Quantity:shr-core-Money",
+        "id": "Quantity",
         "path": "Quantity",
         "short": "shr-core-Money",
         "definition": "Representation of an amount of currency or monetary value."
       },
       {
-        "id": "Quantity:shr-core-Money.extension:moneyamount",
+        "id": "Quantity.extension:moneyamount",
         "path": "Quantity.extension",
         "definition": "Numerical value (with implicit precision)",
         "min": 0,
@@ -371,7 +371,7 @@
         "sliceName": "moneyamount"
       },
       {
-        "id": "Quantity:shr-core-Money.extension:currency",
+        "id": "Quantity.extension:currency",
         "path": "Quantity.extension",
         "definition": "ISO 4217 Currency Code",
         "min": 0,

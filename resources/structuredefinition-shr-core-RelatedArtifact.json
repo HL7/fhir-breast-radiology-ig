@@ -8,7 +8,7 @@
   "url": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-RelatedArtifact",
   "name": "RelatedArtifact",
   "status": "draft",
-  "date": "2019-07-24",
+  "date": "2019-07-26",
   "publisher": "Hl7",
   "contact": [
     {
@@ -38,7 +38,7 @@
   "snapshot": {
     "element": [
       {
-        "id": "RelatedArtifact:shr-core-RelatedArtifact",
+        "id": "RelatedArtifact",
         "path": "RelatedArtifact",
         "short": "shr-core-RelatedArtifact",
         "definition": "Items such as additional documentation, justification, or bibliographic references, that provide background for the current item.",
@@ -66,7 +66,7 @@
         ]
       },
       {
-        "id": "RelatedArtifact:shr-core-RelatedArtifact.id",
+        "id": "RelatedArtifact.id",
         "path": "RelatedArtifact.id",
         "representation": [
           "xmlAttr"
@@ -93,7 +93,7 @@
         ]
       },
       {
-        "id": "RelatedArtifact:shr-core-RelatedArtifact.extension",
+        "id": "RelatedArtifact.extension",
         "path": "RelatedArtifact.extension",
         "slicing": {
           "discriminator": [
@@ -132,7 +132,7 @@
         ]
       },
       {
-        "id": "RelatedArtifact:shr-core-RelatedArtifact.extension:labeltext",
+        "id": "RelatedArtifact.extension:labeltext",
         "path": "RelatedArtifact.extension",
         "definition": "A short label that can be used to reference the citation from elsewhere in the containing artifact, such as a footnote index.",
         "min": 0,
@@ -151,7 +151,7 @@
         "sliceName": "labeltext"
       },
       {
-        "id": "RelatedArtifact:shr-core-RelatedArtifact.extension:canonicalurl",
+        "id": "RelatedArtifact.extension:canonicalurl",
         "path": "RelatedArtifact.extension",
         "definition": "A URI that refers to a resource by its canonical URL (resources with a url property). The canonical type differs from a uri in that it has special meaning in this specification, and in that it may have a version appended, separated by a vertical bar (|).",
         "min": 0,
@@ -170,7 +170,7 @@
         "sliceName": "canonicalurl"
       },
       {
-        "id": "RelatedArtifact:shr-core-RelatedArtifact.type",
+        "id": "RelatedArtifact.type",
         "path": "RelatedArtifact.type",
         "short": "documentation | justification | citation | predecessor | successor | derived-from | depends-on | composed-of",
         "definition": "The type of relationship to the related artifact.",
@@ -197,7 +197,7 @@
         }
       },
       {
-        "id": "RelatedArtifact:shr-core-RelatedArtifact.display",
+        "id": "RelatedArtifact.display",
         "path": "RelatedArtifact.display",
         "short": "Brief description of the related artifact",
         "definition": "A brief description of the document or knowledge resource being referenced, suitable for display to a consumer.",
@@ -211,7 +211,7 @@
         "isSummary": true
       },
       {
-        "id": "RelatedArtifact:shr-core-RelatedArtifact.citation",
+        "id": "RelatedArtifact.citation",
         "path": "RelatedArtifact.citation",
         "short": "Bibliographic citation for the artifact",
         "definition": "A bibliographic citation for the related artifact. This text SHOULD be formatted according to an accepted citation format.",
@@ -226,7 +226,7 @@
         "isSummary": true
       },
       {
-        "id": "RelatedArtifact:shr-core-RelatedArtifact.url",
+        "id": "RelatedArtifact.url",
         "path": "RelatedArtifact.url",
         "short": "Where the artifact can be accessed",
         "definition": "A url for the artifact that can be followed to access the actual content.",
@@ -241,7 +241,7 @@
         "isSummary": true
       },
       {
-        "id": "RelatedArtifact:shr-core-RelatedArtifact.document",
+        "id": "RelatedArtifact.document",
         "path": "RelatedArtifact.document",
         "short": "What document is being referenced",
         "definition": "The document being referenced, represented as an attachment. This is exclusive with the resource element.",
@@ -255,7 +255,7 @@
         "isSummary": true
       },
       {
-        "id": "RelatedArtifact:shr-core-RelatedArtifact.resource",
+        "id": "RelatedArtifact.resource",
         "path": "RelatedArtifact.resource",
         "short": "What resource is being referenced",
         "definition": "The related resource, such as a library, value set, profile, or other knowledge resource.",
@@ -275,13 +275,13 @@
   "differential": {
     "element": [
       {
-        "id": "RelatedArtifact:shr-core-RelatedArtifact",
+        "id": "RelatedArtifact",
         "path": "RelatedArtifact",
         "short": "shr-core-RelatedArtifact",
         "definition": "Items such as additional documentation, justification, or bibliographic references, that provide background for the current item."
       },
       {
-        "id": "RelatedArtifact:shr-core-RelatedArtifact.extension:labeltext",
+        "id": "RelatedArtifact.extension:labeltext",
         "path": "RelatedArtifact.extension",
         "definition": "A short label that can be used to reference the citation from elsewhere in the containing artifact, such as a footnote index.",
         "min": 0,
@@ -300,7 +300,7 @@
         "sliceName": "labeltext"
       },
       {
-        "id": "RelatedArtifact:shr-core-RelatedArtifact.extension:canonicalurl",
+        "id": "RelatedArtifact.extension:canonicalurl",
         "path": "RelatedArtifact.extension",
         "definition": "A URI that refers to a resource by its canonical URL (resources with a url property). The canonical type differs from a uri in that it has special meaning in this specification, and in that it may have a version appended, separated by a vertical bar (|).",
         "min": 0,

@@ -8,7 +8,7 @@
   "url": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Organization",
   "name": "Organization",
   "status": "draft",
-  "date": "2019-07-24",
+  "date": "2019-07-26",
   "publisher": "Hl7",
   "contact": [
     {
@@ -62,7 +62,7 @@
   "snapshot": {
     "element": [
       {
-        "id": "Organization:obf-Organization",
+        "id": "Organization",
         "path": "Organization",
         "short": "obf-Organization",
         "definition": "A formally or informally recognized grouping of people or organizations formed for the purpose of achieving some form of collective action. Includes companies, institutions, corporations, departments, community groups, healthcare practice groups, payer/insurer, etc.\n\nOrganization type is restricted to 0..1 in FHIR DSTU2, similarly restricted here. Other required attributes come from STU 3 mapping to us-core-organization.",
@@ -140,7 +140,7 @@
         ]
       },
       {
-        "id": "Organization:obf-Organization.id",
+        "id": "Organization.id",
         "path": "Organization.id",
         "short": "Logical id of this artifact",
         "definition": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.",
@@ -160,7 +160,7 @@
         "isSummary": true
       },
       {
-        "id": "Organization:obf-Organization.meta",
+        "id": "Organization.meta",
         "path": "Organization.meta",
         "short": "Metadata about the resource",
         "definition": "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource.",
@@ -179,7 +179,7 @@
         "isSummary": true
       },
       {
-        "id": "Organization:obf-Organization.meta.id",
+        "id": "Organization.meta.id",
         "path": "Organization.meta.id",
         "representation": [
           "xmlAttr"
@@ -206,7 +206,7 @@
         ]
       },
       {
-        "id": "Organization:obf-Organization.meta.extension",
+        "id": "Organization.meta.extension",
         "path": "Organization.meta.extension",
         "slicing": {
           "discriminator": [
@@ -245,7 +245,7 @@
         ]
       },
       {
-        "id": "Organization:obf-Organization.meta.extension:sourcesystem",
+        "id": "Organization.meta.extension:sourcesystem",
         "path": "Organization.meta.extension",
         "definition": "FHIR: This provides a minimal amount of Provenance information that can be used to track or differentiate the source of information in the resource. The source may identify another FHIR server, document, message, database, etc.\nFHIM: Identifies the computer system that created the medical record. This optional field may also be used to indicate that the medical record was originally created by a different organization from the one that is currently storing or utilizing the record in that the assigning authority of the Id could be set to that originating organization. This property is optional, as some systems will assume that all records that it contains originated in that system, however it is anticipated that it will become increasingly commonplace for records from multiple systems and organizations will be comingled in order to provide a complete picture of the patient's health record.",
         "min": 0,
@@ -264,7 +264,7 @@
         "sliceName": "sourcesystem"
       },
       {
-        "id": "Organization:obf-Organization.meta.versionId",
+        "id": "Organization.meta.versionId",
         "path": "Organization.meta.versionId",
         "short": "Version specific identifier",
         "definition": "The version specific identifier, as it appears in the version portion of the URL. This values changes when the resource is created, updated, or deleted.",
@@ -279,7 +279,7 @@
         "isSummary": true
       },
       {
-        "id": "Organization:obf-Organization.meta.lastUpdated",
+        "id": "Organization.meta.lastUpdated",
         "path": "Organization.meta.lastUpdated",
         "short": "When the resource version last changed",
         "definition": "When the resource last changed - e.g. when the version changed.",
@@ -294,7 +294,7 @@
         "isSummary": true
       },
       {
-        "id": "Organization:obf-Organization.meta.profile",
+        "id": "Organization.meta.profile",
         "path": "Organization.meta.profile",
         "short": "Profiles this resource claims to conform to",
         "definition": "A list of profiles (references to [StructureDefinition](structuredefinition.html#) resources) that this resource claims to conform to. The URL is a reference to [StructureDefinition.url]().",
@@ -309,7 +309,7 @@
         "isSummary": true
       },
       {
-        "id": "Organization:obf-Organization.meta.security",
+        "id": "Organization.meta.security",
         "path": "Organization.meta.security",
         "short": "Security Labels applied to this resource",
         "definition": "Security labels applied to this resource. These tags connect specific resources to the overall security policy and infrastructure.",
@@ -341,7 +341,7 @@
         }
       },
       {
-        "id": "Organization:obf-Organization.meta.tag",
+        "id": "Organization.meta.tag",
         "path": "Organization.meta.tag",
         "short": "Tags applied to this resource",
         "definition": "Tags applied to this resource. Tags are intended to be used to identify and relate resources to process and workflow, and applications are not required to consider the tags when interpreting the meaning of a resource.",
@@ -369,7 +369,7 @@
         }
       },
       {
-        "id": "Organization:obf-Organization.implicitRules",
+        "id": "Organization.implicitRules",
         "path": "Organization.implicitRules",
         "short": "A set of rules under which this content was created",
         "definition": "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content.",
@@ -390,7 +390,7 @@
         "isSummary": true
       },
       {
-        "id": "Organization:obf-Organization.language",
+        "id": "Organization.language",
         "path": "Organization.language",
         "short": "Language of the resource content",
         "definition": "The base language in which the resource is written.",
@@ -432,7 +432,7 @@
         }
       },
       {
-        "id": "Organization:obf-Organization.text",
+        "id": "Organization.text",
         "path": "Organization.text",
         "short": "Text summary of the resource, for human interpretation",
         "definition": "A human-readable narrative that contains a summary of the resource, and may be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.",
@@ -466,7 +466,7 @@
         ]
       },
       {
-        "id": "Organization:obf-Organization.contained",
+        "id": "Organization.contained",
         "path": "Organization.contained",
         "short": "Contained, inline Resources",
         "definition": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.",
@@ -496,7 +496,7 @@
         ]
       },
       {
-        "id": "Organization:obf-Organization.extension",
+        "id": "Organization.extension",
         "path": "Organization.extension",
         "short": "Additional Content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the resource. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
@@ -536,7 +536,7 @@
         }
       },
       {
-        "id": "Organization:obf-Organization.extension:status",
+        "id": "Organization.extension:status",
         "path": "Organization.extension",
         "definition": "A state that relates to the workflow or interpretation of this resource. Certain status values can modify the meaning of the resource, for example, entered-in-error. When a boolean value is used, Status of true indicates the record is active, false means inactive.",
         "min": 0,
@@ -555,7 +555,7 @@
         "sliceName": "status"
       },
       {
-        "id": "Organization:obf-Organization.extension:alias",
+        "id": "Organization.extension:alias",
         "path": "Organization.extension",
         "definition": "A list of alternate names the subject is or was known as.",
         "min": 0,
@@ -574,7 +574,7 @@
         "sliceName": "alias"
       },
       {
-        "id": "Organization:obf-Organization.extension:contactperson",
+        "id": "Organization.extension:contactperson",
         "path": "Organization.extension",
         "definition": "A contact party (e.g. guardian, partner, friend) for the person",
         "min": 0,
@@ -593,7 +593,7 @@
         "sliceName": "contactperson"
       },
       {
-        "id": "Organization:obf-Organization.modifierExtension",
+        "id": "Organization.modifierExtension",
         "path": "Organization.modifierExtension",
         "short": "Extensions that cannot be ignored",
         "definition": "May be used to represent additional information that is not part of the basic definition of the resource, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
@@ -623,7 +623,7 @@
         ]
       },
       {
-        "id": "Organization:obf-Organization.identifier",
+        "id": "Organization.identifier",
         "path": "Organization.identifier",
         "short": "Identifies this organization  across multiple systems",
         "definition": "Identifier for the organization that is used to identify the organization across multiple disparate systems.",
@@ -669,7 +669,7 @@
         ]
       },
       {
-        "id": "Organization:obf-Organization.active",
+        "id": "Organization.active",
         "path": "Organization.active",
         "short": "Whether the organization's record is still in active use",
         "definition": "Whether the organization's record is still in active use.",
@@ -711,7 +711,7 @@
         ]
       },
       {
-        "id": "Organization:obf-Organization.type",
+        "id": "Organization.type",
         "path": "Organization.type",
         "short": "Kind of organization",
         "definition": "The kind(s) of organization that this is.",
@@ -763,7 +763,7 @@
         ]
       },
       {
-        "id": "Organization:obf-Organization.name",
+        "id": "Organization.name",
         "path": "Organization.name",
         "short": "Name used for the organization",
         "definition": "A name associated with the organization.",
@@ -806,7 +806,7 @@
         ]
       },
       {
-        "id": "Organization:obf-Organization.alias",
+        "id": "Organization.alias",
         "path": "Organization.alias",
         "short": "A list of alternate names that the organization is known as, or was known as in the past",
         "definition": "A list of alternate names that the organization is known as, or was known as in the past.",
@@ -832,7 +832,7 @@
         ]
       },
       {
-        "id": "Organization:obf-Organization.telecom",
+        "id": "Organization.telecom",
         "path": "Organization.telecom",
         "short": "A contact detail for the organization",
         "definition": "A contact detail for the organization.",
@@ -880,7 +880,7 @@
         ]
       },
       {
-        "id": "Organization:obf-Organization.address",
+        "id": "Organization.address",
         "path": "Organization.address",
         "short": "An address for the organization",
         "definition": "An address for the organization.",
@@ -932,7 +932,7 @@
         ]
       },
       {
-        "id": "Organization:obf-Organization.partOf",
+        "id": "Organization.partOf",
         "path": "Organization.partOf",
         "short": "The organization of which this organization forms a part",
         "definition": "The organization of which this organization forms a part.",
@@ -967,7 +967,7 @@
         ]
       },
       {
-        "id": "Organization:obf-Organization.contact",
+        "id": "Organization.contact",
         "path": "Organization.contact",
         "short": "Contact for the organization for a certain purpose",
         "definition": "Contact for the organization for a certain purpose.",
@@ -1003,7 +1003,7 @@
         ]
       },
       {
-        "id": "Organization:obf-Organization.contact.id",
+        "id": "Organization.contact.id",
         "path": "Organization.contact.id",
         "representation": [
           "xmlAttr"
@@ -1030,7 +1030,7 @@
         ]
       },
       {
-        "id": "Organization:obf-Organization.contact.extension",
+        "id": "Organization.contact.extension",
         "path": "Organization.contact.extension",
         "short": "Additional Content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
@@ -1059,7 +1059,7 @@
         ]
       },
       {
-        "id": "Organization:obf-Organization.contact.modifierExtension",
+        "id": "Organization.contact.modifierExtension",
         "path": "Organization.contact.modifierExtension",
         "short": "Extensions that cannot be ignored",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
@@ -1091,7 +1091,7 @@
         ]
       },
       {
-        "id": "Organization:obf-Organization.contact.purpose",
+        "id": "Organization.contact.purpose",
         "path": "Organization.contact.purpose",
         "short": "The type of contact",
         "definition": "Indicates a purpose for which the contact can be reached.",
@@ -1129,7 +1129,7 @@
         ]
       },
       {
-        "id": "Organization:obf-Organization.contact.name",
+        "id": "Organization.contact.name",
         "path": "Organization.contact.name",
         "short": "A name associated with the contact",
         "definition": "A name associated with the contact.",
@@ -1158,7 +1158,7 @@
         ]
       },
       {
-        "id": "Organization:obf-Organization.contact.telecom",
+        "id": "Organization.contact.telecom",
         "path": "Organization.contact.telecom",
         "short": "Contact details (telephone, email, etc.)  for a contact",
         "definition": "A contact detail (e.g. a telephone number or an email address) by which the party may be contacted.",
@@ -1187,7 +1187,7 @@
         ]
       },
       {
-        "id": "Organization:obf-Organization.contact.address",
+        "id": "Organization.contact.address",
         "path": "Organization.contact.address",
         "short": "Visiting or postal addresses for the contact",
         "definition": "Visiting or postal addresses for the contact.",
@@ -1216,7 +1216,7 @@
         ]
       },
       {
-        "id": "Organization:obf-Organization.endpoint",
+        "id": "Organization.endpoint",
         "path": "Organization.endpoint",
         "short": "Technical endpoints providing access to services operated for the organization",
         "definition": "Technical endpoints providing access to services operated for the organization.",
@@ -1247,18 +1247,18 @@
   "differential": {
     "element": [
       {
-        "id": "Organization:obf-Organization",
+        "id": "Organization",
         "path": "Organization",
         "short": "obf-Organization",
         "definition": "A formally or informally recognized grouping of people or organizations formed for the purpose of achieving some form of collective action. Includes companies, institutions, corporations, departments, community groups, healthcare practice groups, payer/insurer, etc.\n\nOrganization type is restricted to 0..1 in FHIR DSTU2, similarly restricted here. Other required attributes come from STU 3 mapping to us-core-organization.",
         "mustSupport": false
       },
       {
-        "id": "Organization:obf-Organization.meta",
+        "id": "Organization.meta",
         "path": "Organization.meta"
       },
       {
-        "id": "Organization:obf-Organization.meta.extension:sourcesystem",
+        "id": "Organization.meta.extension:sourcesystem",
         "path": "Organization.meta.extension",
         "definition": "FHIR: This provides a minimal amount of Provenance information that can be used to track or differentiate the source of information in the resource. The source may identify another FHIR server, document, message, database, etc.\nFHIM: Identifies the computer system that created the medical record. This optional field may also be used to indicate that the medical record was originally created by a different organization from the one that is currently storing or utilizing the record in that the assigning authority of the Id could be set to that originating organization. This property is optional, as some systems will assume that all records that it contains originated in that system, however it is anticipated that it will become increasingly commonplace for records from multiple systems and organizations will be comingled in order to provide a complete picture of the patient's health record.",
         "min": 0,
@@ -1277,7 +1277,7 @@
         "sliceName": "sourcesystem"
       },
       {
-        "id": "Organization:obf-Organization.extension",
+        "id": "Organization.extension",
         "path": "Organization.extension",
         "slicing": {
           "id": "1",
@@ -1292,7 +1292,7 @@
         }
       },
       {
-        "id": "Organization:obf-Organization.extension:status",
+        "id": "Organization.extension:status",
         "path": "Organization.extension",
         "definition": "A state that relates to the workflow or interpretation of this resource. Certain status values can modify the meaning of the resource, for example, entered-in-error. When a boolean value is used, Status of true indicates the record is active, false means inactive.",
         "min": 0,
@@ -1311,7 +1311,7 @@
         "sliceName": "status"
       },
       {
-        "id": "Organization:obf-Organization.extension:alias",
+        "id": "Organization.extension:alias",
         "path": "Organization.extension",
         "definition": "A list of alternate names the subject is or was known as.",
         "min": 0,
@@ -1330,7 +1330,7 @@
         "sliceName": "alias"
       },
       {
-        "id": "Organization:obf-Organization.extension:contactperson",
+        "id": "Organization.extension:contactperson",
         "path": "Organization.extension",
         "definition": "A contact party (e.g. guardian, partner, friend) for the person",
         "min": 0,
@@ -1349,13 +1349,13 @@
         "sliceName": "contactperson"
       },
       {
-        "id": "Organization:obf-Organization.type",
+        "id": "Organization.type",
         "path": "Organization.type",
         "min": 0,
         "max": "1"
       },
       {
-        "id": "Organization:obf-Organization.partOf",
+        "id": "Organization.partOf",
         "path": "Organization.partOf",
         "type": [
           {

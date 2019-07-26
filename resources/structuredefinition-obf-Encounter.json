@@ -8,7 +8,7 @@
   "url": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Encounter",
   "name": "Encounter",
   "status": "draft",
-  "date": "2019-07-24",
+  "date": "2019-07-26",
   "publisher": "Hl7",
   "contact": [
     {
@@ -47,7 +47,7 @@
   "snapshot": {
     "element": [
       {
-        "id": "Encounter:obf-Encounter",
+        "id": "Encounter",
         "path": "Encounter",
         "short": "obf-Encounter",
         "definition": "A description of an interaction between a patient and healthcare provider(s) for the purpose of providing healthcare service(s) or assessing the health status of a patient.",
@@ -106,7 +106,7 @@
         ]
       },
       {
-        "id": "Encounter:obf-Encounter.id",
+        "id": "Encounter.id",
         "path": "Encounter.id",
         "short": "Logical id of this artifact",
         "definition": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.",
@@ -126,7 +126,7 @@
         "isSummary": true
       },
       {
-        "id": "Encounter:obf-Encounter.meta",
+        "id": "Encounter.meta",
         "path": "Encounter.meta",
         "short": "Metadata about the resource",
         "definition": "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource.",
@@ -145,7 +145,7 @@
         "isSummary": true
       },
       {
-        "id": "Encounter:obf-Encounter.meta.id",
+        "id": "Encounter.meta.id",
         "path": "Encounter.meta.id",
         "representation": [
           "xmlAttr"
@@ -172,7 +172,7 @@
         ]
       },
       {
-        "id": "Encounter:obf-Encounter.meta.extension",
+        "id": "Encounter.meta.extension",
         "path": "Encounter.meta.extension",
         "slicing": {
           "discriminator": [
@@ -211,7 +211,7 @@
         ]
       },
       {
-        "id": "Encounter:obf-Encounter.meta.extension:sourcesystem",
+        "id": "Encounter.meta.extension:sourcesystem",
         "path": "Encounter.meta.extension",
         "definition": "FHIR: This provides a minimal amount of Provenance information that can be used to track or differentiate the source of information in the resource. The source may identify another FHIR server, document, message, database, etc.\nFHIM: Identifies the computer system that created the medical record. This optional field may also be used to indicate that the medical record was originally created by a different organization from the one that is currently storing or utilizing the record in that the assigning authority of the Id could be set to that originating organization. This property is optional, as some systems will assume that all records that it contains originated in that system, however it is anticipated that it will become increasingly commonplace for records from multiple systems and organizations will be comingled in order to provide a complete picture of the patient's health record.",
         "min": 0,
@@ -230,7 +230,7 @@
         "sliceName": "sourcesystem"
       },
       {
-        "id": "Encounter:obf-Encounter.meta.versionId",
+        "id": "Encounter.meta.versionId",
         "path": "Encounter.meta.versionId",
         "short": "Version specific identifier",
         "definition": "The version specific identifier, as it appears in the version portion of the URL. This values changes when the resource is created, updated, or deleted.",
@@ -245,7 +245,7 @@
         "isSummary": true
       },
       {
-        "id": "Encounter:obf-Encounter.meta.lastUpdated",
+        "id": "Encounter.meta.lastUpdated",
         "path": "Encounter.meta.lastUpdated",
         "short": "When the resource version last changed",
         "definition": "When the resource last changed - e.g. when the version changed.",
@@ -260,7 +260,7 @@
         "isSummary": true
       },
       {
-        "id": "Encounter:obf-Encounter.meta.profile",
+        "id": "Encounter.meta.profile",
         "path": "Encounter.meta.profile",
         "short": "Profiles this resource claims to conform to",
         "definition": "A list of profiles (references to [StructureDefinition](structuredefinition.html#) resources) that this resource claims to conform to. The URL is a reference to [StructureDefinition.url]().",
@@ -275,7 +275,7 @@
         "isSummary": true
       },
       {
-        "id": "Encounter:obf-Encounter.meta.security",
+        "id": "Encounter.meta.security",
         "path": "Encounter.meta.security",
         "short": "Security Labels applied to this resource",
         "definition": "Security labels applied to this resource. These tags connect specific resources to the overall security policy and infrastructure.",
@@ -307,7 +307,7 @@
         }
       },
       {
-        "id": "Encounter:obf-Encounter.meta.tag",
+        "id": "Encounter.meta.tag",
         "path": "Encounter.meta.tag",
         "short": "Tags applied to this resource",
         "definition": "Tags applied to this resource. Tags are intended to be used to identify and relate resources to process and workflow, and applications are not required to consider the tags when interpreting the meaning of a resource.",
@@ -335,7 +335,7 @@
         }
       },
       {
-        "id": "Encounter:obf-Encounter.implicitRules",
+        "id": "Encounter.implicitRules",
         "path": "Encounter.implicitRules",
         "short": "A set of rules under which this content was created",
         "definition": "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content.",
@@ -356,7 +356,7 @@
         "isSummary": true
       },
       {
-        "id": "Encounter:obf-Encounter.language",
+        "id": "Encounter.language",
         "path": "Encounter.language",
         "short": "Language of the resource content",
         "definition": "The base language in which the resource is written.",
@@ -398,7 +398,7 @@
         }
       },
       {
-        "id": "Encounter:obf-Encounter.text",
+        "id": "Encounter.text",
         "path": "Encounter.text",
         "short": "Text summary of the resource, for human interpretation",
         "definition": "A human-readable narrative that contains a summary of the resource, and may be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.",
@@ -432,7 +432,7 @@
         ]
       },
       {
-        "id": "Encounter:obf-Encounter.contained",
+        "id": "Encounter.contained",
         "path": "Encounter.contained",
         "short": "Contained, inline Resources",
         "definition": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.",
@@ -462,7 +462,7 @@
         ]
       },
       {
-        "id": "Encounter:obf-Encounter.extension",
+        "id": "Encounter.extension",
         "path": "Encounter.extension",
         "short": "Additional Content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the resource. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
@@ -502,7 +502,7 @@
         }
       },
       {
-        "id": "Encounter:obf-Encounter.extension:encounterreasonreference",
+        "id": "Encounter.extension:encounterreasonreference",
         "path": "Encounter.extension",
         "definition": "Reason the encounter is taking place.",
         "min": 0,
@@ -521,7 +521,7 @@
         "sliceName": "encounterreasonreference"
       },
       {
-        "id": "Encounter:obf-Encounter.modifierExtension",
+        "id": "Encounter.modifierExtension",
         "path": "Encounter.modifierExtension",
         "short": "Extensions that cannot be ignored",
         "definition": "May be used to represent additional information that is not part of the basic definition of the resource, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
@@ -551,7 +551,7 @@
         ]
       },
       {
-        "id": "Encounter:obf-Encounter.identifier",
+        "id": "Encounter.identifier",
         "path": "Encounter.identifier",
         "short": "Identifier(s) by which this encounter is known",
         "definition": "Identifier(s) by which this encounter is known.",
@@ -579,7 +579,7 @@
         ]
       },
       {
-        "id": "Encounter:obf-Encounter.status",
+        "id": "Encounter.status",
         "path": "Encounter.status",
         "short": "planned | arrived | triaged | in-progress | onleave | finished | cancelled +",
         "definition": "planned | arrived | triaged | in-progress | onleave | finished | cancelled +.",
@@ -622,7 +622,7 @@
         ]
       },
       {
-        "id": "Encounter:obf-Encounter.statusHistory",
+        "id": "Encounter.statusHistory",
         "extension": [
           {
             "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name",
@@ -658,7 +658,7 @@
         ]
       },
       {
-        "id": "Encounter:obf-Encounter.statusHistory.id",
+        "id": "Encounter.statusHistory.id",
         "path": "Encounter.statusHistory.id",
         "representation": [
           "xmlAttr"
@@ -685,7 +685,7 @@
         ]
       },
       {
-        "id": "Encounter:obf-Encounter.statusHistory.extension",
+        "id": "Encounter.statusHistory.extension",
         "path": "Encounter.statusHistory.extension",
         "short": "Additional Content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
@@ -714,7 +714,7 @@
         ]
       },
       {
-        "id": "Encounter:obf-Encounter.statusHistory.modifierExtension",
+        "id": "Encounter.statusHistory.modifierExtension",
         "path": "Encounter.statusHistory.modifierExtension",
         "short": "Extensions that cannot be ignored",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
@@ -746,7 +746,7 @@
         ]
       },
       {
-        "id": "Encounter:obf-Encounter.statusHistory.status",
+        "id": "Encounter.statusHistory.status",
         "path": "Encounter.statusHistory.status",
         "short": "planned | arrived | triaged | in-progress | onleave | finished | cancelled +",
         "definition": "planned | arrived | triaged | in-progress | onleave | finished | cancelled +.",
@@ -778,7 +778,7 @@
         ]
       },
       {
-        "id": "Encounter:obf-Encounter.statusHistory.period",
+        "id": "Encounter.statusHistory.period",
         "path": "Encounter.statusHistory.period",
         "short": "The time that the episode was in the specified status",
         "definition": "The time that the episode was in the specified status.",
@@ -797,7 +797,7 @@
         ]
       },
       {
-        "id": "Encounter:obf-Encounter.class",
+        "id": "Encounter.class",
         "path": "Encounter.class",
         "short": "inpatient | outpatient | ambulatory | emergency +",
         "definition": "inpatient | outpatient | ambulatory | emergency +.",
@@ -843,7 +843,7 @@
         }
       },
       {
-        "id": "Encounter:obf-Encounter.classHistory",
+        "id": "Encounter.classHistory",
         "extension": [
           {
             "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name",
@@ -878,7 +878,7 @@
         ]
       },
       {
-        "id": "Encounter:obf-Encounter.classHistory.id",
+        "id": "Encounter.classHistory.id",
         "path": "Encounter.classHistory.id",
         "representation": [
           "xmlAttr"
@@ -905,7 +905,7 @@
         ]
       },
       {
-        "id": "Encounter:obf-Encounter.classHistory.extension",
+        "id": "Encounter.classHistory.extension",
         "path": "Encounter.classHistory.extension",
         "short": "Additional Content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
@@ -934,7 +934,7 @@
         ]
       },
       {
-        "id": "Encounter:obf-Encounter.classHistory.modifierExtension",
+        "id": "Encounter.classHistory.modifierExtension",
         "path": "Encounter.classHistory.modifierExtension",
         "short": "Extensions that cannot be ignored",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
@@ -966,7 +966,7 @@
         ]
       },
       {
-        "id": "Encounter:obf-Encounter.classHistory.class",
+        "id": "Encounter.classHistory.class",
         "path": "Encounter.classHistory.class",
         "short": "inpatient | outpatient | ambulatory | emergency +",
         "definition": "inpatient | outpatient | ambulatory | emergency +.",
@@ -998,7 +998,7 @@
         ]
       },
       {
-        "id": "Encounter:obf-Encounter.classHistory.period",
+        "id": "Encounter.classHistory.period",
         "path": "Encounter.classHistory.period",
         "short": "The time that the episode was in the specified class",
         "definition": "The time that the episode was in the specified class.",
@@ -1017,7 +1017,7 @@
         ]
       },
       {
-        "id": "Encounter:obf-Encounter.type",
+        "id": "Encounter.type",
         "path": "Encounter.type",
         "short": "Specific type of encounter",
         "definition": "Specific type of encounter (e.g. e-mail consultation, surgical day-care, skilled nursing, rehabilitation).",
@@ -1057,7 +1057,7 @@
         }
       },
       {
-        "id": "Encounter:obf-Encounter.priority",
+        "id": "Encounter.priority",
         "path": "Encounter.priority",
         "short": "Indicates the urgency of the encounter",
         "definition": "Indicates the urgency of the encounter.",
@@ -1090,7 +1090,7 @@
         ]
       },
       {
-        "id": "Encounter:obf-Encounter.subject",
+        "id": "Encounter.subject",
         "path": "Encounter.subject",
         "short": "The patient ro group present at the encounter",
         "definition": "The patient ro group present at the encounter.",
@@ -1128,7 +1128,7 @@
         }
       },
       {
-        "id": "Encounter:obf-Encounter.episodeOfCare",
+        "id": "Encounter.episodeOfCare",
         "path": "Encounter.episodeOfCare",
         "short": "Episode(s) of care that this encounter should be recorded against",
         "definition": "Where a specific encounter should be classified as a part of a specific episode(s) of care this field should be used. This association can facilitate grouping of related encounters together for a specific purpose, such as government reporting, issue tracking, association via a common problem.  The association is recorded on the encounter as these are typically created after the episode of care, and grouped on entry rather than editing the episode of care to append another encounter to it (the episode of care could span years).",
@@ -1157,7 +1157,7 @@
         ]
       },
       {
-        "id": "Encounter:obf-Encounter.incomingReferral",
+        "id": "Encounter.incomingReferral",
         "path": "Encounter.incomingReferral",
         "short": "Indicates any plans, proposals or orders that this request is intended to satisfy - in whole or in part",
         "definition": "Indicates any plans, proposals or orders that this request is intended to satisfy - in whole or in part.",
@@ -1177,7 +1177,7 @@
         ]
       },
       {
-        "id": "Encounter:obf-Encounter.participant",
+        "id": "Encounter.participant",
         "path": "Encounter.participant",
         "short": "List of participants involved in the encounter",
         "definition": "The list of people responsible for providing the service.",
@@ -1211,7 +1211,7 @@
         ]
       },
       {
-        "id": "Encounter:obf-Encounter.participant.id",
+        "id": "Encounter.participant.id",
         "path": "Encounter.participant.id",
         "representation": [
           "xmlAttr"
@@ -1238,7 +1238,7 @@
         ]
       },
       {
-        "id": "Encounter:obf-Encounter.participant.extension",
+        "id": "Encounter.participant.extension",
         "path": "Encounter.participant.extension",
         "short": "Additional Content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
@@ -1267,7 +1267,7 @@
         ]
       },
       {
-        "id": "Encounter:obf-Encounter.participant.modifierExtension",
+        "id": "Encounter.participant.modifierExtension",
         "path": "Encounter.participant.modifierExtension",
         "short": "Extensions that cannot be ignored",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
@@ -1299,7 +1299,7 @@
         ]
       },
       {
-        "id": "Encounter:obf-Encounter.participant.type",
+        "id": "Encounter.participant.type",
         "path": "Encounter.participant.type",
         "short": "Role of participant in encounter",
         "definition": "Role of participant in encounter.",
@@ -1337,7 +1337,7 @@
         ]
       },
       {
-        "id": "Encounter:obf-Encounter.participant.period",
+        "id": "Encounter.participant.period",
         "path": "Encounter.participant.period",
         "short": "Period of time during the encounter that the participant participated",
         "definition": "The period of time that the specified participant participated in the encounter. These can overlap or be sub-sets of the overall encounter's period.",
@@ -1360,7 +1360,7 @@
         ]
       },
       {
-        "id": "Encounter:obf-Encounter.participant.individual",
+        "id": "Encounter.participant.individual",
         "path": "Encounter.participant.individual",
         "short": "A choice of Practitioner and RelatedPerson as participant",
         "definition": "A choice of Practitioner and RelatedPerson as participant",
@@ -1393,7 +1393,7 @@
         ]
       },
       {
-        "id": "Encounter:obf-Encounter.appointment",
+        "id": "Encounter.appointment",
         "path": "Encounter.appointment",
         "short": "The appointment that scheduled this encounter",
         "definition": "The appointment that scheduled this encounter.",
@@ -1418,7 +1418,7 @@
         ]
       },
       {
-        "id": "Encounter:obf-Encounter.period",
+        "id": "Encounter.period",
         "path": "Encounter.period",
         "short": "The start and end time of the encounter",
         "definition": "The start and end time of the encounter.",
@@ -1446,7 +1446,7 @@
         ]
       },
       {
-        "id": "Encounter:obf-Encounter.length",
+        "id": "Encounter.length",
         "path": "Encounter.length",
         "short": "Quantity of time the encounter lasted (less time absent)",
         "definition": "Quantity of time the encounter lasted. This excludes the time during leaves of absence.",
@@ -1471,7 +1471,7 @@
         ]
       },
       {
-        "id": "Encounter:obf-Encounter.reason",
+        "id": "Encounter.reason",
         "path": "Encounter.reason",
         "short": "Reason the encounter takes place (code)",
         "definition": "Reason the encounter takes place, expressed as a code. For admissions, this can be used for a coded admission diagnosis.",
@@ -1517,7 +1517,7 @@
         ]
       },
       {
-        "id": "Encounter:obf-Encounter.diagnosis",
+        "id": "Encounter.diagnosis",
         "extension": [
           {
             "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name",
@@ -1553,7 +1553,7 @@
         ]
       },
       {
-        "id": "Encounter:obf-Encounter.diagnosis.id",
+        "id": "Encounter.diagnosis.id",
         "path": "Encounter.diagnosis.id",
         "representation": [
           "xmlAttr"
@@ -1580,7 +1580,7 @@
         ]
       },
       {
-        "id": "Encounter:obf-Encounter.diagnosis.extension",
+        "id": "Encounter.diagnosis.extension",
         "path": "Encounter.diagnosis.extension",
         "short": "Additional Content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
@@ -1620,7 +1620,7 @@
         }
       },
       {
-        "id": "Encounter:obf-Encounter.diagnosis.extension:diagnosiscode",
+        "id": "Encounter.diagnosis.extension:diagnosiscode",
         "path": "Encounter.diagnosis.extension",
         "definition": "Codes for a diagnosis.",
         "min": 0,
@@ -1639,7 +1639,7 @@
         "sliceName": "diagnosiscode"
       },
       {
-        "id": "Encounter:obf-Encounter.diagnosis.modifierExtension",
+        "id": "Encounter.diagnosis.modifierExtension",
         "path": "Encounter.diagnosis.modifierExtension",
         "short": "Extensions that cannot be ignored",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
@@ -1671,7 +1671,7 @@
         ]
       },
       {
-        "id": "Encounter:obf-Encounter.diagnosis.condition",
+        "id": "Encounter.diagnosis.condition",
         "path": "Encounter.diagnosis.condition",
         "short": "Reason the encounter takes place (resource)",
         "definition": "Reason the encounter takes place, as specified using information from another resource. For admissions, this is the admission diagnosis. The indication will typically be a Condition (with other resources referenced in the evidence.detail), or a Procedure.",
@@ -1705,7 +1705,7 @@
         ]
       },
       {
-        "id": "Encounter:obf-Encounter.diagnosis.role",
+        "id": "Encounter.diagnosis.role",
         "path": "Encounter.diagnosis.role",
         "short": "Role that this diagnosis has within the encounter (e.g. admission, billing, discharge …)",
         "definition": "Role that this diagnosis has within the encounter (e.g. admission, billing, discharge …).",
@@ -1741,7 +1741,7 @@
         ]
       },
       {
-        "id": "Encounter:obf-Encounter.diagnosis.rank",
+        "id": "Encounter.diagnosis.rank",
         "path": "Encounter.diagnosis.rank",
         "short": "Ranking of the diagnosis (for each role type)",
         "definition": "Ranking of the diagnosis (for each role type).",
@@ -1760,7 +1760,7 @@
         ]
       },
       {
-        "id": "Encounter:obf-Encounter.account",
+        "id": "Encounter.account",
         "path": "Encounter.account",
         "short": "The set of accounts that may be used for billing for this Encounter",
         "definition": "The set of accounts that may be used for billing for this Encounter.",
@@ -1781,7 +1781,7 @@
         ]
       },
       {
-        "id": "Encounter:obf-Encounter.hospitalization",
+        "id": "Encounter.hospitalization",
         "path": "Encounter.hospitalization",
         "short": "Details about the admission to a healthcare service",
         "definition": "Details about the admission to a healthcare service.",
@@ -1811,7 +1811,7 @@
         ]
       },
       {
-        "id": "Encounter:obf-Encounter.hospitalization.id",
+        "id": "Encounter.hospitalization.id",
         "path": "Encounter.hospitalization.id",
         "representation": [
           "xmlAttr"
@@ -1838,7 +1838,7 @@
         ]
       },
       {
-        "id": "Encounter:obf-Encounter.hospitalization.extension",
+        "id": "Encounter.hospitalization.extension",
         "path": "Encounter.hospitalization.extension",
         "short": "Additional Content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
@@ -1867,7 +1867,7 @@
         ]
       },
       {
-        "id": "Encounter:obf-Encounter.hospitalization.modifierExtension",
+        "id": "Encounter.hospitalization.modifierExtension",
         "path": "Encounter.hospitalization.modifierExtension",
         "short": "Extensions that cannot be ignored",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
@@ -1899,7 +1899,7 @@
         ]
       },
       {
-        "id": "Encounter:obf-Encounter.hospitalization.preAdmissionIdentifier",
+        "id": "Encounter.hospitalization.preAdmissionIdentifier",
         "path": "Encounter.hospitalization.preAdmissionIdentifier",
         "short": "Pre-admission identifier",
         "definition": "Pre-admission identifier.",
@@ -1922,7 +1922,7 @@
         ]
       },
       {
-        "id": "Encounter:obf-Encounter.hospitalization.origin",
+        "id": "Encounter.hospitalization.origin",
         "path": "Encounter.hospitalization.origin",
         "short": "The location from which the patient came before admission",
         "definition": "The location from which the patient came before admission.",
@@ -1942,7 +1942,7 @@
         ]
       },
       {
-        "id": "Encounter:obf-Encounter.hospitalization.admitSource",
+        "id": "Encounter.hospitalization.admitSource",
         "path": "Encounter.hospitalization.admitSource",
         "short": "From where patient was admitted (physician referral, transfer)",
         "definition": "From where patient was admitted (physician referral, transfer).",
@@ -1978,7 +1978,7 @@
         ]
       },
       {
-        "id": "Encounter:obf-Encounter.hospitalization.reAdmission",
+        "id": "Encounter.hospitalization.reAdmission",
         "path": "Encounter.hospitalization.reAdmission",
         "short": "The type of hospital re-admission that has occurred (if any). If the value is absent, then this is not identified as a readmission",
         "definition": "Whether this hospitalization is a readmission and why if known.",
@@ -2014,7 +2014,7 @@
         ]
       },
       {
-        "id": "Encounter:obf-Encounter.hospitalization.dietPreference",
+        "id": "Encounter.hospitalization.dietPreference",
         "path": "Encounter.hospitalization.dietPreference",
         "short": "Diet preferences reported by the patient",
         "definition": "Diet preferences reported by the patient.",
@@ -2052,7 +2052,7 @@
         ]
       },
       {
-        "id": "Encounter:obf-Encounter.hospitalization.specialCourtesy",
+        "id": "Encounter.hospitalization.specialCourtesy",
         "path": "Encounter.hospitalization.specialCourtesy",
         "short": "Special courtesies (VIP, board member)",
         "definition": "Special courtesies (VIP, board member).",
@@ -2088,7 +2088,7 @@
         ]
       },
       {
-        "id": "Encounter:obf-Encounter.hospitalization.specialArrangement",
+        "id": "Encounter.hospitalization.specialArrangement",
         "path": "Encounter.hospitalization.specialArrangement",
         "short": "Wheelchair, translator, stretcher, etc.",
         "definition": "Any special requests that have been made for this hospitalization encounter, such as the provision of specific equipment or other things.",
@@ -2124,7 +2124,7 @@
         ]
       },
       {
-        "id": "Encounter:obf-Encounter.hospitalization.destination",
+        "id": "Encounter.hospitalization.destination",
         "path": "Encounter.hospitalization.destination",
         "short": "Location to which the patient is discharged",
         "definition": "Location to which the patient is discharged.",
@@ -2148,7 +2148,7 @@
         ]
       },
       {
-        "id": "Encounter:obf-Encounter.hospitalization.dischargeDisposition",
+        "id": "Encounter.hospitalization.dischargeDisposition",
         "path": "Encounter.hospitalization.dischargeDisposition",
         "short": "Category or kind of location after discharge",
         "definition": "Category or kind of location after discharge.",
@@ -2184,7 +2184,7 @@
         ]
       },
       {
-        "id": "Encounter:obf-Encounter.location",
+        "id": "Encounter.location",
         "path": "Encounter.location",
         "short": "List of locations where the patient has been",
         "definition": "List of locations where  the patient has been during this encounter.",
@@ -2214,7 +2214,7 @@
         ]
       },
       {
-        "id": "Encounter:obf-Encounter.location.id",
+        "id": "Encounter.location.id",
         "path": "Encounter.location.id",
         "representation": [
           "xmlAttr"
@@ -2241,7 +2241,7 @@
         ]
       },
       {
-        "id": "Encounter:obf-Encounter.location.extension",
+        "id": "Encounter.location.extension",
         "path": "Encounter.location.extension",
         "short": "Additional Content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
@@ -2270,7 +2270,7 @@
         ]
       },
       {
-        "id": "Encounter:obf-Encounter.location.modifierExtension",
+        "id": "Encounter.location.modifierExtension",
         "path": "Encounter.location.modifierExtension",
         "short": "Extensions that cannot be ignored",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
@@ -2302,7 +2302,7 @@
         ]
       },
       {
-        "id": "Encounter:obf-Encounter.location.location",
+        "id": "Encounter.location.location",
         "path": "Encounter.location.location",
         "short": "Location the encounter takes place",
         "definition": "The location where the encounter takes place.",
@@ -2330,7 +2330,7 @@
         ]
       },
       {
-        "id": "Encounter:obf-Encounter.location.status",
+        "id": "Encounter.location.status",
         "path": "Encounter.location.status",
         "short": "planned | active | reserved | completed",
         "definition": "The status of the participants' presence at the specified location during the period specified. If the participant is is no longer at the location, then the period will have an end date/time.",
@@ -2363,7 +2363,7 @@
         ]
       },
       {
-        "id": "Encounter:obf-Encounter.location.period",
+        "id": "Encounter.location.period",
         "path": "Encounter.location.period",
         "short": "Time period during which the patient was present at the location",
         "definition": "Time period during which the patient was present at the location.",
@@ -2382,7 +2382,7 @@
         ]
       },
       {
-        "id": "Encounter:obf-Encounter.serviceProvider",
+        "id": "Encounter.serviceProvider",
         "path": "Encounter.serviceProvider",
         "short": "The custodian organization of this Encounter record",
         "definition": "An organization that is in charge of maintaining the information of this Encounter (e.g. who maintains the report or the master service catalog item, etc.). This MAY be the same as the organization on the Patient record, however it could be different. This MAY not be not the Service Delivery Location's Organization.",
@@ -2406,7 +2406,7 @@
         ]
       },
       {
-        "id": "Encounter:obf-Encounter.partOf",
+        "id": "Encounter.partOf",
         "path": "Encounter.partOf",
         "short": "Another Encounter this encounter is part of",
         "definition": "Another Encounter of which this encounter is a part of (administratively or in time).",
@@ -2431,17 +2431,17 @@
   "differential": {
     "element": [
       {
-        "id": "Encounter:obf-Encounter",
+        "id": "Encounter",
         "path": "Encounter",
         "short": "obf-Encounter",
         "definition": "A description of an interaction between a patient and healthcare provider(s) for the purpose of providing healthcare service(s) or assessing the health status of a patient."
       },
       {
-        "id": "Encounter:obf-Encounter.meta",
+        "id": "Encounter.meta",
         "path": "Encounter.meta"
       },
       {
-        "id": "Encounter:obf-Encounter.meta.extension:sourcesystem",
+        "id": "Encounter.meta.extension:sourcesystem",
         "path": "Encounter.meta.extension",
         "definition": "FHIR: This provides a minimal amount of Provenance information that can be used to track or differentiate the source of information in the resource. The source may identify another FHIR server, document, message, database, etc.\nFHIM: Identifies the computer system that created the medical record. This optional field may also be used to indicate that the medical record was originally created by a different organization from the one that is currently storing or utilizing the record in that the assigning authority of the Id could be set to that originating organization. This property is optional, as some systems will assume that all records that it contains originated in that system, however it is anticipated that it will become increasingly commonplace for records from multiple systems and organizations will be comingled in order to provide a complete picture of the patient's health record.",
         "min": 0,
@@ -2460,7 +2460,7 @@
         "sliceName": "sourcesystem"
       },
       {
-        "id": "Encounter:obf-Encounter.extension",
+        "id": "Encounter.extension",
         "path": "Encounter.extension",
         "slicing": {
           "id": "2",
@@ -2475,7 +2475,7 @@
         }
       },
       {
-        "id": "Encounter:obf-Encounter.extension:encounterreasonreference",
+        "id": "Encounter.extension:encounterreasonreference",
         "path": "Encounter.extension",
         "definition": "Reason the encounter is taking place.",
         "min": 0,
@@ -2494,7 +2494,7 @@
         "sliceName": "encounterreasonreference"
       },
       {
-        "id": "Encounter:obf-Encounter.class",
+        "id": "Encounter.class",
         "path": "Encounter.class",
         "min": 1,
         "max": "1",
@@ -2505,7 +2505,7 @@
         }
       },
       {
-        "id": "Encounter:obf-Encounter.type",
+        "id": "Encounter.type",
         "path": "Encounter.type",
         "min": 1,
         "max": "*",
@@ -2522,7 +2522,7 @@
         }
       },
       {
-        "id": "Encounter:obf-Encounter.priority",
+        "id": "Encounter.priority",
         "path": "Encounter.priority",
         "binding": {
           "strength": "example",
@@ -2532,7 +2532,7 @@
         }
       },
       {
-        "id": "Encounter:obf-Encounter.subject",
+        "id": "Encounter.subject",
         "path": "Encounter.subject",
         "min": 1,
         "max": "1",
@@ -2549,7 +2549,7 @@
         ]
       },
       {
-        "id": "Encounter:obf-Encounter.episodeOfCare",
+        "id": "Encounter.episodeOfCare",
         "path": "Encounter.episodeOfCare",
         "type": [
           {
@@ -2559,7 +2559,7 @@
         ]
       },
       {
-        "id": "Encounter:obf-Encounter.incomingReferral",
+        "id": "Encounter.incomingReferral",
         "path": "Encounter.incomingReferral",
         "type": [
           {
@@ -2571,11 +2571,11 @@
         "definition": "Indicates any plans, proposals or orders that this request is intended to satisfy - in whole or in part."
       },
       {
-        "id": "Encounter:obf-Encounter.participant",
+        "id": "Encounter.participant",
         "path": "Encounter.participant"
       },
       {
-        "id": "Encounter:obf-Encounter.participant.individual",
+        "id": "Encounter.participant.individual",
         "path": "Encounter.participant.individual",
         "type": [
           {
@@ -2591,7 +2591,7 @@
         "definition": "A choice of Practitioner and RelatedPerson as participant"
       },
       {
-        "id": "Encounter:obf-Encounter.appointment",
+        "id": "Encounter.appointment",
         "path": "Encounter.appointment",
         "type": [
           {
@@ -2601,7 +2601,7 @@
         ]
       },
       {
-        "id": "Encounter:obf-Encounter.length",
+        "id": "Encounter.length",
         "path": "Encounter.length",
         "type": [
           {
@@ -2611,11 +2611,11 @@
         ]
       },
       {
-        "id": "Encounter:obf-Encounter.diagnosis",
+        "id": "Encounter.diagnosis",
         "path": "Encounter.diagnosis"
       },
       {
-        "id": "Encounter:obf-Encounter.diagnosis.extension",
+        "id": "Encounter.diagnosis.extension",
         "path": "Encounter.diagnosis.extension",
         "slicing": {
           "id": "1",
@@ -2630,7 +2630,7 @@
         }
       },
       {
-        "id": "Encounter:obf-Encounter.diagnosis.extension:diagnosiscode",
+        "id": "Encounter.diagnosis.extension:diagnosiscode",
         "path": "Encounter.diagnosis.extension",
         "definition": "Codes for a diagnosis.",
         "min": 0,
@@ -2649,7 +2649,7 @@
         "sliceName": "diagnosiscode"
       },
       {
-        "id": "Encounter:obf-Encounter.diagnosis.condition",
+        "id": "Encounter.diagnosis.condition",
         "path": "Encounter.diagnosis.condition",
         "type": [
           {
@@ -2659,11 +2659,11 @@
         ]
       },
       {
-        "id": "Encounter:obf-Encounter.location",
+        "id": "Encounter.location",
         "path": "Encounter.location"
       },
       {
-        "id": "Encounter:obf-Encounter.location.location",
+        "id": "Encounter.location.location",
         "path": "Encounter.location.location",
         "type": [
           {
@@ -2673,7 +2673,7 @@
         ]
       },
       {
-        "id": "Encounter:obf-Encounter.serviceProvider",
+        "id": "Encounter.serviceProvider",
         "path": "Encounter.serviceProvider",
         "type": [
           {
@@ -2683,7 +2683,7 @@
         ]
       },
       {
-        "id": "Encounter:obf-Encounter.partOf",
+        "id": "Encounter.partOf",
         "path": "Encounter.partOf",
         "type": [
           {

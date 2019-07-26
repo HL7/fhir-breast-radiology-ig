@@ -9,7 +9,7 @@
   "name": "Condition",
   "title": "obf-Condition",
   "status": "draft",
-  "date": "2019-07-24",
+  "date": "2019-07-26",
   "publisher": "Hl7",
   "contact": [
     {
@@ -35,7 +35,7 @@
   "snapshot": {
     "element": [
       {
-        "id": "Extension:condition",
+        "id": "Extension",
         "path": "Extension",
         "short": "Condition",
         "definition": "A condition that is or may be present in a subject. 'Condition' is interpreted broadly and could be a disorder, abnormality, problem, injury, complaint, functionality, illness, disease, ailment, sickness, affliction, upset, difficulty, disorder, symptom, worry, or trouble.\nThe Observation-based class, ConditionAbsent, should be used to describe conditions that are not present or negative findings.\nSHR Condition uses the SHR BodyLocation structure that includes not only a code, but optional laterality, direction, clock direction, and distance. If included, the distance is measured from the location specified by the code, laterality, and direction.",
@@ -78,7 +78,7 @@
         ]
       },
       {
-        "id": "Extension:condition.id",
+        "id": "Extension.id",
         "path": "Extension.id",
         "representation": [
           "xmlAttr"
@@ -105,7 +105,7 @@
         ]
       },
       {
-        "id": "Extension:condition.extension",
+        "id": "Extension.extension",
         "path": "Extension.extension",
         "slicing": {
           "discriminator": [
@@ -144,7 +144,7 @@
         ]
       },
       {
-        "id": "Extension:condition.url",
+        "id": "Extension.url",
         "path": "Extension.url",
         "representation": [
           "xmlAttr"
@@ -173,7 +173,7 @@
         "fixedUri": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Condition-extension"
       },
       {
-        "id": "Extension:condition.valueReference",
+        "id": "Extension.valueReference",
         "path": "Extension.valueReference",
         "short": "Value of extension",
         "definition": "Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).",
@@ -202,7 +202,7 @@
   "differential": {
     "element": [
       {
-        "id": "Extension:condition",
+        "id": "Extension",
         "path": "Extension",
         "short": "Condition",
         "definition": "A condition that is or may be present in a subject. 'Condition' is interpreted broadly and could be a disorder, abnormality, problem, injury, complaint, functionality, illness, disease, ailment, sickness, affliction, upset, difficulty, disorder, symptom, worry, or trouble.\nThe Observation-based class, ConditionAbsent, should be used to describe conditions that are not present or negative findings.\nSHR Condition uses the SHR BodyLocation structure that includes not only a code, but optional laterality, direction, clock direction, and distance. If included, the distance is measured from the location specified by the code, laterality, and direction.",
@@ -210,18 +210,18 @@
         "max": "*"
       },
       {
-        "id": "Extension:condition.extension",
+        "id": "Extension.extension",
         "path": "Extension.extension",
         "min": 0,
         "max": "0"
       },
       {
-        "id": "Extension:condition.url",
+        "id": "Extension.url",
         "path": "Extension.url",
         "fixedUri": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Condition-extension"
       },
       {
-        "id": "Extension:condition.valueReference",
+        "id": "Extension.valueReference",
         "path": "Extension.valueReference",
         "min": 1,
         "type": [

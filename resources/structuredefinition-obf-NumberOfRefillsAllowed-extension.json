@@ -9,7 +9,7 @@
   "name": "NumberOfRefillsAllowed",
   "title": "obf-NumberOfRefillsAllowed",
   "status": "draft",
-  "date": "2019-07-24",
+  "date": "2019-07-26",
   "publisher": "Hl7",
   "contact": [
     {
@@ -35,7 +35,7 @@
   "snapshot": {
     "element": [
       {
-        "id": "Extension:numberofrefillsallowed",
+        "id": "Extension",
         "path": "Extension",
         "short": "NumberOfRefillsAllowed",
         "definition": "The maximum number of times the dispense can be repeated. For medication dispense, this integer does NOT include the original order dispense. This means that if an order indicates dispense 30 tablets plus 3 repeats, then the order can be dispensed a total of 4 times and the patient can receive a total of 120 tablets.",
@@ -78,7 +78,7 @@
         ]
       },
       {
-        "id": "Extension:numberofrefillsallowed.id",
+        "id": "Extension.id",
         "path": "Extension.id",
         "representation": [
           "xmlAttr"
@@ -105,7 +105,7 @@
         ]
       },
       {
-        "id": "Extension:numberofrefillsallowed.extension",
+        "id": "Extension.extension",
         "path": "Extension.extension",
         "slicing": {
           "discriminator": [
@@ -144,7 +144,7 @@
         ]
       },
       {
-        "id": "Extension:numberofrefillsallowed.url",
+        "id": "Extension.url",
         "path": "Extension.url",
         "representation": [
           "xmlAttr"
@@ -173,7 +173,7 @@
         "fixedUri": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-NumberOfRefillsAllowed-extension"
       },
       {
-        "id": "Extension:numberofrefillsallowed.valueUnsignedInt",
+        "id": "Extension.valueUnsignedInt",
         "path": "Extension.valueUnsignedInt",
         "short": "Value of extension",
         "definition": "Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).",
@@ -201,7 +201,7 @@
   "differential": {
     "element": [
       {
-        "id": "Extension:numberofrefillsallowed",
+        "id": "Extension",
         "path": "Extension",
         "short": "NumberOfRefillsAllowed",
         "definition": "The maximum number of times the dispense can be repeated. For medication dispense, this integer does NOT include the original order dispense. This means that if an order indicates dispense 30 tablets plus 3 repeats, then the order can be dispensed a total of 4 times and the patient can receive a total of 120 tablets.",
@@ -209,18 +209,18 @@
         "max": "*"
       },
       {
-        "id": "Extension:numberofrefillsallowed.extension",
+        "id": "Extension.extension",
         "path": "Extension.extension",
         "min": 0,
         "max": "0"
       },
       {
-        "id": "Extension:numberofrefillsallowed.url",
+        "id": "Extension.url",
         "path": "Extension.url",
         "fixedUri": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-NumberOfRefillsAllowed-extension"
       },
       {
-        "id": "Extension:numberofrefillsallowed.valueUnsignedInt",
+        "id": "Extension.valueUnsignedInt",
         "path": "Extension.valueUnsignedInt",
         "min": 1,
         "type": [

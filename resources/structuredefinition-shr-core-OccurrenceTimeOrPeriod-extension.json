@@ -9,7 +9,7 @@
   "name": "OccurrenceTimeOrPeriod",
   "title": "shr-core-OccurrenceTimeOrPeriod",
   "status": "draft",
-  "date": "2019-07-24",
+  "date": "2019-07-26",
   "publisher": "Hl7",
   "contact": [
     {
@@ -35,7 +35,7 @@
   "snapshot": {
     "element": [
       {
-        "id": "Extension:occurrencetimeorperiod",
+        "id": "Extension",
         "path": "Extension",
         "short": "OccurrenceTimeOrPeriod",
         "definition": "The point or period of time when the event takes place. Times can be precise (dateTime) or approximate (date). If a time period is used, and the start date or dateTime is missing, the start of the period is not known. If the end date or dateTime is missing, it means that the period is ongoing.",
@@ -78,7 +78,7 @@
         ]
       },
       {
-        "id": "Extension:occurrencetimeorperiod.id",
+        "id": "Extension.id",
         "path": "Extension.id",
         "representation": [
           "xmlAttr"
@@ -105,7 +105,7 @@
         ]
       },
       {
-        "id": "Extension:occurrencetimeorperiod.extension",
+        "id": "Extension.extension",
         "path": "Extension.extension",
         "slicing": {
           "discriminator": [
@@ -144,7 +144,7 @@
         ]
       },
       {
-        "id": "Extension:occurrencetimeorperiod.url",
+        "id": "Extension.url",
         "path": "Extension.url",
         "representation": [
           "xmlAttr"
@@ -173,7 +173,7 @@
         "fixedUri": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-OccurrenceTimeOrPeriod-extension"
       },
       {
-        "id": "Extension:occurrencetimeorperiod.value[x]",
+        "id": "Extension.value[x]",
         "path": "Extension.value[x]",
         "short": "Value of extension",
         "definition": "Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).",
@@ -207,7 +207,7 @@
   "differential": {
     "element": [
       {
-        "id": "Extension:occurrencetimeorperiod",
+        "id": "Extension",
         "path": "Extension",
         "short": "OccurrenceTimeOrPeriod",
         "definition": "The point or period of time when the event takes place. Times can be precise (dateTime) or approximate (date). If a time period is used, and the start date or dateTime is missing, the start of the period is not known. If the end date or dateTime is missing, it means that the period is ongoing.",
@@ -215,18 +215,18 @@
         "max": "*"
       },
       {
-        "id": "Extension:occurrencetimeorperiod.extension",
+        "id": "Extension.extension",
         "path": "Extension.extension",
         "min": 0,
         "max": "0"
       },
       {
-        "id": "Extension:occurrencetimeorperiod.url",
+        "id": "Extension.url",
         "path": "Extension.url",
         "fixedUri": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-OccurrenceTimeOrPeriod-extension"
       },
       {
-        "id": "Extension:occurrencetimeorperiod.value[x]",
+        "id": "Extension.value[x]",
         "path": "Extension.value[x]",
         "min": 1,
         "type": [

@@ -9,7 +9,7 @@
   "name": "Reported",
   "title": "obf-Reported",
   "status": "draft",
-  "date": "2019-07-24",
+  "date": "2019-07-26",
   "publisher": "Hl7",
   "contact": [
     {
@@ -35,7 +35,7 @@
   "snapshot": {
     "element": [
       {
-        "id": "Extension:reported",
+        "id": "Extension",
         "path": "Extension",
         "short": "Reported",
         "definition": "Indicates if this record was captured as a secondary 'reported' record rather than as an original primary source-of-truth record. It may also indicate the source of the report.",
@@ -84,7 +84,7 @@
         ]
       },
       {
-        "id": "Extension:reported.id",
+        "id": "Extension.id",
         "path": "Extension.id",
         "representation": [
           "xmlAttr"
@@ -111,7 +111,7 @@
         ]
       },
       {
-        "id": "Extension:reported.extension",
+        "id": "Extension.extension",
         "path": "Extension.extension",
         "slicing": {
           "discriminator": [
@@ -150,7 +150,7 @@
         ]
       },
       {
-        "id": "Extension:reported.extension:boolean",
+        "id": "Extension.extension:boolean",
         "path": "Extension.extension",
         "definition": "Indicates if this record was captured as a secondary 'reported' record rather than as an original primary source-of-truth record. It may also indicate the source of the report.",
         "min": 0,
@@ -175,7 +175,7 @@
         "sliceName": "boolean"
       },
       {
-        "id": "Extension:reported.extension:informationsource",
+        "id": "Extension.extension:informationsource",
         "path": "Extension.extension",
         "definition": "The originator or source of the information or request: a practitioner, patient, related person, organization, an algorithm, device, etc.",
         "min": 0,
@@ -200,7 +200,7 @@
         "sliceName": "informationsource"
       },
       {
-        "id": "Extension:reported.url",
+        "id": "Extension.url",
         "path": "Extension.url",
         "representation": [
           "xmlAttr"
@@ -229,7 +229,7 @@
         "fixedUri": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Reported-extension"
       },
       {
-        "id": "Extension:reported.value[x]",
+        "id": "Extension.value[x]",
         "path": "Extension.value[x]",
         "short": "Value of extension",
         "definition": "Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).",
@@ -368,7 +368,7 @@
   "differential": {
     "element": [
       {
-        "id": "Extension:reported",
+        "id": "Extension",
         "path": "Extension",
         "short": "Reported",
         "definition": "Indicates if this record was captured as a secondary 'reported' record rather than as an original primary source-of-truth record. It may also indicate the source of the report.",
@@ -384,7 +384,7 @@
         ]
       },
       {
-        "id": "Extension:reported.extension:boolean",
+        "id": "Extension.extension:boolean",
         "path": "Extension.extension",
         "definition": "Indicates if this record was captured as a secondary 'reported' record rather than as an original primary source-of-truth record. It may also indicate the source of the report.",
         "min": 0,
@@ -409,7 +409,7 @@
         "sliceName": "boolean"
       },
       {
-        "id": "Extension:reported.extension:informationsource",
+        "id": "Extension.extension:informationsource",
         "path": "Extension.extension",
         "definition": "The originator or source of the information or request: a practitioner, patient, related person, organization, an algorithm, device, etc.",
         "min": 0,
@@ -434,12 +434,12 @@
         "sliceName": "informationsource"
       },
       {
-        "id": "Extension:reported.url",
+        "id": "Extension.url",
         "path": "Extension.url",
         "fixedUri": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Reported-extension"
       },
       {
-        "id": "Extension:reported.value[x]",
+        "id": "Extension.value[x]",
         "path": "Extension.value[x]",
         "min": 0,
         "max": "0"

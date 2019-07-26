@@ -8,7 +8,7 @@
   "url": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-Timing",
   "name": "Timing",
   "status": "draft",
-  "date": "2019-07-24",
+  "date": "2019-07-26",
   "publisher": "Hl7",
   "contact": [
     {
@@ -43,7 +43,7 @@
   "snapshot": {
     "element": [
       {
-        "id": "Timing:shr-core-Timing",
+        "id": "Timing",
         "path": "Timing",
         "short": "shr-core-Timing",
         "definition": "A timing schedule that specifies an event that may occur multiple times.\nTiming offers a choice of multiple OccurrenceTime (used is used to specify specific times), or recurrence patterns.",
@@ -79,7 +79,7 @@
         ]
       },
       {
-        "id": "Timing:shr-core-Timing.id",
+        "id": "Timing.id",
         "path": "Timing.id",
         "representation": [
           "xmlAttr"
@@ -106,7 +106,7 @@
         ]
       },
       {
-        "id": "Timing:shr-core-Timing.extension",
+        "id": "Timing.extension",
         "path": "Timing.extension",
         "slicing": {
           "discriminator": [
@@ -145,7 +145,7 @@
         ]
       },
       {
-        "id": "Timing:shr-core-Timing.event",
+        "id": "Timing.event",
         "path": "Timing.event",
         "short": "When the event occurs",
         "definition": "Identifies specific times when the event occurs.",
@@ -166,7 +166,7 @@
         ]
       },
       {
-        "id": "Timing:shr-core-Timing.repeat",
+        "id": "Timing.repeat",
         "path": "Timing.repeat",
         "short": "When the event is to occur",
         "definition": "A set of rules that describe when the event is scheduled.",
@@ -260,7 +260,7 @@
         ]
       },
       {
-        "id": "Timing:shr-core-Timing.repeat.id",
+        "id": "Timing.repeat.id",
         "path": "Timing.repeat.id",
         "representation": [
           "xmlAttr"
@@ -287,7 +287,7 @@
         ]
       },
       {
-        "id": "Timing:shr-core-Timing.repeat.extension",
+        "id": "Timing.repeat.extension",
         "path": "Timing.repeat.extension",
         "slicing": {
           "discriminator": [
@@ -326,7 +326,7 @@
         ]
       },
       {
-        "id": "Timing:shr-core-Timing.repeat.bounds[x]",
+        "id": "Timing.repeat.bounds[x]",
         "path": "Timing.repeat.bounds[x]",
         "short": "Length/Range of lengths, or (Start and/or end) limits",
         "definition": "Either a duration for the length of the timing schedule, a range of possible length, or outer bounds for start and/or end limits of the timing schedule.",
@@ -353,7 +353,7 @@
         ]
       },
       {
-        "id": "Timing:shr-core-Timing.repeat.count",
+        "id": "Timing.repeat.count",
         "path": "Timing.repeat.count",
         "short": "Number of times to repeat",
         "definition": "A total count of the desired number of repetitions.",
@@ -375,7 +375,7 @@
         ]
       },
       {
-        "id": "Timing:shr-core-Timing.repeat.countMax",
+        "id": "Timing.repeat.countMax",
         "path": "Timing.repeat.countMax",
         "short": "Maximum number of times to repeat",
         "definition": "A maximum value for the count of the desired repetitions (e.g. do something 6-8 times).",
@@ -395,7 +395,7 @@
         ]
       },
       {
-        "id": "Timing:shr-core-Timing.repeat.duration",
+        "id": "Timing.repeat.duration",
         "path": "Timing.repeat.duration",
         "short": "How long when it happens",
         "definition": "How long this thing happens for when it happens.",
@@ -417,7 +417,7 @@
         ]
       },
       {
-        "id": "Timing:shr-core-Timing.repeat.durationMax",
+        "id": "Timing.repeat.durationMax",
         "path": "Timing.repeat.durationMax",
         "short": "How long when it happens (Max)",
         "definition": "The upper limit of how long this thing happens for when it happens.",
@@ -439,7 +439,7 @@
         ]
       },
       {
-        "id": "Timing:shr-core-Timing.repeat.durationUnit",
+        "id": "Timing.repeat.durationUnit",
         "path": "Timing.repeat.durationUnit",
         "short": "s | min | h | d | wk | mo | a - unit of time (UCUM)",
         "definition": "The units of time for the duration, in UCUM units.",
@@ -472,7 +472,7 @@
         ]
       },
       {
-        "id": "Timing:shr-core-Timing.repeat.frequency",
+        "id": "Timing.repeat.frequency",
         "path": "Timing.repeat.frequency",
         "short": "Event occurs frequency times per period",
         "definition": "The number of times to repeat the action within the specified period / period range (i.e. both period and periodMax provided).",
@@ -493,7 +493,7 @@
         ]
       },
       {
-        "id": "Timing:shr-core-Timing.repeat.frequencyMax",
+        "id": "Timing.repeat.frequencyMax",
         "path": "Timing.repeat.frequencyMax",
         "short": "Event occurs up to frequencyMax times per period",
         "definition": "If present, indicates that the frequency is a range - so to repeat between [frequency] and [frequencyMax] times within the period or period range.",
@@ -513,7 +513,7 @@
         ]
       },
       {
-        "id": "Timing:shr-core-Timing.repeat.period",
+        "id": "Timing.repeat.period",
         "path": "Timing.repeat.period",
         "short": "Event occurs frequency times per period",
         "definition": "Indicates the duration of time over which repetitions are to occur; e.g. to express \"3 times per day\", 3 would be the frequency and \"1 day\" would be the period.",
@@ -533,7 +533,7 @@
         ]
       },
       {
-        "id": "Timing:shr-core-Timing.repeat.periodMax",
+        "id": "Timing.repeat.periodMax",
         "path": "Timing.repeat.periodMax",
         "short": "Upper limit of period (3-4 hours)",
         "definition": "If present, indicates that the period is a range from [period] to [periodMax], allowing expressing concepts such as \"do this once every 3-5 days.",
@@ -553,7 +553,7 @@
         ]
       },
       {
-        "id": "Timing:shr-core-Timing.repeat.periodUnit",
+        "id": "Timing.repeat.periodUnit",
         "path": "Timing.repeat.periodUnit",
         "short": "s | min | h | d | wk | mo | a - unit of time (UCUM)",
         "definition": "The units of time for the period in UCUM units.",
@@ -586,7 +586,7 @@
         ]
       },
       {
-        "id": "Timing:shr-core-Timing.repeat.dayOfWeek",
+        "id": "Timing.repeat.dayOfWeek",
         "path": "Timing.repeat.dayOfWeek",
         "short": "mon | tue | wed | thu | fri | sat | sun",
         "definition": "If one or more days of week is provided, then the action happens only on the specified day(s).",
@@ -619,7 +619,7 @@
         ]
       },
       {
-        "id": "Timing:shr-core-Timing.repeat.timeOfDay",
+        "id": "Timing.repeat.timeOfDay",
         "path": "Timing.repeat.timeOfDay",
         "short": "Time of day for action",
         "definition": "Specified time of day for action to take place.",
@@ -640,7 +640,7 @@
         ]
       },
       {
-        "id": "Timing:shr-core-Timing.repeat.when",
+        "id": "Timing.repeat.when",
         "path": "Timing.repeat.when",
         "short": "Regular life events the event is tied to",
         "definition": "Real world events that the occurrence of the event should be tied to.",
@@ -675,7 +675,7 @@
         ]
       },
       {
-        "id": "Timing:shr-core-Timing.repeat.offset",
+        "id": "Timing.repeat.offset",
         "path": "Timing.repeat.offset",
         "short": "Minutes from event (before or after)",
         "definition": "The number of minutes from the event. If the event code does not indicate whether the minutes is before or after the event, then the offset is assumed to be after the event.",
@@ -695,7 +695,7 @@
         ]
       },
       {
-        "id": "Timing:shr-core-Timing.code",
+        "id": "Timing.code",
         "path": "Timing.code",
         "short": "BID | TID | QID | AM | PM | QD | QOD | Q4H | Q6H +",
         "definition": "A code for the timing schedule. Some codes such as BID are ubiquitous, but many institutions define their own additional codes. If a code is provided, the code is understood to be a complete statement of whatever is specified in the structured timing data, and either the code or the data may be used to interpret the Timing, with the exception that .repeat.bounds still applies over the code (and is not contained in the code).",
@@ -733,17 +733,17 @@
   "differential": {
     "element": [
       {
-        "id": "Timing:shr-core-Timing",
+        "id": "Timing",
         "path": "Timing",
         "short": "shr-core-Timing",
         "definition": "A timing schedule that specifies an event that may occur multiple times.\nTiming offers a choice of multiple OccurrenceTime (used is used to specify specific times), or recurrence patterns."
       },
       {
-        "id": "Timing:shr-core-Timing.repeat",
+        "id": "Timing.repeat",
         "path": "Timing.repeat"
       },
       {
-        "id": "Timing:shr-core-Timing.repeat.bounds[x]",
+        "id": "Timing.repeat.bounds[x]",
         "path": "Timing.repeat.bounds[x]",
         "type": [
           {
@@ -759,7 +759,7 @@
         ]
       },
       {
-        "id": "Timing:shr-core-Timing.code",
+        "id": "Timing.code",
         "path": "Timing.code",
         "binding": {
           "extension": [

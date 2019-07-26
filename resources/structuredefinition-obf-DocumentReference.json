@@ -8,7 +8,7 @@
   "url": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-DocumentReference",
   "name": "DocumentReference",
   "status": "draft",
-  "date": "2019-07-24",
+  "date": "2019-07-26",
   "publisher": "Hl7",
   "contact": [
     {
@@ -52,7 +52,7 @@
   "snapshot": {
     "element": [
       {
-        "id": "DocumentReference:obf-DocumentReference",
+        "id": "DocumentReference",
         "path": "DocumentReference",
         "short": "obf-DocumentReference",
         "definition": "A reference to a document, used to describe a document that is made available to a healthcare system. A document is some sequence of bytes that is identifiable, establishes its own context (e.g., what subject, author, etc. can be displayed to the user), and has defined update management. The DocumentReference resource can be used with any document format that has a recognized mime type and that conforms to this definition.\n\nCompatibility: US Core",
@@ -109,7 +109,7 @@
         ]
       },
       {
-        "id": "DocumentReference:obf-DocumentReference.id",
+        "id": "DocumentReference.id",
         "path": "DocumentReference.id",
         "short": "Logical id of this artifact",
         "definition": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.",
@@ -129,7 +129,7 @@
         "isSummary": true
       },
       {
-        "id": "DocumentReference:obf-DocumentReference.meta",
+        "id": "DocumentReference.meta",
         "path": "DocumentReference.meta",
         "short": "Metadata about the resource",
         "definition": "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource.",
@@ -148,7 +148,7 @@
         "isSummary": true
       },
       {
-        "id": "DocumentReference:obf-DocumentReference.meta.id",
+        "id": "DocumentReference.meta.id",
         "path": "DocumentReference.meta.id",
         "representation": [
           "xmlAttr"
@@ -175,7 +175,7 @@
         ]
       },
       {
-        "id": "DocumentReference:obf-DocumentReference.meta.extension",
+        "id": "DocumentReference.meta.extension",
         "path": "DocumentReference.meta.extension",
         "slicing": {
           "discriminator": [
@@ -214,7 +214,7 @@
         ]
       },
       {
-        "id": "DocumentReference:obf-DocumentReference.meta.extension:sourcesystem",
+        "id": "DocumentReference.meta.extension:sourcesystem",
         "path": "DocumentReference.meta.extension",
         "definition": "FHIR: This provides a minimal amount of Provenance information that can be used to track or differentiate the source of information in the resource. The source may identify another FHIR server, document, message, database, etc.\nFHIM: Identifies the computer system that created the medical record. This optional field may also be used to indicate that the medical record was originally created by a different organization from the one that is currently storing or utilizing the record in that the assigning authority of the Id could be set to that originating organization. This property is optional, as some systems will assume that all records that it contains originated in that system, however it is anticipated that it will become increasingly commonplace for records from multiple systems and organizations will be comingled in order to provide a complete picture of the patient's health record.",
         "min": 0,
@@ -233,7 +233,7 @@
         "sliceName": "sourcesystem"
       },
       {
-        "id": "DocumentReference:obf-DocumentReference.meta.versionId",
+        "id": "DocumentReference.meta.versionId",
         "path": "DocumentReference.meta.versionId",
         "short": "Version specific identifier",
         "definition": "The version specific identifier, as it appears in the version portion of the URL. This values changes when the resource is created, updated, or deleted.",
@@ -248,7 +248,7 @@
         "isSummary": true
       },
       {
-        "id": "DocumentReference:obf-DocumentReference.meta.lastUpdated",
+        "id": "DocumentReference.meta.lastUpdated",
         "path": "DocumentReference.meta.lastUpdated",
         "short": "When the resource version last changed",
         "definition": "When the resource last changed - e.g. when the version changed.",
@@ -263,7 +263,7 @@
         "isSummary": true
       },
       {
-        "id": "DocumentReference:obf-DocumentReference.meta.profile",
+        "id": "DocumentReference.meta.profile",
         "path": "DocumentReference.meta.profile",
         "short": "Profiles this resource claims to conform to",
         "definition": "A list of profiles (references to [StructureDefinition](structuredefinition.html#) resources) that this resource claims to conform to. The URL is a reference to [StructureDefinition.url]().",
@@ -278,7 +278,7 @@
         "isSummary": true
       },
       {
-        "id": "DocumentReference:obf-DocumentReference.meta.security",
+        "id": "DocumentReference.meta.security",
         "path": "DocumentReference.meta.security",
         "short": "Security Labels applied to this resource",
         "definition": "Security labels applied to this resource. These tags connect specific resources to the overall security policy and infrastructure.",
@@ -310,7 +310,7 @@
         }
       },
       {
-        "id": "DocumentReference:obf-DocumentReference.meta.tag",
+        "id": "DocumentReference.meta.tag",
         "path": "DocumentReference.meta.tag",
         "short": "Tags applied to this resource",
         "definition": "Tags applied to this resource. Tags are intended to be used to identify and relate resources to process and workflow, and applications are not required to consider the tags when interpreting the meaning of a resource.",
@@ -338,7 +338,7 @@
         }
       },
       {
-        "id": "DocumentReference:obf-DocumentReference.implicitRules",
+        "id": "DocumentReference.implicitRules",
         "path": "DocumentReference.implicitRules",
         "short": "A set of rules under which this content was created",
         "definition": "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content.",
@@ -359,7 +359,7 @@
         "isSummary": true
       },
       {
-        "id": "DocumentReference:obf-DocumentReference.language",
+        "id": "DocumentReference.language",
         "path": "DocumentReference.language",
         "short": "Language of the resource content",
         "definition": "The base language in which the resource is written.",
@@ -401,7 +401,7 @@
         }
       },
       {
-        "id": "DocumentReference:obf-DocumentReference.text",
+        "id": "DocumentReference.text",
         "path": "DocumentReference.text",
         "short": "Text summary of the resource, for human interpretation",
         "definition": "A human-readable narrative that contains a summary of the resource, and may be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.",
@@ -435,7 +435,7 @@
         ]
       },
       {
-        "id": "DocumentReference:obf-DocumentReference.contained",
+        "id": "DocumentReference.contained",
         "path": "DocumentReference.contained",
         "short": "Contained, inline Resources",
         "definition": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.",
@@ -465,7 +465,7 @@
         ]
       },
       {
-        "id": "DocumentReference:obf-DocumentReference.extension",
+        "id": "DocumentReference.extension",
         "path": "DocumentReference.extension",
         "short": "Additional Content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the resource. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
@@ -505,7 +505,7 @@
         }
       },
       {
-        "id": "DocumentReference:obf-DocumentReference.extension:carecontext",
+        "id": "DocumentReference.extension:carecontext",
         "path": "DocumentReference.extension",
         "definition": "The encounter or episode of care",
         "min": 0,
@@ -524,7 +524,7 @@
         "sliceName": "carecontext"
       },
       {
-        "id": "DocumentReference:obf-DocumentReference.modifierExtension",
+        "id": "DocumentReference.modifierExtension",
         "path": "DocumentReference.modifierExtension",
         "short": "Extensions that cannot be ignored",
         "definition": "May be used to represent additional information that is not part of the basic definition of the resource, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
@@ -554,7 +554,7 @@
         ]
       },
       {
-        "id": "DocumentReference:obf-DocumentReference.masterIdentifier",
+        "id": "DocumentReference.masterIdentifier",
         "path": "DocumentReference.masterIdentifier",
         "short": "Master Version Specific Identifier",
         "definition": "Document identifier as assigned by the source of the document. This identifier is specific to this version of the document. This unique identifier may be used elsewhere to identify this version of the document.",
@@ -588,7 +588,7 @@
         ]
       },
       {
-        "id": "DocumentReference:obf-DocumentReference.identifier",
+        "id": "DocumentReference.identifier",
         "path": "DocumentReference.identifier",
         "short": "Other identifiers for the document",
         "definition": "Other identifiers associated with the document, including version independent identifiers.",
@@ -625,7 +625,7 @@
         }
       },
       {
-        "id": "DocumentReference:obf-DocumentReference.status",
+        "id": "DocumentReference.status",
         "path": "DocumentReference.status",
         "short": "current | superseded | entered-in-error",
         "definition": "The status of this document reference.",
@@ -676,7 +676,7 @@
         ]
       },
       {
-        "id": "DocumentReference:obf-DocumentReference.docStatus",
+        "id": "DocumentReference.docStatus",
         "path": "DocumentReference.docStatus",
         "short": "preliminary | final | appended | amended | entered-in-error",
         "definition": "The status of the underlying document.",
@@ -718,7 +718,7 @@
         ]
       },
       {
-        "id": "DocumentReference:obf-DocumentReference.type",
+        "id": "DocumentReference.type",
         "path": "DocumentReference.type",
         "short": "Kind of document (LOINC if possible)",
         "definition": "Specifies the particular kind of document referenced  (e.g. History and Physical, Discharge Summary, Progress Note). This usually equates to the purpose of making the document referenced.",
@@ -757,7 +757,7 @@
         ]
       },
       {
-        "id": "DocumentReference:obf-DocumentReference.class",
+        "id": "DocumentReference.class",
         "path": "DocumentReference.class",
         "short": "Categorization of document",
         "definition": "A categorization for the type of document referenced - helps for indexing and searching. This may be implied by or derived from the code specified in the DocumentReference.type.",
@@ -801,7 +801,7 @@
         }
       },
       {
-        "id": "DocumentReference:obf-DocumentReference.subject",
+        "id": "DocumentReference.subject",
         "path": "DocumentReference.subject",
         "short": "Who/what is the subject of the document",
         "definition": "Who or what the document is about. The document can be about a person, (patient or healthcare practitioner), a device (e.g. a machine) or even a group of subjects (such as a document about a herd of farm animals, or a set of patients that share a common exposure).",
@@ -839,7 +839,7 @@
         }
       },
       {
-        "id": "DocumentReference:obf-DocumentReference.created",
+        "id": "DocumentReference.created",
         "path": "DocumentReference.created",
         "short": "Document creation time",
         "definition": "When the document was created.",
@@ -872,7 +872,7 @@
         ]
       },
       {
-        "id": "DocumentReference:obf-DocumentReference.indexed",
+        "id": "DocumentReference.indexed",
         "path": "DocumentReference.indexed",
         "short": "When this document reference was created",
         "definition": "When the document reference was created.",
@@ -901,7 +901,7 @@
         ]
       },
       {
-        "id": "DocumentReference:obf-DocumentReference.author",
+        "id": "DocumentReference.author",
         "path": "DocumentReference.author",
         "short": "Who and/or what authored the document",
         "definition": "Identifies who is responsible for adding the information to the document.",
@@ -951,7 +951,7 @@
         ]
       },
       {
-        "id": "DocumentReference:obf-DocumentReference.authenticator",
+        "id": "DocumentReference.authenticator",
         "path": "DocumentReference.authenticator",
         "short": "Who/what authenticated the document",
         "definition": "Which person or organization authenticates that this document is valid.",
@@ -989,7 +989,7 @@
         ]
       },
       {
-        "id": "DocumentReference:obf-DocumentReference.custodian",
+        "id": "DocumentReference.custodian",
         "path": "DocumentReference.custodian",
         "short": "Organization which maintains the document",
         "definition": "Identifies the organization or group who is responsible for ongoing maintenance of and access to the document.",
@@ -1011,7 +1011,7 @@
         ]
       },
       {
-        "id": "DocumentReference:obf-DocumentReference.relatesTo",
+        "id": "DocumentReference.relatesTo",
         "path": "DocumentReference.relatesTo",
         "short": "Relationships to other documents",
         "definition": "Relationships that this document has with other document references that already exist.",
@@ -1043,7 +1043,7 @@
         ]
       },
       {
-        "id": "DocumentReference:obf-DocumentReference.relatesTo.id",
+        "id": "DocumentReference.relatesTo.id",
         "path": "DocumentReference.relatesTo.id",
         "representation": [
           "xmlAttr"
@@ -1070,7 +1070,7 @@
         ]
       },
       {
-        "id": "DocumentReference:obf-DocumentReference.relatesTo.extension",
+        "id": "DocumentReference.relatesTo.extension",
         "path": "DocumentReference.relatesTo.extension",
         "short": "Additional Content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
@@ -1099,7 +1099,7 @@
         ]
       },
       {
-        "id": "DocumentReference:obf-DocumentReference.relatesTo.modifierExtension",
+        "id": "DocumentReference.relatesTo.modifierExtension",
         "path": "DocumentReference.relatesTo.modifierExtension",
         "short": "Extensions that cannot be ignored",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
@@ -1131,7 +1131,7 @@
         ]
       },
       {
-        "id": "DocumentReference:obf-DocumentReference.relatesTo.code",
+        "id": "DocumentReference.relatesTo.code",
         "path": "DocumentReference.relatesTo.code",
         "short": "replaces | transforms | signs | appends",
         "definition": "The type of relationship that this document has with anther document.",
@@ -1169,7 +1169,7 @@
         ]
       },
       {
-        "id": "DocumentReference:obf-DocumentReference.relatesTo.target",
+        "id": "DocumentReference.relatesTo.target",
         "path": "DocumentReference.relatesTo.target",
         "short": "Target of the relationship",
         "definition": "The target document of this relationship.",
@@ -1194,7 +1194,7 @@
         ]
       },
       {
-        "id": "DocumentReference:obf-DocumentReference.description",
+        "id": "DocumentReference.description",
         "path": "DocumentReference.description",
         "short": "Human-readable description (title)",
         "definition": "Human-readable description of the source document. This is sometimes known as the \"title\".",
@@ -1224,7 +1224,7 @@
         ]
       },
       {
-        "id": "DocumentReference:obf-DocumentReference.securityLabel",
+        "id": "DocumentReference.securityLabel",
         "path": "DocumentReference.securityLabel",
         "short": "Document security-tags",
         "definition": "A set of Security-Tag codes specifying the level of privacy/security of the Document. Note that DocumentReference.meta.security contains the security labels of the \"reference\" to the document, while DocumentReference.securityLabel contains a snapshot of the security labels on the document the reference refers to.",
@@ -1271,7 +1271,7 @@
         ]
       },
       {
-        "id": "DocumentReference:obf-DocumentReference.content",
+        "id": "DocumentReference.content",
         "path": "DocumentReference.content",
         "short": "Document referenced",
         "definition": "The document and format referenced. There may be multiple content element repetitions, each with a different format.",
@@ -1306,7 +1306,7 @@
         }
       },
       {
-        "id": "DocumentReference:obf-DocumentReference.content.id",
+        "id": "DocumentReference.content.id",
         "path": "DocumentReference.content.id",
         "representation": [
           "xmlAttr"
@@ -1333,7 +1333,7 @@
         ]
       },
       {
-        "id": "DocumentReference:obf-DocumentReference.content.extension",
+        "id": "DocumentReference.content.extension",
         "path": "DocumentReference.content.extension",
         "short": "Additional Content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
@@ -1362,7 +1362,7 @@
         ]
       },
       {
-        "id": "DocumentReference:obf-DocumentReference.content.modifierExtension",
+        "id": "DocumentReference.content.modifierExtension",
         "path": "DocumentReference.content.modifierExtension",
         "short": "Extensions that cannot be ignored",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
@@ -1394,7 +1394,7 @@
         ]
       },
       {
-        "id": "DocumentReference:obf-DocumentReference.content.attachment",
+        "id": "DocumentReference.content.attachment",
         "path": "DocumentReference.content.attachment",
         "short": "Where to access the document",
         "definition": "The document or URL of the document along with critical metadata to prove content has integrity.",
@@ -1422,7 +1422,7 @@
         ]
       },
       {
-        "id": "DocumentReference:obf-DocumentReference.content.format",
+        "id": "DocumentReference.content.format",
         "path": "DocumentReference.content.format",
         "short": "Format/content rules for the document",
         "definition": "An identifier of the document encoding, structure, and template that the document conforms to beyond the base format indicated in the mimeType.",
@@ -1460,7 +1460,7 @@
         ]
       },
       {
-        "id": "DocumentReference:obf-DocumentReference.context",
+        "id": "DocumentReference.context",
         "path": "DocumentReference.context",
         "short": "Clinical context of document",
         "definition": "The clinical context in which the document was prepared.",
@@ -1491,7 +1491,7 @@
         ]
       },
       {
-        "id": "DocumentReference:obf-DocumentReference.context.id",
+        "id": "DocumentReference.context.id",
         "path": "DocumentReference.context.id",
         "representation": [
           "xmlAttr"
@@ -1518,7 +1518,7 @@
         ]
       },
       {
-        "id": "DocumentReference:obf-DocumentReference.context.extension",
+        "id": "DocumentReference.context.extension",
         "path": "DocumentReference.context.extension",
         "short": "Additional Content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
@@ -1547,7 +1547,7 @@
         ]
       },
       {
-        "id": "DocumentReference:obf-DocumentReference.context.modifierExtension",
+        "id": "DocumentReference.context.modifierExtension",
         "path": "DocumentReference.context.modifierExtension",
         "short": "Extensions that cannot be ignored",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
@@ -1579,7 +1579,7 @@
         ]
       },
       {
-        "id": "DocumentReference:obf-DocumentReference.context.encounter",
+        "id": "DocumentReference.context.encounter",
         "path": "DocumentReference.context.encounter",
         "short": "Context of the document  content",
         "definition": "Describes the clinical encounter or type of care that the document content is associated with.",
@@ -1604,7 +1604,7 @@
         ]
       },
       {
-        "id": "DocumentReference:obf-DocumentReference.context.event",
+        "id": "DocumentReference.context.event",
         "path": "DocumentReference.context.event",
         "short": "Main clinical acts documented",
         "definition": "This list of codes represents the main clinical acts, such as a colonoscopy or an appendectomy, being documented. In some cases, the event is inherent in the typeCode, such as a \"History and Physical Report\" in which the procedure being documented is necessarily a \"History and Physical\" act.",
@@ -1635,7 +1635,7 @@
         ]
       },
       {
-        "id": "DocumentReference:obf-DocumentReference.context.period",
+        "id": "DocumentReference.context.period",
         "path": "DocumentReference.context.period",
         "short": "Time of service that is being documented",
         "definition": "The time period over which the service that is described by the document was provided.",
@@ -1659,7 +1659,7 @@
         ]
       },
       {
-        "id": "DocumentReference:obf-DocumentReference.context.facilityType",
+        "id": "DocumentReference.context.facilityType",
         "path": "DocumentReference.context.facilityType",
         "short": "Kind of facility where patient was seen",
         "definition": "The kind of facility where the patient was seen.",
@@ -1696,7 +1696,7 @@
         ]
       },
       {
-        "id": "DocumentReference:obf-DocumentReference.context.practiceSetting",
+        "id": "DocumentReference.context.practiceSetting",
         "path": "DocumentReference.context.practiceSetting",
         "short": "Additional details about where the content was created (e.g. clinical specialty)",
         "definition": "This property may convey specifics about the practice setting where the content was created, often reflecting the clinical specialty.",
@@ -1728,7 +1728,7 @@
         ]
       },
       {
-        "id": "DocumentReference:obf-DocumentReference.context.sourcePatientInfo",
+        "id": "DocumentReference.context.sourcePatientInfo",
         "path": "DocumentReference.context.sourcePatientInfo",
         "short": "Patient demographics from source",
         "definition": "The Patient Information as known when the document was published. May be a reference to a version specific, or contained.",
@@ -1753,7 +1753,7 @@
         ]
       },
       {
-        "id": "DocumentReference:obf-DocumentReference.context.related",
+        "id": "DocumentReference.context.related",
         "path": "DocumentReference.context.related",
         "short": "Related identifiers or resources",
         "definition": "Related identifiers or resources associated with the DocumentReference.",
@@ -1788,7 +1788,7 @@
         ]
       },
       {
-        "id": "DocumentReference:obf-DocumentReference.context.related.id",
+        "id": "DocumentReference.context.related.id",
         "path": "DocumentReference.context.related.id",
         "representation": [
           "xmlAttr"
@@ -1815,7 +1815,7 @@
         ]
       },
       {
-        "id": "DocumentReference:obf-DocumentReference.context.related.extension",
+        "id": "DocumentReference.context.related.extension",
         "path": "DocumentReference.context.related.extension",
         "short": "Additional Content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
@@ -1844,7 +1844,7 @@
         ]
       },
       {
-        "id": "DocumentReference:obf-DocumentReference.context.related.modifierExtension",
+        "id": "DocumentReference.context.related.modifierExtension",
         "path": "DocumentReference.context.related.modifierExtension",
         "short": "Extensions that cannot be ignored",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
@@ -1876,7 +1876,7 @@
         ]
       },
       {
-        "id": "DocumentReference:obf-DocumentReference.context.related.identifier",
+        "id": "DocumentReference.context.related.identifier",
         "path": "DocumentReference.context.related.identifier",
         "short": "Identifier of related objects or events",
         "definition": "Related identifier to this DocumentReference. If both id and ref are present they shall refer to the same thing.",
@@ -1897,7 +1897,7 @@
         ]
       },
       {
-        "id": "DocumentReference:obf-DocumentReference.context.related.ref",
+        "id": "DocumentReference.context.related.ref",
         "path": "DocumentReference.context.related.ref",
         "short": "Related Resource",
         "definition": "Related Resource to this DocumentReference. If both id and ref are present they shall refer to the same thing.",
@@ -1923,17 +1923,17 @@
   "differential": {
     "element": [
       {
-        "id": "DocumentReference:obf-DocumentReference",
+        "id": "DocumentReference",
         "path": "DocumentReference",
         "short": "obf-DocumentReference",
         "definition": "A reference to a document, used to describe a document that is made available to a healthcare system. A document is some sequence of bytes that is identifiable, establishes its own context (e.g., what subject, author, etc. can be displayed to the user), and has defined update management. The DocumentReference resource can be used with any document format that has a recognized mime type and that conforms to this definition.\n\nCompatibility: US Core"
       },
       {
-        "id": "DocumentReference:obf-DocumentReference.meta",
+        "id": "DocumentReference.meta",
         "path": "DocumentReference.meta"
       },
       {
-        "id": "DocumentReference:obf-DocumentReference.meta.extension:sourcesystem",
+        "id": "DocumentReference.meta.extension:sourcesystem",
         "path": "DocumentReference.meta.extension",
         "definition": "FHIR: This provides a minimal amount of Provenance information that can be used to track or differentiate the source of information in the resource. The source may identify another FHIR server, document, message, database, etc.\nFHIM: Identifies the computer system that created the medical record. This optional field may also be used to indicate that the medical record was originally created by a different organization from the one that is currently storing or utilizing the record in that the assigning authority of the Id could be set to that originating organization. This property is optional, as some systems will assume that all records that it contains originated in that system, however it is anticipated that it will become increasingly commonplace for records from multiple systems and organizations will be comingled in order to provide a complete picture of the patient's health record.",
         "min": 0,
@@ -1952,7 +1952,7 @@
         "sliceName": "sourcesystem"
       },
       {
-        "id": "DocumentReference:obf-DocumentReference.extension",
+        "id": "DocumentReference.extension",
         "path": "DocumentReference.extension",
         "slicing": {
           "id": "1",
@@ -1967,7 +1967,7 @@
         }
       },
       {
-        "id": "DocumentReference:obf-DocumentReference.extension:carecontext",
+        "id": "DocumentReference.extension:carecontext",
         "path": "DocumentReference.extension",
         "definition": "The encounter or episode of care",
         "min": 0,
@@ -1986,7 +1986,7 @@
         "sliceName": "carecontext"
       },
       {
-        "id": "DocumentReference:obf-DocumentReference.identifier",
+        "id": "DocumentReference.identifier",
         "path": "DocumentReference.identifier",
         "min": 0,
         "max": "1",
@@ -1997,7 +1997,7 @@
         }
       },
       {
-        "id": "DocumentReference:obf-DocumentReference.type",
+        "id": "DocumentReference.type",
         "path": "DocumentReference.type",
         "binding": {
           "strength": "required",
@@ -2007,7 +2007,7 @@
         }
       },
       {
-        "id": "DocumentReference:obf-DocumentReference.class",
+        "id": "DocumentReference.class",
         "path": "DocumentReference.class",
         "min": 1,
         "max": "1",
@@ -2024,7 +2024,7 @@
         }
       },
       {
-        "id": "DocumentReference:obf-DocumentReference.subject",
+        "id": "DocumentReference.subject",
         "path": "DocumentReference.subject",
         "min": 1,
         "max": "1",
@@ -2041,7 +2041,7 @@
         ]
       },
       {
-        "id": "DocumentReference:obf-DocumentReference.author",
+        "id": "DocumentReference.author",
         "path": "DocumentReference.author",
         "type": [
           {
@@ -2067,7 +2067,7 @@
         ]
       },
       {
-        "id": "DocumentReference:obf-DocumentReference.authenticator",
+        "id": "DocumentReference.authenticator",
         "path": "DocumentReference.authenticator",
         "type": [
           {
@@ -2081,7 +2081,7 @@
         ]
       },
       {
-        "id": "DocumentReference:obf-DocumentReference.custodian",
+        "id": "DocumentReference.custodian",
         "path": "DocumentReference.custodian",
         "type": [
           {
@@ -2091,11 +2091,11 @@
         ]
       },
       {
-        "id": "DocumentReference:obf-DocumentReference.relatesTo",
+        "id": "DocumentReference.relatesTo",
         "path": "DocumentReference.relatesTo"
       },
       {
-        "id": "DocumentReference:obf-DocumentReference.relatesTo.target",
+        "id": "DocumentReference.relatesTo.target",
         "path": "DocumentReference.relatesTo.target",
         "type": [
           {
@@ -2105,7 +2105,7 @@
         ]
       },
       {
-        "id": "DocumentReference:obf-DocumentReference.content",
+        "id": "DocumentReference.content",
         "path": "DocumentReference.content",
         "min": 1,
         "max": "1",
@@ -2116,7 +2116,7 @@
         }
       },
       {
-        "id": "DocumentReference:obf-DocumentReference.content.format",
+        "id": "DocumentReference.content.format",
         "path": "DocumentReference.content.format",
         "binding": {
           "extension": [
@@ -2133,11 +2133,11 @@
         }
       },
       {
-        "id": "DocumentReference:obf-DocumentReference.context",
+        "id": "DocumentReference.context",
         "path": "DocumentReference.context"
       },
       {
-        "id": "DocumentReference:obf-DocumentReference.context.encounter",
+        "id": "DocumentReference.context.encounter",
         "path": "DocumentReference.context.encounter",
         "type": [
           {
@@ -2147,7 +2147,7 @@
         ]
       },
       {
-        "id": "DocumentReference:obf-DocumentReference.context.event",
+        "id": "DocumentReference.context.event",
         "path": "DocumentReference.context.event",
         "binding": {
           "strength": "example",
@@ -2157,7 +2157,7 @@
         }
       },
       {
-        "id": "DocumentReference:obf-DocumentReference.context.practiceSetting",
+        "id": "DocumentReference.context.practiceSetting",
         "path": "DocumentReference.context.practiceSetting",
         "binding": {
           "strength": "required",
@@ -2167,7 +2167,7 @@
         }
       },
       {
-        "id": "DocumentReference:obf-DocumentReference.context.sourcePatientInfo",
+        "id": "DocumentReference.context.sourcePatientInfo",
         "path": "DocumentReference.context.sourcePatientInfo",
         "type": [
           {
@@ -2177,11 +2177,11 @@
         ]
       },
       {
-        "id": "DocumentReference:obf-DocumentReference.context.related",
+        "id": "DocumentReference.context.related",
         "path": "DocumentReference.context.related"
       },
       {
-        "id": "DocumentReference:obf-DocumentReference.context.related.ref",
+        "id": "DocumentReference.context.related.ref",
         "path": "DocumentReference.context.related.ref",
         "type": [
           {

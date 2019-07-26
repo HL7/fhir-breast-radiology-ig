@@ -9,7 +9,7 @@
   "name": "Exception",
   "title": "obf-Exception",
   "status": "draft",
-  "date": "2019-07-24",
+  "date": "2019-07-26",
   "publisher": "Hl7",
   "contact": [
     {
@@ -35,7 +35,7 @@
   "snapshot": {
     "element": [
       {
-        "id": "Extension:exception",
+        "id": "Extension",
         "path": "Extension",
         "short": "Exception",
         "definition": "A suite of codes indicating exceptions or reductions to patient costs and their effective periods.",
@@ -78,7 +78,7 @@
         ]
       },
       {
-        "id": "Extension:exception.id",
+        "id": "Extension.id",
         "path": "Extension.id",
         "representation": [
           "xmlAttr"
@@ -105,7 +105,7 @@
         ]
       },
       {
-        "id": "Extension:exception.extension",
+        "id": "Extension.extension",
         "path": "Extension.extension",
         "slicing": {
           "discriminator": [
@@ -144,7 +144,7 @@
         ]
       },
       {
-        "id": "Extension:exception.extension:type",
+        "id": "Extension.extension:type",
         "path": "Extension.extension",
         "definition": "A code describing the item at a greater level of detail.",
         "min": 1,
@@ -169,7 +169,7 @@
         "sliceName": "type"
       },
       {
-        "id": "Extension:exception.extension:type.id",
+        "id": "Extension.extension:type.id",
         "path": "Extension.extension.id",
         "representation": [
           "xmlAttr"
@@ -196,7 +196,7 @@
         ]
       },
       {
-        "id": "Extension:exception.extension:type.extension",
+        "id": "Extension.extension:type.extension",
         "path": "Extension.extension.extension",
         "slicing": {
           "discriminator": [
@@ -235,7 +235,7 @@
         ]
       },
       {
-        "id": "Extension:exception.extension:type.url",
+        "id": "Extension.extension:type.url",
         "path": "Extension.extension.url",
         "representation": [
           "xmlAttr"
@@ -264,7 +264,7 @@
         "fixedUri": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-Type-extension"
       },
       {
-        "id": "Extension:exception.extension:type.valueCodeableConcept",
+        "id": "Extension.extension:type.valueCodeableConcept",
         "path": "Extension.extension.valueCodeableConcept",
         "short": "Value of extension",
         "definition": "Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).",
@@ -294,7 +294,7 @@
         }
       },
       {
-        "id": "Extension:exception.extension:effectivetimeperiod",
+        "id": "Extension.extension:effectivetimeperiod",
         "path": "Extension.extension",
         "definition": "The date and time span for which something is active, valid, or in force.",
         "min": 0,
@@ -319,7 +319,7 @@
         "sliceName": "effectivetimeperiod"
       },
       {
-        "id": "Extension:exception.url",
+        "id": "Extension.url",
         "path": "Extension.url",
         "representation": [
           "xmlAttr"
@@ -348,7 +348,7 @@
         "fixedUri": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Exception-extension"
       },
       {
-        "id": "Extension:exception.value[x]",
+        "id": "Extension.value[x]",
         "path": "Extension.value[x]",
         "short": "Value of extension",
         "definition": "Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).",
@@ -487,7 +487,7 @@
   "differential": {
     "element": [
       {
-        "id": "Extension:exception",
+        "id": "Extension",
         "path": "Extension",
         "short": "Exception",
         "definition": "A suite of codes indicating exceptions or reductions to patient costs and their effective periods.",
@@ -495,13 +495,13 @@
         "max": "*"
       },
       {
-        "id": "Extension:exception.extension",
+        "id": "Extension.extension",
         "path": "Extension.extension",
         "min": 1,
         "max": "*"
       },
       {
-        "id": "Extension:exception.extension:type",
+        "id": "Extension.extension:type",
         "path": "Extension.extension",
         "definition": "A code describing the item at a greater level of detail.",
         "min": 1,
@@ -526,7 +526,7 @@
         "sliceName": "type"
       },
       {
-        "id": "Extension:exception.extension:type.valueCodeableConcept",
+        "id": "Extension.extension:type.valueCodeableConcept",
         "path": "Extension.extension.valueCodeableConcept",
         "binding": {
           "strength": "example",
@@ -536,7 +536,7 @@
         }
       },
       {
-        "id": "Extension:exception.extension:effectivetimeperiod",
+        "id": "Extension.extension:effectivetimeperiod",
         "path": "Extension.extension",
         "definition": "The date and time span for which something is active, valid, or in force.",
         "min": 0,
@@ -561,12 +561,12 @@
         "sliceName": "effectivetimeperiod"
       },
       {
-        "id": "Extension:exception.url",
+        "id": "Extension.url",
         "path": "Extension.url",
         "fixedUri": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Exception-extension"
       },
       {
-        "id": "Extension:exception.value[x]",
+        "id": "Extension.value[x]",
         "path": "Extension.value[x]",
         "min": 0,
         "max": "0"

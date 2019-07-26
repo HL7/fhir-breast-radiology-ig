@@ -9,7 +9,7 @@
   "name": "ObservationPartOf",
   "title": "obf-ObservationPartOf",
   "status": "draft",
-  "date": "2019-07-24",
+  "date": "2019-07-26",
   "publisher": "Hl7",
   "contact": [
     {
@@ -35,7 +35,7 @@
   "snapshot": {
     "element": [
       {
-        "id": "Extension:observationpartof",
+        "id": "Extension",
         "path": "Extension",
         "short": "ObservationPartOf",
         "definition": "A larger event of which this particular Observation is a component or step. For example, an observation as part of a procedure.",
@@ -78,7 +78,7 @@
         ]
       },
       {
-        "id": "Extension:observationpartof.id",
+        "id": "Extension.id",
         "path": "Extension.id",
         "representation": [
           "xmlAttr"
@@ -105,7 +105,7 @@
         ]
       },
       {
-        "id": "Extension:observationpartof.extension",
+        "id": "Extension.extension",
         "path": "Extension.extension",
         "slicing": {
           "discriminator": [
@@ -144,7 +144,7 @@
         ]
       },
       {
-        "id": "Extension:observationpartof.url",
+        "id": "Extension.url",
         "path": "Extension.url",
         "representation": [
           "xmlAttr"
@@ -173,7 +173,7 @@
         "fixedUri": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-ObservationPartOf-extension"
       },
       {
-        "id": "Extension:observationpartof.value[x]",
+        "id": "Extension.value[x]",
         "path": "Extension.value[x]",
         "short": "Value of extension",
         "definition": "Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).",
@@ -221,7 +221,7 @@
         }
       },
       {
-        "id": "Extension:observationpartof.valueReference:obf-Procedure",
+        "id": "Extension.valueReference:obf-Procedure",
         "path": "Extension.valueReference",
         "sliceName": "obf-Procedure",
         "short": "Value of extension",
@@ -242,7 +242,7 @@
         ]
       },
       {
-        "id": "Extension:observationpartof.valueReference:obf-MedicationStatement",
+        "id": "Extension.valueReference:obf-MedicationStatement",
         "path": "Extension.valueReference",
         "sliceName": "obf-MedicationStatement",
         "short": "Value of extension",
@@ -263,7 +263,7 @@
         ]
       },
       {
-        "id": "Extension:observationpartof.valueReference:obf-MedicationDispense",
+        "id": "Extension.valueReference:obf-MedicationDispense",
         "path": "Extension.valueReference",
         "sliceName": "obf-MedicationDispense",
         "short": "Value of extension",
@@ -284,7 +284,7 @@
         ]
       },
       {
-        "id": "Extension:observationpartof.valueReference:obf-MedicationAdministration",
+        "id": "Extension.valueReference:obf-MedicationAdministration",
         "path": "Extension.valueReference",
         "sliceName": "obf-MedicationAdministration",
         "short": "Value of extension",
@@ -309,7 +309,7 @@
   "differential": {
     "element": [
       {
-        "id": "Extension:observationpartof",
+        "id": "Extension",
         "path": "Extension",
         "short": "ObservationPartOf",
         "definition": "A larger event of which this particular Observation is a component or step. For example, an observation as part of a procedure.",
@@ -317,18 +317,18 @@
         "max": "*"
       },
       {
-        "id": "Extension:observationpartof.extension",
+        "id": "Extension.extension",
         "path": "Extension.extension",
         "min": 0,
         "max": "0"
       },
       {
-        "id": "Extension:observationpartof.url",
+        "id": "Extension.url",
         "path": "Extension.url",
         "fixedUri": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-ObservationPartOf-extension"
       },
       {
-        "id": "Extension:observationpartof.value[x]",
+        "id": "Extension.value[x]",
         "path": "Extension.value[x]",
         "min": 1,
         "type": [
@@ -362,7 +362,7 @@
         }
       },
       {
-        "id": "Extension:observationpartof.valueReference:obf-Procedure",
+        "id": "Extension.valueReference:obf-Procedure",
         "path": "Extension.valueReference",
         "base": {
           "path": "Extension.value[x]",
@@ -378,7 +378,7 @@
         ]
       },
       {
-        "id": "Extension:observationpartof.valueReference:obf-MedicationStatement",
+        "id": "Extension.valueReference:obf-MedicationStatement",
         "path": "Extension.valueReference",
         "base": {
           "path": "Extension.value[x]",
@@ -394,7 +394,7 @@
         ]
       },
       {
-        "id": "Extension:observationpartof.valueReference:obf-MedicationDispense",
+        "id": "Extension.valueReference:obf-MedicationDispense",
         "path": "Extension.valueReference",
         "base": {
           "path": "Extension.value[x]",
@@ -410,7 +410,7 @@
         ]
       },
       {
-        "id": "Extension:observationpartof.valueReference:obf-MedicationAdministration",
+        "id": "Extension.valueReference:obf-MedicationAdministration",
         "path": "Extension.valueReference",
         "base": {
           "path": "Extension.value[x]",

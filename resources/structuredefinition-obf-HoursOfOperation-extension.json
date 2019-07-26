@@ -9,7 +9,7 @@
   "name": "HoursOfOperation",
   "title": "obf-HoursOfOperation",
   "status": "draft",
-  "date": "2019-07-24",
+  "date": "2019-07-26",
   "publisher": "Hl7",
   "contact": [
     {
@@ -35,7 +35,7 @@
   "snapshot": {
     "element": [
       {
-        "id": "Extension:hoursofoperation",
+        "id": "Extension",
         "path": "Extension",
         "short": "HoursOfOperation",
         "definition": "What days/times during a week is this location usually open.",
@@ -78,7 +78,7 @@
         ]
       },
       {
-        "id": "Extension:hoursofoperation.id",
+        "id": "Extension.id",
         "path": "Extension.id",
         "representation": [
           "xmlAttr"
@@ -105,7 +105,7 @@
         ]
       },
       {
-        "id": "Extension:hoursofoperation.extension",
+        "id": "Extension.extension",
         "path": "Extension.extension",
         "slicing": {
           "discriminator": [
@@ -144,7 +144,7 @@
         ]
       },
       {
-        "id": "Extension:hoursofoperation.extension:dayofweek",
+        "id": "Extension.extension:dayofweek",
         "path": "Extension.extension",
         "definition": "If one or more days of week is provided, then the action happens only on the specified day(s).",
         "min": 0,
@@ -169,7 +169,7 @@
         "sliceName": "dayofweek"
       },
       {
-        "id": "Extension:hoursofoperation.extension:allday",
+        "id": "Extension.extension:allday",
         "path": "Extension.extension",
         "definition": "The Location is open all day.",
         "min": 0,
@@ -194,7 +194,7 @@
         "sliceName": "allday"
       },
       {
-        "id": "Extension:hoursofoperation.extension:openingtime",
+        "id": "Extension.extension:openingtime",
         "path": "Extension.extension",
         "definition": "Time that the Location opens.",
         "min": 0,
@@ -219,7 +219,7 @@
         "sliceName": "openingtime"
       },
       {
-        "id": "Extension:hoursofoperation.extension:closingtime",
+        "id": "Extension.extension:closingtime",
         "path": "Extension.extension",
         "definition": "Time that the Location closes.",
         "min": 0,
@@ -244,7 +244,7 @@
         "sliceName": "closingtime"
       },
       {
-        "id": "Extension:hoursofoperation.url",
+        "id": "Extension.url",
         "path": "Extension.url",
         "representation": [
           "xmlAttr"
@@ -273,7 +273,7 @@
         "fixedUri": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-HoursOfOperation-extension"
       },
       {
-        "id": "Extension:hoursofoperation.value[x]",
+        "id": "Extension.value[x]",
         "path": "Extension.value[x]",
         "short": "Value of extension",
         "definition": "Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).",
@@ -412,7 +412,7 @@
   "differential": {
     "element": [
       {
-        "id": "Extension:hoursofoperation",
+        "id": "Extension",
         "path": "Extension",
         "short": "HoursOfOperation",
         "definition": "What days/times during a week is this location usually open.",
@@ -420,7 +420,7 @@
         "max": "*"
       },
       {
-        "id": "Extension:hoursofoperation.extension:dayofweek",
+        "id": "Extension.extension:dayofweek",
         "path": "Extension.extension",
         "definition": "If one or more days of week is provided, then the action happens only on the specified day(s).",
         "min": 0,
@@ -445,7 +445,7 @@
         "sliceName": "dayofweek"
       },
       {
-        "id": "Extension:hoursofoperation.extension:allday",
+        "id": "Extension.extension:allday",
         "path": "Extension.extension",
         "definition": "The Location is open all day.",
         "min": 0,
@@ -470,7 +470,7 @@
         "sliceName": "allday"
       },
       {
-        "id": "Extension:hoursofoperation.extension:openingtime",
+        "id": "Extension.extension:openingtime",
         "path": "Extension.extension",
         "definition": "Time that the Location opens.",
         "min": 0,
@@ -495,7 +495,7 @@
         "sliceName": "openingtime"
       },
       {
-        "id": "Extension:hoursofoperation.extension:closingtime",
+        "id": "Extension.extension:closingtime",
         "path": "Extension.extension",
         "definition": "Time that the Location closes.",
         "min": 0,
@@ -520,12 +520,12 @@
         "sliceName": "closingtime"
       },
       {
-        "id": "Extension:hoursofoperation.url",
+        "id": "Extension.url",
         "path": "Extension.url",
         "fixedUri": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-HoursOfOperation-extension"
       },
       {
-        "id": "Extension:hoursofoperation.value[x]",
+        "id": "Extension.value[x]",
         "path": "Extension.value[x]",
         "min": 0,
         "max": "0"

@@ -9,7 +9,7 @@
   "name": "ServiceBasedOn",
   "title": "obf-ServiceBasedOn",
   "status": "draft",
-  "date": "2019-07-24",
+  "date": "2019-07-26",
   "publisher": "Hl7",
   "contact": [
     {
@@ -35,7 +35,7 @@
   "snapshot": {
     "element": [
       {
-        "id": "Extension:servicebasedon",
+        "id": "Extension",
         "path": "Extension",
         "short": "ServiceBasedOn",
         "definition": "The original or initiating plan, proposal, or request.",
@@ -78,7 +78,7 @@
         ]
       },
       {
-        "id": "Extension:servicebasedon.id",
+        "id": "Extension.id",
         "path": "Extension.id",
         "representation": [
           "xmlAttr"
@@ -105,7 +105,7 @@
         ]
       },
       {
-        "id": "Extension:servicebasedon.extension",
+        "id": "Extension.extension",
         "path": "Extension.extension",
         "slicing": {
           "discriminator": [
@@ -144,7 +144,7 @@
         ]
       },
       {
-        "id": "Extension:servicebasedon.url",
+        "id": "Extension.url",
         "path": "Extension.url",
         "representation": [
           "xmlAttr"
@@ -173,7 +173,7 @@
         "fixedUri": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-ServiceBasedOn-extension"
       },
       {
-        "id": "Extension:servicebasedon.value[x]",
+        "id": "Extension.value[x]",
         "path": "Extension.value[x]",
         "short": "Value of extension",
         "definition": "Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).",
@@ -213,7 +213,7 @@
         }
       },
       {
-        "id": "Extension:servicebasedon.valueReference:obf-ProcedureRequest",
+        "id": "Extension.valueReference:obf-ProcedureRequest",
         "path": "Extension.valueReference",
         "sliceName": "obf-ProcedureRequest",
         "short": "Value of extension",
@@ -234,7 +234,7 @@
         ]
       },
       {
-        "id": "Extension:servicebasedon.valueReference:obf-ReferralRequest",
+        "id": "Extension.valueReference:obf-ReferralRequest",
         "path": "Extension.valueReference",
         "sliceName": "obf-ReferralRequest",
         "short": "Value of extension",
@@ -259,7 +259,7 @@
   "differential": {
     "element": [
       {
-        "id": "Extension:servicebasedon",
+        "id": "Extension",
         "path": "Extension",
         "short": "ServiceBasedOn",
         "definition": "The original or initiating plan, proposal, or request.",
@@ -267,18 +267,18 @@
         "max": "*"
       },
       {
-        "id": "Extension:servicebasedon.extension",
+        "id": "Extension.extension",
         "path": "Extension.extension",
         "min": 0,
         "max": "0"
       },
       {
-        "id": "Extension:servicebasedon.url",
+        "id": "Extension.url",
         "path": "Extension.url",
         "fixedUri": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-ServiceBasedOn-extension"
       },
       {
-        "id": "Extension:servicebasedon.value[x]",
+        "id": "Extension.value[x]",
         "path": "Extension.value[x]",
         "min": 1,
         "type": [
@@ -304,7 +304,7 @@
         }
       },
       {
-        "id": "Extension:servicebasedon.valueReference:obf-ProcedureRequest",
+        "id": "Extension.valueReference:obf-ProcedureRequest",
         "path": "Extension.valueReference",
         "base": {
           "path": "Extension.value[x]",
@@ -320,7 +320,7 @@
         ]
       },
       {
-        "id": "Extension:servicebasedon.valueReference:obf-ReferralRequest",
+        "id": "Extension.valueReference:obf-ReferralRequest",
         "path": "Extension.valueReference",
         "base": {
           "path": "Extension.value[x]",

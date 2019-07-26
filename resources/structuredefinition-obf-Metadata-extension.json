@@ -9,7 +9,7 @@
   "name": "Metadata",
   "title": "obf-Metadata",
   "status": "draft",
-  "date": "2019-07-24",
+  "date": "2019-07-26",
   "publisher": "Hl7",
   "contact": [
     {
@@ -35,7 +35,7 @@
   "snapshot": {
     "element": [
       {
-        "id": "Extension:metadata",
+        "id": "Extension",
         "path": "Extension",
         "short": "Metadata",
         "definition": "Elements that belong to all information items.",
@@ -78,7 +78,7 @@
         ]
       },
       {
-        "id": "Extension:metadata.id",
+        "id": "Extension.id",
         "path": "Extension.id",
         "representation": [
           "xmlAttr"
@@ -105,7 +105,7 @@
         ]
       },
       {
-        "id": "Extension:metadata.extension",
+        "id": "Extension.extension",
         "path": "Extension.extension",
         "slicing": {
           "discriminator": [
@@ -144,7 +144,7 @@
         ]
       },
       {
-        "id": "Extension:metadata.extension:versionid",
+        "id": "Extension.extension:versionid",
         "path": "Extension.extension",
         "definition": "An identifier associated with the product that denotes a particular release iteration.",
         "min": 0,
@@ -169,7 +169,7 @@
         "sliceName": "versionid"
       },
       {
-        "id": "Extension:metadata.extension:lastupdated",
+        "id": "Extension.extension:lastupdated",
         "path": "Extension.extension",
         "definition": "The most recent date the information item was changed.",
         "min": 0,
@@ -194,7 +194,7 @@
         "sliceName": "lastupdated"
       },
       {
-        "id": "Extension:metadata.extension:profile",
+        "id": "Extension.extension:profile",
         "path": "Extension.extension",
         "definition": "The name of the FHIR profile this resource claims to conform to.",
         "min": 0,
@@ -219,7 +219,7 @@
         "sliceName": "profile"
       },
       {
-        "id": "Extension:metadata.extension:sourcesystem",
+        "id": "Extension.extension:sourcesystem",
         "path": "Extension.extension",
         "definition": "FHIR: This provides a minimal amount of Provenance information that can be used to track or differentiate the source of information in the resource. The source may identify another FHIR server, document, message, database, etc.\nFHIM: Identifies the computer system that created the medical record. This optional field may also be used to indicate that the medical record was originally created by a different organization from the one that is currently storing or utilizing the record in that the assigning authority of the Id could be set to that originating organization. This property is optional, as some systems will assume that all records that it contains originated in that system, however it is anticipated that it will become increasingly commonplace for records from multiple systems and organizations will be comingled in order to provide a complete picture of the patient's health record.",
         "min": 0,
@@ -244,7 +244,7 @@
         "sliceName": "sourcesystem"
       },
       {
-        "id": "Extension:metadata.extension:securitylabel",
+        "id": "Extension.extension:securitylabel",
         "path": "Extension.extension",
         "definition": "A code that connects the entry to a security policy. Security labels can be updated when the resource changes, or whenever the security sub-system chooses to.",
         "min": 0,
@@ -269,7 +269,7 @@
         "sliceName": "securitylabel"
       },
       {
-        "id": "Extension:metadata.extension:tag",
+        "id": "Extension.extension:tag",
         "path": "Extension.extension",
         "definition": "A code used to relate entries to categories or workflows. Applications are not required to consider the tags when interpreting the meaning of an entry.",
         "min": 0,
@@ -294,7 +294,7 @@
         "sliceName": "tag"
       },
       {
-        "id": "Extension:metadata.url",
+        "id": "Extension.url",
         "path": "Extension.url",
         "representation": [
           "xmlAttr"
@@ -323,7 +323,7 @@
         "fixedUri": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Metadata-extension"
       },
       {
-        "id": "Extension:metadata.value[x]",
+        "id": "Extension.value[x]",
         "path": "Extension.value[x]",
         "short": "Value of extension",
         "definition": "Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).",
@@ -462,7 +462,7 @@
   "differential": {
     "element": [
       {
-        "id": "Extension:metadata",
+        "id": "Extension",
         "path": "Extension",
         "short": "Metadata",
         "definition": "Elements that belong to all information items.",
@@ -470,7 +470,7 @@
         "max": "*"
       },
       {
-        "id": "Extension:metadata.extension:versionid",
+        "id": "Extension.extension:versionid",
         "path": "Extension.extension",
         "definition": "An identifier associated with the product that denotes a particular release iteration.",
         "min": 0,
@@ -495,7 +495,7 @@
         "sliceName": "versionid"
       },
       {
-        "id": "Extension:metadata.extension:lastupdated",
+        "id": "Extension.extension:lastupdated",
         "path": "Extension.extension",
         "definition": "The most recent date the information item was changed.",
         "min": 0,
@@ -520,7 +520,7 @@
         "sliceName": "lastupdated"
       },
       {
-        "id": "Extension:metadata.extension:profile",
+        "id": "Extension.extension:profile",
         "path": "Extension.extension",
         "definition": "The name of the FHIR profile this resource claims to conform to.",
         "min": 0,
@@ -545,7 +545,7 @@
         "sliceName": "profile"
       },
       {
-        "id": "Extension:metadata.extension:sourcesystem",
+        "id": "Extension.extension:sourcesystem",
         "path": "Extension.extension",
         "definition": "FHIR: This provides a minimal amount of Provenance information that can be used to track or differentiate the source of information in the resource. The source may identify another FHIR server, document, message, database, etc.\nFHIM: Identifies the computer system that created the medical record. This optional field may also be used to indicate that the medical record was originally created by a different organization from the one that is currently storing or utilizing the record in that the assigning authority of the Id could be set to that originating organization. This property is optional, as some systems will assume that all records that it contains originated in that system, however it is anticipated that it will become increasingly commonplace for records from multiple systems and organizations will be comingled in order to provide a complete picture of the patient's health record.",
         "min": 0,
@@ -570,7 +570,7 @@
         "sliceName": "sourcesystem"
       },
       {
-        "id": "Extension:metadata.extension:securitylabel",
+        "id": "Extension.extension:securitylabel",
         "path": "Extension.extension",
         "definition": "A code that connects the entry to a security policy. Security labels can be updated when the resource changes, or whenever the security sub-system chooses to.",
         "min": 0,
@@ -595,7 +595,7 @@
         "sliceName": "securitylabel"
       },
       {
-        "id": "Extension:metadata.extension:tag",
+        "id": "Extension.extension:tag",
         "path": "Extension.extension",
         "definition": "A code used to relate entries to categories or workflows. Applications are not required to consider the tags when interpreting the meaning of an entry.",
         "min": 0,
@@ -620,12 +620,12 @@
         "sliceName": "tag"
       },
       {
-        "id": "Extension:metadata.url",
+        "id": "Extension.url",
         "path": "Extension.url",
         "fixedUri": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Metadata-extension"
       },
       {
-        "id": "Extension:metadata.value[x]",
+        "id": "Extension.value[x]",
         "path": "Extension.value[x]",
         "min": 0,
         "max": "0"

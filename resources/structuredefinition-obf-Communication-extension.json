@@ -9,7 +9,7 @@
   "name": "Communication",
   "title": "obf-Communication",
   "status": "draft",
-  "date": "2019-07-24",
+  "date": "2019-07-26",
   "publisher": "Hl7",
   "contact": [
     {
@@ -35,7 +35,7 @@
   "snapshot": {
     "element": [
       {
-        "id": "Extension:communication",
+        "id": "Extension",
         "path": "Extension",
         "short": "Communication",
         "definition": "Language used for communication by a human, either the subject of record, parent, or other involved person.",
@@ -78,7 +78,7 @@
         ]
       },
       {
-        "id": "Extension:communication.id",
+        "id": "Extension.id",
         "path": "Extension.id",
         "representation": [
           "xmlAttr"
@@ -105,7 +105,7 @@
         ]
       },
       {
-        "id": "Extension:communication.extension",
+        "id": "Extension.extension",
         "path": "Extension.extension",
         "slicing": {
           "discriminator": [
@@ -144,7 +144,7 @@
         ]
       },
       {
-        "id": "Extension:communication.extension:language",
+        "id": "Extension.extension:language",
         "path": "Extension.extension",
         "definition": "A human language, spoken or written.",
         "min": 1,
@@ -169,7 +169,7 @@
         "sliceName": "language"
       },
       {
-        "id": "Extension:communication.extension:preferred",
+        "id": "Extension.extension:preferred",
         "path": "Extension.extension",
         "definition": "Indicates preference.",
         "min": 0,
@@ -194,7 +194,7 @@
         "sliceName": "preferred"
       },
       {
-        "id": "Extension:communication.url",
+        "id": "Extension.url",
         "path": "Extension.url",
         "representation": [
           "xmlAttr"
@@ -223,7 +223,7 @@
         "fixedUri": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Communication-extension"
       },
       {
-        "id": "Extension:communication.value[x]",
+        "id": "Extension.value[x]",
         "path": "Extension.value[x]",
         "short": "Value of extension",
         "definition": "Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).",
@@ -362,7 +362,7 @@
   "differential": {
     "element": [
       {
-        "id": "Extension:communication",
+        "id": "Extension",
         "path": "Extension",
         "short": "Communication",
         "definition": "Language used for communication by a human, either the subject of record, parent, or other involved person.",
@@ -370,13 +370,13 @@
         "max": "*"
       },
       {
-        "id": "Extension:communication.extension",
+        "id": "Extension.extension",
         "path": "Extension.extension",
         "min": 1,
         "max": "*"
       },
       {
-        "id": "Extension:communication.extension:language",
+        "id": "Extension.extension:language",
         "path": "Extension.extension",
         "definition": "A human language, spoken or written.",
         "min": 1,
@@ -401,7 +401,7 @@
         "sliceName": "language"
       },
       {
-        "id": "Extension:communication.extension:preferred",
+        "id": "Extension.extension:preferred",
         "path": "Extension.extension",
         "definition": "Indicates preference.",
         "min": 0,
@@ -426,12 +426,12 @@
         "sliceName": "preferred"
       },
       {
-        "id": "Extension:communication.url",
+        "id": "Extension.url",
         "path": "Extension.url",
         "fixedUri": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Communication-extension"
       },
       {
-        "id": "Extension:communication.value[x]",
+        "id": "Extension.value[x]",
         "path": "Extension.value[x]",
         "min": 0,
         "max": "0"

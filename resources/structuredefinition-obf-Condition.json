@@ -8,7 +8,7 @@
   "url": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Condition",
   "name": "Condition",
   "status": "draft",
-  "date": "2019-07-24",
+  "date": "2019-07-26",
   "publisher": "Hl7",
   "contact": [
     {
@@ -72,7 +72,7 @@
   "snapshot": {
     "element": [
       {
-        "id": "Condition:obf-Condition",
+        "id": "Condition",
         "path": "Condition",
         "short": "obf-Condition",
         "definition": "A condition that is or may be present in a subject. 'Condition' is interpreted broadly and could be a disorder, abnormality, problem, injury, complaint, functionality, illness, disease, ailment, sickness, affliction, upset, difficulty, disorder, symptom, worry, or trouble.\nThe Observation-based class, ConditionAbsent, should be used to describe conditions that are not present or negative findings.\nSHR Condition uses the SHR BodyLocation structure that includes not only a code, but optional laterality, direction, clock direction, and distance. If included, the distance is measured from the location specified by the code, laterality, and direction.",
@@ -175,7 +175,7 @@
         ]
       },
       {
-        "id": "Condition:obf-Condition.id",
+        "id": "Condition.id",
         "path": "Condition.id",
         "short": "Logical id of this artifact",
         "definition": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.",
@@ -195,7 +195,7 @@
         "isSummary": true
       },
       {
-        "id": "Condition:obf-Condition.meta",
+        "id": "Condition.meta",
         "path": "Condition.meta",
         "short": "Metadata about the resource",
         "definition": "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource.",
@@ -214,7 +214,7 @@
         "isSummary": true
       },
       {
-        "id": "Condition:obf-Condition.meta.id",
+        "id": "Condition.meta.id",
         "path": "Condition.meta.id",
         "representation": [
           "xmlAttr"
@@ -241,7 +241,7 @@
         ]
       },
       {
-        "id": "Condition:obf-Condition.meta.extension",
+        "id": "Condition.meta.extension",
         "path": "Condition.meta.extension",
         "slicing": {
           "discriminator": [
@@ -280,7 +280,7 @@
         ]
       },
       {
-        "id": "Condition:obf-Condition.meta.extension:sourcesystem",
+        "id": "Condition.meta.extension:sourcesystem",
         "path": "Condition.meta.extension",
         "definition": "FHIR: This provides a minimal amount of Provenance information that can be used to track or differentiate the source of information in the resource. The source may identify another FHIR server, document, message, database, etc.\nFHIM: Identifies the computer system that created the medical record. This optional field may also be used to indicate that the medical record was originally created by a different organization from the one that is currently storing or utilizing the record in that the assigning authority of the Id could be set to that originating organization. This property is optional, as some systems will assume that all records that it contains originated in that system, however it is anticipated that it will become increasingly commonplace for records from multiple systems and organizations will be comingled in order to provide a complete picture of the patient's health record.",
         "min": 0,
@@ -299,7 +299,7 @@
         "sliceName": "sourcesystem"
       },
       {
-        "id": "Condition:obf-Condition.meta.versionId",
+        "id": "Condition.meta.versionId",
         "path": "Condition.meta.versionId",
         "short": "Version specific identifier",
         "definition": "The version specific identifier, as it appears in the version portion of the URL. This values changes when the resource is created, updated, or deleted.",
@@ -314,7 +314,7 @@
         "isSummary": true
       },
       {
-        "id": "Condition:obf-Condition.meta.lastUpdated",
+        "id": "Condition.meta.lastUpdated",
         "path": "Condition.meta.lastUpdated",
         "short": "When the resource version last changed",
         "definition": "When the resource last changed - e.g. when the version changed.",
@@ -329,7 +329,7 @@
         "isSummary": true
       },
       {
-        "id": "Condition:obf-Condition.meta.profile",
+        "id": "Condition.meta.profile",
         "path": "Condition.meta.profile",
         "short": "Profiles this resource claims to conform to",
         "definition": "A list of profiles (references to [StructureDefinition](structuredefinition.html#) resources) that this resource claims to conform to. The URL is a reference to [StructureDefinition.url]().",
@@ -344,7 +344,7 @@
         "isSummary": true
       },
       {
-        "id": "Condition:obf-Condition.meta.security",
+        "id": "Condition.meta.security",
         "path": "Condition.meta.security",
         "short": "Security Labels applied to this resource",
         "definition": "Security labels applied to this resource. These tags connect specific resources to the overall security policy and infrastructure.",
@@ -376,7 +376,7 @@
         }
       },
       {
-        "id": "Condition:obf-Condition.meta.tag",
+        "id": "Condition.meta.tag",
         "path": "Condition.meta.tag",
         "short": "Tags applied to this resource",
         "definition": "Tags applied to this resource. Tags are intended to be used to identify and relate resources to process and workflow, and applications are not required to consider the tags when interpreting the meaning of a resource.",
@@ -404,7 +404,7 @@
         }
       },
       {
-        "id": "Condition:obf-Condition.implicitRules",
+        "id": "Condition.implicitRules",
         "path": "Condition.implicitRules",
         "short": "A set of rules under which this content was created",
         "definition": "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content.",
@@ -425,7 +425,7 @@
         "isSummary": true
       },
       {
-        "id": "Condition:obf-Condition.language",
+        "id": "Condition.language",
         "path": "Condition.language",
         "short": "Language of the resource content",
         "definition": "The base language in which the resource is written.",
@@ -467,7 +467,7 @@
         }
       },
       {
-        "id": "Condition:obf-Condition.text",
+        "id": "Condition.text",
         "path": "Condition.text",
         "short": "Text summary of the resource, for human interpretation",
         "definition": "A human-readable narrative that contains a summary of the resource, and may be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.",
@@ -501,7 +501,7 @@
         ]
       },
       {
-        "id": "Condition:obf-Condition.contained",
+        "id": "Condition.contained",
         "path": "Condition.contained",
         "short": "Contained, inline Resources",
         "definition": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.",
@@ -531,7 +531,7 @@
         ]
       },
       {
-        "id": "Condition:obf-Condition.extension",
+        "id": "Condition.extension",
         "path": "Condition.extension",
         "short": "Additional Content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the resource. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
@@ -571,7 +571,7 @@
         }
       },
       {
-        "id": "Condition:obf-Condition.extension:author",
+        "id": "Condition.extension:author",
         "path": "Condition.extension",
         "definition": "The actor who created the item and it responsible for the content (regardless of the information source or who recorded it). If only the author is given, it is assumed the author is the information source and the recorder.",
         "min": 0,
@@ -590,7 +590,7 @@
         "sliceName": "author"
       },
       {
-        "id": "Condition:obf-Condition.extension:dateofdiagnosis",
+        "id": "Condition.extension:dateofdiagnosis",
         "path": "Condition.extension",
         "definition": "The date the disease was first clinically recognized with sufficient certainty, regardless of whether it was fully characterized at that time.",
         "min": 0,
@@ -609,7 +609,7 @@
         "sliceName": "dateofdiagnosis"
       },
       {
-        "id": "Condition:obf-Condition.modifierExtension",
+        "id": "Condition.modifierExtension",
         "path": "Condition.modifierExtension",
         "short": "Extensions that cannot be ignored",
         "definition": "May be used to represent additional information that is not part of the basic definition of the resource, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
@@ -639,7 +639,7 @@
         ]
       },
       {
-        "id": "Condition:obf-Condition.identifier",
+        "id": "Condition.identifier",
         "path": "Condition.identifier",
         "short": "External Ids for this condition",
         "definition": "This records identifiers associated with this condition that are defined by business processes and/or used to refer to it when a direct URL reference to the resource itself is not appropriate (e.g. in CDA documents, or in written / printed documentation).",
@@ -669,7 +669,7 @@
         ]
       },
       {
-        "id": "Condition:obf-Condition.clinicalStatus",
+        "id": "Condition.clinicalStatus",
         "path": "Condition.clinicalStatus",
         "short": "active | recurrence | inactive | remission | resolved",
         "definition": "The clinical status of the condition.",
@@ -723,7 +723,7 @@
         ]
       },
       {
-        "id": "Condition:obf-Condition.verificationStatus",
+        "id": "Condition.verificationStatus",
         "path": "Condition.verificationStatus",
         "short": "provisional | differential | confirmed | refuted | entered-in-error | unknown",
         "definition": "The verification status to support the clinical status of the condition.",
@@ -781,7 +781,7 @@
         ]
       },
       {
-        "id": "Condition:obf-Condition.category",
+        "id": "Condition.category",
         "path": "Condition.category",
         "short": "problem-list-item | encounter-diagnosis",
         "definition": "A category assigned to the condition.",
@@ -829,7 +829,7 @@
         ]
       },
       {
-        "id": "Condition:obf-Condition.severity",
+        "id": "Condition.severity",
         "path": "Condition.severity",
         "short": "Subjective severity of condition",
         "definition": "A subjective assessment of the severity of the condition as evaluated by the clinician.",
@@ -883,7 +883,7 @@
         ]
       },
       {
-        "id": "Condition:obf-Condition.code",
+        "id": "Condition.code",
         "path": "Condition.code",
         "short": "Identification of the condition, problem or diagnosis",
         "definition": "Identification of the condition, problem or diagnosis.",
@@ -940,7 +940,7 @@
         ]
       },
       {
-        "id": "Condition:obf-Condition.bodySite",
+        "id": "Condition.bodySite",
         "path": "Condition.bodySite",
         "short": "Anatomical location, if relevant",
         "definition": "The anatomical location where this condition manifests itself.",
@@ -980,7 +980,7 @@
         ]
       },
       {
-        "id": "Condition:obf-Condition.bodySite.id",
+        "id": "Condition.bodySite.id",
         "path": "Condition.bodySite.id",
         "representation": [
           "xmlAttr"
@@ -1007,7 +1007,7 @@
         ]
       },
       {
-        "id": "Condition:obf-Condition.bodySite.extension",
+        "id": "Condition.bodySite.extension",
         "path": "Condition.bodySite.extension",
         "slicing": {
           "discriminator": [
@@ -1046,7 +1046,7 @@
         ]
       },
       {
-        "id": "Condition:obf-Condition.bodySite.extension:laterality",
+        "id": "Condition.bodySite.extension:laterality",
         "path": "Condition.bodySite.extension",
         "definition": "Body side of the body location, if needed to distinguish from a similar location on the other side of the body.\n\nThe laterality element is part of BodyLocation, a flexible structure that allows the location to be determined by a single code, or a code plus laterality and/or orientation. The body location can also be specified in relation to one or more body landmarks. SNOMED CT is used in all cases.\n\n* Code only: The code should include (precoordinate) laterality and/orientation to the degree necessary to completely specify the body location.\n* Code plus laterality and/or orientation: The basic code augmented by codes specifying the body side and/or anatomical orientation.\n* Relation to landmark: The location relative to a landmark is specified by:\n1. Establishing the location and type of landmark using a body site code and optional laterality/orientation, and\n2. Specifying the direction and distance from the landmark to the body location.\n\nNote that BodyLocation is a data type (a reusable structure), not a stand-alone entity. The concept is similar to how a postal address can apply to a person, location, or organization. This contrasts with FHIR's stand-alone BodySite (aka BodyStructure in r4) which 'is not ... intended for describing the type of anatomical location but rather a specific body site on a specific patient' (FHIR 3.5).",
         "min": 0,
@@ -1065,7 +1065,7 @@
         "sliceName": "laterality"
       },
       {
-        "id": "Condition:obf-Condition.bodySite.extension:anatomicalorientation",
+        "id": "Condition.bodySite.extension:anatomicalorientation",
         "path": "Condition.bodySite.extension",
         "definition": "AnatomicalOrientation of the body location, if needed to distinguish from a similar location in another orientation.\nThe orientation element is part of BodyLocation, a flexible structure that allows the location to be determined by a single code, or a code plus laterality and/or orientation. The body location can also be specified in relation to one or more body landmarks. SNOMED CT is used in all cases.\n\n* Code only: The code should include (precoordinate) laterality and/orientation to the degree necessary to completely specify the body location.\n* Code plus laterality and/or orientation: The basic code augmented by codes specifying the body side and/or anatomical orientation.\n* Relation to landmark: The location relative to a landmark is specified by:\n1. Establishing the location and type of landmark using a body site code and optional laterality/orientation, and\n2. Specifying the direction and distance from the landmark to the body location.\n\nNote that BodyLocation is a data type (a reusable structure), not a stand-alone entity. The concept is similar to how a postal address can apply to a person, location, or organization. This contrasts with FHIR's stand-alone BodySite (aka BodyStructure in r4) which 'is not ... intended for describing the type of anatomical location but rather a specific body site on a specific patient' (FHIR 3.5).",
         "min": 0,
@@ -1084,7 +1084,7 @@
         "sliceName": "anatomicalorientation"
       },
       {
-        "id": "Condition:obf-Condition.bodySite.extension:relationtolandmark",
+        "id": "Condition.bodySite.extension:relationtolandmark",
         "path": "Condition.bodySite.extension",
         "definition": "The relationship between a landmark that helps determine a body location and the body location itself. The location relative to a landmark is specified by:\n* Specifying the location and type of landmark using a body site code and optional laterality/orientation,\n* Specifying the direction from the landmark to the body location, and\n* Specifying the distance from the landmark to the body location.\n\nThe RelationToLandmark element is part of BodyLocation, a flexible structure that allows the location to be determined by a single code, or a code plus laterality and/or orientation. The body location can also be specified in relation to one or more body landmarks. SNOMED CT is used in all cases.\n\n* Code only: The code should include (precoordinate) laterality and/orientation to the degree necessary to completely specify the body location.\n* Code plus laterality and/or orientation: The basic code augmented by codes specifying the body side and/or anatomical orientation.\n* Relation to landmark: The location relative to a landmark is specified by:\n1. Establishing the location and type of landmark using a body site code and optional laterality/orientation, and\n2. Specifying the direction and distance from the landmark to the body location.\n\nNote that BodyLocation is a data type (a reusable structure), not a stand-alone entity. The concept is similar to how a postal address can apply to a person, location, or organization. This contrasts with FHIR's stand-alone BodySite (aka BodyStructure in r4) which 'is not ... intended for describing the type of anatomical location but rather a specific body site on a specific patient' (FHIR 3.5).",
         "min": 0,
@@ -1103,7 +1103,7 @@
         "sliceName": "relationtolandmark"
       },
       {
-        "id": "Condition:obf-Condition.bodySite.coding",
+        "id": "Condition.bodySite.coding",
         "path": "Condition.bodySite.coding",
         "short": "Code defined by a terminology system",
         "definition": "A reference to a code defined by a terminology system.",
@@ -1133,7 +1133,7 @@
         ]
       },
       {
-        "id": "Condition:obf-Condition.bodySite.text",
+        "id": "Condition.bodySite.text",
         "extension": [
           {
             "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
@@ -1169,7 +1169,7 @@
         ]
       },
       {
-        "id": "Condition:obf-Condition.subject",
+        "id": "Condition.subject",
         "path": "Condition.subject",
         "short": "Who has the condition?",
         "definition": "Indicates the patient or group who the condition record is associated with.",
@@ -1212,7 +1212,7 @@
         ]
       },
       {
-        "id": "Condition:obf-Condition.context",
+        "id": "Condition.context",
         "path": "Condition.context",
         "short": "Encounter or episode when condition first asserted",
         "definition": "Encounter during which the condition was first asserted.",
@@ -1250,7 +1250,7 @@
         ]
       },
       {
-        "id": "Condition:obf-Condition.onset[x]",
+        "id": "Condition.onset[x]",
         "path": "Condition.onset[x]",
         "short": "Estimated or actual date,  date-time, or age",
         "definition": "Estimated or actual date or date-time  the condition began, in the opinion of the clinician.",
@@ -1297,7 +1297,7 @@
         ]
       },
       {
-        "id": "Condition:obf-Condition.abatement[x]",
+        "id": "Condition.abatement[x]",
         "path": "Condition.abatement[x]",
         "short": "If/when in resolution/remission",
         "definition": "The date or estimated date that the condition resolved or went into remission. This is called \"abatement\" because of the many overloaded connotations associated with \"remission\" or \"resolution\" - Conditions are never really resolved, but they can abate.",
@@ -1345,7 +1345,7 @@
         ]
       },
       {
-        "id": "Condition:obf-Condition.assertedDate",
+        "id": "Condition.assertedDate",
         "path": "Condition.assertedDate",
         "short": "Date record was believed accurate",
         "definition": "The date on which the existance of the Condition was first asserted or acknowledged.",
@@ -1379,7 +1379,7 @@
         ]
       },
       {
-        "id": "Condition:obf-Condition.asserter",
+        "id": "Condition.asserter",
         "path": "Condition.asserter",
         "short": "Person who asserts this condition",
         "definition": "Individual who is making the condition statement.",
@@ -1421,7 +1421,7 @@
         ]
       },
       {
-        "id": "Condition:obf-Condition.stage",
+        "id": "Condition.stage",
         "path": "Condition.stage",
         "short": "Stage/grade, usually assessed formally",
         "definition": "Clinical stage or grade of a condition. May include formal severity assessments.",
@@ -1462,7 +1462,7 @@
         ]
       },
       {
-        "id": "Condition:obf-Condition.stage.id",
+        "id": "Condition.stage.id",
         "path": "Condition.stage.id",
         "representation": [
           "xmlAttr"
@@ -1489,7 +1489,7 @@
         ]
       },
       {
-        "id": "Condition:obf-Condition.stage.extension",
+        "id": "Condition.stage.extension",
         "path": "Condition.stage.extension",
         "short": "Additional Content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
@@ -1529,7 +1529,7 @@
         }
       },
       {
-        "id": "Condition:obf-Condition.stage.extension:type",
+        "id": "Condition.stage.extension:type",
         "path": "Condition.stage.extension",
         "definition": "A code describing the item at a greater level of detail.",
         "min": 0,
@@ -1548,7 +1548,7 @@
         "sliceName": "type"
       },
       {
-        "id": "Condition:obf-Condition.stage.extension:type.id",
+        "id": "Condition.stage.extension:type.id",
         "path": "Condition.stage.extension.id",
         "representation": [
           "xmlAttr"
@@ -1575,7 +1575,7 @@
         ]
       },
       {
-        "id": "Condition:obf-Condition.stage.extension:type.extension",
+        "id": "Condition.stage.extension:type.extension",
         "path": "Condition.stage.extension.extension",
         "slicing": {
           "discriminator": [
@@ -1614,7 +1614,7 @@
         ]
       },
       {
-        "id": "Condition:obf-Condition.stage.extension:type.url",
+        "id": "Condition.stage.extension:type.url",
         "path": "Condition.stage.extension.url",
         "representation": [
           "xmlAttr"
@@ -1643,7 +1643,7 @@
         "fixedUri": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-Type-extension"
       },
       {
-        "id": "Condition:obf-Condition.stage.extension:type.valueCodeableConcept",
+        "id": "Condition.stage.extension:type.valueCodeableConcept",
         "path": "Condition.stage.extension.valueCodeableConcept",
         "short": "Value of extension",
         "definition": "Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).",
@@ -1673,7 +1673,7 @@
         }
       },
       {
-        "id": "Condition:obf-Condition.stage.modifierExtension",
+        "id": "Condition.stage.modifierExtension",
         "path": "Condition.stage.modifierExtension",
         "short": "Extensions that cannot be ignored",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
@@ -1705,7 +1705,7 @@
         ]
       },
       {
-        "id": "Condition:obf-Condition.stage.summary",
+        "id": "Condition.stage.summary",
         "path": "Condition.stage.summary",
         "short": "Simple summary (disease specific)",
         "definition": "A simple summary of the stage such as \"Stage 3\". The determination of the stage is disease-specific.",
@@ -1753,7 +1753,7 @@
         ]
       },
       {
-        "id": "Condition:obf-Condition.stage.assessment",
+        "id": "Condition.stage.assessment",
         "path": "Condition.stage.assessment",
         "short": "Formal record of assessment",
         "definition": "Reference to a formal record of the evidence on which the staging assessment is based.",
@@ -1785,7 +1785,7 @@
         ]
       },
       {
-        "id": "Condition:obf-Condition.evidence",
+        "id": "Condition.evidence",
         "path": "Condition.evidence",
         "short": "Supporting evidence",
         "definition": "Supporting Evidence / manifestations that are the basis on which this condition is suspected or confirmed.",
@@ -1827,7 +1827,7 @@
         ]
       },
       {
-        "id": "Condition:obf-Condition.evidence.id",
+        "id": "Condition.evidence.id",
         "path": "Condition.evidence.id",
         "representation": [
           "xmlAttr"
@@ -1854,7 +1854,7 @@
         ]
       },
       {
-        "id": "Condition:obf-Condition.evidence.extension",
+        "id": "Condition.evidence.extension",
         "path": "Condition.evidence.extension",
         "short": "Additional Content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
@@ -1883,7 +1883,7 @@
         ]
       },
       {
-        "id": "Condition:obf-Condition.evidence.modifierExtension",
+        "id": "Condition.evidence.modifierExtension",
         "path": "Condition.evidence.modifierExtension",
         "short": "Extensions that cannot be ignored",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
@@ -1915,7 +1915,7 @@
         ]
       },
       {
-        "id": "Condition:obf-Condition.evidence.code",
+        "id": "Condition.evidence.code",
         "path": "Condition.evidence.code",
         "short": "Manifestation/symptom",
         "definition": "A manifestation or symptom that led to the recording of this condition.",
@@ -1957,7 +1957,7 @@
         ]
       },
       {
-        "id": "Condition:obf-Condition.evidence.detail",
+        "id": "Condition.evidence.detail",
         "path": "Condition.evidence.detail",
         "short": "Supporting information found elsewhere",
         "definition": "Links to other relevant information, including pathology reports.",
@@ -1990,7 +1990,7 @@
         ]
       },
       {
-        "id": "Condition:obf-Condition.note",
+        "id": "Condition.note",
         "path": "Condition.note",
         "short": "Additional information about the Condition",
         "definition": "Additional information about the Condition. This is a general notes/comments entry  for description of the Condition, its diagnosis and prognosis.",
@@ -2023,18 +2023,18 @@
   "differential": {
     "element": [
       {
-        "id": "Condition:obf-Condition",
+        "id": "Condition",
         "path": "Condition",
         "short": "obf-Condition",
         "definition": "A condition that is or may be present in a subject. 'Condition' is interpreted broadly and could be a disorder, abnormality, problem, injury, complaint, functionality, illness, disease, ailment, sickness, affliction, upset, difficulty, disorder, symptom, worry, or trouble.\nThe Observation-based class, ConditionAbsent, should be used to describe conditions that are not present or negative findings.\nSHR Condition uses the SHR BodyLocation structure that includes not only a code, but optional laterality, direction, clock direction, and distance. If included, the distance is measured from the location specified by the code, laterality, and direction.",
         "mustSupport": false
       },
       {
-        "id": "Condition:obf-Condition.meta",
+        "id": "Condition.meta",
         "path": "Condition.meta"
       },
       {
-        "id": "Condition:obf-Condition.meta.extension:sourcesystem",
+        "id": "Condition.meta.extension:sourcesystem",
         "path": "Condition.meta.extension",
         "definition": "FHIR: This provides a minimal amount of Provenance information that can be used to track or differentiate the source of information in the resource. The source may identify another FHIR server, document, message, database, etc.\nFHIM: Identifies the computer system that created the medical record. This optional field may also be used to indicate that the medical record was originally created by a different organization from the one that is currently storing or utilizing the record in that the assigning authority of the Id could be set to that originating organization. This property is optional, as some systems will assume that all records that it contains originated in that system, however it is anticipated that it will become increasingly commonplace for records from multiple systems and organizations will be comingled in order to provide a complete picture of the patient's health record.",
         "min": 0,
@@ -2053,7 +2053,7 @@
         "sliceName": "sourcesystem"
       },
       {
-        "id": "Condition:obf-Condition.extension",
+        "id": "Condition.extension",
         "path": "Condition.extension",
         "slicing": {
           "id": "1",
@@ -2068,7 +2068,7 @@
         }
       },
       {
-        "id": "Condition:obf-Condition.extension:author",
+        "id": "Condition.extension:author",
         "path": "Condition.extension",
         "definition": "The actor who created the item and it responsible for the content (regardless of the information source or who recorded it). If only the author is given, it is assumed the author is the information source and the recorder.",
         "min": 0,
@@ -2087,7 +2087,7 @@
         "sliceName": "author"
       },
       {
-        "id": "Condition:obf-Condition.extension:dateofdiagnosis",
+        "id": "Condition.extension:dateofdiagnosis",
         "path": "Condition.extension",
         "definition": "The date the disease was first clinically recognized with sufficient certainty, regardless of whether it was fully characterized at that time.",
         "min": 0,
@@ -2106,13 +2106,13 @@
         "sliceName": "dateofdiagnosis"
       },
       {
-        "id": "Condition:obf-Condition.clinicalStatus",
+        "id": "Condition.clinicalStatus",
         "path": "Condition.clinicalStatus",
         "min": 1,
         "max": "1"
       },
       {
-        "id": "Condition:obf-Condition.category",
+        "id": "Condition.category",
         "path": "Condition.category",
         "min": 1,
         "max": "1",
@@ -2124,7 +2124,7 @@
         }
       },
       {
-        "id": "Condition:obf-Condition.bodySite",
+        "id": "Condition.bodySite",
         "path": "Condition.bodySite",
         "binding": {
           "strength": "preferred",
@@ -2134,7 +2134,7 @@
         }
       },
       {
-        "id": "Condition:obf-Condition.bodySite.extension:laterality",
+        "id": "Condition.bodySite.extension:laterality",
         "path": "Condition.bodySite.extension",
         "definition": "Body side of the body location, if needed to distinguish from a similar location on the other side of the body.\n\nThe laterality element is part of BodyLocation, a flexible structure that allows the location to be determined by a single code, or a code plus laterality and/or orientation. The body location can also be specified in relation to one or more body landmarks. SNOMED CT is used in all cases.\n\n* Code only: The code should include (precoordinate) laterality and/orientation to the degree necessary to completely specify the body location.\n* Code plus laterality and/or orientation: The basic code augmented by codes specifying the body side and/or anatomical orientation.\n* Relation to landmark: The location relative to a landmark is specified by:\n1. Establishing the location and type of landmark using a body site code and optional laterality/orientation, and\n2. Specifying the direction and distance from the landmark to the body location.\n\nNote that BodyLocation is a data type (a reusable structure), not a stand-alone entity. The concept is similar to how a postal address can apply to a person, location, or organization. This contrasts with FHIR's stand-alone BodySite (aka BodyStructure in r4) which 'is not ... intended for describing the type of anatomical location but rather a specific body site on a specific patient' (FHIR 3.5).",
         "min": 0,
@@ -2153,7 +2153,7 @@
         "sliceName": "laterality"
       },
       {
-        "id": "Condition:obf-Condition.bodySite.extension:anatomicalorientation",
+        "id": "Condition.bodySite.extension:anatomicalorientation",
         "path": "Condition.bodySite.extension",
         "definition": "AnatomicalOrientation of the body location, if needed to distinguish from a similar location in another orientation.\nThe orientation element is part of BodyLocation, a flexible structure that allows the location to be determined by a single code, or a code plus laterality and/or orientation. The body location can also be specified in relation to one or more body landmarks. SNOMED CT is used in all cases.\n\n* Code only: The code should include (precoordinate) laterality and/orientation to the degree necessary to completely specify the body location.\n* Code plus laterality and/or orientation: The basic code augmented by codes specifying the body side and/or anatomical orientation.\n* Relation to landmark: The location relative to a landmark is specified by:\n1. Establishing the location and type of landmark using a body site code and optional laterality/orientation, and\n2. Specifying the direction and distance from the landmark to the body location.\n\nNote that BodyLocation is a data type (a reusable structure), not a stand-alone entity. The concept is similar to how a postal address can apply to a person, location, or organization. This contrasts with FHIR's stand-alone BodySite (aka BodyStructure in r4) which 'is not ... intended for describing the type of anatomical location but rather a specific body site on a specific patient' (FHIR 3.5).",
         "min": 0,
@@ -2172,7 +2172,7 @@
         "sliceName": "anatomicalorientation"
       },
       {
-        "id": "Condition:obf-Condition.bodySite.extension:relationtolandmark",
+        "id": "Condition.bodySite.extension:relationtolandmark",
         "path": "Condition.bodySite.extension",
         "definition": "The relationship between a landmark that helps determine a body location and the body location itself. The location relative to a landmark is specified by:\n* Specifying the location and type of landmark using a body site code and optional laterality/orientation,\n* Specifying the direction from the landmark to the body location, and\n* Specifying the distance from the landmark to the body location.\n\nThe RelationToLandmark element is part of BodyLocation, a flexible structure that allows the location to be determined by a single code, or a code plus laterality and/or orientation. The body location can also be specified in relation to one or more body landmarks. SNOMED CT is used in all cases.\n\n* Code only: The code should include (precoordinate) laterality and/orientation to the degree necessary to completely specify the body location.\n* Code plus laterality and/or orientation: The basic code augmented by codes specifying the body side and/or anatomical orientation.\n* Relation to landmark: The location relative to a landmark is specified by:\n1. Establishing the location and type of landmark using a body site code and optional laterality/orientation, and\n2. Specifying the direction and distance from the landmark to the body location.\n\nNote that BodyLocation is a data type (a reusable structure), not a stand-alone entity. The concept is similar to how a postal address can apply to a person, location, or organization. This contrasts with FHIR's stand-alone BodySite (aka BodyStructure in r4) which 'is not ... intended for describing the type of anatomical location but rather a specific body site on a specific patient' (FHIR 3.5).",
         "min": 0,
@@ -2191,7 +2191,7 @@
         "sliceName": "relationtolandmark"
       },
       {
-        "id": "Condition:obf-Condition.subject",
+        "id": "Condition.subject",
         "path": "Condition.subject",
         "type": [
           {
@@ -2201,7 +2201,7 @@
         ]
       },
       {
-        "id": "Condition:obf-Condition.context",
+        "id": "Condition.context",
         "path": "Condition.context",
         "type": [
           {
@@ -2211,7 +2211,7 @@
         ]
       },
       {
-        "id": "Condition:obf-Condition.onset[x]",
+        "id": "Condition.onset[x]",
         "path": "Condition.onset[x]",
         "type": [
           {
@@ -2233,7 +2233,7 @@
         ]
       },
       {
-        "id": "Condition:obf-Condition.abatement[x]",
+        "id": "Condition.abatement[x]",
         "path": "Condition.abatement[x]",
         "type": [
           {
@@ -2258,7 +2258,7 @@
         ]
       },
       {
-        "id": "Condition:obf-Condition.asserter",
+        "id": "Condition.asserter",
         "path": "Condition.asserter",
         "type": [
           {
@@ -2276,11 +2276,11 @@
         ]
       },
       {
-        "id": "Condition:obf-Condition.stage",
+        "id": "Condition.stage",
         "path": "Condition.stage"
       },
       {
-        "id": "Condition:obf-Condition.stage.extension",
+        "id": "Condition.stage.extension",
         "path": "Condition.stage.extension",
         "slicing": {
           "id": "2",
@@ -2295,7 +2295,7 @@
         }
       },
       {
-        "id": "Condition:obf-Condition.stage.extension:type",
+        "id": "Condition.stage.extension:type",
         "path": "Condition.stage.extension",
         "definition": "A code describing the item at a greater level of detail.",
         "min": 0,
@@ -2314,7 +2314,7 @@
         "sliceName": "type"
       },
       {
-        "id": "Condition:obf-Condition.stage.extension:type.valueCodeableConcept",
+        "id": "Condition.stage.extension:type.valueCodeableConcept",
         "path": "Condition.stage.extension.valueCodeableConcept",
         "binding": {
           "strength": "example",
@@ -2324,7 +2324,7 @@
         }
       },
       {
-        "id": "Condition:obf-Condition.stage.assessment",
+        "id": "Condition.stage.assessment",
         "path": "Condition.stage.assessment",
         "min": 0,
         "max": "1",
@@ -2340,11 +2340,11 @@
         ]
       },
       {
-        "id": "Condition:obf-Condition.evidence",
+        "id": "Condition.evidence",
         "path": "Condition.evidence"
       },
       {
-        "id": "Condition:obf-Condition.evidence.code",
+        "id": "Condition.evidence.code",
         "path": "Condition.evidence.code",
         "binding": {
           "strength": "example",
@@ -2354,7 +2354,7 @@
         }
       },
       {
-        "id": "Condition:obf-Condition.evidence.detail",
+        "id": "Condition.evidence.detail",
         "path": "Condition.evidence.detail",
         "type": [
           {
@@ -2364,7 +2364,7 @@
         ]
       },
       {
-        "id": "Condition:obf-Condition.note",
+        "id": "Condition.note",
         "path": "Condition.note",
         "type": [
           {

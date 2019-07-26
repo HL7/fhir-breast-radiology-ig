@@ -8,7 +8,7 @@
   "url": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-MedicationRequest",
   "name": "MedicationRequest",
   "status": "draft",
-  "date": "2019-07-24",
+  "date": "2019-07-26",
   "publisher": "Hl7",
   "contact": [
     {
@@ -72,7 +72,7 @@
   "snapshot": {
     "element": [
       {
-        "id": "MedicationRequest:obf-MedicationRequest",
+        "id": "MedicationRequest",
         "path": "MedicationRequest",
         "short": "obf-MedicationRequest",
         "definition": "An order for a medication to be dispensed and instructions for use.\nValue sets for status are in direct conflict between DSTU2 Argonaut and STU3 US-Core.\nCategory does not exist in DSTU2 and is provided as an extension.\nIntent was added in STU3 and is provided as an extension with required binding.",
@@ -150,7 +150,7 @@
         ]
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.id",
+        "id": "MedicationRequest.id",
         "path": "MedicationRequest.id",
         "short": "Logical id of this artifact",
         "definition": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.",
@@ -170,7 +170,7 @@
         "isSummary": true
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.meta",
+        "id": "MedicationRequest.meta",
         "path": "MedicationRequest.meta",
         "short": "Metadata about the resource",
         "definition": "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource.",
@@ -189,7 +189,7 @@
         "isSummary": true
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.meta.id",
+        "id": "MedicationRequest.meta.id",
         "path": "MedicationRequest.meta.id",
         "representation": [
           "xmlAttr"
@@ -216,7 +216,7 @@
         ]
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.meta.extension",
+        "id": "MedicationRequest.meta.extension",
         "path": "MedicationRequest.meta.extension",
         "slicing": {
           "discriminator": [
@@ -255,7 +255,7 @@
         ]
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.meta.extension:sourcesystem",
+        "id": "MedicationRequest.meta.extension:sourcesystem",
         "path": "MedicationRequest.meta.extension",
         "definition": "FHIR: This provides a minimal amount of Provenance information that can be used to track or differentiate the source of information in the resource. The source may identify another FHIR server, document, message, database, etc.\nFHIM: Identifies the computer system that created the medical record. This optional field may also be used to indicate that the medical record was originally created by a different organization from the one that is currently storing or utilizing the record in that the assigning authority of the Id could be set to that originating organization. This property is optional, as some systems will assume that all records that it contains originated in that system, however it is anticipated that it will become increasingly commonplace for records from multiple systems and organizations will be comingled in order to provide a complete picture of the patient's health record.",
         "min": 0,
@@ -274,7 +274,7 @@
         "sliceName": "sourcesystem"
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.meta.versionId",
+        "id": "MedicationRequest.meta.versionId",
         "path": "MedicationRequest.meta.versionId",
         "short": "Version specific identifier",
         "definition": "The version specific identifier, as it appears in the version portion of the URL. This values changes when the resource is created, updated, or deleted.",
@@ -289,7 +289,7 @@
         "isSummary": true
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.meta.lastUpdated",
+        "id": "MedicationRequest.meta.lastUpdated",
         "path": "MedicationRequest.meta.lastUpdated",
         "short": "When the resource version last changed",
         "definition": "When the resource last changed - e.g. when the version changed.",
@@ -304,7 +304,7 @@
         "isSummary": true
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.meta.profile",
+        "id": "MedicationRequest.meta.profile",
         "path": "MedicationRequest.meta.profile",
         "short": "Profiles this resource claims to conform to",
         "definition": "A list of profiles (references to [StructureDefinition](structuredefinition.html#) resources) that this resource claims to conform to. The URL is a reference to [StructureDefinition.url]().",
@@ -319,7 +319,7 @@
         "isSummary": true
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.meta.security",
+        "id": "MedicationRequest.meta.security",
         "path": "MedicationRequest.meta.security",
         "short": "Security Labels applied to this resource",
         "definition": "Security labels applied to this resource. These tags connect specific resources to the overall security policy and infrastructure.",
@@ -351,7 +351,7 @@
         }
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.meta.tag",
+        "id": "MedicationRequest.meta.tag",
         "path": "MedicationRequest.meta.tag",
         "short": "Tags applied to this resource",
         "definition": "Tags applied to this resource. Tags are intended to be used to identify and relate resources to process and workflow, and applications are not required to consider the tags when interpreting the meaning of a resource.",
@@ -379,7 +379,7 @@
         }
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.implicitRules",
+        "id": "MedicationRequest.implicitRules",
         "path": "MedicationRequest.implicitRules",
         "short": "A set of rules under which this content was created",
         "definition": "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content.",
@@ -400,7 +400,7 @@
         "isSummary": true
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.language",
+        "id": "MedicationRequest.language",
         "path": "MedicationRequest.language",
         "short": "Language of the resource content",
         "definition": "The base language in which the resource is written.",
@@ -442,7 +442,7 @@
         }
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.text",
+        "id": "MedicationRequest.text",
         "path": "MedicationRequest.text",
         "short": "Text summary of the resource, for human interpretation",
         "definition": "A human-readable narrative that contains a summary of the resource, and may be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.",
@@ -476,7 +476,7 @@
         ]
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.contained",
+        "id": "MedicationRequest.contained",
         "path": "MedicationRequest.contained",
         "short": "Contained, inline Resources",
         "definition": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.",
@@ -506,7 +506,7 @@
         ]
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.extension",
+        "id": "MedicationRequest.extension",
         "path": "MedicationRequest.extension",
         "short": "Additional Content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the resource. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
@@ -546,7 +546,7 @@
         }
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.extension:medicationbasedon",
+        "id": "MedicationRequest.extension:medicationbasedon",
         "path": "MedicationRequest.extension",
         "definition": "MedicationBasedOn",
         "min": 0,
@@ -565,7 +565,7 @@
         "sliceName": "medicationbasedon"
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.extension:statusreason",
+        "id": "MedicationRequest.extension:statusreason",
         "path": "MedicationRequest.extension",
         "definition": "Captures the reason for the current state of the procedure.",
         "min": 0,
@@ -584,7 +584,7 @@
         "sliceName": "statusreason"
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.extension:reported",
+        "id": "MedicationRequest.extension:reported",
         "path": "MedicationRequest.extension",
         "definition": "Indicates if this record was captured as a secondary 'reported' record rather than as an original primary source-of-truth record. It may also indicate the source of the report.",
         "min": 0,
@@ -603,7 +603,7 @@
         "sliceName": "reported"
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.extension:expectedperformer",
+        "id": "MedicationRequest.extension:expectedperformer",
         "path": "MedicationRequest.extension",
         "definition": "Who this request is being addressed to.",
         "min": 0,
@@ -622,7 +622,7 @@
         "sliceName": "expectedperformer"
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.extension:expectedperformertype",
+        "id": "MedicationRequest.extension:expectedperformertype",
         "path": "MedicationRequest.extension",
         "definition": "What type of party should carry out the testing.",
         "min": 0,
@@ -641,7 +641,7 @@
         "sliceName": "expectedperformertype"
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.extension:courseoftherapytype",
+        "id": "MedicationRequest.extension:courseoftherapytype",
         "path": "MedicationRequest.extension",
         "definition": "The description of the overall pattern of the administration of the medication to the patient.",
         "min": 0,
@@ -660,7 +660,7 @@
         "sliceName": "courseoftherapytype"
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.extension:insurance",
+        "id": "MedicationRequest.extension:insurance",
         "path": "MedicationRequest.extension",
         "definition": "Insurance plans, coverage extensions, pre-authorizations and/or pre-determinations that may be needed for delivering the requested service.",
         "min": 0,
@@ -679,7 +679,7 @@
         "sliceName": "insurance"
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.extension:code",
+        "id": "MedicationRequest.extension:code",
         "path": "MedicationRequest.extension",
         "definition": "The main type identifier for a lab, procedure, condition, etc., usually drawn from a controlled vocabulary.",
         "min": 0,
@@ -698,7 +698,7 @@
         "sliceName": "code"
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.extension:expectedperformancetime",
+        "id": "MedicationRequest.extension:expectedperformancetime",
         "path": "MedicationRequest.extension",
         "definition": "When an action should be done. If the action is a series or recurs (e.g. daily blood sugar testing in the morning) then a Timing can be used to describe the periodicity.",
         "min": 0,
@@ -717,7 +717,7 @@
         "sliceName": "expectedperformancetime"
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.modifierExtension",
+        "id": "MedicationRequest.modifierExtension",
         "path": "MedicationRequest.modifierExtension",
         "short": "Extensions that cannot be ignored",
         "definition": "May be used to represent additional information that is not part of the basic definition of the resource, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
@@ -758,7 +758,7 @@
         }
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.modifierExtension:donotperform",
+        "id": "MedicationRequest.modifierExtension:donotperform",
         "path": "MedicationRequest.modifierExtension",
         "definition": "A flag, when set to true, indicates that the service/procedure should NOT be performed.",
         "min": 0,
@@ -779,7 +779,7 @@
         "mustSupport": true
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.identifier",
+        "id": "MedicationRequest.identifier",
         "path": "MedicationRequest.identifier",
         "short": "External ids for this request",
         "definition": "This records identifiers associated with this medication request that are defined by business processes and/or used to refer to it when a direct URL reference to the resource itself is not appropriate. For example a re-imbursement system might issue its own id for each prescription that is created.  This is particularly important where FHIR only provides part of an entire workflow process where records must be tracked through an entire system.",
@@ -819,7 +819,7 @@
         ]
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.definition",
+        "id": "MedicationRequest.definition",
         "path": "MedicationRequest.definition",
         "short": "Protocol or definition",
         "definition": "Protocol or definition followed by this request.",
@@ -853,7 +853,7 @@
         ]
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.basedOn",
+        "id": "MedicationRequest.basedOn",
         "path": "MedicationRequest.basedOn",
         "short": "What request fulfills",
         "definition": "A plan or request that is fulfilled in whole or in part by this medication request.",
@@ -895,7 +895,7 @@
         ]
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.groupIdentifier",
+        "id": "MedicationRequest.groupIdentifier",
         "path": "MedicationRequest.groupIdentifier",
         "short": "Composite request this is part of",
         "definition": "A shared identifier common to all requests that were authorized more or less simultaneously by a single author, representing the identifier of the requisition or prescription.",
@@ -925,7 +925,7 @@
         ]
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.status",
+        "id": "MedicationRequest.status",
         "path": "MedicationRequest.status",
         "short": "active | on-hold | cancelled | completed | entered-in-error | stopped | draft | unknown",
         "definition": "A code specifying the current state of the order.  Generally this will be active or completed state.",
@@ -976,7 +976,7 @@
         ]
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.intent",
+        "id": "MedicationRequest.intent",
         "path": "MedicationRequest.intent",
         "short": "proposal | plan | order | instance-order",
         "definition": "Whether the request is a proposal, plan, or an original order.",
@@ -1024,7 +1024,7 @@
         ]
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.category",
+        "id": "MedicationRequest.category",
         "path": "MedicationRequest.category",
         "short": "Type of medication usage",
         "definition": "Indicates the type of medication order and where the medication is expected to be consumed or administered.",
@@ -1062,7 +1062,7 @@
         ]
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.priority",
+        "id": "MedicationRequest.priority",
         "path": "MedicationRequest.priority",
         "short": "routine | urgent | stat | asap",
         "definition": "Indicates how quickly the Medication Request should be addressed with respect to other requests.",
@@ -1108,7 +1108,7 @@
         ]
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.medication[x]",
+        "id": "MedicationRequest.medication[x]",
         "path": "MedicationRequest.medication[x]",
         "short": "Medication to be taken",
         "definition": "Identifies the medication being requested. This is a link to a resource that represents the medication which may be the details of the medication or simply an attribute carrying a code that identifies the medication from a known list of medications.",
@@ -1166,7 +1166,7 @@
         ]
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.subject",
+        "id": "MedicationRequest.subject",
         "path": "MedicationRequest.subject",
         "short": "Who or group medication request is for",
         "definition": "A link to a resource representing the person or set of individuals to whom the medication will be given.",
@@ -1214,7 +1214,7 @@
         ]
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.context",
+        "id": "MedicationRequest.context",
         "path": "MedicationRequest.context",
         "short": "Created during encounter/admission/stay",
         "definition": "A link to an encounter, or episode of care, that identifies the particular occurrence or set occurrences of contact between patient and health care provider.",
@@ -1256,7 +1256,7 @@
         ]
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.supportingInformation",
+        "id": "MedicationRequest.supportingInformation",
         "path": "MedicationRequest.supportingInformation",
         "short": "Information to support ordering of the medication",
         "definition": "Include additional information (for example, patient height and weight) that supports the ordering of the medication.",
@@ -1285,7 +1285,7 @@
         ]
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.authoredOn",
+        "id": "MedicationRequest.authoredOn",
         "path": "MedicationRequest.authoredOn",
         "short": "When request was initially authored",
         "definition": "The date (and perhaps time) when the prescription was initially written or authored on.",
@@ -1331,7 +1331,7 @@
         ]
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.requester",
+        "id": "MedicationRequest.requester",
         "path": "MedicationRequest.requester",
         "short": "Who/What requested the Request",
         "definition": "The individual, organization or device that initiated the request and has responsibility for its activation.",
@@ -1387,7 +1387,7 @@
         ]
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.requester.id",
+        "id": "MedicationRequest.requester.id",
         "path": "MedicationRequest.requester.id",
         "representation": [
           "xmlAttr"
@@ -1414,7 +1414,7 @@
         ]
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.requester.extension",
+        "id": "MedicationRequest.requester.extension",
         "path": "MedicationRequest.requester.extension",
         "short": "Additional Content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
@@ -1443,7 +1443,7 @@
         ]
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.requester.modifierExtension",
+        "id": "MedicationRequest.requester.modifierExtension",
         "path": "MedicationRequest.requester.modifierExtension",
         "short": "Extensions that cannot be ignored",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
@@ -1475,7 +1475,7 @@
         ]
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.requester.agent",
+        "id": "MedicationRequest.requester.agent",
         "path": "MedicationRequest.requester.agent",
         "short": "Who ordered the initial medication(s)",
         "definition": "The healthcare professional responsible for authorizing the initial prescription.",
@@ -1519,7 +1519,7 @@
         ]
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.requester.onBehalfOf",
+        "id": "MedicationRequest.requester.onBehalfOf",
         "path": "MedicationRequest.requester.onBehalfOf",
         "short": "Organization agent is acting for",
         "definition": "The organization the device or practitioner was acting on behalf of.",
@@ -1553,7 +1553,7 @@
         ]
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.recorder",
+        "id": "MedicationRequest.recorder",
         "path": "MedicationRequest.recorder",
         "short": "Person who entered the request",
         "definition": "The person who entered the order on behalf of another individual for example in the case of a verbal or a telephone order.",
@@ -1582,7 +1582,7 @@
         ]
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.reasonCode",
+        "id": "MedicationRequest.reasonCode",
         "path": "MedicationRequest.reasonCode",
         "short": "Reason or indication for writing the prescription",
         "definition": "The reason or the indication for ordering the medication.",
@@ -1636,7 +1636,7 @@
         ]
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.reasonReference",
+        "id": "MedicationRequest.reasonReference",
         "path": "MedicationRequest.reasonReference",
         "short": "Condition or observation that supports why the medication is being/was taken",
         "definition": "Condition or observation that supports why the medication is being/was taken",
@@ -1678,7 +1678,7 @@
         ]
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.note",
+        "id": "MedicationRequest.note",
         "path": "MedicationRequest.note",
         "short": "Information about the prescription",
         "definition": "Extra information about the prescription that could not be conveyed by the other attributes.",
@@ -1711,7 +1711,7 @@
         ]
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.dosageInstruction",
+        "id": "MedicationRequest.dosageInstruction",
         "path": "MedicationRequest.dosageInstruction",
         "short": "How the medication should be taken",
         "definition": "Indicates how the medication is to be used by the patient.",
@@ -1741,7 +1741,7 @@
         ]
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.dispenseRequest",
+        "id": "MedicationRequest.dispenseRequest",
         "path": "MedicationRequest.dispenseRequest",
         "short": "Medication supply authorization",
         "definition": "Indicates the specific details for the dispense or medication supply part of a medication request (also known as a Medication Prescription or Medication Order).  Note that this information is not always sent with the order.  There may be in some settings (e.g. hospitals) institutional or system support for completing the dispense details in the pharmacy department.",
@@ -1779,7 +1779,7 @@
         ]
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.dispenseRequest.id",
+        "id": "MedicationRequest.dispenseRequest.id",
         "path": "MedicationRequest.dispenseRequest.id",
         "representation": [
           "xmlAttr"
@@ -1806,7 +1806,7 @@
         ]
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.dispenseRequest.extension",
+        "id": "MedicationRequest.dispenseRequest.extension",
         "path": "MedicationRequest.dispenseRequest.extension",
         "short": "Additional Content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
@@ -1846,7 +1846,7 @@
         }
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.dispenseRequest.extension:initialfill",
+        "id": "MedicationRequest.dispenseRequest.extension:initialfill",
         "path": "MedicationRequest.dispenseRequest.extension",
         "definition": "Indicates the quantity or duration for the first dispense of the medication.",
         "min": 0,
@@ -1865,7 +1865,7 @@
         "sliceName": "initialfill"
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.dispenseRequest.extension:dispenseinterval",
+        "id": "MedicationRequest.dispenseRequest.extension:dispenseinterval",
         "path": "MedicationRequest.dispenseRequest.extension",
         "definition": "The minimum period of time that must occur between dispenses of the medication.",
         "min": 0,
@@ -1884,7 +1884,7 @@
         "sliceName": "dispenseinterval"
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.dispenseRequest.extension:numberofrefillsallowed",
+        "id": "MedicationRequest.dispenseRequest.extension:numberofrefillsallowed",
         "path": "MedicationRequest.dispenseRequest.extension",
         "definition": "The maximum number of times the dispense can be repeated. For medication dispense, this integer does NOT include the original order dispense. This means that if an order indicates dispense 30 tablets plus 3 repeats, then the order can be dispensed a total of 4 times and the patient can receive a total of 120 tablets.",
         "min": 0,
@@ -1903,7 +1903,7 @@
         "sliceName": "numberofrefillsallowed"
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.dispenseRequest.modifierExtension",
+        "id": "MedicationRequest.dispenseRequest.modifierExtension",
         "path": "MedicationRequest.dispenseRequest.modifierExtension",
         "short": "Extensions that cannot be ignored",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
@@ -1935,7 +1935,7 @@
         ]
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.dispenseRequest.validityPeriod",
+        "id": "MedicationRequest.dispenseRequest.validityPeriod",
         "path": "MedicationRequest.dispenseRequest.validityPeriod",
         "short": "Time period supply is authorized for",
         "definition": "This indicates the validity period of a prescription (stale dating the Prescription).",
@@ -1965,7 +1965,7 @@
         ]
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.dispenseRequest.numberOfRepeatsAllowed",
+        "id": "MedicationRequest.dispenseRequest.numberOfRepeatsAllowed",
         "path": "MedicationRequest.dispenseRequest.numberOfRepeatsAllowed",
         "short": "Number of refills authorized",
         "definition": "An integer indicating the number of times, in addition to the original dispense, (aka refills or repeats) that the patient can receive the prescribed medication. Usage Notes: This integer does not include the original order dispense. This means that if an order indicates dispense 30 tablets plus \"3 repeats\", then the order can be dispensed a total of 4 times and the patient can receive a total of 120 tablets.",
@@ -1998,7 +1998,7 @@
         ]
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.dispenseRequest.quantity",
+        "id": "MedicationRequest.dispenseRequest.quantity",
         "path": "MedicationRequest.dispenseRequest.quantity",
         "short": "Amount of medication to supply per dispense",
         "definition": "The amount that is to be dispensed for one fill.",
@@ -2031,7 +2031,7 @@
         ]
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.dispenseRequest.expectedSupplyDuration",
+        "id": "MedicationRequest.dispenseRequest.expectedSupplyDuration",
         "path": "MedicationRequest.dispenseRequest.expectedSupplyDuration",
         "short": "Number of days supply per dispense",
         "definition": "Identifies the period time over which the supplied product is expected to be used, or the length of time the dispense is expected to last.",
@@ -2061,7 +2061,7 @@
         ]
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.dispenseRequest.performer",
+        "id": "MedicationRequest.dispenseRequest.performer",
         "path": "MedicationRequest.dispenseRequest.performer",
         "short": "Intended dispenser",
         "definition": "Indicates the intended dispensing Organization specified by the prescriber.",
@@ -2090,7 +2090,7 @@
         ]
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.substitution",
+        "id": "MedicationRequest.substitution",
         "path": "MedicationRequest.substitution",
         "short": "Any restrictions on medication substitution",
         "definition": "Indicates whether or not substitution can or should be part of the dispense. In some cases substitution must happen, in other cases substitution must not happen. This block explains the prescriber's intent. If nothing is specified substitution may be done.",
@@ -2128,7 +2128,7 @@
         ]
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.substitution.id",
+        "id": "MedicationRequest.substitution.id",
         "path": "MedicationRequest.substitution.id",
         "representation": [
           "xmlAttr"
@@ -2155,7 +2155,7 @@
         ]
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.substitution.extension",
+        "id": "MedicationRequest.substitution.extension",
         "path": "MedicationRequest.substitution.extension",
         "short": "Additional Content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
@@ -2184,7 +2184,7 @@
         ]
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.substitution.modifierExtension",
+        "id": "MedicationRequest.substitution.modifierExtension",
         "path": "MedicationRequest.substitution.modifierExtension",
         "short": "Extensions that cannot be ignored",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
@@ -2216,7 +2216,7 @@
         ]
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.substitution.allowed",
+        "id": "MedicationRequest.substitution.allowed",
         "path": "MedicationRequest.substitution.allowed",
         "short": "Whether substitution is allowed or not",
         "definition": "True if the prescriber allows a different drug to be dispensed from what was prescribed.",
@@ -2250,7 +2250,7 @@
         ]
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.substitution.reason",
+        "id": "MedicationRequest.substitution.reason",
         "path": "MedicationRequest.substitution.reason",
         "short": "Why should (not) substitution be made",
         "definition": "Indicates the reason for the substitution, or why substitution must or must not be performed.",
@@ -2288,7 +2288,7 @@
         ]
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.priorPrescription",
+        "id": "MedicationRequest.priorPrescription",
         "path": "MedicationRequest.priorPrescription",
         "short": "An order/prescription that is being replaced",
         "definition": "A link to a resource representing an earlier order related order or prescription.",
@@ -2321,7 +2321,7 @@
         ]
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.detectedIssue",
+        "id": "MedicationRequest.detectedIssue",
         "path": "MedicationRequest.detectedIssue",
         "short": "Clinical Issue with action",
         "definition": "Indicates an actual or potential clinical issue with or between one or more active or proposed clinical actions for a patient; e.g. Drug-drug interaction, duplicate therapy, dosage alert etc.",
@@ -2351,7 +2351,7 @@
         ]
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.eventHistory",
+        "id": "MedicationRequest.eventHistory",
         "path": "MedicationRequest.eventHistory",
         "short": "A list of events of interest in the lifecycle",
         "definition": "Links to Provenance records for past versions of this resource or fulfilling request or event resources that identify key state transitions or updates that are likely to be relevant to a user looking at the current version of the resource.",
@@ -2385,18 +2385,18 @@
   "differential": {
     "element": [
       {
-        "id": "MedicationRequest:obf-MedicationRequest",
+        "id": "MedicationRequest",
         "path": "MedicationRequest",
         "short": "obf-MedicationRequest",
         "definition": "An order for a medication to be dispensed and instructions for use.\nValue sets for status are in direct conflict between DSTU2 Argonaut and STU3 US-Core.\nCategory does not exist in DSTU2 and is provided as an extension.\nIntent was added in STU3 and is provided as an extension with required binding.",
         "mustSupport": false
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.meta",
+        "id": "MedicationRequest.meta",
         "path": "MedicationRequest.meta"
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.meta.extension:sourcesystem",
+        "id": "MedicationRequest.meta.extension:sourcesystem",
         "path": "MedicationRequest.meta.extension",
         "definition": "FHIR: This provides a minimal amount of Provenance information that can be used to track or differentiate the source of information in the resource. The source may identify another FHIR server, document, message, database, etc.\nFHIM: Identifies the computer system that created the medical record. This optional field may also be used to indicate that the medical record was originally created by a different organization from the one that is currently storing or utilizing the record in that the assigning authority of the Id could be set to that originating organization. This property is optional, as some systems will assume that all records that it contains originated in that system, however it is anticipated that it will become increasingly commonplace for records from multiple systems and organizations will be comingled in order to provide a complete picture of the patient's health record.",
         "min": 0,
@@ -2415,7 +2415,7 @@
         "sliceName": "sourcesystem"
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.extension",
+        "id": "MedicationRequest.extension",
         "path": "MedicationRequest.extension",
         "slicing": {
           "id": "2",
@@ -2430,7 +2430,7 @@
         }
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.extension:medicationbasedon",
+        "id": "MedicationRequest.extension:medicationbasedon",
         "path": "MedicationRequest.extension",
         "definition": "MedicationBasedOn",
         "min": 0,
@@ -2449,7 +2449,7 @@
         "sliceName": "medicationbasedon"
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.extension:statusreason",
+        "id": "MedicationRequest.extension:statusreason",
         "path": "MedicationRequest.extension",
         "definition": "Captures the reason for the current state of the procedure.",
         "min": 0,
@@ -2468,7 +2468,7 @@
         "sliceName": "statusreason"
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.extension:reported",
+        "id": "MedicationRequest.extension:reported",
         "path": "MedicationRequest.extension",
         "definition": "Indicates if this record was captured as a secondary 'reported' record rather than as an original primary source-of-truth record. It may also indicate the source of the report.",
         "min": 0,
@@ -2487,7 +2487,7 @@
         "sliceName": "reported"
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.extension:expectedperformer",
+        "id": "MedicationRequest.extension:expectedperformer",
         "path": "MedicationRequest.extension",
         "definition": "Who this request is being addressed to.",
         "min": 0,
@@ -2506,7 +2506,7 @@
         "sliceName": "expectedperformer"
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.extension:expectedperformertype",
+        "id": "MedicationRequest.extension:expectedperformertype",
         "path": "MedicationRequest.extension",
         "definition": "What type of party should carry out the testing.",
         "min": 0,
@@ -2525,7 +2525,7 @@
         "sliceName": "expectedperformertype"
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.extension:courseoftherapytype",
+        "id": "MedicationRequest.extension:courseoftherapytype",
         "path": "MedicationRequest.extension",
         "definition": "The description of the overall pattern of the administration of the medication to the patient.",
         "min": 0,
@@ -2544,7 +2544,7 @@
         "sliceName": "courseoftherapytype"
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.extension:insurance",
+        "id": "MedicationRequest.extension:insurance",
         "path": "MedicationRequest.extension",
         "definition": "Insurance plans, coverage extensions, pre-authorizations and/or pre-determinations that may be needed for delivering the requested service.",
         "min": 0,
@@ -2563,7 +2563,7 @@
         "sliceName": "insurance"
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.extension:code",
+        "id": "MedicationRequest.extension:code",
         "path": "MedicationRequest.extension",
         "definition": "The main type identifier for a lab, procedure, condition, etc., usually drawn from a controlled vocabulary.",
         "min": 0,
@@ -2582,7 +2582,7 @@
         "sliceName": "code"
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.extension:expectedperformancetime",
+        "id": "MedicationRequest.extension:expectedperformancetime",
         "path": "MedicationRequest.extension",
         "definition": "When an action should be done. If the action is a series or recurs (e.g. daily blood sugar testing in the morning) then a Timing can be used to describe the periodicity.",
         "min": 0,
@@ -2601,7 +2601,7 @@
         "sliceName": "expectedperformancetime"
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.modifierExtension",
+        "id": "MedicationRequest.modifierExtension",
         "path": "MedicationRequest.modifierExtension",
         "slicing": {
           "id": "3",
@@ -2616,7 +2616,7 @@
         }
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.modifierExtension:donotperform",
+        "id": "MedicationRequest.modifierExtension:donotperform",
         "path": "MedicationRequest.modifierExtension",
         "definition": "A flag, when set to true, indicates that the service/procedure should NOT be performed.",
         "min": 0,
@@ -2637,7 +2637,7 @@
         "mustSupport": true
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.category",
+        "id": "MedicationRequest.category",
         "path": "MedicationRequest.category",
         "binding": {
           "strength": "preferred",
@@ -2647,7 +2647,7 @@
         }
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.medication[x]",
+        "id": "MedicationRequest.medication[x]",
         "path": "MedicationRequest.medication[x]",
         "type": [
           {
@@ -2660,7 +2660,7 @@
         ]
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.subject",
+        "id": "MedicationRequest.subject",
         "path": "MedicationRequest.subject",
         "type": [
           {
@@ -2670,7 +2670,7 @@
         ]
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.context",
+        "id": "MedicationRequest.context",
         "path": "MedicationRequest.context",
         "type": [
           {
@@ -2680,7 +2680,7 @@
         ]
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.supportingInformation",
+        "id": "MedicationRequest.supportingInformation",
         "path": "MedicationRequest.supportingInformation",
         "type": [
           {
@@ -2690,11 +2690,11 @@
         ]
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.requester",
+        "id": "MedicationRequest.requester",
         "path": "MedicationRequest.requester"
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.requester.agent",
+        "id": "MedicationRequest.requester.agent",
         "path": "MedicationRequest.requester.agent",
         "type": [
           {
@@ -2704,7 +2704,7 @@
         ]
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.recorder",
+        "id": "MedicationRequest.recorder",
         "path": "MedicationRequest.recorder",
         "type": [
           {
@@ -2714,13 +2714,13 @@
         ]
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.reasonCode",
+        "id": "MedicationRequest.reasonCode",
         "path": "MedicationRequest.reasonCode",
         "min": 0,
         "max": "1"
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.reasonReference",
+        "id": "MedicationRequest.reasonReference",
         "path": "MedicationRequest.reasonReference",
         "min": 0,
         "max": "1",
@@ -2738,7 +2738,7 @@
         "definition": "Condition or observation that supports why the medication is being/was taken"
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.note",
+        "id": "MedicationRequest.note",
         "path": "MedicationRequest.note",
         "min": 0,
         "max": "1",
@@ -2750,7 +2750,7 @@
         ]
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.dosageInstruction",
+        "id": "MedicationRequest.dosageInstruction",
         "path": "MedicationRequest.dosageInstruction",
         "type": [
           {
@@ -2760,11 +2760,11 @@
         ]
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.dispenseRequest",
+        "id": "MedicationRequest.dispenseRequest",
         "path": "MedicationRequest.dispenseRequest"
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.dispenseRequest.extension",
+        "id": "MedicationRequest.dispenseRequest.extension",
         "path": "MedicationRequest.dispenseRequest.extension",
         "slicing": {
           "id": "1",
@@ -2779,7 +2779,7 @@
         }
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.dispenseRequest.extension:initialfill",
+        "id": "MedicationRequest.dispenseRequest.extension:initialfill",
         "path": "MedicationRequest.dispenseRequest.extension",
         "definition": "Indicates the quantity or duration for the first dispense of the medication.",
         "min": 0,
@@ -2798,7 +2798,7 @@
         "sliceName": "initialfill"
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.dispenseRequest.extension:dispenseinterval",
+        "id": "MedicationRequest.dispenseRequest.extension:dispenseinterval",
         "path": "MedicationRequest.dispenseRequest.extension",
         "definition": "The minimum period of time that must occur between dispenses of the medication.",
         "min": 0,
@@ -2817,7 +2817,7 @@
         "sliceName": "dispenseinterval"
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.dispenseRequest.extension:numberofrefillsallowed",
+        "id": "MedicationRequest.dispenseRequest.extension:numberofrefillsallowed",
         "path": "MedicationRequest.dispenseRequest.extension",
         "definition": "The maximum number of times the dispense can be repeated. For medication dispense, this integer does NOT include the original order dispense. This means that if an order indicates dispense 30 tablets plus 3 repeats, then the order can be dispensed a total of 4 times and the patient can receive a total of 120 tablets.",
         "min": 0,
@@ -2836,13 +2836,13 @@
         "sliceName": "numberofrefillsallowed"
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.dispenseRequest.numberOfRepeatsAllowed",
+        "id": "MedicationRequest.dispenseRequest.numberOfRepeatsAllowed",
         "path": "MedicationRequest.dispenseRequest.numberOfRepeatsAllowed",
         "min": 0,
         "max": "0"
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.dispenseRequest.expectedSupplyDuration",
+        "id": "MedicationRequest.dispenseRequest.expectedSupplyDuration",
         "path": "MedicationRequest.dispenseRequest.expectedSupplyDuration",
         "type": [
           {
@@ -2852,7 +2852,7 @@
         ]
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.dispenseRequest.performer",
+        "id": "MedicationRequest.dispenseRequest.performer",
         "path": "MedicationRequest.dispenseRequest.performer",
         "type": [
           {
@@ -2862,11 +2862,11 @@
         ]
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.substitution",
+        "id": "MedicationRequest.substitution",
         "path": "MedicationRequest.substitution"
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.substitution.reason",
+        "id": "MedicationRequest.substitution.reason",
         "path": "MedicationRequest.substitution.reason",
         "binding": {
           "strength": "example",
@@ -2876,7 +2876,7 @@
         }
       },
       {
-        "id": "MedicationRequest:obf-MedicationRequest.priorPrescription",
+        "id": "MedicationRequest.priorPrescription",
         "path": "MedicationRequest.priorPrescription",
         "type": [
           {

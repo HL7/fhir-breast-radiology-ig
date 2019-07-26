@@ -8,7 +8,7 @@
   "url": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-MedicationAction",
   "name": "MedicationAction",
   "status": "draft",
-  "date": "2019-07-24",
+  "date": "2019-07-26",
   "publisher": "Hl7",
   "contact": [
     {
@@ -37,7 +37,7 @@
   "snapshot": {
     "element": [
       {
-        "id": "DomainResource:obf-MedicationAction",
+        "id": "DomainResource",
         "path": "DomainResource",
         "short": "obf-MedicationAction",
         "definition": "Abstract class representing medication exposure, independent of whether reported in a medication statement or medication administration. Does not include medication requests (prescriptions).",
@@ -81,7 +81,7 @@
         ]
       },
       {
-        "id": "DomainResource:obf-MedicationAction.id",
+        "id": "DomainResource.id",
         "path": "DomainResource.id",
         "short": "Logical id of this artifact",
         "definition": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.",
@@ -101,7 +101,7 @@
         "isSummary": true
       },
       {
-        "id": "DomainResource:obf-MedicationAction.meta",
+        "id": "DomainResource.meta",
         "path": "DomainResource.meta",
         "short": "Metadata about the resource",
         "definition": "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource.",
@@ -120,7 +120,7 @@
         "isSummary": true
       },
       {
-        "id": "DomainResource:obf-MedicationAction.meta.id",
+        "id": "DomainResource.meta.id",
         "path": "DomainResource.meta.id",
         "representation": [
           "xmlAttr"
@@ -147,7 +147,7 @@
         ]
       },
       {
-        "id": "DomainResource:obf-MedicationAction.meta.extension",
+        "id": "DomainResource.meta.extension",
         "path": "DomainResource.meta.extension",
         "slicing": {
           "discriminator": [
@@ -186,7 +186,7 @@
         ]
       },
       {
-        "id": "DomainResource:obf-MedicationAction.meta.extension:sourcesystem",
+        "id": "DomainResource.meta.extension:sourcesystem",
         "path": "DomainResource.meta.extension",
         "definition": "FHIR: This provides a minimal amount of Provenance information that can be used to track or differentiate the source of information in the resource. The source may identify another FHIR server, document, message, database, etc.\nFHIM: Identifies the computer system that created the medical record. This optional field may also be used to indicate that the medical record was originally created by a different organization from the one that is currently storing or utilizing the record in that the assigning authority of the Id could be set to that originating organization. This property is optional, as some systems will assume that all records that it contains originated in that system, however it is anticipated that it will become increasingly commonplace for records from multiple systems and organizations will be comingled in order to provide a complete picture of the patient's health record.",
         "min": 0,
@@ -205,7 +205,7 @@
         "sliceName": "sourcesystem"
       },
       {
-        "id": "DomainResource:obf-MedicationAction.meta.versionId",
+        "id": "DomainResource.meta.versionId",
         "path": "DomainResource.meta.versionId",
         "short": "Version specific identifier",
         "definition": "The version specific identifier, as it appears in the version portion of the URL. This values changes when the resource is created, updated, or deleted.",
@@ -220,7 +220,7 @@
         "isSummary": true
       },
       {
-        "id": "DomainResource:obf-MedicationAction.meta.lastUpdated",
+        "id": "DomainResource.meta.lastUpdated",
         "path": "DomainResource.meta.lastUpdated",
         "short": "When the resource version last changed",
         "definition": "When the resource last changed - e.g. when the version changed.",
@@ -235,7 +235,7 @@
         "isSummary": true
       },
       {
-        "id": "DomainResource:obf-MedicationAction.meta.profile",
+        "id": "DomainResource.meta.profile",
         "path": "DomainResource.meta.profile",
         "short": "Profiles this resource claims to conform to",
         "definition": "A list of profiles (references to [StructureDefinition](structuredefinition.html#) resources) that this resource claims to conform to. The URL is a reference to [StructureDefinition.url]().",
@@ -250,7 +250,7 @@
         "isSummary": true
       },
       {
-        "id": "DomainResource:obf-MedicationAction.meta.security",
+        "id": "DomainResource.meta.security",
         "path": "DomainResource.meta.security",
         "short": "Security Labels applied to this resource",
         "definition": "Security labels applied to this resource. These tags connect specific resources to the overall security policy and infrastructure.",
@@ -282,7 +282,7 @@
         }
       },
       {
-        "id": "DomainResource:obf-MedicationAction.meta.tag",
+        "id": "DomainResource.meta.tag",
         "path": "DomainResource.meta.tag",
         "short": "Tags applied to this resource",
         "definition": "Tags applied to this resource. Tags are intended to be used to identify and relate resources to process and workflow, and applications are not required to consider the tags when interpreting the meaning of a resource.",
@@ -310,7 +310,7 @@
         }
       },
       {
-        "id": "DomainResource:obf-MedicationAction.implicitRules",
+        "id": "DomainResource.implicitRules",
         "path": "DomainResource.implicitRules",
         "short": "A set of rules under which this content was created",
         "definition": "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content.",
@@ -331,7 +331,7 @@
         "isSummary": true
       },
       {
-        "id": "DomainResource:obf-MedicationAction.language",
+        "id": "DomainResource.language",
         "path": "DomainResource.language",
         "short": "Language of the resource content",
         "definition": "The base language in which the resource is written.",
@@ -373,7 +373,7 @@
         }
       },
       {
-        "id": "DomainResource:obf-MedicationAction.text",
+        "id": "DomainResource.text",
         "path": "DomainResource.text",
         "short": "Text summary of the resource, for human interpretation",
         "definition": "A human-readable narrative that contains a summary of the resource, and may be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.",
@@ -402,7 +402,7 @@
         ]
       },
       {
-        "id": "DomainResource:obf-MedicationAction.contained",
+        "id": "DomainResource.contained",
         "path": "DomainResource.contained",
         "short": "Contained, inline Resources",
         "definition": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.",
@@ -427,7 +427,7 @@
         ]
       },
       {
-        "id": "DomainResource:obf-MedicationAction.extension",
+        "id": "DomainResource.extension",
         "path": "DomainResource.extension",
         "slicing": {
           "discriminator": [
@@ -461,7 +461,7 @@
         ]
       },
       {
-        "id": "DomainResource:obf-MedicationAction.extension:status",
+        "id": "DomainResource.extension:status",
         "path": "DomainResource.extension",
         "definition": "A state that relates to the workflow or interpretation of this resource. Certain status values can modify the meaning of the resource, for example, entered-in-error. When a boolean value is used, Status of true indicates the record is active, false means inactive.",
         "min": 1,
@@ -480,7 +480,7 @@
         }
       },
       {
-        "id": "DomainResource:obf-MedicationAction.extension:identifier",
+        "id": "DomainResource.extension:identifier",
         "path": "DomainResource.extension",
         "definition": "Business identifier or external id for this resource.",
         "min": 0,
@@ -499,7 +499,7 @@
         }
       },
       {
-        "id": "DomainResource:obf-MedicationAction.extension:subjectofrecord",
+        "id": "DomainResource.extension:subjectofrecord",
         "path": "DomainResource.extension",
         "definition": "The subject of a clinical statement, often called the Patient or the Subject. The SubjectOfRecord typically identifies the clinical record in which this statement is contained. If the statement should be in John Doe's patient record, then John Doe is the subject of record. When there is no patient, the SubjectOfRecord can also be a location, group, or other entity that statement pertains to. For example, observations concerning a hospital ward would have a Location as the SubjectOfRecord.\n\nNote that the word 'Subject' is used here in the sense of a person or entity subjected to observations or actions, not subject as in a conceptual topic, like heart disease.",
         "min": 1,
@@ -518,7 +518,7 @@
         }
       },
       {
-        "id": "DomainResource:obf-MedicationAction.extension:carecontext",
+        "id": "DomainResource.extension:carecontext",
         "path": "DomainResource.extension",
         "definition": "The encounter or episode of care",
         "min": 0,
@@ -537,7 +537,7 @@
         }
       },
       {
-        "id": "DomainResource:obf-MedicationAction.extension:statementdatetime",
+        "id": "DomainResource.extension:statementdatetime",
         "path": "DomainResource.extension",
         "definition": "The point in time when the statement was created.",
         "min": 0,
@@ -556,7 +556,7 @@
         }
       },
       {
-        "id": "DomainResource:obf-MedicationAction.extension:reasoncode",
+        "id": "DomainResource.extension:reasoncode",
         "path": "DomainResource.extension",
         "definition": "The explanation or justification for the current item or action, as a code.\nReason is a string or CodeableConcept in DSTU2 but in later versions only a CodeableConcept.",
         "min": 0,
@@ -575,7 +575,7 @@
         }
       },
       {
-        "id": "DomainResource:obf-MedicationAction.extension:reasonreference",
+        "id": "DomainResource.extension:reasonreference",
         "path": "DomainResource.extension",
         "definition": "The justification, as reference to a condition or observation.",
         "min": 0,
@@ -594,7 +594,7 @@
         }
       },
       {
-        "id": "DomainResource:obf-MedicationAction.extension:basedon",
+        "id": "DomainResource.extension:basedon",
         "path": "DomainResource.extension",
         "definition": "The proposal, order, or plan that is partly or wholly fulfilled by this item.",
         "min": 0,
@@ -613,7 +613,7 @@
         }
       },
       {
-        "id": "DomainResource:obf-MedicationAction.extension:occurrencetimeorperiod",
+        "id": "DomainResource.extension:occurrencetimeorperiod",
         "path": "DomainResource.extension",
         "definition": "The point or period of time when the event takes place. Times can be precise (dateTime) or approximate (date). If a time period is used, and the start date or dateTime is missing, the start of the period is not known. If the end date or dateTime is missing, it means that the period is ongoing.",
         "min": 1,
@@ -632,7 +632,7 @@
         }
       },
       {
-        "id": "DomainResource:obf-MedicationAction.extension:participation",
+        "id": "DomainResource.extension:participation",
         "path": "DomainResource.extension",
         "definition": "Record of someone or something involvement in an activity or event.",
         "min": 0,
@@ -651,7 +651,7 @@
         }
       },
       {
-        "id": "DomainResource:obf-MedicationAction.extension:medicationcodeorreference",
+        "id": "DomainResource.extension:medicationcodeorreference",
         "path": "DomainResource.extension",
         "definition": "A choice of a medication code or reference.",
         "min": 1,
@@ -670,7 +670,7 @@
         }
       },
       {
-        "id": "DomainResource:obf-MedicationAction.extension:dosage",
+        "id": "DomainResource.extension:dosage",
         "path": "DomainResource.extension",
         "definition": "The dosage of the medication. The data structure is flexible and can describe a dosage prescribed, administered, or reported.",
         "min": 0,
@@ -689,7 +689,7 @@
         }
       },
       {
-        "id": "DomainResource:obf-MedicationAction.modifierExtension",
+        "id": "DomainResource.modifierExtension",
         "path": "DomainResource.modifierExtension",
         "slicing": {
           "discriminator": [
@@ -728,17 +728,17 @@
   "differential": {
     "element": [
       {
-        "id": "DomainResource:obf-MedicationAction",
+        "id": "DomainResource",
         "path": "DomainResource",
         "short": "obf-MedicationAction",
         "definition": "Abstract class representing medication exposure, independent of whether reported in a medication statement or medication administration. Does not include medication requests (prescriptions)."
       },
       {
-        "id": "DomainResource:obf-MedicationAction.meta",
+        "id": "DomainResource.meta",
         "path": "DomainResource.meta"
       },
       {
-        "id": "DomainResource:obf-MedicationAction.meta.extension:sourcesystem",
+        "id": "DomainResource.meta.extension:sourcesystem",
         "path": "DomainResource.meta.extension",
         "definition": "FHIR: This provides a minimal amount of Provenance information that can be used to track or differentiate the source of information in the resource. The source may identify another FHIR server, document, message, database, etc.\nFHIM: Identifies the computer system that created the medical record. This optional field may also be used to indicate that the medical record was originally created by a different organization from the one that is currently storing or utilizing the record in that the assigning authority of the Id could be set to that originating organization. This property is optional, as some systems will assume that all records that it contains originated in that system, however it is anticipated that it will become increasingly commonplace for records from multiple systems and organizations will be comingled in order to provide a complete picture of the patient's health record.",
         "min": 0,
@@ -757,13 +757,13 @@
         "sliceName": "sourcesystem"
       },
       {
-        "id": "DomainResource:obf-MedicationAction.extension",
+        "id": "DomainResource.extension",
         "path": "DomainResource.extension",
         "min": 4,
         "max": "*"
       },
       {
-        "id": "DomainResource:obf-MedicationAction.extension:status",
+        "id": "DomainResource.extension:status",
         "path": "DomainResource.extension",
         "definition": "A state that relates to the workflow or interpretation of this resource. Certain status values can modify the meaning of the resource, for example, entered-in-error. When a boolean value is used, Status of true indicates the record is active, false means inactive.",
         "min": 1,
@@ -782,7 +782,7 @@
         }
       },
       {
-        "id": "DomainResource:obf-MedicationAction.extension:identifier",
+        "id": "DomainResource.extension:identifier",
         "path": "DomainResource.extension",
         "definition": "Business identifier or external id for this resource.",
         "min": 0,
@@ -801,7 +801,7 @@
         }
       },
       {
-        "id": "DomainResource:obf-MedicationAction.extension:subjectofrecord",
+        "id": "DomainResource.extension:subjectofrecord",
         "path": "DomainResource.extension",
         "definition": "The subject of a clinical statement, often called the Patient or the Subject. The SubjectOfRecord typically identifies the clinical record in which this statement is contained. If the statement should be in John Doe's patient record, then John Doe is the subject of record. When there is no patient, the SubjectOfRecord can also be a location, group, or other entity that statement pertains to. For example, observations concerning a hospital ward would have a Location as the SubjectOfRecord.\n\nNote that the word 'Subject' is used here in the sense of a person or entity subjected to observations or actions, not subject as in a conceptual topic, like heart disease.",
         "min": 1,
@@ -820,7 +820,7 @@
         }
       },
       {
-        "id": "DomainResource:obf-MedicationAction.extension:carecontext",
+        "id": "DomainResource.extension:carecontext",
         "path": "DomainResource.extension",
         "definition": "The encounter or episode of care",
         "min": 0,
@@ -839,7 +839,7 @@
         }
       },
       {
-        "id": "DomainResource:obf-MedicationAction.extension:statementdatetime",
+        "id": "DomainResource.extension:statementdatetime",
         "path": "DomainResource.extension",
         "definition": "The point in time when the statement was created.",
         "min": 0,
@@ -858,7 +858,7 @@
         }
       },
       {
-        "id": "DomainResource:obf-MedicationAction.extension:reasoncode",
+        "id": "DomainResource.extension:reasoncode",
         "path": "DomainResource.extension",
         "definition": "The explanation or justification for the current item or action, as a code.\nReason is a string or CodeableConcept in DSTU2 but in later versions only a CodeableConcept.",
         "min": 0,
@@ -877,7 +877,7 @@
         }
       },
       {
-        "id": "DomainResource:obf-MedicationAction.extension:reasonreference",
+        "id": "DomainResource.extension:reasonreference",
         "path": "DomainResource.extension",
         "definition": "The justification, as reference to a condition or observation.",
         "min": 0,
@@ -896,7 +896,7 @@
         }
       },
       {
-        "id": "DomainResource:obf-MedicationAction.extension:basedon",
+        "id": "DomainResource.extension:basedon",
         "path": "DomainResource.extension",
         "definition": "The proposal, order, or plan that is partly or wholly fulfilled by this item.",
         "min": 0,
@@ -915,7 +915,7 @@
         }
       },
       {
-        "id": "DomainResource:obf-MedicationAction.extension:occurrencetimeorperiod",
+        "id": "DomainResource.extension:occurrencetimeorperiod",
         "path": "DomainResource.extension",
         "definition": "The point or period of time when the event takes place. Times can be precise (dateTime) or approximate (date). If a time period is used, and the start date or dateTime is missing, the start of the period is not known. If the end date or dateTime is missing, it means that the period is ongoing.",
         "min": 1,
@@ -934,7 +934,7 @@
         }
       },
       {
-        "id": "DomainResource:obf-MedicationAction.extension:participation",
+        "id": "DomainResource.extension:participation",
         "path": "DomainResource.extension",
         "definition": "Record of someone or something involvement in an activity or event.",
         "min": 0,
@@ -953,7 +953,7 @@
         }
       },
       {
-        "id": "DomainResource:obf-MedicationAction.extension:medicationcodeorreference",
+        "id": "DomainResource.extension:medicationcodeorreference",
         "path": "DomainResource.extension",
         "definition": "A choice of a medication code or reference.",
         "min": 1,
@@ -972,7 +972,7 @@
         }
       },
       {
-        "id": "DomainResource:obf-MedicationAction.extension:dosage",
+        "id": "DomainResource.extension:dosage",
         "path": "DomainResource.extension",
         "definition": "The dosage of the medication. The data structure is flexible and can describe a dosage prescribed, administered, or reported.",
         "min": 0,

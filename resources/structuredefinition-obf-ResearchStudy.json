@@ -8,7 +8,7 @@
   "url": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-ResearchStudy",
   "name": "ResearchStudy",
   "status": "draft",
-  "date": "2019-07-24",
+  "date": "2019-07-26",
   "publisher": "Hl7",
   "contact": [
     {
@@ -52,7 +52,7 @@
   "snapshot": {
     "element": [
       {
-        "id": "ResearchStudy:obf-ResearchStudy",
+        "id": "ResearchStudy",
         "path": "ResearchStudy",
         "short": "obf-ResearchStudy",
         "definition": "A clinical trial or similar research study. Reference: list of FDA data elements describing a research study: prsinfo.clinicaltrials.gov/definitions.html",
@@ -117,7 +117,7 @@
         ]
       },
       {
-        "id": "ResearchStudy:obf-ResearchStudy.id",
+        "id": "ResearchStudy.id",
         "path": "ResearchStudy.id",
         "short": "Logical id of this artifact",
         "definition": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.",
@@ -137,7 +137,7 @@
         "isSummary": true
       },
       {
-        "id": "ResearchStudy:obf-ResearchStudy.meta",
+        "id": "ResearchStudy.meta",
         "path": "ResearchStudy.meta",
         "short": "Metadata about the resource",
         "definition": "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource.",
@@ -156,7 +156,7 @@
         "isSummary": true
       },
       {
-        "id": "ResearchStudy:obf-ResearchStudy.meta.id",
+        "id": "ResearchStudy.meta.id",
         "path": "ResearchStudy.meta.id",
         "representation": [
           "xmlAttr"
@@ -183,7 +183,7 @@
         ]
       },
       {
-        "id": "ResearchStudy:obf-ResearchStudy.meta.extension",
+        "id": "ResearchStudy.meta.extension",
         "path": "ResearchStudy.meta.extension",
         "slicing": {
           "discriminator": [
@@ -222,7 +222,7 @@
         ]
       },
       {
-        "id": "ResearchStudy:obf-ResearchStudy.meta.extension:sourcesystem",
+        "id": "ResearchStudy.meta.extension:sourcesystem",
         "path": "ResearchStudy.meta.extension",
         "definition": "FHIR: This provides a minimal amount of Provenance information that can be used to track or differentiate the source of information in the resource. The source may identify another FHIR server, document, message, database, etc.\nFHIM: Identifies the computer system that created the medical record. This optional field may also be used to indicate that the medical record was originally created by a different organization from the one that is currently storing or utilizing the record in that the assigning authority of the Id could be set to that originating organization. This property is optional, as some systems will assume that all records that it contains originated in that system, however it is anticipated that it will become increasingly commonplace for records from multiple systems and organizations will be comingled in order to provide a complete picture of the patient's health record.",
         "min": 0,
@@ -241,7 +241,7 @@
         "sliceName": "sourcesystem"
       },
       {
-        "id": "ResearchStudy:obf-ResearchStudy.meta.versionId",
+        "id": "ResearchStudy.meta.versionId",
         "path": "ResearchStudy.meta.versionId",
         "short": "Version specific identifier",
         "definition": "The version specific identifier, as it appears in the version portion of the URL. This values changes when the resource is created, updated, or deleted.",
@@ -256,7 +256,7 @@
         "isSummary": true
       },
       {
-        "id": "ResearchStudy:obf-ResearchStudy.meta.lastUpdated",
+        "id": "ResearchStudy.meta.lastUpdated",
         "path": "ResearchStudy.meta.lastUpdated",
         "short": "When the resource version last changed",
         "definition": "When the resource last changed - e.g. when the version changed.",
@@ -271,7 +271,7 @@
         "isSummary": true
       },
       {
-        "id": "ResearchStudy:obf-ResearchStudy.meta.profile",
+        "id": "ResearchStudy.meta.profile",
         "path": "ResearchStudy.meta.profile",
         "short": "Profiles this resource claims to conform to",
         "definition": "A list of profiles (references to [StructureDefinition](structuredefinition.html#) resources) that this resource claims to conform to. The URL is a reference to [StructureDefinition.url]().",
@@ -286,7 +286,7 @@
         "isSummary": true
       },
       {
-        "id": "ResearchStudy:obf-ResearchStudy.meta.security",
+        "id": "ResearchStudy.meta.security",
         "path": "ResearchStudy.meta.security",
         "short": "Security Labels applied to this resource",
         "definition": "Security labels applied to this resource. These tags connect specific resources to the overall security policy and infrastructure.",
@@ -318,7 +318,7 @@
         }
       },
       {
-        "id": "ResearchStudy:obf-ResearchStudy.meta.tag",
+        "id": "ResearchStudy.meta.tag",
         "path": "ResearchStudy.meta.tag",
         "short": "Tags applied to this resource",
         "definition": "Tags applied to this resource. Tags are intended to be used to identify and relate resources to process and workflow, and applications are not required to consider the tags when interpreting the meaning of a resource.",
@@ -346,7 +346,7 @@
         }
       },
       {
-        "id": "ResearchStudy:obf-ResearchStudy.implicitRules",
+        "id": "ResearchStudy.implicitRules",
         "path": "ResearchStudy.implicitRules",
         "short": "A set of rules under which this content was created",
         "definition": "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content.",
@@ -367,7 +367,7 @@
         "isSummary": true
       },
       {
-        "id": "ResearchStudy:obf-ResearchStudy.language",
+        "id": "ResearchStudy.language",
         "path": "ResearchStudy.language",
         "short": "Language of the resource content",
         "definition": "The base language in which the resource is written.",
@@ -409,7 +409,7 @@
         }
       },
       {
-        "id": "ResearchStudy:obf-ResearchStudy.text",
+        "id": "ResearchStudy.text",
         "path": "ResearchStudy.text",
         "short": "Text summary of the resource, for human interpretation",
         "definition": "A human-readable narrative that contains a summary of the resource, and may be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.",
@@ -443,7 +443,7 @@
         ]
       },
       {
-        "id": "ResearchStudy:obf-ResearchStudy.contained",
+        "id": "ResearchStudy.contained",
         "path": "ResearchStudy.contained",
         "short": "Contained, inline Resources",
         "definition": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.",
@@ -473,7 +473,7 @@
         ]
       },
       {
-        "id": "ResearchStudy:obf-ResearchStudy.extension",
+        "id": "ResearchStudy.extension",
         "path": "ResearchStudy.extension",
         "short": "Additional Content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the resource. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
@@ -513,7 +513,7 @@
         }
       },
       {
-        "id": "ResearchStudy:obf-ResearchStudy.extension:purpose",
+        "id": "ResearchStudy.extension:purpose",
         "path": "ResearchStudy.extension",
         "definition": "Description of the intent or use of the item.",
         "min": 0,
@@ -532,7 +532,7 @@
         "sliceName": "purpose"
       },
       {
-        "id": "ResearchStudy:obf-ResearchStudy.extension:purpose.id",
+        "id": "ResearchStudy.extension:purpose.id",
         "path": "ResearchStudy.extension.id",
         "representation": [
           "xmlAttr"
@@ -559,7 +559,7 @@
         ]
       },
       {
-        "id": "ResearchStudy:obf-ResearchStudy.extension:purpose.extension",
+        "id": "ResearchStudy.extension:purpose.extension",
         "path": "ResearchStudy.extension.extension",
         "slicing": {
           "discriminator": [
@@ -598,7 +598,7 @@
         ]
       },
       {
-        "id": "ResearchStudy:obf-ResearchStudy.extension:purpose.url",
+        "id": "ResearchStudy.extension:purpose.url",
         "path": "ResearchStudy.extension.url",
         "representation": [
           "xmlAttr"
@@ -627,7 +627,7 @@
         "fixedUri": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-Purpose-extension"
       },
       {
-        "id": "ResearchStudy:obf-ResearchStudy.extension:purpose.valueCodeableConcept",
+        "id": "ResearchStudy.extension:purpose.valueCodeableConcept",
         "path": "ResearchStudy.extension.valueCodeableConcept",
         "short": "Value of extension",
         "definition": "Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).",
@@ -657,7 +657,7 @@
         }
       },
       {
-        "id": "ResearchStudy:obf-ResearchStudy.extension:researchstudyphase",
+        "id": "ResearchStudy.extension:researchstudyphase",
         "path": "ResearchStudy.extension",
         "definition": "The stage in the progression of a therapy from initial experimental use in humans in clinical trials to post-market evaluation.",
         "min": 0,
@@ -676,7 +676,7 @@
         "sliceName": "researchstudyphase"
       },
       {
-        "id": "ResearchStudy:obf-ResearchStudy.extension:conditionstudied",
+        "id": "ResearchStudy.extension:conditionstudied",
         "path": "ResearchStudy.extension",
         "definition": "The condition that is the focus of the study. For example, In a study to examine risk factors for Lupus, might have as an inclusion criterion 'healthy volunteer', but the target condition code would be a Lupus SNOMED code.",
         "min": 0,
@@ -695,7 +695,7 @@
         "sliceName": "conditionstudied"
       },
       {
-        "id": "ResearchStudy:obf-ResearchStudy.extension:studyobjective",
+        "id": "ResearchStudy.extension:studyobjective",
         "path": "ResearchStudy.extension",
         "definition": "A goal that the study is aiming to achieve in terms of a scientific question to be answered by the analysis of data collected during the study.",
         "min": 0,
@@ -714,7 +714,7 @@
         "sliceName": "studyobjective"
       },
       {
-        "id": "ResearchStudy:obf-ResearchStudy.modifierExtension",
+        "id": "ResearchStudy.modifierExtension",
         "path": "ResearchStudy.modifierExtension",
         "short": "Extensions that cannot be ignored",
         "definition": "May be used to represent additional information that is not part of the basic definition of the resource, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
@@ -744,7 +744,7 @@
         ]
       },
       {
-        "id": "ResearchStudy:obf-ResearchStudy.identifier",
+        "id": "ResearchStudy.identifier",
         "path": "ResearchStudy.identifier",
         "short": "Business Identifier for study",
         "definition": "Identifiers assigned to this research study by the sponsor or other systems.",
@@ -778,7 +778,7 @@
         }
       },
       {
-        "id": "ResearchStudy:obf-ResearchStudy.title",
+        "id": "ResearchStudy.title",
         "path": "ResearchStudy.title",
         "short": "Name for this study",
         "definition": "A short, descriptive user-friendly label for the study.",
@@ -803,7 +803,7 @@
         }
       },
       {
-        "id": "ResearchStudy:obf-ResearchStudy.protocol",
+        "id": "ResearchStudy.protocol",
         "path": "ResearchStudy.protocol",
         "short": "Steps followed in executing study",
         "definition": "The set of steps expected to be performed as part of the execution of the study.",
@@ -828,7 +828,7 @@
         ]
       },
       {
-        "id": "ResearchStudy:obf-ResearchStudy.partOf",
+        "id": "ResearchStudy.partOf",
         "path": "ResearchStudy.partOf",
         "short": "Part of larger study",
         "definition": "A larger research study of which this particular study is a component or step.",
@@ -858,7 +858,7 @@
         }
       },
       {
-        "id": "ResearchStudy:obf-ResearchStudy.status",
+        "id": "ResearchStudy.status",
         "path": "ResearchStudy.status",
         "short": "draft | in-progress | suspended | stopped | completed | entered-in-error",
         "definition": "The current state of the study.",
@@ -897,7 +897,7 @@
         ]
       },
       {
-        "id": "ResearchStudy:obf-ResearchStudy.category",
+        "id": "ResearchStudy.category",
         "path": "ResearchStudy.category",
         "short": "Classifications for the study",
         "definition": "Codes categorizing the type of study such as investigational vs. observational, type of blinding, type of randomization, safety vs. efficacy, etc.",
@@ -927,7 +927,7 @@
         ]
       },
       {
-        "id": "ResearchStudy:obf-ResearchStudy.focus",
+        "id": "ResearchStudy.focus",
         "path": "ResearchStudy.focus",
         "short": "Drugs, devices, conditions, etc. under study",
         "definition": "The condition(s), medication(s), food(s), therapy(ies), device(s) or other concerns or interventions that the study is seeking to gain more information about.",
@@ -961,7 +961,7 @@
         ]
       },
       {
-        "id": "ResearchStudy:obf-ResearchStudy.contact",
+        "id": "ResearchStudy.contact",
         "path": "ResearchStudy.contact",
         "short": "Contact details for the study",
         "definition": "Contact details to assist a user in learning more about or engaging with the study.",
@@ -981,7 +981,7 @@
         ]
       },
       {
-        "id": "ResearchStudy:obf-ResearchStudy.relatedArtifact",
+        "id": "ResearchStudy.relatedArtifact",
         "path": "ResearchStudy.relatedArtifact",
         "short": "References and dependencies",
         "definition": "Citations, references and other related documents.",
@@ -1001,7 +1001,7 @@
         ]
       },
       {
-        "id": "ResearchStudy:obf-ResearchStudy.keyword",
+        "id": "ResearchStudy.keyword",
         "path": "ResearchStudy.keyword",
         "short": "Used to search for the study",
         "definition": "Key terms to aid in searching for or filtering the study.",
@@ -1031,7 +1031,7 @@
         ]
       },
       {
-        "id": "ResearchStudy:obf-ResearchStudy.jurisdiction",
+        "id": "ResearchStudy.jurisdiction",
         "path": "ResearchStudy.jurisdiction",
         "short": "Geographic region(s) for study",
         "definition": "Indicates a country, state or other region where the study is taking place.",
@@ -1062,7 +1062,7 @@
         }
       },
       {
-        "id": "ResearchStudy:obf-ResearchStudy.description",
+        "id": "ResearchStudy.description",
         "path": "ResearchStudy.description",
         "short": "What this is study doing",
         "definition": "A full description of how the study is being conducted.",
@@ -1081,7 +1081,7 @@
         ]
       },
       {
-        "id": "ResearchStudy:obf-ResearchStudy.enrollment",
+        "id": "ResearchStudy.enrollment",
         "path": "ResearchStudy.enrollment",
         "short": "Inclusion & exclusion criteria",
         "definition": "Reference to a Group that defines the criteria for and quantity of subjects participating in the study.  E.g. \" 200 female Europeans between the ages of 20 and 45 with early onset diabetes\".",
@@ -1110,7 +1110,7 @@
         ]
       },
       {
-        "id": "ResearchStudy:obf-ResearchStudy.period",
+        "id": "ResearchStudy.period",
         "path": "ResearchStudy.period",
         "short": "When the study began and ended",
         "definition": "Identifies the start date and the expected (or actual, depending on status) end date for the study.",
@@ -1138,7 +1138,7 @@
         ]
       },
       {
-        "id": "ResearchStudy:obf-ResearchStudy.sponsor",
+        "id": "ResearchStudy.sponsor",
         "path": "ResearchStudy.sponsor",
         "short": "Organization responsible for the study",
         "definition": "The organization responsible for the execution of the study.",
@@ -1163,7 +1163,7 @@
         ]
       },
       {
-        "id": "ResearchStudy:obf-ResearchStudy.principalInvestigator",
+        "id": "ResearchStudy.principalInvestigator",
         "path": "ResearchStudy.principalInvestigator",
         "short": "The individual responsible for the study",
         "definition": "Indicates the individual who has primary oversite of the execution of the study.",
@@ -1188,7 +1188,7 @@
         ]
       },
       {
-        "id": "ResearchStudy:obf-ResearchStudy.site",
+        "id": "ResearchStudy.site",
         "path": "ResearchStudy.site",
         "short": "Location involved in study execution",
         "definition": "Clinic, hospital or other healthcare location that is participating in the study.",
@@ -1213,7 +1213,7 @@
         ]
       },
       {
-        "id": "ResearchStudy:obf-ResearchStudy.reasonStopped",
+        "id": "ResearchStudy.reasonStopped",
         "path": "ResearchStudy.reasonStopped",
         "short": "Reason for terminating study early",
         "definition": "A description and/or code explaining the premature termination of the study.",
@@ -1237,7 +1237,7 @@
         ]
       },
       {
-        "id": "ResearchStudy:obf-ResearchStudy.note",
+        "id": "ResearchStudy.note",
         "path": "ResearchStudy.note",
         "short": "Comments made about the event",
         "definition": "Comments made about the event by the performer, subject or other participants.",
@@ -1251,7 +1251,7 @@
         ]
       },
       {
-        "id": "ResearchStudy:obf-ResearchStudy.arm",
+        "id": "ResearchStudy.arm",
         "path": "ResearchStudy.arm",
         "short": "Defined path through the study for a subject",
         "definition": "Describes an expected sequence of events for one of the participants of a study.  E.g. Exposure to drug A, wash-out, exposure to drug B, wash-out, follow-up.",
@@ -1280,7 +1280,7 @@
         ]
       },
       {
-        "id": "ResearchStudy:obf-ResearchStudy.arm.id",
+        "id": "ResearchStudy.arm.id",
         "path": "ResearchStudy.arm.id",
         "representation": [
           "xmlAttr"
@@ -1307,7 +1307,7 @@
         ]
       },
       {
-        "id": "ResearchStudy:obf-ResearchStudy.arm.extension",
+        "id": "ResearchStudy.arm.extension",
         "path": "ResearchStudy.arm.extension",
         "short": "Additional Content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
@@ -1336,7 +1336,7 @@
         ]
       },
       {
-        "id": "ResearchStudy:obf-ResearchStudy.arm.modifierExtension",
+        "id": "ResearchStudy.arm.modifierExtension",
         "path": "ResearchStudy.arm.modifierExtension",
         "short": "Extensions that cannot be ignored",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
@@ -1368,7 +1368,7 @@
         ]
       },
       {
-        "id": "ResearchStudy:obf-ResearchStudy.arm.name",
+        "id": "ResearchStudy.arm.name",
         "path": "ResearchStudy.arm.name",
         "short": "Label for study arm",
         "definition": "Unique, human-readable label for this arm of the study.",
@@ -1387,7 +1387,7 @@
         ]
       },
       {
-        "id": "ResearchStudy:obf-ResearchStudy.arm.code",
+        "id": "ResearchStudy.arm.code",
         "path": "ResearchStudy.arm.code",
         "short": "Categorization of study arm",
         "definition": "Categorization of study arm, e.g. experimental, active comparator, placebo comparater.",
@@ -1412,7 +1412,7 @@
         }
       },
       {
-        "id": "ResearchStudy:obf-ResearchStudy.arm.description",
+        "id": "ResearchStudy.arm.description",
         "path": "ResearchStudy.arm.description",
         "short": "Short explanation of study path",
         "definition": "A succinct description of the path through the study that would be followed by a subject adhering to this arm.",
@@ -1435,17 +1435,17 @@
   "differential": {
     "element": [
       {
-        "id": "ResearchStudy:obf-ResearchStudy",
+        "id": "ResearchStudy",
         "path": "ResearchStudy",
         "short": "obf-ResearchStudy",
         "definition": "A clinical trial or similar research study. Reference: list of FDA data elements describing a research study: prsinfo.clinicaltrials.gov/definitions.html"
       },
       {
-        "id": "ResearchStudy:obf-ResearchStudy.meta",
+        "id": "ResearchStudy.meta",
         "path": "ResearchStudy.meta"
       },
       {
-        "id": "ResearchStudy:obf-ResearchStudy.meta.extension:sourcesystem",
+        "id": "ResearchStudy.meta.extension:sourcesystem",
         "path": "ResearchStudy.meta.extension",
         "definition": "FHIR: This provides a minimal amount of Provenance information that can be used to track or differentiate the source of information in the resource. The source may identify another FHIR server, document, message, database, etc.\nFHIM: Identifies the computer system that created the medical record. This optional field may also be used to indicate that the medical record was originally created by a different organization from the one that is currently storing or utilizing the record in that the assigning authority of the Id could be set to that originating organization. This property is optional, as some systems will assume that all records that it contains originated in that system, however it is anticipated that it will become increasingly commonplace for records from multiple systems and organizations will be comingled in order to provide a complete picture of the patient's health record.",
         "min": 0,
@@ -1464,7 +1464,7 @@
         "sliceName": "sourcesystem"
       },
       {
-        "id": "ResearchStudy:obf-ResearchStudy.extension",
+        "id": "ResearchStudy.extension",
         "path": "ResearchStudy.extension",
         "slicing": {
           "id": "1",
@@ -1479,7 +1479,7 @@
         }
       },
       {
-        "id": "ResearchStudy:obf-ResearchStudy.extension:purpose",
+        "id": "ResearchStudy.extension:purpose",
         "path": "ResearchStudy.extension",
         "definition": "Description of the intent or use of the item.",
         "min": 0,
@@ -1498,7 +1498,7 @@
         "sliceName": "purpose"
       },
       {
-        "id": "ResearchStudy:obf-ResearchStudy.extension:purpose.valueCodeableConcept",
+        "id": "ResearchStudy.extension:purpose.valueCodeableConcept",
         "path": "ResearchStudy.extension.valueCodeableConcept",
         "binding": {
           "strength": "extensible",
@@ -1508,7 +1508,7 @@
         }
       },
       {
-        "id": "ResearchStudy:obf-ResearchStudy.extension:researchstudyphase",
+        "id": "ResearchStudy.extension:researchstudyphase",
         "path": "ResearchStudy.extension",
         "definition": "The stage in the progression of a therapy from initial experimental use in humans in clinical trials to post-market evaluation.",
         "min": 0,
@@ -1527,7 +1527,7 @@
         "sliceName": "researchstudyphase"
       },
       {
-        "id": "ResearchStudy:obf-ResearchStudy.extension:conditionstudied",
+        "id": "ResearchStudy.extension:conditionstudied",
         "path": "ResearchStudy.extension",
         "definition": "The condition that is the focus of the study. For example, In a study to examine risk factors for Lupus, might have as an inclusion criterion 'healthy volunteer', but the target condition code would be a Lupus SNOMED code.",
         "min": 0,
@@ -1546,7 +1546,7 @@
         "sliceName": "conditionstudied"
       },
       {
-        "id": "ResearchStudy:obf-ResearchStudy.extension:studyobjective",
+        "id": "ResearchStudy.extension:studyobjective",
         "path": "ResearchStudy.extension",
         "definition": "A goal that the study is aiming to achieve in terms of a scientific question to be answered by the analysis of data collected during the study.",
         "min": 0,
@@ -1565,7 +1565,7 @@
         "sliceName": "studyobjective"
       },
       {
-        "id": "ResearchStudy:obf-ResearchStudy.identifier",
+        "id": "ResearchStudy.identifier",
         "path": "ResearchStudy.identifier",
         "min": 1,
         "max": "1",
@@ -1576,7 +1576,7 @@
         }
       },
       {
-        "id": "ResearchStudy:obf-ResearchStudy.title",
+        "id": "ResearchStudy.title",
         "path": "ResearchStudy.title",
         "min": 1,
         "max": "1",
@@ -1587,7 +1587,7 @@
         }
       },
       {
-        "id": "ResearchStudy:obf-ResearchStudy.partOf",
+        "id": "ResearchStudy.partOf",
         "path": "ResearchStudy.partOf",
         "min": 0,
         "max": "1",
@@ -1604,7 +1604,7 @@
         ]
       },
       {
-        "id": "ResearchStudy:obf-ResearchStudy.relatedArtifact",
+        "id": "ResearchStudy.relatedArtifact",
         "path": "ResearchStudy.relatedArtifact",
         "type": [
           {
@@ -1614,7 +1614,7 @@
         ]
       },
       {
-        "id": "ResearchStudy:obf-ResearchStudy.enrollment",
+        "id": "ResearchStudy.enrollment",
         "path": "ResearchStudy.enrollment",
         "type": [
           {
@@ -1624,7 +1624,7 @@
         ]
       },
       {
-        "id": "ResearchStudy:obf-ResearchStudy.sponsor",
+        "id": "ResearchStudy.sponsor",
         "path": "ResearchStudy.sponsor",
         "type": [
           {
@@ -1634,7 +1634,7 @@
         ]
       },
       {
-        "id": "ResearchStudy:obf-ResearchStudy.principalInvestigator",
+        "id": "ResearchStudy.principalInvestigator",
         "path": "ResearchStudy.principalInvestigator",
         "type": [
           {
@@ -1644,7 +1644,7 @@
         ]
       },
       {
-        "id": "ResearchStudy:obf-ResearchStudy.site",
+        "id": "ResearchStudy.site",
         "path": "ResearchStudy.site",
         "type": [
           {
@@ -1654,7 +1654,7 @@
         ]
       },
       {
-        "id": "ResearchStudy:obf-ResearchStudy.note",
+        "id": "ResearchStudy.note",
         "path": "ResearchStudy.note",
         "type": [
           {
@@ -1664,11 +1664,11 @@
         ]
       },
       {
-        "id": "ResearchStudy:obf-ResearchStudy.arm",
+        "id": "ResearchStudy.arm",
         "path": "ResearchStudy.arm"
       },
       {
-        "id": "ResearchStudy:obf-ResearchStudy.arm.code",
+        "id": "ResearchStudy.arm.code",
         "path": "ResearchStudy.arm.code",
         "binding": {
           "strength": "required",

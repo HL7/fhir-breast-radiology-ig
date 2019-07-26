@@ -8,7 +8,7 @@
   "url": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Medication",
   "name": "Medication",
   "status": "draft",
-  "date": "2019-07-24",
+  "date": "2019-07-26",
   "publisher": "Hl7",
   "contact": [
     {
@@ -67,7 +67,7 @@
   "snapshot": {
     "element": [
       {
-        "id": "Medication:obf-Medication",
+        "id": "Medication",
         "path": "Medication",
         "short": "obf-Medication",
         "definition": "A type of prescription drug or over-the-counter drug that is used to prevent, treat, or relieve symptoms of a disease or abnormal condition, but excluding vaccines.\nIn FHIR DSTU2 and STU3, Medication lacks the identifier attribute, which is included in SHR as an extension.\nDSTU2 lacks the status attribute, which is required by US-Core.\nBatch is 0..1 in FHIR R4, and accordingly is restricted here.",
@@ -137,7 +137,7 @@
         ]
       },
       {
-        "id": "Medication:obf-Medication.id",
+        "id": "Medication.id",
         "path": "Medication.id",
         "short": "Logical id of this artifact",
         "definition": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.",
@@ -157,7 +157,7 @@
         "isSummary": true
       },
       {
-        "id": "Medication:obf-Medication.meta",
+        "id": "Medication.meta",
         "path": "Medication.meta",
         "short": "Metadata about the resource",
         "definition": "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource.",
@@ -176,7 +176,7 @@
         "isSummary": true
       },
       {
-        "id": "Medication:obf-Medication.meta.id",
+        "id": "Medication.meta.id",
         "path": "Medication.meta.id",
         "representation": [
           "xmlAttr"
@@ -203,7 +203,7 @@
         ]
       },
       {
-        "id": "Medication:obf-Medication.meta.extension",
+        "id": "Medication.meta.extension",
         "path": "Medication.meta.extension",
         "slicing": {
           "discriminator": [
@@ -242,7 +242,7 @@
         ]
       },
       {
-        "id": "Medication:obf-Medication.meta.extension:sourcesystem",
+        "id": "Medication.meta.extension:sourcesystem",
         "path": "Medication.meta.extension",
         "definition": "FHIR: This provides a minimal amount of Provenance information that can be used to track or differentiate the source of information in the resource. The source may identify another FHIR server, document, message, database, etc.\nFHIM: Identifies the computer system that created the medical record. This optional field may also be used to indicate that the medical record was originally created by a different organization from the one that is currently storing or utilizing the record in that the assigning authority of the Id could be set to that originating organization. This property is optional, as some systems will assume that all records that it contains originated in that system, however it is anticipated that it will become increasingly commonplace for records from multiple systems and organizations will be comingled in order to provide a complete picture of the patient's health record.",
         "min": 0,
@@ -261,7 +261,7 @@
         "sliceName": "sourcesystem"
       },
       {
-        "id": "Medication:obf-Medication.meta.versionId",
+        "id": "Medication.meta.versionId",
         "path": "Medication.meta.versionId",
         "short": "Version specific identifier",
         "definition": "The version specific identifier, as it appears in the version portion of the URL. This values changes when the resource is created, updated, or deleted.",
@@ -276,7 +276,7 @@
         "isSummary": true
       },
       {
-        "id": "Medication:obf-Medication.meta.lastUpdated",
+        "id": "Medication.meta.lastUpdated",
         "path": "Medication.meta.lastUpdated",
         "short": "When the resource version last changed",
         "definition": "When the resource last changed - e.g. when the version changed.",
@@ -291,7 +291,7 @@
         "isSummary": true
       },
       {
-        "id": "Medication:obf-Medication.meta.profile",
+        "id": "Medication.meta.profile",
         "path": "Medication.meta.profile",
         "short": "Profiles this resource claims to conform to",
         "definition": "A list of profiles (references to [StructureDefinition](structuredefinition.html#) resources) that this resource claims to conform to. The URL is a reference to [StructureDefinition.url]().",
@@ -306,7 +306,7 @@
         "isSummary": true
       },
       {
-        "id": "Medication:obf-Medication.meta.security",
+        "id": "Medication.meta.security",
         "path": "Medication.meta.security",
         "short": "Security Labels applied to this resource",
         "definition": "Security labels applied to this resource. These tags connect specific resources to the overall security policy and infrastructure.",
@@ -338,7 +338,7 @@
         }
       },
       {
-        "id": "Medication:obf-Medication.meta.tag",
+        "id": "Medication.meta.tag",
         "path": "Medication.meta.tag",
         "short": "Tags applied to this resource",
         "definition": "Tags applied to this resource. Tags are intended to be used to identify and relate resources to process and workflow, and applications are not required to consider the tags when interpreting the meaning of a resource.",
@@ -366,7 +366,7 @@
         }
       },
       {
-        "id": "Medication:obf-Medication.implicitRules",
+        "id": "Medication.implicitRules",
         "path": "Medication.implicitRules",
         "short": "A set of rules under which this content was created",
         "definition": "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content.",
@@ -387,7 +387,7 @@
         "isSummary": true
       },
       {
-        "id": "Medication:obf-Medication.language",
+        "id": "Medication.language",
         "path": "Medication.language",
         "short": "Language of the resource content",
         "definition": "The base language in which the resource is written.",
@@ -429,7 +429,7 @@
         }
       },
       {
-        "id": "Medication:obf-Medication.text",
+        "id": "Medication.text",
         "path": "Medication.text",
         "short": "Text summary of the resource, for human interpretation",
         "definition": "A human-readable narrative that contains a summary of the resource, and may be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.",
@@ -463,7 +463,7 @@
         ]
       },
       {
-        "id": "Medication:obf-Medication.contained",
+        "id": "Medication.contained",
         "path": "Medication.contained",
         "short": "Contained, inline Resources",
         "definition": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.",
@@ -493,7 +493,7 @@
         ]
       },
       {
-        "id": "Medication:obf-Medication.extension",
+        "id": "Medication.extension",
         "path": "Medication.extension",
         "short": "Additional Content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the resource. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
@@ -533,7 +533,7 @@
         }
       },
       {
-        "id": "Medication:obf-Medication.extension:identifier",
+        "id": "Medication.extension:identifier",
         "path": "Medication.extension",
         "definition": "Business identifier or external id for this resource.",
         "min": 0,
@@ -552,7 +552,7 @@
         "sliceName": "identifier"
       },
       {
-        "id": "Medication:obf-Medication.extension:partof",
+        "id": "Medication.extension:partof",
         "path": "Medication.extension",
         "definition": "The larger entity that the asserted item is a portion of. For example, an organization part of a larger organization, or an encounter with a hospitalist might be part of a larger hospitalization encounter.",
         "min": 0,
@@ -571,7 +571,7 @@
         "sliceName": "partof"
       },
       {
-        "id": "Medication:obf-Medication.extension:packageamount",
+        "id": "Medication.extension:packageamount",
         "path": "Medication.extension",
         "definition": "Specific amount of the drug in the packaged product. For example, when specifying a product that has the same strength (For example, Insulin glargine 100 unit per mL solution for injection), this attribute provides additional clarification of the package amount (For example, 3 mL, 10mL, etc.).",
         "min": 0,
@@ -590,7 +590,7 @@
         "sliceName": "packageamount"
       },
       {
-        "id": "Medication:obf-Medication.modifierExtension",
+        "id": "Medication.modifierExtension",
         "path": "Medication.modifierExtension",
         "short": "Extensions that cannot be ignored",
         "definition": "May be used to represent additional information that is not part of the basic definition of the resource, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
@@ -620,7 +620,7 @@
         ]
       },
       {
-        "id": "Medication:obf-Medication.code",
+        "id": "Medication.code",
         "path": "Medication.code",
         "short": "Codes that identify this medication",
         "definition": "A code (or set of codes) that specify this medication, or a textual description if no code is available. Usage note: This could be a standard medication code such as a code from RxNorm, SNOMED CT, IDMP etc. It could also be a national or local formulary code, optionally with translations to other code systems.",
@@ -670,7 +670,7 @@
         ]
       },
       {
-        "id": "Medication:obf-Medication.status",
+        "id": "Medication.status",
         "path": "Medication.status",
         "short": "active | inactive | entered-in-error",
         "definition": "A code to indicate if the medication is in active use.",
@@ -709,7 +709,7 @@
         ]
       },
       {
-        "id": "Medication:obf-Medication.isBrand",
+        "id": "Medication.isBrand",
         "path": "Medication.isBrand",
         "short": "True if a brand",
         "definition": "Set to true if the item is attributable to a specific manufacturer.",
@@ -742,7 +742,7 @@
         ]
       },
       {
-        "id": "Medication:obf-Medication.isOverTheCounter",
+        "id": "Medication.isOverTheCounter",
         "path": "Medication.isOverTheCounter",
         "short": "True if medication does not require a prescription",
         "definition": "Set to true if the medication can be obtained without an order from a prescriber.",
@@ -771,7 +771,7 @@
         ]
       },
       {
-        "id": "Medication:obf-Medication.manufacturer",
+        "id": "Medication.manufacturer",
         "path": "Medication.manufacturer",
         "short": "Manufacturer of the item",
         "definition": "Describes the details of the manufacturer of the medication product.  This is not intended to represent the distributor of a medication product.",
@@ -809,7 +809,7 @@
         ]
       },
       {
-        "id": "Medication:obf-Medication.form",
+        "id": "Medication.form",
         "path": "Medication.form",
         "short": "powder | tablets | capsule +",
         "definition": "Describes the form of the item.  Powder; tablets; capsule.",
@@ -855,7 +855,7 @@
         ]
       },
       {
-        "id": "Medication:obf-Medication.ingredient",
+        "id": "Medication.ingredient",
         "path": "Medication.ingredient",
         "short": "Active or inactive ingredient",
         "definition": "Identifies a particular constituent of interest in the product.",
@@ -890,7 +890,7 @@
         ]
       },
       {
-        "id": "Medication:obf-Medication.ingredient.id",
+        "id": "Medication.ingredient.id",
         "path": "Medication.ingredient.id",
         "representation": [
           "xmlAttr"
@@ -917,7 +917,7 @@
         ]
       },
       {
-        "id": "Medication:obf-Medication.ingredient.extension",
+        "id": "Medication.ingredient.extension",
         "path": "Medication.ingredient.extension",
         "short": "Additional Content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
@@ -946,7 +946,7 @@
         ]
       },
       {
-        "id": "Medication:obf-Medication.ingredient.modifierExtension",
+        "id": "Medication.ingredient.modifierExtension",
         "path": "Medication.ingredient.modifierExtension",
         "short": "Extensions that cannot be ignored",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
@@ -978,7 +978,7 @@
         ]
       },
       {
-        "id": "Medication:obf-Medication.ingredient.item[x]",
+        "id": "Medication.ingredient.item[x]",
         "path": "Medication.ingredient.item[x]",
         "short": "The product contained",
         "definition": "The actual ingredient - either a substance (simple ingredient) or another medication.",
@@ -1018,7 +1018,7 @@
         ]
       },
       {
-        "id": "Medication:obf-Medication.ingredient.isActive",
+        "id": "Medication.ingredient.isActive",
         "path": "Medication.ingredient.isActive",
         "short": "Active ingredient indicator",
         "definition": "Indication of whether this ingredient affects the therapeutic action of the drug.",
@@ -1043,7 +1043,7 @@
         ]
       },
       {
-        "id": "Medication:obf-Medication.ingredient.amount",
+        "id": "Medication.ingredient.amount",
         "path": "Medication.ingredient.amount",
         "short": "Quantity of ingredient present",
         "definition": "Specifies how many (or how much) of the items there are in this Medication.  For example, 250 mg per tablet.  This is expressed as a ratio where the numerator is 250mg and the denominator is 1 tablet.",
@@ -1075,7 +1075,7 @@
         ]
       },
       {
-        "id": "Medication:obf-Medication.package",
+        "id": "Medication.package",
         "path": "Medication.package",
         "short": "Details about packaged medications",
         "definition": "Information that only applies to packages (not products).",
@@ -1113,7 +1113,7 @@
         ]
       },
       {
-        "id": "Medication:obf-Medication.package.id",
+        "id": "Medication.package.id",
         "path": "Medication.package.id",
         "representation": [
           "xmlAttr"
@@ -1140,7 +1140,7 @@
         ]
       },
       {
-        "id": "Medication:obf-Medication.package.extension",
+        "id": "Medication.package.extension",
         "path": "Medication.package.extension",
         "short": "Additional Content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
@@ -1169,7 +1169,7 @@
         ]
       },
       {
-        "id": "Medication:obf-Medication.package.modifierExtension",
+        "id": "Medication.package.modifierExtension",
         "path": "Medication.package.modifierExtension",
         "short": "Extensions that cannot be ignored",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
@@ -1201,7 +1201,7 @@
         ]
       },
       {
-        "id": "Medication:obf-Medication.package.container",
+        "id": "Medication.package.container",
         "path": "Medication.package.container",
         "short": "E.g. box, vial, blister-pack",
         "definition": "The kind of container that this package comes as.",
@@ -1242,7 +1242,7 @@
         ]
       },
       {
-        "id": "Medication:obf-Medication.package.content",
+        "id": "Medication.package.content",
         "path": "Medication.package.content",
         "short": "What is  in the package",
         "definition": "A set of components that go to make up the described item.",
@@ -1280,7 +1280,7 @@
         ]
       },
       {
-        "id": "Medication:obf-Medication.package.content.id",
+        "id": "Medication.package.content.id",
         "path": "Medication.package.content.id",
         "representation": [
           "xmlAttr"
@@ -1307,7 +1307,7 @@
         ]
       },
       {
-        "id": "Medication:obf-Medication.package.content.extension",
+        "id": "Medication.package.content.extension",
         "path": "Medication.package.content.extension",
         "short": "Additional Content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
@@ -1336,7 +1336,7 @@
         ]
       },
       {
-        "id": "Medication:obf-Medication.package.content.modifierExtension",
+        "id": "Medication.package.content.modifierExtension",
         "path": "Medication.package.content.modifierExtension",
         "short": "Extensions that cannot be ignored",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
@@ -1368,7 +1368,7 @@
         ]
       },
       {
-        "id": "Medication:obf-Medication.package.content.item[x]",
+        "id": "Medication.package.content.item[x]",
         "path": "Medication.package.content.item[x]",
         "short": "The item in the package",
         "definition": "Identifies one of the items in the package.",
@@ -1400,7 +1400,7 @@
         ]
       },
       {
-        "id": "Medication:obf-Medication.package.content.amount",
+        "id": "Medication.package.content.amount",
         "path": "Medication.package.content.amount",
         "short": "Quantity present in the package",
         "definition": "The amount of the product that is in the package.",
@@ -1429,7 +1429,7 @@
         ]
       },
       {
-        "id": "Medication:obf-Medication.package.batch",
+        "id": "Medication.package.batch",
         "path": "Medication.package.batch",
         "short": "Identifies a single production run",
         "definition": "Information about a group of medication produced or packaged from one production run.",
@@ -1467,7 +1467,7 @@
         ]
       },
       {
-        "id": "Medication:obf-Medication.package.batch.id",
+        "id": "Medication.package.batch.id",
         "path": "Medication.package.batch.id",
         "representation": [
           "xmlAttr"
@@ -1494,7 +1494,7 @@
         ]
       },
       {
-        "id": "Medication:obf-Medication.package.batch.extension",
+        "id": "Medication.package.batch.extension",
         "path": "Medication.package.batch.extension",
         "short": "Additional Content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
@@ -1523,7 +1523,7 @@
         ]
       },
       {
-        "id": "Medication:obf-Medication.package.batch.modifierExtension",
+        "id": "Medication.package.batch.modifierExtension",
         "path": "Medication.package.batch.modifierExtension",
         "short": "Extensions that cannot be ignored",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
@@ -1555,7 +1555,7 @@
         ]
       },
       {
-        "id": "Medication:obf-Medication.package.batch.lotNumber",
+        "id": "Medication.package.batch.lotNumber",
         "path": "Medication.package.batch.lotNumber",
         "short": "Identifier assigned to batch",
         "definition": "The assigned lot number of a batch of the specified product.",
@@ -1587,7 +1587,7 @@
         ]
       },
       {
-        "id": "Medication:obf-Medication.package.batch.expirationDate",
+        "id": "Medication.package.batch.expirationDate",
         "path": "Medication.package.batch.expirationDate",
         "short": "When batch will expire",
         "definition": "When this specific batch of product will expire.",
@@ -1619,7 +1619,7 @@
         ]
       },
       {
-        "id": "Medication:obf-Medication.image",
+        "id": "Medication.image",
         "path": "Medication.image",
         "short": "Picture of the medication",
         "definition": "Photo(s) or graphic representation(s) of the medication.",
@@ -1648,18 +1648,18 @@
   "differential": {
     "element": [
       {
-        "id": "Medication:obf-Medication",
+        "id": "Medication",
         "path": "Medication",
         "short": "obf-Medication",
         "definition": "A type of prescription drug or over-the-counter drug that is used to prevent, treat, or relieve symptoms of a disease or abnormal condition, but excluding vaccines.\nIn FHIR DSTU2 and STU3, Medication lacks the identifier attribute, which is included in SHR as an extension.\nDSTU2 lacks the status attribute, which is required by US-Core.\nBatch is 0..1 in FHIR R4, and accordingly is restricted here.",
         "mustSupport": false
       },
       {
-        "id": "Medication:obf-Medication.meta",
+        "id": "Medication.meta",
         "path": "Medication.meta"
       },
       {
-        "id": "Medication:obf-Medication.meta.extension:sourcesystem",
+        "id": "Medication.meta.extension:sourcesystem",
         "path": "Medication.meta.extension",
         "definition": "FHIR: This provides a minimal amount of Provenance information that can be used to track or differentiate the source of information in the resource. The source may identify another FHIR server, document, message, database, etc.\nFHIM: Identifies the computer system that created the medical record. This optional field may also be used to indicate that the medical record was originally created by a different organization from the one that is currently storing or utilizing the record in that the assigning authority of the Id could be set to that originating organization. This property is optional, as some systems will assume that all records that it contains originated in that system, however it is anticipated that it will become increasingly commonplace for records from multiple systems and organizations will be comingled in order to provide a complete picture of the patient's health record.",
         "min": 0,
@@ -1678,7 +1678,7 @@
         "sliceName": "sourcesystem"
       },
       {
-        "id": "Medication:obf-Medication.extension",
+        "id": "Medication.extension",
         "path": "Medication.extension",
         "slicing": {
           "id": "1",
@@ -1693,7 +1693,7 @@
         }
       },
       {
-        "id": "Medication:obf-Medication.extension:identifier",
+        "id": "Medication.extension:identifier",
         "path": "Medication.extension",
         "definition": "Business identifier or external id for this resource.",
         "min": 0,
@@ -1712,7 +1712,7 @@
         "sliceName": "identifier"
       },
       {
-        "id": "Medication:obf-Medication.extension:partof",
+        "id": "Medication.extension:partof",
         "path": "Medication.extension",
         "definition": "The larger entity that the asserted item is a portion of. For example, an organization part of a larger organization, or an encounter with a hospitalist might be part of a larger hospitalization encounter.",
         "min": 0,
@@ -1731,7 +1731,7 @@
         "sliceName": "partof"
       },
       {
-        "id": "Medication:obf-Medication.extension:packageamount",
+        "id": "Medication.extension:packageamount",
         "path": "Medication.extension",
         "definition": "Specific amount of the drug in the packaged product. For example, when specifying a product that has the same strength (For example, Insulin glargine 100 unit per mL solution for injection), this attribute provides additional clarification of the package amount (For example, 3 mL, 10mL, etc.).",
         "min": 0,
@@ -1750,7 +1750,7 @@
         "sliceName": "packageamount"
       },
       {
-        "id": "Medication:obf-Medication.manufacturer",
+        "id": "Medication.manufacturer",
         "path": "Medication.manufacturer",
         "type": [
           {
@@ -1760,7 +1760,7 @@
         ]
       },
       {
-        "id": "Medication:obf-Medication.form",
+        "id": "Medication.form",
         "path": "Medication.form",
         "binding": {
           "extension": [
@@ -1777,11 +1777,11 @@
         }
       },
       {
-        "id": "Medication:obf-Medication.ingredient",
+        "id": "Medication.ingredient",
         "path": "Medication.ingredient"
       },
       {
-        "id": "Medication:obf-Medication.ingredient.item[x]",
+        "id": "Medication.ingredient.item[x]",
         "path": "Medication.ingredient.item[x]",
         "type": [
           {
@@ -1798,11 +1798,11 @@
         ]
       },
       {
-        "id": "Medication:obf-Medication.package",
+        "id": "Medication.package",
         "path": "Medication.package"
       },
       {
-        "id": "Medication:obf-Medication.package.batch",
+        "id": "Medication.package.batch",
         "path": "Medication.package.batch",
         "min": 0,
         "max": "1"

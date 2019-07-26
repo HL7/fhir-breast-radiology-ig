@@ -8,7 +8,7 @@
   "url": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/breastrad-BreastRadiologyReport",
   "name": "BreastRadiologyReport",
   "status": "draft",
-  "date": "2019-07-24",
+  "date": "2019-07-26",
   "publisher": "Hl7",
   "contact": [
     {
@@ -53,7 +53,7 @@
   "snapshot": {
     "element": [
       {
-        "id": "DiagnosticReport:breastrad-BreastRadiologyReport",
+        "id": "DiagnosticReport",
         "path": "DiagnosticReport",
         "short": "breastrad-BreastRadiologyReport",
         "definition": "Breast Radiology Diagnostic Report.\n<br>This diagnostic report is the base of the Breast Radiology Report, and contains a summary of the report findings.\n<br>Detailed information about the reports document is contained in the Breast Radiology Document linked to by the [resultComposition] field.",
@@ -126,7 +126,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:breastrad-BreastRadiologyReport.id",
+        "id": "DiagnosticReport.id",
         "path": "DiagnosticReport.id",
         "short": "Logical id of this artifact",
         "definition": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.",
@@ -146,7 +146,7 @@
         "isSummary": true
       },
       {
-        "id": "DiagnosticReport:breastrad-BreastRadiologyReport.meta",
+        "id": "DiagnosticReport.meta",
         "path": "DiagnosticReport.meta",
         "short": "Metadata about the resource",
         "definition": "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource.",
@@ -165,7 +165,7 @@
         "isSummary": true
       },
       {
-        "id": "DiagnosticReport:breastrad-BreastRadiologyReport.meta.id",
+        "id": "DiagnosticReport.meta.id",
         "path": "DiagnosticReport.meta.id",
         "representation": [
           "xmlAttr"
@@ -192,7 +192,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:breastrad-BreastRadiologyReport.meta.extension",
+        "id": "DiagnosticReport.meta.extension",
         "path": "DiagnosticReport.meta.extension",
         "slicing": {
           "discriminator": [
@@ -231,7 +231,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:breastrad-BreastRadiologyReport.meta.extension:sourcesystem",
+        "id": "DiagnosticReport.meta.extension:sourcesystem",
         "path": "DiagnosticReport.meta.extension",
         "definition": "FHIR: This provides a minimal amount of Provenance information that can be used to track or differentiate the source of information in the resource. The source may identify another FHIR server, document, message, database, etc.\nFHIM: Identifies the computer system that created the medical record. This optional field may also be used to indicate that the medical record was originally created by a different organization from the one that is currently storing or utilizing the record in that the assigning authority of the Id could be set to that originating organization. This property is optional, as some systems will assume that all records that it contains originated in that system, however it is anticipated that it will become increasingly commonplace for records from multiple systems and organizations will be comingled in order to provide a complete picture of the patient's health record.",
         "min": 0,
@@ -250,7 +250,7 @@
         "sliceName": "sourcesystem"
       },
       {
-        "id": "DiagnosticReport:breastrad-BreastRadiologyReport.meta.versionId",
+        "id": "DiagnosticReport.meta.versionId",
         "path": "DiagnosticReport.meta.versionId",
         "short": "Version specific identifier",
         "definition": "The version specific identifier, as it appears in the version portion of the URL. This values changes when the resource is created, updated, or deleted.",
@@ -265,7 +265,7 @@
         "isSummary": true
       },
       {
-        "id": "DiagnosticReport:breastrad-BreastRadiologyReport.meta.lastUpdated",
+        "id": "DiagnosticReport.meta.lastUpdated",
         "path": "DiagnosticReport.meta.lastUpdated",
         "short": "When the resource version last changed",
         "definition": "When the resource last changed - e.g. when the version changed.",
@@ -280,7 +280,7 @@
         "isSummary": true
       },
       {
-        "id": "DiagnosticReport:breastrad-BreastRadiologyReport.meta.profile",
+        "id": "DiagnosticReport.meta.profile",
         "path": "DiagnosticReport.meta.profile",
         "short": "Profiles this resource claims to conform to",
         "definition": "A list of profiles (references to [StructureDefinition](structuredefinition.html#) resources) that this resource claims to conform to. The URL is a reference to [StructureDefinition.url]().",
@@ -295,7 +295,7 @@
         "isSummary": true
       },
       {
-        "id": "DiagnosticReport:breastrad-BreastRadiologyReport.meta.security",
+        "id": "DiagnosticReport.meta.security",
         "path": "DiagnosticReport.meta.security",
         "short": "Security Labels applied to this resource",
         "definition": "Security labels applied to this resource. These tags connect specific resources to the overall security policy and infrastructure.",
@@ -327,7 +327,7 @@
         }
       },
       {
-        "id": "DiagnosticReport:breastrad-BreastRadiologyReport.meta.tag",
+        "id": "DiagnosticReport.meta.tag",
         "path": "DiagnosticReport.meta.tag",
         "short": "Tags applied to this resource",
         "definition": "Tags applied to this resource. Tags are intended to be used to identify and relate resources to process and workflow, and applications are not required to consider the tags when interpreting the meaning of a resource.",
@@ -355,7 +355,7 @@
         }
       },
       {
-        "id": "DiagnosticReport:breastrad-BreastRadiologyReport.implicitRules",
+        "id": "DiagnosticReport.implicitRules",
         "path": "DiagnosticReport.implicitRules",
         "short": "A set of rules under which this content was created",
         "definition": "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content.",
@@ -376,7 +376,7 @@
         "isSummary": true
       },
       {
-        "id": "DiagnosticReport:breastrad-BreastRadiologyReport.language",
+        "id": "DiagnosticReport.language",
         "path": "DiagnosticReport.language",
         "short": "Language of the resource content",
         "definition": "The base language in which the resource is written.",
@@ -418,7 +418,7 @@
         }
       },
       {
-        "id": "DiagnosticReport:breastrad-BreastRadiologyReport.text",
+        "id": "DiagnosticReport.text",
         "path": "DiagnosticReport.text",
         "short": "Text summary of the resource, for human interpretation",
         "definition": "A human-readable narrative that contains a summary of the resource, and may be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.",
@@ -452,7 +452,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:breastrad-BreastRadiologyReport.contained",
+        "id": "DiagnosticReport.contained",
         "path": "DiagnosticReport.contained",
         "short": "Contained, inline Resources",
         "definition": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.",
@@ -482,7 +482,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:breastrad-BreastRadiologyReport.extension",
+        "id": "DiagnosticReport.extension",
         "path": "DiagnosticReport.extension",
         "short": "Additional Content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the resource. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
@@ -522,7 +522,7 @@
         }
       },
       {
-        "id": "DiagnosticReport:breastrad-BreastRadiologyReport.extension:resultsinterpreter",
+        "id": "DiagnosticReport.extension:resultsinterpreter",
         "path": "DiagnosticReport.extension",
         "definition": "The practitioner or organization that is responsible for the report's conclusions and interpretations.",
         "min": 0,
@@ -541,7 +541,7 @@
         "sliceName": "resultsinterpreter"
       },
       {
-        "id": "DiagnosticReport:breastrad-BreastRadiologyReport.extension:resultcomposition",
+        "id": "DiagnosticReport.extension:resultcomposition",
         "path": "DiagnosticReport.extension",
         "definition": "Reference to the document containing detailed information about the breast radiology report, including assocated sections",
         "min": 1,
@@ -560,7 +560,7 @@
         "sliceName": "resultcomposition"
       },
       {
-        "id": "DiagnosticReport:breastrad-BreastRadiologyReport.modifierExtension",
+        "id": "DiagnosticReport.modifierExtension",
         "path": "DiagnosticReport.modifierExtension",
         "short": "Extensions that cannot be ignored",
         "definition": "May be used to represent additional information that is not part of the basic definition of the resource, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
@@ -590,7 +590,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:breastrad-BreastRadiologyReport.identifier",
+        "id": "DiagnosticReport.identifier",
         "path": "DiagnosticReport.identifier",
         "short": "Business identifier for report",
         "definition": "Identifiers assigned to this report by the performer or other systems.",
@@ -629,7 +629,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:breastrad-BreastRadiologyReport.basedOn",
+        "id": "DiagnosticReport.basedOn",
         "path": "DiagnosticReport.basedOn",
         "short": "What was requested",
         "definition": "Details concerning a test or procedure requested.",
@@ -674,7 +674,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:breastrad-BreastRadiologyReport.status",
+        "id": "DiagnosticReport.status",
         "path": "DiagnosticReport.status",
         "short": "registered | partial | preliminary | final +",
         "definition": "The status of the diagnostic report as a whole.",
@@ -722,7 +722,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:breastrad-BreastRadiologyReport.category",
+        "id": "DiagnosticReport.category",
         "path": "DiagnosticReport.category",
         "short": "Service category",
         "definition": "A code that classifies the clinical discipline, department or diagnostic service that created the report (e.g. cardiology, biochemistry, hematology, MRI). This is used for searching, sorting and display purposes.",
@@ -775,7 +775,7 @@
         }
       },
       {
-        "id": "DiagnosticReport:breastrad-BreastRadiologyReport.code",
+        "id": "DiagnosticReport.code",
         "path": "DiagnosticReport.code",
         "short": "Name/Code for this diagnostic report",
         "definition": "A code or name that describes this diagnostic report.",
@@ -823,7 +823,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:breastrad-BreastRadiologyReport.code.id",
+        "id": "DiagnosticReport.code.id",
         "path": "DiagnosticReport.code.id",
         "representation": [
           "xmlAttr"
@@ -850,7 +850,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:breastrad-BreastRadiologyReport.code.extension",
+        "id": "DiagnosticReport.code.extension",
         "path": "DiagnosticReport.code.extension",
         "slicing": {
           "discriminator": [
@@ -889,7 +889,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:breastrad-BreastRadiologyReport.code.coding",
+        "id": "DiagnosticReport.code.coding",
         "path": "DiagnosticReport.code.coding",
         "short": "Code defined by a terminology system",
         "definition": "A reference to a code defined by a terminology system.",
@@ -930,7 +930,7 @@
         }
       },
       {
-        "id": "DiagnosticReport:breastrad-BreastRadiologyReport.code.coding:Fixed_10193-1",
+        "id": "DiagnosticReport.code.coding:Fixed_10193-1",
         "path": "DiagnosticReport.code.coding",
         "sliceName": "Fixed_10193-1",
         "short": "Code defined by a terminology system",
@@ -945,7 +945,7 @@
         "isSummary": true
       },
       {
-        "id": "DiagnosticReport:breastrad-BreastRadiologyReport.code.coding:Fixed_10193-1.id",
+        "id": "DiagnosticReport.code.coding:Fixed_10193-1.id",
         "path": "DiagnosticReport.code.coding.id",
         "representation": [
           "xmlAttr"
@@ -972,7 +972,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:breastrad-BreastRadiologyReport.code.coding:Fixed_10193-1.extension",
+        "id": "DiagnosticReport.code.coding:Fixed_10193-1.extension",
         "path": "DiagnosticReport.code.coding.extension",
         "slicing": {
           "discriminator": [
@@ -1011,7 +1011,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:breastrad-BreastRadiologyReport.code.coding:Fixed_10193-1.system",
+        "id": "DiagnosticReport.code.coding:Fixed_10193-1.system",
         "path": "DiagnosticReport.code.coding.system",
         "short": "Identity of the terminology system",
         "definition": "The identification of the code system that defines the meaning of the symbol in the code.",
@@ -1042,7 +1042,7 @@
         "fixedUri": "http://loinc.org"
       },
       {
-        "id": "DiagnosticReport:breastrad-BreastRadiologyReport.code.coding:Fixed_10193-1.version",
+        "id": "DiagnosticReport.code.coding:Fixed_10193-1.version",
         "path": "DiagnosticReport.code.coding.version",
         "short": "Version of the system - if relevant",
         "definition": "The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured. and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged.",
@@ -1071,7 +1071,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:breastrad-BreastRadiologyReport.code.coding:Fixed_10193-1.code",
+        "id": "DiagnosticReport.code.coding:Fixed_10193-1.code",
         "path": "DiagnosticReport.code.coding.code",
         "short": "Symbol in syntax defined by the system",
         "definition": "A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination).",
@@ -1101,7 +1101,7 @@
         "fixedCode": "10193-1"
       },
       {
-        "id": "DiagnosticReport:breastrad-BreastRadiologyReport.code.coding:Fixed_10193-1.display",
+        "id": "DiagnosticReport.code.coding:Fixed_10193-1.display",
         "extension": [
           {
             "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
@@ -1136,7 +1136,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:breastrad-BreastRadiologyReport.code.coding:Fixed_10193-1.userSelected",
+        "id": "DiagnosticReport.code.coding:Fixed_10193-1.userSelected",
         "path": "DiagnosticReport.code.coding.userSelected",
         "short": "If this coding was chosen directly by the user",
         "definition": "Indicates that this coding was chosen by a user directly - i.e. off a pick list of available items (codes or displays).",
@@ -1166,7 +1166,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:breastrad-BreastRadiologyReport.code.text",
+        "id": "DiagnosticReport.code.text",
         "extension": [
           {
             "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
@@ -1202,7 +1202,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:breastrad-BreastRadiologyReport.subject",
+        "id": "DiagnosticReport.subject",
         "path": "DiagnosticReport.subject",
         "short": "The subject of an observation",
         "definition": "The subject of an observation.",
@@ -1256,7 +1256,7 @@
         }
       },
       {
-        "id": "DiagnosticReport:breastrad-BreastRadiologyReport.context",
+        "id": "DiagnosticReport.context",
         "path": "DiagnosticReport.context",
         "short": "Health care event when test ordered",
         "definition": "The healthcare event  (e.g. a patient and healthcare provider interaction) which this DiagnosticReport per is about.",
@@ -1294,7 +1294,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:breastrad-BreastRadiologyReport.effective[x]",
+        "id": "DiagnosticReport.effective[x]",
         "path": "DiagnosticReport.effective[x]",
         "short": "Clinically relevant time/time-period for report",
         "definition": "The time or time-period the observed values are related to. When the subject of the report is a patient, this is usually either the time of the procedure or of specimen collection(s), but very often the source of the date/time is not known, only the date/time itself.",
@@ -1336,7 +1336,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:breastrad-BreastRadiologyReport.issued",
+        "id": "DiagnosticReport.issued",
         "path": "DiagnosticReport.issued",
         "short": "DateTime this version was released",
         "definition": "The date and time that this version of the report was released from the source diagnostic service.",
@@ -1376,7 +1376,7 @@
         }
       },
       {
-        "id": "DiagnosticReport:breastrad-BreastRadiologyReport.performer",
+        "id": "DiagnosticReport.performer",
         "path": "DiagnosticReport.performer",
         "short": "Participants in producing the report",
         "definition": "Indicates who or what participated in producing the report.",
@@ -1430,7 +1430,7 @@
         }
       },
       {
-        "id": "DiagnosticReport:breastrad-BreastRadiologyReport.performer.id",
+        "id": "DiagnosticReport.performer.id",
         "path": "DiagnosticReport.performer.id",
         "representation": [
           "xmlAttr"
@@ -1457,7 +1457,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:breastrad-BreastRadiologyReport.performer.extension",
+        "id": "DiagnosticReport.performer.extension",
         "path": "DiagnosticReport.performer.extension",
         "short": "Additional Content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
@@ -1486,7 +1486,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:breastrad-BreastRadiologyReport.performer.modifierExtension",
+        "id": "DiagnosticReport.performer.modifierExtension",
         "path": "DiagnosticReport.performer.modifierExtension",
         "short": "Extensions that cannot be ignored",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
@@ -1518,7 +1518,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:breastrad-BreastRadiologyReport.performer.role",
+        "id": "DiagnosticReport.performer.role",
         "path": "DiagnosticReport.performer.role",
         "short": "Type of performer",
         "definition": "Describes the type of participation (e.g.  a responsible party, author, or verifier).",
@@ -1559,7 +1559,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:breastrad-BreastRadiologyReport.performer.actor",
+        "id": "DiagnosticReport.performer.actor",
         "path": "DiagnosticReport.performer.actor",
         "short": "Practitioner or Organization  participant",
         "definition": "The reference to the  practitioner or organization involved in producing the report. For example, the diagnostic service that is responsible for issuing the report.",
@@ -1594,7 +1594,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:breastrad-BreastRadiologyReport.specimen",
+        "id": "DiagnosticReport.specimen",
         "path": "DiagnosticReport.specimen",
         "short": "Specimens this report is based on",
         "definition": "Details about the specimens on which this diagnostic report is based.",
@@ -1625,7 +1625,7 @@
         }
       },
       {
-        "id": "DiagnosticReport:breastrad-BreastRadiologyReport.result",
+        "id": "DiagnosticReport.result",
         "path": "DiagnosticReport.result",
         "short": "Observations - simple, or complex nested groups",
         "definition": "Observations that are part of this diagnostic report. Observations can be simple name/value pairs (e.g. \"atomic\" results), or they can be grouping observations that include references to other members of the group (e.g. \"panels\").",
@@ -1666,7 +1666,7 @@
         }
       },
       {
-        "id": "DiagnosticReport:breastrad-BreastRadiologyReport.imagingStudy",
+        "id": "DiagnosticReport.imagingStudy",
         "path": "DiagnosticReport.imagingStudy",
         "short": "Reference to full details of imaging associated with the diagnostic report",
         "definition": "One or more links to full details of any imaging performed during the diagnostic investigation. Typically, this is imaging performed by DICOM enabled modalities, but this is not required. A fully enabled PACS viewer can use this information to provide views of the source images.",
@@ -1691,7 +1691,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:breastrad-BreastRadiologyReport.image",
+        "id": "DiagnosticReport.image",
         "path": "DiagnosticReport.image",
         "short": "Key images associated with this report",
         "definition": "A list of key images associated with this report. The images are generally created during the diagnostic process, and may be directly of the patient, or of treated specimens (i.e. slides of interest).",
@@ -1731,7 +1731,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:breastrad-BreastRadiologyReport.image.id",
+        "id": "DiagnosticReport.image.id",
         "path": "DiagnosticReport.image.id",
         "representation": [
           "xmlAttr"
@@ -1758,7 +1758,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:breastrad-BreastRadiologyReport.image.extension",
+        "id": "DiagnosticReport.image.extension",
         "path": "DiagnosticReport.image.extension",
         "short": "Additional Content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
@@ -1787,7 +1787,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:breastrad-BreastRadiologyReport.image.modifierExtension",
+        "id": "DiagnosticReport.image.modifierExtension",
         "path": "DiagnosticReport.image.modifierExtension",
         "short": "Extensions that cannot be ignored",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
@@ -1819,7 +1819,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:breastrad-BreastRadiologyReport.image.comment",
+        "id": "DiagnosticReport.image.comment",
         "path": "DiagnosticReport.image.comment",
         "short": "Comment about the image (e.g. explanation)",
         "definition": "A comment about the image. Typically, this is used to provide an explanation for why the image is included, or to draw the viewer's attention to important features.",
@@ -1840,7 +1840,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:breastrad-BreastRadiologyReport.image.link",
+        "id": "DiagnosticReport.image.link",
         "path": "DiagnosticReport.image.link",
         "short": "Reference to the image source",
         "definition": "Reference to the image source.",
@@ -1861,7 +1861,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:breastrad-BreastRadiologyReport.conclusion",
+        "id": "DiagnosticReport.conclusion",
         "path": "DiagnosticReport.conclusion",
         "short": "Clinical Interpretation of test results",
         "definition": "Concise and clinically contextualized impression / summary of the diagnostic report.",
@@ -1893,7 +1893,7 @@
         }
       },
       {
-        "id": "DiagnosticReport:breastrad-BreastRadiologyReport.codedDiagnosis",
+        "id": "DiagnosticReport.codedDiagnosis",
         "path": "DiagnosticReport.codedDiagnosis",
         "short": "Codes for the conclusion",
         "definition": "Codes for the conclusion.",
@@ -1934,7 +1934,7 @@
         }
       },
       {
-        "id": "DiagnosticReport:breastrad-BreastRadiologyReport.presentedForm",
+        "id": "DiagnosticReport.presentedForm",
         "path": "DiagnosticReport.presentedForm",
         "short": "Entire report as issued",
         "definition": "Rich text representation of the entire result as issued by the diagnostic service. Multiple formats are allowed but they SHALL be semantically equivalent.",
@@ -1963,17 +1963,17 @@
   "differential": {
     "element": [
       {
-        "id": "DiagnosticReport:breastrad-BreastRadiologyReport",
+        "id": "DiagnosticReport",
         "path": "DiagnosticReport",
         "short": "breastrad-BreastRadiologyReport",
         "definition": "Breast Radiology Diagnostic Report.\n<br>This diagnostic report is the base of the Breast Radiology Report, and contains a summary of the report findings.\n<br>Detailed information about the reports document is contained in the Breast Radiology Document linked to by the [resultComposition] field."
       },
       {
-        "id": "DiagnosticReport:breastrad-BreastRadiologyReport.meta",
+        "id": "DiagnosticReport.meta",
         "path": "DiagnosticReport.meta"
       },
       {
-        "id": "DiagnosticReport:breastrad-BreastRadiologyReport.meta.extension:sourcesystem",
+        "id": "DiagnosticReport.meta.extension:sourcesystem",
         "path": "DiagnosticReport.meta.extension",
         "definition": "FHIR: This provides a minimal amount of Provenance information that can be used to track or differentiate the source of information in the resource. The source may identify another FHIR server, document, message, database, etc.\nFHIM: Identifies the computer system that created the medical record. This optional field may also be used to indicate that the medical record was originally created by a different organization from the one that is currently storing or utilizing the record in that the assigning authority of the Id could be set to that originating organization. This property is optional, as some systems will assume that all records that it contains originated in that system, however it is anticipated that it will become increasingly commonplace for records from multiple systems and organizations will be comingled in order to provide a complete picture of the patient's health record.",
         "min": 0,
@@ -1992,7 +1992,7 @@
         "sliceName": "sourcesystem"
       },
       {
-        "id": "DiagnosticReport:breastrad-BreastRadiologyReport.extension",
+        "id": "DiagnosticReport.extension",
         "path": "DiagnosticReport.extension",
         "slicing": {
           "id": "2",
@@ -2009,7 +2009,7 @@
         "max": "*"
       },
       {
-        "id": "DiagnosticReport:breastrad-BreastRadiologyReport.extension:resultsinterpreter",
+        "id": "DiagnosticReport.extension:resultsinterpreter",
         "path": "DiagnosticReport.extension",
         "definition": "The practitioner or organization that is responsible for the report's conclusions and interpretations.",
         "min": 0,
@@ -2028,7 +2028,7 @@
         "sliceName": "resultsinterpreter"
       },
       {
-        "id": "DiagnosticReport:breastrad-BreastRadiologyReport.extension:resultcomposition",
+        "id": "DiagnosticReport.extension:resultcomposition",
         "path": "DiagnosticReport.extension",
         "definition": "Reference to the document containing detailed information about the breast radiology report, including assocated sections",
         "min": 1,
@@ -2047,7 +2047,7 @@
         "sliceName": "resultcomposition"
       },
       {
-        "id": "DiagnosticReport:breastrad-BreastRadiologyReport.basedOn",
+        "id": "DiagnosticReport.basedOn",
         "path": "DiagnosticReport.basedOn",
         "type": [
           {
@@ -2069,7 +2069,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:breastrad-BreastRadiologyReport.category",
+        "id": "DiagnosticReport.category",
         "path": "DiagnosticReport.category",
         "min": 1,
         "max": "1",
@@ -2080,11 +2080,11 @@
         }
       },
       {
-        "id": "DiagnosticReport:breastrad-BreastRadiologyReport.code",
+        "id": "DiagnosticReport.code",
         "path": "DiagnosticReport.code"
       },
       {
-        "id": "DiagnosticReport:breastrad-BreastRadiologyReport.code.coding",
+        "id": "DiagnosticReport.code.coding",
         "path": "DiagnosticReport.code.coding",
         "slicing": {
           "id": "1",
@@ -2101,7 +2101,7 @@
         "max": "*"
       },
       {
-        "id": "DiagnosticReport:breastrad-BreastRadiologyReport.code.coding:Fixed_10193-1",
+        "id": "DiagnosticReport.code.coding:Fixed_10193-1",
         "path": "DiagnosticReport.code.coding",
         "sliceName": "Fixed_10193-1",
         "short": "Code defined by a terminology system",
@@ -2116,17 +2116,17 @@
         "isSummary": true
       },
       {
-        "id": "DiagnosticReport:breastrad-BreastRadiologyReport.code.coding:Fixed_10193-1.system",
+        "id": "DiagnosticReport.code.coding:Fixed_10193-1.system",
         "path": "DiagnosticReport.code.coding.system",
         "fixedUri": "http://loinc.org"
       },
       {
-        "id": "DiagnosticReport:breastrad-BreastRadiologyReport.code.coding:Fixed_10193-1.code",
+        "id": "DiagnosticReport.code.coding:Fixed_10193-1.code",
         "path": "DiagnosticReport.code.coding.code",
         "fixedCode": "10193-1"
       },
       {
-        "id": "DiagnosticReport:breastrad-BreastRadiologyReport.subject",
+        "id": "DiagnosticReport.subject",
         "path": "DiagnosticReport.subject",
         "min": 1,
         "max": "1",
@@ -2157,7 +2157,7 @@
         "definition": "The subject of an observation."
       },
       {
-        "id": "DiagnosticReport:breastrad-BreastRadiologyReport.context",
+        "id": "DiagnosticReport.context",
         "path": "DiagnosticReport.context",
         "type": [
           {
@@ -2167,7 +2167,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:breastrad-BreastRadiologyReport.issued",
+        "id": "DiagnosticReport.issued",
         "path": "DiagnosticReport.issued",
         "min": 1,
         "max": "1",
@@ -2178,7 +2178,7 @@
         }
       },
       {
-        "id": "DiagnosticReport:breastrad-BreastRadiologyReport.performer",
+        "id": "DiagnosticReport.performer",
         "path": "DiagnosticReport.performer",
         "min": 0,
         "max": "1",
@@ -2189,7 +2189,7 @@
         }
       },
       {
-        "id": "DiagnosticReport:breastrad-BreastRadiologyReport.performer.actor",
+        "id": "DiagnosticReport.performer.actor",
         "path": "DiagnosticReport.performer.actor",
         "type": [
           {
@@ -2203,7 +2203,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:breastrad-BreastRadiologyReport.specimen",
+        "id": "DiagnosticReport.specimen",
         "path": "DiagnosticReport.specimen",
         "min": 0,
         "max": "0",
@@ -2220,7 +2220,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:breastrad-BreastRadiologyReport.result",
+        "id": "DiagnosticReport.result",
         "path": "DiagnosticReport.result",
         "min": 0,
         "max": "0",
@@ -2237,11 +2237,11 @@
         ]
       },
       {
-        "id": "DiagnosticReport:breastrad-BreastRadiologyReport.image",
+        "id": "DiagnosticReport.image",
         "path": "DiagnosticReport.image"
       },
       {
-        "id": "DiagnosticReport:breastrad-BreastRadiologyReport.image.link",
+        "id": "DiagnosticReport.image.link",
         "path": "DiagnosticReport.image.link",
         "type": [
           {
@@ -2251,7 +2251,7 @@
         ]
       },
       {
-        "id": "DiagnosticReport:breastrad-BreastRadiologyReport.conclusion",
+        "id": "DiagnosticReport.conclusion",
         "path": "DiagnosticReport.conclusion",
         "min": 1,
         "max": "1",
@@ -2262,7 +2262,7 @@
         }
       },
       {
-        "id": "DiagnosticReport:breastrad-BreastRadiologyReport.codedDiagnosis",
+        "id": "DiagnosticReport.codedDiagnosis",
         "path": "DiagnosticReport.codedDiagnosis",
         "min": 1,
         "max": "1",

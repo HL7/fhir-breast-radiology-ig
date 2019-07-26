@@ -9,7 +9,7 @@
   "name": "DeviceDesignation",
   "title": "obf-DeviceDesignation",
   "status": "draft",
-  "date": "2019-07-24",
+  "date": "2019-07-26",
   "publisher": "Hl7",
   "contact": [
     {
@@ -35,7 +35,7 @@
   "snapshot": {
     "element": [
       {
-        "id": "Extension:devicedesignation",
+        "id": "Extension",
         "path": "Extension",
         "short": "DeviceDesignation",
         "definition": "A name of the device as given by the manufacturer, along with a type of name.",
@@ -78,7 +78,7 @@
         ]
       },
       {
-        "id": "Extension:devicedesignation.id",
+        "id": "Extension.id",
         "path": "Extension.id",
         "representation": [
           "xmlAttr"
@@ -105,7 +105,7 @@
         ]
       },
       {
-        "id": "Extension:devicedesignation.extension",
+        "id": "Extension.extension",
         "path": "Extension.extension",
         "slicing": {
           "discriminator": [
@@ -144,7 +144,7 @@
         ]
       },
       {
-        "id": "Extension:devicedesignation.extension:devicename",
+        "id": "Extension.extension:devicename",
         "path": "Extension.extension",
         "definition": "The name of the device.",
         "min": 1,
@@ -169,7 +169,7 @@
         "sliceName": "devicename"
       },
       {
-        "id": "Extension:devicedesignation.extension:type",
+        "id": "Extension.extension:type",
         "path": "Extension.extension",
         "definition": "A code describing the item at a greater level of detail.",
         "min": 1,
@@ -194,7 +194,7 @@
         "sliceName": "type"
       },
       {
-        "id": "Extension:devicedesignation.extension:type.id",
+        "id": "Extension.extension:type.id",
         "path": "Extension.extension.id",
         "representation": [
           "xmlAttr"
@@ -221,7 +221,7 @@
         ]
       },
       {
-        "id": "Extension:devicedesignation.extension:type.extension",
+        "id": "Extension.extension:type.extension",
         "path": "Extension.extension.extension",
         "slicing": {
           "discriminator": [
@@ -260,7 +260,7 @@
         ]
       },
       {
-        "id": "Extension:devicedesignation.extension:type.url",
+        "id": "Extension.extension:type.url",
         "path": "Extension.extension.url",
         "representation": [
           "xmlAttr"
@@ -289,7 +289,7 @@
         "fixedUri": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-Type-extension"
       },
       {
-        "id": "Extension:devicedesignation.extension:type.valueCodeableConcept",
+        "id": "Extension.extension:type.valueCodeableConcept",
         "path": "Extension.extension.valueCodeableConcept",
         "short": "Value of extension",
         "definition": "Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).",
@@ -319,7 +319,7 @@
         }
       },
       {
-        "id": "Extension:devicedesignation.url",
+        "id": "Extension.url",
         "path": "Extension.url",
         "representation": [
           "xmlAttr"
@@ -348,7 +348,7 @@
         "fixedUri": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-DeviceDesignation-extension"
       },
       {
-        "id": "Extension:devicedesignation.value[x]",
+        "id": "Extension.value[x]",
         "path": "Extension.value[x]",
         "short": "Value of extension",
         "definition": "Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).",
@@ -487,7 +487,7 @@
   "differential": {
     "element": [
       {
-        "id": "Extension:devicedesignation",
+        "id": "Extension",
         "path": "Extension",
         "short": "DeviceDesignation",
         "definition": "A name of the device as given by the manufacturer, along with a type of name.",
@@ -495,13 +495,13 @@
         "max": "*"
       },
       {
-        "id": "Extension:devicedesignation.extension",
+        "id": "Extension.extension",
         "path": "Extension.extension",
         "min": 2,
         "max": "*"
       },
       {
-        "id": "Extension:devicedesignation.extension:devicename",
+        "id": "Extension.extension:devicename",
         "path": "Extension.extension",
         "definition": "The name of the device.",
         "min": 1,
@@ -526,7 +526,7 @@
         "sliceName": "devicename"
       },
       {
-        "id": "Extension:devicedesignation.extension:type",
+        "id": "Extension.extension:type",
         "path": "Extension.extension",
         "definition": "A code describing the item at a greater level of detail.",
         "min": 1,
@@ -551,7 +551,7 @@
         "sliceName": "type"
       },
       {
-        "id": "Extension:devicedesignation.extension:type.valueCodeableConcept",
+        "id": "Extension.extension:type.valueCodeableConcept",
         "path": "Extension.extension.valueCodeableConcept",
         "binding": {
           "strength": "required",
@@ -561,12 +561,12 @@
         }
       },
       {
-        "id": "Extension:devicedesignation.url",
+        "id": "Extension.url",
         "path": "Extension.url",
         "fixedUri": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-DeviceDesignation-extension"
       },
       {
-        "id": "Extension:devicedesignation.value[x]",
+        "id": "Extension.value[x]",
         "path": "Extension.value[x]",
         "min": 0,
         "max": "0"

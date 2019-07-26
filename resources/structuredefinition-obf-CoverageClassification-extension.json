@@ -9,7 +9,7 @@
   "name": "CoverageClassification",
   "title": "obf-CoverageClassification",
   "status": "draft",
-  "date": "2019-07-24",
+  "date": "2019-07-26",
   "publisher": "Hl7",
   "contact": [
     {
@@ -35,7 +35,7 @@
   "snapshot": {
     "element": [
       {
-        "id": "Extension:coverageclassification",
+        "id": "Extension",
         "path": "Extension",
         "short": "CoverageClassification",
         "definition": "A suite of underwriter specific classifiers.",
@@ -78,7 +78,7 @@
         ]
       },
       {
-        "id": "Extension:coverageclassification.id",
+        "id": "Extension.id",
         "path": "Extension.id",
         "representation": [
           "xmlAttr"
@@ -105,7 +105,7 @@
         ]
       },
       {
-        "id": "Extension:coverageclassification.extension",
+        "id": "Extension.extension",
         "path": "Extension.extension",
         "slicing": {
           "discriminator": [
@@ -144,7 +144,7 @@
         ]
       },
       {
-        "id": "Extension:coverageclassification.extension:type",
+        "id": "Extension.extension:type",
         "path": "Extension.extension",
         "definition": "A code describing the item at a greater level of detail.",
         "min": 1,
@@ -169,7 +169,7 @@
         "sliceName": "type"
       },
       {
-        "id": "Extension:coverageclassification.extension:type.id",
+        "id": "Extension.extension:type.id",
         "path": "Extension.extension.id",
         "representation": [
           "xmlAttr"
@@ -196,7 +196,7 @@
         ]
       },
       {
-        "id": "Extension:coverageclassification.extension:type.extension",
+        "id": "Extension.extension:type.extension",
         "path": "Extension.extension.extension",
         "slicing": {
           "discriminator": [
@@ -235,7 +235,7 @@
         ]
       },
       {
-        "id": "Extension:coverageclassification.extension:type.url",
+        "id": "Extension.extension:type.url",
         "path": "Extension.extension.url",
         "representation": [
           "xmlAttr"
@@ -264,7 +264,7 @@
         "fixedUri": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-Type-extension"
       },
       {
-        "id": "Extension:coverageclassification.extension:type.valueCodeableConcept",
+        "id": "Extension.extension:type.valueCodeableConcept",
         "path": "Extension.extension.valueCodeableConcept",
         "short": "Value of extension",
         "definition": "Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).",
@@ -294,7 +294,7 @@
         }
       },
       {
-        "id": "Extension:coverageclassification.extension:identifierstring",
+        "id": "Extension.extension:identifierstring",
         "path": "Extension.extension",
         "definition": "An id for the item expressed as a string.",
         "min": 1,
@@ -319,7 +319,7 @@
         "sliceName": "identifierstring"
       },
       {
-        "id": "Extension:coverageclassification.extension:name",
+        "id": "Extension.extension:name",
         "path": "Extension.extension",
         "definition": "The name as plain unstructured or semi-structured text.",
         "min": 0,
@@ -344,7 +344,7 @@
         "sliceName": "name"
       },
       {
-        "id": "Extension:coverageclassification.url",
+        "id": "Extension.url",
         "path": "Extension.url",
         "representation": [
           "xmlAttr"
@@ -373,7 +373,7 @@
         "fixedUri": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-CoverageClassification-extension"
       },
       {
-        "id": "Extension:coverageclassification.value[x]",
+        "id": "Extension.value[x]",
         "path": "Extension.value[x]",
         "short": "Value of extension",
         "definition": "Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).",
@@ -512,7 +512,7 @@
   "differential": {
     "element": [
       {
-        "id": "Extension:coverageclassification",
+        "id": "Extension",
         "path": "Extension",
         "short": "CoverageClassification",
         "definition": "A suite of underwriter specific classifiers.",
@@ -520,13 +520,13 @@
         "max": "*"
       },
       {
-        "id": "Extension:coverageclassification.extension",
+        "id": "Extension.extension",
         "path": "Extension.extension",
         "min": 2,
         "max": "*"
       },
       {
-        "id": "Extension:coverageclassification.extension:type",
+        "id": "Extension.extension:type",
         "path": "Extension.extension",
         "definition": "A code describing the item at a greater level of detail.",
         "min": 1,
@@ -551,7 +551,7 @@
         "sliceName": "type"
       },
       {
-        "id": "Extension:coverageclassification.extension:type.valueCodeableConcept",
+        "id": "Extension.extension:type.valueCodeableConcept",
         "path": "Extension.extension.valueCodeableConcept",
         "binding": {
           "strength": "extensible",
@@ -561,7 +561,7 @@
         }
       },
       {
-        "id": "Extension:coverageclassification.extension:identifierstring",
+        "id": "Extension.extension:identifierstring",
         "path": "Extension.extension",
         "definition": "An id for the item expressed as a string.",
         "min": 1,
@@ -586,7 +586,7 @@
         "sliceName": "identifierstring"
       },
       {
-        "id": "Extension:coverageclassification.extension:name",
+        "id": "Extension.extension:name",
         "path": "Extension.extension",
         "definition": "The name as plain unstructured or semi-structured text.",
         "min": 0,
@@ -611,12 +611,12 @@
         "sliceName": "name"
       },
       {
-        "id": "Extension:coverageclassification.url",
+        "id": "Extension.url",
         "path": "Extension.url",
         "fixedUri": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-CoverageClassification-extension"
       },
       {
-        "id": "Extension:coverageclassification.value[x]",
+        "id": "Extension.value[x]",
         "path": "Extension.value[x]",
         "min": 0,
         "max": "0"

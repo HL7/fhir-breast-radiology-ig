@@ -9,7 +9,7 @@
   "name": "EncounterDiagnosis",
   "title": "obf-EncounterDiagnosis",
   "status": "draft",
-  "date": "2019-07-24",
+  "date": "2019-07-26",
   "publisher": "Hl7",
   "contact": [
     {
@@ -35,7 +35,7 @@
   "snapshot": {
     "element": [
       {
-        "id": "Extension:encounterdiagnosis",
+        "id": "Extension",
         "path": "Extension",
         "short": "EncounterDiagnosis",
         "definition": "A diagnosis, which is a disease or injury determined to be present through evaluation of patient history, examination, and/or review of laboratory data. This element is not a stand-alone representation of the condition that was diagnosed, but is meant to be used as an sub-structure in a resource, such as Encounter.",
@@ -78,7 +78,7 @@
         ]
       },
       {
-        "id": "Extension:encounterdiagnosis.id",
+        "id": "Extension.id",
         "path": "Extension.id",
         "representation": [
           "xmlAttr"
@@ -105,7 +105,7 @@
         ]
       },
       {
-        "id": "Extension:encounterdiagnosis.extension",
+        "id": "Extension.extension",
         "path": "Extension.extension",
         "slicing": {
           "discriminator": [
@@ -144,7 +144,7 @@
         ]
       },
       {
-        "id": "Extension:encounterdiagnosis.extension:diagnosiscode",
+        "id": "Extension.extension:diagnosiscode",
         "path": "Extension.extension",
         "definition": "Codes for a diagnosis.",
         "min": 0,
@@ -169,7 +169,7 @@
         "sliceName": "diagnosiscode"
       },
       {
-        "id": "Extension:encounterdiagnosis.extension:condition",
+        "id": "Extension.extension:condition",
         "path": "Extension.extension",
         "definition": "A condition that is or may be present in a subject. 'Condition' is interpreted broadly and could be a disorder, abnormality, problem, injury, complaint, functionality, illness, disease, ailment, sickness, affliction, upset, difficulty, disorder, symptom, worry, or trouble.\nThe Observation-based class, ConditionAbsent, should be used to describe conditions that are not present or negative findings.\nSHR Condition uses the SHR BodyLocation structure that includes not only a code, but optional laterality, direction, clock direction, and distance. If included, the distance is measured from the location specified by the code, laterality, and direction.",
         "min": 1,
@@ -194,7 +194,7 @@
         "sliceName": "condition"
       },
       {
-        "id": "Extension:encounterdiagnosis.extension:priorityrank",
+        "id": "Extension.extension:priorityrank",
         "path": "Extension.extension",
         "definition": "The priority of the procedure, as a number (1 being the highest priority)",
         "min": 0,
@@ -219,7 +219,7 @@
         "sliceName": "priorityrank"
       },
       {
-        "id": "Extension:encounterdiagnosis.extension:type",
+        "id": "Extension.extension:type",
         "path": "Extension.extension",
         "definition": "A code describing the item at a greater level of detail.",
         "min": 0,
@@ -244,7 +244,7 @@
         "sliceName": "type"
       },
       {
-        "id": "Extension:encounterdiagnosis.extension:type.id",
+        "id": "Extension.extension:type.id",
         "path": "Extension.extension.id",
         "representation": [
           "xmlAttr"
@@ -271,7 +271,7 @@
         ]
       },
       {
-        "id": "Extension:encounterdiagnosis.extension:type.extension",
+        "id": "Extension.extension:type.extension",
         "path": "Extension.extension.extension",
         "slicing": {
           "discriminator": [
@@ -310,7 +310,7 @@
         ]
       },
       {
-        "id": "Extension:encounterdiagnosis.extension:type.url",
+        "id": "Extension.extension:type.url",
         "path": "Extension.extension.url",
         "representation": [
           "xmlAttr"
@@ -339,7 +339,7 @@
         "fixedUri": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-Type-extension"
       },
       {
-        "id": "Extension:encounterdiagnosis.extension:type.valueCodeableConcept",
+        "id": "Extension.extension:type.valueCodeableConcept",
         "path": "Extension.extension.valueCodeableConcept",
         "short": "Value of extension",
         "definition": "Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).",
@@ -369,7 +369,7 @@
         }
       },
       {
-        "id": "Extension:encounterdiagnosis.url",
+        "id": "Extension.url",
         "path": "Extension.url",
         "representation": [
           "xmlAttr"
@@ -398,7 +398,7 @@
         "fixedUri": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-EncounterDiagnosis-extension"
       },
       {
-        "id": "Extension:encounterdiagnosis.value[x]",
+        "id": "Extension.value[x]",
         "path": "Extension.value[x]",
         "short": "Value of extension",
         "definition": "Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).",
@@ -537,7 +537,7 @@
   "differential": {
     "element": [
       {
-        "id": "Extension:encounterdiagnosis",
+        "id": "Extension",
         "path": "Extension",
         "short": "EncounterDiagnosis",
         "definition": "A diagnosis, which is a disease or injury determined to be present through evaluation of patient history, examination, and/or review of laboratory data. This element is not a stand-alone representation of the condition that was diagnosed, but is meant to be used as an sub-structure in a resource, such as Encounter.",
@@ -545,13 +545,13 @@
         "max": "*"
       },
       {
-        "id": "Extension:encounterdiagnosis.extension",
+        "id": "Extension.extension",
         "path": "Extension.extension",
         "min": 1,
         "max": "*"
       },
       {
-        "id": "Extension:encounterdiagnosis.extension:diagnosiscode",
+        "id": "Extension.extension:diagnosiscode",
         "path": "Extension.extension",
         "definition": "Codes for a diagnosis.",
         "min": 0,
@@ -576,7 +576,7 @@
         "sliceName": "diagnosiscode"
       },
       {
-        "id": "Extension:encounterdiagnosis.extension:condition",
+        "id": "Extension.extension:condition",
         "path": "Extension.extension",
         "definition": "A condition that is or may be present in a subject. 'Condition' is interpreted broadly and could be a disorder, abnormality, problem, injury, complaint, functionality, illness, disease, ailment, sickness, affliction, upset, difficulty, disorder, symptom, worry, or trouble.\nThe Observation-based class, ConditionAbsent, should be used to describe conditions that are not present or negative findings.\nSHR Condition uses the SHR BodyLocation structure that includes not only a code, but optional laterality, direction, clock direction, and distance. If included, the distance is measured from the location specified by the code, laterality, and direction.",
         "min": 1,
@@ -601,7 +601,7 @@
         "sliceName": "condition"
       },
       {
-        "id": "Extension:encounterdiagnosis.extension:priorityrank",
+        "id": "Extension.extension:priorityrank",
         "path": "Extension.extension",
         "definition": "The priority of the procedure, as a number (1 being the highest priority)",
         "min": 0,
@@ -626,7 +626,7 @@
         "sliceName": "priorityrank"
       },
       {
-        "id": "Extension:encounterdiagnosis.extension:type",
+        "id": "Extension.extension:type",
         "path": "Extension.extension",
         "definition": "A code describing the item at a greater level of detail.",
         "min": 0,
@@ -651,7 +651,7 @@
         "sliceName": "type"
       },
       {
-        "id": "Extension:encounterdiagnosis.extension:type.valueCodeableConcept",
+        "id": "Extension.extension:type.valueCodeableConcept",
         "path": "Extension.extension.valueCodeableConcept",
         "binding": {
           "strength": "preferred",
@@ -661,12 +661,12 @@
         }
       },
       {
-        "id": "Extension:encounterdiagnosis.url",
+        "id": "Extension.url",
         "path": "Extension.url",
         "fixedUri": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-EncounterDiagnosis-extension"
       },
       {
-        "id": "Extension:encounterdiagnosis.value[x]",
+        "id": "Extension.value[x]",
         "path": "Extension.value[x]",
         "min": 0,
         "max": "0"
