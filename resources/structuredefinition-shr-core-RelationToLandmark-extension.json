@@ -5,7 +5,7 @@
     "status": "generated",
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>RelationToLandmark Extension</b></p>\n  <p>The relationship between a landmark that helps determine a body location and the body location itself. The location relative to a landmark is specified by:\n* Specifying the location and type of landmark using a body site code and optional laterality/orientation,\n* Specifying the direction from the landmark to the body location, and\n* Specifying the distance from the landmark to the body location.\n\nThe RelationToLandmark element is part of BodyLocation, a flexible structure that allows the location to be determined by a single code, or a code plus laterality and/or orientation. The body location can also be specified in relation to one or more body landmarks. SNOMED CT is used in all cases.\n\n* Code only: The code should include (precoordinate) laterality and/orientation to the degree necessary to completely specify the body location.\n* Code plus laterality and/or orientation: The basic code augmented by codes specifying the body side and/or anatomical orientation.\n* Relation to landmark: The location relative to a landmark is specified by:\n1. Establishing the location and type of landmark using a body site code and optional laterality/orientation, and\n2. Specifying the direction and distance from the landmark to the body location.\n\nNote that BodyLocation is a data type (a reusable structure), not a stand-alone entity. The concept is similar to how a postal address can apply to a person, location, or organization. This contrasts with FHIR&#039;s stand-alone BodySite (aka BodyStructure in r4) which &#039;is not ... intended for describing the type of anatomical location but rather a specific body site on a specific patient&#039; (FHIR 3.5).</p>\n</div>"
   },
-  "url": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-RelationToLandmark-extension",
+  "url": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/shr-core-RelationToLandmark-extension",
   "name": "RelationToLandmark",
   "title": "shr-core-RelationToLandmark",
   "status": "draft",
@@ -157,7 +157,7 @@
         "type": [
           {
             "code": "Extension",
-            "profile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-LandmarkType-extension"
+            "profile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/shr-core-LandmarkType-extension"
           }
         ],
         "mapping": [
@@ -182,7 +182,7 @@
         "type": [
           {
             "code": "Extension",
-            "profile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-LandmarkLocation-extension"
+            "profile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/shr-core-LandmarkLocation-extension"
           }
         ],
         "mapping": [
@@ -207,7 +207,7 @@
         "type": [
           {
             "code": "Extension",
-            "profile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-LandmarkToBodyLocationDirection-extension"
+            "profile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/shr-core-LandmarkToBodyLocationDirection-extension"
           }
         ],
         "mapping": [
@@ -232,7 +232,7 @@
         "type": [
           {
             "code": "Extension",
-            "profile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-LandmarkToBodyLocationDistance-extension"
+            "profile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/shr-core-LandmarkToBodyLocationDistance-extension"
           }
         ],
         "mapping": [
@@ -270,7 +270,7 @@
             "map": "N/A"
           }
         ],
-        "fixedUri": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-RelationToLandmark-extension"
+        "fixedUri": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/shr-core-RelationToLandmark-extension"
       },
       {
         "id": "Extension.value[x]",
@@ -433,7 +433,7 @@
         "type": [
           {
             "code": "Extension",
-            "profile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-LandmarkType-extension"
+            "profile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/shr-core-LandmarkType-extension"
           }
         ],
         "mapping": [
@@ -458,7 +458,7 @@
         "type": [
           {
             "code": "Extension",
-            "profile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-LandmarkLocation-extension"
+            "profile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/shr-core-LandmarkLocation-extension"
           }
         ],
         "mapping": [
@@ -483,7 +483,7 @@
         "type": [
           {
             "code": "Extension",
-            "profile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-LandmarkToBodyLocationDirection-extension"
+            "profile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/shr-core-LandmarkToBodyLocationDirection-extension"
           }
         ],
         "mapping": [
@@ -508,7 +508,7 @@
         "type": [
           {
             "code": "Extension",
-            "profile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-LandmarkToBodyLocationDistance-extension"
+            "profile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/shr-core-LandmarkToBodyLocationDistance-extension"
           }
         ],
         "mapping": [
@@ -522,7 +522,7 @@
       {
         "id": "Extension.url",
         "path": "Extension.url",
-        "fixedUri": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-RelationToLandmark-extension"
+        "fixedUri": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/shr-core-RelationToLandmark-extension"
       },
       {
         "id": "Extension.value[x]",

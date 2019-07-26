@@ -5,7 +5,7 @@
     "status": "generated",
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>Encounter Profile</b></p>\n  <p>A description of an interaction between a patient and healthcare provider(s) for the purpose of providing healthcare service(s) or assessing the health status of a patient.</p>\n  <p><b>Mapping Summary</b></p>\n  <p><pre>obf.Encounter maps to Encounter:\n  Language maps to language\n  ImplicitRules maps to implicitRules\n  Metadata.VersionId maps to meta.versionId\n  Metadata.SourceSystem maps to meta.extension\n  Metadata.Profile maps to meta.profile\n  Metadata.LastUpdated maps to meta.lastUpdated\n  Metadata.SecurityLabel maps to meta.security\n  Metadata.Tag maps to meta.tag\n  Narrative maps to text\n  Identifier maps to identifier\n  Status maps to status\n  StatusHistory maps to statusHistory\n  StatusHistory.Status maps to statusHistory.status\n  StatusHistory.TimePeriod maps to statusHistory.period\n  EncounterClass maps to class\n  ClassHistory maps to classHistory\n  ClassHistory.EncounterClass maps to classHistory.class\n  ClassHistory.TimePeriod maps to classHistory.period\n  Type maps to type\n  PriorityCode maps to priority\n  SubjectOfRecord maps to subject\n  EpisodeOfCare maps to episodeOfCare\n  ReferralBasedOn maps to incomingReferral\n  Participation maps to participant\n  Participation.ParticipationType maps to participant.type\n  Participation.ParticipationPeriod maps to participant.period\n  Participation.Participant maps to participant.individual\n  Appointment maps to appointment\n  TimePeriod maps to period\n  Duration maps to length\n  ReasonCode maps to reason\n  EncounterDiagnosis maps to diagnosis\n  EncounterDiagnosis.DiagnosisCode maps to diagnosis.extension\n  EncounterDiagnosis.Condition maps to diagnosis.condition\n  EncounterDiagnosis.Type maps to diagnosis.role\n  EncounterDiagnosis.PriorityRank maps to diagnosis.rank\n  EncounterLocation maps to location\n  EncounterLocation.Location maps to location.location\n  EncounterLocation.Status maps to location.status\n  EncounterLocation.TimePeriod maps to location.period\n  Organization maps to serviceProvider\n  PartOf maps to partOf\n</pre></p>\n</div>"
   },
-  "url": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Encounter",
+  "url": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Encounter",
   "name": "Encounter",
   "status": "draft",
   "date": "2019-07-26",
@@ -224,7 +224,7 @@
         "type": [
           {
             "code": "Extension",
-            "profile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-SourceSystem-extension"
+            "profile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-SourceSystem-extension"
           }
         ],
         "sliceName": "sourcesystem"
@@ -515,7 +515,7 @@
         "type": [
           {
             "code": "Extension",
-            "profile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-EncounterReasonReference-extension"
+            "profile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-EncounterReasonReference-extension"
           }
         ],
         "sliceName": "encounterreasonreference"
@@ -1103,7 +1103,7 @@
         "type": [
           {
             "code": "Reference",
-            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Patient"
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Patient"
           }
         ],
         "isSummary": true,
@@ -1137,7 +1137,7 @@
         "type": [
           {
             "code": "Reference",
-            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-EpisodeOfCare"
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-EpisodeOfCare"
           }
         ],
         "isSummary": true,
@@ -1166,7 +1166,7 @@
         "type": [
           {
             "code": "Reference",
-            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-ReferralRequest"
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-ReferralRequest"
           }
         ],
         "mapping": [
@@ -1369,11 +1369,11 @@
         "type": [
           {
             "code": "Reference",
-            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Practitioner"
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Practitioner"
           },
           {
             "code": "Reference",
-            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-RelatedPerson"
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-RelatedPerson"
           }
         ],
         "isSummary": true,
@@ -1402,7 +1402,7 @@
         "type": [
           {
             "code": "Reference",
-            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Appointment"
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Appointment"
           }
         ],
         "isSummary": true,
@@ -1456,7 +1456,7 @@
         "type": [
           {
             "code": "Duration",
-            "profile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-Duration"
+            "profile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/shr-core-Duration"
           }
         ],
         "mapping": [
@@ -1633,7 +1633,7 @@
         "type": [
           {
             "code": "Extension",
-            "profile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-DiagnosisCode-extension"
+            "profile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-DiagnosisCode-extension"
           }
         ],
         "sliceName": "diagnosiscode"
@@ -1686,7 +1686,7 @@
         "type": [
           {
             "code": "Reference",
-            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Condition"
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Condition"
           }
         ],
         "mapping": [
@@ -2311,7 +2311,7 @@
         "type": [
           {
             "code": "Reference",
-            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Location"
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Location"
           }
         ],
         "mapping": [
@@ -2391,7 +2391,7 @@
         "type": [
           {
             "code": "Reference",
-            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Organization"
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Organization"
           }
         ],
         "mapping": [
@@ -2416,7 +2416,7 @@
         "type": [
           {
             "code": "Reference",
-            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Encounter"
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Encounter"
           }
         ],
         "mapping": [
@@ -2454,7 +2454,7 @@
         "type": [
           {
             "code": "Extension",
-            "profile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-SourceSystem-extension"
+            "profile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-SourceSystem-extension"
           }
         ],
         "sliceName": "sourcesystem"
@@ -2488,7 +2488,7 @@
         "type": [
           {
             "code": "Extension",
-            "profile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-EncounterReasonReference-extension"
+            "profile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-EncounterReasonReference-extension"
           }
         ],
         "sliceName": "encounterreasonreference"
@@ -2544,7 +2544,7 @@
         "type": [
           {
             "code": "Reference",
-            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Patient"
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Patient"
           }
         ]
       },
@@ -2554,7 +2554,7 @@
         "type": [
           {
             "code": "Reference",
-            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-EpisodeOfCare"
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-EpisodeOfCare"
           }
         ]
       },
@@ -2564,7 +2564,7 @@
         "type": [
           {
             "code": "Reference",
-            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-ReferralRequest"
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-ReferralRequest"
           }
         ],
         "short": "Indicates any plans, proposals or orders that this request is intended to satisfy - in whole or in part",
@@ -2580,11 +2580,11 @@
         "type": [
           {
             "code": "Reference",
-            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Practitioner"
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Practitioner"
           },
           {
             "code": "Reference",
-            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-RelatedPerson"
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-RelatedPerson"
           }
         ],
         "short": "A choice of Practitioner and RelatedPerson as participant",
@@ -2596,7 +2596,7 @@
         "type": [
           {
             "code": "Reference",
-            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Appointment"
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Appointment"
           }
         ]
       },
@@ -2606,7 +2606,7 @@
         "type": [
           {
             "code": "Duration",
-            "profile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-Duration"
+            "profile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/shr-core-Duration"
           }
         ]
       },
@@ -2643,7 +2643,7 @@
         "type": [
           {
             "code": "Extension",
-            "profile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-DiagnosisCode-extension"
+            "profile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-DiagnosisCode-extension"
           }
         ],
         "sliceName": "diagnosiscode"
@@ -2654,7 +2654,7 @@
         "type": [
           {
             "code": "Reference",
-            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Condition"
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Condition"
           }
         ]
       },
@@ -2668,7 +2668,7 @@
         "type": [
           {
             "code": "Reference",
-            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Location"
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Location"
           }
         ]
       },
@@ -2678,7 +2678,7 @@
         "type": [
           {
             "code": "Reference",
-            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Organization"
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Organization"
           }
         ]
       },
@@ -2688,7 +2688,7 @@
         "type": [
           {
             "code": "Reference",
-            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Encounter"
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Encounter"
           }
         ]
       }

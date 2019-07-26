@@ -5,7 +5,7 @@
     "status": "generated",
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>Device Profile</b></p>\n  <p>A specific durable physical device used in diagnosis or treatment. The value is the coding for a type of device, for example, a CPAP machine. The same device might be used on multiple patients.\nDevice status cannot be reconciled between Argonaut and US-Core, each having different required value sets.\nDevice type has extensible mappings to different value sets in Argonaut and US-Core, however both value sets have identical SNOMED content (descendants of 49062001 (Device). We adopt the US-Core value set, which is allowable because the binding is extensible.</p>\n  <p><b>Mapping Summary</b></p>\n  <p><pre>obf.Device maps to http://hl7.org/fhir/us/core/StructureDefinition/us-core-device:\n  Language maps to language\n  ImplicitRules maps to implicitRules\n  Metadata.VersionId maps to meta.versionId\n  Metadata.SourceSystem maps to meta.extension\n  Metadata.Profile maps to meta.profile\n  Metadata.LastUpdated maps to meta.lastUpdated\n  Metadata.SecurityLabel maps to meta.security\n  Metadata.Tag maps to meta.tag\n  Narrative maps to text\n  Identifier maps to identifier\n  UdiCarrier.DeviceIdentifier maps to udi.deviceIdentifier\n  UdiCarrier.CarrierAIDC maps to udi.carrierAIDC\n  UdiCarrier.CarrierHRF maps to udi.carrierHRF\n  UdiCarrier.Type maps to udi.entryType\n  Status maps to status\n  StatusReason maps to extension\n  Type maps to type\n  LotNumber maps to lotNumber\n  ManufacturerName maps to manufacturer\n  ManufactureDate maps to manufactureDate\n  ExpirationDate maps to expirationDate\n  ModelNumber maps to model\n  VersionString maps to version\n  Patient maps to patient\n  Owner maps to owner\n  ContactPoint maps to contact\n  Location maps to location\n  Url maps to url\n  Annotation maps to note\n  Safety maps to safety\n  DistinctIdentifier maps to extension\n  SerialNumber maps to extension\n  DeviceDesignation maps to extension\n  PartOf maps to extension\n</pre></p>\n</div>"
   },
-  "url": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Device",
+  "url": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Device",
   "name": "Device",
   "status": "draft",
   "date": "2019-07-26",
@@ -246,7 +246,7 @@
         "type": [
           {
             "code": "Extension",
-            "profile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-SourceSystem-extension"
+            "profile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-SourceSystem-extension"
           }
         ],
         "sliceName": "sourcesystem"
@@ -537,7 +537,7 @@
         "type": [
           {
             "code": "Extension",
-            "profile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-StatusReason-extension"
+            "profile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-StatusReason-extension"
           }
         ],
         "sliceName": "statusreason"
@@ -635,7 +635,7 @@
             "map": "N/A"
           }
         ],
-        "fixedUri": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-StatusReason-extension"
+        "fixedUri": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-StatusReason-extension"
       },
       {
         "id": "Device.extension:statusreason.valueCodeableConcept",
@@ -681,7 +681,7 @@
         "type": [
           {
             "code": "Extension",
-            "profile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-DistinctIdentifier-extension"
+            "profile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-DistinctIdentifier-extension"
           }
         ],
         "sliceName": "distinctidentifier"
@@ -700,7 +700,7 @@
         "type": [
           {
             "code": "Extension",
-            "profile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-SerialNumber-extension"
+            "profile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-SerialNumber-extension"
           }
         ],
         "sliceName": "serialnumber"
@@ -719,7 +719,7 @@
         "type": [
           {
             "code": "Extension",
-            "profile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-DeviceDesignation-extension"
+            "profile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-DeviceDesignation-extension"
           }
         ],
         "sliceName": "devicedesignation"
@@ -738,7 +738,7 @@
         "type": [
           {
             "code": "Extension",
-            "profile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-PartOf-extension"
+            "profile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-PartOf-extension"
           }
         ],
         "sliceName": "partof"
@@ -836,7 +836,7 @@
             "map": "N/A"
           }
         ],
-        "fixedUri": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-PartOf-extension"
+        "fixedUri": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-PartOf-extension"
       },
       {
         "id": "Device.extension:partof.valueReference",
@@ -853,7 +853,7 @@
         "type": [
           {
             "code": "Reference",
-            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Device"
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Device"
           }
         ],
         "mapping": [
@@ -1597,7 +1597,7 @@
         "type": [
           {
             "code": "Reference",
-            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Patient"
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Patient"
           }
         ],
         "mustSupport": true,
@@ -1631,7 +1631,7 @@
         "type": [
           {
             "code": "Reference",
-            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Organization"
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Organization"
           }
         ],
         "mapping": [
@@ -1690,7 +1690,7 @@
         "type": [
           {
             "code": "Reference",
-            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Location"
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Location"
           }
         ],
         "mapping": [
@@ -1748,7 +1748,7 @@
         "type": [
           {
             "code": "Annotation",
-            "profile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Annotation"
+            "profile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Annotation"
           }
         ],
         "mapping": [
@@ -1825,7 +1825,7 @@
         "type": [
           {
             "code": "Extension",
-            "profile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-SourceSystem-extension"
+            "profile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-SourceSystem-extension"
           }
         ],
         "sliceName": "sourcesystem"
@@ -1859,7 +1859,7 @@
         "type": [
           {
             "code": "Extension",
-            "profile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-StatusReason-extension"
+            "profile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-StatusReason-extension"
           }
         ],
         "sliceName": "statusreason"
@@ -1888,7 +1888,7 @@
         "type": [
           {
             "code": "Extension",
-            "profile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-DistinctIdentifier-extension"
+            "profile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-DistinctIdentifier-extension"
           }
         ],
         "sliceName": "distinctidentifier"
@@ -1907,7 +1907,7 @@
         "type": [
           {
             "code": "Extension",
-            "profile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-SerialNumber-extension"
+            "profile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-SerialNumber-extension"
           }
         ],
         "sliceName": "serialnumber"
@@ -1926,7 +1926,7 @@
         "type": [
           {
             "code": "Extension",
-            "profile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-DeviceDesignation-extension"
+            "profile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-DeviceDesignation-extension"
           }
         ],
         "sliceName": "devicedesignation"
@@ -1945,7 +1945,7 @@
         "type": [
           {
             "code": "Extension",
-            "profile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-PartOf-extension"
+            "profile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-PartOf-extension"
           }
         ],
         "sliceName": "partof"
@@ -1958,7 +1958,7 @@
         "type": [
           {
             "code": "Reference",
-            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Device"
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Device"
           }
         ]
       },
@@ -1979,7 +1979,7 @@
         "type": [
           {
             "code": "Reference",
-            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Patient"
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Patient"
           }
         ]
       },
@@ -1989,7 +1989,7 @@
         "type": [
           {
             "code": "Reference",
-            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Organization"
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Organization"
           }
         ]
       },
@@ -1999,7 +1999,7 @@
         "type": [
           {
             "code": "Reference",
-            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Location"
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Location"
           }
         ]
       },
@@ -2009,7 +2009,7 @@
         "type": [
           {
             "code": "Annotation",
-            "profile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Annotation"
+            "profile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Annotation"
           }
         ]
       }

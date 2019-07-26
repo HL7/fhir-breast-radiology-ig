@@ -5,10 +5,10 @@
     "status": "generated",
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>MedicationStatement Logical Model</b></p>\n  <p>A record of the use of a medication. The use may be reported by the patient or clinician and adminstration does not have to be directly observed.\n\nFHIR Notes:\n\nAlthough FHIR supports the asserter (information source) and date asserted, it does not have a place for the author (who created and is responsible for the statement) and recorder (who entered the statement). Extensions are provided.\n\nThe treatment of &#039;not taken&#039; has changed from DSTU2 and STU3 to R4. In R4, status and statusReason are used to indicate medications not taken. For upward compatibility, the &#039;not taken&#039; attributes are profiled out.\nReasonCode is a choice of CodeableConcept or ref(Condition) in DSTU2, and limited to one reason (pick a type). In STU3 and R4, there can be multiple reason codes, and multiple reason references, simultaneously.\n\nPreference is given to using the National Library of Medicine (NLM) RxNorm terminology for medications. RxNorm is a coding standard established by the Office of the National Coordinator (ONC). However, RxNorm is restricted to FDA-approved drugs and does not include clinical trial drugs. MedicationStatement allows for the inclusion of other coding systems like the NCI Thesaurus (NCIT) to represent clinical trial oncology drugs.</p>\n</div>"
   },
-  "url": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-MedicationStatement-model",
+  "url": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-MedicationStatement-model",
   "identifier": [
     {
-      "system": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig",
+      "system": "http://hl7.org/fhir/us/breast-radiology/fhir",
       "value": "obf.MedicationStatement"
     }
   ],
@@ -64,7 +64,7 @@
         },
         "type": [
           {
-            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Metadata-model"
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Metadata-model"
           }
         ],
         "mustSupport": false,
@@ -127,7 +127,7 @@
         },
         "type": [
           {
-            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Narrative-model"
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Narrative-model"
           }
         ],
         "mustSupport": false,
@@ -196,7 +196,7 @@
         },
         "type": [
           {
-            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-Identifier-model"
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/shr-core-Identifier-model"
           }
         ],
         "mustSupport": false,
@@ -218,7 +218,7 @@
         "type": [
           {
             "code": "Reference",
-            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Patient-model"
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Patient-model"
           }
         ],
         "mustSupport": false,
@@ -240,11 +240,11 @@
         "type": [
           {
             "code": "Reference",
-            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Encounter-model"
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Encounter-model"
           },
           {
             "code": "Reference",
-            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-EpisodeOfCare-model"
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-EpisodeOfCare-model"
           }
         ],
         "mustSupport": false,
@@ -320,15 +320,15 @@
         "type": [
           {
             "code": "Reference",
-            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Condition-model"
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Condition-model"
           },
           {
             "code": "Reference",
-            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Observation-model"
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Observation-model"
           },
           {
             "code": "Reference",
-            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-DiagnosticReport-model"
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-DiagnosticReport-model"
           }
         ],
         "mustSupport": false,
@@ -360,19 +360,19 @@
         "type": [
           {
             "code": "Reference",
-            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-ServiceRequest-model"
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-ServiceRequest-model"
           },
           {
             "code": "Reference",
-            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-MedicationRequest-model"
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-MedicationRequest-model"
           },
           {
             "code": "Reference",
-            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-ReferralRequest-model"
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-ReferralRequest-model"
           },
           {
             "code": "Reference",
-            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-ProcedureRequest-model"
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-ProcedureRequest-model"
           }
         ],
         "mustSupport": false,
@@ -395,7 +395,7 @@
         "type": [
           {
             "code": "Reference",
-            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-ReferralRequest-model"
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-ReferralRequest-model"
           }
         ],
         "mustSupport": false,
@@ -418,7 +418,7 @@
         "type": [
           {
             "code": "Reference",
-            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-ProcedureRequest-model"
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-ProcedureRequest-model"
           }
         ],
         "mustSupport": false,
@@ -445,7 +445,7 @@
             "code": "dateTime"
           },
           {
-            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-TimePeriod-model"
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/shr-core-TimePeriod-model"
           }
         ],
         "mustSupport": false,
@@ -466,7 +466,7 @@
         },
         "type": [
           {
-            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Participation-model"
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Participation-model"
           }
         ],
         "mustSupport": false,
@@ -522,7 +522,7 @@
           },
           {
             "code": "Reference",
-            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Medication-model"
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Medication-model"
           }
         ],
         "mustSupport": false,
@@ -571,7 +571,7 @@
         },
         "type": [
           {
-            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Dosage-model"
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Dosage-model"
           }
         ],
         "mustSupport": false,
@@ -603,23 +603,23 @@
         "type": [
           {
             "code": "Reference",
-            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-MedicationAdministration-model"
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-MedicationAdministration-model"
           },
           {
             "code": "Reference",
-            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-MedicationDispense-model"
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-MedicationDispense-model"
           },
           {
             "code": "Reference",
-            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-MedicationStatement-model"
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-MedicationStatement-model"
           },
           {
             "code": "Reference",
-            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Procedure-model"
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Procedure-model"
           },
           {
             "code": "Reference",
-            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Observation-model"
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Observation-model"
           }
         ],
         "mustSupport": false,
@@ -642,7 +642,7 @@
         "type": [
           {
             "code": "Reference",
-            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-MedicationAdministration-model"
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-MedicationAdministration-model"
           }
         ],
         "mustSupport": false,
@@ -665,7 +665,7 @@
         "type": [
           {
             "code": "Reference",
-            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-MedicationDispense-model"
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-MedicationDispense-model"
           }
         ],
         "mustSupport": false,
@@ -688,7 +688,7 @@
         "type": [
           {
             "code": "Reference",
-            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-MedicationStatement-model"
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-MedicationStatement-model"
           }
         ],
         "mustSupport": false,
@@ -711,7 +711,7 @@
         "type": [
           {
             "code": "Reference",
-            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Procedure-model"
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Procedure-model"
           }
         ],
         "mustSupport": false,
@@ -734,7 +734,7 @@
         "type": [
           {
             "code": "Reference",
-            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Observation-model"
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Observation-model"
           }
         ],
         "mustSupport": false,
@@ -783,19 +783,19 @@
         "type": [
           {
             "code": "Reference",
-            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Patient-model"
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Patient-model"
           },
           {
             "code": "Reference",
-            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Practitioner-model"
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Practitioner-model"
           },
           {
             "code": "Reference",
-            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-RelatedPerson-model"
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-RelatedPerson-model"
           },
           {
             "code": "Reference",
-            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Organization-model"
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Organization-model"
           }
         ],
         "mustSupport": false,
@@ -816,7 +816,7 @@
         },
         "type": [
           {
-            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Resource-model"
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Resource-model"
           }
         ],
         "mustSupport": false,
@@ -837,7 +837,7 @@
         },
         "type": [
           {
-            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Annotation-model"
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Annotation-model"
           }
         ],
         "mustSupport": false,
@@ -874,7 +874,7 @@
         "binding": {
           "strength": "required",
           "valueSetReference": {
-            "reference": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig/obf/vs/TreatmentIntentVS"
+            "reference": "http://hl7.org/fhir/us/breast-radiology/fhir/ValueSet/obf-TreatmentIntentVS"
           }
         }
       },
@@ -901,7 +901,7 @@
         "binding": {
           "strength": "required",
           "valueSetReference": {
-            "reference": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig/obf/vs/TreatmentTerminationReasonVS"
+            "reference": "http://hl7.org/fhir/us/breast-radiology/fhir/ValueSet/obf-TreatmentTerminationReasonVS"
           }
         }
       }
@@ -938,7 +938,7 @@
         },
         "type": [
           {
-            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Metadata-model"
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Metadata-model"
           }
         ],
         "mustSupport": false,
@@ -1001,7 +1001,7 @@
         },
         "type": [
           {
-            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Narrative-model"
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Narrative-model"
           }
         ],
         "mustSupport": false,
@@ -1070,7 +1070,7 @@
         },
         "type": [
           {
-            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-Identifier-model"
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/shr-core-Identifier-model"
           }
         ],
         "mustSupport": false,
@@ -1092,7 +1092,7 @@
         "type": [
           {
             "code": "Reference",
-            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Patient-model"
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Patient-model"
           }
         ],
         "mustSupport": false,
@@ -1114,11 +1114,11 @@
         "type": [
           {
             "code": "Reference",
-            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Encounter-model"
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Encounter-model"
           },
           {
             "code": "Reference",
-            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-EpisodeOfCare-model"
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-EpisodeOfCare-model"
           }
         ],
         "mustSupport": false,
@@ -1194,15 +1194,15 @@
         "type": [
           {
             "code": "Reference",
-            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Condition-model"
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Condition-model"
           },
           {
             "code": "Reference",
-            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Observation-model"
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Observation-model"
           },
           {
             "code": "Reference",
-            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-DiagnosticReport-model"
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-DiagnosticReport-model"
           }
         ],
         "mustSupport": false,
@@ -1234,19 +1234,19 @@
         "type": [
           {
             "code": "Reference",
-            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-ServiceRequest-model"
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-ServiceRequest-model"
           },
           {
             "code": "Reference",
-            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-MedicationRequest-model"
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-MedicationRequest-model"
           },
           {
             "code": "Reference",
-            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-ReferralRequest-model"
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-ReferralRequest-model"
           },
           {
             "code": "Reference",
-            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-ProcedureRequest-model"
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-ProcedureRequest-model"
           }
         ],
         "mustSupport": false,
@@ -1269,7 +1269,7 @@
         "type": [
           {
             "code": "Reference",
-            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-ReferralRequest-model"
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-ReferralRequest-model"
           }
         ],
         "mustSupport": false,
@@ -1292,7 +1292,7 @@
         "type": [
           {
             "code": "Reference",
-            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-ProcedureRequest-model"
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-ProcedureRequest-model"
           }
         ],
         "mustSupport": false,
@@ -1319,7 +1319,7 @@
             "code": "dateTime"
           },
           {
-            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/shr-core-TimePeriod-model"
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/shr-core-TimePeriod-model"
           }
         ],
         "mustSupport": false,
@@ -1340,7 +1340,7 @@
         },
         "type": [
           {
-            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Participation-model"
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Participation-model"
           }
         ],
         "mustSupport": false,
@@ -1396,7 +1396,7 @@
           },
           {
             "code": "Reference",
-            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Medication-model"
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Medication-model"
           }
         ],
         "mustSupport": false,
@@ -1445,7 +1445,7 @@
         },
         "type": [
           {
-            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Dosage-model"
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Dosage-model"
           }
         ],
         "mustSupport": false,
@@ -1477,23 +1477,23 @@
         "type": [
           {
             "code": "Reference",
-            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-MedicationAdministration-model"
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-MedicationAdministration-model"
           },
           {
             "code": "Reference",
-            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-MedicationDispense-model"
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-MedicationDispense-model"
           },
           {
             "code": "Reference",
-            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-MedicationStatement-model"
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-MedicationStatement-model"
           },
           {
             "code": "Reference",
-            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Procedure-model"
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Procedure-model"
           },
           {
             "code": "Reference",
-            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Observation-model"
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Observation-model"
           }
         ],
         "mustSupport": false,
@@ -1516,7 +1516,7 @@
         "type": [
           {
             "code": "Reference",
-            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-MedicationAdministration-model"
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-MedicationAdministration-model"
           }
         ],
         "mustSupport": false,
@@ -1539,7 +1539,7 @@
         "type": [
           {
             "code": "Reference",
-            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-MedicationDispense-model"
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-MedicationDispense-model"
           }
         ],
         "mustSupport": false,
@@ -1562,7 +1562,7 @@
         "type": [
           {
             "code": "Reference",
-            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-MedicationStatement-model"
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-MedicationStatement-model"
           }
         ],
         "mustSupport": false,
@@ -1585,7 +1585,7 @@
         "type": [
           {
             "code": "Reference",
-            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Procedure-model"
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Procedure-model"
           }
         ],
         "mustSupport": false,
@@ -1608,7 +1608,7 @@
         "type": [
           {
             "code": "Reference",
-            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Observation-model"
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Observation-model"
           }
         ],
         "mustSupport": false,
@@ -1657,19 +1657,19 @@
         "type": [
           {
             "code": "Reference",
-            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Patient-model"
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Patient-model"
           },
           {
             "code": "Reference",
-            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Practitioner-model"
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Practitioner-model"
           },
           {
             "code": "Reference",
-            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-RelatedPerson-model"
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-RelatedPerson-model"
           },
           {
             "code": "Reference",
-            "targetProfile": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Organization-model"
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Organization-model"
           }
         ],
         "mustSupport": false,
@@ -1690,7 +1690,7 @@
         },
         "type": [
           {
-            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Resource-model"
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Resource-model"
           }
         ],
         "mustSupport": false,
@@ -1711,7 +1711,7 @@
         },
         "type": [
           {
-            "code": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig//fhir/StructureDefinition/obf-Annotation-model"
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Annotation-model"
           }
         ],
         "mustSupport": false,
@@ -1748,7 +1748,7 @@
         "binding": {
           "strength": "required",
           "valueSetReference": {
-            "reference": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig/obf/vs/TreatmentIntentVS"
+            "reference": "http://hl7.org/fhir/us/breast-radiology/fhir/ValueSet/obf-TreatmentIntentVS"
           }
         }
       },
@@ -1775,7 +1775,7 @@
         "binding": {
           "strength": "required",
           "valueSetReference": {
-            "reference": "http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig/obf/vs/TreatmentTerminationReasonVS"
+            "reference": "http://hl7.org/fhir/us/breast-radiology/fhir/ValueSet/obf-TreatmentTerminationReasonVS"
           }
         }
       }
