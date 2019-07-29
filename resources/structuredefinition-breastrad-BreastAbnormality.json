@@ -8,7 +8,7 @@
   "url": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/breastrad-BreastAbnormality",
   "name": "BreastAbnormality",
   "status": "draft",
-  "date": "2019-07-26",
+  "date": "2019-07-29",
   "publisher": "Hl7",
   "contact": [
     {
@@ -536,7 +536,7 @@
           }
         ],
         "slicing": {
-          "id": "22",
+          "id": "23",
           "discriminator": [
             {
               "type": "value",
@@ -605,25 +605,6 @@
         "sliceName": "observationderivedfrom"
       },
       {
-        "id": "Observation.extension:masstypes",
-        "path": "Observation.extension",
-        "definition": "Mass Types",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "DomainResource.extension",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/breastrad-MassTypes-extension"
-          }
-        ],
-        "sliceName": "masstypes"
-      },
-      {
         "id": "Observation.modifierExtension",
         "path": "Observation.modifierExtension",
         "short": "Extensions that cannot be ignored",
@@ -653,7 +634,7 @@
           }
         ],
         "slicing": {
-          "id": "23",
+          "id": "24",
           "discriminator": [
             {
               "type": "value",
@@ -2188,7 +2169,7 @@
         "binding": {
           "strength": "extensible",
           "valueSetReference": {
-            "reference": "http://hl7.org/fhir/us/breast-radiology/fhir/ValueSet/shr-core-LandmarkTypeVS"
+            "reference": "http://hl7.org/fhir/us/breast-radiology/shr/core/vs/LandmarkTypeVS"
           }
         }
       },
@@ -3570,7 +3551,7 @@
         "binding": {
           "strength": "required",
           "valueSetReference": {
-            "reference": "http://hl7.org/fhir/us/breast-radiology/fhir/ValueSet/shr-core-UnitsOfLengthVS"
+            "reference": "http://hl7.org/fhir/us/breast-radiology/shr/core/vs/UnitsOfLengthVS"
           }
         }
       },
@@ -4940,7 +4921,7 @@
         "id": "Observation.component:breastrad-AbnormalityDensity",
         "path": "Observation.component",
         "short": "AbnormalityDensity: Visually estimated content of fibroglandular-density tissue within the breast",
-        "definition": "Visually estimated content of fibroglandular-density tissue within the breast.\n<br>This item will be a slice of Observation.Component.\n<br>The slice will be on  Observation.Component.Code [http://www.test.com - AbnormalityDensity]\n<br>This slice code will be modified in a future  versions to be a suitable public terminology value.",
+        "definition": "Visually estimated content of fibroglandular-density tissue within the breast.\n<br>This item will be a slice of Observation.Component.\n<br>The slice will be on  Observation.Component.Code.\n<br>This slice code will be modified in a future  versions to be a suitable public terminology value.",
         "min": 0,
         "max": "1",
         "type": [
@@ -5525,7 +5506,7 @@
         "binding": {
           "strength": "required",
           "valueSetReference": {
-            "reference": "http://hl7.org/fhir/us/breast-radiology/fhir/ValueSet/breastrad-AbnormalityDensityVs"
+            "reference": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/AbnormalityDensityVs"
           }
         }
       },
@@ -5920,7 +5901,7 @@
         "id": "Observation.component:breastrad-AbnormalityType",
         "path": "Observation.component",
         "short": "AbnormalityType: Abnormality Type value",
-        "definition": "Abnormality Type value.\n<br>This item will be a slice of Observation.Component.\n<br>The slice will be on  Observation.Component.Code [http://www.test.com - AbnormalityType]\n<br>This slice code will be modified in a future  versions to be a suitable public terminology value.",
+        "definition": "Abnormality Type value.\n<br>This item will be a slice of Observation.Component.\n<br>The slice will be on  Observation.Component.Code.\n<br>This slice code will be modified in a future  versions to be a suitable public terminology value.",
         "min": 0,
         "max": "1",
         "type": [
@@ -6505,7 +6486,7 @@
         "binding": {
           "strength": "required",
           "valueSetReference": {
-            "reference": "http://hl7.org/fhir/us/breast-radiology/fhir/ValueSet/breastrad-AbnormalityTypeVs"
+            "reference": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/AbnormalityTypeVs"
           }
         }
       },
@@ -6900,7 +6881,7 @@
         "id": "Observation.component:breastrad-AsymmetryTypes",
         "path": "Observation.component",
         "short": "AsymmetryTypes: Currently many studies utilize cortical thickening and hilum absence as criteria for definition of the risk for metastasis(11,12-16). ..",
-        "definition": "Currently many studies utilize cortical thickening and hilum absence as criteria for definition of the risk for metastasis(11,12-16). ... Metastatic deposits accumulate in the lymph node peripheral area, causing enlargement of the cortex, usually focal (at early stages), or uniform..\n<br>This item will be a slice of Observation.Component.\n<br>The slice will be on  Observation.Component.Code [http://www.test.com - AsymmetryTypes]\n<br>This slice code will be modified in a future  versions to be a suitable public terminology value.",
+        "definition": "Currently many studies utilize cortical thickening and hilum absence as criteria for definition of the risk for metastasis(11,12-16). ... Metastatic deposits accumulate in the lymph node peripheral area, causing enlargement of the cortex, usually focal (at early stages), or uniform..\n<br>This item will be a slice of Observation.Component.\n<br>The slice will be on  Observation.Component.Code.\n<br>This slice code will be modified in a future  versions to be a suitable public terminology value.",
         "min": 0,
         "max": "1",
         "type": [
@@ -7485,7 +7466,7 @@
         "binding": {
           "strength": "required",
           "valueSetReference": {
-            "reference": "http://hl7.org/fhir/us/breast-radiology/fhir/ValueSet/breastrad-AsymmetryTypesVs"
+            "reference": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/AsymmetryTypesVs"
           }
         }
       },
@@ -7880,7 +7861,7 @@
         "id": "Observation.component:breastrad-BiRadCode",
         "path": "Observation.component",
         "short": "BiRadCode: Bi-Rad code value",
-        "definition": "Bi-Rad code value.\n<br>This item will be a slice of Observation.Component.\n<br>The slice will be on  Observation.Component.Code [http://www.test.com - BiRadCode]\n<br>This slice code will be modified in a future  versions to be a suitable public terminology value.",
+        "definition": "Bi-Rad code value.\n<br>This item will be a slice of Observation.Component.\n<br>The slice will be on  Observation.Component.Code.\n<br>This slice code will be modified in a future  versions to be a suitable public terminology value.",
         "min": 0,
         "max": "1",
         "type": [
@@ -8465,7 +8446,7 @@
         "binding": {
           "strength": "required",
           "valueSetReference": {
-            "reference": "http://hl7.org/fhir/us/breast-radiology/fhir/ValueSet/breastrad-BiRadCodeVs"
+            "reference": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/BiRadCodeVs"
           }
         }
       },
@@ -8860,7 +8841,7 @@
         "id": "Observation.component:breastrad-Change",
         "path": "Observation.component",
         "short": "Change: Change value",
-        "definition": "Change value.\n<br>This item will be a slice of Observation.Component.\n<br>The slice will be on  Observation.Component.Code [http://www.test.com - Change]\n<br>This slice code will be modified in a future  versions to be a suitable public terminology value.",
+        "definition": "Change value.\n<br>This item will be a slice of Observation.Component.\n<br>The slice will be on  Observation.Component.Code.\n<br>This slice code will be modified in a future  versions to be a suitable public terminology value.",
         "min": 0,
         "max": "1",
         "type": [
@@ -9445,7 +9426,7 @@
         "binding": {
           "strength": "required",
           "valueSetReference": {
-            "reference": "http://hl7.org/fhir/us/breast-radiology/fhir/ValueSet/breastrad-ChangeVs"
+            "reference": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/ChangeVs"
           }
         }
       },
@@ -9840,7 +9821,7 @@
         "id": "Observation.component:breastrad-CystTypes",
         "path": "Observation.component",
         "short": "CystTypes: Cyst Types",
-        "definition": "Cyst Types.\n<br>This item will be a slice of Observation.Component.\n<br>The slice will be on  Observation.Component.Code [http://www.test.com - CystTypes]\n<br>This slice code will be modified in a future  versions to be a suitable public terminology value.",
+        "definition": "Cyst Types.\n<br>This item will be a slice of Observation.Component.\n<br>The slice will be on  Observation.Component.Code.\n<br>This slice code will be modified in a future  versions to be a suitable public terminology value.",
         "min": 0,
         "max": "1",
         "type": [
@@ -10425,7 +10406,7 @@
         "binding": {
           "strength": "required",
           "valueSetReference": {
-            "reference": "http://hl7.org/fhir/us/breast-radiology/fhir/ValueSet/breastrad-CystTypesVs"
+            "reference": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/CystTypesVs"
           }
         }
       },
@@ -10820,7 +10801,7 @@
         "id": "Observation.component:breastrad-Depth",
         "path": "Observation.component",
         "short": "Depth: Depth",
-        "definition": "Depth.\n<br>This item will be a slice of Observation.Component.\n<br>The slice will be on  Observation.Component.Code [http://www.test.com - Depth]\n<br>This slice code will be modified in a future  versions to be a suitable public terminology value.",
+        "definition": "Depth.\n<br>This item will be a slice of Observation.Component.\n<br>The slice will be on  Observation.Component.Code.\n<br>This slice code will be modified in a future  versions to be a suitable public terminology value.",
         "min": 0,
         "max": "1",
         "type": [
@@ -11405,7 +11386,7 @@
         "binding": {
           "strength": "required",
           "valueSetReference": {
-            "reference": "http://hl7.org/fhir/us/breast-radiology/fhir/ValueSet/breastrad-DepthVs"
+            "reference": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/DepthVs"
           }
         }
       },
@@ -11800,7 +11781,7 @@
         "id": "Observation.component:breastrad-Margin",
         "path": "Observation.component",
         "short": "Margin: When breast cancer is surgically removed (during a surgical biopsy, lumpectomy or mastectomy), a rim of normal tissue surrounding the tumor is also removed",
-        "definition": "When breast cancer is surgically removed (during a surgical biopsy, lumpectomy or mastectomy), a rim of normal tissue surrounding the tumor is also removed. This rim is called a margin. Margins help show whether or not all of the tumor was removed..\n<br>This item will be a slice of Observation.Component.\n<br>The slice will be on  Observation.Component.Code [http://www.test.com - Margin]\n<br>This slice code will be modified in a future  versions to be a suitable public terminology value.",
+        "definition": "When breast cancer is surgically removed (during a surgical biopsy, lumpectomy or mastectomy), a rim of normal tissue surrounding the tumor is also removed. This rim is called a margin. Margins help show whether or not all of the tumor was removed..\n<br>This item will be a slice of Observation.Component.\n<br>The slice will be on  Observation.Component.Code.\n<br>This slice code will be modified in a future  versions to be a suitable public terminology value.",
         "min": 0,
         "max": "1",
         "type": [
@@ -12385,7 +12366,7 @@
         "binding": {
           "strength": "required",
           "valueSetReference": {
-            "reference": "http://hl7.org/fhir/us/breast-radiology/fhir/ValueSet/breastrad-MarginVs"
+            "reference": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/MarginVs"
           }
         }
       },
@@ -12777,10 +12758,990 @@
         ]
       },
       {
+        "id": "Observation.component:breastrad-MassTypes",
+        "path": "Observation.component",
+        "short": "MassTypes: Mass Types",
+        "definition": "Mass Types.\n<br>This item will be a slice of Observation.Component.\n<br>The slice will be on  Observation.Component.Code.\n<br>This slice code will be modified in a future  versions to be a suitable public terminology value.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() | (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "Element"
+          }
+        ],
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "containment by OBX-4?"
+          },
+          {
+            "identity": "rim",
+            "map": "outBoundRelationship[typeCode=COMP]"
+          }
+        ],
+        "sliceName": "breastrad-MassTypes",
+        "base": {
+          "path": "Observation.component",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Observation.component:breastrad-MassTypes.id",
+        "path": "Observation.component.id",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "xml:id (or equivalent in JSON)",
+        "definition": "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Element.id",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component:breastrad-MassTypes.extension",
+        "path": "Observation.component.extension",
+        "short": "Additional Content defined by implementations",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "alias": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Element.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component:breastrad-MassTypes.modifierExtension",
+        "path": "Observation.component.modifierExtension",
+        "short": "Extensions that cannot be ignored",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
+        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "alias": [
+          "extensions",
+          "user content",
+          "modifiers"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "BackboneElement.modifierExtension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isModifier": true,
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component:breastrad-MassTypes.code",
+        "path": "Observation.component.code",
+        "short": "Type of component observation (code / type)",
+        "definition": "Describes what was observed. Sometimes this is called the observation \"code\".",
+        "requirements": "Knowing what kind of observation is being made is essential to understanding the observation.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "isSummary": true,
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "ObservationCode"
+            }
+          ],
+          "strength": "example",
+          "description": "Codes identifying names of simple observations.",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/observation-codes"
+          }
+        },
+        "mapping": [
+          {
+            "identity": "sct-concept",
+            "map": "< 363787002 |Observable entity| OR \r< 386053000 |Evaluation procedure|"
+          },
+          {
+            "identity": "v2",
+            "map": "OBX-3"
+          },
+          {
+            "identity": "rim",
+            "map": "code"
+          },
+          {
+            "identity": "w5",
+            "map": "what"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component:breastrad-MassTypes.code.id",
+        "path": "Observation.component.code.id",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "xml:id (or equivalent in JSON)",
+        "definition": "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Element.id",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component:breastrad-MassTypes.code.extension",
+        "path": "Observation.component.code.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "description": "Extensions are always sliced by (at least) url",
+          "rules": "open"
+        },
+        "short": "Additional Content defined by implementations",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "alias": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Element.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component:breastrad-MassTypes.code.coding",
+        "path": "Observation.component.code.coding",
+        "short": "Code defined by a terminology system",
+        "definition": "A reference to a code defined by a terminology system.",
+        "comment": "Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true.",
+        "requirements": "Allows for translations and alternate encodings within a code system.  Also supports communication of the same instance to systems requiring different encodings.",
+        "min": 1,
+        "max": "*",
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "C*E.1-8, C*E.10-22"
+          },
+          {
+            "identity": "rim",
+            "map": "union(., ./translation)"
+          },
+          {
+            "identity": "orim",
+            "map": "fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding"
+          }
+        ],
+        "slicing": {
+          "id": "14",
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "code"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "id": "Observation.component:breastrad-MassTypes.code.coding:Fixed_MassTypes",
+        "path": "Observation.component.code.coding",
+        "sliceName": "Fixed_MassTypes",
+        "short": "Code defined by a terminology system",
+        "definition": "A reference to a code defined by a terminology system.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "id": "Observation.component:breastrad-MassTypes.code.coding:Fixed_MassTypes.id",
+        "path": "Observation.component.code.coding.id",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "xml:id (or equivalent in JSON)",
+        "definition": "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Element.id",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component:breastrad-MassTypes.code.coding:Fixed_MassTypes.extension",
+        "path": "Observation.component.code.coding.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "description": "Extensions are always sliced by (at least) url",
+          "rules": "open"
+        },
+        "short": "Additional Content defined by implementations",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "alias": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Element.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component:breastrad-MassTypes.code.coding:Fixed_MassTypes.system",
+        "path": "Observation.component.code.coding.system",
+        "short": "Identity of the terminology system",
+        "definition": "The identification of the code system that defines the meaning of the symbol in the code.",
+        "comment": "The URI may be an OID (urn:oid:...) or a UUID (urn:uuid:...).  OIDs and UUIDs SHALL be references to the HL7 OID registry. Otherwise, the URI should come from HL7's list of FHIR defined special URIs or it should de-reference to some definition that establish the system clearly and unambiguously.",
+        "requirements": "Need to be unambiguous about the source of the definition of the symbol.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "C*E.3"
+          },
+          {
+            "identity": "rim",
+            "map": "./codeSystem"
+          },
+          {
+            "identity": "orim",
+            "map": "fhir:Coding.system rdfs:subPropertyOf dt:CDCoding.codeSystem"
+          }
+        ],
+        "fixedUri": "http://www.test.com/test-codes"
+      },
+      {
+        "id": "Observation.component:breastrad-MassTypes.code.coding:Fixed_MassTypes.version",
+        "path": "Observation.component.code.coding.version",
+        "short": "Version of the system - if relevant",
+        "definition": "The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured. and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged.",
+        "comment": "Where the terminology does not clearly define what string should be used to identify code system versions, the recommendation is to use the date (expressed in FHIR date format) on which that version was officially published as the version date.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "C*E.7"
+          },
+          {
+            "identity": "rim",
+            "map": "./codeSystemVersion"
+          },
+          {
+            "identity": "orim",
+            "map": "fhir:Coding.version rdfs:subPropertyOf dt:CDCoding.codeSystemVersion"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component:breastrad-MassTypes.code.coding:Fixed_MassTypes.code",
+        "path": "Observation.component.code.coding.code",
+        "short": "Symbol in syntax defined by the system",
+        "definition": "A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination).",
+        "requirements": "Need to refer to a particular code in the system.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "C*E.1"
+          },
+          {
+            "identity": "rim",
+            "map": "./code"
+          },
+          {
+            "identity": "orim",
+            "map": "fhir:Coding.code rdfs:subPropertyOf dt:CDCoding.code"
+          }
+        ],
+        "fixedCode": "MassTypes"
+      },
+      {
+        "id": "Observation.component:breastrad-MassTypes.code.coding:Fixed_MassTypes.display",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
+            "valueBoolean": true
+          }
+        ],
+        "path": "Observation.component.code.coding.display",
+        "short": "Representation defined by the system",
+        "definition": "A representation of the meaning of the code in the system, following the rules of the system.",
+        "requirements": "Need to be able to carry a human-readable meaning of the code for readers that do not know  the system.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "C*E.2 - but note this is not well followed"
+          },
+          {
+            "identity": "rim",
+            "map": "CV.displayName"
+          },
+          {
+            "identity": "orim",
+            "map": "fhir:Coding.display rdfs:subPropertyOf dt:CDCoding.displayName"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component:breastrad-MassTypes.code.coding:Fixed_MassTypes.userSelected",
+        "path": "Observation.component.code.coding.userSelected",
+        "short": "If this coding was chosen directly by the user",
+        "definition": "Indicates that this coding was chosen by a user directly - i.e. off a pick list of available items (codes or displays).",
+        "comment": "Amongst a set of alternatives, a directly chosen code is the most appropriate starting point for new translations. There is some ambiguity about what exactly 'directly chosen' implies, and trading partner agreement may be needed to clarify the use of this element and its consequences more completely.",
+        "requirements": "This has been identified as a clinical safety criterium - that this exact system/code pair was chosen explicitly, rather than inferred by the system based on some rules or language processing.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ],
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "Sometimes implied by being first"
+          },
+          {
+            "identity": "rim",
+            "map": "CD.codingRationale"
+          },
+          {
+            "identity": "orim",
+            "map": "fhir:Coding.userSelected fhir:mapsTo dt:CDCoding.codingRationale. fhir:Coding.userSelected fhir:hasMap fhir:Coding.userSelected.map. fhir:Coding.userSelected.map a fhir:Map;   fhir:target dt:CDCoding.codingRationale. fhir:Coding.userSelected\\#true a [     fhir:source \"true\";     fhir:target dt:CDCoding.codingRationale\\#O   ]"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component:breastrad-MassTypes.code.text",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
+            "valueBoolean": true
+          }
+        ],
+        "path": "Observation.component.code.text",
+        "short": "Plain text representation of the concept",
+        "definition": "A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user.",
+        "comment": "Very often the text is the same as a displayName of one of the codings.",
+        "requirements": "The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "C*E.9. But note many systems use C*E.2 for this"
+          },
+          {
+            "identity": "rim",
+            "map": "./originalText[mediaType/code=\"text/plain\"]/data"
+          },
+          {
+            "identity": "orim",
+            "map": "fhir:CodeableConcept.text rdfs:subPropertyOf dt:CD.originalText"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component:breastrad-MassTypes.valueCodeableConcept",
+        "path": "Observation.component.valueCodeableConcept",
+        "short": "Actual component result",
+        "definition": "The information determined as a result of making the observation, if the information has a simple value.",
+        "comment": "Normally, an observation will have either a single value or a set of related observations. A few observations (e.g. Apgar score) may have both a value and related observations (for an Apgar score, the observations from which the measure is derived). If a value is present, the datatype for this element should be determined by Observation.code. A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.   For boolean values use valueCodeableConcept and select codes from <http://hl7.org/fhir/ValueSet/v2-0136> (these \"yes/no\" concepts can be mapped to the display name \"true/false\" or other mutually exclusive terms that may be needed\").  The element, Observation.value[x], has a variable name depending on the type as follows: valueQuantity, valueCodeableConcept, valueRatio, valueChoice, valuePeriod, valueSampleData, or valueString (the name format is \"'value' + the type name\" with a capital on the first letter of the type).",
+        "requirements": "An observation exists to have a value, though it may not if it is in error, or if it represents a group of observations.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "sct-concept",
+            "map": "363714003 |Interprets| < 441742003 |Evaluation finding|"
+          },
+          {
+            "identity": "v2",
+            "map": "OBX.2, OBX.5, OBX.6"
+          },
+          {
+            "identity": "rim",
+            "map": "value"
+          },
+          {
+            "identity": "sct-attr",
+            "map": "363714003 |Interprets|"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/MassTypesVs"
+          }
+        }
+      },
+      {
+        "id": "Observation.component:breastrad-MassTypes.dataAbsentReason",
+        "path": "Observation.component.dataAbsentReason",
+        "short": "Why the component result is missing",
+        "definition": "Provides a reason why the expected value in the element Observation.value[x] is missing.",
+        "comment": "\"Null\" or exceptional values can be represented two ways in FHIR Observations.  One way is to simply include them in the value set and represent the exceptions in the value.  For example, measurement values for a serology test could be  \"detected\", \"not detected\", \"inconclusive\", or  \"test not done\".   The alternate way is to use the value element for actual observations and use the explicit dataAbsentReason element to record exceptional values.  For example, the dataAbsentReason code \"error\" could be used when the measurement was not completed.  Because of these options, use-case agreements are required to interpret general observations for exceptional values.",
+        "requirements": "For many results it is necessary to handle exceptional values in measurements.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "condition": [
+          "obs-6"
+        ],
+        "binding": {
+          "strength": "extensible",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/data-absent-reason"
+          }
+        },
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "N/A"
+          },
+          {
+            "identity": "rim",
+            "map": "value.nullFlavor"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component:breastrad-MassTypes.interpretation",
+        "path": "Observation.component.interpretation",
+        "short": "High, low, normal, etc.",
+        "definition": "The assessment made based on the result of the observation.  Intended as a simple compact code often placed adjacent to the result value in reports and flow sheets to signal the meaning/normalcy status of the result. Otherwise known as abnormal flag.",
+        "comment": "The component interpretation applies only to the individual component value.  For an overall interpretation all components together use thes Observation.interpretation element.",
+        "requirements": "For some results, particularly numeric results, an interpretation is necessary to fully understand the significance of a result.",
+        "alias": [
+          "Abnormal Flag"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "ObservationInterpretation"
+            }
+          ],
+          "strength": "extensible",
+          "description": "Codes identifying interpretations of observations.",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/observation-interpretation"
+          }
+        },
+        "mapping": [
+          {
+            "identity": "sct-concept",
+            "map": "< 260245000 |Findings values|"
+          },
+          {
+            "identity": "v2",
+            "map": "OBX-8"
+          },
+          {
+            "identity": "rim",
+            "map": "interpretationCode"
+          },
+          {
+            "identity": "sct-attr",
+            "map": "363713009 |Has interpretation|"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component:breastrad-MassTypes.referenceRange",
+        "path": "Observation.component.referenceRange",
+        "short": "Provides guide for interpretation of component result",
+        "definition": "Guidance on how to interpret the value by comparison to a normal or recommended range.",
+        "comment": "Most observations only have one generic reference range. Systems MAY choose to restrict to only supplying the relevant reference range based on knowledge about the patient (e.g., specific to the patient's age, gender, weight and other factors), but this may not be possible or appropriate. Whenever more than one reference range is supplied, the differences between them SHOULD be provided in the reference range and/or age properties.",
+        "requirements": "Knowing what values are considered \"normal\" can help evaluate the significance of a particular result. Need to be able to provide multiple reference ranges for different contexts.",
+        "min": 0,
+        "max": "1",
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "OBX.7"
+          },
+          {
+            "identity": "rim",
+            "map": "outboundRelationship[typeCode=REFV]/target[classCode=OBS, moodCode=EVN]"
+          }
+        ],
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "base": {
+          "path": "Observation.component.referenceRange",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Observation.component:breastrad-MassTypes.referenceRange.id",
+        "path": "Observation.component.referenceRange.id",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "xml:id (or equivalent in JSON)",
+        "definition": "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Element.id",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component:breastrad-MassTypes.referenceRange.extension",
+        "path": "Observation.component.referenceRange.extension",
+        "short": "Additional Content defined by implementations",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "alias": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Element.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component:breastrad-MassTypes.referenceRange.modifierExtension",
+        "path": "Observation.component.referenceRange.modifierExtension",
+        "short": "Extensions that cannot be ignored",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
+        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "alias": [
+          "extensions",
+          "user content",
+          "modifiers"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "BackboneElement.modifierExtension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isModifier": true,
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component:breastrad-MassTypes.referenceRange.low",
+        "path": "Observation.component.referenceRange.low",
+        "short": "Low Range, if relevant",
+        "definition": "The value of the low bound of the reference range.  The low bound of the reference range endpoint is inclusive of the value (e.g.  reference range is >=5 - <=9).   If the low bound is omitted,  it is assumed to be meaningless (e.g. reference range is <=2.3).",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Quantity",
+            "profile": "http://hl7.org/fhir/StructureDefinition/SimpleQuantity"
+          }
+        ],
+        "condition": [
+          "obs-3"
+        ],
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "OBX-7"
+          },
+          {
+            "identity": "rim",
+            "map": "value:IVL_PQ.low"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component:breastrad-MassTypes.referenceRange.high",
+        "path": "Observation.component.referenceRange.high",
+        "short": "High Range, if relevant",
+        "definition": "The value of the high bound of the reference range.  The high bound of the reference range endpoint is inclusive of the value (e.g.  reference range is >=5 - <=9).   If the high bound is omitted,  it is assumed to be meaningless (e.g. reference range is >= 2.3).",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Quantity",
+            "profile": "http://hl7.org/fhir/StructureDefinition/SimpleQuantity"
+          }
+        ],
+        "condition": [
+          "obs-3"
+        ],
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "OBX-7"
+          },
+          {
+            "identity": "rim",
+            "map": "value:IVL_PQ.high"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component:breastrad-MassTypes.referenceRange.type",
+        "path": "Observation.component.referenceRange.type",
+        "short": "Reference range qualifier",
+        "definition": "Codes to indicate the what part of the targeted reference population it applies to. For example, the normal or therapeutic range.",
+        "comment": "This SHOULD be populated if there is more than one range.  If this element is not present then the normal range is assumed.",
+        "requirements": "Need to be able to say what kind of reference range this is - normal, recommended, therapeutic, etc,  - for proper interpretation.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "ObservationRangeMeaning"
+            }
+          ],
+          "strength": "extensible",
+          "description": "Code for the meaning of a reference range.",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/referencerange-meaning"
+          }
+        },
+        "mapping": [
+          {
+            "identity": "sct-concept",
+            "map": "< 260245000 |Findings values| OR  \r< 365860008 |General clinical state finding| \rOR \r< 250171008 |Clinical history or observation findings| OR  \r< 415229000 |Racial group| OR \r< 365400002 |Finding of puberty stage| OR\r< 443938003 |Procedure carried out on subject|"
+          },
+          {
+            "identity": "v2",
+            "map": "OBX-10"
+          },
+          {
+            "identity": "rim",
+            "map": "interpretationCode"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component:breastrad-MassTypes.referenceRange.appliesTo",
+        "path": "Observation.component.referenceRange.appliesTo",
+        "short": "Reference range population",
+        "definition": "Codes to indicate the target population this reference range applies to.  For example, a reference range may be based on the normal population or a particular sex or race.",
+        "comment": "This SHOULD be populated if there is more than one range.  If this element is not present then the normal population is assumed.",
+        "requirements": "Need to be able to identify the target population for proper interpretation.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "ObservationRangeType"
+            }
+          ],
+          "strength": "extensible",
+          "description": "Codes identifying the population the reference range applies to.",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/referencerange-appliesto"
+          }
+        },
+        "mapping": [
+          {
+            "identity": "sct-concept",
+            "map": "< 260245000 |Findings values| OR  \r< 365860008 |General clinical state finding| \rOR \r< 250171008 |Clinical history or observation findings| OR  \r< 415229000 |Racial group| OR \r< 365400002 |Finding of puberty stage| OR\r< 443938003 |Procedure carried out on subject|"
+          },
+          {
+            "identity": "v2",
+            "map": "OBX-10"
+          },
+          {
+            "identity": "rim",
+            "map": "interpretationCode"
+          }
+        ],
+        "base": {
+          "path": "Observation.component.referenceRange.appliesTo",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Observation.component:breastrad-MassTypes.referenceRange.age",
+        "path": "Observation.component.referenceRange.age",
+        "short": "Applicable age range, if relevant",
+        "definition": "The age at which this reference range is applicable. This is a neonatal age (e.g. number of weeks at term) if the meaning says so.",
+        "requirements": "Some analytes vary greatly over age.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Range"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "outboundRelationship[typeCode=PRCN].targetObservationCriterion[code=\"age\"].value"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component:breastrad-MassTypes.referenceRange.text",
+        "path": "Observation.component.referenceRange.text",
+        "short": "Text based reference range in an observation",
+        "definition": "Text based reference range in an observation which may be used when a quantitative range is not appropriate for an observation.  An example would be a reference value of \"Negative\" or a list or table of 'normals'.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "OBX-7"
+          },
+          {
+            "identity": "rim",
+            "map": "value:ST"
+          }
+        ]
+      },
+      {
         "id": "Observation.component:breastrad-NodeTypes",
         "path": "Observation.component",
         "short": "NodeTypes: Node Types",
-        "definition": "Node Types.\n<br>This item will be a slice of Observation.Component.\n<br>The slice will be on  Observation.Component.Code [http://www.test.com - NodeTypes]\n<br>This slice code will be modified in a future  versions to be a suitable public terminology value.",
+        "definition": "Node Types.\n<br>This item will be a slice of Observation.Component.\n<br>The slice will be on  Observation.Component.Code.\n<br>This slice code will be modified in a future  versions to be a suitable public terminology value.",
         "min": 0,
         "max": "1",
         "type": [
@@ -13046,7 +14007,7 @@
           }
         ],
         "slicing": {
-          "id": "14",
+          "id": "15",
           "discriminator": [
             {
               "type": "value",
@@ -13365,7 +14326,7 @@
         "binding": {
           "strength": "required",
           "valueSetReference": {
-            "reference": "http://hl7.org/fhir/us/breast-radiology/fhir/ValueSet/breastrad-NodeTypesVs"
+            "reference": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/NodeTypesVs"
           }
         }
       },
@@ -13760,7 +14721,7 @@
         "id": "Observation.component:breastrad-Shape",
         "path": "Observation.component",
         "short": "Shape: Shape",
-        "definition": "Shape.\n<br>This item will be a slice of Observation.Component.\n<br>The slice will be on  Observation.Component.Code [http://www.test.com - Shape]\n<br>This slice code will be modified in a future  versions to be a suitable public terminology value.",
+        "definition": "Shape.\n<br>This item will be a slice of Observation.Component.\n<br>The slice will be on  Observation.Component.Code.\n<br>This slice code will be modified in a future  versions to be a suitable public terminology value.",
         "min": 0,
         "max": "1",
         "type": [
@@ -14026,7 +14987,7 @@
           }
         ],
         "slicing": {
-          "id": "15",
+          "id": "16",
           "discriminator": [
             {
               "type": "value",
@@ -14345,7 +15306,7 @@
         "binding": {
           "strength": "required",
           "valueSetReference": {
-            "reference": "http://hl7.org/fhir/us/breast-radiology/fhir/ValueSet/breastrad-ShapeVs"
+            "reference": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/ShapeVs"
           }
         }
       },
@@ -14740,7 +15701,7 @@
         "id": "Observation.component:breastrad-Vascularity",
         "path": "Observation.component",
         "short": "Vascularity: Vascularity",
-        "definition": "Vascularity.\n<br>This item will be a slice of Observation.Component.\n<br>The slice will be on  Observation.Component.Code [http://www.test.com - Vascularity]\n<br>This slice code will be modified in a future  versions to be a suitable public terminology value.",
+        "definition": "Vascularity.\n<br>This item will be a slice of Observation.Component.\n<br>The slice will be on  Observation.Component.Code.\n<br>This slice code will be modified in a future  versions to be a suitable public terminology value.",
         "min": 0,
         "max": "1",
         "type": [
@@ -15006,7 +15967,7 @@
           }
         ],
         "slicing": {
-          "id": "16",
+          "id": "17",
           "discriminator": [
             {
               "type": "value",
@@ -15325,7 +16286,7 @@
         "binding": {
           "strength": "required",
           "valueSetReference": {
-            "reference": "http://hl7.org/fhir/us/breast-radiology/fhir/ValueSet/breastrad-VascularityVs"
+            "reference": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/VascularityVs"
           }
         }
       },
@@ -15720,7 +16681,7 @@
         "id": "Observation.component:breastrad-Wall",
         "path": "Observation.component",
         "short": "Wall: Wall",
-        "definition": "Wall.\n<br>This item will be a slice of Observation.Component.\n<br>The slice will be on  Observation.Component.Code [http://www.test.com - Wall]\n<br>This slice code will be modified in a future  versions to be a suitable public terminology value.",
+        "definition": "Wall.\n<br>This item will be a slice of Observation.Component.\n<br>The slice will be on  Observation.Component.Code.\n<br>This slice code will be modified in a future  versions to be a suitable public terminology value.",
         "min": 0,
         "max": "1",
         "type": [
@@ -15986,7 +16947,7 @@
           }
         ],
         "slicing": {
-          "id": "17",
+          "id": "18",
           "discriminator": [
             {
               "type": "value",
@@ -16305,7 +17266,7 @@
         "binding": {
           "strength": "required",
           "valueSetReference": {
-            "reference": "http://hl7.org/fhir/us/breast-radiology/fhir/ValueSet/breastrad-WallVs"
+            "reference": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/WallVs"
           }
         }
       },
@@ -16700,7 +17661,7 @@
         "id": "Observation.component:breastrad-MaxLength",
         "path": "Observation.component",
         "short": "MaxLength: Max Length Description\n<br>This item will be a slice of Observation.Component",
-        "definition": "Max Length Description\n<br>This item will be a slice of Observation.Component.\n<br>The slice will be on  Observation.Component.Code [http://www.test.com - MaxLength]\n<br>This slice code will be modified in a future  versions to be a suitable public terminology value.",
+        "definition": "Max Length Description\n<br>This item will be a slice of Observation.Component.\n<br>The slice will be on  Observation.Component.Code.\n<br>This slice code will be modified in a future  versions to be a suitable public terminology value.",
         "min": 0,
         "max": "1",
         "type": [
@@ -16966,7 +17927,7 @@
           }
         ],
         "slicing": {
-          "id": "18",
+          "id": "19",
           "discriminator": [
             {
               "type": "value",
@@ -17659,7 +18620,7 @@
         "id": "Observation.component:breastrad-MaxWidth",
         "path": "Observation.component",
         "short": "MaxWidth: Max Width\n<br>This item will be a slice of Observation.Component",
-        "definition": "Max Width\n<br>This item will be a slice of Observation.Component.\n<br>The slice will be on  Observation.Component.Code [http://www.test.com - MaxWidth]\n<br>This slice code will be modified in a future  versions to be a suitable public terminology value.",
+        "definition": "Max Width\n<br>This item will be a slice of Observation.Component.\n<br>The slice will be on  Observation.Component.Code.\n<br>This slice code will be modified in a future  versions to be a suitable public terminology value.",
         "min": 0,
         "max": "1",
         "type": [
@@ -17925,7 +18886,7 @@
           }
         ],
         "slicing": {
-          "id": "19",
+          "id": "20",
           "discriminator": [
             {
               "type": "value",
@@ -18651,7 +19612,7 @@
         "id": "Observation.extension",
         "path": "Observation.extension",
         "slicing": {
-          "id": "22",
+          "id": "23",
           "discriminator": [
             {
               "type": "value",
@@ -18720,29 +19681,10 @@
         "sliceName": "observationderivedfrom"
       },
       {
-        "id": "Observation.extension:masstypes",
-        "path": "Observation.extension",
-        "definition": "Mass Types",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "DomainResource.extension",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Extension",
-            "profile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/breastrad-MassTypes-extension"
-          }
-        ],
-        "sliceName": "masstypes"
-      },
-      {
         "id": "Observation.modifierExtension",
         "path": "Observation.modifierExtension",
         "slicing": {
-          "id": "23",
+          "id": "24",
           "discriminator": [
             {
               "type": "value",
@@ -19329,7 +20271,7 @@
           "max": "*"
         },
         "short": "AbnormalityDensity: Visually estimated content of fibroglandular-density tissue within the breast",
-        "definition": "Visually estimated content of fibroglandular-density tissue within the breast.\n<br>This item will be a slice of Observation.Component.\n<br>The slice will be on  Observation.Component.Code [http://www.test.com - AbnormalityDensity]\n<br>This slice code will be modified in a future  versions to be a suitable public terminology value.",
+        "definition": "Visually estimated content of fibroglandular-density tissue within the breast.\n<br>This item will be a slice of Observation.Component.\n<br>The slice will be on  Observation.Component.Code.\n<br>This slice code will be modified in a future  versions to be a suitable public terminology value.",
         "min": 0,
         "max": "1"
       },
@@ -19385,7 +20327,7 @@
         "binding": {
           "strength": "required",
           "valueSetReference": {
-            "reference": "http://hl7.org/fhir/us/breast-radiology/fhir/ValueSet/breastrad-AbnormalityDensityVs"
+            "reference": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/AbnormalityDensityVs"
           }
         },
         "type": [
@@ -19449,7 +20391,7 @@
           "max": "*"
         },
         "short": "AbnormalityType: Abnormality Type value",
-        "definition": "Abnormality Type value.\n<br>This item will be a slice of Observation.Component.\n<br>The slice will be on  Observation.Component.Code [http://www.test.com - AbnormalityType]\n<br>This slice code will be modified in a future  versions to be a suitable public terminology value.",
+        "definition": "Abnormality Type value.\n<br>This item will be a slice of Observation.Component.\n<br>The slice will be on  Observation.Component.Code.\n<br>This slice code will be modified in a future  versions to be a suitable public terminology value.",
         "min": 0,
         "max": "1"
       },
@@ -19505,7 +20447,7 @@
         "binding": {
           "strength": "required",
           "valueSetReference": {
-            "reference": "http://hl7.org/fhir/us/breast-radiology/fhir/ValueSet/breastrad-AbnormalityTypeVs"
+            "reference": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/AbnormalityTypeVs"
           }
         },
         "type": [
@@ -19569,7 +20511,7 @@
           "max": "*"
         },
         "short": "AsymmetryTypes: Currently many studies utilize cortical thickening and hilum absence as criteria for definition of the risk for metastasis(11,12-16). ..",
-        "definition": "Currently many studies utilize cortical thickening and hilum absence as criteria for definition of the risk for metastasis(11,12-16). ... Metastatic deposits accumulate in the lymph node peripheral area, causing enlargement of the cortex, usually focal (at early stages), or uniform..\n<br>This item will be a slice of Observation.Component.\n<br>The slice will be on  Observation.Component.Code [http://www.test.com - AsymmetryTypes]\n<br>This slice code will be modified in a future  versions to be a suitable public terminology value.",
+        "definition": "Currently many studies utilize cortical thickening and hilum absence as criteria for definition of the risk for metastasis(11,12-16). ... Metastatic deposits accumulate in the lymph node peripheral area, causing enlargement of the cortex, usually focal (at early stages), or uniform..\n<br>This item will be a slice of Observation.Component.\n<br>The slice will be on  Observation.Component.Code.\n<br>This slice code will be modified in a future  versions to be a suitable public terminology value.",
         "min": 0,
         "max": "1"
       },
@@ -19625,7 +20567,7 @@
         "binding": {
           "strength": "required",
           "valueSetReference": {
-            "reference": "http://hl7.org/fhir/us/breast-radiology/fhir/ValueSet/breastrad-AsymmetryTypesVs"
+            "reference": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/AsymmetryTypesVs"
           }
         },
         "type": [
@@ -19689,7 +20631,7 @@
           "max": "*"
         },
         "short": "BiRadCode: Bi-Rad code value",
-        "definition": "Bi-Rad code value.\n<br>This item will be a slice of Observation.Component.\n<br>The slice will be on  Observation.Component.Code [http://www.test.com - BiRadCode]\n<br>This slice code will be modified in a future  versions to be a suitable public terminology value.",
+        "definition": "Bi-Rad code value.\n<br>This item will be a slice of Observation.Component.\n<br>The slice will be on  Observation.Component.Code.\n<br>This slice code will be modified in a future  versions to be a suitable public terminology value.",
         "min": 0,
         "max": "1"
       },
@@ -19745,7 +20687,7 @@
         "binding": {
           "strength": "required",
           "valueSetReference": {
-            "reference": "http://hl7.org/fhir/us/breast-radiology/fhir/ValueSet/breastrad-BiRadCodeVs"
+            "reference": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/BiRadCodeVs"
           }
         },
         "type": [
@@ -19809,7 +20751,7 @@
           "max": "*"
         },
         "short": "Change: Change value",
-        "definition": "Change value.\n<br>This item will be a slice of Observation.Component.\n<br>The slice will be on  Observation.Component.Code [http://www.test.com - Change]\n<br>This slice code will be modified in a future  versions to be a suitable public terminology value.",
+        "definition": "Change value.\n<br>This item will be a slice of Observation.Component.\n<br>The slice will be on  Observation.Component.Code.\n<br>This slice code will be modified in a future  versions to be a suitable public terminology value.",
         "min": 0,
         "max": "1"
       },
@@ -19865,7 +20807,7 @@
         "binding": {
           "strength": "required",
           "valueSetReference": {
-            "reference": "http://hl7.org/fhir/us/breast-radiology/fhir/ValueSet/breastrad-ChangeVs"
+            "reference": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/ChangeVs"
           }
         },
         "type": [
@@ -19929,7 +20871,7 @@
           "max": "*"
         },
         "short": "CystTypes: Cyst Types",
-        "definition": "Cyst Types.\n<br>This item will be a slice of Observation.Component.\n<br>The slice will be on  Observation.Component.Code [http://www.test.com - CystTypes]\n<br>This slice code will be modified in a future  versions to be a suitable public terminology value.",
+        "definition": "Cyst Types.\n<br>This item will be a slice of Observation.Component.\n<br>The slice will be on  Observation.Component.Code.\n<br>This slice code will be modified in a future  versions to be a suitable public terminology value.",
         "min": 0,
         "max": "1"
       },
@@ -19985,7 +20927,7 @@
         "binding": {
           "strength": "required",
           "valueSetReference": {
-            "reference": "http://hl7.org/fhir/us/breast-radiology/fhir/ValueSet/breastrad-CystTypesVs"
+            "reference": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/CystTypesVs"
           }
         },
         "type": [
@@ -20049,7 +20991,7 @@
           "max": "*"
         },
         "short": "Depth: Depth",
-        "definition": "Depth.\n<br>This item will be a slice of Observation.Component.\n<br>The slice will be on  Observation.Component.Code [http://www.test.com - Depth]\n<br>This slice code will be modified in a future  versions to be a suitable public terminology value.",
+        "definition": "Depth.\n<br>This item will be a slice of Observation.Component.\n<br>The slice will be on  Observation.Component.Code.\n<br>This slice code will be modified in a future  versions to be a suitable public terminology value.",
         "min": 0,
         "max": "1"
       },
@@ -20105,7 +21047,7 @@
         "binding": {
           "strength": "required",
           "valueSetReference": {
-            "reference": "http://hl7.org/fhir/us/breast-radiology/fhir/ValueSet/breastrad-DepthVs"
+            "reference": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/DepthVs"
           }
         },
         "type": [
@@ -20169,7 +21111,7 @@
           "max": "*"
         },
         "short": "Margin: When breast cancer is surgically removed (during a surgical biopsy, lumpectomy or mastectomy), a rim of normal tissue surrounding the tumor is also removed",
-        "definition": "When breast cancer is surgically removed (during a surgical biopsy, lumpectomy or mastectomy), a rim of normal tissue surrounding the tumor is also removed. This rim is called a margin. Margins help show whether or not all of the tumor was removed..\n<br>This item will be a slice of Observation.Component.\n<br>The slice will be on  Observation.Component.Code [http://www.test.com - Margin]\n<br>This slice code will be modified in a future  versions to be a suitable public terminology value.",
+        "definition": "When breast cancer is surgically removed (during a surgical biopsy, lumpectomy or mastectomy), a rim of normal tissue surrounding the tumor is also removed. This rim is called a margin. Margins help show whether or not all of the tumor was removed..\n<br>This item will be a slice of Observation.Component.\n<br>The slice will be on  Observation.Component.Code.\n<br>This slice code will be modified in a future  versions to be a suitable public terminology value.",
         "min": 0,
         "max": "1"
       },
@@ -20225,7 +21167,7 @@
         "binding": {
           "strength": "required",
           "valueSetReference": {
-            "reference": "http://hl7.org/fhir/us/breast-radiology/fhir/ValueSet/breastrad-MarginVs"
+            "reference": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/MarginVs"
           }
         },
         "type": [
@@ -20280,6 +21222,126 @@
         }
       },
       {
+        "id": "Observation.component:breastrad-MassTypes",
+        "path": "Observation.component",
+        "sliceName": "breastrad-MassTypes",
+        "base": {
+          "path": "Observation.component",
+          "min": 0,
+          "max": "*"
+        },
+        "short": "MassTypes: Mass Types",
+        "definition": "Mass Types.\n<br>This item will be a slice of Observation.Component.\n<br>The slice will be on  Observation.Component.Code.\n<br>This slice code will be modified in a future  versions to be a suitable public terminology value.",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Observation.component:breastrad-MassTypes.code",
+        "path": "Observation.component.code"
+      },
+      {
+        "id": "Observation.component:breastrad-MassTypes.code.coding",
+        "path": "Observation.component.code.coding",
+        "slicing": {
+          "id": "14",
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "code"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 1,
+        "max": "*"
+      },
+      {
+        "id": "Observation.component:breastrad-MassTypes.code.coding:Fixed_MassTypes",
+        "path": "Observation.component.code.coding",
+        "sliceName": "Fixed_MassTypes",
+        "short": "Code defined by a terminology system",
+        "definition": "A reference to a code defined by a terminology system.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "id": "Observation.component:breastrad-MassTypes.code.coding:Fixed_MassTypes.system",
+        "path": "Observation.component.code.coding.system",
+        "fixedUri": "http://www.test.com/test-codes"
+      },
+      {
+        "id": "Observation.component:breastrad-MassTypes.code.coding:Fixed_MassTypes.code",
+        "path": "Observation.component.code.coding.code",
+        "fixedCode": "MassTypes"
+      },
+      {
+        "id": "Observation.component:breastrad-MassTypes.valueCodeableConcept",
+        "path": "Observation.component.valueCodeableConcept",
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/MassTypesVs"
+          }
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component:breastrad-MassTypes.dataAbsentReason",
+        "path": "Observation.component.dataAbsentReason",
+        "binding": {
+          "strength": "extensible",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/data-absent-reason"
+          }
+        }
+      },
+      {
+        "id": "Observation.component:breastrad-MassTypes.referenceRange",
+        "path": "Observation.component.referenceRange",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Observation.component.referenceRange",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Observation.component:breastrad-MassTypes.referenceRange.appliesTo",
+        "path": "Observation.component.referenceRange.appliesTo",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Observation.component.referenceRange.appliesTo",
+          "min": 0,
+          "max": "*"
+        },
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "ObservationRangeType"
+            }
+          ],
+          "strength": "extensible",
+          "description": "Codes identifying the population the reference range applies to.",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/referencerange-appliesto"
+          }
+        }
+      },
+      {
         "id": "Observation.component:breastrad-NodeTypes",
         "path": "Observation.component",
         "sliceName": "breastrad-NodeTypes",
@@ -20289,7 +21351,7 @@
           "max": "*"
         },
         "short": "NodeTypes: Node Types",
-        "definition": "Node Types.\n<br>This item will be a slice of Observation.Component.\n<br>The slice will be on  Observation.Component.Code [http://www.test.com - NodeTypes]\n<br>This slice code will be modified in a future  versions to be a suitable public terminology value.",
+        "definition": "Node Types.\n<br>This item will be a slice of Observation.Component.\n<br>The slice will be on  Observation.Component.Code.\n<br>This slice code will be modified in a future  versions to be a suitable public terminology value.",
         "min": 0,
         "max": "1"
       },
@@ -20301,7 +21363,7 @@
         "id": "Observation.component:breastrad-NodeTypes.code.coding",
         "path": "Observation.component.code.coding",
         "slicing": {
-          "id": "14",
+          "id": "15",
           "discriminator": [
             {
               "type": "value",
@@ -20345,7 +21407,7 @@
         "binding": {
           "strength": "required",
           "valueSetReference": {
-            "reference": "http://hl7.org/fhir/us/breast-radiology/fhir/ValueSet/breastrad-NodeTypesVs"
+            "reference": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/NodeTypesVs"
           }
         },
         "type": [
@@ -20409,7 +21471,7 @@
           "max": "*"
         },
         "short": "Shape: Shape",
-        "definition": "Shape.\n<br>This item will be a slice of Observation.Component.\n<br>The slice will be on  Observation.Component.Code [http://www.test.com - Shape]\n<br>This slice code will be modified in a future  versions to be a suitable public terminology value.",
+        "definition": "Shape.\n<br>This item will be a slice of Observation.Component.\n<br>The slice will be on  Observation.Component.Code.\n<br>This slice code will be modified in a future  versions to be a suitable public terminology value.",
         "min": 0,
         "max": "1"
       },
@@ -20421,7 +21483,7 @@
         "id": "Observation.component:breastrad-Shape.code.coding",
         "path": "Observation.component.code.coding",
         "slicing": {
-          "id": "15",
+          "id": "16",
           "discriminator": [
             {
               "type": "value",
@@ -20465,7 +21527,7 @@
         "binding": {
           "strength": "required",
           "valueSetReference": {
-            "reference": "http://hl7.org/fhir/us/breast-radiology/fhir/ValueSet/breastrad-ShapeVs"
+            "reference": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/ShapeVs"
           }
         },
         "type": [
@@ -20529,7 +21591,7 @@
           "max": "*"
         },
         "short": "Vascularity: Vascularity",
-        "definition": "Vascularity.\n<br>This item will be a slice of Observation.Component.\n<br>The slice will be on  Observation.Component.Code [http://www.test.com - Vascularity]\n<br>This slice code will be modified in a future  versions to be a suitable public terminology value.",
+        "definition": "Vascularity.\n<br>This item will be a slice of Observation.Component.\n<br>The slice will be on  Observation.Component.Code.\n<br>This slice code will be modified in a future  versions to be a suitable public terminology value.",
         "min": 0,
         "max": "1"
       },
@@ -20541,7 +21603,7 @@
         "id": "Observation.component:breastrad-Vascularity.code.coding",
         "path": "Observation.component.code.coding",
         "slicing": {
-          "id": "16",
+          "id": "17",
           "discriminator": [
             {
               "type": "value",
@@ -20585,7 +21647,7 @@
         "binding": {
           "strength": "required",
           "valueSetReference": {
-            "reference": "http://hl7.org/fhir/us/breast-radiology/fhir/ValueSet/breastrad-VascularityVs"
+            "reference": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/VascularityVs"
           }
         },
         "type": [
@@ -20649,7 +21711,7 @@
           "max": "*"
         },
         "short": "Wall: Wall",
-        "definition": "Wall.\n<br>This item will be a slice of Observation.Component.\n<br>The slice will be on  Observation.Component.Code [http://www.test.com - Wall]\n<br>This slice code will be modified in a future  versions to be a suitable public terminology value.",
+        "definition": "Wall.\n<br>This item will be a slice of Observation.Component.\n<br>The slice will be on  Observation.Component.Code.\n<br>This slice code will be modified in a future  versions to be a suitable public terminology value.",
         "min": 0,
         "max": "1"
       },
@@ -20661,7 +21723,7 @@
         "id": "Observation.component:breastrad-Wall.code.coding",
         "path": "Observation.component.code.coding",
         "slicing": {
-          "id": "17",
+          "id": "18",
           "discriminator": [
             {
               "type": "value",
@@ -20705,7 +21767,7 @@
         "binding": {
           "strength": "required",
           "valueSetReference": {
-            "reference": "http://hl7.org/fhir/us/breast-radiology/fhir/ValueSet/breastrad-WallVs"
+            "reference": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/WallVs"
           }
         },
         "type": [
@@ -20769,7 +21831,7 @@
           "max": "*"
         },
         "short": "MaxLength: Max Length Description\n<br>This item will be a slice of Observation.Component",
-        "definition": "Max Length Description\n<br>This item will be a slice of Observation.Component.\n<br>The slice will be on  Observation.Component.Code [http://www.test.com - MaxLength]\n<br>This slice code will be modified in a future  versions to be a suitable public terminology value.",
+        "definition": "Max Length Description\n<br>This item will be a slice of Observation.Component.\n<br>The slice will be on  Observation.Component.Code.\n<br>This slice code will be modified in a future  versions to be a suitable public terminology value.",
         "min": 0,
         "max": "1"
       },
@@ -20781,7 +21843,7 @@
         "id": "Observation.component:breastrad-MaxLength.code.coding",
         "path": "Observation.component.code.coding",
         "slicing": {
-          "id": "18",
+          "id": "19",
           "discriminator": [
             {
               "type": "value",
@@ -20888,7 +21950,7 @@
           "max": "*"
         },
         "short": "MaxWidth: Max Width\n<br>This item will be a slice of Observation.Component",
-        "definition": "Max Width\n<br>This item will be a slice of Observation.Component.\n<br>The slice will be on  Observation.Component.Code [http://www.test.com - MaxWidth]\n<br>This slice code will be modified in a future  versions to be a suitable public terminology value.",
+        "definition": "Max Width\n<br>This item will be a slice of Observation.Component.\n<br>The slice will be on  Observation.Component.Code.\n<br>This slice code will be modified in a future  versions to be a suitable public terminology value.",
         "min": 0,
         "max": "1"
       },
@@ -20900,7 +21962,7 @@
         "id": "Observation.component:breastrad-MaxWidth.code.coding",
         "path": "Observation.component.code.coding",
         "slicing": {
-          "id": "19",
+          "id": "20",
           "discriminator": [
             {
               "type": "value",

@@ -537,10 +537,6 @@
       "base": "StructureDefinition-obf-ManagingEntity-extension.html",
       "template-base": "sd-extension.html"
     },
-    "StructureDefinition/breastrad-MassTypes-extension": {
-      "base": "StructureDefinition-breastrad-MassTypes-extension.html",
-      "template-base": "sd-extension.html"
-    },
     "StructureDefinition/obf-MaxDosePerAdministration-extension": {
       "base": "StructureDefinition-obf-MaxDosePerAdministration-extension.html",
       "template-base": "sd-extension.html"
@@ -925,11 +921,53 @@
     "ValueSet/breastrad-WallVs": {
       "base": "ValueSet-breastrad-WallVs.html"
     },
+    "CodeSystem/breastrad-AbnormalityDensityVs": {
+      "base": "CodeSystem-breastrad-AbnormalityDensityVs.html"
+    },
+    "CodeSystem/breastrad-AbnormalityTypeVs": {
+      "base": "CodeSystem-breastrad-AbnormalityTypeVs.html"
+    },
+    "CodeSystem/breastrad-AsymmetryTypesVs": {
+      "base": "CodeSystem-breastrad-AsymmetryTypesVs.html"
+    },
+    "CodeSystem/breastrad-BiRadCodeVs": {
+      "base": "CodeSystem-breastrad-BiRadCodeVs.html"
+    },
+    "CodeSystem/breastrad-BreastDensityVs": {
+      "base": "CodeSystem-breastrad-BreastDensityVs.html"
+    },
+    "CodeSystem/breastrad-ChangeVs": {
+      "base": "CodeSystem-breastrad-ChangeVs.html"
+    },
+    "CodeSystem/breastrad-CystTypesVs": {
+      "base": "CodeSystem-breastrad-CystTypesVs.html"
+    },
+    "CodeSystem/breastrad-DepthVs": {
+      "base": "CodeSystem-breastrad-DepthVs.html"
+    },
+    "CodeSystem/breastrad-MarginVs": {
+      "base": "CodeSystem-breastrad-MarginVs.html"
+    },
+    "CodeSystem/breastrad-MassTypesVs": {
+      "base": "CodeSystem-breastrad-MassTypesVs.html"
+    },
+    "CodeSystem/breastrad-NodeTypesVs": {
+      "base": "CodeSystem-breastrad-NodeTypesVs.html"
+    },
     "CodeSystem/obf-ResearchSubjectTerminationReasonCS": {
       "base": "CodeSystem-obf-ResearchSubjectTerminationReasonCS.html"
     },
     "CodeSystem/shr-core-SettingCS": {
       "base": "CodeSystem-shr-core-SettingCS.html"
+    },
+    "CodeSystem/breastrad-ShapeVs": {
+      "base": "CodeSystem-breastrad-ShapeVs.html"
+    },
+    "CodeSystem/breastrad-VascularityVs": {
+      "base": "CodeSystem-breastrad-VascularityVs.html"
+    },
+    "CodeSystem/breastrad-WallVs": {
+      "base": "CodeSystem-breastrad-WallVs.html"
     },
     "StructureDefinition/obf-Abatement-model": {
       "base": "StructureDefinition-obf-Abatement-model.html",
@@ -4285,6 +4323,51 @@
       "pseudo-ttl": false
     }
   },
-  "special-urls": [],
+  "special-urls": [
+    "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/AbnormalityDensityVs",
+    "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/AbnormalityTypeVs",
+    "http://hl7.org/fhir/us/breast-radiology/shr/core/vs/AnatomicalDirectionVS",
+    "http://hl7.org/fhir/us/breast-radiology/shr/core/vs/AnatomicalOrientationVS",
+    "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/AsymmetryTypesVs",
+    "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/BiRadCodeVs",
+    "http://hl7.org/fhir/us/breast-radiology/shr/core/vs/BodyLocationVS",
+    "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/BreastDensityVs",
+    "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/BreastdepthVs",
+    "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/ChangeVs",
+    "http://hl7.org/fhir/us/breast-radiology/shr/core/vs/ClockFaceDirectionVS",
+    "http://hl7.org/fhir/us/breast-radiology/obf/vs/ConditionCategoryVS",
+    "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/CystTypesVs",
+    "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/DepthVs",
+    "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/DiagnosticTechniqueVs",
+    "http://hl7.org/fhir/us/breast-radiology/shr/core/vs/LandmarkTypeVS",
+    "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/MarginVs",
+    "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/MassTypesVs",
+    "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/NodeTypesVs",
+    "http://hl7.org/fhir/us/breast-radiology/obf/vs/ResearchSubjectTerminationReasonVS",
+    "http://hl7.org/fhir/us/breast-radiology/shr/core/vs/SettingVS",
+    "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/ShapeVs",
+    "http://hl7.org/fhir/us/breast-radiology/obf/vs/StudyArmTypeVS",
+    "http://hl7.org/fhir/us/breast-radiology/obf/vs/TreatmentIntentVS",
+    "http://hl7.org/fhir/us/breast-radiology/obf/vs/TreatmentTerminationReasonVS",
+    "http://hl7.org/fhir/us/breast-radiology/shr/core/vs/UnitsOfLengthVS",
+    "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/VascularityVs",
+    "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/WallVs",
+    "http://hl7.org/fhir/us/breast-radiology/breastrad/cs/AbnormalityDensityVs",
+    "http://hl7.org/fhir/us/breast-radiology/breastrad/cs/AbnormalityTypeVs",
+    "http://hl7.org/fhir/us/breast-radiology/breastrad/cs/AsymmetryTypesVs",
+    "http://hl7.org/fhir/us/breast-radiology/breastrad/cs/BiRadCodeVs",
+    "http://hl7.org/fhir/us/breast-radiology/breastrad/cs/BreastDensityVs",
+    "http://hl7.org/fhir/us/breast-radiology/breastrad/cs/ChangeVs",
+    "http://hl7.org/fhir/us/breast-radiology/breastrad/cs/CystTypesVs",
+    "http://hl7.org/fhir/us/breast-radiology/breastrad/cs/DepthVs",
+    "http://hl7.org/fhir/us/breast-radiology/breastrad/cs/MarginVs",
+    "http://hl7.org/fhir/us/breast-radiology/breastrad/cs/MassTypesVs",
+    "http://hl7.org/fhir/us/breast-radiology/breastrad/cs/NodeTypesVs",
+    "http://hl7.org/fhir/us/breast-radiology/obf/cs/ResearchSubjectTerminationReasonCS",
+    "http://hl7.org/fhir/us/breast-radiology/shr/core/cs/SettingCS",
+    "http://hl7.org/fhir/us/breast-radiology/breastrad/cs/ShapeVs",
+    "http://hl7.org/fhir/us/breast-radiology/breastrad/cs/VascularityVs",
+    "http://hl7.org/fhir/us/breast-radiology/breastrad/cs/WallVs"
+  ],
   "tool": "jekyll"
 }
