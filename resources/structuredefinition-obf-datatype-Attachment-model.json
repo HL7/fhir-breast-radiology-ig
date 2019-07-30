@@ -1,0 +1,422 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "obf-datatype-Attachment-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>Attachment Logical Model</b></p>\n  <p>A file that contains audio, video, image, or similar content.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-Attachment-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/breast-radiology",
+      "value": "obf.datatype.Attachment"
+    }
+  ],
+  "name": "Attachment",
+  "title": "obf-datatype-Attachment",
+  "status": "draft",
+  "date": "2019-07-30",
+  "publisher": "Hl7",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://BreastRadReport.com"
+        }
+      ]
+    }
+  ],
+  "description": "A file that contains audio, video, image, or similar content.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "obf-datatype-Attachment-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "obf-datatype-Attachment-model",
+        "path": "obf-datatype-Attachment-model",
+        "definition": "A file that contains audio, video, image, or similar content.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-datatype-Attachment-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-datatype-Attachment-model.binaryData",
+        "path": "obf-datatype-Attachment-model.binaryData",
+        "short": "The data itself.",
+        "definition": "The data itself.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-datatype-Attachment-model.binaryData",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "base64Binary"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-datatype-Attachment-model.contentType",
+        "path": "obf-datatype-Attachment-model.contentType",
+        "short": "The mime type of the content, with charset etc.",
+        "definition": "The mime type of the content, with charset etc.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-datatype-Attachment-model.contentType",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-datatype-Attachment-model.language",
+        "path": "obf-datatype-Attachment-model.language",
+        "short": "A human language, spoken or written.",
+        "definition": "A human language, spoken or written.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-datatype-Attachment-model.language",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-datatype-Attachment-model.resourceLocation",
+        "path": "obf-datatype-Attachment-model.resourceLocation",
+        "short": "URL where data can be found.",
+        "definition": "URL where data can be found.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-datatype-Attachment-model.resourceLocation",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-datatype-Attachment-model.resourceSize",
+        "path": "obf-datatype-Attachment-model.resourceSize",
+        "short": "Number of bytes of content in the resource (if url provided)",
+        "definition": "Number of bytes of content in the resource (if url provided)",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-datatype-Attachment-model.resourceSize",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "unsignedInt"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-datatype-Attachment-model.hash",
+        "path": "obf-datatype-Attachment-model.hash",
+        "short": "A hash code of the data (sha-1, base64ed)",
+        "definition": "A hash code of the data (sha-1, base64ed)",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-datatype-Attachment-model.hash",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "base64Binary"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-datatype-Attachment-model.title",
+        "path": "obf-datatype-Attachment-model.title",
+        "short": "A distinguishing word or group of words naming an item.",
+        "definition": "A distinguishing word or group of words naming an item.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-datatype-Attachment-model.title",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-datatype-Attachment-model.creationDateTime",
+        "path": "obf-datatype-Attachment-model.creationDateTime",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C3669169"
+          }
+        ],
+        "short": "The point in time when the item was created.",
+        "definition": "The point in time when the item was created.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-datatype-Attachment-model.creationDateTime",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "obf-datatype-Attachment-model",
+        "path": "obf-datatype-Attachment-model",
+        "definition": "A file that contains audio, video, image, or similar content.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-datatype-Attachment-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-datatype-Attachment-model.binaryData",
+        "path": "obf-datatype-Attachment-model.binaryData",
+        "short": "The data itself.",
+        "definition": "The data itself.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-datatype-Attachment-model.binaryData",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "base64Binary"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-datatype-Attachment-model.contentType",
+        "path": "obf-datatype-Attachment-model.contentType",
+        "short": "The mime type of the content, with charset etc.",
+        "definition": "The mime type of the content, with charset etc.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-datatype-Attachment-model.contentType",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-datatype-Attachment-model.language",
+        "path": "obf-datatype-Attachment-model.language",
+        "short": "A human language, spoken or written.",
+        "definition": "A human language, spoken or written.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-datatype-Attachment-model.language",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-datatype-Attachment-model.resourceLocation",
+        "path": "obf-datatype-Attachment-model.resourceLocation",
+        "short": "URL where data can be found.",
+        "definition": "URL where data can be found.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-datatype-Attachment-model.resourceLocation",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-datatype-Attachment-model.resourceSize",
+        "path": "obf-datatype-Attachment-model.resourceSize",
+        "short": "Number of bytes of content in the resource (if url provided)",
+        "definition": "Number of bytes of content in the resource (if url provided)",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-datatype-Attachment-model.resourceSize",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "unsignedInt"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-datatype-Attachment-model.hash",
+        "path": "obf-datatype-Attachment-model.hash",
+        "short": "A hash code of the data (sha-1, base64ed)",
+        "definition": "A hash code of the data (sha-1, base64ed)",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-datatype-Attachment-model.hash",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "base64Binary"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-datatype-Attachment-model.title",
+        "path": "obf-datatype-Attachment-model.title",
+        "short": "A distinguishing word or group of words naming an item.",
+        "definition": "A distinguishing word or group of words naming an item.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-datatype-Attachment-model.title",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-datatype-Attachment-model.creationDateTime",
+        "path": "obf-datatype-Attachment-model.creationDateTime",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C3669169"
+          }
+        ],
+        "short": "The point in time when the item was created.",
+        "definition": "The point in time when the item was created.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-datatype-Attachment-model.creationDateTime",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

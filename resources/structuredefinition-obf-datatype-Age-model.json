@@ -1,0 +1,230 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "obf-datatype-Age-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>Age Logical Model</b></p>\n  <p>How long someone has been alive, or something has existed.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-Age-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/breast-radiology",
+      "value": "obf.datatype.Age"
+    }
+  ],
+  "name": "Age",
+  "title": "obf-datatype-Age",
+  "status": "draft",
+  "date": "2019-07-30",
+  "publisher": "Hl7",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://BreastRadReport.com"
+        }
+      ]
+    }
+  ],
+  "description": "How long someone has been alive, or something has existed.",
+  "keyword": [
+    {
+      "system": "http://ncimeta.nci.nih.gov",
+      "code": "C0001779"
+    }
+  ],
+  "kind": "logical",
+  "abstract": false,
+  "type": "obf-datatype-Age-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "obf-datatype-Age-model",
+        "path": "obf-datatype-Age-model",
+        "definition": "How long someone has been alive, or something has existed.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-datatype-Age-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-datatype-Age-model.number",
+        "path": "obf-datatype-Age-model.number",
+        "short": "A decimal value.",
+        "definition": "A decimal value.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-datatype-Age-model.number",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "decimal"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-datatype-Age-model.comparator",
+        "path": "obf-datatype-Age-model.comparator",
+        "short": "A code indicated if the value represents an upper or lower bound",
+        "definition": "A code indicated if the value represents an upper or lower bound",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-datatype-Age-model.comparator",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/quantity-comparator"
+          }
+        }
+      },
+      {
+        "id": "obf-datatype-Age-model.units",
+        "path": "obf-datatype-Age-model.units",
+        "short": "The unit of measure of the quantity.",
+        "definition": "The unit of measure of the quantity.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-datatype-Age-model.units",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "extensible",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/age-units"
+          }
+        }
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "obf-datatype-Age-model",
+        "path": "obf-datatype-Age-model",
+        "definition": "How long someone has been alive, or something has existed.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-datatype-Age-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-datatype-Age-model.number",
+        "path": "obf-datatype-Age-model.number",
+        "short": "A decimal value.",
+        "definition": "A decimal value.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-datatype-Age-model.number",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "decimal"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-datatype-Age-model.comparator",
+        "path": "obf-datatype-Age-model.comparator",
+        "short": "A code indicated if the value represents an upper or lower bound",
+        "definition": "A code indicated if the value represents an upper or lower bound",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-datatype-Age-model.comparator",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/quantity-comparator"
+          }
+        }
+      },
+      {
+        "id": "obf-datatype-Age-model.units",
+        "path": "obf-datatype-Age-model.units",
+        "short": "The unit of measure of the quantity.",
+        "definition": "The unit of measure of the quantity.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-datatype-Age-model.units",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "extensible",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/age-units"
+          }
+        }
+      }
+    ]
+  }
+}

@@ -3,7 +3,7 @@
   "id": "obf-Condition-model",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>Condition Logical Model</b></p>\n  <p>A condition that is or may be present in a subject. &#039;Condition&#039; is interpreted broadly and could be a disorder, abnormality, problem, injury, complaint, functionality, illness, disease, ailment, sickness, affliction, upset, difficulty, disorder, symptom, worry, or trouble.\nThe Observation-based class, ConditionAbsent, should be used to describe conditions that are not present or negative findings.\nSHR Condition uses the SHR BodyLocation structure that includes not only a code, but optional laterality, direction, clock direction, and distance. If included, the distance is measured from the location specified by the code, laterality, and direction.</p>\n</div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>Condition Logical Model</b></p>\n  <p>A condition that is or may be present in a subject. &#039;Condition&#039; is interpreted broadly and could be a disorder, abnormality, problem, injury, complaint, functionality, illness, disease, ailment, sickness, affliction, upset, difficulty, disorder, symptom, worry, or trouble.\nThe Observation-based class, ConditionAbsent, should be used to describe conditions that are not present or negative findings.\nThis profiled Condition uses the BodyLocation structure that includes not only a code, but optional laterality, direction, and relation to landmark(s).</p>\n</div>"
   },
   "url": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Condition-model",
   "identifier": [
@@ -15,7 +15,7 @@
   "name": "Condition",
   "title": "obf-Condition",
   "status": "draft",
-  "date": "2019-07-29",
+  "date": "2019-07-30",
   "publisher": "Hl7",
   "contact": [
     {
@@ -27,7 +27,7 @@
       ]
     }
   ],
-  "description": "A condition that is or may be present in a subject. 'Condition' is interpreted broadly and could be a disorder, abnormality, problem, injury, complaint, functionality, illness, disease, ailment, sickness, affliction, upset, difficulty, disorder, symptom, worry, or trouble.\nThe Observation-based class, ConditionAbsent, should be used to describe conditions that are not present or negative findings.\nSHR Condition uses the SHR BodyLocation structure that includes not only a code, but optional laterality, direction, clock direction, and distance. If included, the distance is measured from the location specified by the code, laterality, and direction.",
+  "description": "A condition that is or may be present in a subject. 'Condition' is interpreted broadly and could be a disorder, abnormality, problem, injury, complaint, functionality, illness, disease, ailment, sickness, affliction, upset, difficulty, disorder, symptom, worry, or trouble.\nThe Observation-based class, ConditionAbsent, should be used to describe conditions that are not present or negative findings.\nThis profiled Condition uses the BodyLocation structure that includes not only a code, but optional laterality, direction, and relation to landmark(s).",
   "kind": "logical",
   "abstract": false,
   "type": "obf-Condition-model",
@@ -38,7 +38,7 @@
       {
         "id": "obf-Condition-model",
         "path": "obf-Condition-model",
-        "definition": "A condition that is or may be present in a subject. 'Condition' is interpreted broadly and could be a disorder, abnormality, problem, injury, complaint, functionality, illness, disease, ailment, sickness, affliction, upset, difficulty, disorder, symptom, worry, or trouble.\nThe Observation-based class, ConditionAbsent, should be used to describe conditions that are not present or negative findings.\nSHR Condition uses the SHR BodyLocation structure that includes not only a code, but optional laterality, direction, clock direction, and distance. If included, the distance is measured from the location specified by the code, laterality, and direction.",
+        "definition": "A condition that is or may be present in a subject. 'Condition' is interpreted broadly and could be a disorder, abnormality, problem, injury, complaint, functionality, illness, disease, ailment, sickness, affliction, upset, difficulty, disorder, symptom, worry, or trouble.\nThe Observation-based class, ConditionAbsent, should be used to describe conditions that are not present or negative findings.\nThis profiled Condition uses the BodyLocation structure that includes not only a code, but optional laterality, direction, and relation to landmark(s).",
         "min": 0,
         "max": "*",
         "base": {
@@ -175,7 +175,7 @@
         },
         "type": [
           {
-            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/shr-core-Identifier-model"
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-Identifier-model"
           }
         ],
         "mustSupport": false,
@@ -285,11 +285,11 @@
         "path": "obf-Condition-model.clinicalStatus",
         "short": "A flag indicating whether the condition is active or inactive, recurring, in remission, or resolved (as of the last update of the Condition).",
         "definition": "A flag indicating whether the condition is active or inactive, recurring, in remission, or resolved (as of the last update of the Condition).",
-        "min": 1,
+        "min": 0,
         "max": "1",
         "base": {
           "path": "obf-Condition-model.clinicalStatus",
-          "min": 1,
+          "min": 0,
           "max": "1"
         },
         "type": [
@@ -330,7 +330,7 @@
         "binding": {
           "strength": "extensible",
           "valueSetReference": {
-            "reference": "http://hl7.org/fhir/us/breast-radiology/obf/vs/ConditionCategoryVS"
+            "reference": "http://hl7.org/fhir/us/core/ValueSet/us-core-condition-category"
           }
         }
       },
@@ -375,7 +375,7 @@
         },
         "type": [
           {
-            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/shr-core-BodyLocation-model"
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-BodyLocation-model"
           }
         ],
         "mustSupport": false,
@@ -399,13 +399,13 @@
             "code": "dateTime"
           },
           {
-            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/shr-core-Age-model"
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-Age-model"
           },
           {
-            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/shr-core-TimePeriod-model"
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-TimePeriod-model"
           },
           {
-            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/shr-core-Range-model"
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-Range-model"
           },
           {
             "code": "string"
@@ -432,16 +432,16 @@
             "code": "dateTime"
           },
           {
-            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/shr-core-Age-model"
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-Age-model"
           },
           {
             "code": "boolean"
           },
           {
-            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/shr-core-TimePeriod-model"
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-TimePeriod-model"
           },
           {
-            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/shr-core-Range-model"
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-Range-model"
           },
           {
             "code": "string"
@@ -614,7 +614,7 @@
       {
         "id": "obf-Condition-model",
         "path": "obf-Condition-model",
-        "definition": "A condition that is or may be present in a subject. 'Condition' is interpreted broadly and could be a disorder, abnormality, problem, injury, complaint, functionality, illness, disease, ailment, sickness, affliction, upset, difficulty, disorder, symptom, worry, or trouble.\nThe Observation-based class, ConditionAbsent, should be used to describe conditions that are not present or negative findings.\nSHR Condition uses the SHR BodyLocation structure that includes not only a code, but optional laterality, direction, clock direction, and distance. If included, the distance is measured from the location specified by the code, laterality, and direction.",
+        "definition": "A condition that is or may be present in a subject. 'Condition' is interpreted broadly and could be a disorder, abnormality, problem, injury, complaint, functionality, illness, disease, ailment, sickness, affliction, upset, difficulty, disorder, symptom, worry, or trouble.\nThe Observation-based class, ConditionAbsent, should be used to describe conditions that are not present or negative findings.\nThis profiled Condition uses the BodyLocation structure that includes not only a code, but optional laterality, direction, and relation to landmark(s).",
         "min": 0,
         "max": "*",
         "base": {
@@ -751,7 +751,7 @@
         },
         "type": [
           {
-            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/shr-core-Identifier-model"
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-Identifier-model"
           }
         ],
         "mustSupport": false,
@@ -861,11 +861,11 @@
         "path": "obf-Condition-model.clinicalStatus",
         "short": "A flag indicating whether the condition is active or inactive, recurring, in remission, or resolved (as of the last update of the Condition).",
         "definition": "A flag indicating whether the condition is active or inactive, recurring, in remission, or resolved (as of the last update of the Condition).",
-        "min": 1,
+        "min": 0,
         "max": "1",
         "base": {
           "path": "obf-Condition-model.clinicalStatus",
-          "min": 1,
+          "min": 0,
           "max": "1"
         },
         "type": [
@@ -906,7 +906,7 @@
         "binding": {
           "strength": "extensible",
           "valueSetReference": {
-            "reference": "http://hl7.org/fhir/us/breast-radiology/obf/vs/ConditionCategoryVS"
+            "reference": "http://hl7.org/fhir/us/core/ValueSet/us-core-condition-category"
           }
         }
       },
@@ -951,7 +951,7 @@
         },
         "type": [
           {
-            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/shr-core-BodyLocation-model"
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-BodyLocation-model"
           }
         ],
         "mustSupport": false,
@@ -975,13 +975,13 @@
             "code": "dateTime"
           },
           {
-            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/shr-core-Age-model"
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-Age-model"
           },
           {
-            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/shr-core-TimePeriod-model"
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-TimePeriod-model"
           },
           {
-            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/shr-core-Range-model"
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-Range-model"
           },
           {
             "code": "string"
@@ -1008,16 +1008,16 @@
             "code": "dateTime"
           },
           {
-            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/shr-core-Age-model"
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-Age-model"
           },
           {
             "code": "boolean"
           },
           {
-            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/shr-core-TimePeriod-model"
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-TimePeriod-model"
           },
           {
-            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/shr-core-Range-model"
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-Range-model"
           },
           {
             "code": "string"

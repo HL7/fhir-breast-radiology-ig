@@ -3,12 +3,12 @@
   "id": "obf-Condition",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>Condition Profile</b></p>\n  <p>A condition that is or may be present in a subject. &#039;Condition&#039; is interpreted broadly and could be a disorder, abnormality, problem, injury, complaint, functionality, illness, disease, ailment, sickness, affliction, upset, difficulty, disorder, symptom, worry, or trouble.\nThe Observation-based class, ConditionAbsent, should be used to describe conditions that are not present or negative findings.\nSHR Condition uses the SHR BodyLocation structure that includes not only a code, but optional laterality, direction, clock direction, and distance. If included, the distance is measured from the location specified by the code, laterality, and direction.</p>\n  <p><b>Mapping Summary</b></p>\n  <p><pre>obf.Condition maps to http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition:\n  Language maps to language\n  ImplicitRules maps to implicitRules\n  Metadata.VersionId maps to meta.versionId\n  Metadata.SourceSystem maps to meta.extension\n  Metadata.Profile maps to meta.profile\n  Metadata.LastUpdated maps to meta.lastUpdated\n  Metadata.SecurityLabel maps to meta.security\n  Metadata.Tag maps to meta.tag\n  Narrative maps to text\n  Identifier maps to identifier\n  ClinicalStatus maps to clinicalStatus\n  Status maps to verificationStatus\n  Category maps to category\n  Severity maps to severity\n  Code maps to code\n  BodyLocation.Code maps to bodySite\n  BodyLocation.Laterality maps to bodySite.extension\n  BodyLocation.AnatomicalOrientation maps to bodySite.extension\n  BodyLocation.RelationToLandmark maps to bodySite.extension\n  SubjectOfRecord maps to subject\n  CareContext maps to context\n  Onset maps to onset[x]\n  Abatement maps to abatement[x]\n  StatementDateTime maps to assertedDate\n  Author maps to extension\n  PersonInformationSource maps to asserter\n  StageInformation maps to stage\n  StageInformation.StageSummary maps to stage.summary\n  StageInformation.StageDetail maps to stage.assessment\n  StageInformation.Type maps to stage.extension\n  Evidence.Manifestation maps to evidence.code\n  Evidence.Resource maps to evidence.detail\n  Annotation maps to note\n  DateOfDiagnosis maps to extension\n</pre></p>\n</div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>Condition Profile</b></p>\n  <p>A condition that is or may be present in a subject. &#039;Condition&#039; is interpreted broadly and could be a disorder, abnormality, problem, injury, complaint, functionality, illness, disease, ailment, sickness, affliction, upset, difficulty, disorder, symptom, worry, or trouble.\nThe Observation-based class, ConditionAbsent, should be used to describe conditions that are not present or negative findings.\nThis profiled Condition uses the BodyLocation structure that includes not only a code, but optional laterality, direction, and relation to landmark(s).</p>\n  <p><b>Mapping Summary</b></p>\n  <p><pre>obf.Condition maps to http://hl7.org/fhir/us/core/StructureDefinition/us-core-condition:\n  Language maps to language\n  ImplicitRules maps to implicitRules\n  Metadata.VersionId maps to meta.versionId\n  Metadata.SourceSystem maps to meta.extension\n  Metadata.Profile maps to meta.profile\n  Metadata.LastUpdated maps to meta.lastUpdated\n  Metadata.SecurityLabel maps to meta.security\n  Metadata.Tag maps to meta.tag\n  Narrative maps to text\n  Identifier maps to identifier\n  ClinicalStatus maps to clinicalStatus\n  Status maps to verificationStatus\n  Category maps to category\n  Severity maps to severity\n  Code maps to code\n  BodyLocation.Code maps to bodySite\n  BodyLocation.Laterality maps to bodySite.extension\n  BodyLocation.AnatomicalOrientation maps to bodySite.extension\n  BodyLocation.RelationToLandmark maps to bodySite.extension\n  SubjectOfRecord maps to subject\n  CareContext maps to context\n  Onset maps to onset[x]\n  Abatement maps to abatement[x]\n  StatementDateTime maps to assertedDate\n  Author maps to extension\n  PersonInformationSource maps to asserter\n  StageInformation maps to stage\n  StageInformation.StageSummary maps to stage.summary\n  StageInformation.StageDetail maps to stage.assessment\n  StageInformation.Type maps to stage.extension\n  Evidence.Manifestation maps to evidence.code\n  Evidence.Resource maps to evidence.detail\n  Annotation maps to note\n  DateOfDiagnosis maps to extension\n</pre></p>\n</div>"
   },
   "url": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Condition",
   "name": "Condition",
   "status": "draft",
-  "date": "2019-07-29",
+  "date": "2019-07-30",
   "publisher": "Hl7",
   "contact": [
     {
@@ -75,7 +75,7 @@
         "id": "Condition",
         "path": "Condition",
         "short": "obf-Condition",
-        "definition": "A condition that is or may be present in a subject. 'Condition' is interpreted broadly and could be a disorder, abnormality, problem, injury, complaint, functionality, illness, disease, ailment, sickness, affliction, upset, difficulty, disorder, symptom, worry, or trouble.\nThe Observation-based class, ConditionAbsent, should be used to describe conditions that are not present or negative findings.\nSHR Condition uses the SHR BodyLocation structure that includes not only a code, but optional laterality, direction, clock direction, and distance. If included, the distance is measured from the location specified by the code, laterality, and direction.",
+        "definition": "A condition that is or may be present in a subject. 'Condition' is interpreted broadly and could be a disorder, abnormality, problem, injury, complaint, functionality, illness, disease, ailment, sickness, affliction, upset, difficulty, disorder, symptom, worry, or trouble.\nThe Observation-based class, ConditionAbsent, should be used to describe conditions that are not present or negative findings.\nThis profiled Condition uses the BodyLocation structure that includes not only a code, but optional laterality, direction, and relation to landmark(s).",
         "min": 0,
         "max": "*",
         "base": {
@@ -674,7 +674,7 @@
         "short": "active | recurrence | inactive | remission | resolved",
         "definition": "The clinical status of the condition.",
         "comment": "This element is labeled as a modifier because the status contains codes that mark the condition as not currently valid or of concern.",
-        "min": 1,
+        "min": 0,
         "max": "1",
         "base": {
           "path": "Condition.clinicalStatus",
@@ -802,7 +802,7 @@
         "binding": {
           "strength": "extensible",
           "valueSetReference": {
-            "reference": "http://hl7.org/fhir/us/breast-radiology/obf/vs/ConditionCategoryVS"
+            "reference": "http://hl7.org/fhir/us/core/ValueSet/us-core-condition-category"
           }
         },
         "mapping": [
@@ -961,7 +961,7 @@
         "binding": {
           "strength": "preferred",
           "valueSetReference": {
-            "reference": "http://hl7.org/fhir/us/breast-radiology/shr/core/vs/BodyLocationVS"
+            "reference": "http://hl7.org/fhir/us/breast-radiology/obf/datatype/vs/BodyLocationVS"
           }
         },
         "mapping": [
@@ -1059,7 +1059,7 @@
         "type": [
           {
             "code": "Extension",
-            "profile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/shr-core-Laterality-extension"
+            "profile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-Laterality-extension"
           }
         ],
         "sliceName": "laterality"
@@ -1078,7 +1078,7 @@
         "type": [
           {
             "code": "Extension",
-            "profile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/shr-core-AnatomicalOrientation-extension"
+            "profile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-AnatomicalOrientation-extension"
           }
         ],
         "sliceName": "anatomicalorientation"
@@ -1097,7 +1097,7 @@
         "type": [
           {
             "code": "Extension",
-            "profile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/shr-core-RelationToLandmark-extension"
+            "profile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-RelationToLandmark-extension"
           }
         ],
         "sliceName": "relationtolandmark"
@@ -1187,7 +1187,7 @@
         "type": [
           {
             "code": "Reference",
-            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Patient"
+            "targetProfile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
           }
         ],
         "mustSupport": true,
@@ -1230,7 +1230,7 @@
         "type": [
           {
             "code": "Reference",
-            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Encounter"
+            "targetProfile": "http://hl7.org/fhir/StructureDefinition/Encounter"
           }
         ],
         "isSummary": true,
@@ -1268,7 +1268,7 @@
           },
           {
             "code": "Age",
-            "profile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/shr-core-Age"
+            "profile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-Age"
           },
           {
             "code": "Period"
@@ -1315,7 +1315,7 @@
           },
           {
             "code": "Age",
-            "profile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/shr-core-Age"
+            "profile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-Age"
           },
           {
             "code": "boolean"
@@ -1393,15 +1393,15 @@
         "type": [
           {
             "code": "Reference",
-            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Practitioner"
+            "targetProfile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"
           },
           {
             "code": "Reference",
-            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Patient"
+            "targetProfile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
           },
           {
             "code": "Reference",
-            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-RelatedPerson"
+            "targetProfile": "http://hl7.org/fhir/StructureDefinition/RelatedPerson"
           }
         ],
         "isSummary": true,
@@ -1542,7 +1542,7 @@
         "type": [
           {
             "code": "Extension",
-            "profile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/shr-core-Type-extension"
+            "profile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-Type-extension"
           }
         ],
         "sliceName": "type"
@@ -1640,7 +1640,7 @@
             "map": "N/A"
           }
         ],
-        "fixedUri": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/shr-core-Type-extension"
+        "fixedUri": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-Type-extension"
       },
       {
         "id": "Condition.stage.extension:type.valueCodeableConcept",
@@ -2003,8 +2003,7 @@
         },
         "type": [
           {
-            "code": "Annotation",
-            "profile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Annotation"
+            "code": "Annotation"
           }
         ],
         "mapping": [
@@ -2026,7 +2025,7 @@
         "id": "Condition",
         "path": "Condition",
         "short": "obf-Condition",
-        "definition": "A condition that is or may be present in a subject. 'Condition' is interpreted broadly and could be a disorder, abnormality, problem, injury, complaint, functionality, illness, disease, ailment, sickness, affliction, upset, difficulty, disorder, symptom, worry, or trouble.\nThe Observation-based class, ConditionAbsent, should be used to describe conditions that are not present or negative findings.\nSHR Condition uses the SHR BodyLocation structure that includes not only a code, but optional laterality, direction, clock direction, and distance. If included, the distance is measured from the location specified by the code, laterality, and direction.",
+        "definition": "A condition that is or may be present in a subject. 'Condition' is interpreted broadly and could be a disorder, abnormality, problem, injury, complaint, functionality, illness, disease, ailment, sickness, affliction, upset, difficulty, disorder, symptom, worry, or trouble.\nThe Observation-based class, ConditionAbsent, should be used to describe conditions that are not present or negative findings.\nThis profiled Condition uses the BodyLocation structure that includes not only a code, but optional laterality, direction, and relation to landmark(s).",
         "mustSupport": false
       },
       {
@@ -2106,12 +2105,6 @@
         "sliceName": "dateofdiagnosis"
       },
       {
-        "id": "Condition.clinicalStatus",
-        "path": "Condition.clinicalStatus",
-        "min": 1,
-        "max": "1"
-      },
-      {
         "id": "Condition.category",
         "path": "Condition.category",
         "min": 1,
@@ -2119,7 +2112,7 @@
         "binding": {
           "strength": "extensible",
           "valueSetReference": {
-            "reference": "http://hl7.org/fhir/us/breast-radiology/obf/vs/ConditionCategoryVS"
+            "reference": "http://hl7.org/fhir/us/core/ValueSet/us-core-condition-category"
           }
         }
       },
@@ -2129,7 +2122,7 @@
         "binding": {
           "strength": "preferred",
           "valueSetReference": {
-            "reference": "http://hl7.org/fhir/us/breast-radiology/shr/core/vs/BodyLocationVS"
+            "reference": "http://hl7.org/fhir/us/breast-radiology/obf/datatype/vs/BodyLocationVS"
           }
         }
       },
@@ -2147,7 +2140,7 @@
         "type": [
           {
             "code": "Extension",
-            "profile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/shr-core-Laterality-extension"
+            "profile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-Laterality-extension"
           }
         ],
         "sliceName": "laterality"
@@ -2166,7 +2159,7 @@
         "type": [
           {
             "code": "Extension",
-            "profile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/shr-core-AnatomicalOrientation-extension"
+            "profile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-AnatomicalOrientation-extension"
           }
         ],
         "sliceName": "anatomicalorientation"
@@ -2185,20 +2178,10 @@
         "type": [
           {
             "code": "Extension",
-            "profile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/shr-core-RelationToLandmark-extension"
+            "profile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-RelationToLandmark-extension"
           }
         ],
         "sliceName": "relationtolandmark"
-      },
-      {
-        "id": "Condition.subject",
-        "path": "Condition.subject",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Patient"
-          }
-        ]
       },
       {
         "id": "Condition.context",
@@ -2206,7 +2189,7 @@
         "type": [
           {
             "code": "Reference",
-            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Encounter"
+            "targetProfile": "http://hl7.org/fhir/StructureDefinition/Encounter"
           }
         ]
       },
@@ -2219,7 +2202,7 @@
           },
           {
             "code": "Age",
-            "profile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/shr-core-Age"
+            "profile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-Age"
           },
           {
             "code": "Period"
@@ -2241,7 +2224,7 @@
           },
           {
             "code": "Age",
-            "profile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/shr-core-Age"
+            "profile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-Age"
           },
           {
             "code": "boolean"
@@ -2263,15 +2246,15 @@
         "type": [
           {
             "code": "Reference",
-            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Practitioner"
+            "targetProfile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"
           },
           {
             "code": "Reference",
-            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Patient"
+            "targetProfile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
           },
           {
             "code": "Reference",
-            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-RelatedPerson"
+            "targetProfile": "http://hl7.org/fhir/StructureDefinition/RelatedPerson"
           }
         ]
       },
@@ -2308,7 +2291,7 @@
         "type": [
           {
             "code": "Extension",
-            "profile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/shr-core-Type-extension"
+            "profile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-Type-extension"
           }
         ],
         "sliceName": "type"
@@ -2362,19 +2345,9 @@
             "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Resource"
           }
         ]
-      },
-      {
-        "id": "Condition.note",
-        "path": "Condition.note",
-        "type": [
-          {
-            "code": "Annotation",
-            "profile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Annotation"
-          }
-        ]
       }
     ]
   },
   "title": "obf-Condition",
-  "description": "A condition that is or may be present in a subject. 'Condition' is interpreted broadly and could be a disorder, abnormality, problem, injury, complaint, functionality, illness, disease, ailment, sickness, affliction, upset, difficulty, disorder, symptom, worry, or trouble.\nThe Observation-based class, ConditionAbsent, should be used to describe conditions that are not present or negative findings.\nSHR Condition uses the SHR BodyLocation structure that includes not only a code, but optional laterality, direction, clock direction, and distance. If included, the distance is measured from the location specified by the code, laterality, and direction."
+  "description": "A condition that is or may be present in a subject. 'Condition' is interpreted broadly and could be a disorder, abnormality, problem, injury, complaint, functionality, illness, disease, ailment, sickness, affliction, upset, difficulty, disorder, symptom, worry, or trouble.\nThe Observation-based class, ConditionAbsent, should be used to describe conditions that are not present or negative findings.\nThis profiled Condition uses the BodyLocation structure that includes not only a code, but optional laterality, direction, and relation to landmark(s)."
 }

@@ -1,0 +1,128 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "obf-datatype-DayOfWeek-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>DayOfWeek Logical Model</b></p>\n  <p>If one or more days of week is provided, then the action happens only on the specified day(s).</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-DayOfWeek-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/breast-radiology",
+      "value": "obf.datatype.DayOfWeek"
+    }
+  ],
+  "name": "DayOfWeek",
+  "title": "obf-datatype-DayOfWeek",
+  "status": "draft",
+  "date": "2019-07-30",
+  "publisher": "Hl7",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://BreastRadReport.com"
+        }
+      ]
+    }
+  ],
+  "description": "If one or more days of week is provided, then the action happens only on the specified day(s).",
+  "kind": "logical",
+  "abstract": false,
+  "type": "obf-datatype-DayOfWeek-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "obf-datatype-DayOfWeek-model",
+        "path": "obf-datatype-DayOfWeek-model",
+        "definition": "If one or more days of week is provided, then the action happens only on the specified day(s).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-datatype-DayOfWeek-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-datatype-DayOfWeek-model.value",
+        "path": "obf-datatype-DayOfWeek-model.value",
+        "short": "Concept representing if one or more days of week is provided, then the action happens only on the specified day(s).",
+        "definition": "Concept representing if one or more days of week is provided, then the action happens only on the specified day(s).",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-datatype-DayOfWeek-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/days-of-week"
+          }
+        }
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "obf-datatype-DayOfWeek-model",
+        "path": "obf-datatype-DayOfWeek-model",
+        "definition": "If one or more days of week is provided, then the action happens only on the specified day(s).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-datatype-DayOfWeek-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-datatype-DayOfWeek-model.value",
+        "path": "obf-datatype-DayOfWeek-model.value",
+        "short": "Concept representing if one or more days of week is provided, then the action happens only on the specified day(s).",
+        "definition": "Concept representing if one or more days of week is provided, then the action happens only on the specified day(s).",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-datatype-DayOfWeek-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/days-of-week"
+          }
+        }
+      }
+    ]
+  }
+}

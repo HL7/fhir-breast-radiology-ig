@@ -8,7 +8,7 @@
   "url": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-NationalProviderIdentifier",
   "name": "NationalProviderIdentifier",
   "status": "draft",
-  "date": "2019-07-29",
+  "date": "2019-07-30",
   "publisher": "Hl7",
   "contact": [
     {
@@ -348,9 +348,9 @@
         }
       },
       {
-        "id": "Identifier.type.coding:Fixed_NPI",
+        "id": "Identifier.type.coding:Fixed_PRN",
         "path": "Identifier.type.coding",
-        "sliceName": "Fixed_NPI",
+        "sliceName": "Fixed_PRN",
         "short": "Code defined by a terminology system",
         "definition": "A reference to a code defined by a terminology system.",
         "min": 1,
@@ -363,7 +363,7 @@
         "isSummary": true
       },
       {
-        "id": "Identifier.type.coding:Fixed_NPI.id",
+        "id": "Identifier.type.coding:Fixed_PRN.id",
         "path": "Identifier.type.coding.id",
         "representation": [
           "xmlAttr"
@@ -390,7 +390,7 @@
         ]
       },
       {
-        "id": "Identifier.type.coding:Fixed_NPI.extension",
+        "id": "Identifier.type.coding:Fixed_PRN.extension",
         "path": "Identifier.type.coding.extension",
         "slicing": {
           "discriminator": [
@@ -429,7 +429,7 @@
         ]
       },
       {
-        "id": "Identifier.type.coding:Fixed_NPI.system",
+        "id": "Identifier.type.coding:Fixed_PRN.system",
         "path": "Identifier.type.coding.system",
         "short": "Identity of the terminology system",
         "definition": "The identification of the code system that defines the meaning of the symbol in the code.",
@@ -460,7 +460,7 @@
         "fixedUri": "http://terminology.hl7.org/CodeSystem/v2-0203"
       },
       {
-        "id": "Identifier.type.coding:Fixed_NPI.version",
+        "id": "Identifier.type.coding:Fixed_PRN.version",
         "path": "Identifier.type.coding.version",
         "short": "Version of the system - if relevant",
         "definition": "The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured. and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged.",
@@ -489,7 +489,7 @@
         ]
       },
       {
-        "id": "Identifier.type.coding:Fixed_NPI.code",
+        "id": "Identifier.type.coding:Fixed_PRN.code",
         "path": "Identifier.type.coding.code",
         "short": "Symbol in syntax defined by the system",
         "definition": "A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination).",
@@ -516,10 +516,10 @@
             "map": "fhir:Coding.code rdfs:subPropertyOf dt:CDCoding.code"
           }
         ],
-        "fixedCode": "NPI"
+        "fixedCode": "PRN"
       },
       {
-        "id": "Identifier.type.coding:Fixed_NPI.display",
+        "id": "Identifier.type.coding:Fixed_PRN.display",
         "extension": [
           {
             "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
@@ -554,7 +554,7 @@
         ]
       },
       {
-        "id": "Identifier.type.coding:Fixed_NPI.userSelected",
+        "id": "Identifier.type.coding:Fixed_PRN.userSelected",
         "path": "Identifier.type.coding.userSelected",
         "short": "If this coding was chosen directly by the user",
         "definition": "Indicates that this coding was chosen by a user directly - i.e. off a pick list of available items (codes or displays).",
@@ -774,9 +774,9 @@
         "max": "*"
       },
       {
-        "id": "Identifier.type.coding:Fixed_NPI",
+        "id": "Identifier.type.coding:Fixed_PRN",
         "path": "Identifier.type.coding",
-        "sliceName": "Fixed_NPI",
+        "sliceName": "Fixed_PRN",
         "short": "Code defined by a terminology system",
         "definition": "A reference to a code defined by a terminology system.",
         "min": 1,
@@ -789,14 +789,14 @@
         "isSummary": true
       },
       {
-        "id": "Identifier.type.coding:Fixed_NPI.system",
+        "id": "Identifier.type.coding:Fixed_PRN.system",
         "path": "Identifier.type.coding.system",
         "fixedUri": "http://terminology.hl7.org/CodeSystem/v2-0203"
       },
       {
-        "id": "Identifier.type.coding:Fixed_NPI.code",
+        "id": "Identifier.type.coding:Fixed_PRN.code",
         "path": "Identifier.type.coding.code",
-        "fixedCode": "NPI"
+        "fixedCode": "PRN"
       }
     ]
   },

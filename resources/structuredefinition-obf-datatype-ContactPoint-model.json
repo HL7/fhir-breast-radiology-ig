@@ -1,0 +1,332 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "obf-datatype-ContactPoint-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>ContactPoint Logical Model</b></p>\n  <p>An electronic means of contacting an organization or individual.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-ContactPoint-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/breast-radiology",
+      "value": "obf.datatype.ContactPoint"
+    }
+  ],
+  "name": "ContactPoint",
+  "title": "obf-datatype-ContactPoint",
+  "status": "draft",
+  "date": "2019-07-30",
+  "publisher": "Hl7",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://BreastRadReport.com"
+        }
+      ]
+    }
+  ],
+  "description": "An electronic means of contacting an organization or individual.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "obf-datatype-ContactPoint-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "obf-datatype-ContactPoint-model",
+        "path": "obf-datatype-ContactPoint-model",
+        "definition": "An electronic means of contacting an organization or individual.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-datatype-ContactPoint-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-datatype-ContactPoint-model.telecomNumberOrAddress",
+        "path": "obf-datatype-ContactPoint-model.telecomNumberOrAddress",
+        "short": "A user name or other identifier on a telecommunication network, such as a telephone number (including country code and extension, if necessary), email address, or SkypeID.",
+        "definition": "A user name or other identifier on a telecommunication network, such as a telephone number (including country code and extension, if necessary), email address, or SkypeID.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-datatype-ContactPoint-model.telecomNumberOrAddress",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-datatype-ContactPoint-model.type",
+        "path": "obf-datatype-ContactPoint-model.type",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0332307"
+          }
+        ],
+        "short": "A code describing the item at a greater level of detail.",
+        "definition": "A code describing the item at a greater level of detail.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-datatype-ContactPoint-model.type",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/contact-point-system"
+          }
+        }
+      },
+      {
+        "id": "obf-datatype-ContactPoint-model.purpose",
+        "path": "obf-datatype-ContactPoint-model.purpose",
+        "short": "Description of the intent or use of the item.",
+        "definition": "Description of the intent or use of the item.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-datatype-ContactPoint-model.purpose",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/contact-point-use"
+          }
+        }
+      },
+      {
+        "id": "obf-datatype-ContactPoint-model.priorityRank",
+        "path": "obf-datatype-ContactPoint-model.priorityRank",
+        "short": "The priority of the procedure, as a number (1 being the highest priority)",
+        "definition": "The priority of the procedure, as a number (1 being the highest priority)",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-datatype-ContactPoint-model.priorityRank",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "positiveInt"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-datatype-ContactPoint-model.effectiveTimePeriod",
+        "path": "obf-datatype-ContactPoint-model.effectiveTimePeriod",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C2985763"
+          }
+        ],
+        "short": "The date and time span for which something is active, valid, or in force.",
+        "definition": "The date and time span for which something is active, valid, or in force.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-datatype-ContactPoint-model.effectiveTimePeriod",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-EffectiveTimePeriod-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "obf-datatype-ContactPoint-model",
+        "path": "obf-datatype-ContactPoint-model",
+        "definition": "An electronic means of contacting an organization or individual.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-datatype-ContactPoint-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-datatype-ContactPoint-model.telecomNumberOrAddress",
+        "path": "obf-datatype-ContactPoint-model.telecomNumberOrAddress",
+        "short": "A user name or other identifier on a telecommunication network, such as a telephone number (including country code and extension, if necessary), email address, or SkypeID.",
+        "definition": "A user name or other identifier on a telecommunication network, such as a telephone number (including country code and extension, if necessary), email address, or SkypeID.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-datatype-ContactPoint-model.telecomNumberOrAddress",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-datatype-ContactPoint-model.type",
+        "path": "obf-datatype-ContactPoint-model.type",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0332307"
+          }
+        ],
+        "short": "A code describing the item at a greater level of detail.",
+        "definition": "A code describing the item at a greater level of detail.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-datatype-ContactPoint-model.type",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/contact-point-system"
+          }
+        }
+      },
+      {
+        "id": "obf-datatype-ContactPoint-model.purpose",
+        "path": "obf-datatype-ContactPoint-model.purpose",
+        "short": "Description of the intent or use of the item.",
+        "definition": "Description of the intent or use of the item.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-datatype-ContactPoint-model.purpose",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/contact-point-use"
+          }
+        }
+      },
+      {
+        "id": "obf-datatype-ContactPoint-model.priorityRank",
+        "path": "obf-datatype-ContactPoint-model.priorityRank",
+        "short": "The priority of the procedure, as a number (1 being the highest priority)",
+        "definition": "The priority of the procedure, as a number (1 being the highest priority)",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-datatype-ContactPoint-model.priorityRank",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "positiveInt"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-datatype-ContactPoint-model.effectiveTimePeriod",
+        "path": "obf-datatype-ContactPoint-model.effectiveTimePeriod",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C2985763"
+          }
+        ],
+        "short": "The date and time span for which something is active, valid, or in force.",
+        "definition": "The date and time span for which something is active, valid, or in force.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-datatype-ContactPoint-model.effectiveTimePeriod",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-EffectiveTimePeriod-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

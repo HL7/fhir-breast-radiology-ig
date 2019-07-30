@@ -8,7 +8,7 @@
   "url": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/breastrad-BreastAbnormality",
   "name": "BreastAbnormality",
   "status": "draft",
-  "date": "2019-07-29",
+  "date": "2019-07-30",
   "publisher": "Hl7",
   "contact": [
     {
@@ -833,19 +833,15 @@
         "type": [
           {
             "code": "Reference",
-            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-MedicationRequest"
+            "targetProfile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest"
           },
           {
             "code": "Reference",
-            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-ServiceRequest"
+            "targetProfile": "http://hl7.org/fhir/StructureDefinition/ProcedureRequest"
           },
           {
             "code": "Reference",
-            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-ProcedureRequest"
-          },
-          {
-            "code": "Reference",
-            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-ReferralRequest"
+            "targetProfile": "http://hl7.org/fhir/StructureDefinition/ReferralRequest"
           }
         ],
         "isSummary": true,
@@ -1413,19 +1409,19 @@
         "type": [
           {
             "code": "Reference",
-            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Patient"
+            "targetProfile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
           },
           {
             "code": "Reference",
-            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Group"
+            "targetProfile": "http://hl7.org/fhir/StructureDefinition/Group"
           },
           {
             "code": "Reference",
-            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Device"
+            "targetProfile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-device"
           },
           {
             "code": "Reference",
-            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Location"
+            "targetProfile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-location"
           }
         ],
         "isSummary": true,
@@ -1468,7 +1464,7 @@
         "type": [
           {
             "code": "Reference",
-            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Encounter"
+            "targetProfile": "http://hl7.org/fhir/StructureDefinition/Encounter"
           }
         ],
         "mapping": [
@@ -1570,19 +1566,19 @@
         "type": [
           {
             "code": "Reference",
-            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Practitioner"
+            "targetProfile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"
           },
           {
             "code": "Reference",
-            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Organization"
+            "targetProfile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
           },
           {
             "code": "Reference",
-            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Patient"
+            "targetProfile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
           },
           {
             "code": "Reference",
-            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-RelatedPerson"
+            "targetProfile": "http://hl7.org/fhir/StructureDefinition/RelatedPerson"
           }
         ],
         "isSummary": true,
@@ -1914,7 +1910,7 @@
         "type": [
           {
             "code": "Extension",
-            "profile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/shr-core-Laterality-extension"
+            "profile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-Laterality-extension"
           }
         ],
         "sliceName": "laterality"
@@ -1933,7 +1929,7 @@
         "type": [
           {
             "code": "Extension",
-            "profile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/shr-core-AnatomicalOrientation-extension"
+            "profile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-AnatomicalOrientation-extension"
           }
         ],
         "sliceName": "anatomicalorientation"
@@ -1952,7 +1948,7 @@
         "type": [
           {
             "code": "Extension",
-            "profile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/shr-core-RelationToLandmark-extension"
+            "profile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-RelationToLandmark-extension"
           }
         ],
         "sliceName": "relationtolandmark"
@@ -2037,7 +2033,7 @@
         "type": [
           {
             "code": "Extension",
-            "profile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/shr-core-LandmarkType-extension"
+            "profile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-LandmarkType-extension"
           }
         ],
         "mapping": [
@@ -2141,7 +2137,7 @@
             "map": "N/A"
           }
         ],
-        "fixedUri": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/shr-core-LandmarkType-extension"
+        "fixedUri": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-LandmarkType-extension"
       },
       {
         "id": "Observation.bodySite.extension:relationtolandmark.extension:landmarktype.valueCodeableConcept",
@@ -2169,7 +2165,7 @@
         "binding": {
           "strength": "extensible",
           "valueSetReference": {
-            "reference": "http://hl7.org/fhir/us/breast-radiology/shr/core/vs/LandmarkTypeVS"
+            "reference": "http://hl7.org/fhir/us/breast-radiology/obf/datatype/vs/LandmarkTypeVS"
           }
         }
       },
@@ -2566,7 +2562,7 @@
         "type": [
           {
             "code": "Extension",
-            "profile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/shr-core-LandmarkLocation-extension"
+            "profile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-LandmarkLocation-extension"
           }
         ],
         "mapping": [
@@ -2657,7 +2653,7 @@
         "type": [
           {
             "code": "Extension",
-            "profile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/shr-core-Code-extension"
+            "profile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-Code-extension"
           }
         ],
         "mapping": [
@@ -2761,7 +2757,7 @@
             "map": "N/A"
           }
         ],
-        "fixedUri": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/shr-core-Code-extension"
+        "fixedUri": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-Code-extension"
       },
       {
         "id": "Observation.bodySite.extension:relationtolandmark.extension:landmarklocation.extension:code.valueCodeableConcept",
@@ -3180,7 +3176,7 @@
         "type": [
           {
             "code": "Extension",
-            "profile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/shr-core-Laterality-extension"
+            "profile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-Laterality-extension"
           }
         ],
         "mapping": [
@@ -3205,7 +3201,7 @@
         "type": [
           {
             "code": "Extension",
-            "profile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/shr-core-AnatomicalOrientation-extension"
+            "profile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-AnatomicalOrientation-extension"
           }
         ],
         "mapping": [
@@ -3243,7 +3239,7 @@
             "map": "N/A"
           }
         ],
-        "fixedUri": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/shr-core-LandmarkLocation-extension"
+        "fixedUri": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-LandmarkLocation-extension"
       },
       {
         "id": "Observation.bodySite.extension:relationtolandmark.extension:landmarklocation.value[x]",
@@ -3394,7 +3390,7 @@
         "type": [
           {
             "code": "Extension",
-            "profile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/shr-core-LandmarkToBodyLocationDirection-extension"
+            "profile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-LandmarkToBodyLocationDirection-extension"
           }
         ],
         "mapping": [
@@ -3404,6 +3400,131 @@
           }
         ],
         "sliceName": "landmarktobodylocationdirection"
+      },
+      {
+        "id": "Observation.bodySite.extension:relationtolandmark.extension:landmarktobodylocationdirection.id",
+        "path": "Observation.bodySite.extension.extension.id",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "xml:id (or equivalent in JSON)",
+        "definition": "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Element.id",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "Observation.bodySite.extension:relationtolandmark.extension:landmarktobodylocationdirection.extension",
+        "path": "Observation.bodySite.extension.extension.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "description": "Extensions are always sliced by (at least) url",
+          "rules": "open"
+        },
+        "short": "Additional Content defined by implementations",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "alias": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "Element.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "Observation.bodySite.extension:relationtolandmark.extension:landmarktobodylocationdirection.url",
+        "path": "Observation.bodySite.extension.extension.url",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "identifies the meaning of the extension",
+        "definition": "Source of the definition for the extension code - a logical name or a URL.",
+        "comment": "The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition SHALL be a URI for the Structure Definition defining the extension.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.url",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ],
+        "fixedUri": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-LandmarkToBodyLocationDirection-extension"
+      },
+      {
+        "id": "Observation.bodySite.extension:relationtolandmark.extension:landmarktobodylocationdirection.valueCodeableConcept",
+        "path": "Observation.bodySite.extension.extension.valueCodeableConcept",
+        "short": "Value of extension",
+        "definition": "Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list).",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Extension.value[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/us/breast-radiology/obf/datatype/vs/ClockFaceDirectionVS"
+          }
+        }
       },
       {
         "id": "Observation.bodySite.extension:relationtolandmark.extension:landmarktobodylocationdistance",
@@ -3419,7 +3540,7 @@
         "type": [
           {
             "code": "Extension",
-            "profile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/shr-core-LandmarkToBodyLocationDistance-extension"
+            "profile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-LandmarkToBodyLocationDistance-extension"
           }
         ],
         "mapping": [
@@ -3523,7 +3644,7 @@
             "map": "N/A"
           }
         ],
-        "fixedUri": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/shr-core-LandmarkToBodyLocationDistance-extension"
+        "fixedUri": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-LandmarkToBodyLocationDistance-extension"
       },
       {
         "id": "Observation.bodySite.extension:relationtolandmark.extension:landmarktobodylocationdistance.valueQuantity",
@@ -3551,7 +3672,7 @@
         "binding": {
           "strength": "required",
           "valueSetReference": {
-            "reference": "http://hl7.org/fhir/us/breast-radiology/shr/core/vs/UnitsOfLengthVS"
+            "reference": "http://hl7.org/fhir/us/breast-radiology/obf/datatype/vs/UnitsOfLengthVS"
           }
         }
       },
@@ -3802,7 +3923,7 @@
             "map": "N/A"
           }
         ],
-        "fixedUri": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/shr-core-RelationToLandmark-extension"
+        "fixedUri": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-RelationToLandmark-extension"
       },
       {
         "id": "Observation.bodySite.extension:relationtolandmark.value[x]",
@@ -4301,7 +4422,7 @@
         "type": [
           {
             "code": "Reference",
-            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Specimen"
+            "targetProfile": "http://hl7.org/fhir/StructureDefinition/Specimen"
           }
         ],
         "mapping": [
@@ -4339,7 +4460,7 @@
         "type": [
           {
             "code": "Reference",
-            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Device"
+            "targetProfile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-device"
           }
         ],
         "mapping": [
@@ -4916,6 +5037,575 @@
           "ordered": false,
           "rules": "open"
         }
+      },
+      {
+        "id": "Observation.component.id",
+        "path": "Observation.component.id",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "xml:id (or equivalent in JSON)",
+        "definition": "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Element.id",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component.extension",
+        "path": "Observation.component.extension",
+        "short": "Additional Content defined by implementations",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "alias": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Element.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component.modifierExtension",
+        "path": "Observation.component.modifierExtension",
+        "short": "Extensions that cannot be ignored",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
+        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "alias": [
+          "extensions",
+          "user content",
+          "modifiers"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "BackboneElement.modifierExtension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isModifier": true,
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component.code",
+        "path": "Observation.component.code",
+        "short": "Type of component observation (code / type)",
+        "definition": "Describes what was observed. Sometimes this is called the observation \"code\".",
+        "requirements": "Knowing what kind of observation is being made is essential to understanding the observation.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "isSummary": true,
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "ObservationCode"
+            }
+          ],
+          "strength": "example",
+          "description": "Codes identifying names of simple observations.",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/observation-codes"
+          }
+        },
+        "mapping": [
+          {
+            "identity": "sct-concept",
+            "map": "< 363787002 |Observable entity| OR \r< 386053000 |Evaluation procedure|"
+          },
+          {
+            "identity": "v2",
+            "map": "OBX-3"
+          },
+          {
+            "identity": "rim",
+            "map": "code"
+          },
+          {
+            "identity": "w5",
+            "map": "what"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component.value[x]",
+        "path": "Observation.component.value[x]",
+        "short": "Actual component result",
+        "definition": "The information determined as a result of making the observation, if the information has a simple value.",
+        "comment": "Normally, an observation will have either a single value or a set of related observations. A few observations (e.g. Apgar score) may have both a value and related observations (for an Apgar score, the observations from which the measure is derived). If a value is present, the datatype for this element should be determined by Observation.code. A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.   For boolean values use valueCodeableConcept and select codes from <http://hl7.org/fhir/ValueSet/v2-0136> (these \"yes/no\" concepts can be mapped to the display name \"true/false\" or other mutually exclusive terms that may be needed\").  The element, Observation.value[x], has a variable name depending on the type as follows: valueQuantity, valueCodeableConcept, valueRatio, valueChoice, valuePeriod, valueSampleData, or valueString (the name format is \"'value' + the type name\" with a capital on the first letter of the type).",
+        "requirements": "An observation exists to have a value, though it may not if it is in error, or if it represents a group of observations.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Quantity"
+          },
+          {
+            "code": "CodeableConcept"
+          },
+          {
+            "code": "string"
+          },
+          {
+            "code": "Range"
+          },
+          {
+            "code": "Ratio"
+          },
+          {
+            "code": "SampledData"
+          },
+          {
+            "code": "time"
+          },
+          {
+            "code": "dateTime"
+          },
+          {
+            "code": "Period"
+          }
+        ],
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "sct-concept",
+            "map": "363714003 |Interprets| < 441742003 |Evaluation finding|"
+          },
+          {
+            "identity": "v2",
+            "map": "OBX.2, OBX.5, OBX.6"
+          },
+          {
+            "identity": "rim",
+            "map": "value"
+          },
+          {
+            "identity": "sct-attr",
+            "map": "363714003 |Interprets|"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component.dataAbsentReason",
+        "path": "Observation.component.dataAbsentReason",
+        "short": "Why the component result is missing",
+        "definition": "Provides a reason why the expected value in the element Observation.value[x] is missing.",
+        "comment": "\"Null\" or exceptional values can be represented two ways in FHIR Observations.  One way is to simply include them in the value set and represent the exceptions in the value.  For example, measurement values for a serology test could be  \"detected\", \"not detected\", \"inconclusive\", or  \"test not done\".   The alternate way is to use the value element for actual observations and use the explicit dataAbsentReason element to record exceptional values.  For example, the dataAbsentReason code \"error\" could be used when the measurement was not completed.  Because of these options, use-case agreements are required to interpret general observations for exceptional values.",
+        "requirements": "For many results it is necessary to handle exceptional values in measurements.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "condition": [
+          "obs-6"
+        ],
+        "binding": {
+          "strength": "extensible",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/data-absent-reason"
+          }
+        },
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "N/A"
+          },
+          {
+            "identity": "rim",
+            "map": "value.nullFlavor"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component.interpretation",
+        "path": "Observation.component.interpretation",
+        "short": "High, low, normal, etc.",
+        "definition": "The assessment made based on the result of the observation.  Intended as a simple compact code often placed adjacent to the result value in reports and flow sheets to signal the meaning/normalcy status of the result. Otherwise known as abnormal flag.",
+        "comment": "The component interpretation applies only to the individual component value.  For an overall interpretation all components together use thes Observation.interpretation element.",
+        "requirements": "For some results, particularly numeric results, an interpretation is necessary to fully understand the significance of a result.",
+        "alias": [
+          "Abnormal Flag"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "ObservationInterpretation"
+            }
+          ],
+          "strength": "extensible",
+          "description": "Codes identifying interpretations of observations.",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/observation-interpretation"
+          }
+        },
+        "mapping": [
+          {
+            "identity": "sct-concept",
+            "map": "< 260245000 |Findings values|"
+          },
+          {
+            "identity": "v2",
+            "map": "OBX-8"
+          },
+          {
+            "identity": "rim",
+            "map": "interpretationCode"
+          },
+          {
+            "identity": "sct-attr",
+            "map": "363713009 |Has interpretation|"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component.referenceRange",
+        "path": "Observation.component.referenceRange",
+        "short": "Provides guide for interpretation of component result",
+        "definition": "Guidance on how to interpret the value by comparison to a normal or recommended range.",
+        "comment": "Most observations only have one generic reference range. Systems MAY choose to restrict to only supplying the relevant reference range based on knowledge about the patient (e.g., specific to the patient's age, gender, weight and other factors), but this may not be possible or appropriate. Whenever more than one reference range is supplied, the differences between them SHOULD be provided in the reference range and/or age properties.",
+        "requirements": "Knowing what values are considered \"normal\" can help evaluate the significance of a particular result. Need to be able to provide multiple reference ranges for different contexts.",
+        "min": 0,
+        "max": "*",
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "OBX.7"
+          },
+          {
+            "identity": "rim",
+            "map": "outboundRelationship[typeCode=REFV]/target[classCode=OBS, moodCode=EVN]"
+          }
+        ],
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component.referenceRange.id",
+        "path": "Observation.component.referenceRange.id",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "xml:id (or equivalent in JSON)",
+        "definition": "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Element.id",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component.referenceRange.extension",
+        "path": "Observation.component.referenceRange.extension",
+        "short": "Additional Content defined by implementations",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "alias": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Element.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component.referenceRange.modifierExtension",
+        "path": "Observation.component.referenceRange.modifierExtension",
+        "short": "Extensions that cannot be ignored",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
+        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "alias": [
+          "extensions",
+          "user content",
+          "modifiers"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "BackboneElement.modifierExtension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isModifier": true,
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component.referenceRange.low",
+        "path": "Observation.component.referenceRange.low",
+        "short": "Low Range, if relevant",
+        "definition": "The value of the low bound of the reference range.  The low bound of the reference range endpoint is inclusive of the value (e.g.  reference range is >=5 - <=9).   If the low bound is omitted,  it is assumed to be meaningless (e.g. reference range is <=2.3).",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Quantity",
+            "profile": "http://hl7.org/fhir/StructureDefinition/SimpleQuantity"
+          }
+        ],
+        "condition": [
+          "obs-3"
+        ],
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "OBX-7"
+          },
+          {
+            "identity": "rim",
+            "map": "value:IVL_PQ.low"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component.referenceRange.high",
+        "path": "Observation.component.referenceRange.high",
+        "short": "High Range, if relevant",
+        "definition": "The value of the high bound of the reference range.  The high bound of the reference range endpoint is inclusive of the value (e.g.  reference range is >=5 - <=9).   If the high bound is omitted,  it is assumed to be meaningless (e.g. reference range is >= 2.3).",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Quantity",
+            "profile": "http://hl7.org/fhir/StructureDefinition/SimpleQuantity"
+          }
+        ],
+        "condition": [
+          "obs-3"
+        ],
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "OBX-7"
+          },
+          {
+            "identity": "rim",
+            "map": "value:IVL_PQ.high"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component.referenceRange.type",
+        "path": "Observation.component.referenceRange.type",
+        "short": "Reference range qualifier",
+        "definition": "Codes to indicate the what part of the targeted reference population it applies to. For example, the normal or therapeutic range.",
+        "comment": "This SHOULD be populated if there is more than one range.  If this element is not present then the normal range is assumed.",
+        "requirements": "Need to be able to say what kind of reference range this is - normal, recommended, therapeutic, etc,  - for proper interpretation.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "ObservationRangeMeaning"
+            }
+          ],
+          "strength": "extensible",
+          "description": "Code for the meaning of a reference range.",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/referencerange-meaning"
+          }
+        },
+        "mapping": [
+          {
+            "identity": "sct-concept",
+            "map": "< 260245000 |Findings values| OR  \r< 365860008 |General clinical state finding| \rOR \r< 250171008 |Clinical history or observation findings| OR  \r< 415229000 |Racial group| OR \r< 365400002 |Finding of puberty stage| OR\r< 443938003 |Procedure carried out on subject|"
+          },
+          {
+            "identity": "v2",
+            "map": "OBX-10"
+          },
+          {
+            "identity": "rim",
+            "map": "interpretationCode"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component.referenceRange.appliesTo",
+        "path": "Observation.component.referenceRange.appliesTo",
+        "short": "Reference range population",
+        "definition": "Codes to indicate the target population this reference range applies to.  For example, a reference range may be based on the normal population or a particular sex or race.",
+        "comment": "This SHOULD be populated if there is more than one range.  If this element is not present then the normal population is assumed.",
+        "requirements": "Need to be able to identify the target population for proper interpretation.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "ObservationRangeType"
+            }
+          ],
+          "strength": "extensible",
+          "description": "Codes identifying the population the reference range applies to.",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/referencerange-appliesto"
+          }
+        },
+        "mapping": [
+          {
+            "identity": "sct-concept",
+            "map": "< 260245000 |Findings values| OR  \r< 365860008 |General clinical state finding| \rOR \r< 250171008 |Clinical history or observation findings| OR  \r< 415229000 |Racial group| OR \r< 365400002 |Finding of puberty stage| OR\r< 443938003 |Procedure carried out on subject|"
+          },
+          {
+            "identity": "v2",
+            "map": "OBX-10"
+          },
+          {
+            "identity": "rim",
+            "map": "interpretationCode"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component.referenceRange.age",
+        "path": "Observation.component.referenceRange.age",
+        "short": "Applicable age range, if relevant",
+        "definition": "The age at which this reference range is applicable. This is a neonatal age (e.g. number of weeks at term) if the meaning says so.",
+        "requirements": "Some analytes vary greatly over age.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Range"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "outboundRelationship[typeCode=PRCN].targetObservationCriterion[code=\"age\"].value"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component.referenceRange.text",
+        "path": "Observation.component.referenceRange.text",
+        "short": "Text based reference range in an observation",
+        "definition": "Text based reference range in an observation which may be used when a quantitative range is not appropriate for an observation.  An example would be a reference value of \"Negative\" or a list or table of 'normals'.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "OBX-7"
+          },
+          {
+            "identity": "rim",
+            "map": "value:ST"
+          }
+        ]
       },
       {
         "id": "Observation.component:breastrad-AbnormalityDensity",
@@ -5506,7 +6196,7 @@
         "binding": {
           "strength": "required",
           "valueSetReference": {
-            "reference": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/AbnormalityDensityVs"
+            "reference": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/AbnormalityDensityVS"
           }
         }
       },
@@ -5601,7 +6291,7 @@
         "comment": "Most observations only have one generic reference range. Systems MAY choose to restrict to only supplying the relevant reference range based on knowledge about the patient (e.g., specific to the patient's age, gender, weight and other factors), but this may not be possible or appropriate. Whenever more than one reference range is supplied, the differences between them SHOULD be provided in the reference range and/or age properties.",
         "requirements": "Knowing what values are considered \"normal\" can help evaluate the significance of a particular result. Need to be able to provide multiple reference ranges for different contexts.",
         "min": 0,
-        "max": "1",
+        "max": "0",
         "mapping": [
           {
             "identity": "v2",
@@ -5815,7 +6505,7 @@
         "comment": "This SHOULD be populated if there is more than one range.  If this element is not present then the normal population is assumed.",
         "requirements": "Need to be able to identify the target population for proper interpretation.",
         "min": 0,
-        "max": "1",
+        "max": "*",
         "type": [
           {
             "code": "CodeableConcept"
@@ -5847,12 +6537,7 @@
             "identity": "rim",
             "map": "interpretationCode"
           }
-        ],
-        "base": {
-          "path": "Observation.component.referenceRange.appliesTo",
-          "min": 0,
-          "max": "*"
-        }
+        ]
       },
       {
         "id": "Observation.component:breastrad-AbnormalityDensity.referenceRange.age",
@@ -6486,7 +7171,7 @@
         "binding": {
           "strength": "required",
           "valueSetReference": {
-            "reference": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/AbnormalityTypeVs"
+            "reference": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/AbnormalityTypeVS"
           }
         }
       },
@@ -6581,7 +7266,7 @@
         "comment": "Most observations only have one generic reference range. Systems MAY choose to restrict to only supplying the relevant reference range based on knowledge about the patient (e.g., specific to the patient's age, gender, weight and other factors), but this may not be possible or appropriate. Whenever more than one reference range is supplied, the differences between them SHOULD be provided in the reference range and/or age properties.",
         "requirements": "Knowing what values are considered \"normal\" can help evaluate the significance of a particular result. Need to be able to provide multiple reference ranges for different contexts.",
         "min": 0,
-        "max": "1",
+        "max": "0",
         "mapping": [
           {
             "identity": "v2",
@@ -6795,7 +7480,7 @@
         "comment": "This SHOULD be populated if there is more than one range.  If this element is not present then the normal population is assumed.",
         "requirements": "Need to be able to identify the target population for proper interpretation.",
         "min": 0,
-        "max": "1",
+        "max": "*",
         "type": [
           {
             "code": "CodeableConcept"
@@ -6827,12 +7512,7 @@
             "identity": "rim",
             "map": "interpretationCode"
           }
-        ],
-        "base": {
-          "path": "Observation.component.referenceRange.appliesTo",
-          "min": 0,
-          "max": "*"
-        }
+        ]
       },
       {
         "id": "Observation.component:breastrad-AbnormalityType.referenceRange.age",
@@ -7466,7 +8146,7 @@
         "binding": {
           "strength": "required",
           "valueSetReference": {
-            "reference": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/AsymmetryTypesVs"
+            "reference": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/AsymmetryTypesVS"
           }
         }
       },
@@ -7561,7 +8241,7 @@
         "comment": "Most observations only have one generic reference range. Systems MAY choose to restrict to only supplying the relevant reference range based on knowledge about the patient (e.g., specific to the patient's age, gender, weight and other factors), but this may not be possible or appropriate. Whenever more than one reference range is supplied, the differences between them SHOULD be provided in the reference range and/or age properties.",
         "requirements": "Knowing what values are considered \"normal\" can help evaluate the significance of a particular result. Need to be able to provide multiple reference ranges for different contexts.",
         "min": 0,
-        "max": "1",
+        "max": "0",
         "mapping": [
           {
             "identity": "v2",
@@ -7775,7 +8455,7 @@
         "comment": "This SHOULD be populated if there is more than one range.  If this element is not present then the normal population is assumed.",
         "requirements": "Need to be able to identify the target population for proper interpretation.",
         "min": 0,
-        "max": "1",
+        "max": "*",
         "type": [
           {
             "code": "CodeableConcept"
@@ -7807,12 +8487,7 @@
             "identity": "rim",
             "map": "interpretationCode"
           }
-        ],
-        "base": {
-          "path": "Observation.component.referenceRange.appliesTo",
-          "min": 0,
-          "max": "*"
-        }
+        ]
       },
       {
         "id": "Observation.component:breastrad-AsymmetryTypes.referenceRange.age",
@@ -8446,7 +9121,7 @@
         "binding": {
           "strength": "required",
           "valueSetReference": {
-            "reference": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/BiRadCodeVs"
+            "reference": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/BiRadCodeVS"
           }
         }
       },
@@ -8541,7 +9216,7 @@
         "comment": "Most observations only have one generic reference range. Systems MAY choose to restrict to only supplying the relevant reference range based on knowledge about the patient (e.g., specific to the patient's age, gender, weight and other factors), but this may not be possible or appropriate. Whenever more than one reference range is supplied, the differences between them SHOULD be provided in the reference range and/or age properties.",
         "requirements": "Knowing what values are considered \"normal\" can help evaluate the significance of a particular result. Need to be able to provide multiple reference ranges for different contexts.",
         "min": 0,
-        "max": "1",
+        "max": "0",
         "mapping": [
           {
             "identity": "v2",
@@ -8755,7 +9430,7 @@
         "comment": "This SHOULD be populated if there is more than one range.  If this element is not present then the normal population is assumed.",
         "requirements": "Need to be able to identify the target population for proper interpretation.",
         "min": 0,
-        "max": "1",
+        "max": "*",
         "type": [
           {
             "code": "CodeableConcept"
@@ -8787,12 +9462,7 @@
             "identity": "rim",
             "map": "interpretationCode"
           }
-        ],
-        "base": {
-          "path": "Observation.component.referenceRange.appliesTo",
-          "min": 0,
-          "max": "*"
-        }
+        ]
       },
       {
         "id": "Observation.component:breastrad-BiRadCode.referenceRange.age",
@@ -9426,7 +10096,7 @@
         "binding": {
           "strength": "required",
           "valueSetReference": {
-            "reference": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/ChangeVs"
+            "reference": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/ChangeVS"
           }
         }
       },
@@ -9521,7 +10191,7 @@
         "comment": "Most observations only have one generic reference range. Systems MAY choose to restrict to only supplying the relevant reference range based on knowledge about the patient (e.g., specific to the patient's age, gender, weight and other factors), but this may not be possible or appropriate. Whenever more than one reference range is supplied, the differences between them SHOULD be provided in the reference range and/or age properties.",
         "requirements": "Knowing what values are considered \"normal\" can help evaluate the significance of a particular result. Need to be able to provide multiple reference ranges for different contexts.",
         "min": 0,
-        "max": "1",
+        "max": "0",
         "mapping": [
           {
             "identity": "v2",
@@ -9735,7 +10405,7 @@
         "comment": "This SHOULD be populated if there is more than one range.  If this element is not present then the normal population is assumed.",
         "requirements": "Need to be able to identify the target population for proper interpretation.",
         "min": 0,
-        "max": "1",
+        "max": "*",
         "type": [
           {
             "code": "CodeableConcept"
@@ -9767,12 +10437,7 @@
             "identity": "rim",
             "map": "interpretationCode"
           }
-        ],
-        "base": {
-          "path": "Observation.component.referenceRange.appliesTo",
-          "min": 0,
-          "max": "*"
-        }
+        ]
       },
       {
         "id": "Observation.component:breastrad-Change.referenceRange.age",
@@ -10406,7 +11071,7 @@
         "binding": {
           "strength": "required",
           "valueSetReference": {
-            "reference": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/CystTypesVs"
+            "reference": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/CystTypesVS"
           }
         }
       },
@@ -10501,7 +11166,7 @@
         "comment": "Most observations only have one generic reference range. Systems MAY choose to restrict to only supplying the relevant reference range based on knowledge about the patient (e.g., specific to the patient's age, gender, weight and other factors), but this may not be possible or appropriate. Whenever more than one reference range is supplied, the differences between them SHOULD be provided in the reference range and/or age properties.",
         "requirements": "Knowing what values are considered \"normal\" can help evaluate the significance of a particular result. Need to be able to provide multiple reference ranges for different contexts.",
         "min": 0,
-        "max": "1",
+        "max": "0",
         "mapping": [
           {
             "identity": "v2",
@@ -10715,7 +11380,7 @@
         "comment": "This SHOULD be populated if there is more than one range.  If this element is not present then the normal population is assumed.",
         "requirements": "Need to be able to identify the target population for proper interpretation.",
         "min": 0,
-        "max": "1",
+        "max": "*",
         "type": [
           {
             "code": "CodeableConcept"
@@ -10747,12 +11412,7 @@
             "identity": "rim",
             "map": "interpretationCode"
           }
-        ],
-        "base": {
-          "path": "Observation.component.referenceRange.appliesTo",
-          "min": 0,
-          "max": "*"
-        }
+        ]
       },
       {
         "id": "Observation.component:breastrad-CystTypes.referenceRange.age",
@@ -11386,7 +12046,7 @@
         "binding": {
           "strength": "required",
           "valueSetReference": {
-            "reference": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/DepthVs"
+            "reference": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/DepthVS"
           }
         }
       },
@@ -11481,7 +12141,7 @@
         "comment": "Most observations only have one generic reference range. Systems MAY choose to restrict to only supplying the relevant reference range based on knowledge about the patient (e.g., specific to the patient's age, gender, weight and other factors), but this may not be possible or appropriate. Whenever more than one reference range is supplied, the differences between them SHOULD be provided in the reference range and/or age properties.",
         "requirements": "Knowing what values are considered \"normal\" can help evaluate the significance of a particular result. Need to be able to provide multiple reference ranges for different contexts.",
         "min": 0,
-        "max": "1",
+        "max": "0",
         "mapping": [
           {
             "identity": "v2",
@@ -11695,7 +12355,7 @@
         "comment": "This SHOULD be populated if there is more than one range.  If this element is not present then the normal population is assumed.",
         "requirements": "Need to be able to identify the target population for proper interpretation.",
         "min": 0,
-        "max": "1",
+        "max": "*",
         "type": [
           {
             "code": "CodeableConcept"
@@ -11727,12 +12387,7 @@
             "identity": "rim",
             "map": "interpretationCode"
           }
-        ],
-        "base": {
-          "path": "Observation.component.referenceRange.appliesTo",
-          "min": 0,
-          "max": "*"
-        }
+        ]
       },
       {
         "id": "Observation.component:breastrad-Depth.referenceRange.age",
@@ -12366,7 +13021,7 @@
         "binding": {
           "strength": "required",
           "valueSetReference": {
-            "reference": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/MarginVs"
+            "reference": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/MarginVS"
           }
         }
       },
@@ -12461,7 +13116,7 @@
         "comment": "Most observations only have one generic reference range. Systems MAY choose to restrict to only supplying the relevant reference range based on knowledge about the patient (e.g., specific to the patient's age, gender, weight and other factors), but this may not be possible or appropriate. Whenever more than one reference range is supplied, the differences between them SHOULD be provided in the reference range and/or age properties.",
         "requirements": "Knowing what values are considered \"normal\" can help evaluate the significance of a particular result. Need to be able to provide multiple reference ranges for different contexts.",
         "min": 0,
-        "max": "1",
+        "max": "0",
         "mapping": [
           {
             "identity": "v2",
@@ -12675,7 +13330,7 @@
         "comment": "This SHOULD be populated if there is more than one range.  If this element is not present then the normal population is assumed.",
         "requirements": "Need to be able to identify the target population for proper interpretation.",
         "min": 0,
-        "max": "1",
+        "max": "*",
         "type": [
           {
             "code": "CodeableConcept"
@@ -12707,12 +13362,7 @@
             "identity": "rim",
             "map": "interpretationCode"
           }
-        ],
-        "base": {
-          "path": "Observation.component.referenceRange.appliesTo",
-          "min": 0,
-          "max": "*"
-        }
+        ]
       },
       {
         "id": "Observation.component:breastrad-Margin.referenceRange.age",
@@ -13346,7 +13996,7 @@
         "binding": {
           "strength": "required",
           "valueSetReference": {
-            "reference": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/MassTypesVs"
+            "reference": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/MassTypesVS"
           }
         }
       },
@@ -13441,7 +14091,7 @@
         "comment": "Most observations only have one generic reference range. Systems MAY choose to restrict to only supplying the relevant reference range based on knowledge about the patient (e.g., specific to the patient's age, gender, weight and other factors), but this may not be possible or appropriate. Whenever more than one reference range is supplied, the differences between them SHOULD be provided in the reference range and/or age properties.",
         "requirements": "Knowing what values are considered \"normal\" can help evaluate the significance of a particular result. Need to be able to provide multiple reference ranges for different contexts.",
         "min": 0,
-        "max": "1",
+        "max": "0",
         "mapping": [
           {
             "identity": "v2",
@@ -13655,7 +14305,7 @@
         "comment": "This SHOULD be populated if there is more than one range.  If this element is not present then the normal population is assumed.",
         "requirements": "Need to be able to identify the target population for proper interpretation.",
         "min": 0,
-        "max": "1",
+        "max": "*",
         "type": [
           {
             "code": "CodeableConcept"
@@ -13687,12 +14337,7 @@
             "identity": "rim",
             "map": "interpretationCode"
           }
-        ],
-        "base": {
-          "path": "Observation.component.referenceRange.appliesTo",
-          "min": 0,
-          "max": "*"
-        }
+        ]
       },
       {
         "id": "Observation.component:breastrad-MassTypes.referenceRange.age",
@@ -14326,7 +14971,7 @@
         "binding": {
           "strength": "required",
           "valueSetReference": {
-            "reference": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/NodeTypesVs"
+            "reference": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/NodeTypesVS"
           }
         }
       },
@@ -14421,7 +15066,7 @@
         "comment": "Most observations only have one generic reference range. Systems MAY choose to restrict to only supplying the relevant reference range based on knowledge about the patient (e.g., specific to the patient's age, gender, weight and other factors), but this may not be possible or appropriate. Whenever more than one reference range is supplied, the differences between them SHOULD be provided in the reference range and/or age properties.",
         "requirements": "Knowing what values are considered \"normal\" can help evaluate the significance of a particular result. Need to be able to provide multiple reference ranges for different contexts.",
         "min": 0,
-        "max": "1",
+        "max": "0",
         "mapping": [
           {
             "identity": "v2",
@@ -14635,7 +15280,7 @@
         "comment": "This SHOULD be populated if there is more than one range.  If this element is not present then the normal population is assumed.",
         "requirements": "Need to be able to identify the target population for proper interpretation.",
         "min": 0,
-        "max": "1",
+        "max": "*",
         "type": [
           {
             "code": "CodeableConcept"
@@ -14667,12 +15312,7 @@
             "identity": "rim",
             "map": "interpretationCode"
           }
-        ],
-        "base": {
-          "path": "Observation.component.referenceRange.appliesTo",
-          "min": 0,
-          "max": "*"
-        }
+        ]
       },
       {
         "id": "Observation.component:breastrad-NodeTypes.referenceRange.age",
@@ -15306,7 +15946,7 @@
         "binding": {
           "strength": "required",
           "valueSetReference": {
-            "reference": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/ShapeVs"
+            "reference": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/ShapeVS"
           }
         }
       },
@@ -15401,7 +16041,7 @@
         "comment": "Most observations only have one generic reference range. Systems MAY choose to restrict to only supplying the relevant reference range based on knowledge about the patient (e.g., specific to the patient's age, gender, weight and other factors), but this may not be possible or appropriate. Whenever more than one reference range is supplied, the differences between them SHOULD be provided in the reference range and/or age properties.",
         "requirements": "Knowing what values are considered \"normal\" can help evaluate the significance of a particular result. Need to be able to provide multiple reference ranges for different contexts.",
         "min": 0,
-        "max": "1",
+        "max": "0",
         "mapping": [
           {
             "identity": "v2",
@@ -15615,7 +16255,7 @@
         "comment": "This SHOULD be populated if there is more than one range.  If this element is not present then the normal population is assumed.",
         "requirements": "Need to be able to identify the target population for proper interpretation.",
         "min": 0,
-        "max": "1",
+        "max": "*",
         "type": [
           {
             "code": "CodeableConcept"
@@ -15647,12 +16287,7 @@
             "identity": "rim",
             "map": "interpretationCode"
           }
-        ],
-        "base": {
-          "path": "Observation.component.referenceRange.appliesTo",
-          "min": 0,
-          "max": "*"
-        }
+        ]
       },
       {
         "id": "Observation.component:breastrad-Shape.referenceRange.age",
@@ -16286,7 +16921,7 @@
         "binding": {
           "strength": "required",
           "valueSetReference": {
-            "reference": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/VascularityVs"
+            "reference": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/VascularityVS"
           }
         }
       },
@@ -16381,7 +17016,7 @@
         "comment": "Most observations only have one generic reference range. Systems MAY choose to restrict to only supplying the relevant reference range based on knowledge about the patient (e.g., specific to the patient's age, gender, weight and other factors), but this may not be possible or appropriate. Whenever more than one reference range is supplied, the differences between them SHOULD be provided in the reference range and/or age properties.",
         "requirements": "Knowing what values are considered \"normal\" can help evaluate the significance of a particular result. Need to be able to provide multiple reference ranges for different contexts.",
         "min": 0,
-        "max": "1",
+        "max": "0",
         "mapping": [
           {
             "identity": "v2",
@@ -16595,7 +17230,7 @@
         "comment": "This SHOULD be populated if there is more than one range.  If this element is not present then the normal population is assumed.",
         "requirements": "Need to be able to identify the target population for proper interpretation.",
         "min": 0,
-        "max": "1",
+        "max": "*",
         "type": [
           {
             "code": "CodeableConcept"
@@ -16627,12 +17262,7 @@
             "identity": "rim",
             "map": "interpretationCode"
           }
-        ],
-        "base": {
-          "path": "Observation.component.referenceRange.appliesTo",
-          "min": 0,
-          "max": "*"
-        }
+        ]
       },
       {
         "id": "Observation.component:breastrad-Vascularity.referenceRange.age",
@@ -17266,7 +17896,7 @@
         "binding": {
           "strength": "required",
           "valueSetReference": {
-            "reference": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/WallVs"
+            "reference": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/WallVS"
           }
         }
       },
@@ -17361,7 +17991,7 @@
         "comment": "Most observations only have one generic reference range. Systems MAY choose to restrict to only supplying the relevant reference range based on knowledge about the patient (e.g., specific to the patient's age, gender, weight and other factors), but this may not be possible or appropriate. Whenever more than one reference range is supplied, the differences between them SHOULD be provided in the reference range and/or age properties.",
         "requirements": "Knowing what values are considered \"normal\" can help evaluate the significance of a particular result. Need to be able to provide multiple reference ranges for different contexts.",
         "min": 0,
-        "max": "1",
+        "max": "0",
         "mapping": [
           {
             "identity": "v2",
@@ -17575,7 +18205,7 @@
         "comment": "This SHOULD be populated if there is more than one range.  If this element is not present then the normal population is assumed.",
         "requirements": "Need to be able to identify the target population for proper interpretation.",
         "min": 0,
-        "max": "1",
+        "max": "*",
         "type": [
           {
             "code": "CodeableConcept"
@@ -17607,12 +18237,7 @@
             "identity": "rim",
             "map": "interpretationCode"
           }
-        ],
-        "base": {
-          "path": "Observation.component.referenceRange.appliesTo",
-          "min": 0,
-          "max": "*"
-        }
+        ]
       },
       {
         "id": "Observation.component:breastrad-Wall.referenceRange.age",
@@ -19734,19 +20359,15 @@
         "type": [
           {
             "code": "Reference",
-            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-MedicationRequest"
+            "targetProfile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-medicationrequest"
           },
           {
             "code": "Reference",
-            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-ServiceRequest"
+            "targetProfile": "http://hl7.org/fhir/StructureDefinition/ProcedureRequest"
           },
           {
             "code": "Reference",
-            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-ProcedureRequest"
-          },
-          {
-            "code": "Reference",
-            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-ReferralRequest"
+            "targetProfile": "http://hl7.org/fhir/StructureDefinition/ReferralRequest"
           }
         ]
       },
@@ -19833,19 +20454,19 @@
         "type": [
           {
             "code": "Reference",
-            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Patient"
+            "targetProfile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
           },
           {
             "code": "Reference",
-            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Group"
+            "targetProfile": "http://hl7.org/fhir/StructureDefinition/Group"
           },
           {
             "code": "Reference",
-            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Device"
+            "targetProfile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-device"
           },
           {
             "code": "Reference",
-            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Location"
+            "targetProfile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-location"
           }
         ],
         "short": "The subject of an observation",
@@ -19857,7 +20478,7 @@
         "type": [
           {
             "code": "Reference",
-            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Encounter"
+            "targetProfile": "http://hl7.org/fhir/StructureDefinition/Encounter"
           }
         ]
       },
@@ -19867,19 +20488,19 @@
         "type": [
           {
             "code": "Reference",
-            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Practitioner"
+            "targetProfile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner"
           },
           {
             "code": "Reference",
-            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Organization"
+            "targetProfile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
           },
           {
             "code": "Reference",
-            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Patient"
+            "targetProfile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
           },
           {
             "code": "Reference",
-            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-RelatedPerson"
+            "targetProfile": "http://hl7.org/fhir/StructureDefinition/RelatedPerson"
           }
         ]
       },
@@ -19951,7 +20572,7 @@
         "type": [
           {
             "code": "Extension",
-            "profile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/shr-core-Laterality-extension"
+            "profile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-Laterality-extension"
           }
         ],
         "sliceName": "laterality"
@@ -19970,7 +20591,7 @@
         "type": [
           {
             "code": "Extension",
-            "profile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/shr-core-AnatomicalOrientation-extension"
+            "profile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-AnatomicalOrientation-extension"
           }
         ],
         "sliceName": "anatomicalorientation"
@@ -19989,7 +20610,7 @@
         "type": [
           {
             "code": "Extension",
-            "profile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/shr-core-RelationToLandmark-extension"
+            "profile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-RelationToLandmark-extension"
           }
         ],
         "sliceName": "relationtolandmark"
@@ -20099,6 +20720,20 @@
         "fixedCode": "181139003"
       },
       {
+        "id": "Observation.bodySite.extension:relationtolandmark.extension:landmarktobodylocationdirection",
+        "path": "Observation.bodySite.extension.extension"
+      },
+      {
+        "id": "Observation.bodySite.extension:relationtolandmark.extension:landmarktobodylocationdirection.valueCodeableConcept",
+        "path": "Observation.bodySite.extension.extension.valueCodeableConcept",
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/us/breast-radiology/obf/datatype/vs/ClockFaceDirectionVS"
+          }
+        }
+      },
+      {
         "id": "Observation.bodySite.extension:relationtolandmark.extension:landmarktobodylocationdistance",
         "path": "Observation.bodySite.extension.extension"
       },
@@ -20167,13 +20802,7 @@
           "path": "Observation.specimen",
           "min": 0,
           "max": "1"
-        },
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Specimen"
-          }
-        ]
+        }
       },
       {
         "id": "Observation.device",
@@ -20181,7 +20810,7 @@
         "type": [
           {
             "code": "Reference",
-            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Device"
+            "targetProfile": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-device"
           }
         ]
       },
@@ -20262,6 +20891,70 @@
         }
       },
       {
+        "id": "Observation.component.value[x]",
+        "path": "Observation.component.value[x]",
+        "type": [
+          {
+            "code": "Quantity"
+          },
+          {
+            "code": "CodeableConcept"
+          },
+          {
+            "code": "string"
+          },
+          {
+            "code": "Range"
+          },
+          {
+            "code": "Ratio"
+          },
+          {
+            "code": "SampledData"
+          },
+          {
+            "code": "time"
+          },
+          {
+            "code": "dateTime"
+          },
+          {
+            "code": "Period"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component.dataAbsentReason",
+        "path": "Observation.component.dataAbsentReason",
+        "binding": {
+          "strength": "extensible",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/data-absent-reason"
+          }
+        }
+      },
+      {
+        "id": "Observation.component.referenceRange",
+        "path": "Observation.component.referenceRange"
+      },
+      {
+        "id": "Observation.component.referenceRange.appliesTo",
+        "path": "Observation.component.referenceRange.appliesTo",
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "ObservationRangeType"
+            }
+          ],
+          "strength": "extensible",
+          "description": "Codes identifying the population the reference range applies to.",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/referencerange-appliesto"
+          }
+        }
+      },
+      {
         "id": "Observation.component:breastrad-AbnormalityDensity",
         "path": "Observation.component",
         "sliceName": "breastrad-AbnormalityDensity",
@@ -20327,7 +21020,7 @@
         "binding": {
           "strength": "required",
           "valueSetReference": {
-            "reference": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/AbnormalityDensityVs"
+            "reference": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/AbnormalityDensityVS"
           }
         },
         "type": [
@@ -20350,7 +21043,7 @@
         "id": "Observation.component:breastrad-AbnormalityDensity.referenceRange",
         "path": "Observation.component.referenceRange",
         "min": 0,
-        "max": "1",
+        "max": "0",
         "base": {
           "path": "Observation.component.referenceRange",
           "min": 0,
@@ -20360,13 +21053,6 @@
       {
         "id": "Observation.component:breastrad-AbnormalityDensity.referenceRange.appliesTo",
         "path": "Observation.component.referenceRange.appliesTo",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Observation.component.referenceRange.appliesTo",
-          "min": 0,
-          "max": "*"
-        },
         "binding": {
           "extension": [
             {
@@ -20447,7 +21133,7 @@
         "binding": {
           "strength": "required",
           "valueSetReference": {
-            "reference": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/AbnormalityTypeVs"
+            "reference": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/AbnormalityTypeVS"
           }
         },
         "type": [
@@ -20470,7 +21156,7 @@
         "id": "Observation.component:breastrad-AbnormalityType.referenceRange",
         "path": "Observation.component.referenceRange",
         "min": 0,
-        "max": "1",
+        "max": "0",
         "base": {
           "path": "Observation.component.referenceRange",
           "min": 0,
@@ -20480,13 +21166,6 @@
       {
         "id": "Observation.component:breastrad-AbnormalityType.referenceRange.appliesTo",
         "path": "Observation.component.referenceRange.appliesTo",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Observation.component.referenceRange.appliesTo",
-          "min": 0,
-          "max": "*"
-        },
         "binding": {
           "extension": [
             {
@@ -20567,7 +21246,7 @@
         "binding": {
           "strength": "required",
           "valueSetReference": {
-            "reference": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/AsymmetryTypesVs"
+            "reference": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/AsymmetryTypesVS"
           }
         },
         "type": [
@@ -20590,7 +21269,7 @@
         "id": "Observation.component:breastrad-AsymmetryTypes.referenceRange",
         "path": "Observation.component.referenceRange",
         "min": 0,
-        "max": "1",
+        "max": "0",
         "base": {
           "path": "Observation.component.referenceRange",
           "min": 0,
@@ -20600,13 +21279,6 @@
       {
         "id": "Observation.component:breastrad-AsymmetryTypes.referenceRange.appliesTo",
         "path": "Observation.component.referenceRange.appliesTo",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Observation.component.referenceRange.appliesTo",
-          "min": 0,
-          "max": "*"
-        },
         "binding": {
           "extension": [
             {
@@ -20687,7 +21359,7 @@
         "binding": {
           "strength": "required",
           "valueSetReference": {
-            "reference": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/BiRadCodeVs"
+            "reference": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/BiRadCodeVS"
           }
         },
         "type": [
@@ -20710,7 +21382,7 @@
         "id": "Observation.component:breastrad-BiRadCode.referenceRange",
         "path": "Observation.component.referenceRange",
         "min": 0,
-        "max": "1",
+        "max": "0",
         "base": {
           "path": "Observation.component.referenceRange",
           "min": 0,
@@ -20720,13 +21392,6 @@
       {
         "id": "Observation.component:breastrad-BiRadCode.referenceRange.appliesTo",
         "path": "Observation.component.referenceRange.appliesTo",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Observation.component.referenceRange.appliesTo",
-          "min": 0,
-          "max": "*"
-        },
         "binding": {
           "extension": [
             {
@@ -20807,7 +21472,7 @@
         "binding": {
           "strength": "required",
           "valueSetReference": {
-            "reference": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/ChangeVs"
+            "reference": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/ChangeVS"
           }
         },
         "type": [
@@ -20830,7 +21495,7 @@
         "id": "Observation.component:breastrad-Change.referenceRange",
         "path": "Observation.component.referenceRange",
         "min": 0,
-        "max": "1",
+        "max": "0",
         "base": {
           "path": "Observation.component.referenceRange",
           "min": 0,
@@ -20840,13 +21505,6 @@
       {
         "id": "Observation.component:breastrad-Change.referenceRange.appliesTo",
         "path": "Observation.component.referenceRange.appliesTo",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Observation.component.referenceRange.appliesTo",
-          "min": 0,
-          "max": "*"
-        },
         "binding": {
           "extension": [
             {
@@ -20927,7 +21585,7 @@
         "binding": {
           "strength": "required",
           "valueSetReference": {
-            "reference": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/CystTypesVs"
+            "reference": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/CystTypesVS"
           }
         },
         "type": [
@@ -20950,7 +21608,7 @@
         "id": "Observation.component:breastrad-CystTypes.referenceRange",
         "path": "Observation.component.referenceRange",
         "min": 0,
-        "max": "1",
+        "max": "0",
         "base": {
           "path": "Observation.component.referenceRange",
           "min": 0,
@@ -20960,13 +21618,6 @@
       {
         "id": "Observation.component:breastrad-CystTypes.referenceRange.appliesTo",
         "path": "Observation.component.referenceRange.appliesTo",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Observation.component.referenceRange.appliesTo",
-          "min": 0,
-          "max": "*"
-        },
         "binding": {
           "extension": [
             {
@@ -21047,7 +21698,7 @@
         "binding": {
           "strength": "required",
           "valueSetReference": {
-            "reference": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/DepthVs"
+            "reference": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/DepthVS"
           }
         },
         "type": [
@@ -21070,7 +21721,7 @@
         "id": "Observation.component:breastrad-Depth.referenceRange",
         "path": "Observation.component.referenceRange",
         "min": 0,
-        "max": "1",
+        "max": "0",
         "base": {
           "path": "Observation.component.referenceRange",
           "min": 0,
@@ -21080,13 +21731,6 @@
       {
         "id": "Observation.component:breastrad-Depth.referenceRange.appliesTo",
         "path": "Observation.component.referenceRange.appliesTo",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Observation.component.referenceRange.appliesTo",
-          "min": 0,
-          "max": "*"
-        },
         "binding": {
           "extension": [
             {
@@ -21167,7 +21811,7 @@
         "binding": {
           "strength": "required",
           "valueSetReference": {
-            "reference": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/MarginVs"
+            "reference": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/MarginVS"
           }
         },
         "type": [
@@ -21190,7 +21834,7 @@
         "id": "Observation.component:breastrad-Margin.referenceRange",
         "path": "Observation.component.referenceRange",
         "min": 0,
-        "max": "1",
+        "max": "0",
         "base": {
           "path": "Observation.component.referenceRange",
           "min": 0,
@@ -21200,13 +21844,6 @@
       {
         "id": "Observation.component:breastrad-Margin.referenceRange.appliesTo",
         "path": "Observation.component.referenceRange.appliesTo",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Observation.component.referenceRange.appliesTo",
-          "min": 0,
-          "max": "*"
-        },
         "binding": {
           "extension": [
             {
@@ -21287,7 +21924,7 @@
         "binding": {
           "strength": "required",
           "valueSetReference": {
-            "reference": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/MassTypesVs"
+            "reference": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/MassTypesVS"
           }
         },
         "type": [
@@ -21310,7 +21947,7 @@
         "id": "Observation.component:breastrad-MassTypes.referenceRange",
         "path": "Observation.component.referenceRange",
         "min": 0,
-        "max": "1",
+        "max": "0",
         "base": {
           "path": "Observation.component.referenceRange",
           "min": 0,
@@ -21320,13 +21957,6 @@
       {
         "id": "Observation.component:breastrad-MassTypes.referenceRange.appliesTo",
         "path": "Observation.component.referenceRange.appliesTo",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Observation.component.referenceRange.appliesTo",
-          "min": 0,
-          "max": "*"
-        },
         "binding": {
           "extension": [
             {
@@ -21407,7 +22037,7 @@
         "binding": {
           "strength": "required",
           "valueSetReference": {
-            "reference": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/NodeTypesVs"
+            "reference": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/NodeTypesVS"
           }
         },
         "type": [
@@ -21430,7 +22060,7 @@
         "id": "Observation.component:breastrad-NodeTypes.referenceRange",
         "path": "Observation.component.referenceRange",
         "min": 0,
-        "max": "1",
+        "max": "0",
         "base": {
           "path": "Observation.component.referenceRange",
           "min": 0,
@@ -21440,13 +22070,6 @@
       {
         "id": "Observation.component:breastrad-NodeTypes.referenceRange.appliesTo",
         "path": "Observation.component.referenceRange.appliesTo",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Observation.component.referenceRange.appliesTo",
-          "min": 0,
-          "max": "*"
-        },
         "binding": {
           "extension": [
             {
@@ -21527,7 +22150,7 @@
         "binding": {
           "strength": "required",
           "valueSetReference": {
-            "reference": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/ShapeVs"
+            "reference": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/ShapeVS"
           }
         },
         "type": [
@@ -21550,7 +22173,7 @@
         "id": "Observation.component:breastrad-Shape.referenceRange",
         "path": "Observation.component.referenceRange",
         "min": 0,
-        "max": "1",
+        "max": "0",
         "base": {
           "path": "Observation.component.referenceRange",
           "min": 0,
@@ -21560,13 +22183,6 @@
       {
         "id": "Observation.component:breastrad-Shape.referenceRange.appliesTo",
         "path": "Observation.component.referenceRange.appliesTo",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Observation.component.referenceRange.appliesTo",
-          "min": 0,
-          "max": "*"
-        },
         "binding": {
           "extension": [
             {
@@ -21647,7 +22263,7 @@
         "binding": {
           "strength": "required",
           "valueSetReference": {
-            "reference": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/VascularityVs"
+            "reference": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/VascularityVS"
           }
         },
         "type": [
@@ -21670,7 +22286,7 @@
         "id": "Observation.component:breastrad-Vascularity.referenceRange",
         "path": "Observation.component.referenceRange",
         "min": 0,
-        "max": "1",
+        "max": "0",
         "base": {
           "path": "Observation.component.referenceRange",
           "min": 0,
@@ -21680,13 +22296,6 @@
       {
         "id": "Observation.component:breastrad-Vascularity.referenceRange.appliesTo",
         "path": "Observation.component.referenceRange.appliesTo",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Observation.component.referenceRange.appliesTo",
-          "min": 0,
-          "max": "*"
-        },
         "binding": {
           "extension": [
             {
@@ -21767,7 +22376,7 @@
         "binding": {
           "strength": "required",
           "valueSetReference": {
-            "reference": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/WallVs"
+            "reference": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/WallVS"
           }
         },
         "type": [
@@ -21790,7 +22399,7 @@
         "id": "Observation.component:breastrad-Wall.referenceRange",
         "path": "Observation.component.referenceRange",
         "min": 0,
-        "max": "1",
+        "max": "0",
         "base": {
           "path": "Observation.component.referenceRange",
           "min": 0,
@@ -21800,13 +22409,6 @@
       {
         "id": "Observation.component:breastrad-Wall.referenceRange.appliesTo",
         "path": "Observation.component.referenceRange.appliesTo",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Observation.component.referenceRange.appliesTo",
-          "min": 0,
-          "max": "*"
-        },
         "binding": {
           "extension": [
             {

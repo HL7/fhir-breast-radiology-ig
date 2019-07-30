@@ -1,0 +1,128 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "obf-datatype-Comparator-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>Comparator Logical Model</b></p>\n  <p>A code indicated if the value represents an upper or lower bound</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-Comparator-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/breast-radiology",
+      "value": "obf.datatype.Comparator"
+    }
+  ],
+  "name": "Comparator",
+  "title": "obf-datatype-Comparator",
+  "status": "draft",
+  "date": "2019-07-30",
+  "publisher": "Hl7",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://BreastRadReport.com"
+        }
+      ]
+    }
+  ],
+  "description": "A code indicated if the value represents an upper or lower bound",
+  "kind": "logical",
+  "abstract": false,
+  "type": "obf-datatype-Comparator-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "obf-datatype-Comparator-model",
+        "path": "obf-datatype-Comparator-model",
+        "definition": "A code indicated if the value represents an upper or lower bound",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-datatype-Comparator-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-datatype-Comparator-model.value",
+        "path": "obf-datatype-Comparator-model.value",
+        "short": "Concept representing a code indicated if the value represents an upper or lower bound",
+        "definition": "Concept representing a code indicated if the value represents an upper or lower bound",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-datatype-Comparator-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/quantity-comparator"
+          }
+        }
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "obf-datatype-Comparator-model",
+        "path": "obf-datatype-Comparator-model",
+        "definition": "A code indicated if the value represents an upper or lower bound",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-datatype-Comparator-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-datatype-Comparator-model.value",
+        "path": "obf-datatype-Comparator-model.value",
+        "short": "Concept representing a code indicated if the value represents an upper or lower bound",
+        "definition": "Concept representing a code indicated if the value represents an upper or lower bound",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-datatype-Comparator-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/quantity-comparator"
+          }
+        }
+      }
+    ]
+  }
+}

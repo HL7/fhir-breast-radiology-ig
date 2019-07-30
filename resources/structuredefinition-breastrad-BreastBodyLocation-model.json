@@ -15,7 +15,7 @@
   "name": "BreastBodyLocation",
   "title": "breastrad-BreastBodyLocation",
   "status": "draft",
-  "date": "2019-07-29",
+  "date": "2019-07-30",
   "publisher": "Hl7",
   "contact": [
     {
@@ -363,7 +363,7 @@
         "binding": {
           "strength": "extensible",
           "valueSetReference": {
-            "reference": "http://hl7.org/fhir/us/breast-radiology/shr/core/vs/AnatomicalOrientationVS"
+            "reference": "http://hl7.org/fhir/us/breast-radiology/obf/datatype/vs/AnatomicalOrientationVS"
           }
         }
       },
@@ -381,7 +381,7 @@
         },
         "type": [
           {
-            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/shr-core-RelationToLandmark-model"
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-RelationToLandmark-model"
           }
         ],
         "mustSupport": false,
@@ -665,7 +665,7 @@
         },
         "type": [
           {
-            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/shr-core-LandmarkLocation-model"
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-LandmarkLocation-model"
           }
         ],
         "mustSupport": false,
@@ -743,33 +743,36 @@
         "binding": {
           "strength": "extensible",
           "valueSetReference": {
-            "reference": "http://hl7.org/fhir/us/breast-radiology/shr/core/vs/AnatomicalOrientationVS"
+            "reference": "http://hl7.org/fhir/us/breast-radiology/obf/datatype/vs/AnatomicalOrientationVS"
           }
         }
       },
       {
-        "id": "breastrad-BreastBodyLocation-model.relationToLandmark.landmarkToBodyLocationDirection[x]",
-        "path": "breastrad-BreastBodyLocation-model.relationToLandmark.landmarkToBodyLocationDirection[x]",
+        "id": "breastrad-BreastBodyLocation-model.relationToLandmark.landmarkToBodyLocationDirection",
+        "path": "breastrad-BreastBodyLocation-model.relationToLandmark.landmarkToBodyLocationDirection",
         "short": "The direction from the landmark to the body location of interest, given as a clockface direction or anatomical direction.",
         "definition": "The direction from the landmark to the body location of interest, given as a clockface direction or anatomical direction.",
         "min": 0,
         "max": "1",
         "base": {
-          "path": "breastrad-BreastBodyLocation-model.relationToLandmark.landmarkToBodyLocationDirection[x]",
+          "path": "breastrad-BreastBodyLocation-model.relationToLandmark.landmarkToBodyLocationDirection",
           "min": 0,
           "max": "1"
         },
         "type": [
           {
-            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/shr-core-ClockFaceDirection-model"
-          },
-          {
-            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/shr-core-AnatomicalDirection-model"
+            "code": "Coding"
           }
         ],
         "mustSupport": false,
         "isModifier": false,
-        "isSummary": false
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/us/breast-radiology/obf/datatype/vs/ClockFaceDirectionVS"
+          }
+        }
       },
       {
         "id": "breastrad-BreastBodyLocation-model.relationToLandmark.landmarkToBodyLocationDistance",
@@ -785,7 +788,7 @@
         },
         "type": [
           {
-            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/shr-core-Quantity-model"
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-Quantity-model"
           }
         ],
         "mustSupport": false,
@@ -863,19 +866,19 @@
         "binding": {
           "strength": "required",
           "valueSetReference": {
-            "reference": "http://hl7.org/fhir/us/breast-radiology/shr/core/vs/UnitsOfLengthVS"
+            "reference": "http://hl7.org/fhir/us/breast-radiology/obf/datatype/vs/UnitsOfLengthVS"
           }
         }
       },
       {
-        "id": "breastrad-BreastBodyLocation-model.breastdepth",
-        "path": "breastrad-BreastBodyLocation-model.breastdepth",
-        "short": "BreastDepth",
-        "definition": "BreastDepth",
+        "id": "breastrad-BreastBodyLocation-model.breastDepth",
+        "path": "breastrad-BreastBodyLocation-model.breastDepth",
+        "short": "Depth in breast of abnormality.",
+        "definition": "Depth in breast of abnormality.",
         "min": 0,
         "max": "1",
         "base": {
-          "path": "breastrad-BreastBodyLocation-model.breastdepth",
+          "path": "breastrad-BreastBodyLocation-model.breastDepth",
           "min": 0,
           "max": "1"
         },
@@ -890,7 +893,7 @@
         "binding": {
           "strength": "required",
           "valueSetReference": {
-            "reference": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/BreastdepthVs"
+            "reference": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/BreastDepthVS"
           }
         }
       }
@@ -1226,7 +1229,7 @@
         "binding": {
           "strength": "extensible",
           "valueSetReference": {
-            "reference": "http://hl7.org/fhir/us/breast-radiology/shr/core/vs/AnatomicalOrientationVS"
+            "reference": "http://hl7.org/fhir/us/breast-radiology/obf/datatype/vs/AnatomicalOrientationVS"
           }
         }
       },
@@ -1244,7 +1247,7 @@
         },
         "type": [
           {
-            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/shr-core-RelationToLandmark-model"
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-RelationToLandmark-model"
           }
         ],
         "mustSupport": false,
@@ -1528,7 +1531,7 @@
         },
         "type": [
           {
-            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/shr-core-LandmarkLocation-model"
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-LandmarkLocation-model"
           }
         ],
         "mustSupport": false,
@@ -1606,33 +1609,36 @@
         "binding": {
           "strength": "extensible",
           "valueSetReference": {
-            "reference": "http://hl7.org/fhir/us/breast-radiology/shr/core/vs/AnatomicalOrientationVS"
+            "reference": "http://hl7.org/fhir/us/breast-radiology/obf/datatype/vs/AnatomicalOrientationVS"
           }
         }
       },
       {
-        "id": "breastrad-BreastBodyLocation-model.relationToLandmark.landmarkToBodyLocationDirection[x]",
-        "path": "breastrad-BreastBodyLocation-model.relationToLandmark.landmarkToBodyLocationDirection[x]",
+        "id": "breastrad-BreastBodyLocation-model.relationToLandmark.landmarkToBodyLocationDirection",
+        "path": "breastrad-BreastBodyLocation-model.relationToLandmark.landmarkToBodyLocationDirection",
         "short": "The direction from the landmark to the body location of interest, given as a clockface direction or anatomical direction.",
         "definition": "The direction from the landmark to the body location of interest, given as a clockface direction or anatomical direction.",
         "min": 0,
         "max": "1",
         "base": {
-          "path": "breastrad-BreastBodyLocation-model.relationToLandmark.landmarkToBodyLocationDirection[x]",
+          "path": "breastrad-BreastBodyLocation-model.relationToLandmark.landmarkToBodyLocationDirection",
           "min": 0,
           "max": "1"
         },
         "type": [
           {
-            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/shr-core-ClockFaceDirection-model"
-          },
-          {
-            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/shr-core-AnatomicalDirection-model"
+            "code": "Coding"
           }
         ],
         "mustSupport": false,
         "isModifier": false,
-        "isSummary": false
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/us/breast-radiology/obf/datatype/vs/ClockFaceDirectionVS"
+          }
+        }
       },
       {
         "id": "breastrad-BreastBodyLocation-model.relationToLandmark.landmarkToBodyLocationDistance",
@@ -1648,7 +1654,7 @@
         },
         "type": [
           {
-            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/shr-core-Quantity-model"
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-Quantity-model"
           }
         ],
         "mustSupport": false,
@@ -1726,19 +1732,19 @@
         "binding": {
           "strength": "required",
           "valueSetReference": {
-            "reference": "http://hl7.org/fhir/us/breast-radiology/shr/core/vs/UnitsOfLengthVS"
+            "reference": "http://hl7.org/fhir/us/breast-radiology/obf/datatype/vs/UnitsOfLengthVS"
           }
         }
       },
       {
-        "id": "breastrad-BreastBodyLocation-model.breastdepth",
-        "path": "breastrad-BreastBodyLocation-model.breastdepth",
-        "short": "BreastDepth",
-        "definition": "BreastDepth",
+        "id": "breastrad-BreastBodyLocation-model.breastDepth",
+        "path": "breastrad-BreastBodyLocation-model.breastDepth",
+        "short": "Depth in breast of abnormality.",
+        "definition": "Depth in breast of abnormality.",
         "min": 0,
         "max": "1",
         "base": {
-          "path": "breastrad-BreastBodyLocation-model.breastdepth",
+          "path": "breastrad-BreastBodyLocation-model.breastDepth",
           "min": 0,
           "max": "1"
         },
@@ -1753,7 +1759,7 @@
         "binding": {
           "strength": "required",
           "valueSetReference": {
-            "reference": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/BreastdepthVs"
+            "reference": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/BreastDepthVS"
           }
         }
       }
