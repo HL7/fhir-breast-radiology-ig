@@ -7,8 +7,8 @@
   },
   "url": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-AccessionIdentifier",
   "name": "AccessionIdentifier",
-  "status": "draft",
-  "date": "2019-07-30",
+  "status": "active",
+  "date": "2019-07-31",
   "publisher": "Hl7",
   "contact": [
     {
@@ -22,7 +22,7 @@
   ],
   "description": "Identifier assigned by the lab",
   "purpose": "Need to be able to identify things with confidence and be sure that the identification is not subject to misinterpretation.",
-  "fhirVersion": "3.0.1",
+  "fhirVersion": "4.0.0",
   "mapping": [
     {
       "identity": "v2",
@@ -49,11 +49,26 @@
     "element": [
       {
         "id": "Identifier",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
         "path": "Identifier",
         "short": "obf-AccessionIdentifier",
         "definition": "Identifier assigned by the lab",
         "min": 0,
         "max": "*",
+        "base": {
+          "path": "Identifier",
+          "min": 0,
+          "max": "*"
+        },
         "condition": [
           "ele-1"
         ],
@@ -62,11 +77,12 @@
             "key": "ele-1",
             "severity": "error",
             "human": "All FHIR elements must have a @value or children",
-            "expression": "hasValue() | (children().count() > id.count())",
+            "expression": "hasValue() or (children().count() > id.count())",
             "xpath": "@value|f:*|h:div",
             "source": "Element"
           }
         ],
+        "isModifier": false,
         "mapping": [
           {
             "identity": "rim",
@@ -78,7 +94,7 @@
           },
           {
             "identity": "rim",
-            "map": "II - see see identifier pattern at http://wiki.hl7.org/index.php?title=Common_Design_Patterns#Identifier_Pattern for relevant discussion. The Identifier class is a little looser than the v3 type II because it allows URIs as well as registered OIDs or GUIDs.  Also maps to Role[classCode=IDENT]"
+            "map": "II - The Identifier class is a little looser than the v3 type II because it allows URIs as well as registered OIDs or GUIDs.  Also maps to Role[classCode=IDENT]"
           },
           {
             "identity": "servd",
@@ -92,8 +108,8 @@
         "representation": [
           "xmlAttr"
         ],
-        "short": "xml:id (or equivalent in JSON)",
-        "definition": "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+        "short": "Unique id for inter-element referencing",
+        "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
         "min": 0,
         "max": "1",
         "base": {
@@ -106,6 +122,8 @@
             "code": "string"
           }
         ],
+        "isModifier": false,
+        "isSummary": false,
         "mapping": [
           {
             "identity": "rim",
@@ -126,8 +144,8 @@
           "description": "Extensions are always sliced by (at least) url",
           "rules": "open"
         },
-        "short": "Additional Content defined by implementations",
-        "definition": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "short": "Additional content defined by implementations",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
         "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
         "alias": [
           "extensions",
@@ -145,6 +163,8 @@
             "code": "Extension"
           }
         ],
+        "isModifier": false,
+        "isSummary": false,
         "mapping": [
           {
             "identity": "rim",
@@ -155,18 +175,24 @@
       {
         "id": "Identifier.use",
         "path": "Identifier.use",
-        "short": "usual | official | temp | secondary (If known)",
+        "short": "usual | official | temp | secondary | old (If known)",
         "definition": "The purpose of this identifier.",
-        "comment": "This is labeled as \"Is Modifier\" because applications should not mistake a temporary id for a permanent one. Applications can assume that an identifier is permanent unless it explicitly says that it is temporary.",
+        "comment": "Applications can assume that an identifier is permanent unless it explicitly says that it is temporary.",
         "requirements": "Allows the appropriate identifier for a particular context of use to be selected from among a set of identifiers.",
         "min": 0,
         "max": "1",
+        "base": {
+          "path": "Identifier.use",
+          "min": 0,
+          "max": "1"
+        },
         "type": [
           {
             "code": "code"
           }
         ],
         "isModifier": true,
+        "isModifierReason": "This is labeled as \"Is Modifier\" because applications should not mistake a temporary id for a permanent one.",
         "isSummary": true,
         "binding": {
           "extension": [
@@ -177,9 +203,7 @@
           ],
           "strength": "required",
           "description": "Identifies the purpose for this identifier, if known .",
-          "valueSetReference": {
-            "reference": "http://hl7.org/fhir/ValueSet/identifier-use"
-          }
+          "valueSet": "http://hl7.org/fhir/ValueSet/identifier-use|4.0.0"
         },
         "mapping": [
           {
@@ -197,15 +221,21 @@
         "path": "Identifier.type",
         "short": "Description of identifier",
         "definition": "A coded type for the identifier that can be used to determine which identifier to use for a specific purpose.",
-        "comment": "This element deals only with general categories of identifiers.  It SHOULD not be used for codes that correspond 1..1 with the Identifier.system. Some identifiers may fall into multiple categories due to common usage. \n\nWhere the system is known, a type is unnecessary because the type is always part of the system definition. However systems often need to handle identifiers where the system is not known. There is not a 1:1 relationship between type and system, since many different systems have the same type.",
+        "comment": "This element deals only with general categories of identifiers.  It SHOULD not be used for codes that correspond 1..1 with the Identifier.system. Some identifiers may fall into multiple categories due to common usage.   Where the system is known, a type is unnecessary because the type is always part of the system definition. However systems often need to handle identifiers where the system is not known. There is not a 1:1 relationship between type and system, since many different systems have the same type.",
         "requirements": "Allows users to make use of identifiers when the identifier system is not known.",
         "min": 1,
         "max": "1",
+        "base": {
+          "path": "Identifier.type",
+          "min": 0,
+          "max": "1"
+        },
         "type": [
           {
             "code": "CodeableConcept"
           }
         ],
+        "isModifier": false,
         "isSummary": true,
         "binding": {
           "extension": [
@@ -220,9 +250,7 @@
           ],
           "strength": "extensible",
           "description": "A coded type for an identifier that can be used to determine which identifier to use for a specific purpose.",
-          "valueSetReference": {
-            "reference": "http://hl7.org/fhir/ValueSet/identifier-type"
-          }
+          "valueSet": "http://hl7.org/fhir/ValueSet/identifier-type"
         },
         "mapping": [
           {
@@ -233,12 +261,7 @@
             "identity": "rim",
             "map": "Role.code or implied by context"
           }
-        ],
-        "base": {
-          "path": "Identifier.type",
-          "min": 0,
-          "max": "1"
-        }
+        ]
       },
       {
         "id": "Identifier.type.id",
@@ -246,8 +269,8 @@
         "representation": [
           "xmlAttr"
         ],
-        "short": "xml:id (or equivalent in JSON)",
-        "definition": "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+        "short": "Unique id for inter-element referencing",
+        "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
         "min": 0,
         "max": "1",
         "base": {
@@ -260,6 +283,8 @@
             "code": "string"
           }
         ],
+        "isModifier": false,
+        "isSummary": false,
         "mapping": [
           {
             "identity": "rim",
@@ -280,8 +305,8 @@
           "description": "Extensions are always sliced by (at least) url",
           "rules": "open"
         },
-        "short": "Additional Content defined by implementations",
-        "definition": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "short": "Additional content defined by implementations",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
         "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
         "alias": [
           "extensions",
@@ -299,6 +324,8 @@
             "code": "Extension"
           }
         ],
+        "isModifier": false,
+        "isSummary": false,
         "mapping": [
           {
             "identity": "rim",
@@ -312,14 +339,20 @@
         "short": "Code defined by a terminology system",
         "definition": "A reference to a code defined by a terminology system.",
         "comment": "Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true.",
-        "requirements": "Allows for translations and alternate encodings within a code system.  Also supports communication of the same instance to systems requiring different encodings.",
+        "requirements": "Allows for alternative encodings within a code system, and translations to other code systems.",
         "min": 1,
         "max": "*",
+        "base": {
+          "path": "CodeableConcept.coding",
+          "min": 0,
+          "max": "*"
+        },
         "type": [
           {
             "code": "Coding"
           }
         ],
+        "isModifier": false,
         "isSummary": true,
         "mapping": [
           {
@@ -355,6 +388,11 @@
         "definition": "A reference to a code defined by a terminology system.",
         "min": 1,
         "max": "1",
+        "base": {
+          "path": "CodeableConcept.coding",
+          "min": 0,
+          "max": "*"
+        },
         "type": [
           {
             "code": "Coding"
@@ -368,8 +406,8 @@
         "representation": [
           "xmlAttr"
         ],
-        "short": "xml:id (or equivalent in JSON)",
-        "definition": "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+        "short": "Unique id for inter-element referencing",
+        "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
         "min": 0,
         "max": "1",
         "base": {
@@ -382,6 +420,8 @@
             "code": "string"
           }
         ],
+        "isModifier": false,
+        "isSummary": false,
         "mapping": [
           {
             "identity": "rim",
@@ -402,8 +442,8 @@
           "description": "Extensions are always sliced by (at least) url",
           "rules": "open"
         },
-        "short": "Additional Content defined by implementations",
-        "definition": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "short": "Additional content defined by implementations",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
         "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
         "alias": [
           "extensions",
@@ -421,6 +461,8 @@
             "code": "Extension"
           }
         ],
+        "isModifier": false,
+        "isSummary": false,
         "mapping": [
           {
             "identity": "rim",
@@ -433,15 +475,21 @@
         "path": "Identifier.type.coding.system",
         "short": "Identity of the terminology system",
         "definition": "The identification of the code system that defines the meaning of the symbol in the code.",
-        "comment": "The URI may be an OID (urn:oid:...) or a UUID (urn:uuid:...).  OIDs and UUIDs SHALL be references to the HL7 OID registry. Otherwise, the URI should come from HL7's list of FHIR defined special URIs or it should de-reference to some definition that establish the system clearly and unambiguously.",
+        "comment": "The URI may be an OID (urn:oid:...) or a UUID (urn:uuid:...).  OIDs and UUIDs SHALL be references to the HL7 OID registry. Otherwise, the URI should come from HL7's list of FHIR defined special URIs or it should reference to some definition that establishes the system clearly and unambiguously.",
         "requirements": "Need to be unambiguous about the source of the definition of the symbol.",
         "min": 0,
         "max": "1",
+        "base": {
+          "path": "Coding.system",
+          "min": 0,
+          "max": "1"
+        },
         "type": [
           {
             "code": "uri"
           }
         ],
+        "isModifier": false,
         "isSummary": true,
         "mapping": [
           {
@@ -463,15 +511,21 @@
         "id": "Identifier.type.coding:Fixed_ACSN.version",
         "path": "Identifier.type.coding.version",
         "short": "Version of the system - if relevant",
-        "definition": "The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured. and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged.",
+        "definition": "The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured, and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged.",
         "comment": "Where the terminology does not clearly define what string should be used to identify code system versions, the recommendation is to use the date (expressed in FHIR date format) on which that version was officially published as the version date.",
         "min": 0,
         "max": "1",
+        "base": {
+          "path": "Coding.version",
+          "min": 0,
+          "max": "1"
+        },
         "type": [
           {
             "code": "string"
           }
         ],
+        "isModifier": false,
         "isSummary": true,
         "mapping": [
           {
@@ -496,11 +550,17 @@
         "requirements": "Need to refer to a particular code in the system.",
         "min": 0,
         "max": "1",
+        "base": {
+          "path": "Coding.code",
+          "min": 0,
+          "max": "1"
+        },
         "type": [
           {
             "code": "code"
           }
         ],
+        "isModifier": false,
         "isSummary": true,
         "mapping": [
           {
@@ -532,11 +592,17 @@
         "requirements": "Need to be able to carry a human-readable meaning of the code for readers that do not know  the system.",
         "min": 0,
         "max": "1",
+        "base": {
+          "path": "Coding.display",
+          "min": 0,
+          "max": "1"
+        },
         "type": [
           {
             "code": "string"
           }
         ],
+        "isModifier": false,
         "isSummary": true,
         "mapping": [
           {
@@ -557,16 +623,22 @@
         "id": "Identifier.type.coding:Fixed_ACSN.userSelected",
         "path": "Identifier.type.coding.userSelected",
         "short": "If this coding was chosen directly by the user",
-        "definition": "Indicates that this coding was chosen by a user directly - i.e. off a pick list of available items (codes or displays).",
+        "definition": "Indicates that this coding was chosen by a user directly - e.g. off a pick list of available items (codes or displays).",
         "comment": "Amongst a set of alternatives, a directly chosen code is the most appropriate starting point for new translations. There is some ambiguity about what exactly 'directly chosen' implies, and trading partner agreement may be needed to clarify the use of this element and its consequences more completely.",
         "requirements": "This has been identified as a clinical safety criterium - that this exact system/code pair was chosen explicitly, rather than inferred by the system based on some rules or language processing.",
         "min": 0,
         "max": "1",
+        "base": {
+          "path": "Coding.userSelected",
+          "min": 0,
+          "max": "1"
+        },
         "type": [
           {
             "code": "boolean"
           }
         ],
+        "isModifier": false,
         "isSummary": true,
         "mapping": [
           {
@@ -598,11 +670,17 @@
         "requirements": "The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source.",
         "min": 0,
         "max": "1",
+        "base": {
+          "path": "CodeableConcept.text",
+          "min": 0,
+          "max": "1"
+        },
         "type": [
           {
             "code": "string"
           }
         ],
+        "isModifier": false,
         "isSummary": true,
         "mapping": [
           {
@@ -624,14 +702,21 @@
         "path": "Identifier.system",
         "short": "The namespace for the identifier value",
         "definition": "Establishes the namespace for the value - that is, a URL that describes a set values that are unique.",
+        "comment": "Identifier.system is always case sensitive.",
         "requirements": "There are many sets  of identifiers.  To perform matching of two identifiers, we need to know what set we're dealing with. The system identifies a particular set of unique identifiers.",
         "min": 0,
         "max": "1",
+        "base": {
+          "path": "Identifier.system",
+          "min": 0,
+          "max": "1"
+        },
         "type": [
           {
             "code": "uri"
           }
         ],
+        "isModifier": false,
         "isSummary": true,
         "mapping": [
           {
@@ -653,14 +738,20 @@
         "path": "Identifier.value",
         "short": "The value that is unique",
         "definition": "The portion of the identifier typically relevant to the user and which is unique within the context of the system.",
-        "comment": "If the value is a full URI, then the system SHALL be urn:ietf:rfc:3986.  The value's primary purpose is computational mapping.  As a result, it may be normalized for comparison purposes (e.g. removing non-significant whitespace, dashes, etc.)  A value formatted for human display can be conveyed using the [Rendered Value extension](extension-rendered-value.html).",
+        "comment": "If the value is a full URI, then the system SHALL be urn:ietf:rfc:3986.  The value's primary purpose is computational mapping.  As a result, it may be normalized for comparison purposes (e.g. removing non-significant whitespace, dashes, etc.)  A value formatted for human display can be conveyed using the [Rendered Value extension](extension-rendered-value.html). Identifier.value is to be treated as case sensitive unless knowledge of the Identifier.system allows the processer to be confident that non-case-sensitive processing is safe.",
         "min": 0,
         "max": "1",
+        "base": {
+          "path": "Identifier.value",
+          "min": 0,
+          "max": "1"
+        },
         "type": [
           {
             "code": "string"
           }
         ],
+        "isModifier": false,
         "isSummary": true,
         "mapping": [
           {
@@ -684,11 +775,17 @@
         "definition": "Time period during which identifier is/was valid for use.",
         "min": 0,
         "max": "1",
+        "base": {
+          "path": "Identifier.period",
+          "min": 0,
+          "max": "1"
+        },
         "type": [
           {
             "code": "Period"
           }
         ],
+        "isModifier": false,
         "isSummary": true,
         "mapping": [
           {
@@ -713,12 +810,20 @@
         "comment": "The Identifier.assigner may omit the .reference element and only contain a .display element reflecting the name or other textual information about the assigning organization.",
         "min": 0,
         "max": "1",
+        "base": {
+          "path": "Identifier.assigner",
+          "min": 0,
+          "max": "1"
+        },
         "type": [
           {
             "code": "Reference",
-            "targetProfile": "http://hl7.org/fhir/StructureDefinition/Organization"
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Organization"
+            ]
           }
         ],
+        "isModifier": false,
         "isSummary": true,
         "mapping": [
           {
@@ -743,18 +848,14 @@
         "id": "Identifier",
         "path": "Identifier",
         "short": "obf-AccessionIdentifier",
-        "definition": "Identifier assigned by the lab"
+        "definition": "Identifier assigned by the lab",
+        "isModifier": false
       },
       {
         "id": "Identifier.type",
         "path": "Identifier.type",
         "min": 1,
-        "max": "1",
-        "base": {
-          "path": "Identifier.type",
-          "min": 0,
-          "max": "1"
-        }
+        "max": "1"
       },
       {
         "id": "Identifier.type.coding",
@@ -781,6 +882,11 @@
         "definition": "A reference to a code defined by a terminology system.",
         "min": 1,
         "max": "1",
+        "base": {
+          "path": "CodeableConcept.coding",
+          "min": 0,
+          "max": "*"
+        },
         "type": [
           {
             "code": "Coding"

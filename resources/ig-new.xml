@@ -3,14 +3,18 @@
 <ImplementationGuide xmlns="http://hl7.org/fhir">
   <id value="hl7.fhir.us.breast-radiology-0.1.0"/>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource">
-    <valueString value="C:\Development\MITRE\cimpl\Fhir-BreastRadiologyReport\out.v3\fhir\guide\resources"/>
+    <valueString value="C:\Development\MITRE\cimpl\Fhir-BreastRadiologyReport\out.v4\fhir\guide\resources"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource">
+    <valueString value="C:\Development\MITRE\cimpl\Fhir-BreastRadiologyReport\out.v4\fhir\guide\examples"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages">
-    <valueString value="C:\Development\MITRE\cimpl\Fhir-BreastRadiologyReport\out.v3\fhir\guide\pages"/>
+    <valueString value="C:\Development\MITRE\cimpl\Fhir-BreastRadiologyReport\out.v4\fhir\guide\pages"/>
   </extension>
   <url value="http://hl7.org/fhir/us/breast-radiology/fhir/ImplementationGuide/hl7.fhir.us.breast-radiology-0.1.0"/>
   <version value="0.1.0"/>
-  <name value="Breast Radiology Reporting FHIR Profiles"/>
+  <name value="Breast_Radiology_Reporting"/>
+  <title value="Breast Radiology Reporting"/>
   <status value="draft"/>
   <publisher value="Hl7"/>
   <contact>
@@ -21,4992 +25,1067 @@
   </contact>
   <packageId value="hl7.fhir.us.breast-radiology"/>
   <license value="CC0-1.0"/>
-  <fhirVersion value="3.0.1"/>
-  <fhirVersion value="3.0.1"/>
+  <fhirVersion value="4.0.0"/>
+  <fhirVersion value="4.0.0"/>
   <dependsOn id="uscore">
     <uri value="http://hl7.org/fhir/us/core"/>
     <packageId value="hl7.fhir.us.core"/>
-    <version value="1.0.1"/>
+    <version value="3.0.0"/>
   </dependsOn>
   <definition>
-    <grouping id="p1">
+    <grouping>
       <name value="Profiles in this Implementation Guide"/>
+      <description value="Profiles in this Implementation Guide"/>
     </grouping>
     <resource>
       <reference>
         <reference value="StructureDefinition/obf-AccessionIdentifier"/>
-        <display value="obf-AccessionIdentifier"/>
       </reference>
+      <name value="obf-AccessionIdentifier"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/obf-ActionPerformed"/>
-        <display value="obf-ActionPerformed"/>
       </reference>
+      <name value="obf-ActionPerformed"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/obf-ActionRequest"/>
-        <display value="obf-ActionRequest"/>
       </reference>
+      <name value="obf-ActionRequest"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/obf-ActionStatement"/>
-        <display value="obf-ActionStatement"/>
       </reference>
+      <name value="obf-ActionStatement"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-Age"/>
-        <display value="obf-datatype-Age"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/breastrad-BreastAbnormality"/>
-        <display value="breastrad-BreastAbnormality"/>
       </reference>
+      <name value="breastrad-BreastAbnormality"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/breastrad-BreastRadiologyDocument"/>
-        <display value="breastrad-BreastRadiologyDocument"/>
       </reference>
+      <name value="breastrad-BreastRadiologyDocument"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/breastrad-BreastRadiologyReport"/>
-        <display value="breastrad-BreastRadiologyReport"/>
       </reference>
+      <name value="breastrad-BreastRadiologyReport"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/obf-ClinicalStatement"/>
-        <display value="obf-ClinicalStatement"/>
       </reference>
+      <name value="obf-ClinicalStatement"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-Composition"/>
-        <display value="obf-Composition"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/obf-Condition"/>
-        <display value="obf-Condition"/>
       </reference>
+      <name value="obf-Condition"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/obf-DiagnosticReport"/>
-        <display value="obf-DiagnosticReport"/>
       </reference>
+      <name value="obf-DiagnosticReport"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/obf-DomainResource"/>
-        <display value="obf-DomainResource"/>
       </reference>
+      <name value="obf-DomainResource"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/obf-datatype-Duration"/>
-        <display value="obf-datatype-Duration"/>
       </reference>
+      <name value="obf-datatype-Duration"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/obf-EncounterOrEpisode"/>
-        <display value="obf-EncounterOrEpisode"/>
       </reference>
+      <name value="obf-EncounterOrEpisode"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/obf-Entity"/>
-        <display value="obf-Entity"/>
       </reference>
+      <name value="obf-Entity"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/obf-EntityOrRole"/>
-        <display value="obf-EntityOrRole"/>
       </reference>
+      <name value="obf-EntityOrRole"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/obf-InformationItem"/>
-        <display value="obf-InformationItem"/>
       </reference>
+      <name value="obf-InformationItem"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/obf-MedicationAction"/>
-        <display value="obf-MedicationAction"/>
       </reference>
+      <name value="obf-MedicationAction"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/obf-MedicationDispense"/>
-        <display value="obf-MedicationDispense"/>
       </reference>
+      <name value="obf-MedicationDispense"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/obf-MedicationStatement"/>
+      </reference>
+      <name value="obf-MedicationStatement"/>
+      <exampleBoolean value="false"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/obf-datatype-Money"/>
-        <display value="obf-datatype-Money"/>
       </reference>
+      <name value="obf-datatype-Money"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/obf-NationalProviderIdentifier"/>
-        <display value="obf-NationalProviderIdentifier"/>
       </reference>
+      <name value="obf-NationalProviderIdentifier"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/obf-Observation"/>
-        <display value="obf-Observation"/>
       </reference>
+      <name value="obf-Observation"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/obf-datatype-RelatedArtifact"/>
-        <display value="obf-datatype-RelatedArtifact"/>
+        <reference value="StructureDefinition/obf-Patient"/>
       </reference>
+      <name value="obf-Patient"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/obf-Resource"/>
-        <display value="obf-Resource"/>
+        <reference value="StructureDefinition/obf-Procedure"/>
       </reference>
+      <name value="obf-Procedure"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/obf-Role"/>
-        <display value="obf-Role"/>
       </reference>
+      <name value="obf-Role"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/obf-datatype-SampledData"/>
+      </reference>
+      <name value="obf-datatype-SampledData"/>
+      <exampleBoolean value="false"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/obf-SituationStatement"/>
-        <display value="obf-SituationStatement"/>
       </reference>
+      <name value="obf-SituationStatement"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/obf-TaxIdentificationNumber"/>
-        <display value="obf-TaxIdentificationNumber"/>
       </reference>
+      <name value="obf-TaxIdentificationNumber"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/obf-datatype-Timing"/>
-        <display value="obf-datatype-Timing"/>
       </reference>
+      <name value="obf-datatype-Timing"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-AdministrationSite-extension"/>
-        <display value="obf-AdministrationSite"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/obf-datatype-AnatomicalOrientation-extension"/>
-        <display value="obf-datatype-AnatomicalOrientation"/>
       </reference>
+      <name value="obf-datatype-AnatomicalOrientation"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/obf-Annotation-extension"/>
-        <display value="obf-Annotation"/>
       </reference>
+      <name value="obf-Annotation"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/obf-AsNeeded-extension"/>
-        <display value="obf-AsNeeded"/>
+        <reference value="StructureDefinition/obf-Attestation-extension"/>
       </reference>
+      <name value="obf-Attestation"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/obf-AttestationMode-extension"/>
+      </reference>
+      <name value="obf-AttestationMode"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/obf-Attester-extension"/>
+      </reference>
+      <name value="obf-Attester"/>
+      <exampleBoolean value="false"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/obf-Author-extension"/>
-        <display value="obf-Author"/>
       </reference>
+      <name value="obf-Author"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/obf-BasedOn-extension"/>
-        <display value="obf-BasedOn"/>
       </reference>
+      <name value="obf-BasedOn"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/breastrad-BreastExamTechnique-extension"/>
-        <display value="breastrad-BreastExamTechnique"/>
       </reference>
+      <name value="breastrad-BreastExamTechnique"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-CanonicalUrl-extension"/>
-        <display value="obf-datatype-CanonicalUrl"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/obf-CareContext-extension"/>
-        <display value="obf-CareContext"/>
       </reference>
+      <name value="obf-CareContext"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/obf-datatype-Category-extension"/>
-        <display value="obf-datatype-Category"/>
       </reference>
+      <name value="obf-datatype-Category"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/obf-datatype-Code-extension"/>
-        <display value="obf-datatype-Code"/>
       </reference>
+      <name value="obf-datatype-Code"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/obf-datatype-Comparator-extension"/>
-        <display value="obf-datatype-Comparator"/>
       </reference>
+      <name value="obf-datatype-Comparator"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/obf-Condition-extension"/>
-        <display value="obf-Condition"/>
       </reference>
+      <name value="obf-Condition"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/obf-datatype-Currency-extension"/>
-        <display value="obf-datatype-Currency"/>
+        <reference value="StructureDefinition/obf-ConfidentialityCode-extension"/>
       </reference>
+      <name value="obf-ConfidentialityCode"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/obf-DateOfDiagnosis-extension"/>
-        <display value="obf-DateOfDiagnosis"/>
+        <reference value="StructureDefinition/obf-datatype-CreationDateTime-extension"/>
       </reference>
+      <name value="obf-datatype-CreationDateTime"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/obf-DiagnosisCode-extension"/>
-        <display value="obf-DiagnosisCode"/>
       </reference>
+      <name value="obf-DiagnosisCode"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/obf-Dosage-extension"/>
-        <display value="obf-Dosage"/>
       </reference>
+      <name value="obf-Dosage"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-DoseAmount-extension"/>
-        <display value="obf-DoseAmount"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-DoseAndRate-extension"/>
-        <display value="obf-DoseAndRate"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-DoseRate-extension"/>
-        <display value="obf-DoseRate"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-DoseSequenceNumber-extension"/>
-        <display value="obf-DoseSequenceNumber"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/obf-EncounterDiagnosis-extension"/>
-        <display value="obf-EncounterDiagnosis"/>
       </reference>
+      <name value="obf-EncounterDiagnosis"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/obf-EventContext-extension"/>
+      </reference>
+      <name value="obf-EventContext"/>
+      <exampleBoolean value="false"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/obf-ExpectedPerformanceTime-extension"/>
-        <display value="obf-ExpectedPerformanceTime"/>
       </reference>
+      <name value="obf-ExpectedPerformanceTime"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/obf-ExpectedPerformer-extension"/>
-        <display value="obf-ExpectedPerformer"/>
       </reference>
+      <name value="obf-ExpectedPerformer"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/obf-ExpectedPerformerType-extension"/>
-        <display value="obf-ExpectedPerformerType"/>
       </reference>
+      <name value="obf-ExpectedPerformerType"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/obf-FacilityType-extension"/>
+      </reference>
+      <name value="obf-FacilityType"/>
+      <exampleBoolean value="false"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/obf-FocalSubject-extension"/>
-        <display value="obf-FocalSubject"/>
       </reference>
+      <name value="obf-FocalSubject"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/obf-datatype-Identifier-extension"/>
-        <display value="obf-datatype-Identifier"/>
       </reference>
+      <name value="obf-datatype-Identifier"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/obf-InstructionCode-extension"/>
-        <display value="obf-InstructionCode"/>
+        <reference value="StructureDefinition/obf-ImplicitRules-extension"/>
       </reference>
+      <name value="obf-ImplicitRules"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-InstructionText-extension"/>
-        <display value="obf-InstructionText"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-LabelText-extension"/>
-        <display value="obf-datatype-LabelText"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/obf-datatype-LandmarkLocation-extension"/>
-        <display value="obf-datatype-LandmarkLocation"/>
       </reference>
+      <name value="obf-datatype-LandmarkLocation"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/obf-datatype-LandmarkToBodyLocationDirection-extension"/>
-        <display value="obf-datatype-LandmarkToBodyLocationDirection"/>
       </reference>
+      <name value="obf-datatype-LandmarkToBodyLocationDirection"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/obf-datatype-LandmarkToBodyLocationDistance-extension"/>
-        <display value="obf-datatype-LandmarkToBodyLocationDistance"/>
       </reference>
+      <name value="obf-datatype-LandmarkToBodyLocationDistance"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/obf-datatype-LandmarkType-extension"/>
-        <display value="obf-datatype-LandmarkType"/>
       </reference>
+      <name value="obf-datatype-LandmarkType"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/obf-datatype-Language-extension"/>
+      </reference>
+      <name value="obf-datatype-Language"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/obf-LastUpdated-extension"/>
+      </reference>
+      <name value="obf-LastUpdated"/>
+      <exampleBoolean value="false"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/obf-datatype-Laterality-extension"/>
-        <display value="obf-datatype-Laterality"/>
       </reference>
+      <name value="obf-datatype-Laterality"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/obf-MaxDosePerAdministration-extension"/>
-        <display value="obf-MaxDosePerAdministration"/>
+        <reference value="StructureDefinition/obf-ManagingOrganization-extension"/>
       </reference>
+      <name value="obf-ManagingOrganization"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-MaxDosePerLifetime-extension"/>
-        <display value="obf-MaxDosePerLifetime"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-MaxDosePerPeriod-extension"/>
-        <display value="obf-MaxDosePerPeriod"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/obf-MedicationCodeOrReference-extension"/>
-        <display value="obf-MedicationCodeOrReference"/>
       </reference>
+      <name value="obf-MedicationCodeOrReference"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/obf-Metadata-extension"/>
+      </reference>
+      <name value="obf-Metadata"/>
+      <exampleBoolean value="false"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/obf-Method-extension"/>
-        <display value="obf-Method"/>
       </reference>
+      <name value="obf-Method"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/obf-datatype-MoneyAmount-extension"/>
-        <display value="obf-datatype-MoneyAmount"/>
+        <reference value="StructureDefinition/obf-Narrative-extension"/>
       </reference>
+      <name value="obf-Narrative"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/obf-NarrativeQualifier-extension"/>
+      </reference>
+      <name value="obf-NarrativeQualifier"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/obf-NarrativeText-extension"/>
+      </reference>
+      <name value="obf-NarrativeText"/>
+      <exampleBoolean value="false"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/obf-datatype-Number-extension"/>
-        <display value="obf-datatype-Number"/>
       </reference>
+      <name value="obf-datatype-Number"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-ObservationDerivedFrom-extension"/>
-        <display value="obf-ObservationDerivedFrom"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-ObservationPartOf-extension"/>
-        <display value="obf-ObservationPartOf"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/obf-datatype-OccurrenceTimeOrPeriod-extension"/>
-        <display value="obf-datatype-OccurrenceTimeOrPeriod"/>
       </reference>
+      <name value="obf-datatype-OccurrenceTimeOrPeriod"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/obf-OnBehalfOf-extension"/>
-        <display value="obf-OnBehalfOf"/>
       </reference>
+      <name value="obf-OnBehalfOf"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/obf-Organization-extension"/>
-        <display value="obf-Organization"/>
       </reference>
+      <name value="obf-Organization"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/obf-PartOf-extension"/>
-        <display value="obf-PartOf"/>
       </reference>
+      <name value="obf-PartOf"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/obf-Participant-extension"/>
-        <display value="obf-Participant"/>
       </reference>
+      <name value="obf-Participant"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/obf-Participation-extension"/>
-        <display value="obf-Participation"/>
       </reference>
+      <name value="obf-Participation"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/obf-ParticipationPeriod-extension"/>
-        <display value="obf-ParticipationPeriod"/>
       </reference>
+      <name value="obf-ParticipationPeriod"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/obf-ParticipationType-extension"/>
-        <display value="obf-ParticipationType"/>
       </reference>
+      <name value="obf-ParticipationType"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/obf-PatientInstruction-extension"/>
-        <display value="obf-PatientInstruction"/>
+        <reference value="StructureDefinition/obf-Patient-extension"/>
       </reference>
+      <name value="obf-Patient"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/obf-datatype-PriorityCode-extension"/>
-        <display value="obf-datatype-PriorityCode"/>
       </reference>
+      <name value="obf-datatype-PriorityCode"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/obf-datatype-PriorityRank-extension"/>
-        <display value="obf-datatype-PriorityRank"/>
       </reference>
+      <name value="obf-datatype-PriorityRank"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/obf-Profile-extension"/>
+      </reference>
+      <name value="obf-Profile"/>
+      <exampleBoolean value="false"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/obf-ReasonCode-extension"/>
-        <display value="obf-ReasonCode"/>
       </reference>
+      <name value="obf-ReasonCode"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/obf-ReasonReference-extension"/>
-        <display value="obf-ReasonReference"/>
       </reference>
+      <name value="obf-ReasonReference"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/obf-RelatedDocument-extension"/>
+      </reference>
+      <name value="obf-RelatedDocument"/>
+      <exampleBoolean value="false"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/obf-datatype-RelationToLandmark-extension"/>
-        <display value="obf-datatype-RelationToLandmark"/>
       </reference>
+      <name value="obf-datatype-RelationToLandmark"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/obf-datatype-Relationship-extension"/>
+      </reference>
+      <name value="obf-datatype-Relationship"/>
+      <exampleBoolean value="false"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/obf-RequestIntent-extension"/>
-        <display value="obf-RequestIntent"/>
       </reference>
+      <name value="obf-RequestIntent"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/obf-Requester-extension"/>
-        <display value="obf-Requester"/>
       </reference>
+      <name value="obf-Requester"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/breastrad-ResultComposition-extension"/>
-        <display value="breastrad-ResultComposition"/>
       </reference>
+      <name value="breastrad-ResultComposition"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/obf-ResultsInterpreter-extension"/>
-        <display value="obf-ResultsInterpreter"/>
+        <reference value="StructureDefinition/obf-SecurityLabel-extension"/>
       </reference>
+      <name value="obf-SecurityLabel"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/obf-datatype-RouteIntoBody-extension"/>
-        <display value="obf-datatype-RouteIntoBody"/>
+        <reference value="StructureDefinition/obf-datatype-Setting-extension"/>
       </reference>
+      <name value="obf-datatype-Setting"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/obf-SourceSystem-extension"/>
-        <display value="obf-SourceSystem"/>
       </reference>
+      <name value="obf-SourceSystem"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/obf-StatementDateTime-extension"/>
-        <display value="obf-StatementDateTime"/>
       </reference>
+      <name value="obf-StatementDateTime"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/obf-Status-extension"/>
-        <display value="obf-Status"/>
       </reference>
+      <name value="obf-Status"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/obf-StatusHistory-extension"/>
-        <display value="obf-StatusHistory"/>
       </reference>
+      <name value="obf-StatusHistory"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/obf-SubjectOfRecord-extension"/>
-        <display value="obf-SubjectOfRecord"/>
       </reference>
+      <name value="obf-SubjectOfRecord"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/breastrad-SummaryBiRadCode-extension"/>
-        <display value="breastrad-SummaryBiRadCode"/>
       </reference>
+      <name value="breastrad-SummaryBiRadCode"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/obf-SupportingInformation-extension"/>
+      </reference>
+      <name value="obf-SupportingInformation"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/obf-Tag-extension"/>
+      </reference>
+      <name value="obf-Tag"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/obf-TargetDocument-extension"/>
+      </reference>
+      <name value="obf-TargetDocument"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/obf-TerminationReason-extension"/>
+      </reference>
+      <name value="obf-TerminationReason"/>
+      <exampleBoolean value="false"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/obf-datatype-TimePeriod-extension"/>
-        <display value="obf-datatype-TimePeriod"/>
       </reference>
+      <name value="obf-datatype-TimePeriod"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/obf-datatype-Timing-extension"/>
-        <display value="obf-datatype-Timing"/>
+        <reference value="StructureDefinition/obf-datatype-Title-extension"/>
       </reference>
+      <name value="obf-datatype-Title"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/obf-TreatmentIntent-extension"/>
+      </reference>
+      <name value="obf-TreatmentIntent"/>
+      <exampleBoolean value="false"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/obf-datatype-Type-extension"/>
-        <display value="obf-datatype-Type"/>
       </reference>
+      <name value="obf-datatype-Type"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/obf-datatype-Units-extension"/>
-        <display value="obf-datatype-Units"/>
       </reference>
+      <name value="obf-datatype-Units"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/obf-VersionId-extension"/>
+      </reference>
+      <name value="obf-VersionId"/>
+      <exampleBoolean value="false"/>
     </resource>
     <resource>
       <reference>
         <reference value="ValueSet/breastrad-AbnormalityDensityVS"/>
-        <display value="AbnormalityDensityVS"/>
       </reference>
+      <name value="AbnormalityDensityVS"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="ValueSet/breastrad-AbnormalityTypeVS"/>
-        <display value="AbnormalityTypeVS"/>
       </reference>
+      <name value="AbnormalityTypeVS"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="ValueSet/obf-datatype-AnatomicalDirectionVS"/>
-        <display value="AnatomicalDirectionVS"/>
       </reference>
+      <name value="AnatomicalDirectionVS"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="ValueSet/obf-datatype-AnatomicalOrientationVS"/>
-        <display value="AnatomicalOrientationVS"/>
       </reference>
+      <name value="AnatomicalOrientationVS"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="ValueSet/breastrad-AsymmetryTypesVS"/>
-        <display value="AsymmetryTypesVS"/>
       </reference>
+      <name value="AsymmetryTypesVS"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="ValueSet/breastrad-BiRadCodeVS"/>
-        <display value="BiRadCodeVS"/>
       </reference>
+      <name value="BiRadCodeVS"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="ValueSet/obf-datatype-BodyLocationVS"/>
-        <display value="BodyLocationVS"/>
       </reference>
+      <name value="BodyLocationVS"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="ValueSet/breastrad-BreastDensityVS"/>
-        <display value="BreastDensityVS"/>
       </reference>
+      <name value="BreastDensityVS"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="ValueSet/breastrad-ChangeVS"/>
-        <display value="ChangeVS"/>
       </reference>
+      <name value="ChangeVS"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="ValueSet/obf-datatype-ClockFaceDirectionVS"/>
-        <display value="ClockFaceDirectionVS"/>
       </reference>
+      <name value="ClockFaceDirectionVS"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="ValueSet/breastrad-CystTypesVS"/>
-        <display value="CystTypesVS"/>
       </reference>
+      <name value="CystTypesVS"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="ValueSet/breastrad-DepthVS"/>
-        <display value="DepthVS"/>
       </reference>
+      <name value="DepthVS"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="ValueSet/breastrad-DiagnosticTechniqueVS"/>
-        <display value="DiagnosticTechniqueVS"/>
       </reference>
+      <name value="DiagnosticTechniqueVS"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="ValueSet/obf-datatype-LandmarkTypeVS"/>
-        <display value="LandmarkTypeVS"/>
       </reference>
+      <name value="LandmarkTypeVS"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="ValueSet/breastrad-MarginVS"/>
-        <display value="MarginVS"/>
       </reference>
+      <name value="MarginVS"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="ValueSet/breastrad-MassTypesVS"/>
-        <display value="MassTypesVS"/>
       </reference>
+      <name value="MassTypesVS"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="ValueSet/breastrad-NodeTypesVS"/>
-        <display value="NodeTypesVS"/>
       </reference>
+      <name value="NodeTypesVS"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="ValueSet/obf-ResearchSubjectTerminationReasonVS"/>
-        <display value="ResearchSubjectTerminationReasonVS"/>
       </reference>
+      <name value="ResearchSubjectTerminationReasonVS"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="ValueSet/obf-datatype-SettingVS"/>
-        <display value="SettingVS"/>
       </reference>
+      <name value="SettingVS"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="ValueSet/breastrad-ShapeVS"/>
-        <display value="ShapeVS"/>
       </reference>
+      <name value="ShapeVS"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="ValueSet/obf-StudyArmTypeVS"/>
-        <display value="StudyArmTypeVS"/>
       </reference>
+      <name value="StudyArmTypeVS"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="ValueSet/obf-TreatmentIntentVS"/>
-        <display value="TreatmentIntentVS"/>
       </reference>
+      <name value="TreatmentIntentVS"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="ValueSet/obf-TreatmentTerminationReasonVS"/>
-        <display value="TreatmentTerminationReasonVS"/>
       </reference>
+      <name value="TreatmentTerminationReasonVS"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="ValueSet/obf-datatype-UnitsOfLengthVS"/>
-        <display value="UnitsOfLengthVS"/>
       </reference>
+      <name value="UnitsOfLengthVS"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="ValueSet/breastrad-VascularityVS"/>
-        <display value="VascularityVS"/>
       </reference>
+      <name value="VascularityVS"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="ValueSet/breastrad-WallVS"/>
-        <display value="WallVS"/>
       </reference>
+      <name value="WallVS"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="CodeSystem/breastrad-AbnormalityDensityCS"/>
-        <display value="AbnormalityDensityCS"/>
       </reference>
+      <name value="AbnormalityDensityCS"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="CodeSystem/breastrad-AbnormalityTypeCS"/>
-        <display value="AbnormalityTypeCS"/>
       </reference>
+      <name value="AbnormalityTypeCS"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="CodeSystem/breastrad-AsymmetryTypesCS"/>
-        <display value="AsymmetryTypesCS"/>
       </reference>
+      <name value="AsymmetryTypesCS"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="CodeSystem/breastrad-BiRadCodeCS"/>
-        <display value="BiRadCodeCS"/>
       </reference>
+      <name value="BiRadCodeCS"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="CodeSystem/breastrad-BreastDensityCS"/>
-        <display value="BreastDensityCS"/>
       </reference>
+      <name value="BreastDensityCS"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="CodeSystem/breastrad-ChangeCS"/>
-        <display value="ChangeCS"/>
       </reference>
+      <name value="ChangeCS"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="CodeSystem/breastrad-CystTypesCS"/>
-        <display value="CystTypesCS"/>
       </reference>
+      <name value="CystTypesCS"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="CodeSystem/breastrad-DepthCS"/>
-        <display value="DepthCS"/>
       </reference>
+      <name value="DepthCS"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="CodeSystem/breastrad-MarginCS"/>
-        <display value="MarginCS"/>
       </reference>
+      <name value="MarginCS"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="CodeSystem/breastrad-MassTypesCS"/>
-        <display value="MassTypesCS"/>
       </reference>
+      <name value="MassTypesCS"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="CodeSystem/breastrad-NodeTypesCS"/>
-        <display value="NodeTypesCS"/>
       </reference>
+      <name value="NodeTypesCS"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="CodeSystem/obf-ResearchSubjectTerminationReasonCS"/>
-        <display value="ResearchSubjectTerminationReasonCS"/>
       </reference>
+      <name value="ResearchSubjectTerminationReasonCS"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="CodeSystem/obf-datatype-SettingCS"/>
-        <display value="SettingCS"/>
       </reference>
+      <name value="SettingCS"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="CodeSystem/breastrad-ShapeCS"/>
-        <display value="ShapeCS"/>
       </reference>
+      <name value="ShapeCS"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="CodeSystem/breastrad-VascularityCS"/>
-        <display value="VascularityCS"/>
       </reference>
+      <name value="VascularityCS"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <resource>
       <reference>
         <reference value="CodeSystem/breastrad-WallCS"/>
-        <display value="WallCS"/>
       </reference>
+      <name value="WallCS"/>
       <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-Abatement-model"/>
-        <display value="Abatement"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/breastrad-AbnormalityDensity-model"/>
-        <display value="AbnormalityDensity"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/breastrad-AbnormalityType-model"/>
-        <display value="AbnormalityType"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-AccessionIdentifier-model"/>
-        <display value="AccessionIdentifier"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-ActionPerformed-model"/>
-        <display value="ActionPerformed"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-ActionRequest-model"/>
-        <display value="ActionRequest"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-ActionStatement-model"/>
-        <display value="ActionStatement"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-Active-model"/>
-        <display value="Active"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-Actual-model"/>
-        <display value="Actual"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-ActualArm-model"/>
-        <display value="ActualArm"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-Additive-model"/>
-        <display value="Additive"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-Address-model"/>
-        <display value="Address"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-AddressLine-model"/>
-        <display value="AddressLine"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-AdministrationSite-model"/>
-        <display value="AdministrationSite"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-AdministrativeGender-model"/>
-        <display value="AdministrativeGender"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-Age-model"/>
-        <display value="Age"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-Alias-model"/>
-        <display value="Alias"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-AllDay-model"/>
-        <display value="AllDay"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-Altitude-model"/>
-        <display value="Altitude"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-AmountOrSize-model"/>
-        <display value="AmountOrSize"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-AnatomicalOrientation-model"/>
-        <display value="AnatomicalOrientation"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-Annotation-model"/>
-        <display value="Annotation"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-Answer-model"/>
-        <display value="Answer"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-AnswerValue-model"/>
-        <display value="AnswerValue"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-ApplicableAgeRange-model"/>
-        <display value="ApplicableAgeRange"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-ApplicableSubpopulation-model"/>
-        <display value="ApplicableSubpopulation"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-Appointment-model"/>
-        <display value="Appointment"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-AppointmentParticipant-model"/>
-        <display value="AppointmentParticipant"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-AppointmentParticipation-model"/>
-        <display value="AppointmentParticipation"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-AppointmentReasonReference-model"/>
-        <display value="AppointmentReasonReference"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-AsNeeded-model"/>
-        <display value="AsNeeded"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-AssignedArm-model"/>
-        <display value="AssignedArm"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/breastrad-AsymmetryTypes-model"/>
-        <display value="AsymmetryTypes"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-Attachment-model"/>
-        <display value="Attachment"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-Attestation-model"/>
-        <display value="Attestation"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-AttestationMode-model"/>
-        <display value="AttestationMode"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-Attester-model"/>
-        <display value="Attester"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-Authenticator-model"/>
-        <display value="Authenticator"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-Author-model"/>
-        <display value="Author"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-AvailabilityExceptions-model"/>
-        <display value="AvailabilityExceptions"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-BasedOn-model"/>
-        <display value="BasedOn"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-BeginDateTime-model"/>
-        <display value="BeginDateTime"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-Beneficiary-model"/>
-        <display value="Beneficiary"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-BeneficiaryRelationship-model"/>
-        <display value="BeneficiaryRelationship"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/breastrad-BiRadCode-model"/>
-        <display value="BiRadCode"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-BinaryData-model"/>
-        <display value="BinaryData"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-BirthDate-model"/>
-        <display value="BirthDate"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-BirthSex-model"/>
-        <display value="BirthSex"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-BodyLocation-model"/>
-        <display value="BodyLocation"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/breastrad-BreastAbnormality-model"/>
-        <display value="BreastAbnormality"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/breastrad-BreastBodyLocation-model"/>
-        <display value="BreastBodyLocation"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/breastrad-BreastDensity-model"/>
-        <display value="BreastDensity"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/breastrad-BreastDepth-model"/>
-        <display value="BreastDepth"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/breastrad-BreastExamTechnique-model"/>
-        <display value="BreastExamTechnique"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/breastrad-BreastRadiologyDocument-model"/>
-        <display value="BreastRadiologyDocument"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/breastrad-BreastRadiologyReport-model"/>
-        <display value="BreastRadiologyReport"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-CanonicalUrl-model"/>
-        <display value="CanonicalUrl"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-Capacity-model"/>
-        <display value="Capacity"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-CareContext-model"/>
-        <display value="CareContext"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-CareManager-model"/>
-        <display value="CareManager"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-CarrierAIDC-model"/>
-        <display value="CarrierAIDC"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-CarrierHRF-model"/>
-        <display value="CarrierHRF"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-Category-model"/>
-        <display value="Category"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/breastrad-Change-model"/>
-        <display value="Change"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-Citation-model"/>
-        <display value="Citation"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-City-model"/>
-        <display value="City"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-ClassHistory-model"/>
-        <display value="ClassHistory"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-ClinicalStatement-model"/>
-        <display value="ClinicalStatement"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-ClinicalStatus-model"/>
-        <display value="ClinicalStatus"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-ClosingTime-model"/>
-        <display value="ClosingTime"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-Code-model"/>
-        <display value="Code"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-CodeSystem-model"/>
-        <display value="CodeSystem"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-CodedObservationComponent-model"/>
-        <display value="CodedObservationComponent"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-CollectionMethod-model"/>
-        <display value="CollectionMethod"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-CollectionSite-model"/>
-        <display value="CollectionSite"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-CollectionSource-model"/>
-        <display value="CollectionSource"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-CollectionTime-model"/>
-        <display value="CollectionTime"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-CommentOrDescription-model"/>
-        <display value="CommentOrDescription"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-Communication-model"/>
-        <display value="Communication"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-Comparator-model"/>
-        <display value="Comparator"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-ComplicationCode-model"/>
-        <display value="ComplicationCode"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-ComplicationReference-model"/>
-        <display value="ComplicationReference"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-Components-model"/>
-        <display value="Components"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-Composition-model"/>
-        <display value="Composition"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-ConclusionCode-model"/>
-        <display value="ConclusionCode"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-ConclusionText-model"/>
-        <display value="ConclusionText"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-Condition-model"/>
-        <display value="Condition"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-ConditionStudied-model"/>
-        <display value="ConditionStudied"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-ConfidentialityCode-model"/>
-        <display value="ConfidentialityCode"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-ContactDetail-model"/>
-        <display value="ContactDetail"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-ContactPerson-model"/>
-        <display value="ContactPerson"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-ContactPoint-model"/>
-        <display value="ContactPoint"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-ContentType-model"/>
-        <display value="ContentType"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-CorrectionFactor-model"/>
-        <display value="CorrectionFactor"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-CostOrPercentage-model"/>
-        <display value="CostOrPercentage"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-CostToBeneficiary-model"/>
-        <display value="CostToBeneficiary"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-Count-model"/>
-        <display value="Count"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-Country-model"/>
-        <display value="Country"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-CourseOfTherapyType-model"/>
-        <display value="CourseOfTherapyType"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-Coverage-model"/>
-        <display value="Coverage"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-CoverageClassification-model"/>
-        <display value="CoverageClassification"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-CoverageType-model"/>
-        <display value="CoverageType"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-CreationDateTime-model"/>
-        <display value="CreationDateTime"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-Currency-model"/>
-        <display value="Currency"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/breastrad-CystTypes-model"/>
-        <display value="CystTypes"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-DailyLifeEvent-model"/>
-        <display value="DailyLifeEvent"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-DailyLifeEventOffset-model"/>
-        <display value="DailyLifeEventOffset"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-DataAbsentReason-model"/>
-        <display value="DataAbsentReason"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-DataAsString-model"/>
-        <display value="DataAsString"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-DataValue-model"/>
-        <display value="DataValue"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-DateOfDiagnosis-model"/>
-        <display value="DateOfDiagnosis"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-DayOfWeek-model"/>
-        <display value="DayOfWeek"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-Deceased-model"/>
-        <display value="Deceased"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-Denominator-model"/>
-        <display value="Denominator"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-DependentIdentifier-model"/>
-        <display value="DependentIdentifier"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-DerivedFrom-model"/>
-        <display value="DerivedFrom"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-DescriptionMarkdown-model"/>
-        <display value="DescriptionMarkdown"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-DetailsUri-model"/>
-        <display value="DetailsUri"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-Device-model"/>
-        <display value="Device"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-DeviceDesignation-model"/>
-        <display value="DeviceDesignation"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-DeviceIdentifier-model"/>
-        <display value="DeviceIdentifier"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-DeviceName-model"/>
-        <display value="DeviceName"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-DiagnosisCode-model"/>
-        <display value="DiagnosisCode"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-DiagnosticReport-model"/>
-        <display value="DiagnosticReport"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-DiagnosticReportPerformer-model"/>
-        <display value="DiagnosticReportPerformer"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-Dimensions-model"/>
-        <display value="Dimensions"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-DispenseInterval-model"/>
-        <display value="DispenseInterval"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-DispenseRequest-model"/>
-        <display value="DispenseRequest"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-DisplayText-model"/>
-        <display value="DisplayText"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-DistinctIdentifier-model"/>
-        <display value="DistinctIdentifier"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-District-model"/>
-        <display value="District"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-DoNotPerform-model"/>
-        <display value="DoNotPerform"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-DocumentAuthor-model"/>
-        <display value="DocumentAuthor"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-DocumentReference-model"/>
-        <display value="DocumentReference"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-DocumentReferenced-model"/>
-        <display value="DocumentReferenced"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-DocumentStatus-model"/>
-        <display value="DocumentStatus"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-DomainResource-model"/>
-        <display value="DomainResource"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-Dosage-model"/>
-        <display value="Dosage"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-DoseAmount-model"/>
-        <display value="DoseAmount"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-DoseAndRate-model"/>
-        <display value="DoseAndRate"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-DoseForm-model"/>
-        <display value="DoseForm"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-DoseRate-model"/>
-        <display value="DoseRate"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-DoseSequenceNumber-model"/>
-        <display value="DoseSequenceNumber"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-Duration-model"/>
-        <display value="Duration"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-EffectiveTimePeriod-model"/>
-        <display value="EffectiveTimePeriod"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-EmbeddedContent-model"/>
-        <display value="EmbeddedContent"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-EmptyReason-model"/>
-        <display value="EmptyReason"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-Encounter-model"/>
-        <display value="Encounter"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-EncounterClass-model"/>
-        <display value="EncounterClass"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-EncounterDiagnosis-model"/>
-        <display value="EncounterDiagnosis"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-EncounterLocation-model"/>
-        <display value="EncounterLocation"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-EncounterOrEpisode-model"/>
-        <display value="EncounterOrEpisode"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-EncounterParticipant-model"/>
-        <display value="EncounterParticipant"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-EncounterReasonReference-model"/>
-        <display value="EncounterReasonReference"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-EndDateTime-model"/>
-        <display value="EndDateTime"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-Enrollment-model"/>
-        <display value="Enrollment"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-Entity-model"/>
-        <display value="Entity"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-EntityOrRole-model"/>
-        <display value="EntityOrRole"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-EpisodeOfCare-model"/>
-        <display value="EpisodeOfCare"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-Ethnicity-model"/>
-        <display value="Ethnicity"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-EthnicityCode-model"/>
-        <display value="EthnicityCode"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-EthnicityDetail-model"/>
-        <display value="EthnicityDetail"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-EventContext-model"/>
-        <display value="EventContext"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-Evidence-model"/>
-        <display value="Evidence"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-Exception-model"/>
-        <display value="Exception"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-ExcludeFlag-model"/>
-        <display value="ExcludeFlag"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-ExpectedPerformanceTime-model"/>
-        <display value="ExpectedPerformanceTime"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-ExpectedPerformer-model"/>
-        <display value="ExpectedPerformer"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-ExpectedPerformerType-model"/>
-        <display value="ExpectedPerformerType"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-ExpirationDate-model"/>
-        <display value="ExpirationDate"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-FacilityType-model"/>
-        <display value="FacilityType"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-FamilyName-model"/>
-        <display value="FamilyName"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/breastrad-FindingSummaryBiRadCode-model"/>
-        <display value="FindingSummaryBiRadCode"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/breastrad-Findings-model"/>
-        <display value="Findings"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/breastrad-FindingsLeftBreast-model"/>
-        <display value="FindingsLeftBreast"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/breastrad-FindingsRightBreast-model"/>
-        <display value="FindingsRightBreast"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-FocalDevice-model"/>
-        <display value="FocalDevice"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-FocalDeviceAction-model"/>
-        <display value="FocalDeviceAction"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-FocalSubject-model"/>
-        <display value="FocalSubject"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-FollowUp-model"/>
-        <display value="FollowUp"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-Frames-model"/>
-        <display value="Frames"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-GeneralPractitioner-model"/>
-        <display value="GeneralPractitioner"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-Geoposition-model"/>
-        <display value="Geoposition"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-GivenName-model"/>
-        <display value="GivenName"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-Group-model"/>
-        <display value="Group"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-GroupCharacteristic-model"/>
-        <display value="GroupCharacteristic"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-GroupCharacteristicValue-model"/>
-        <display value="GroupCharacteristicValue"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-GroupIdentifier-model"/>
-        <display value="GroupIdentifier"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-GroupParticipant-model"/>
-        <display value="GroupParticipant"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-GroupParticipation-model"/>
-        <display value="GroupParticipation"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-HandlingRisk-model"/>
-        <display value="HandlingRisk"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-Hash-model"/>
-        <display value="Hash"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-HoursOfOperation-model"/>
-        <display value="HoursOfOperation"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-HumanName-model"/>
-        <display value="HumanName"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-Identifier-model"/>
-        <display value="Identifier"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-IdentifierString-model"/>
-        <display value="IdentifierString"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-ImplicitRules-model"/>
-        <display value="ImplicitRules"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/breastrad-Impressions-model"/>
-        <display value="Impressions"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-Inactive-model"/>
-        <display value="Inactive"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-Indication-model"/>
-        <display value="Indication"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-InformationItem-model"/>
-        <display value="InformationItem"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-InformationSource-model"/>
-        <display value="InformationSource"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-Ingredient-model"/>
-        <display value="Ingredient"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-IngredientStrength-model"/>
-        <display value="IngredientStrength"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-InitialFill-model"/>
-        <display value="InitialFill"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-InstructionCode-model"/>
-        <display value="InstructionCode"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-InstructionText-model"/>
-        <display value="InstructionText"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-Insurance-model"/>
-        <display value="Insurance"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-InsurerNetwork-model"/>
-        <display value="InsurerNetwork"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-Interpretation-model"/>
-        <display value="Interpretation"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-IsActiveIngredient-model"/>
-        <display value="IsActiveIngredient"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-Issuer-model"/>
-        <display value="Issuer"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-Jurisdiction-model"/>
-        <display value="Jurisdiction"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-Keyword-model"/>
-        <display value="Keyword"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-LabelText-model"/>
-        <display value="LabelText"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-LandmarkLocation-model"/>
-        <display value="LandmarkLocation"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-LandmarkToBodyLocationDirection-model"/>
-        <display value="LandmarkToBodyLocationDirection"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-LandmarkToBodyLocationDistance-model"/>
-        <display value="LandmarkToBodyLocationDistance"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-LandmarkType-model"/>
-        <display value="LandmarkType"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-Language-model"/>
-        <display value="Language"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-LastUpdated-model"/>
-        <display value="LastUpdated"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-Laterality-model"/>
-        <display value="Laterality"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-Latitude-model"/>
-        <display value="Latitude"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-Location-model"/>
-        <display value="Location"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-LocationType-model"/>
-        <display value="LocationType"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-Longitude-model"/>
-        <display value="Longitude"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-LotNumber-model"/>
-        <display value="LotNumber"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-LowerBound-model"/>
-        <display value="LowerBound"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-LowerLimit-model"/>
-        <display value="LowerLimit"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-ManagingEntity-model"/>
-        <display value="ManagingEntity"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-ManagingOrganization-model"/>
-        <display value="ManagingOrganization"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-Manifestation-model"/>
-        <display value="Manifestation"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-ManufactureDate-model"/>
-        <display value="ManufactureDate"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-Manufacturer-model"/>
-        <display value="Manufacturer"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-ManufacturerName-model"/>
-        <display value="ManufacturerName"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/breastrad-Margin-model"/>
-        <display value="Margin"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-MaritalStatus-model"/>
-        <display value="MaritalStatus"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/breastrad-MassTypes-model"/>
-        <display value="MassTypes"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-MasterIdentifier-model"/>
-        <display value="MasterIdentifier"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-MaterialUsedReference-model"/>
-        <display value="MaterialUsedReference"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-MaxDosePerAdministration-model"/>
-        <display value="MaxDosePerAdministration"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-MaxDosePerLifetime-model"/>
-        <display value="MaxDosePerLifetime"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-MaxDosePerPeriod-model"/>
-        <display value="MaxDosePerPeriod"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/breastrad-MaxLength-model"/>
-        <display value="MaxLength"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/breastrad-MaxWidth-model"/>
-        <display value="MaxWidth"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-Media-model"/>
-        <display value="Media"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-MediaBasedOn-model"/>
-        <display value="MediaBasedOn"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-MediaIncluded-model"/>
-        <display value="MediaIncluded"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-MediaSubjectOfRecord-model"/>
-        <display value="MediaSubjectOfRecord"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-Medication-model"/>
-        <display value="Medication"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-MedicationAction-model"/>
-        <display value="MedicationAction"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-MedicationAdministration-model"/>
-        <display value="MedicationAdministration"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-MedicationAdministrationBasedOn-model"/>
-        <display value="MedicationAdministrationBasedOn"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-MedicationAdministrationPartOf-model"/>
-        <display value="MedicationAdministrationPartOf"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-MedicationBasedOn-model"/>
-        <display value="MedicationBasedOn"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-MedicationCodeOrReference-model"/>
-        <display value="MedicationCodeOrReference"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-MedicationDispense-model"/>
-        <display value="MedicationDispense"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-MedicationInformationSource-model"/>
-        <display value="MedicationInformationSource"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-MedicationReasonReference-model"/>
-        <display value="MedicationReasonReference"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-MedicationRequest-model"/>
-        <display value="MedicationRequest"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-MedicationStatement-model"/>
-        <display value="MedicationStatement"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-MedicationStatementPartOf-model"/>
-        <display value="MedicationStatementPartOf"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-Metadata-model"/>
-        <display value="Metadata"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-Method-model"/>
-        <display value="Method"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-MillisecondsBetweenSamples-model"/>
-        <display value="MillisecondsBetweenSamples"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-Modality-model"/>
-        <display value="Modality"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-Mode-model"/>
-        <display value="Mode"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-ModelNumber-model"/>
-        <display value="ModelNumber"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-Money-model"/>
-        <display value="Money"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-MoneyAmount-model"/>
-        <display value="MoneyAmount"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-MultipleBirth-model"/>
-        <display value="MultipleBirth"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-Name-model"/>
-        <display value="Name"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-Narrative-model"/>
-        <display value="Narrative"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-NarrativeQualifier-model"/>
-        <display value="NarrativeQualifier"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-NarrativeText-model"/>
-        <display value="NarrativeText"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-NationalProviderIdentifier-model"/>
-        <display value="NationalProviderIdentifier"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-Need-model"/>
-        <display value="Need"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/breastrad-NodeTypes-model"/>
-        <display value="NodeTypes"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-Number-model"/>
-        <display value="Number"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-NumberOfRefillsAllowed-model"/>
-        <display value="NumberOfRefillsAllowed"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-NumberOfSecondsDuration-model"/>
-        <display value="NumberOfSecondsDuration"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-Numerator-model"/>
-        <display value="Numerator"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-Observation-model"/>
-        <display value="Observation"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-ObservationBasedOn-model"/>
-        <display value="ObservationBasedOn"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-ObservationComponent-model"/>
-        <display value="ObservationComponent"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-ObservationDerivedFrom-model"/>
-        <display value="ObservationDerivedFrom"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-ObservationPartOf-model"/>
-        <display value="ObservationPartOf"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-ObservationSubjectOfRecord-model"/>
-        <display value="ObservationSubjectOfRecord"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-OccurrenceTime-model"/>
-        <display value="OccurrenceTime"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-OccurrenceTimeOrPeriod-model"/>
-        <display value="OccurrenceTimeOrPeriod"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-OnBehalfOf-model"/>
-        <display value="OnBehalfOf"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-Onset-model"/>
-        <display value="Onset"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-OpeningTime-model"/>
-        <display value="OpeningTime"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-OperationalStatus-model"/>
-        <display value="OperationalStatus"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-Organization-model"/>
-        <display value="Organization"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-Origin-model"/>
-        <display value="Origin"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-Outcome-model"/>
-        <display value="Outcome"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-Owner-model"/>
-        <display value="Owner"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-PackageAmount-model"/>
-        <display value="PackageAmount"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-PanelMembers-model"/>
-        <display value="PanelMembers"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-PartOf-model"/>
-        <display value="PartOf"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-Participant-model"/>
-        <display value="Participant"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-Participation-model"/>
-        <display value="Participation"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-ParticipationPeriod-model"/>
-        <display value="ParticipationPeriod"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-ParticipationType-model"/>
-        <display value="ParticipationType"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-Patient-model"/>
-        <display value="Patient"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/breastrad-PatientHistory-model"/>
-        <display value="PatientHistory"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-PatientInstruction-model"/>
-        <display value="PatientInstruction"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/breastrad-PatientRisk-model"/>
-        <display value="PatientRisk"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-Payor-model"/>
-        <display value="Payor"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-Performer-model"/>
-        <display value="Performer"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-PersonAuthor-model"/>
-        <display value="PersonAuthor"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-PersonInformationSource-model"/>
-        <display value="PersonInformationSource"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-PersonParticipant-model"/>
-        <display value="PersonParticipant"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-PhotographicImage-model"/>
-        <display value="PhotographicImage"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-PhysicalType-model"/>
-        <display value="PhysicalType"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-PixelHeight-model"/>
-        <display value="PixelHeight"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-PixelWidth-model"/>
-        <display value="PixelWidth"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-PolicyHolder-model"/>
-        <display value="PolicyHolder"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-PostalCode-model"/>
-        <display value="PostalCode"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-Practitioner-model"/>
-        <display value="Practitioner"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-PractitionerRole-model"/>
-        <display value="PractitionerRole"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-Preferred-model"/>
-        <display value="Preferred"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-Prefix-model"/>
-        <display value="Prefix"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-PresentedForm-model"/>
-        <display value="PresentedForm"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-PrincipalInvestigator-model"/>
-        <display value="PrincipalInvestigator"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/breastrad-PriorReports-model"/>
-        <display value="PriorReports"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-PriorityCode-model"/>
-        <display value="PriorityCode"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-PriorityRank-model"/>
-        <display value="PriorityRank"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-Procedure-model"/>
-        <display value="Procedure"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-ProcedureBasedOn-model"/>
-        <display value="ProcedureBasedOn"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-ProcedurePartOf-model"/>
-        <display value="ProcedurePartOf"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-ProcedureParticipant-model"/>
-        <display value="ProcedureParticipant"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-ProcedureReasonReference-model"/>
-        <display value="ProcedureReasonReference"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-ProcedureRequest-model"/>
-        <display value="ProcedureRequest"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-ProcedureRequestReasonReference-model"/>
-        <display value="ProcedureRequestReasonReference"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-ProcedureRequestSubjectOfRecord-model"/>
-        <display value="ProcedureRequestSubjectOfRecord"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-ProcedureRequester-model"/>
-        <display value="ProcedureRequester"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-Profile-model"/>
-        <display value="Profile"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-Purpose-model"/>
-        <display value="Purpose"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-Qualification-model"/>
-        <display value="Qualification"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-QuantitativeObservationComponent-model"/>
-        <display value="QuantitativeObservationComponent"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-Quantity-model"/>
-        <display value="Quantity"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-QuantityPerDispense-model"/>
-        <display value="QuantityPerDispense"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-Question-model"/>
-        <display value="Question"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-QuestionnaireCanonical-model"/>
-        <display value="QuestionnaireCanonical"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-QuestionnaireResponse-model"/>
-        <display value="QuestionnaireResponse"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-QuestionnaireResponseBasedOn-model"/>
-        <display value="QuestionnaireResponseBasedOn"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-QuestionnaireResponseItem-model"/>
-        <display value="QuestionnaireResponseItem"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-QuestionnaireResponsePartOf-model"/>
-        <display value="QuestionnaireResponsePartOf"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-QuestionnaireResponseRecorder-model"/>
-        <display value="QuestionnaireResponseRecorder"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-Race-model"/>
-        <display value="Race"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-RaceCode-model"/>
-        <display value="RaceCode"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-RaceDetail-model"/>
-        <display value="RaceDetail"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-Range-model"/>
-        <display value="Range"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-Ratio-model"/>
-        <display value="Ratio"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-ReasonCode-model"/>
-        <display value="ReasonCode"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-ReasonReference-model"/>
-        <display value="ReasonReference"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-ReceivedTime-model"/>
-        <display value="ReceivedTime"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/breastrad-Recommendations-model"/>
-        <display value="Recommendations"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-ReferenceRange-model"/>
-        <display value="ReferenceRange"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-ReferralBasedOn-model"/>
-        <display value="ReferralBasedOn"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-ReferralReasonReference-model"/>
-        <display value="ReferralReasonReference"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-ReferralRecipient-model"/>
-        <display value="ReferralRecipient"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-ReferralRequest-model"/>
-        <display value="ReferralRequest"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-ReferralRequestSubjectOfRecord-model"/>
-        <display value="ReferralRequestSubjectOfRecord"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-ReferralRequester-model"/>
-        <display value="ReferralRequester"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-RelatedArtifact-model"/>
-        <display value="RelatedArtifact"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-RelatedDocument-model"/>
-        <display value="RelatedDocument"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-RelatedPerson-model"/>
-        <display value="RelatedPerson"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-RelationToLandmark-model"/>
-        <display value="RelationToLandmark"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-Relationship-model"/>
-        <display value="Relationship"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-RelevantTime-model"/>
-        <display value="RelevantTime"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-Repeat-model"/>
-        <display value="Repeat"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-RepeatBounds-model"/>
-        <display value="RepeatBounds"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-RepeatCount-model"/>
-        <display value="RepeatCount"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-RepeatCountMax-model"/>
-        <display value="RepeatCountMax"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-RepeatDuration-model"/>
-        <display value="RepeatDuration"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-RepeatDurationMax-model"/>
-        <display value="RepeatDurationMax"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-RepeatDurationUnit-model"/>
-        <display value="RepeatDurationUnit"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-RepeatFrequency-model"/>
-        <display value="RepeatFrequency"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-RepeatFrequencyMax-model"/>
-        <display value="RepeatFrequencyMax"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-RepeatPeriod-model"/>
-        <display value="RepeatPeriod"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-RepeatPeriodMax-model"/>
-        <display value="RepeatPeriodMax"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-RepeatPeriodUnit-model"/>
-        <display value="RepeatPeriodUnit"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-Replaces-model"/>
-        <display value="Replaces"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-Reported-model"/>
-        <display value="Reported"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-RequestIntent-model"/>
-        <display value="RequestIntent"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-RequestQuantity-model"/>
-        <display value="RequestQuantity"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-RequestSubjectOfRecord-model"/>
-        <display value="RequestSubjectOfRecord"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-Requester-model"/>
-        <display value="Requester"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-ResearchStudy-model"/>
-        <display value="ResearchStudy"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-ResearchStudyPhase-model"/>
-        <display value="ResearchStudyPhase"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-ResearchSubject-model"/>
-        <display value="ResearchSubject"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-Resource-model"/>
-        <display value="Resource"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-ResourceLocation-model"/>
-        <display value="ResourceLocation"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-ResourceSize-model"/>
-        <display value="ResourceSize"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/breastrad-ResultComposition-model"/>
-        <display value="ResultComposition"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-ResultsInterpreter-model"/>
-        <display value="ResultsInterpreter"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-Role-model"/>
-        <display value="Role"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-RouteIntoBody-model"/>
-        <display value="RouteIntoBody"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-Safety-model"/>
-        <display value="Safety"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-SamePersonAs-model"/>
-        <display value="SamePersonAs"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-SampledData-model"/>
-        <display value="SampledData"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-Section-model"/>
-        <display value="Section"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-SecurityLabel-model"/>
-        <display value="SecurityLabel"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-SequenceNumber-model"/>
-        <display value="SequenceNumber"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-SerialNumber-model"/>
-        <display value="SerialNumber"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-ServiceBasedOn-model"/>
-        <display value="ServiceBasedOn"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-ServiceCategory-model"/>
-        <display value="ServiceCategory"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-ServiceDetails-model"/>
-        <display value="ServiceDetails"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-ServiceReasonReference-model"/>
-        <display value="ServiceReasonReference"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-ServiceRequest-model"/>
-        <display value="ServiceRequest"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-Setting-model"/>
-        <display value="Setting"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-Severity-model"/>
-        <display value="Severity"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/breastrad-Shape-model"/>
-        <display value="Shape"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-SimpleQuantity-model"/>
-        <display value="SimpleQuantity"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-SituationStatement-model"/>
-        <display value="SituationStatement"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-SortOrder-model"/>
-        <display value="SortOrder"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-SourceSystem-model"/>
-        <display value="SourceSystem"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-SpecialHandling-model"/>
-        <display value="SpecialHandling"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-Specialty-model"/>
-        <display value="Specialty"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-Specimen-model"/>
-        <display value="Specimen"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-SpecimenContainer-model"/>
-        <display value="SpecimenContainer"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-SpecimenQuantity-model"/>
-        <display value="SpecimenQuantity"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-SpecimenTreatment-model"/>
-        <display value="SpecimenTreatment"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-SpecimenType-model"/>
-        <display value="SpecimenType"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-Sponsor-model"/>
-        <display value="Sponsor"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-StageDetail-model"/>
-        <display value="StageDetail"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-StageInformation-model"/>
-        <display value="StageInformation"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-StageSummary-model"/>
-        <display value="StageSummary"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-State-model"/>
-        <display value="State"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-StatementDateTime-model"/>
-        <display value="StatementDateTime"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-Status-model"/>
-        <display value="Status"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-StatusHistory-model"/>
-        <display value="StatusHistory"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-StatusReason-model"/>
-        <display value="StatusReason"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-StudyArm-model"/>
-        <display value="StudyArm"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-StudyObjective-model"/>
-        <display value="StudyObjective"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-SubjectOfRecord-model"/>
-        <display value="SubjectOfRecord"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-Subrogation-model"/>
-        <display value="Subrogation"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-Subscriber-model"/>
-        <display value="Subscriber"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-SubscriberId-model"/>
-        <display value="SubscriberId"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-Substance-model"/>
-        <display value="Substance"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-SubstanceOrCode-model"/>
-        <display value="SubstanceOrCode"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-Substitution-model"/>
-        <display value="Substitution"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-SubstitutionAllowed-model"/>
-        <display value="SubstitutionAllowed"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-SubstitutionReason-model"/>
-        <display value="SubstitutionReason"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-Suffix-model"/>
-        <display value="Suffix"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/breastrad-SummaryBiRadCode-model"/>
-        <display value="SummaryBiRadCode"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-SupplyDuration-model"/>
-        <display value="SupplyDuration"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-SupportingInformation-model"/>
-        <display value="SupportingInformation"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-Tag-model"/>
-        <display value="Tag"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-TargetDocument-model"/>
-        <display value="TargetDocument"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-TaxIdentificationNumber-model"/>
-        <display value="TaxIdentificationNumber"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-TelecomNumberOrAddress-model"/>
-        <display value="TelecomNumberOrAddress"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-TerminationReason-model"/>
-        <display value="TerminationReason"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-Text-model"/>
-        <display value="Text"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-TextMarkdown-model"/>
-        <display value="TextMarkdown"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-TimeOfDay-model"/>
-        <display value="TimeOfDay"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-TimePeriod-model"/>
-        <display value="TimePeriod"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-Timing-model"/>
-        <display value="Timing"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-TimingCode-model"/>
-        <display value="TimingCode"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-Title-model"/>
-        <display value="Title"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-TreatmentIntent-model"/>
-        <display value="TreatmentIntent"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-Type-model"/>
-        <display value="Type"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-UdiCarrier-model"/>
-        <display value="UdiCarrier"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-Units-model"/>
-        <display value="Units"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-UpperBound-model"/>
-        <display value="UpperBound"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-UpperLimit-model"/>
-        <display value="UpperLimit"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-Url-model"/>
-        <display value="Url"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-UsedCode-model"/>
-        <display value="UsedCode"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-UsedReference-model"/>
-        <display value="UsedReference"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-ValidityPeriod-model"/>
-        <display value="ValidityPeriod"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/breastrad-Vascularity-model"/>
-        <display value="Vascularity"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-VersionId-model"/>
-        <display value="VersionId"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-datatype-VersionString-model"/>
-        <display value="VersionString"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/obf-View-model"/>
-        <display value="View"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/breastrad-Wall-model"/>
-        <display value="Wall"/>
-      </reference>
-      <exampleBoolean value="false"/>
-      <groupingId value="p1"/>
     </resource>
     <page>
       <nameUrl value="index.html"/>

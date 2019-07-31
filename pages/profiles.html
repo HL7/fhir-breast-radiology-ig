@@ -41,17 +41,17 @@
   <tbody>
     <tr>
       <td><a href="StructureDefinition-breastrad-BreastAbnormality.html">BreastAbnormality</a></td>
-      <td><a href="http://hl7.org/fhir/STU3/observation.html">Observation</a></td>
+      <td><a href="http://hl7.org/fhir/R4/observation.html">Observation</a></td>
       <td>{% capture md_text %}Breast Abnormality Form{% endcapture %}{{ md_text | markdownify }}</td>
     </tr>
     <tr>
       <td><a href="StructureDefinition-breastrad-BreastRadiologyDocument.html">BreastRadiologyDocument</a></td>
-      <td><a href="http://hl7.org/fhir/STU3/composition.html">Composition</a></td>
+      <td><a href="http://hl7.org/fhir/R4/composition.html">Composition</a></td>
       <td>{% capture md_text %}Breast Radiology Document. This Composition contains the details of a specific Breast Radiology Report.{% endcapture %}{{ md_text | markdownify }}</td>
     </tr>
     <tr>
       <td><a href="StructureDefinition-breastrad-BreastRadiologyReport.html">BreastRadiologyReport</a></td>
-      <td><a href="http://hl7.org/fhir/STU3/diagnosticreport.html">DiagnosticReport</a></td>
+      <td><a href="http://hl7.org/fhir/R4/diagnosticreport.html">DiagnosticReport</a></td>
       <td>{% capture md_text %}Breast Radiology Diagnostic Report.
 <br>This diagnostic report is the base of the Breast Radiology Report, and contains a summary of the report findings.
 <br>Detailed information about the reports document is contained in the Breast Radiology Document linked to by the [resultComposition] field.{% endcapture %}{{ md_text | markdownify }}</td>
@@ -80,138 +80,149 @@
   <tbody>
     <tr>
       <td><a href="StructureDefinition-obf-AccessionIdentifier.html">AccessionIdentifier</a></td>
-      <td><a href="http://hl7.org/fhir/STU3/datatypes.html#identifier">Identifier</a></td>
+      <td><a href="http://hl7.org/fhir/R4/datatypes.html#identifier">Identifier</a></td>
       <td>{% capture md_text %}Identifier assigned by the lab{% endcapture %}{{ md_text | markdownify }}</td>
     </tr>
     <tr>
       <td><a href="StructureDefinition-obf-ActionPerformed.html">ActionPerformed</a></td>
-      <td><a href="http://hl7.org/fhir/STU3/domainresource.html">DomainResource</a></td>
+      <td><a href="http://hl7.org/fhir/R4/domainresource.html">DomainResource</a></td>
       <td>{% capture md_text %}Abstract class representing an event occurrence or performance of any type of action.{% endcapture %}{{ md_text | markdownify }}</td>
     </tr>
     <tr>
       <td><a href="StructureDefinition-obf-ActionRequest.html">ActionRequest</a></td>
-      <td><a href="http://hl7.org/fhir/STU3/domainresource.html">DomainResource</a></td>
+      <td><a href="http://hl7.org/fhir/R4/domainresource.html">DomainResource</a></td>
       <td>{% capture md_text %}Abstract class representing a request for any type of action to be performed.{% endcapture %}{{ md_text | markdownify }}</td>
     </tr>
     <tr>
       <td><a href="StructureDefinition-obf-ActionStatement.html">ActionStatement</a></td>
-      <td><a href="http://hl7.org/fhir/STU3/domainresource.html">DomainResource</a></td>
+      <td><a href="http://hl7.org/fhir/R4/domainresource.html">DomainResource</a></td>
       <td>{% capture md_text %}Abstract class representing any type of action or event.{% endcapture %}{{ md_text | markdownify }}</td>
     </tr>
     <tr>
-      <td><a href="StructureDefinition-obf-datatype-Age.html">Age</a></td>
-      <td><a href="http://hl7.org/fhir/STU3/datatypes.html#age">Age</a></td>
-      <td>{% capture md_text %}How long someone has been alive, or something has existed.{% endcapture %}{{ md_text | markdownify }}</td>
-    </tr>
-    <tr>
       <td><a href="StructureDefinition-obf-ClinicalStatement.html">ClinicalStatement</a></td>
-      <td><a href="http://hl7.org/fhir/STU3/domainresource.html">DomainResource</a></td>
+      <td><a href="http://hl7.org/fhir/R4/domainresource.html">DomainResource</a></td>
       <td>{% capture md_text %}This abstract class provides properties and behaviors common to entries in a medical record. Patient and Encounter are ubiquitous in clinical statements. This class also allows for common representation of simple data provenance elements asserter, recorder, and creation date.{% endcapture %}{{ md_text | markdownify }}</td>
     </tr>
     <tr>
-      <td><a href="StructureDefinition-obf-Composition.html">Composition</a></td>
-      <td><a href="http://hl7.org/fhir/STU3/composition.html">Composition</a></td>
-      <td>{% capture md_text %}A composition represents a set of Entries sharing common provenance, a document such as an extract from a patient record, a knowledge artifact, or a catalog definition.{% endcapture %}{{ md_text | markdownify }}</td>
-    </tr>
-    <tr>
       <td><a href="StructureDefinition-obf-Condition.html">Condition</a></td>
-      <td><a href="http://hl7.org/fhir/STU3/condition.html">Condition</a></td>
+      <td><a href="http://hl7.org/fhir/R4/condition.html">Condition</a></td>
       <td>{% capture md_text %}A condition that is or may be present in a subject. 'Condition' is interpreted broadly and could be a disorder, abnormality, problem, injury, complaint, functionality, illness, disease, ailment, sickness, affliction, upset, difficulty, disorder, symptom, worry, or trouble.
 The Observation-based class, ConditionAbsent, should be used to describe conditions that are not present or negative findings.
 This profiled Condition uses the BodyLocation structure that includes not only a code, but optional laterality, direction, and relation to landmark(s).{% endcapture %}{{ md_text | markdownify }}</td>
     </tr>
     <tr>
       <td><a href="StructureDefinition-obf-DiagnosticReport.html">DiagnosticReport</a></td>
-      <td><a href="http://hl7.org/fhir/STU3/diagnosticreport.html">DiagnosticReport</a></td>
+      <td><a href="http://hl7.org/fhir/R4/diagnosticreport.html">DiagnosticReport</a></td>
       <td>{% capture md_text %}The findings and interpretation of diagnostic tests performed on patients, groups of patients, devices, and locations, and/or specimens derived from these. The report includes clinical context such as requesting and provider information, and some mix of atomic results, images, textual and coded interpretations, and formatted representation of diagnostic reports.{% endcapture %}{{ md_text | markdownify }}</td>
     </tr>
     <tr>
       <td><a href="StructureDefinition-obf-DomainResource.html">DomainResource</a></td>
-      <td><a href="http://hl7.org/fhir/STU3/domainresource.html">DomainResource</a></td>
+      <td><a href="http://hl7.org/fhir/R4/domainresource.html">DomainResource</a></td>
       <td>{% capture md_text %}Parent class for any item in clinical or administrative health-related system. A DomainResource can belong to a single person's health record, or represent an entity that surfaces in multiple records, such as organizations, providers, payments, decision support artifacts, etc.
 
 Note to FHIR implementers: Objective FHIR includes Status and Identifier fields on DomainResource because these two attributes occur in almost every FHIR resource. The most significant exception are 3 or 4 resources that use an 'active' flag instead of coded status value. There is no apparent pattern to this inconsistency. FHIR resources that use a coded status have active and inactive as status values. In the spirit of providing a consistent object-oriented logical model for FHIR, Objective FHIR uses status across all domain resources.{% endcapture %}{{ md_text | markdownify }}</td>
     </tr>
     <tr>
       <td><a href="StructureDefinition-obf-datatype-Duration.html">Duration</a></td>
-      <td><a href="http://hl7.org/fhir/STU3/datatypes.html#duration">Duration</a></td>
+      <td><a href="http://hl7.org/fhir/R4/datatypes.html#duration">Duration</a></td>
       <td>{% capture md_text %}The length of time that something continues.{% endcapture %}{{ md_text | markdownify }}</td>
     </tr>
     <tr>
       <td><a href="StructureDefinition-obf-EncounterOrEpisode.html">EncounterOrEpisode</a></td>
-      <td><a href="http://hl7.org/fhir/STU3/domainresource.html">DomainResource</a></td>
+      <td><a href="http://hl7.org/fhir/R4/domainresource.html">DomainResource</a></td>
       <td>{% capture md_text %}Abstract element representing a group of services delivered to a patient.{% endcapture %}{{ md_text | markdownify }}</td>
     </tr>
     <tr>
       <td><a href="StructureDefinition-obf-Entity.html">Entity</a></td>
-      <td><a href="http://hl7.org/fhir/STU3/domainresource.html">DomainResource</a></td>
+      <td><a href="http://hl7.org/fhir/R4/domainresource.html">DomainResource</a></td>
       <td>{% capture md_text %}Root class for entities such as people, organizations, and devices that have a separately identifiable existence.{% endcapture %}{{ md_text | markdownify }}</td>
     </tr>
     <tr>
       <td><a href="StructureDefinition-obf-EntityOrRole.html">EntityOrRole</a></td>
-      <td><a href="http://hl7.org/fhir/STU3/domainresource.html">DomainResource</a></td>
+      <td><a href="http://hl7.org/fhir/R4/domainresource.html">DomainResource</a></td>
       <td>{% capture md_text %}Abstract parent class for both Entity and Role.{% endcapture %}{{ md_text | markdownify }}</td>
     </tr>
     <tr>
       <td><a href="StructureDefinition-obf-InformationItem.html">InformationItem</a></td>
-      <td><a href="http://hl7.org/fhir/STU3/domainresource.html">DomainResource</a></td>
+      <td><a href="http://hl7.org/fhir/R4/domainresource.html">DomainResource</a></td>
       <td>{% capture md_text %}An abstract class representing items such as administrative records, knowledge artifacts, definitional items, and entities such as organizations and entities. These items are often independent of a single patient, and do not represent clinical judgements or observations about a patient.{% endcapture %}{{ md_text | markdownify }}</td>
     </tr>
     <tr>
       <td><a href="StructureDefinition-obf-MedicationAction.html">MedicationAction</a></td>
-      <td><a href="http://hl7.org/fhir/STU3/domainresource.html">DomainResource</a></td>
+      <td><a href="http://hl7.org/fhir/R4/domainresource.html">DomainResource</a></td>
       <td>{% capture md_text %}Abstract class representing medication exposure, independent of whether reported in a medication statement or medication administration. Does not include medication requests (prescriptions).{% endcapture %}{{ md_text | markdownify }}</td>
     </tr>
     <tr>
       <td><a href="StructureDefinition-obf-MedicationDispense.html">MedicationDispense</a></td>
-      <td><a href="http://hl7.org/fhir/STU3/domainresource.html">DomainResource</a></td>
+      <td><a href="http://hl7.org/fhir/R4/domainresource.html">DomainResource</a></td>
       <td>{% capture md_text %}Indicates that a medication product has been dispensed for a named person/patient. This includes a description of the medication product (supply) provided and the instructions for administering the medication. The medication dispense is the result of a pharmacy system responding to a medication order.{% endcapture %}{{ md_text | markdownify }}</td>
     </tr>
     <tr>
+      <td><a href="StructureDefinition-obf-MedicationStatement.html">MedicationStatement</a></td>
+      <td><a href="http://hl7.org/fhir/R4/medicationstatement.html">MedicationStatement</a></td>
+      <td>{% capture md_text %}A record of the use of a medication. The use may be reported by the patient or clinician and adminstration does not have to be directly observed.
+
+FHIR Notes:
+
+Although FHIR supports the asserter (information source) and date asserted, it does not have a place for the author (who created and is responsible for the statement) and recorder (who entered the statement). Extensions are provided.
+
+The treatment of 'not taken' has changed from DSTU2 and STU3 to R4. In R4, status and statusReason are used to indicate medications not taken. For upward compatibility, the 'not taken' attributes are profiled out.
+ReasonCode is a choice of CodeableConcept or ref(Condition) in DSTU2, and limited to one reason (pick a type). In STU3 and R4, there can be multiple reason codes, and multiple reason references, simultaneously.
+
+Preference is given to using the National Library of Medicine (NLM) RxNorm terminology for medications. RxNorm is a coding standard established by the Office of the National Coordinator (ONC). However, RxNorm is restricted to FDA-approved drugs and does not include clinical trial drugs. MedicationStatement allows for the inclusion of other coding systems like the NCI Thesaurus (NCIT) to represent clinical trial oncology drugs.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
       <td><a href="StructureDefinition-obf-datatype-Money.html">Money</a></td>
-      <td><a href="http://hl7.org/fhir/STU3/datatypes.html#quantity">Quantity</a></td>
+      <td><a href="http://hl7.org/fhir/R4/datatypes.html#money">Money</a></td>
       <td>{% capture md_text %}Representation of an amount of currency or monetary value.{% endcapture %}{{ md_text | markdownify }}</td>
     </tr>
     <tr>
       <td><a href="StructureDefinition-obf-NationalProviderIdentifier.html">NationalProviderIdentifier</a></td>
-      <td><a href="http://hl7.org/fhir/STU3/datatypes.html#identifier">Identifier</a></td>
+      <td><a href="http://hl7.org/fhir/R4/datatypes.html#identifier">Identifier</a></td>
       <td>{% capture md_text %}NPI: a unique 10 digit number to allow US healthcare providers to identify themselves in a standard way throughout the healthcare industry.{% endcapture %}{{ md_text | markdownify }}</td>
     </tr>
     <tr>
       <td><a href="StructureDefinition-obf-Observation.html">Observation</a></td>
-      <td><a href="http://hl7.org/fhir/STU3/observation.html">Observation</a></td>
+      <td><a href="http://hl7.org/fhir/R4/observation.html">Observation</a></td>
       <td>{% capture md_text %}Represents the result of evaluations (measurements, tests, or questions) that have been performed.
 Observation has a value representing the result (answer), or an DataAbsentReason indicating why the value is not present. Things observed about the subject can include social and behavioral factors, subjective and objective observations, and assessments.
 For an Observation, the Code describes the aspect or property of the subject being observed or measured. The Code is the 'question code' that pairs to the 'answer' contained in the Value.{% endcapture %}{{ md_text | markdownify }}</td>
     </tr>
     <tr>
-      <td><a href="StructureDefinition-obf-datatype-RelatedArtifact.html">RelatedArtifact</a></td>
-      <td><a href="http://hl7.org/fhir/STU3/datatypes.html#relatedartifact">RelatedArtifact</a></td>
-      <td>{% capture md_text %}Items such as additional documentation, justification, or bibliographic references, that provide background for the current item.{% endcapture %}{{ md_text | markdownify }}</td>
+      <td><a href="StructureDefinition-obf-Patient.html">Patient</a></td>
+      <td><a href="http://hl7.org/fhir/R4/patient.html">Patient</a></td>
+      <td>{% capture md_text %}A person in the role of a patient. Sometimes, the patient is not the subject of information in a clinical statement where the Patient is the SubjectOfRecord.
+
+Compatibility: Lies at the intersection of Argonaut and US Core Patient. MaritalStatus has a required binding in Argonaut, but an extensible binding in US-Core. To be feasible under both DSTU2 Argonaut and STU3 US-Core, the required binding strength is adopted.{% endcapture %}{{ md_text | markdownify }}</td>
     </tr>
     <tr>
-      <td><a href="StructureDefinition-obf-Resource.html">Resource</a></td>
-      <td><a href="http://hl7.org/fhir/STU3/resource.html">Resource</a></td>
-      <td>{% capture md_text %}Parent class for any item in clinical or administrative health-related system. Contains metadata attributes that apply to any item represented in the standard health record. An DomainResource can belong to a single person's health record, or represent an entity that surfaces in multiple records, such as organizations, providers, payments, decision support artifacts, etc.{% endcapture %}{{ md_text | markdownify }}</td>
+      <td><a href="StructureDefinition-obf-Procedure.html">Procedure</a></td>
+      <td><a href="http://hl7.org/fhir/R4/procedure.html">Procedure</a></td>
+      <td>{% capture md_text %}An action that is or was performed on or for a patient. This can be a physical intervention like an operation, or less invasive like long term services, counseling, or hypnotherapy.{% endcapture %}{{ md_text | markdownify }}</td>
     </tr>
     <tr>
       <td><a href="StructureDefinition-obf-Role.html">Role</a></td>
-      <td><a href="http://hl7.org/fhir/STU3/domainresource.html">DomainResource</a></td>
+      <td><a href="http://hl7.org/fhir/R4/domainresource.html">DomainResource</a></td>
       <td>{% capture md_text %}Capacity in which an actor is involved in an activity. For instance, 'attending physician'. Note that attributes of the actor (an entity) that remain constant regardless of the role the actor plays should be part of the entity and not the role. For instance, a person may be a practitioner and a patient. In both cases their date of birth will be the same and thus such information should not be part of the role.{% endcapture %}{{ md_text | markdownify }}</td>
     </tr>
     <tr>
+      <td><a href="StructureDefinition-obf-datatype-SampledData.html">SampledData</a></td>
+      <td><a href="http://hl7.org/fhir/R4/datatypes.html#sampleddata">SampledData</a></td>
+      <td>{% capture md_text %}Data that comes from a series of measurements taken by a device, which may have upper and lower limits. The data type also supports more than one dimension in the data.{% endcapture %}{{ md_text | markdownify }}</td>
+    </tr>
+    <tr>
       <td><a href="StructureDefinition-obf-SituationStatement.html">SituationStatement</a></td>
-      <td><a href="http://hl7.org/fhir/STU3/domainresource.html">DomainResource</a></td>
+      <td><a href="http://hl7.org/fhir/R4/domainresource.html">DomainResource</a></td>
       <td>{% capture md_text %}An assertion, determination, opinion, evaluation, result, observation, or measurement made by a person or device.{% endcapture %}{{ md_text | markdownify }}</td>
     </tr>
     <tr>
       <td><a href="StructureDefinition-obf-TaxIdentificationNumber.html">TaxIdentificationNumber</a></td>
-      <td><a href="http://hl7.org/fhir/STU3/datatypes.html#identifier">Identifier</a></td>
+      <td><a href="http://hl7.org/fhir/R4/datatypes.html#identifier">Identifier</a></td>
       <td>{% capture md_text %}Tax identification number for the practitioner.{% endcapture %}{{ md_text | markdownify }}</td>
     </tr>
     <tr>
       <td><a href="StructureDefinition-obf-datatype-Timing.html">Timing</a></td>
-      <td><a href="http://hl7.org/fhir/STU3/datatypes.html#timing">Timing</a></td>
+      <td><a href="http://hl7.org/fhir/R4/datatypes.html#timing">Timing</a></td>
       <td>{% capture md_text %}A timing schedule that specifies an event that may occur multiple times.
 Timing offers a choice of multiple OccurrenceTime (used is used to specify specific times), or recurrence patterns.{% endcapture %}{{ md_text | markdownify }}</td>
     </tr>
