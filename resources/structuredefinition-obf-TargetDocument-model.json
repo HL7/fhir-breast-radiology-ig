@@ -1,0 +1,132 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "obf-TargetDocument-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>TargetDocument Logical Model</b></p>\n  <p>The target document of this relationship.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-TargetDocument-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/breast-radiology",
+      "value": "obf.TargetDocument"
+    }
+  ],
+  "name": "TargetDocument",
+  "title": "obf-TargetDocument",
+  "status": "draft",
+  "date": "2019-07-30",
+  "publisher": "Hl7",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://BreastRadReport.com"
+        }
+      ]
+    }
+  ],
+  "description": "The target document of this relationship.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "obf-TargetDocument-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "obf-TargetDocument-model",
+        "path": "obf-TargetDocument-model",
+        "definition": "The target document of this relationship.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-TargetDocument-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-TargetDocument-model.value[x]",
+        "path": "obf-TargetDocument-model.value[x]",
+        "short": "Choice of types representing the target document of this relationship.",
+        "definition": "Choice of types representing the target document of this relationship.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-TargetDocument-model.value[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-DocumentReference-model"
+          },
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-Identifier-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Composition-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "obf-TargetDocument-model",
+        "path": "obf-TargetDocument-model",
+        "definition": "The target document of this relationship.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-TargetDocument-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-TargetDocument-model.value[x]",
+        "path": "obf-TargetDocument-model.value[x]",
+        "short": "Choice of types representing the target document of this relationship.",
+        "definition": "Choice of types representing the target document of this relationship.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-TargetDocument-model.value[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-DocumentReference-model"
+          },
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-Identifier-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Composition-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "obf-Components-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>Components Logical Model</b></p>\n  <p>Sub-observations that are part of this observation. A sub-observation contributs to the parent observation and are always treated a part of a single observation (they are not separable). However, the reference range for the primary observation value is not inherited by the component values and is required when appropriate for each component observation.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Components-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/breast-radiology",
+      "value": "obf.Components"
+    }
+  ],
+  "name": "Components",
+  "title": "obf-Components",
+  "status": "draft",
+  "date": "2019-07-30",
+  "publisher": "Hl7",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://BreastRadReport.com"
+        }
+      ]
+    }
+  ],
+  "description": "Sub-observations that are part of this observation. A sub-observation contributs to the parent observation and are always treated a part of a single observation (they are not separable). However, the reference range for the primary observation value is not inherited by the component values and is required when appropriate for each component observation.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "obf-Components-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "obf-Components-model",
+        "path": "obf-Components-model",
+        "definition": "Sub-observations that are part of this observation. A sub-observation contributs to the parent observation and are always treated a part of a single observation (they are not separable). However, the reference range for the primary observation value is not inherited by the component values and is required when appropriate for each component observation.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Components-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Components-model.observationComponent",
+        "path": "obf-Components-model.observationComponent",
+        "short": "A sub-observation contributing to the parent observation, expressed as separate code value pairs that share the same attributes. Examples include systolic and diastolic component observations for blood pressure measurement and multiple component observations for genetics observations. Component observations share the same attributes in the Observation resource as the primary observation and are always treated a part of a single observation (they are not separable). However, the reference range for the primary observation value is not inherited by the component values and is required when appropriate for each component observation.",
+        "definition": "A sub-observation contributing to the parent observation, expressed as separate code value pairs that share the same attributes. Examples include systolic and diastolic component observations for blood pressure measurement and multiple component observations for genetics observations. Component observations share the same attributes in the Observation resource as the primary observation and are always treated a part of a single observation (they are not separable). However, the reference range for the primary observation value is not inherited by the component values and is required when appropriate for each component observation.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Components-model.observationComponent",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-ObservationComponent-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "obf-Components-model",
+        "path": "obf-Components-model",
+        "definition": "Sub-observations that are part of this observation. A sub-observation contributs to the parent observation and are always treated a part of a single observation (they are not separable). However, the reference range for the primary observation value is not inherited by the component values and is required when appropriate for each component observation.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Components-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Components-model.observationComponent",
+        "path": "obf-Components-model.observationComponent",
+        "short": "A sub-observation contributing to the parent observation, expressed as separate code value pairs that share the same attributes. Examples include systolic and diastolic component observations for blood pressure measurement and multiple component observations for genetics observations. Component observations share the same attributes in the Observation resource as the primary observation and are always treated a part of a single observation (they are not separable). However, the reference range for the primary observation value is not inherited by the component values and is required when appropriate for each component observation.",
+        "definition": "A sub-observation contributing to the parent observation, expressed as separate code value pairs that share the same attributes. Examples include systolic and diastolic component observations for blood pressure measurement and multiple component observations for genetics observations. Component observations share the same attributes in the Observation resource as the primary observation and are always treated a part of a single observation (they are not separable). However, the reference range for the primary observation value is not inherited by the component values and is required when appropriate for each component observation.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Components-model.observationComponent",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-ObservationComponent-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "obf-MedicationAdministrationBasedOn-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>MedicationAdministrationBasedOn Logical Model</b></p>\n  <p>The original request, instruction or authority to perform the administration.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-MedicationAdministrationBasedOn-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/breast-radiology",
+      "value": "obf.MedicationAdministrationBasedOn"
+    }
+  ],
+  "name": "MedicationAdministrationBasedOn",
+  "title": "obf-MedicationAdministrationBasedOn",
+  "status": "draft",
+  "date": "2019-07-30",
+  "publisher": "Hl7",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://BreastRadReport.com"
+        }
+      ]
+    }
+  ],
+  "description": "The original request, instruction or authority to perform the administration.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "obf-MedicationAdministrationBasedOn-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "obf-MedicationAdministrationBasedOn-model",
+        "path": "obf-MedicationAdministrationBasedOn-model",
+        "definition": "The original request, instruction or authority to perform the administration.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-MedicationAdministrationBasedOn-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-MedicationAdministrationBasedOn-model.value[x]",
+        "path": "obf-MedicationAdministrationBasedOn-model.value[x]",
+        "short": "MedicationRequest representing the original request, instruction or authority to perform the administration.",
+        "definition": "MedicationRequest representing the original request, instruction or authority to perform the administration.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-MedicationAdministrationBasedOn-model.value[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-MedicationRequest-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "obf-MedicationAdministrationBasedOn-model",
+        "path": "obf-MedicationAdministrationBasedOn-model",
+        "definition": "The original request, instruction or authority to perform the administration.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-MedicationAdministrationBasedOn-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-MedicationAdministrationBasedOn-model.value[x]",
+        "path": "obf-MedicationAdministrationBasedOn-model.value[x]",
+        "short": "MedicationRequest representing the original request, instruction or authority to perform the administration.",
+        "definition": "MedicationRequest representing the original request, instruction or authority to perform the administration.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-MedicationAdministrationBasedOn-model.value[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-MedicationRequest-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

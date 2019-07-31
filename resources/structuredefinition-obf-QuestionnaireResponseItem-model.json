@@ -1,0 +1,284 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "obf-QuestionnaireResponseItem-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>QuestionnaireResponseItem Logical Model</b></p>\n  <p>Questions and sections within the Questionnaire.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-QuestionnaireResponseItem-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/breast-radiology",
+      "value": "obf.QuestionnaireResponseItem"
+    }
+  ],
+  "name": "QuestionnaireResponseItem",
+  "title": "obf-QuestionnaireResponseItem",
+  "status": "draft",
+  "date": "2019-07-30",
+  "publisher": "Hl7",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://BreastRadReport.com"
+        }
+      ]
+    }
+  ],
+  "description": "Questions and sections within the Questionnaire.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "obf-QuestionnaireResponseItem-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "obf-QuestionnaireResponseItem-model",
+        "path": "obf-QuestionnaireResponseItem-model",
+        "definition": "Questions and sections within the Questionnaire.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-QuestionnaireResponseItem-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-QuestionnaireResponseItem-model.identifierString",
+        "path": "obf-QuestionnaireResponseItem-model.identifierString",
+        "short": "An id for the item expressed as a string.",
+        "definition": "An id for the item expressed as a string.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-QuestionnaireResponseItem-model.identifierString",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-QuestionnaireResponseItem-model.detailsUri",
+        "path": "obf-QuestionnaireResponseItem-model.detailsUri",
+        "short": "A URI that refers to an ElementDefinition that provides information about this item, including information that might otherwise be included in the instance of the Questionnaire resource.",
+        "definition": "A URI that refers to an ElementDefinition that provides information about this item, including information that might otherwise be included in the instance of the Questionnaire resource.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-QuestionnaireResponseItem-model.detailsUri",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-QuestionnaireResponseItem-model.questionnaireResponseItem",
+        "path": "obf-QuestionnaireResponseItem-model.questionnaireResponseItem",
+        "short": "Questions and sections within the Questionnaire.",
+        "definition": "Questions and sections within the Questionnaire.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-QuestionnaireResponseItem-model.questionnaireResponseItem",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-QuestionnaireResponseItem-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-QuestionnaireResponseItem-model.question",
+        "path": "obf-QuestionnaireResponseItem-model.question",
+        "short": "The text of the question.",
+        "definition": "The text of the question.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-QuestionnaireResponseItem-model.question",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-QuestionnaireResponseItem-model.answer",
+        "path": "obf-QuestionnaireResponseItem-model.answer",
+        "short": "The respondent's answer(s) to the question.",
+        "definition": "The respondent's answer(s) to the question.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-QuestionnaireResponseItem-model.answer",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Answer-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "obf-QuestionnaireResponseItem-model",
+        "path": "obf-QuestionnaireResponseItem-model",
+        "definition": "Questions and sections within the Questionnaire.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-QuestionnaireResponseItem-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-QuestionnaireResponseItem-model.identifierString",
+        "path": "obf-QuestionnaireResponseItem-model.identifierString",
+        "short": "An id for the item expressed as a string.",
+        "definition": "An id for the item expressed as a string.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-QuestionnaireResponseItem-model.identifierString",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-QuestionnaireResponseItem-model.detailsUri",
+        "path": "obf-QuestionnaireResponseItem-model.detailsUri",
+        "short": "A URI that refers to an ElementDefinition that provides information about this item, including information that might otherwise be included in the instance of the Questionnaire resource.",
+        "definition": "A URI that refers to an ElementDefinition that provides information about this item, including information that might otherwise be included in the instance of the Questionnaire resource.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-QuestionnaireResponseItem-model.detailsUri",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-QuestionnaireResponseItem-model.questionnaireResponseItem",
+        "path": "obf-QuestionnaireResponseItem-model.questionnaireResponseItem",
+        "short": "Questions and sections within the Questionnaire.",
+        "definition": "Questions and sections within the Questionnaire.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-QuestionnaireResponseItem-model.questionnaireResponseItem",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-QuestionnaireResponseItem-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-QuestionnaireResponseItem-model.question",
+        "path": "obf-QuestionnaireResponseItem-model.question",
+        "short": "The text of the question.",
+        "definition": "The text of the question.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-QuestionnaireResponseItem-model.question",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-QuestionnaireResponseItem-model.answer",
+        "path": "obf-QuestionnaireResponseItem-model.answer",
+        "short": "The respondent's answer(s) to the question.",
+        "definition": "The respondent's answer(s) to the question.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-QuestionnaireResponseItem-model.answer",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Answer-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

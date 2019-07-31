@@ -1,0 +1,128 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "obf-FocalDeviceAction-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>FocalDeviceAction Logical Model</b></p>\n  <p>The kind of change that happened to the device during the procedure.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-FocalDeviceAction-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/breast-radiology",
+      "value": "obf.FocalDeviceAction"
+    }
+  ],
+  "name": "FocalDeviceAction",
+  "title": "obf-FocalDeviceAction",
+  "status": "draft",
+  "date": "2019-07-30",
+  "publisher": "Hl7",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://BreastRadReport.com"
+        }
+      ]
+    }
+  ],
+  "description": "The kind of change that happened to the device during the procedure.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "obf-FocalDeviceAction-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "obf-FocalDeviceAction-model",
+        "path": "obf-FocalDeviceAction-model",
+        "definition": "The kind of change that happened to the device during the procedure.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-FocalDeviceAction-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-FocalDeviceAction-model.value",
+        "path": "obf-FocalDeviceAction-model.value",
+        "short": "Concept representing the kind of change that happened to the device during the procedure.",
+        "definition": "Concept representing the kind of change that happened to the device during the procedure.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-FocalDeviceAction-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/device-action"
+          }
+        }
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "obf-FocalDeviceAction-model",
+        "path": "obf-FocalDeviceAction-model",
+        "definition": "The kind of change that happened to the device during the procedure.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-FocalDeviceAction-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-FocalDeviceAction-model.value",
+        "path": "obf-FocalDeviceAction-model.value",
+        "short": "Concept representing the kind of change that happened to the device during the procedure.",
+        "definition": "Concept representing the kind of change that happened to the device during the procedure.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-FocalDeviceAction-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/device-action"
+          }
+        }
+      }
+    ]
+  }
+}

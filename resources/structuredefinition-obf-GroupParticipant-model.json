@@ -1,0 +1,134 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "obf-GroupParticipant-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>GroupParticipant Logical Model</b></p>\n  <p>A person or entity in a group.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-GroupParticipant-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/breast-radiology",
+      "value": "obf.GroupParticipant"
+    }
+  ],
+  "name": "GroupParticipant",
+  "title": "obf-GroupParticipant",
+  "status": "draft",
+  "date": "2019-07-30",
+  "publisher": "Hl7",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://BreastRadReport.com"
+        }
+      ]
+    }
+  ],
+  "description": "A person or entity in a group.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "obf-GroupParticipant-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "obf-GroupParticipant-model",
+        "path": "obf-GroupParticipant-model",
+        "definition": "A person or entity in a group.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-GroupParticipant-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-GroupParticipant-model.value[x]",
+        "path": "obf-GroupParticipant-model.value[x]",
+        "short": "Choice of types representing a person or entity in a group.",
+        "definition": "Choice of types representing a person or entity in a group.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-GroupParticipant-model.value[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Patient-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Practitioner-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Device-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "obf-GroupParticipant-model",
+        "path": "obf-GroupParticipant-model",
+        "definition": "A person or entity in a group.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-GroupParticipant-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-GroupParticipant-model.value[x]",
+        "path": "obf-GroupParticipant-model.value[x]",
+        "short": "Choice of types representing a person or entity in a group.",
+        "definition": "Choice of types representing a person or entity in a group.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-GroupParticipant-model.value[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Patient-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Practitioner-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Device-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

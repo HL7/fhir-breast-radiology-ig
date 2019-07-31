@@ -1,0 +1,266 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "obf-UdiCarrier-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>UdiCarrier Logical Model</b></p>\n  <p>Structure of the Unique Device Identifier (UDI) Barcode string number for a device, assigned by the organization using the device.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-UdiCarrier-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/breast-radiology",
+      "value": "obf.UdiCarrier"
+    }
+  ],
+  "name": "UdiCarrier",
+  "title": "obf-UdiCarrier",
+  "status": "draft",
+  "date": "2019-07-30",
+  "publisher": "Hl7",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://BreastRadReport.com"
+        }
+      ]
+    }
+  ],
+  "description": "Structure of the Unique Device Identifier (UDI) Barcode string number for a device, assigned by the organization using the device.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "obf-UdiCarrier-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "obf-UdiCarrier-model",
+        "path": "obf-UdiCarrier-model",
+        "definition": "Structure of the Unique Device Identifier (UDI) Barcode string number for a device, assigned by the organization using the device.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-UdiCarrier-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-UdiCarrier-model.deviceIdentifier",
+        "path": "obf-UdiCarrier-model.deviceIdentifier",
+        "short": "Mandatory fixed portion of UDI",
+        "definition": "Mandatory fixed portion of UDI",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-UdiCarrier-model.deviceIdentifier",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-UdiCarrier-model.carrierAIDC",
+        "path": "obf-UdiCarrier-model.carrierAIDC",
+        "short": "UDI Machine Readable Barcode String",
+        "definition": "UDI Machine Readable Barcode String",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-UdiCarrier-model.carrierAIDC",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "base64Binary"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-UdiCarrier-model.carrierHRF",
+        "path": "obf-UdiCarrier-model.carrierHRF",
+        "short": "UDI Human Readable Barcode String",
+        "definition": "UDI Human Readable Barcode String",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-UdiCarrier-model.carrierHRF",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-UdiCarrier-model.type",
+        "path": "obf-UdiCarrier-model.type",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0332307"
+          }
+        ],
+        "short": "A code describing the item at a greater level of detail.",
+        "definition": "A code describing the item at a greater level of detail.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-UdiCarrier-model.type",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/udi-entry-type"
+          }
+        }
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "obf-UdiCarrier-model",
+        "path": "obf-UdiCarrier-model",
+        "definition": "Structure of the Unique Device Identifier (UDI) Barcode string number for a device, assigned by the organization using the device.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-UdiCarrier-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-UdiCarrier-model.deviceIdentifier",
+        "path": "obf-UdiCarrier-model.deviceIdentifier",
+        "short": "Mandatory fixed portion of UDI",
+        "definition": "Mandatory fixed portion of UDI",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-UdiCarrier-model.deviceIdentifier",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-UdiCarrier-model.carrierAIDC",
+        "path": "obf-UdiCarrier-model.carrierAIDC",
+        "short": "UDI Machine Readable Barcode String",
+        "definition": "UDI Machine Readable Barcode String",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-UdiCarrier-model.carrierAIDC",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "base64Binary"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-UdiCarrier-model.carrierHRF",
+        "path": "obf-UdiCarrier-model.carrierHRF",
+        "short": "UDI Human Readable Barcode String",
+        "definition": "UDI Human Readable Barcode String",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-UdiCarrier-model.carrierHRF",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-UdiCarrier-model.type",
+        "path": "obf-UdiCarrier-model.type",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0332307"
+          }
+        ],
+        "short": "A code describing the item at a greater level of detail.",
+        "definition": "A code describing the item at a greater level of detail.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-UdiCarrier-model.type",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/udi-entry-type"
+          }
+        }
+      }
+    ]
+  }
+}

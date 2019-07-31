@@ -1,0 +1,224 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "obf-StudyArm-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>StudyArm Logical Model</b></p>\n  <p>Arm refers to pre-specified group or subgroup of participant(s) in a clinical trial assigned to receive specific intervention(s) (or no intervention) according to a protocol.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-StudyArm-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/breast-radiology",
+      "value": "obf.StudyArm"
+    }
+  ],
+  "name": "StudyArm",
+  "title": "obf-StudyArm",
+  "status": "draft",
+  "date": "2019-07-30",
+  "publisher": "Hl7",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://BreastRadReport.com"
+        }
+      ]
+    }
+  ],
+  "description": "Arm refers to pre-specified group or subgroup of participant(s) in a clinical trial assigned to receive specific intervention(s) (or no intervention) according to a protocol.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "obf-StudyArm-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "obf-StudyArm-model",
+        "path": "obf-StudyArm-model",
+        "definition": "Arm refers to pre-specified group or subgroup of participant(s) in a clinical trial assigned to receive specific intervention(s) (or no intervention) according to a protocol.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-StudyArm-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-StudyArm-model.name",
+        "path": "obf-StudyArm-model.name",
+        "short": "The name as plain unstructured or semi-structured text.",
+        "definition": "The name as plain unstructured or semi-structured text.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-StudyArm-model.name",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-StudyArm-model.type",
+        "path": "obf-StudyArm-model.type",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0332307"
+          }
+        ],
+        "short": "A code describing the item at a greater level of detail.",
+        "definition": "A code describing the item at a greater level of detail.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-StudyArm-model.type",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/us/breast-radiology/obf/vs/StudyArmTypeVS"
+          }
+        }
+      },
+      {
+        "id": "obf-StudyArm-model.commentOrDescription",
+        "path": "obf-StudyArm-model.commentOrDescription",
+        "short": "A text note containing additional details, explanation, description, comment, or summarization.",
+        "definition": "A text note containing additional details, explanation, description, comment, or summarization.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-StudyArm-model.commentOrDescription",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "obf-StudyArm-model",
+        "path": "obf-StudyArm-model",
+        "definition": "Arm refers to pre-specified group or subgroup of participant(s) in a clinical trial assigned to receive specific intervention(s) (or no intervention) according to a protocol.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-StudyArm-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-StudyArm-model.name",
+        "path": "obf-StudyArm-model.name",
+        "short": "The name as plain unstructured or semi-structured text.",
+        "definition": "The name as plain unstructured or semi-structured text.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-StudyArm-model.name",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-StudyArm-model.type",
+        "path": "obf-StudyArm-model.type",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0332307"
+          }
+        ],
+        "short": "A code describing the item at a greater level of detail.",
+        "definition": "A code describing the item at a greater level of detail.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-StudyArm-model.type",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/us/breast-radiology/obf/vs/StudyArmTypeVS"
+          }
+        }
+      },
+      {
+        "id": "obf-StudyArm-model.commentOrDescription",
+        "path": "obf-StudyArm-model.commentOrDescription",
+        "short": "A text note containing additional details, explanation, description, comment, or summarization.",
+        "definition": "A text note containing additional details, explanation, description, comment, or summarization.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-StudyArm-model.commentOrDescription",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

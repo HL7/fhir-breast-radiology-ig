@@ -1,0 +1,868 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "obf-ActionPerformed-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>ActionPerformed Logical Model</b></p>\n  <p>Abstract class representing an event occurrence or performance of any type of action.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-ActionPerformed-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/breast-radiology",
+      "value": "obf.ActionPerformed"
+    }
+  ],
+  "name": "ActionPerformed",
+  "title": "obf-ActionPerformed",
+  "status": "draft",
+  "date": "2019-07-30",
+  "publisher": "Hl7",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://BreastRadReport.com"
+        }
+      ]
+    }
+  ],
+  "description": "Abstract class representing an event occurrence or performance of any type of action.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "obf-ActionPerformed-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "obf-ActionPerformed-model",
+        "path": "obf-ActionPerformed-model",
+        "definition": "Abstract class representing an event occurrence or performance of any type of action.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-ActionPerformed-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-ActionPerformed-model.metadata",
+        "path": "obf-ActionPerformed-model.metadata",
+        "short": "Elements that belong to all information items.",
+        "definition": "Elements that belong to all information items.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-ActionPerformed-model.metadata",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Metadata-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-ActionPerformed-model.language",
+        "path": "obf-ActionPerformed-model.language",
+        "short": "A human language, spoken or written.",
+        "definition": "A human language, spoken or written.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-ActionPerformed-model.language",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-ActionPerformed-model.implicitRules",
+        "path": "obf-ActionPerformed-model.implicitRules",
+        "short": "A set of rules under which this content was created",
+        "definition": "A set of rules under which this content was created",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-ActionPerformed-model.implicitRules",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-ActionPerformed-model.narrative",
+        "path": "obf-ActionPerformed-model.narrative",
+        "short": "A human-readable narrative, potentially including images, that contains a summary of the resource, and may be used to represent the content of the resource to a human.",
+        "definition": "A human-readable narrative, potentially including images, that contains a summary of the resource, and may be used to represent the content of the resource to a human.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-ActionPerformed-model.narrative",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Narrative-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-ActionPerformed-model.status",
+        "path": "obf-ActionPerformed-model.status",
+        "short": "A state that relates to the workflow or interpretation of this resource. Certain status values can modify the meaning of the resource, for example, entered-in-error. When a boolean value is used, Status of true indicates the record is active, false means inactive.",
+        "definition": "A state that relates to the workflow or interpretation of this resource. Certain status values can modify the meaning of the resource, for example, entered-in-error. When a boolean value is used, Status of true indicates the record is active, false means inactive.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-ActionPerformed-model.status",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-ActionPerformed-model.identifier",
+        "path": "obf-ActionPerformed-model.identifier",
+        "short": "Business identifier or external id for this resource.",
+        "definition": "Business identifier or external id for this resource.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-ActionPerformed-model.identifier",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-Identifier-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-ActionPerformed-model.subjectOfRecord[x]",
+        "path": "obf-ActionPerformed-model.subjectOfRecord[x]",
+        "short": "The subject of a clinical statement, often called the Patient or the Subject. The SubjectOfRecord typically identifies the clinical record in which this statement is contained. If the statement should be in John Doe's patient record, then John Doe is the subject of record. When there is no patient, the SubjectOfRecord can also be a location, group, or other entity that statement pertains to. For example, observations concerning a hospital ward would have a Location as the SubjectOfRecord.",
+        "definition": "The subject of a clinical statement, often called the Patient or the Subject. The SubjectOfRecord typically identifies the clinical record in which this statement is contained. If the statement should be in John Doe's patient record, then John Doe is the subject of record. When there is no patient, the SubjectOfRecord can also be a location, group, or other entity that statement pertains to. For example, observations concerning a hospital ward would have a Location as the SubjectOfRecord.\n\nNote that the word 'Subject' is used here in the sense of a person or entity subjected to observations or actions, not subject as in a conceptual topic, like heart disease.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-ActionPerformed-model.subjectOfRecord[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Patient-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Practitioner-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Group-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Device-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Specimen-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Location-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Medication-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-ResearchSubject-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-ActionPerformed-model.careContext[x]",
+        "path": "obf-ActionPerformed-model.careContext[x]",
+        "short": "The encounter or episode of care",
+        "definition": "The encounter or episode of care",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-ActionPerformed-model.careContext[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Encounter-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-EpisodeOfCare-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-ActionPerformed-model.statementDateTime",
+        "path": "obf-ActionPerformed-model.statementDateTime",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C3669169"
+          }
+        ],
+        "short": "The point in time when the statement was created.",
+        "definition": "The point in time when the statement was created.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-ActionPerformed-model.statementDateTime",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-ActionPerformed-model.reasonCode",
+        "path": "obf-ActionPerformed-model.reasonCode",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0566251"
+          }
+        ],
+        "short": "The explanation or justification for the current item or action, as a code.",
+        "definition": "The explanation or justification for the current item or action, as a code.\nReason is a string or CodeableConcept in DSTU2 but in later versions only a CodeableConcept.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-ActionPerformed-model.reasonCode",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-ActionPerformed-model.reasonReference[x]",
+        "path": "obf-ActionPerformed-model.reasonReference[x]",
+        "short": "The justification, as reference to a condition or observation.",
+        "definition": "The justification, as reference to a condition or observation.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-ActionPerformed-model.reasonReference[x]",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Condition-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Observation-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-DiagnosticReport-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-DocumentReference-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Procedure-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-ActionPerformed-model.basedOn[x]",
+        "path": "obf-ActionPerformed-model.basedOn[x]",
+        "short": "The proposal, order, or plan that is partly or wholly fulfilled by this item.",
+        "definition": "The proposal, order, or plan that is partly or wholly fulfilled by this item.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-ActionPerformed-model.basedOn[x]",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-ServiceRequest-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-ReferralRequest-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-ProcedureRequest-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-MedicationRequest-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-ActionPerformed-model.occurrenceTimeOrPeriod[x]",
+        "path": "obf-ActionPerformed-model.occurrenceTimeOrPeriod[x]",
+        "short": "The point or period of time when the event takes place. Times can be precise (dateTime) or approximate (date). If a time period is used, and the start date or dateTime is missing, the start of the period is not known. If the end date or dateTime is missing, it means that the period is ongoing.",
+        "definition": "The point or period of time when the event takes place. Times can be precise (dateTime) or approximate (date). If a time period is used, and the start date or dateTime is missing, the start of the period is not known. If the end date or dateTime is missing, it means that the period is ongoing.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-ActionPerformed-model.occurrenceTimeOrPeriod[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "date"
+          },
+          {
+            "code": "dateTime"
+          },
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-TimePeriod-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-ActionPerformed-model.participation",
+        "path": "obf-ActionPerformed-model.participation",
+        "short": "Record of someone or something involvement in an activity or event.",
+        "definition": "Record of someone or something involvement in an activity or event.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-ActionPerformed-model.participation",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Participation-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-ActionPerformed-model.method",
+        "path": "obf-ActionPerformed-model.method",
+        "short": "The technique used to carry out an action, for example, the specific imaging technical or assessment vehicle.",
+        "definition": "The technique used to carry out an action, for example, the specific imaging technical or assessment vehicle.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-ActionPerformed-model.method",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "obf-ActionPerformed-model",
+        "path": "obf-ActionPerformed-model",
+        "definition": "Abstract class representing an event occurrence or performance of any type of action.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-ActionPerformed-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-ActionPerformed-model.metadata",
+        "path": "obf-ActionPerformed-model.metadata",
+        "short": "Elements that belong to all information items.",
+        "definition": "Elements that belong to all information items.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-ActionPerformed-model.metadata",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Metadata-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-ActionPerformed-model.language",
+        "path": "obf-ActionPerformed-model.language",
+        "short": "A human language, spoken or written.",
+        "definition": "A human language, spoken or written.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-ActionPerformed-model.language",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-ActionPerformed-model.implicitRules",
+        "path": "obf-ActionPerformed-model.implicitRules",
+        "short": "A set of rules under which this content was created",
+        "definition": "A set of rules under which this content was created",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-ActionPerformed-model.implicitRules",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-ActionPerformed-model.narrative",
+        "path": "obf-ActionPerformed-model.narrative",
+        "short": "A human-readable narrative, potentially including images, that contains a summary of the resource, and may be used to represent the content of the resource to a human.",
+        "definition": "A human-readable narrative, potentially including images, that contains a summary of the resource, and may be used to represent the content of the resource to a human.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-ActionPerformed-model.narrative",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Narrative-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-ActionPerformed-model.status",
+        "path": "obf-ActionPerformed-model.status",
+        "short": "A state that relates to the workflow or interpretation of this resource. Certain status values can modify the meaning of the resource, for example, entered-in-error. When a boolean value is used, Status of true indicates the record is active, false means inactive.",
+        "definition": "A state that relates to the workflow or interpretation of this resource. Certain status values can modify the meaning of the resource, for example, entered-in-error. When a boolean value is used, Status of true indicates the record is active, false means inactive.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-ActionPerformed-model.status",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-ActionPerformed-model.identifier",
+        "path": "obf-ActionPerformed-model.identifier",
+        "short": "Business identifier or external id for this resource.",
+        "definition": "Business identifier or external id for this resource.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-ActionPerformed-model.identifier",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-Identifier-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-ActionPerformed-model.subjectOfRecord[x]",
+        "path": "obf-ActionPerformed-model.subjectOfRecord[x]",
+        "short": "The subject of a clinical statement, often called the Patient or the Subject. The SubjectOfRecord typically identifies the clinical record in which this statement is contained. If the statement should be in John Doe's patient record, then John Doe is the subject of record. When there is no patient, the SubjectOfRecord can also be a location, group, or other entity that statement pertains to. For example, observations concerning a hospital ward would have a Location as the SubjectOfRecord.",
+        "definition": "The subject of a clinical statement, often called the Patient or the Subject. The SubjectOfRecord typically identifies the clinical record in which this statement is contained. If the statement should be in John Doe's patient record, then John Doe is the subject of record. When there is no patient, the SubjectOfRecord can also be a location, group, or other entity that statement pertains to. For example, observations concerning a hospital ward would have a Location as the SubjectOfRecord.\n\nNote that the word 'Subject' is used here in the sense of a person or entity subjected to observations or actions, not subject as in a conceptual topic, like heart disease.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-ActionPerformed-model.subjectOfRecord[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Patient-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Practitioner-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Group-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Device-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Specimen-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Location-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Medication-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-ResearchSubject-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-ActionPerformed-model.careContext[x]",
+        "path": "obf-ActionPerformed-model.careContext[x]",
+        "short": "The encounter or episode of care",
+        "definition": "The encounter or episode of care",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-ActionPerformed-model.careContext[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Encounter-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-EpisodeOfCare-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-ActionPerformed-model.statementDateTime",
+        "path": "obf-ActionPerformed-model.statementDateTime",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C3669169"
+          }
+        ],
+        "short": "The point in time when the statement was created.",
+        "definition": "The point in time when the statement was created.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-ActionPerformed-model.statementDateTime",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-ActionPerformed-model.reasonCode",
+        "path": "obf-ActionPerformed-model.reasonCode",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0566251"
+          }
+        ],
+        "short": "The explanation or justification for the current item or action, as a code.",
+        "definition": "The explanation or justification for the current item or action, as a code.\nReason is a string or CodeableConcept in DSTU2 but in later versions only a CodeableConcept.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-ActionPerformed-model.reasonCode",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-ActionPerformed-model.reasonReference[x]",
+        "path": "obf-ActionPerformed-model.reasonReference[x]",
+        "short": "The justification, as reference to a condition or observation.",
+        "definition": "The justification, as reference to a condition or observation.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-ActionPerformed-model.reasonReference[x]",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Condition-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Observation-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-DiagnosticReport-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-DocumentReference-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Procedure-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-ActionPerformed-model.basedOn[x]",
+        "path": "obf-ActionPerformed-model.basedOn[x]",
+        "short": "The proposal, order, or plan that is partly or wholly fulfilled by this item.",
+        "definition": "The proposal, order, or plan that is partly or wholly fulfilled by this item.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-ActionPerformed-model.basedOn[x]",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-ServiceRequest-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-ReferralRequest-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-ProcedureRequest-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-MedicationRequest-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-ActionPerformed-model.occurrenceTimeOrPeriod[x]",
+        "path": "obf-ActionPerformed-model.occurrenceTimeOrPeriod[x]",
+        "short": "The point or period of time when the event takes place. Times can be precise (dateTime) or approximate (date). If a time period is used, and the start date or dateTime is missing, the start of the period is not known. If the end date or dateTime is missing, it means that the period is ongoing.",
+        "definition": "The point or period of time when the event takes place. Times can be precise (dateTime) or approximate (date). If a time period is used, and the start date or dateTime is missing, the start of the period is not known. If the end date or dateTime is missing, it means that the period is ongoing.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-ActionPerformed-model.occurrenceTimeOrPeriod[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "date"
+          },
+          {
+            "code": "dateTime"
+          },
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-TimePeriod-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-ActionPerformed-model.participation",
+        "path": "obf-ActionPerformed-model.participation",
+        "short": "Record of someone or something involvement in an activity or event.",
+        "definition": "Record of someone or something involvement in an activity or event.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-ActionPerformed-model.participation",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Participation-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-ActionPerformed-model.method",
+        "path": "obf-ActionPerformed-model.method",
+        "short": "The technique used to carry out an action, for example, the specific imaging technical or assessment vehicle.",
+        "definition": "The technique used to carry out an action, for example, the specific imaging technical or assessment vehicle.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-ActionPerformed-model.method",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

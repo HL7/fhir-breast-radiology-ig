@@ -1,0 +1,158 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "obf-StatusHistory-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>StatusHistory Logical Model</b></p>\n  <p>List of past encounter statuses</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-StatusHistory-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/breast-radiology",
+      "value": "obf.StatusHistory"
+    }
+  ],
+  "name": "StatusHistory",
+  "title": "obf-StatusHistory",
+  "status": "draft",
+  "date": "2019-07-30",
+  "publisher": "Hl7",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://BreastRadReport.com"
+        }
+      ]
+    }
+  ],
+  "description": "List of past encounter statuses",
+  "kind": "logical",
+  "abstract": false,
+  "type": "obf-StatusHistory-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "obf-StatusHistory-model",
+        "path": "obf-StatusHistory-model",
+        "definition": "List of past encounter statuses",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-StatusHistory-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-StatusHistory-model.status",
+        "path": "obf-StatusHistory-model.status",
+        "short": "A state that relates to the workflow or interpretation of this resource. Certain status values can modify the meaning of the resource, for example, entered-in-error. When a boolean value is used, Status of true indicates the record is active, false means inactive.",
+        "definition": "A state that relates to the workflow or interpretation of this resource. Certain status values can modify the meaning of the resource, for example, entered-in-error. When a boolean value is used, Status of true indicates the record is active, false means inactive.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-StatusHistory-model.status",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-StatusHistory-model.timePeriod",
+        "path": "obf-StatusHistory-model.timePeriod",
+        "short": "A period of time defined by a start and end time, date, or year.",
+        "definition": "A period of time defined by a start and end time, date, or year.\nIf the start date/time is missing, the start of the period is not known. If the end date/time is missing, it means that the period is ongoing.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-StatusHistory-model.timePeriod",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-TimePeriod-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "obf-StatusHistory-model",
+        "path": "obf-StatusHistory-model",
+        "definition": "List of past encounter statuses",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-StatusHistory-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-StatusHistory-model.status",
+        "path": "obf-StatusHistory-model.status",
+        "short": "A state that relates to the workflow or interpretation of this resource. Certain status values can modify the meaning of the resource, for example, entered-in-error. When a boolean value is used, Status of true indicates the record is active, false means inactive.",
+        "definition": "A state that relates to the workflow or interpretation of this resource. Certain status values can modify the meaning of the resource, for example, entered-in-error. When a boolean value is used, Status of true indicates the record is active, false means inactive.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-StatusHistory-model.status",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-StatusHistory-model.timePeriod",
+        "path": "obf-StatusHistory-model.timePeriod",
+        "short": "A period of time defined by a start and end time, date, or year.",
+        "definition": "A period of time defined by a start and end time, date, or year.\nIf the start date/time is missing, the start of the period is not known. If the end date/time is missing, it means that the period is ongoing.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-StatusHistory-model.timePeriod",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-TimePeriod-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

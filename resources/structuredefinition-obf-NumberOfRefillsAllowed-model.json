@@ -1,0 +1,116 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "obf-NumberOfRefillsAllowed-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>NumberOfRefillsAllowed Logical Model</b></p>\n  <p>The maximum number of times the dispense can be repeated. For medication dispense, this integer does NOT include the original order dispense. This means that if an order indicates dispense 30 tablets plus 3 repeats, then the order can be dispensed a total of 4 times and the patient can receive a total of 120 tablets.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-NumberOfRefillsAllowed-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/breast-radiology",
+      "value": "obf.NumberOfRefillsAllowed"
+    }
+  ],
+  "name": "NumberOfRefillsAllowed",
+  "title": "obf-NumberOfRefillsAllowed",
+  "status": "draft",
+  "date": "2019-07-30",
+  "publisher": "Hl7",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://BreastRadReport.com"
+        }
+      ]
+    }
+  ],
+  "description": "The maximum number of times the dispense can be repeated. For medication dispense, this integer does NOT include the original order dispense. This means that if an order indicates dispense 30 tablets plus 3 repeats, then the order can be dispensed a total of 4 times and the patient can receive a total of 120 tablets.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "obf-NumberOfRefillsAllowed-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "obf-NumberOfRefillsAllowed-model",
+        "path": "obf-NumberOfRefillsAllowed-model",
+        "definition": "The maximum number of times the dispense can be repeated. For medication dispense, this integer does NOT include the original order dispense. This means that if an order indicates dispense 30 tablets plus 3 repeats, then the order can be dispensed a total of 4 times and the patient can receive a total of 120 tablets.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-NumberOfRefillsAllowed-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-NumberOfRefillsAllowed-model.value",
+        "path": "obf-NumberOfRefillsAllowed-model.value",
+        "short": "UnsignedInt representing the maximum number of times the dispense can be repeated. For medication dispense, this integer does NOT include the original order dispense. This means that if an order indicates dispense 30 tablets plus 3 repeats, then the order can be dispensed a total of 4 times and the patient can receive a total of 120 tablets.",
+        "definition": "UnsignedInt representing the maximum number of times the dispense can be repeated. For medication dispense, this integer does NOT include the original order dispense. This means that if an order indicates dispense 30 tablets plus 3 repeats, then the order can be dispensed a total of 4 times and the patient can receive a total of 120 tablets.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-NumberOfRefillsAllowed-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "unsignedInt"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "obf-NumberOfRefillsAllowed-model",
+        "path": "obf-NumberOfRefillsAllowed-model",
+        "definition": "The maximum number of times the dispense can be repeated. For medication dispense, this integer does NOT include the original order dispense. This means that if an order indicates dispense 30 tablets plus 3 repeats, then the order can be dispensed a total of 4 times and the patient can receive a total of 120 tablets.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-NumberOfRefillsAllowed-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-NumberOfRefillsAllowed-model.value",
+        "path": "obf-NumberOfRefillsAllowed-model.value",
+        "short": "UnsignedInt representing the maximum number of times the dispense can be repeated. For medication dispense, this integer does NOT include the original order dispense. This means that if an order indicates dispense 30 tablets plus 3 repeats, then the order can be dispensed a total of 4 times and the patient can receive a total of 120 tablets.",
+        "definition": "UnsignedInt representing the maximum number of times the dispense can be repeated. For medication dispense, this integer does NOT include the original order dispense. This means that if an order indicates dispense 30 tablets plus 3 repeats, then the order can be dispensed a total of 4 times and the patient can receive a total of 120 tablets.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-NumberOfRefillsAllowed-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "unsignedInt"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

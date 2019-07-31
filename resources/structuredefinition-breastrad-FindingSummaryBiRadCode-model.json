@@ -1,0 +1,128 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "breastrad-FindingSummaryBiRadCode-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>FindingSummaryBiRadCode Logical Model</b></p>\n  <p>BiRd code that summarizes a set of BiRad codes for a single breast finding. Generally the most concerning/important BiRad code in that finding.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/breastrad-FindingSummaryBiRadCode-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/breast-radiology",
+      "value": "breastrad.FindingSummaryBiRadCode"
+    }
+  ],
+  "name": "FindingSummaryBiRadCode",
+  "title": "breastrad-FindingSummaryBiRadCode",
+  "status": "draft",
+  "date": "2019-07-30",
+  "publisher": "Hl7",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://BreastRadReport.com"
+        }
+      ]
+    }
+  ],
+  "description": "BiRd code that summarizes a set of BiRad codes for a single breast finding. Generally the most concerning/important BiRad code in that finding.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "breastrad-FindingSummaryBiRadCode-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "breastrad-FindingSummaryBiRadCode-model",
+        "path": "breastrad-FindingSummaryBiRadCode-model",
+        "definition": "BiRd code that summarizes a set of BiRad codes for a single breast finding. Generally the most concerning/important BiRad code in that finding.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "breastrad-FindingSummaryBiRadCode-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "breastrad-FindingSummaryBiRadCode-model.value",
+        "path": "breastrad-FindingSummaryBiRadCode-model.value",
+        "short": "Concept representing biRd code that summarizes a set of BiRad codes for a single breast finding. Generally the most concerning/important BiRad code in that finding.",
+        "definition": "Concept representing biRd code that summarizes a set of BiRad codes for a single breast finding. Generally the most concerning/important BiRad code in that finding.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "breastrad-FindingSummaryBiRadCode-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/BiRadCodeVS"
+          }
+        }
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "breastrad-FindingSummaryBiRadCode-model",
+        "path": "breastrad-FindingSummaryBiRadCode-model",
+        "definition": "BiRd code that summarizes a set of BiRad codes for a single breast finding. Generally the most concerning/important BiRad code in that finding.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "breastrad-FindingSummaryBiRadCode-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "breastrad-FindingSummaryBiRadCode-model.value",
+        "path": "breastrad-FindingSummaryBiRadCode-model.value",
+        "short": "Concept representing biRd code that summarizes a set of BiRad codes for a single breast finding. Generally the most concerning/important BiRad code in that finding.",
+        "definition": "Concept representing biRd code that summarizes a set of BiRad codes for a single breast finding. Generally the most concerning/important BiRad code in that finding.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "breastrad-FindingSummaryBiRadCode-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/BiRadCodeVS"
+          }
+        }
+      }
+    ]
+  }
+}

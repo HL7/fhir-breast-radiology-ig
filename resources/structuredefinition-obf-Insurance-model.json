@@ -1,0 +1,118 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "obf-Insurance-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>Insurance Logical Model</b></p>\n  <p>Insurance plans, coverage extensions, pre-authorizations and/or pre-determinations that may be needed for delivering the requested service.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Insurance-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/breast-radiology",
+      "value": "obf.Insurance"
+    }
+  ],
+  "name": "Insurance",
+  "title": "obf-Insurance",
+  "status": "draft",
+  "date": "2019-07-30",
+  "publisher": "Hl7",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://BreastRadReport.com"
+        }
+      ]
+    }
+  ],
+  "description": "Insurance plans, coverage extensions, pre-authorizations and/or pre-determinations that may be needed for delivering the requested service.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "obf-Insurance-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "obf-Insurance-model",
+        "path": "obf-Insurance-model",
+        "definition": "Insurance plans, coverage extensions, pre-authorizations and/or pre-determinations that may be needed for delivering the requested service.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Insurance-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Insurance-model.value",
+        "path": "obf-Insurance-model.value",
+        "short": "Coverage representing insurance plans, coverage extensions, pre-authorizations and/or pre-determinations that may be needed for delivering the requested service.",
+        "definition": "Coverage representing insurance plans, coverage extensions, pre-authorizations and/or pre-determinations that may be needed for delivering the requested service.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-Insurance-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Coverage-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "obf-Insurance-model",
+        "path": "obf-Insurance-model",
+        "definition": "Insurance plans, coverage extensions, pre-authorizations and/or pre-determinations that may be needed for delivering the requested service.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Insurance-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Insurance-model.value",
+        "path": "obf-Insurance-model.value",
+        "short": "Coverage representing insurance plans, coverage extensions, pre-authorizations and/or pre-determinations that may be needed for delivering the requested service.",
+        "definition": "Coverage representing insurance plans, coverage extensions, pre-authorizations and/or pre-determinations that may be needed for delivering the requested service.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-Insurance-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Coverage-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

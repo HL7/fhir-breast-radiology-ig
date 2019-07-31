@@ -1,0 +1,158 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "obf-datatype-TimePeriod-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>TimePeriod Logical Model</b></p>\n  <p>A period of time defined by a start and end time, date, or year.\nIf the start date/time is missing, the start of the period is not known. If the end date/time is missing, it means that the period is ongoing.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-TimePeriod-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/breast-radiology",
+      "value": "obf.datatype.TimePeriod"
+    }
+  ],
+  "name": "TimePeriod",
+  "title": "obf-datatype-TimePeriod",
+  "status": "draft",
+  "date": "2019-07-30",
+  "publisher": "Hl7",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://BreastRadReport.com"
+        }
+      ]
+    }
+  ],
+  "description": "A period of time defined by a start and end time, date, or year.\nIf the start date/time is missing, the start of the period is not known. If the end date/time is missing, it means that the period is ongoing.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "obf-datatype-TimePeriod-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "obf-datatype-TimePeriod-model",
+        "path": "obf-datatype-TimePeriod-model",
+        "definition": "A period of time defined by a start and end time, date, or year.\nIf the start date/time is missing, the start of the period is not known. If the end date/time is missing, it means that the period is ongoing.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-datatype-TimePeriod-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-datatype-TimePeriod-model.beginDateTime",
+        "path": "obf-datatype-TimePeriod-model.beginDateTime",
+        "short": "The time at which something is to take effect, start, or did start. Boundary is considered inclusive.",
+        "definition": "The time at which something is to take effect, start, or did start. Boundary is considered inclusive.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-datatype-TimePeriod-model.beginDateTime",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-datatype-TimePeriod-model.endDateTime",
+        "path": "obf-datatype-TimePeriod-model.endDateTime",
+        "short": "The time at which something is to end or did end. Boundary is considered inclusive.",
+        "definition": "The time at which something is to end or did end. Boundary is considered inclusive.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-datatype-TimePeriod-model.endDateTime",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "obf-datatype-TimePeriod-model",
+        "path": "obf-datatype-TimePeriod-model",
+        "definition": "A period of time defined by a start and end time, date, or year.\nIf the start date/time is missing, the start of the period is not known. If the end date/time is missing, it means that the period is ongoing.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-datatype-TimePeriod-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-datatype-TimePeriod-model.beginDateTime",
+        "path": "obf-datatype-TimePeriod-model.beginDateTime",
+        "short": "The time at which something is to take effect, start, or did start. Boundary is considered inclusive.",
+        "definition": "The time at which something is to take effect, start, or did start. Boundary is considered inclusive.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-datatype-TimePeriod-model.beginDateTime",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-datatype-TimePeriod-model.endDateTime",
+        "path": "obf-datatype-TimePeriod-model.endDateTime",
+        "short": "The time at which something is to end or did end. Boundary is considered inclusive.",
+        "definition": "The time at which something is to end or did end. Boundary is considered inclusive.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-datatype-TimePeriod-model.endDateTime",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

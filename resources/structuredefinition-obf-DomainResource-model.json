@@ -1,0 +1,326 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "obf-DomainResource-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>DomainResource Logical Model</b></p>\n  <p>Parent class for any item in clinical or administrative health-related system. A DomainResource can belong to a single person&#039;s health record, or represent an entity that surfaces in multiple records, such as organizations, providers, payments, decision support artifacts, etc.\n\nNote to FHIR implementers: Objective FHIR includes Status and Identifier fields on DomainResource because these two attributes occur in almost every FHIR resource. The most significant exception are 3 or 4 resources that use an &#039;active&#039; flag instead of coded status value. There is no apparent pattern to this inconsistency. FHIR resources that use a coded status have active and inactive as status values. In the spirit of providing a consistent object-oriented logical model for FHIR, Objective FHIR uses status across all domain resources.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-DomainResource-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/breast-radiology",
+      "value": "obf.DomainResource"
+    }
+  ],
+  "name": "DomainResource",
+  "title": "obf-DomainResource",
+  "status": "draft",
+  "date": "2019-07-30",
+  "publisher": "Hl7",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://BreastRadReport.com"
+        }
+      ]
+    }
+  ],
+  "description": "Parent class for any item in clinical or administrative health-related system. A DomainResource can belong to a single person's health record, or represent an entity that surfaces in multiple records, such as organizations, providers, payments, decision support artifacts, etc.\n\nNote to FHIR implementers: Objective FHIR includes Status and Identifier fields on DomainResource because these two attributes occur in almost every FHIR resource. The most significant exception are 3 or 4 resources that use an 'active' flag instead of coded status value. There is no apparent pattern to this inconsistency. FHIR resources that use a coded status have active and inactive as status values. In the spirit of providing a consistent object-oriented logical model for FHIR, Objective FHIR uses status across all domain resources.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "obf-DomainResource-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "obf-DomainResource-model",
+        "path": "obf-DomainResource-model",
+        "definition": "Parent class for any item in clinical or administrative health-related system. A DomainResource can belong to a single person's health record, or represent an entity that surfaces in multiple records, such as organizations, providers, payments, decision support artifacts, etc.\n\nNote to FHIR implementers: Objective FHIR includes Status and Identifier fields on DomainResource because these two attributes occur in almost every FHIR resource. The most significant exception are 3 or 4 resources that use an 'active' flag instead of coded status value. There is no apparent pattern to this inconsistency. FHIR resources that use a coded status have active and inactive as status values. In the spirit of providing a consistent object-oriented logical model for FHIR, Objective FHIR uses status across all domain resources.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-DomainResource-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-DomainResource-model.metadata",
+        "path": "obf-DomainResource-model.metadata",
+        "short": "Elements that belong to all information items.",
+        "definition": "Elements that belong to all information items.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-DomainResource-model.metadata",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Metadata-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-DomainResource-model.language",
+        "path": "obf-DomainResource-model.language",
+        "short": "A human language, spoken or written.",
+        "definition": "A human language, spoken or written.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-DomainResource-model.language",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-DomainResource-model.implicitRules",
+        "path": "obf-DomainResource-model.implicitRules",
+        "short": "A set of rules under which this content was created",
+        "definition": "A set of rules under which this content was created",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-DomainResource-model.implicitRules",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-DomainResource-model.narrative",
+        "path": "obf-DomainResource-model.narrative",
+        "short": "A human-readable narrative, potentially including images, that contains a summary of the resource, and may be used to represent the content of the resource to a human.",
+        "definition": "A human-readable narrative, potentially including images, that contains a summary of the resource, and may be used to represent the content of the resource to a human.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-DomainResource-model.narrative",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Narrative-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-DomainResource-model.status",
+        "path": "obf-DomainResource-model.status",
+        "short": "A state that relates to the workflow or interpretation of this resource. Certain status values can modify the meaning of the resource, for example, entered-in-error. When a boolean value is used, Status of true indicates the record is active, false means inactive.",
+        "definition": "A state that relates to the workflow or interpretation of this resource. Certain status values can modify the meaning of the resource, for example, entered-in-error. When a boolean value is used, Status of true indicates the record is active, false means inactive.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-DomainResource-model.status",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-DomainResource-model.identifier",
+        "path": "obf-DomainResource-model.identifier",
+        "short": "Business identifier or external id for this resource.",
+        "definition": "Business identifier or external id for this resource.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-DomainResource-model.identifier",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-Identifier-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "obf-DomainResource-model",
+        "path": "obf-DomainResource-model",
+        "definition": "Parent class for any item in clinical or administrative health-related system. A DomainResource can belong to a single person's health record, or represent an entity that surfaces in multiple records, such as organizations, providers, payments, decision support artifacts, etc.\n\nNote to FHIR implementers: Objective FHIR includes Status and Identifier fields on DomainResource because these two attributes occur in almost every FHIR resource. The most significant exception are 3 or 4 resources that use an 'active' flag instead of coded status value. There is no apparent pattern to this inconsistency. FHIR resources that use a coded status have active and inactive as status values. In the spirit of providing a consistent object-oriented logical model for FHIR, Objective FHIR uses status across all domain resources.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-DomainResource-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-DomainResource-model.metadata",
+        "path": "obf-DomainResource-model.metadata",
+        "short": "Elements that belong to all information items.",
+        "definition": "Elements that belong to all information items.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-DomainResource-model.metadata",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Metadata-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-DomainResource-model.language",
+        "path": "obf-DomainResource-model.language",
+        "short": "A human language, spoken or written.",
+        "definition": "A human language, spoken or written.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-DomainResource-model.language",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-DomainResource-model.implicitRules",
+        "path": "obf-DomainResource-model.implicitRules",
+        "short": "A set of rules under which this content was created",
+        "definition": "A set of rules under which this content was created",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-DomainResource-model.implicitRules",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-DomainResource-model.narrative",
+        "path": "obf-DomainResource-model.narrative",
+        "short": "A human-readable narrative, potentially including images, that contains a summary of the resource, and may be used to represent the content of the resource to a human.",
+        "definition": "A human-readable narrative, potentially including images, that contains a summary of the resource, and may be used to represent the content of the resource to a human.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-DomainResource-model.narrative",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Narrative-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-DomainResource-model.status",
+        "path": "obf-DomainResource-model.status",
+        "short": "A state that relates to the workflow or interpretation of this resource. Certain status values can modify the meaning of the resource, for example, entered-in-error. When a boolean value is used, Status of true indicates the record is active, false means inactive.",
+        "definition": "A state that relates to the workflow or interpretation of this resource. Certain status values can modify the meaning of the resource, for example, entered-in-error. When a boolean value is used, Status of true indicates the record is active, false means inactive.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-DomainResource-model.status",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-DomainResource-model.identifier",
+        "path": "obf-DomainResource-model.identifier",
+        "short": "Business identifier or external id for this resource.",
+        "definition": "Business identifier or external id for this resource.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-DomainResource-model.identifier",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-Identifier-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

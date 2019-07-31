@@ -1,0 +1,128 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "obf-EmptyReason-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>EmptyReason Logical Model</b></p>\n  <p>Why the section is empty.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-EmptyReason-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/breast-radiology",
+      "value": "obf.EmptyReason"
+    }
+  ],
+  "name": "EmptyReason",
+  "title": "obf-EmptyReason",
+  "status": "draft",
+  "date": "2019-07-30",
+  "publisher": "Hl7",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://BreastRadReport.com"
+        }
+      ]
+    }
+  ],
+  "description": "Why the section is empty.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "obf-EmptyReason-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "obf-EmptyReason-model",
+        "path": "obf-EmptyReason-model",
+        "definition": "Why the section is empty.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-EmptyReason-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-EmptyReason-model.value",
+        "path": "obf-EmptyReason-model.value",
+        "short": "Concept representing why the section is empty.",
+        "definition": "Concept representing why the section is empty.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-EmptyReason-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "preferred",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/list-empty-reason"
+          }
+        }
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "obf-EmptyReason-model",
+        "path": "obf-EmptyReason-model",
+        "definition": "Why the section is empty.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-EmptyReason-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-EmptyReason-model.value",
+        "path": "obf-EmptyReason-model.value",
+        "short": "Concept representing why the section is empty.",
+        "definition": "Concept representing why the section is empty.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-EmptyReason-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "preferred",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/list-empty-reason"
+          }
+        }
+      }
+    ]
+  }
+}

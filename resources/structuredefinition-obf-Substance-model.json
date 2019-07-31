@@ -1,0 +1,584 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "obf-Substance-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>Substance Logical Model</b></p>\n  <p>Any matter of defined composition that has discrete existence, whose origin may be biological, mineral or chemical.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Substance-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/breast-radiology",
+      "value": "obf.Substance"
+    }
+  ],
+  "name": "Substance",
+  "title": "obf-Substance",
+  "status": "draft",
+  "date": "2019-07-30",
+  "publisher": "Hl7",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://BreastRadReport.com"
+        }
+      ]
+    }
+  ],
+  "description": "Any matter of defined composition that has discrete existence, whose origin may be biological, mineral or chemical.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "obf-Substance-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "obf-Substance-model",
+        "path": "obf-Substance-model",
+        "definition": "Any matter of defined composition that has discrete existence, whose origin may be biological, mineral or chemical.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Substance-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Substance-model.metadata",
+        "path": "obf-Substance-model.metadata",
+        "short": "Elements that belong to all information items.",
+        "definition": "Elements that belong to all information items.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Substance-model.metadata",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Metadata-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Substance-model.language",
+        "path": "obf-Substance-model.language",
+        "short": "A human language, spoken or written.",
+        "definition": "A human language, spoken or written.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Substance-model.language",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Substance-model.implicitRules",
+        "path": "obf-Substance-model.implicitRules",
+        "short": "A set of rules under which this content was created",
+        "definition": "A set of rules under which this content was created",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Substance-model.implicitRules",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Substance-model.narrative",
+        "path": "obf-Substance-model.narrative",
+        "short": "A human-readable narrative, potentially including images, that contains a summary of the resource, and may be used to represent the content of the resource to a human.",
+        "definition": "A human-readable narrative, potentially including images, that contains a summary of the resource, and may be used to represent the content of the resource to a human.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Substance-model.narrative",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Narrative-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Substance-model.status",
+        "path": "obf-Substance-model.status",
+        "short": "A state that relates to the workflow or interpretation of this resource. Certain status values can modify the meaning of the resource, for example, entered-in-error. When a boolean value is used, Status of true indicates the record is active, false means inactive.",
+        "definition": "A state that relates to the workflow or interpretation of this resource. Certain status values can modify the meaning of the resource, for example, entered-in-error. When a boolean value is used, Status of true indicates the record is active, false means inactive.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Substance-model.status",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/substance-status"
+          }
+        }
+      },
+      {
+        "id": "obf-Substance-model.identifier",
+        "path": "obf-Substance-model.identifier",
+        "short": "Business identifier or external id for this resource.",
+        "definition": "Business identifier or external id for this resource.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Substance-model.identifier",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-Identifier-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Substance-model.partOf",
+        "path": "obf-Substance-model.partOf",
+        "short": "The larger entity that the asserted item is a portion of. For example, an organization part of a larger organization, or an encounter with a hospitalist might be part of a larger hospitalization encounter.",
+        "definition": "The larger entity that the asserted item is a portion of. For example, an organization part of a larger organization, or an encounter with a hospitalist might be part of a larger hospitalization encounter.",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "obf-Substance-model.partOf",
+          "min": 0,
+          "max": "0"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Resource-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Substance-model.category",
+        "path": "obf-Substance-model.category",
+        "short": "The general type or class of this item.",
+        "definition": "The general type or class of this item.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Substance-model.category",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "extensible",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/substance-category"
+          }
+        }
+      },
+      {
+        "id": "obf-Substance-model.code",
+        "path": "obf-Substance-model.code",
+        "short": "The main type identifier for a lab, procedure, condition, etc., usually drawn from a controlled vocabulary.",
+        "definition": "The main type identifier for a lab, procedure, condition, etc., usually drawn from a controlled vocabulary.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-Substance-model.code",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "example",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/substance-code"
+          }
+        }
+      },
+      {
+        "id": "obf-Substance-model.commentOrDescription",
+        "path": "obf-Substance-model.commentOrDescription",
+        "short": "A text note containing additional details, explanation, description, comment, or summarization.",
+        "definition": "A text note containing additional details, explanation, description, comment, or summarization.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Substance-model.commentOrDescription",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Substance-model.ingredient",
+        "path": "obf-Substance-model.ingredient",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C3176062"
+          }
+        ],
+        "short": "Specifies an material component in a non-medication substance.",
+        "definition": "Specifies an material component in a non-medication substance.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Substance-model.ingredient",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Ingredient-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "obf-Substance-model",
+        "path": "obf-Substance-model",
+        "definition": "Any matter of defined composition that has discrete existence, whose origin may be biological, mineral or chemical.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Substance-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Substance-model.metadata",
+        "path": "obf-Substance-model.metadata",
+        "short": "Elements that belong to all information items.",
+        "definition": "Elements that belong to all information items.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Substance-model.metadata",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Metadata-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Substance-model.language",
+        "path": "obf-Substance-model.language",
+        "short": "A human language, spoken or written.",
+        "definition": "A human language, spoken or written.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Substance-model.language",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Substance-model.implicitRules",
+        "path": "obf-Substance-model.implicitRules",
+        "short": "A set of rules under which this content was created",
+        "definition": "A set of rules under which this content was created",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Substance-model.implicitRules",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Substance-model.narrative",
+        "path": "obf-Substance-model.narrative",
+        "short": "A human-readable narrative, potentially including images, that contains a summary of the resource, and may be used to represent the content of the resource to a human.",
+        "definition": "A human-readable narrative, potentially including images, that contains a summary of the resource, and may be used to represent the content of the resource to a human.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Substance-model.narrative",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Narrative-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Substance-model.status",
+        "path": "obf-Substance-model.status",
+        "short": "A state that relates to the workflow or interpretation of this resource. Certain status values can modify the meaning of the resource, for example, entered-in-error. When a boolean value is used, Status of true indicates the record is active, false means inactive.",
+        "definition": "A state that relates to the workflow or interpretation of this resource. Certain status values can modify the meaning of the resource, for example, entered-in-error. When a boolean value is used, Status of true indicates the record is active, false means inactive.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Substance-model.status",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/substance-status"
+          }
+        }
+      },
+      {
+        "id": "obf-Substance-model.identifier",
+        "path": "obf-Substance-model.identifier",
+        "short": "Business identifier or external id for this resource.",
+        "definition": "Business identifier or external id for this resource.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Substance-model.identifier",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-Identifier-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Substance-model.partOf",
+        "path": "obf-Substance-model.partOf",
+        "short": "The larger entity that the asserted item is a portion of. For example, an organization part of a larger organization, or an encounter with a hospitalist might be part of a larger hospitalization encounter.",
+        "definition": "The larger entity that the asserted item is a portion of. For example, an organization part of a larger organization, or an encounter with a hospitalist might be part of a larger hospitalization encounter.",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "obf-Substance-model.partOf",
+          "min": 0,
+          "max": "0"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Resource-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Substance-model.category",
+        "path": "obf-Substance-model.category",
+        "short": "The general type or class of this item.",
+        "definition": "The general type or class of this item.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Substance-model.category",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "extensible",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/substance-category"
+          }
+        }
+      },
+      {
+        "id": "obf-Substance-model.code",
+        "path": "obf-Substance-model.code",
+        "short": "The main type identifier for a lab, procedure, condition, etc., usually drawn from a controlled vocabulary.",
+        "definition": "The main type identifier for a lab, procedure, condition, etc., usually drawn from a controlled vocabulary.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-Substance-model.code",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "example",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/substance-code"
+          }
+        }
+      },
+      {
+        "id": "obf-Substance-model.commentOrDescription",
+        "path": "obf-Substance-model.commentOrDescription",
+        "short": "A text note containing additional details, explanation, description, comment, or summarization.",
+        "definition": "A text note containing additional details, explanation, description, comment, or summarization.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Substance-model.commentOrDescription",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Substance-model.ingredient",
+        "path": "obf-Substance-model.ingredient",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C3176062"
+          }
+        ],
+        "short": "Specifies an material component in a non-medication substance.",
+        "definition": "Specifies an material component in a non-medication substance.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Substance-model.ingredient",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Ingredient-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

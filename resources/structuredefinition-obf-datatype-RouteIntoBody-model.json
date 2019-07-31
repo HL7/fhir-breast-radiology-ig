@@ -1,0 +1,134 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "obf-datatype-RouteIntoBody-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>RouteIntoBody Logical Model</b></p>\n  <p>The way a substance enters an organism after contact, particularly, the route of drug administration.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-RouteIntoBody-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/breast-radiology",
+      "value": "obf.datatype.RouteIntoBody"
+    }
+  ],
+  "name": "RouteIntoBody",
+  "title": "obf-datatype-RouteIntoBody",
+  "status": "draft",
+  "date": "2019-07-30",
+  "publisher": "Hl7",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://BreastRadReport.com"
+        }
+      ]
+    }
+  ],
+  "description": "The way a substance enters an organism after contact, particularly, the route of drug administration.",
+  "keyword": [
+    {
+      "system": "http://ncimeta.nci.nih.gov",
+      "code": "C0013153"
+    }
+  ],
+  "kind": "logical",
+  "abstract": false,
+  "type": "obf-datatype-RouteIntoBody-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "obf-datatype-RouteIntoBody-model",
+        "path": "obf-datatype-RouteIntoBody-model",
+        "definition": "The way a substance enters an organism after contact, particularly, the route of drug administration.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-datatype-RouteIntoBody-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-datatype-RouteIntoBody-model.value",
+        "path": "obf-datatype-RouteIntoBody-model.value",
+        "short": "Concept representing the way a substance enters an organism after contact, particularly, the route of drug administration.",
+        "definition": "Concept representing the way a substance enters an organism after contact, particularly, the route of drug administration.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-datatype-RouteIntoBody-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/route-codes"
+          }
+        }
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "obf-datatype-RouteIntoBody-model",
+        "path": "obf-datatype-RouteIntoBody-model",
+        "definition": "The way a substance enters an organism after contact, particularly, the route of drug administration.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-datatype-RouteIntoBody-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-datatype-RouteIntoBody-model.value",
+        "path": "obf-datatype-RouteIntoBody-model.value",
+        "short": "Concept representing the way a substance enters an organism after contact, particularly, the route of drug administration.",
+        "definition": "Concept representing the way a substance enters an organism after contact, particularly, the route of drug administration.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-datatype-RouteIntoBody-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/route-codes"
+          }
+        }
+      }
+    ]
+  }
+}

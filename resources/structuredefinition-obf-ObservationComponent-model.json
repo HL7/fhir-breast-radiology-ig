@@ -1,0 +1,368 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "obf-ObservationComponent-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>ObservationComponent Logical Model</b></p>\n  <p>A sub-observation contributing to the parent observation, expressed as separate code value pairs that share the same attributes. Examples include systolic and diastolic component observations for blood pressure measurement and multiple component observations for genetics observations. Component observations share the same attributes in the Observation resource as the primary observation and are always treated a part of a single observation (they are not separable). However, the reference range for the primary observation value is not inherited by the component values and is required when appropriate for each component observation.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-ObservationComponent-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/breast-radiology",
+      "value": "obf.ObservationComponent"
+    }
+  ],
+  "name": "ObservationComponent",
+  "title": "obf-ObservationComponent",
+  "status": "draft",
+  "date": "2019-07-30",
+  "publisher": "Hl7",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://BreastRadReport.com"
+        }
+      ]
+    }
+  ],
+  "description": "A sub-observation contributing to the parent observation, expressed as separate code value pairs that share the same attributes. Examples include systolic and diastolic component observations for blood pressure measurement and multiple component observations for genetics observations. Component observations share the same attributes in the Observation resource as the primary observation and are always treated a part of a single observation (they are not separable). However, the reference range for the primary observation value is not inherited by the component values and is required when appropriate for each component observation.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "obf-ObservationComponent-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "obf-ObservationComponent-model",
+        "path": "obf-ObservationComponent-model",
+        "definition": "A sub-observation contributing to the parent observation, expressed as separate code value pairs that share the same attributes. Examples include systolic and diastolic component observations for blood pressure measurement and multiple component observations for genetics observations. Component observations share the same attributes in the Observation resource as the primary observation and are always treated a part of a single observation (they are not separable). However, the reference range for the primary observation value is not inherited by the component values and is required when appropriate for each component observation.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-ObservationComponent-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-ObservationComponent-model.code",
+        "path": "obf-ObservationComponent-model.code",
+        "short": "The main type identifier for a lab, procedure, condition, etc., usually drawn from a controlled vocabulary.",
+        "definition": "The main type identifier for a lab, procedure, condition, etc., usually drawn from a controlled vocabulary.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-ObservationComponent-model.code",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-ObservationComponent-model.dataValue[x]",
+        "path": "obf-ObservationComponent-model.dataValue[x]",
+        "short": "The value or result of a test, evaluation, or judgment, for example, a systolic blood pressure, or if a condition or body structure is present or absent.",
+        "definition": "The value or result of a test, evaluation, or judgment, for example, a systolic blood pressure, or if a condition or body structure is present or absent.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-ObservationComponent-model.dataValue[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          },
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-Quantity-model"
+          },
+          {
+            "code": "string"
+          },
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-Range-model"
+          },
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-Ratio-model"
+          },
+          {
+            "code": "time"
+          },
+          {
+            "code": "dateTime"
+          },
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-TimePeriod-model"
+          },
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-SampledData-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-ObservationComponent-model.dataAbsentReason",
+        "path": "obf-ObservationComponent-model.dataAbsentReason",
+        "short": "Reason that a value associated with a test or other finding is missing.",
+        "definition": "Reason that a value associated with a test or other finding is missing.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-ObservationComponent-model.dataAbsentReason",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "extensible",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/data-absent-reason"
+          }
+        }
+      },
+      {
+        "id": "obf-ObservationComponent-model.interpretation",
+        "path": "obf-ObservationComponent-model.interpretation",
+        "short": "A clinical interpretation of a finding (applies to both assertions and observation).",
+        "definition": "A clinical interpretation of a finding (applies to both assertions and observation).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-ObservationComponent-model.interpretation",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "extensible",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/observation-interpretation"
+          }
+        }
+      },
+      {
+        "id": "obf-ObservationComponent-model.referenceRange",
+        "path": "obf-ObservationComponent-model.referenceRange",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0883335"
+          }
+        ],
+        "short": "The usual or acceptable range for a test result.",
+        "definition": "The usual or acceptable range for a test result.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-ObservationComponent-model.referenceRange",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-ReferenceRange-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "obf-ObservationComponent-model",
+        "path": "obf-ObservationComponent-model",
+        "definition": "A sub-observation contributing to the parent observation, expressed as separate code value pairs that share the same attributes. Examples include systolic and diastolic component observations for blood pressure measurement and multiple component observations for genetics observations. Component observations share the same attributes in the Observation resource as the primary observation and are always treated a part of a single observation (they are not separable). However, the reference range for the primary observation value is not inherited by the component values and is required when appropriate for each component observation.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-ObservationComponent-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-ObservationComponent-model.code",
+        "path": "obf-ObservationComponent-model.code",
+        "short": "The main type identifier for a lab, procedure, condition, etc., usually drawn from a controlled vocabulary.",
+        "definition": "The main type identifier for a lab, procedure, condition, etc., usually drawn from a controlled vocabulary.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-ObservationComponent-model.code",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-ObservationComponent-model.dataValue[x]",
+        "path": "obf-ObservationComponent-model.dataValue[x]",
+        "short": "The value or result of a test, evaluation, or judgment, for example, a systolic blood pressure, or if a condition or body structure is present or absent.",
+        "definition": "The value or result of a test, evaluation, or judgment, for example, a systolic blood pressure, or if a condition or body structure is present or absent.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-ObservationComponent-model.dataValue[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          },
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-Quantity-model"
+          },
+          {
+            "code": "string"
+          },
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-Range-model"
+          },
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-Ratio-model"
+          },
+          {
+            "code": "time"
+          },
+          {
+            "code": "dateTime"
+          },
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-TimePeriod-model"
+          },
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-SampledData-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-ObservationComponent-model.dataAbsentReason",
+        "path": "obf-ObservationComponent-model.dataAbsentReason",
+        "short": "Reason that a value associated with a test or other finding is missing.",
+        "definition": "Reason that a value associated with a test or other finding is missing.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-ObservationComponent-model.dataAbsentReason",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "extensible",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/data-absent-reason"
+          }
+        }
+      },
+      {
+        "id": "obf-ObservationComponent-model.interpretation",
+        "path": "obf-ObservationComponent-model.interpretation",
+        "short": "A clinical interpretation of a finding (applies to both assertions and observation).",
+        "definition": "A clinical interpretation of a finding (applies to both assertions and observation).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-ObservationComponent-model.interpretation",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "extensible",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/observation-interpretation"
+          }
+        }
+      },
+      {
+        "id": "obf-ObservationComponent-model.referenceRange",
+        "path": "obf-ObservationComponent-model.referenceRange",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0883335"
+          }
+        ],
+        "short": "The usual or acceptable range for a test result.",
+        "definition": "The usual or acceptable range for a test result.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-ObservationComponent-model.referenceRange",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-ReferenceRange-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

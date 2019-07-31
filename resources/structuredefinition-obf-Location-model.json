@@ -1,0 +1,990 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "obf-Location-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>Location Logical Model</b></p>\n  <p>Services and space and equipment provided for a particular purpose; a building or place that provides a particular service or is used for a particular industry. Could be a clinical site, community site, or a mobile facility.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Location-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/breast-radiology",
+      "value": "obf.Location"
+    }
+  ],
+  "name": "Location",
+  "title": "obf-Location",
+  "status": "draft",
+  "date": "2019-07-30",
+  "publisher": "Hl7",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://BreastRadReport.com"
+        }
+      ]
+    }
+  ],
+  "description": "Services and space and equipment provided for a particular purpose; a building or place that provides a particular service or is used for a particular industry. Could be a clinical site, community site, or a mobile facility.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "obf-Location-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "obf-Location-model",
+        "path": "obf-Location-model",
+        "definition": "Services and space and equipment provided for a particular purpose; a building or place that provides a particular service or is used for a particular industry. Could be a clinical site, community site, or a mobile facility.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Location-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Location-model.metadata",
+        "path": "obf-Location-model.metadata",
+        "short": "Elements that belong to all information items.",
+        "definition": "Elements that belong to all information items.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Location-model.metadata",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Metadata-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Location-model.language",
+        "path": "obf-Location-model.language",
+        "short": "A human language, spoken or written.",
+        "definition": "A human language, spoken or written.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Location-model.language",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Location-model.implicitRules",
+        "path": "obf-Location-model.implicitRules",
+        "short": "A set of rules under which this content was created",
+        "definition": "A set of rules under which this content was created",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Location-model.implicitRules",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Location-model.narrative",
+        "path": "obf-Location-model.narrative",
+        "short": "A human-readable narrative, potentially including images, that contains a summary of the resource, and may be used to represent the content of the resource to a human.",
+        "definition": "A human-readable narrative, potentially including images, that contains a summary of the resource, and may be used to represent the content of the resource to a human.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Location-model.narrative",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Narrative-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Location-model.status",
+        "path": "obf-Location-model.status",
+        "short": "A state that relates to the workflow or interpretation of this resource. Certain status values can modify the meaning of the resource, for example, entered-in-error. When a boolean value is used, Status of true indicates the record is active, false means inactive.",
+        "definition": "A state that relates to the workflow or interpretation of this resource. Certain status values can modify the meaning of the resource, for example, entered-in-error. When a boolean value is used, Status of true indicates the record is active, false means inactive.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Location-model.status",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/location-status"
+          }
+        }
+      },
+      {
+        "id": "obf-Location-model.identifier",
+        "path": "obf-Location-model.identifier",
+        "short": "Business identifier or external id for this resource.",
+        "definition": "Business identifier or external id for this resource.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Location-model.identifier",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-Identifier-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Location-model.partOf",
+        "path": "obf-Location-model.partOf",
+        "short": "The larger entity that the asserted item is a portion of. For example, an organization part of a larger organization, or an encounter with a hospitalist might be part of a larger hospitalization encounter.",
+        "definition": "The larger entity that the asserted item is a portion of. For example, an organization part of a larger organization, or an encounter with a hospitalist might be part of a larger hospitalization encounter.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Location-model.partOf",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Location-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Location-model.operationalStatus",
+        "path": "obf-Location-model.operationalStatus",
+        "short": "The operational status covers operation values most relevant to beds (but can also apply to rooms/units/chairs/etc. such as an isolation unit/dialysis chair). This typically covers concepts such as contamination, housekeeping, and other activities like maintenance.",
+        "definition": "The operational status covers operation values most relevant to beds (but can also apply to rooms/units/chairs/etc. such as an isolation unit/dialysis chair). This typically covers concepts such as contamination, housekeeping, and other activities like maintenance.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Location-model.operationalStatus",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "preferred",
+          "valueSetReference": {
+            "reference": "http://terminology.hl7.org/ValueSet/v2-0116"
+          }
+        }
+      },
+      {
+        "id": "obf-Location-model.name",
+        "path": "obf-Location-model.name",
+        "short": "The name as plain unstructured or semi-structured text.",
+        "definition": "The name as plain unstructured or semi-structured text.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-Location-model.name",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Location-model.alias",
+        "path": "obf-Location-model.alias",
+        "short": "A list of alternate names the subject is or was known as.",
+        "definition": "A list of alternate names the subject is or was known as.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Location-model.alias",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Location-model.commentOrDescription",
+        "path": "obf-Location-model.commentOrDescription",
+        "short": "A text note containing additional details, explanation, description, comment, or summarization.",
+        "definition": "A text note containing additional details, explanation, description, comment, or summarization.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Location-model.commentOrDescription",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Location-model.mode",
+        "path": "obf-Location-model.mode",
+        "short": "The manner in which the item should be interpreted. For example, mode could indicates whether a resource instance represents a specific item or a class of items, an actual or potential event, a working list or a snapshot of a historical list, etc.",
+        "definition": "The manner in which the item should be interpreted. For example, mode could indicates whether a resource instance represents a specific item or a class of items, an actual or potential event, a working list or a snapshot of a historical list, etc.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Location-model.mode",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/location-mode"
+          }
+        }
+      },
+      {
+        "id": "obf-Location-model.type",
+        "path": "obf-Location-model.type",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0332307"
+          }
+        ],
+        "short": "A code describing the item at a greater level of detail.",
+        "definition": "A code describing the item at a greater level of detail.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-Location-model.type",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "extensible",
+          "valueSetReference": {
+            "reference": "http://terminology.hl7.org/ValueSet/v3-ServiceDeliveryLocationRoleType"
+          }
+        }
+      },
+      {
+        "id": "obf-Location-model.contactPoint",
+        "path": "obf-Location-model.contactPoint",
+        "short": "An electronic means of contacting an organization or individual.",
+        "definition": "An electronic means of contacting an organization or individual.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Location-model.contactPoint",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-ContactPoint-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Location-model.address",
+        "path": "obf-Location-model.address",
+        "short": "An address expressed using postal conventions (as opposed to GPS or other location definition formats). This data type may be used to convey addresses for use in delivering mail as well as for visiting locations and which might not be valid for mail delivery. There are a variety of postal address formats defined around the world. (Source: HL7 FHIR).",
+        "definition": "An address expressed using postal conventions (as opposed to GPS or other location definition formats). This data type may be used to convey addresses for use in delivering mail as well as for visiting locations and which might not be valid for mail delivery. There are a variety of postal address formats defined around the world. (Source: HL7 FHIR).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Location-model.address",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-Address-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Location-model.physicalType",
+        "path": "obf-Location-model.physicalType",
+        "short": "Physical form of the location, e.g. building, room, vehicle, road.",
+        "definition": "Physical form of the location, e.g. building, room, vehicle, road.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Location-model.physicalType",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "example",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/location-physical-type"
+          }
+        }
+      },
+      {
+        "id": "obf-Location-model.geoposition",
+        "path": "obf-Location-model.geoposition",
+        "short": "The location on the surface of the Earth, described by a latitude and longitude (and optional altitude).",
+        "definition": "The location on the surface of the Earth, described by a latitude and longitude (and optional altitude).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Location-model.geoposition",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-Geoposition-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Location-model.managingOrganization",
+        "path": "obf-Location-model.managingOrganization",
+        "short": "The organization that manages a patient, activity, facility, document, or service provision.",
+        "definition": "The organization that manages a patient, activity, facility, document, or service provision.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-Location-model.managingOrganization",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Organization-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Location-model.hoursOfOperation",
+        "path": "obf-Location-model.hoursOfOperation",
+        "short": "What days/times during a week is this location usually open.",
+        "definition": "What days/times during a week is this location usually open.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Location-model.hoursOfOperation",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-HoursOfOperation-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Location-model.availabilityExceptions",
+        "path": "obf-Location-model.availabilityExceptions",
+        "short": "A description of when the locations opening ours are different to normal, e.g. public holiday availability. Succinctly describing all possible exceptions to normal site availability as detailed in the opening hours Times.",
+        "definition": "A description of when the locations opening ours are different to normal, e.g. public holiday availability. Succinctly describing all possible exceptions to normal site availability as detailed in the opening hours Times.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Location-model.availabilityExceptions",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "obf-Location-model",
+        "path": "obf-Location-model",
+        "definition": "Services and space and equipment provided for a particular purpose; a building or place that provides a particular service or is used for a particular industry. Could be a clinical site, community site, or a mobile facility.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Location-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Location-model.metadata",
+        "path": "obf-Location-model.metadata",
+        "short": "Elements that belong to all information items.",
+        "definition": "Elements that belong to all information items.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Location-model.metadata",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Metadata-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Location-model.language",
+        "path": "obf-Location-model.language",
+        "short": "A human language, spoken or written.",
+        "definition": "A human language, spoken or written.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Location-model.language",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Location-model.implicitRules",
+        "path": "obf-Location-model.implicitRules",
+        "short": "A set of rules under which this content was created",
+        "definition": "A set of rules under which this content was created",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Location-model.implicitRules",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Location-model.narrative",
+        "path": "obf-Location-model.narrative",
+        "short": "A human-readable narrative, potentially including images, that contains a summary of the resource, and may be used to represent the content of the resource to a human.",
+        "definition": "A human-readable narrative, potentially including images, that contains a summary of the resource, and may be used to represent the content of the resource to a human.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Location-model.narrative",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Narrative-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Location-model.status",
+        "path": "obf-Location-model.status",
+        "short": "A state that relates to the workflow or interpretation of this resource. Certain status values can modify the meaning of the resource, for example, entered-in-error. When a boolean value is used, Status of true indicates the record is active, false means inactive.",
+        "definition": "A state that relates to the workflow or interpretation of this resource. Certain status values can modify the meaning of the resource, for example, entered-in-error. When a boolean value is used, Status of true indicates the record is active, false means inactive.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Location-model.status",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/location-status"
+          }
+        }
+      },
+      {
+        "id": "obf-Location-model.identifier",
+        "path": "obf-Location-model.identifier",
+        "short": "Business identifier or external id for this resource.",
+        "definition": "Business identifier or external id for this resource.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Location-model.identifier",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-Identifier-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Location-model.partOf",
+        "path": "obf-Location-model.partOf",
+        "short": "The larger entity that the asserted item is a portion of. For example, an organization part of a larger organization, or an encounter with a hospitalist might be part of a larger hospitalization encounter.",
+        "definition": "The larger entity that the asserted item is a portion of. For example, an organization part of a larger organization, or an encounter with a hospitalist might be part of a larger hospitalization encounter.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Location-model.partOf",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Location-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Location-model.operationalStatus",
+        "path": "obf-Location-model.operationalStatus",
+        "short": "The operational status covers operation values most relevant to beds (but can also apply to rooms/units/chairs/etc. such as an isolation unit/dialysis chair). This typically covers concepts such as contamination, housekeeping, and other activities like maintenance.",
+        "definition": "The operational status covers operation values most relevant to beds (but can also apply to rooms/units/chairs/etc. such as an isolation unit/dialysis chair). This typically covers concepts such as contamination, housekeeping, and other activities like maintenance.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Location-model.operationalStatus",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "preferred",
+          "valueSetReference": {
+            "reference": "http://terminology.hl7.org/ValueSet/v2-0116"
+          }
+        }
+      },
+      {
+        "id": "obf-Location-model.name",
+        "path": "obf-Location-model.name",
+        "short": "The name as plain unstructured or semi-structured text.",
+        "definition": "The name as plain unstructured or semi-structured text.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-Location-model.name",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Location-model.alias",
+        "path": "obf-Location-model.alias",
+        "short": "A list of alternate names the subject is or was known as.",
+        "definition": "A list of alternate names the subject is or was known as.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Location-model.alias",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Location-model.commentOrDescription",
+        "path": "obf-Location-model.commentOrDescription",
+        "short": "A text note containing additional details, explanation, description, comment, or summarization.",
+        "definition": "A text note containing additional details, explanation, description, comment, or summarization.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Location-model.commentOrDescription",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Location-model.mode",
+        "path": "obf-Location-model.mode",
+        "short": "The manner in which the item should be interpreted. For example, mode could indicates whether a resource instance represents a specific item or a class of items, an actual or potential event, a working list or a snapshot of a historical list, etc.",
+        "definition": "The manner in which the item should be interpreted. For example, mode could indicates whether a resource instance represents a specific item or a class of items, an actual or potential event, a working list or a snapshot of a historical list, etc.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Location-model.mode",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/location-mode"
+          }
+        }
+      },
+      {
+        "id": "obf-Location-model.type",
+        "path": "obf-Location-model.type",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0332307"
+          }
+        ],
+        "short": "A code describing the item at a greater level of detail.",
+        "definition": "A code describing the item at a greater level of detail.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-Location-model.type",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "extensible",
+          "valueSetReference": {
+            "reference": "http://terminology.hl7.org/ValueSet/v3-ServiceDeliveryLocationRoleType"
+          }
+        }
+      },
+      {
+        "id": "obf-Location-model.contactPoint",
+        "path": "obf-Location-model.contactPoint",
+        "short": "An electronic means of contacting an organization or individual.",
+        "definition": "An electronic means of contacting an organization or individual.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Location-model.contactPoint",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-ContactPoint-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Location-model.address",
+        "path": "obf-Location-model.address",
+        "short": "An address expressed using postal conventions (as opposed to GPS or other location definition formats). This data type may be used to convey addresses for use in delivering mail as well as for visiting locations and which might not be valid for mail delivery. There are a variety of postal address formats defined around the world. (Source: HL7 FHIR).",
+        "definition": "An address expressed using postal conventions (as opposed to GPS or other location definition formats). This data type may be used to convey addresses for use in delivering mail as well as for visiting locations and which might not be valid for mail delivery. There are a variety of postal address formats defined around the world. (Source: HL7 FHIR).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Location-model.address",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-Address-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Location-model.physicalType",
+        "path": "obf-Location-model.physicalType",
+        "short": "Physical form of the location, e.g. building, room, vehicle, road.",
+        "definition": "Physical form of the location, e.g. building, room, vehicle, road.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Location-model.physicalType",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "example",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/location-physical-type"
+          }
+        }
+      },
+      {
+        "id": "obf-Location-model.geoposition",
+        "path": "obf-Location-model.geoposition",
+        "short": "The location on the surface of the Earth, described by a latitude and longitude (and optional altitude).",
+        "definition": "The location on the surface of the Earth, described by a latitude and longitude (and optional altitude).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Location-model.geoposition",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-Geoposition-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Location-model.managingOrganization",
+        "path": "obf-Location-model.managingOrganization",
+        "short": "The organization that manages a patient, activity, facility, document, or service provision.",
+        "definition": "The organization that manages a patient, activity, facility, document, or service provision.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-Location-model.managingOrganization",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Organization-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Location-model.hoursOfOperation",
+        "path": "obf-Location-model.hoursOfOperation",
+        "short": "What days/times during a week is this location usually open.",
+        "definition": "What days/times during a week is this location usually open.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Location-model.hoursOfOperation",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-HoursOfOperation-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Location-model.availabilityExceptions",
+        "path": "obf-Location-model.availabilityExceptions",
+        "short": "A description of when the locations opening ours are different to normal, e.g. public holiday availability. Succinctly describing all possible exceptions to normal site availability as detailed in the opening hours Times.",
+        "definition": "A description of when the locations opening ours are different to normal, e.g. public holiday availability. Succinctly describing all possible exceptions to normal site availability as detailed in the opening hours Times.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Location-model.availabilityExceptions",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

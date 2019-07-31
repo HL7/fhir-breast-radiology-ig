@@ -1,0 +1,128 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "obf-datatype-DailyLifeEvent-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>DailyLifeEvent Logical Model</b></p>\n  <p>An approximate time period during the day, potentially linked to an event of daily living that indicates when the action should occur.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-DailyLifeEvent-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/breast-radiology",
+      "value": "obf.datatype.DailyLifeEvent"
+    }
+  ],
+  "name": "DailyLifeEvent",
+  "title": "obf-datatype-DailyLifeEvent",
+  "status": "draft",
+  "date": "2019-07-30",
+  "publisher": "Hl7",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://BreastRadReport.com"
+        }
+      ]
+    }
+  ],
+  "description": "An approximate time period during the day, potentially linked to an event of daily living that indicates when the action should occur.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "obf-datatype-DailyLifeEvent-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "obf-datatype-DailyLifeEvent-model",
+        "path": "obf-datatype-DailyLifeEvent-model",
+        "definition": "An approximate time period during the day, potentially linked to an event of daily living that indicates when the action should occur.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-datatype-DailyLifeEvent-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-datatype-DailyLifeEvent-model.value",
+        "path": "obf-datatype-DailyLifeEvent-model.value",
+        "short": "Concept representing an approximate time period during the day, potentially linked to an event of daily living that indicates when the action should occur.",
+        "definition": "Concept representing an approximate time period during the day, potentially linked to an event of daily living that indicates when the action should occur.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-datatype-DailyLifeEvent-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/event-timing"
+          }
+        }
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "obf-datatype-DailyLifeEvent-model",
+        "path": "obf-datatype-DailyLifeEvent-model",
+        "definition": "An approximate time period during the day, potentially linked to an event of daily living that indicates when the action should occur.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-datatype-DailyLifeEvent-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-datatype-DailyLifeEvent-model.value",
+        "path": "obf-datatype-DailyLifeEvent-model.value",
+        "short": "Concept representing an approximate time period during the day, potentially linked to an event of daily living that indicates when the action should occur.",
+        "definition": "Concept representing an approximate time period during the day, potentially linked to an event of daily living that indicates when the action should occur.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-datatype-DailyLifeEvent-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/event-timing"
+          }
+        }
+      }
+    ]
+  }
+}

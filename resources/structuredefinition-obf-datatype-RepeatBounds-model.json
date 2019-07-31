@@ -1,0 +1,128 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "obf-datatype-RepeatBounds-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>RepeatBounds Logical Model</b></p>\n  <p>Either a duration for the length of the timing schedule, a range of possible length, or outer bounds for start and/or end limits of the timing schedule.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-RepeatBounds-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/breast-radiology",
+      "value": "obf.datatype.RepeatBounds"
+    }
+  ],
+  "name": "RepeatBounds",
+  "title": "obf-datatype-RepeatBounds",
+  "status": "draft",
+  "date": "2019-07-30",
+  "publisher": "Hl7",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://BreastRadReport.com"
+        }
+      ]
+    }
+  ],
+  "description": "Either a duration for the length of the timing schedule, a range of possible length, or outer bounds for start and/or end limits of the timing schedule.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "obf-datatype-RepeatBounds-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "obf-datatype-RepeatBounds-model",
+        "path": "obf-datatype-RepeatBounds-model",
+        "definition": "Either a duration for the length of the timing schedule, a range of possible length, or outer bounds for start and/or end limits of the timing schedule.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-datatype-RepeatBounds-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-datatype-RepeatBounds-model.value[x]",
+        "path": "obf-datatype-RepeatBounds-model.value[x]",
+        "short": "Choice of types representing either a duration for the length of the timing schedule, a range of possible length, or outer bounds for start and/or end limits of the timing schedule.",
+        "definition": "Choice of types representing either a duration for the length of the timing schedule, a range of possible length, or outer bounds for start and/or end limits of the timing schedule.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-datatype-RepeatBounds-model.value[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-Duration-model"
+          },
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-Range-model"
+          },
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-TimePeriod-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "obf-datatype-RepeatBounds-model",
+        "path": "obf-datatype-RepeatBounds-model",
+        "definition": "Either a duration for the length of the timing schedule, a range of possible length, or outer bounds for start and/or end limits of the timing schedule.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-datatype-RepeatBounds-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-datatype-RepeatBounds-model.value[x]",
+        "path": "obf-datatype-RepeatBounds-model.value[x]",
+        "short": "Choice of types representing either a duration for the length of the timing schedule, a range of possible length, or outer bounds for start and/or end limits of the timing schedule.",
+        "definition": "Choice of types representing either a duration for the length of the timing schedule, a range of possible length, or outer bounds for start and/or end limits of the timing schedule.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-datatype-RepeatBounds-model.value[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-Duration-model"
+          },
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-Range-model"
+          },
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-TimePeriod-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

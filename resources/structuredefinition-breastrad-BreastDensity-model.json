@@ -1,0 +1,128 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "breastrad-BreastDensity-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>BreastDensity Logical Model</b></p>\n  <p>Breast density value.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/breastrad-BreastDensity-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/breast-radiology",
+      "value": "breastrad.BreastDensity"
+    }
+  ],
+  "name": "BreastDensity",
+  "title": "breastrad-BreastDensity",
+  "status": "draft",
+  "date": "2019-07-30",
+  "publisher": "Hl7",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://BreastRadReport.com"
+        }
+      ]
+    }
+  ],
+  "description": "Breast density value.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "breastrad-BreastDensity-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "breastrad-BreastDensity-model",
+        "path": "breastrad-BreastDensity-model",
+        "definition": "Breast density value.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "breastrad-BreastDensity-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "breastrad-BreastDensity-model.value",
+        "path": "breastrad-BreastDensity-model.value",
+        "short": "Concept representing breast density value.",
+        "definition": "Concept representing breast density value.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "breastrad-BreastDensity-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/BreastDensityVS"
+          }
+        }
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "breastrad-BreastDensity-model",
+        "path": "breastrad-BreastDensity-model",
+        "definition": "Breast density value.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "breastrad-BreastDensity-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "breastrad-BreastDensity-model.value",
+        "path": "breastrad-BreastDensity-model.value",
+        "short": "Concept representing breast density value.",
+        "definition": "Concept representing breast density value.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "breastrad-BreastDensity-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/BreastDensityVS"
+          }
+        }
+      }
+    ]
+  }
+}

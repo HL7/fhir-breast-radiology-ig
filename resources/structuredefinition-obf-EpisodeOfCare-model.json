@@ -1,0 +1,868 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "obf-EpisodeOfCare-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>EpisodeOfCare Logical Model</b></p>\n  <p>An association between a patient and an organization / healthcare provider(s) during which time encounters may occur. The managing organization assumes a level of responsibility for the patient during this time.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-EpisodeOfCare-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/breast-radiology",
+      "value": "obf.EpisodeOfCare"
+    }
+  ],
+  "name": "EpisodeOfCare",
+  "title": "obf-EpisodeOfCare",
+  "status": "draft",
+  "date": "2019-07-30",
+  "publisher": "Hl7",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://BreastRadReport.com"
+        }
+      ]
+    }
+  ],
+  "description": "An association between a patient and an organization / healthcare provider(s) during which time encounters may occur. The managing organization assumes a level of responsibility for the patient during this time.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "obf-EpisodeOfCare-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "obf-EpisodeOfCare-model",
+        "path": "obf-EpisodeOfCare-model",
+        "definition": "An association between a patient and an organization / healthcare provider(s) during which time encounters may occur. The managing organization assumes a level of responsibility for the patient during this time.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-EpisodeOfCare-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-EpisodeOfCare-model.metadata",
+        "path": "obf-EpisodeOfCare-model.metadata",
+        "short": "Elements that belong to all information items.",
+        "definition": "Elements that belong to all information items.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-EpisodeOfCare-model.metadata",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Metadata-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-EpisodeOfCare-model.language",
+        "path": "obf-EpisodeOfCare-model.language",
+        "short": "A human language, spoken or written.",
+        "definition": "A human language, spoken or written.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-EpisodeOfCare-model.language",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-EpisodeOfCare-model.implicitRules",
+        "path": "obf-EpisodeOfCare-model.implicitRules",
+        "short": "A set of rules under which this content was created",
+        "definition": "A set of rules under which this content was created",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-EpisodeOfCare-model.implicitRules",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-EpisodeOfCare-model.narrative",
+        "path": "obf-EpisodeOfCare-model.narrative",
+        "short": "A human-readable narrative, potentially including images, that contains a summary of the resource, and may be used to represent the content of the resource to a human.",
+        "definition": "A human-readable narrative, potentially including images, that contains a summary of the resource, and may be used to represent the content of the resource to a human.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-EpisodeOfCare-model.narrative",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Narrative-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-EpisodeOfCare-model.status",
+        "path": "obf-EpisodeOfCare-model.status",
+        "short": "A state that relates to the workflow or interpretation of this resource. Certain status values can modify the meaning of the resource, for example, entered-in-error. When a boolean value is used, Status of true indicates the record is active, false means inactive.",
+        "definition": "A state that relates to the workflow or interpretation of this resource. Certain status values can modify the meaning of the resource, for example, entered-in-error. When a boolean value is used, Status of true indicates the record is active, false means inactive.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-EpisodeOfCare-model.status",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/episode-of-care-status"
+          }
+        }
+      },
+      {
+        "id": "obf-EpisodeOfCare-model.statusHistory",
+        "path": "obf-EpisodeOfCare-model.statusHistory",
+        "short": "List of past encounter statuses",
+        "definition": "List of past encounter statuses",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-EpisodeOfCare-model.statusHistory",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-StatusHistory-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-EpisodeOfCare-model.statusHistory.status",
+        "path": "obf-EpisodeOfCare-model.statusHistory.status",
+        "short": "A state that relates to the workflow or interpretation of this resource. Certain status values can modify the meaning of the resource, for example, entered-in-error. When a boolean value is used, Status of true indicates the record is active, false means inactive.",
+        "definition": "A state that relates to the workflow or interpretation of this resource. Certain status values can modify the meaning of the resource, for example, entered-in-error. When a boolean value is used, Status of true indicates the record is active, false means inactive.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-EpisodeOfCare-model.statusHistory.status",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/episode-of-care-status"
+          }
+        }
+      },
+      {
+        "id": "obf-EpisodeOfCare-model.statusHistory.timePeriod",
+        "path": "obf-EpisodeOfCare-model.statusHistory.timePeriod",
+        "short": "A period of time defined by a start and end time, date, or year.",
+        "definition": "A period of time defined by a start and end time, date, or year.\nIf the start date/time is missing, the start of the period is not known. If the end date/time is missing, it means that the period is ongoing.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-EpisodeOfCare-model.statusHistory.timePeriod",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-TimePeriod-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-EpisodeOfCare-model.identifier",
+        "path": "obf-EpisodeOfCare-model.identifier",
+        "short": "Business identifier or external id for this resource.",
+        "definition": "Business identifier or external id for this resource.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-EpisodeOfCare-model.identifier",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-Identifier-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-EpisodeOfCare-model.timePeriod",
+        "path": "obf-EpisodeOfCare-model.timePeriod",
+        "short": "A period of time defined by a start and end time, date, or year.",
+        "definition": "A period of time defined by a start and end time, date, or year.\nIf the start date/time is missing, the start of the period is not known. If the end date/time is missing, it means that the period is ongoing.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-EpisodeOfCare-model.timePeriod",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-TimePeriod-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-EpisodeOfCare-model.encounterDiagnosis",
+        "path": "obf-EpisodeOfCare-model.encounterDiagnosis",
+        "short": "A diagnosis, which is a disease or injury determined to be present through evaluation of patient history, examination, and/or review of laboratory data. This element is not a stand-alone representation of the condition that was diagnosed, but is meant to be used as an sub-structure in a resource, such as Encounter.",
+        "definition": "A diagnosis, which is a disease or injury determined to be present through evaluation of patient history, examination, and/or review of laboratory data. This element is not a stand-alone representation of the condition that was diagnosed, but is meant to be used as an sub-structure in a resource, such as Encounter.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-EpisodeOfCare-model.encounterDiagnosis",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-EncounterDiagnosis-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-EpisodeOfCare-model.subjectOfRecord",
+        "path": "obf-EpisodeOfCare-model.subjectOfRecord",
+        "short": "The subject of a clinical statement, often called the Patient or the Subject. The SubjectOfRecord typically identifies the clinical record in which this statement is contained. If the statement should be in John Doe's patient record, then John Doe is the subject of record. When there is no patient, the SubjectOfRecord can also be a location, group, or other entity that statement pertains to. For example, observations concerning a hospital ward would have a Location as the SubjectOfRecord.",
+        "definition": "The subject of a clinical statement, often called the Patient or the Subject. The SubjectOfRecord typically identifies the clinical record in which this statement is contained. If the statement should be in John Doe's patient record, then John Doe is the subject of record. When there is no patient, the SubjectOfRecord can also be a location, group, or other entity that statement pertains to. For example, observations concerning a hospital ward would have a Location as the SubjectOfRecord.\n\nNote that the word 'Subject' is used here in the sense of a person or entity subjected to observations or actions, not subject as in a conceptual topic, like heart disease.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-EpisodeOfCare-model.subjectOfRecord",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Patient-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-EpisodeOfCare-model.type",
+        "path": "obf-EpisodeOfCare-model.type",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0332307"
+          }
+        ],
+        "short": "A code describing the item at a greater level of detail.",
+        "definition": "A code describing the item at a greater level of detail.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-EpisodeOfCare-model.type",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "example",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/episodeofcare-type"
+          }
+        }
+      },
+      {
+        "id": "obf-EpisodeOfCare-model.organization",
+        "path": "obf-EpisodeOfCare-model.organization",
+        "short": "A formally or informally recognized grouping of people or organizations formed for the purpose of achieving some form of collective action. Includes companies, institutions, corporations, departments, community groups, healthcare practice groups, payer/insurer, etc.",
+        "definition": "A formally or informally recognized grouping of people or organizations formed for the purpose of achieving some form of collective action. Includes companies, institutions, corporations, departments, community groups, healthcare practice groups, payer/insurer, etc.\n\nOrganization type is restricted to 0..1 in FHIR DSTU2, similarly restricted here. Other required attributes come from STU 3 mapping to us-core-organization.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-EpisodeOfCare-model.organization",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Organization-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-EpisodeOfCare-model.referralBasedOn[x]",
+        "path": "obf-EpisodeOfCare-model.referralBasedOn[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "short": "Indicates any plans, proposals or orders that this request is intended to satisfy - in whole or in part.",
+        "definition": "Indicates any plans, proposals or orders that this request is intended to satisfy - in whole or in part.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-EpisodeOfCare-model.referralBasedOn[x]",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-ReferralRequest-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-EpisodeOfCare-model.referralBasedOnObf-ReferralRequest-model:ReferralRequest",
+        "path": "obf-EpisodeOfCare-model.referralBasedOnObf-ReferralRequest-model",
+        "sliceName": "ReferralRequest",
+        "short": "Used to record and send details about a request for referral service or transfer of a patient to the care of another provider or provider organization.",
+        "definition": "Used to record and send details about a request for referral service or transfer of a patient to the care of another provider or provider organization.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-EpisodeOfCare-model.referralBasedOn[x]",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-ReferralRequest-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-EpisodeOfCare-model.careManager",
+        "path": "obf-EpisodeOfCare-model.careManager",
+        "short": "Care manager/care co-ordinator for the patient",
+        "definition": "Care manager/care co-ordinator for the patient",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-EpisodeOfCare-model.careManager",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Practitioner-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "obf-EpisodeOfCare-model",
+        "path": "obf-EpisodeOfCare-model",
+        "definition": "An association between a patient and an organization / healthcare provider(s) during which time encounters may occur. The managing organization assumes a level of responsibility for the patient during this time.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-EpisodeOfCare-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-EpisodeOfCare-model.metadata",
+        "path": "obf-EpisodeOfCare-model.metadata",
+        "short": "Elements that belong to all information items.",
+        "definition": "Elements that belong to all information items.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-EpisodeOfCare-model.metadata",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Metadata-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-EpisodeOfCare-model.language",
+        "path": "obf-EpisodeOfCare-model.language",
+        "short": "A human language, spoken or written.",
+        "definition": "A human language, spoken or written.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-EpisodeOfCare-model.language",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-EpisodeOfCare-model.implicitRules",
+        "path": "obf-EpisodeOfCare-model.implicitRules",
+        "short": "A set of rules under which this content was created",
+        "definition": "A set of rules under which this content was created",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-EpisodeOfCare-model.implicitRules",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-EpisodeOfCare-model.narrative",
+        "path": "obf-EpisodeOfCare-model.narrative",
+        "short": "A human-readable narrative, potentially including images, that contains a summary of the resource, and may be used to represent the content of the resource to a human.",
+        "definition": "A human-readable narrative, potentially including images, that contains a summary of the resource, and may be used to represent the content of the resource to a human.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-EpisodeOfCare-model.narrative",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Narrative-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-EpisodeOfCare-model.status",
+        "path": "obf-EpisodeOfCare-model.status",
+        "short": "A state that relates to the workflow or interpretation of this resource. Certain status values can modify the meaning of the resource, for example, entered-in-error. When a boolean value is used, Status of true indicates the record is active, false means inactive.",
+        "definition": "A state that relates to the workflow or interpretation of this resource. Certain status values can modify the meaning of the resource, for example, entered-in-error. When a boolean value is used, Status of true indicates the record is active, false means inactive.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-EpisodeOfCare-model.status",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/episode-of-care-status"
+          }
+        }
+      },
+      {
+        "id": "obf-EpisodeOfCare-model.statusHistory",
+        "path": "obf-EpisodeOfCare-model.statusHistory",
+        "short": "List of past encounter statuses",
+        "definition": "List of past encounter statuses",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-EpisodeOfCare-model.statusHistory",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-StatusHistory-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-EpisodeOfCare-model.statusHistory.status",
+        "path": "obf-EpisodeOfCare-model.statusHistory.status",
+        "short": "A state that relates to the workflow or interpretation of this resource. Certain status values can modify the meaning of the resource, for example, entered-in-error. When a boolean value is used, Status of true indicates the record is active, false means inactive.",
+        "definition": "A state that relates to the workflow or interpretation of this resource. Certain status values can modify the meaning of the resource, for example, entered-in-error. When a boolean value is used, Status of true indicates the record is active, false means inactive.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-EpisodeOfCare-model.statusHistory.status",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/episode-of-care-status"
+          }
+        }
+      },
+      {
+        "id": "obf-EpisodeOfCare-model.statusHistory.timePeriod",
+        "path": "obf-EpisodeOfCare-model.statusHistory.timePeriod",
+        "short": "A period of time defined by a start and end time, date, or year.",
+        "definition": "A period of time defined by a start and end time, date, or year.\nIf the start date/time is missing, the start of the period is not known. If the end date/time is missing, it means that the period is ongoing.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-EpisodeOfCare-model.statusHistory.timePeriod",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-TimePeriod-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-EpisodeOfCare-model.identifier",
+        "path": "obf-EpisodeOfCare-model.identifier",
+        "short": "Business identifier or external id for this resource.",
+        "definition": "Business identifier or external id for this resource.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-EpisodeOfCare-model.identifier",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-Identifier-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-EpisodeOfCare-model.timePeriod",
+        "path": "obf-EpisodeOfCare-model.timePeriod",
+        "short": "A period of time defined by a start and end time, date, or year.",
+        "definition": "A period of time defined by a start and end time, date, or year.\nIf the start date/time is missing, the start of the period is not known. If the end date/time is missing, it means that the period is ongoing.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-EpisodeOfCare-model.timePeriod",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-TimePeriod-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-EpisodeOfCare-model.encounterDiagnosis",
+        "path": "obf-EpisodeOfCare-model.encounterDiagnosis",
+        "short": "A diagnosis, which is a disease or injury determined to be present through evaluation of patient history, examination, and/or review of laboratory data. This element is not a stand-alone representation of the condition that was diagnosed, but is meant to be used as an sub-structure in a resource, such as Encounter.",
+        "definition": "A diagnosis, which is a disease or injury determined to be present through evaluation of patient history, examination, and/or review of laboratory data. This element is not a stand-alone representation of the condition that was diagnosed, but is meant to be used as an sub-structure in a resource, such as Encounter.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-EpisodeOfCare-model.encounterDiagnosis",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-EncounterDiagnosis-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-EpisodeOfCare-model.subjectOfRecord",
+        "path": "obf-EpisodeOfCare-model.subjectOfRecord",
+        "short": "The subject of a clinical statement, often called the Patient or the Subject. The SubjectOfRecord typically identifies the clinical record in which this statement is contained. If the statement should be in John Doe's patient record, then John Doe is the subject of record. When there is no patient, the SubjectOfRecord can also be a location, group, or other entity that statement pertains to. For example, observations concerning a hospital ward would have a Location as the SubjectOfRecord.",
+        "definition": "The subject of a clinical statement, often called the Patient or the Subject. The SubjectOfRecord typically identifies the clinical record in which this statement is contained. If the statement should be in John Doe's patient record, then John Doe is the subject of record. When there is no patient, the SubjectOfRecord can also be a location, group, or other entity that statement pertains to. For example, observations concerning a hospital ward would have a Location as the SubjectOfRecord.\n\nNote that the word 'Subject' is used here in the sense of a person or entity subjected to observations or actions, not subject as in a conceptual topic, like heart disease.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-EpisodeOfCare-model.subjectOfRecord",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Patient-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-EpisodeOfCare-model.type",
+        "path": "obf-EpisodeOfCare-model.type",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0332307"
+          }
+        ],
+        "short": "A code describing the item at a greater level of detail.",
+        "definition": "A code describing the item at a greater level of detail.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-EpisodeOfCare-model.type",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "example",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/episodeofcare-type"
+          }
+        }
+      },
+      {
+        "id": "obf-EpisodeOfCare-model.organization",
+        "path": "obf-EpisodeOfCare-model.organization",
+        "short": "A formally or informally recognized grouping of people or organizations formed for the purpose of achieving some form of collective action. Includes companies, institutions, corporations, departments, community groups, healthcare practice groups, payer/insurer, etc.",
+        "definition": "A formally or informally recognized grouping of people or organizations formed for the purpose of achieving some form of collective action. Includes companies, institutions, corporations, departments, community groups, healthcare practice groups, payer/insurer, etc.\n\nOrganization type is restricted to 0..1 in FHIR DSTU2, similarly restricted here. Other required attributes come from STU 3 mapping to us-core-organization.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-EpisodeOfCare-model.organization",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Organization-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-EpisodeOfCare-model.referralBasedOn[x]",
+        "path": "obf-EpisodeOfCare-model.referralBasedOn[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "short": "Indicates any plans, proposals or orders that this request is intended to satisfy - in whole or in part.",
+        "definition": "Indicates any plans, proposals or orders that this request is intended to satisfy - in whole or in part.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-EpisodeOfCare-model.referralBasedOn[x]",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-ReferralRequest-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-EpisodeOfCare-model.referralBasedOnObf-ReferralRequest-model:ReferralRequest",
+        "path": "obf-EpisodeOfCare-model.referralBasedOnObf-ReferralRequest-model",
+        "sliceName": "ReferralRequest",
+        "short": "Used to record and send details about a request for referral service or transfer of a patient to the care of another provider or provider organization.",
+        "definition": "Used to record and send details about a request for referral service or transfer of a patient to the care of another provider or provider organization.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-EpisodeOfCare-model.referralBasedOn[x]",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-ReferralRequest-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-EpisodeOfCare-model.careManager",
+        "path": "obf-EpisodeOfCare-model.careManager",
+        "short": "Care manager/care co-ordinator for the patient",
+        "definition": "Care manager/care co-ordinator for the patient",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-EpisodeOfCare-model.careManager",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Practitioner-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

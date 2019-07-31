@@ -1,0 +1,134 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "obf-PersonParticipant-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>PersonParticipant Logical Model</b></p>\n  <p>A choice of Patient, Practitioner and RelatedPerson as participant.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-PersonParticipant-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/breast-radiology",
+      "value": "obf.PersonParticipant"
+    }
+  ],
+  "name": "PersonParticipant",
+  "title": "obf-PersonParticipant",
+  "status": "draft",
+  "date": "2019-07-30",
+  "publisher": "Hl7",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://BreastRadReport.com"
+        }
+      ]
+    }
+  ],
+  "description": "A choice of Patient, Practitioner and RelatedPerson as participant.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "obf-PersonParticipant-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "obf-PersonParticipant-model",
+        "path": "obf-PersonParticipant-model",
+        "definition": "A choice of Patient, Practitioner and RelatedPerson as participant.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-PersonParticipant-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-PersonParticipant-model.value[x]",
+        "path": "obf-PersonParticipant-model.value[x]",
+        "short": "Choice of types representing a choice of Patient, Practitioner and RelatedPerson as participant.",
+        "definition": "Choice of types representing a choice of Patient, Practitioner and RelatedPerson as participant.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-PersonParticipant-model.value[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Patient-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Practitioner-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-RelatedPerson-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "obf-PersonParticipant-model",
+        "path": "obf-PersonParticipant-model",
+        "definition": "A choice of Patient, Practitioner and RelatedPerson as participant.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-PersonParticipant-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-PersonParticipant-model.value[x]",
+        "path": "obf-PersonParticipant-model.value[x]",
+        "short": "Choice of types representing a choice of Patient, Practitioner and RelatedPerson as participant.",
+        "definition": "Choice of types representing a choice of Patient, Practitioner and RelatedPerson as participant.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-PersonParticipant-model.value[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Patient-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Practitioner-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-RelatedPerson-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

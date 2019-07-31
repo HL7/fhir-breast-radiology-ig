@@ -1,0 +1,4378 @@
+<ImplementationGuide xmlns="http://hl7.org/fhir">
+    <id value="hl7.fhir.us.breast-radiology-0.1.0" />
+    <url value="http://hl7.org/fhir/us/breast-radiology/fhir/ImplementationGuide/hl7.fhir.us.breast-radiology-0.1.0" />
+    <name value="Breast Radiology Reporting FHIR Profiles" />
+    <status value="draft" />
+    <publisher value="Hl7"/>
+    <contact>
+      <telecom>
+        <system value="url"/>
+        <value value="http://BreastRadReport.com"/>
+      </telecom>
+    </contact>
+
+    <fhirVersion value="3.0.1"/>
+    <package>
+        <name value="Profiles in this Implementation Guide" />
+        <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-AccessionIdentifier" />
+            <display value="obf-AccessionIdentifier" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-ActionPerformed" />
+            <display value="obf-ActionPerformed" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-ActionRequest" />
+            <display value="obf-ActionRequest" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-ActionStatement" />
+            <display value="obf-ActionStatement" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-Age" />
+            <display value="obf-datatype-Age" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/breastrad-BreastAbnormality" />
+            <display value="breastrad-BreastAbnormality" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/breastrad-BreastRadiologyDocument" />
+            <display value="breastrad-BreastRadiologyDocument" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/breastrad-BreastRadiologyReport" />
+            <display value="breastrad-BreastRadiologyReport" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-ClinicalStatement" />
+            <display value="obf-ClinicalStatement" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-Composition" />
+            <display value="obf-Composition" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-Condition" />
+            <display value="obf-Condition" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-DiagnosticReport" />
+            <display value="obf-DiagnosticReport" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-DomainResource" />
+            <display value="obf-DomainResource" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-Duration" />
+            <display value="obf-datatype-Duration" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-EncounterOrEpisode" />
+            <display value="obf-EncounterOrEpisode" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-Entity" />
+            <display value="obf-Entity" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-EntityOrRole" />
+            <display value="obf-EntityOrRole" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-InformationItem" />
+            <display value="obf-InformationItem" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-MedicationAction" />
+            <display value="obf-MedicationAction" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-MedicationDispense" />
+            <display value="obf-MedicationDispense" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-Money" />
+            <display value="obf-datatype-Money" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-NationalProviderIdentifier" />
+            <display value="obf-NationalProviderIdentifier" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-Observation" />
+            <display value="obf-Observation" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-RelatedArtifact" />
+            <display value="obf-datatype-RelatedArtifact" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-Resource" />
+            <display value="obf-Resource" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-Role" />
+            <display value="obf-Role" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-SituationStatement" />
+            <display value="obf-SituationStatement" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-TaxIdentificationNumber" />
+            <display value="obf-TaxIdentificationNumber" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-Timing" />
+            <display value="obf-datatype-Timing" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-AdministrationSite-extension" />
+            <display value="obf-AdministrationSite" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-AnatomicalOrientation-extension" />
+            <display value="obf-datatype-AnatomicalOrientation" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-Annotation-extension" />
+            <display value="obf-Annotation" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-AsNeeded-extension" />
+            <display value="obf-AsNeeded" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-Author-extension" />
+            <display value="obf-Author" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-BasedOn-extension" />
+            <display value="obf-BasedOn" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/breastrad-BreastExamTechnique-extension" />
+            <display value="breastrad-BreastExamTechnique" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-CanonicalUrl-extension" />
+            <display value="obf-datatype-CanonicalUrl" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-CareContext-extension" />
+            <display value="obf-CareContext" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-Category-extension" />
+            <display value="obf-datatype-Category" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-Code-extension" />
+            <display value="obf-datatype-Code" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-Comparator-extension" />
+            <display value="obf-datatype-Comparator" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-Condition-extension" />
+            <display value="obf-Condition" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-Currency-extension" />
+            <display value="obf-datatype-Currency" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-DateOfDiagnosis-extension" />
+            <display value="obf-DateOfDiagnosis" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-DiagnosisCode-extension" />
+            <display value="obf-DiagnosisCode" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-Dosage-extension" />
+            <display value="obf-Dosage" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-DoseAmount-extension" />
+            <display value="obf-DoseAmount" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-DoseAndRate-extension" />
+            <display value="obf-DoseAndRate" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-DoseRate-extension" />
+            <display value="obf-DoseRate" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-DoseSequenceNumber-extension" />
+            <display value="obf-DoseSequenceNumber" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-EncounterDiagnosis-extension" />
+            <display value="obf-EncounterDiagnosis" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-ExpectedPerformanceTime-extension" />
+            <display value="obf-ExpectedPerformanceTime" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-ExpectedPerformer-extension" />
+            <display value="obf-ExpectedPerformer" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-ExpectedPerformerType-extension" />
+            <display value="obf-ExpectedPerformerType" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-FocalSubject-extension" />
+            <display value="obf-FocalSubject" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-Identifier-extension" />
+            <display value="obf-datatype-Identifier" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-InstructionCode-extension" />
+            <display value="obf-InstructionCode" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-InstructionText-extension" />
+            <display value="obf-InstructionText" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-LabelText-extension" />
+            <display value="obf-datatype-LabelText" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-LandmarkLocation-extension" />
+            <display value="obf-datatype-LandmarkLocation" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-LandmarkToBodyLocationDirection-extension" />
+            <display value="obf-datatype-LandmarkToBodyLocationDirection" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-LandmarkToBodyLocationDistance-extension" />
+            <display value="obf-datatype-LandmarkToBodyLocationDistance" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-LandmarkType-extension" />
+            <display value="obf-datatype-LandmarkType" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-Laterality-extension" />
+            <display value="obf-datatype-Laterality" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-MaxDosePerAdministration-extension" />
+            <display value="obf-MaxDosePerAdministration" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-MaxDosePerLifetime-extension" />
+            <display value="obf-MaxDosePerLifetime" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-MaxDosePerPeriod-extension" />
+            <display value="obf-MaxDosePerPeriod" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-MedicationCodeOrReference-extension" />
+            <display value="obf-MedicationCodeOrReference" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-Method-extension" />
+            <display value="obf-Method" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-MoneyAmount-extension" />
+            <display value="obf-datatype-MoneyAmount" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-Number-extension" />
+            <display value="obf-datatype-Number" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-ObservationDerivedFrom-extension" />
+            <display value="obf-ObservationDerivedFrom" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-ObservationPartOf-extension" />
+            <display value="obf-ObservationPartOf" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-OccurrenceTimeOrPeriod-extension" />
+            <display value="obf-datatype-OccurrenceTimeOrPeriod" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-OnBehalfOf-extension" />
+            <display value="obf-OnBehalfOf" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-Organization-extension" />
+            <display value="obf-Organization" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-PartOf-extension" />
+            <display value="obf-PartOf" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-Participant-extension" />
+            <display value="obf-Participant" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-Participation-extension" />
+            <display value="obf-Participation" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-ParticipationPeriod-extension" />
+            <display value="obf-ParticipationPeriod" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-ParticipationType-extension" />
+            <display value="obf-ParticipationType" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-PatientInstruction-extension" />
+            <display value="obf-PatientInstruction" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-PriorityCode-extension" />
+            <display value="obf-datatype-PriorityCode" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-PriorityRank-extension" />
+            <display value="obf-datatype-PriorityRank" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-ReasonCode-extension" />
+            <display value="obf-ReasonCode" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-ReasonReference-extension" />
+            <display value="obf-ReasonReference" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-RelationToLandmark-extension" />
+            <display value="obf-datatype-RelationToLandmark" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-RequestIntent-extension" />
+            <display value="obf-RequestIntent" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-Requester-extension" />
+            <display value="obf-Requester" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/breastrad-ResultComposition-extension" />
+            <display value="breastrad-ResultComposition" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-ResultsInterpreter-extension" />
+            <display value="obf-ResultsInterpreter" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-RouteIntoBody-extension" />
+            <display value="obf-datatype-RouteIntoBody" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-SourceSystem-extension" />
+            <display value="obf-SourceSystem" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-StatementDateTime-extension" />
+            <display value="obf-StatementDateTime" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-Status-extension" />
+            <display value="obf-Status" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-StatusHistory-extension" />
+            <display value="obf-StatusHistory" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-SubjectOfRecord-extension" />
+            <display value="obf-SubjectOfRecord" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/breastrad-SummaryBiRadCode-extension" />
+            <display value="breastrad-SummaryBiRadCode" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-TimePeriod-extension" />
+            <display value="obf-datatype-TimePeriod" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-Timing-extension" />
+            <display value="obf-datatype-Timing" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-Type-extension" />
+            <display value="obf-datatype-Type" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-Units-extension" />
+            <display value="obf-datatype-Units" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="ValueSet/breastrad-AbnormalityDensityVS" />
+            <display value="AbnormalityDensityVS" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="ValueSet/breastrad-AbnormalityTypeVS" />
+            <display value="AbnormalityTypeVS" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="ValueSet/obf-datatype-AnatomicalDirectionVS" />
+            <display value="AnatomicalDirectionVS" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="ValueSet/obf-datatype-AnatomicalOrientationVS" />
+            <display value="AnatomicalOrientationVS" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="ValueSet/breastrad-AsymmetryTypesVS" />
+            <display value="AsymmetryTypesVS" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="ValueSet/breastrad-BiRadCodeVS" />
+            <display value="BiRadCodeVS" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="ValueSet/obf-datatype-BodyLocationVS" />
+            <display value="BodyLocationVS" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="ValueSet/breastrad-BreastDensityVS" />
+            <display value="BreastDensityVS" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="ValueSet/breastrad-ChangeVS" />
+            <display value="ChangeVS" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="ValueSet/obf-datatype-ClockFaceDirectionVS" />
+            <display value="ClockFaceDirectionVS" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="ValueSet/breastrad-CystTypesVS" />
+            <display value="CystTypesVS" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="ValueSet/breastrad-DepthVS" />
+            <display value="DepthVS" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="ValueSet/breastrad-DiagnosticTechniqueVS" />
+            <display value="DiagnosticTechniqueVS" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="ValueSet/obf-datatype-LandmarkTypeVS" />
+            <display value="LandmarkTypeVS" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="ValueSet/breastrad-MarginVS" />
+            <display value="MarginVS" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="ValueSet/breastrad-MassTypesVS" />
+            <display value="MassTypesVS" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="ValueSet/breastrad-NodeTypesVS" />
+            <display value="NodeTypesVS" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="ValueSet/obf-ResearchSubjectTerminationReasonVS" />
+            <display value="ResearchSubjectTerminationReasonVS" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="ValueSet/obf-datatype-SettingVS" />
+            <display value="SettingVS" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="ValueSet/breastrad-ShapeVS" />
+            <display value="ShapeVS" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="ValueSet/obf-StudyArmTypeVS" />
+            <display value="StudyArmTypeVS" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="ValueSet/obf-TreatmentIntentVS" />
+            <display value="TreatmentIntentVS" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="ValueSet/obf-TreatmentTerminationReasonVS" />
+            <display value="TreatmentTerminationReasonVS" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="ValueSet/obf-datatype-UnitsOfLengthVS" />
+            <display value="UnitsOfLengthVS" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="ValueSet/breastrad-VascularityVS" />
+            <display value="VascularityVS" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="ValueSet/breastrad-WallVS" />
+            <display value="WallVS" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="CodeSystem/breastrad-AbnormalityDensityCS" />
+            <display value="AbnormalityDensityCS" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="CodeSystem/breastrad-AbnormalityTypeCS" />
+            <display value="AbnormalityTypeCS" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="CodeSystem/breastrad-AsymmetryTypesCS" />
+            <display value="AsymmetryTypesCS" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="CodeSystem/breastrad-BiRadCodeCS" />
+            <display value="BiRadCodeCS" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="CodeSystem/breastrad-BreastDensityCS" />
+            <display value="BreastDensityCS" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="CodeSystem/breastrad-ChangeCS" />
+            <display value="ChangeCS" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="CodeSystem/breastrad-CystTypesCS" />
+            <display value="CystTypesCS" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="CodeSystem/breastrad-DepthCS" />
+            <display value="DepthCS" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="CodeSystem/breastrad-MarginCS" />
+            <display value="MarginCS" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="CodeSystem/breastrad-MassTypesCS" />
+            <display value="MassTypesCS" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="CodeSystem/breastrad-NodeTypesCS" />
+            <display value="NodeTypesCS" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="CodeSystem/obf-ResearchSubjectTerminationReasonCS" />
+            <display value="ResearchSubjectTerminationReasonCS" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="CodeSystem/obf-datatype-SettingCS" />
+            <display value="SettingCS" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="CodeSystem/breastrad-ShapeCS" />
+            <display value="ShapeCS" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="CodeSystem/breastrad-VascularityCS" />
+            <display value="VascularityCS" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="CodeSystem/breastrad-WallCS" />
+            <display value="WallCS" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-Abatement-model" />
+            <display value="Abatement" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/breastrad-AbnormalityDensity-model" />
+            <display value="AbnormalityDensity" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/breastrad-AbnormalityType-model" />
+            <display value="AbnormalityType" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-AccessionIdentifier-model" />
+            <display value="AccessionIdentifier" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-ActionPerformed-model" />
+            <display value="ActionPerformed" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-ActionRequest-model" />
+            <display value="ActionRequest" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-ActionStatement-model" />
+            <display value="ActionStatement" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-Active-model" />
+            <display value="Active" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-Actual-model" />
+            <display value="Actual" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-ActualArm-model" />
+            <display value="ActualArm" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-Additive-model" />
+            <display value="Additive" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-Address-model" />
+            <display value="Address" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-AddressLine-model" />
+            <display value="AddressLine" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-AdministrationSite-model" />
+            <display value="AdministrationSite" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-AdministrativeGender-model" />
+            <display value="AdministrativeGender" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-Age-model" />
+            <display value="Age" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-Alias-model" />
+            <display value="Alias" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-AllDay-model" />
+            <display value="AllDay" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-Altitude-model" />
+            <display value="Altitude" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-AmountOrSize-model" />
+            <display value="AmountOrSize" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-AnatomicalOrientation-model" />
+            <display value="AnatomicalOrientation" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-Annotation-model" />
+            <display value="Annotation" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-Answer-model" />
+            <display value="Answer" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-AnswerValue-model" />
+            <display value="AnswerValue" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-ApplicableAgeRange-model" />
+            <display value="ApplicableAgeRange" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-ApplicableSubpopulation-model" />
+            <display value="ApplicableSubpopulation" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-Appointment-model" />
+            <display value="Appointment" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-AppointmentParticipant-model" />
+            <display value="AppointmentParticipant" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-AppointmentParticipation-model" />
+            <display value="AppointmentParticipation" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-AppointmentReasonReference-model" />
+            <display value="AppointmentReasonReference" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-AsNeeded-model" />
+            <display value="AsNeeded" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-AssignedArm-model" />
+            <display value="AssignedArm" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/breastrad-AsymmetryTypes-model" />
+            <display value="AsymmetryTypes" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-Attachment-model" />
+            <display value="Attachment" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-Attestation-model" />
+            <display value="Attestation" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-AttestationMode-model" />
+            <display value="AttestationMode" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-Attester-model" />
+            <display value="Attester" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-Authenticator-model" />
+            <display value="Authenticator" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-Author-model" />
+            <display value="Author" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-AvailabilityExceptions-model" />
+            <display value="AvailabilityExceptions" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-BasedOn-model" />
+            <display value="BasedOn" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-BeginDateTime-model" />
+            <display value="BeginDateTime" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-Beneficiary-model" />
+            <display value="Beneficiary" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-BeneficiaryRelationship-model" />
+            <display value="BeneficiaryRelationship" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/breastrad-BiRadCode-model" />
+            <display value="BiRadCode" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-BinaryData-model" />
+            <display value="BinaryData" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-BirthDate-model" />
+            <display value="BirthDate" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-BirthSex-model" />
+            <display value="BirthSex" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-BodyLocation-model" />
+            <display value="BodyLocation" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/breastrad-BreastAbnormality-model" />
+            <display value="BreastAbnormality" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/breastrad-BreastBodyLocation-model" />
+            <display value="BreastBodyLocation" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/breastrad-BreastDensity-model" />
+            <display value="BreastDensity" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/breastrad-BreastDepth-model" />
+            <display value="BreastDepth" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/breastrad-BreastExamTechnique-model" />
+            <display value="BreastExamTechnique" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/breastrad-BreastRadiologyDocument-model" />
+            <display value="BreastRadiologyDocument" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/breastrad-BreastRadiologyReport-model" />
+            <display value="BreastRadiologyReport" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-CanonicalUrl-model" />
+            <display value="CanonicalUrl" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-Capacity-model" />
+            <display value="Capacity" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-CareContext-model" />
+            <display value="CareContext" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-CareManager-model" />
+            <display value="CareManager" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-CarrierAIDC-model" />
+            <display value="CarrierAIDC" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-CarrierHRF-model" />
+            <display value="CarrierHRF" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-Category-model" />
+            <display value="Category" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/breastrad-Change-model" />
+            <display value="Change" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-Citation-model" />
+            <display value="Citation" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-City-model" />
+            <display value="City" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-ClassHistory-model" />
+            <display value="ClassHistory" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-ClinicalStatement-model" />
+            <display value="ClinicalStatement" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-ClinicalStatus-model" />
+            <display value="ClinicalStatus" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-ClosingTime-model" />
+            <display value="ClosingTime" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-Code-model" />
+            <display value="Code" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-CodeSystem-model" />
+            <display value="CodeSystem" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-CodedObservationComponent-model" />
+            <display value="CodedObservationComponent" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-CollectionMethod-model" />
+            <display value="CollectionMethod" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-CollectionSite-model" />
+            <display value="CollectionSite" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-CollectionSource-model" />
+            <display value="CollectionSource" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-CollectionTime-model" />
+            <display value="CollectionTime" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-CommentOrDescription-model" />
+            <display value="CommentOrDescription" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-Communication-model" />
+            <display value="Communication" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-Comparator-model" />
+            <display value="Comparator" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-ComplicationCode-model" />
+            <display value="ComplicationCode" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-ComplicationReference-model" />
+            <display value="ComplicationReference" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-Components-model" />
+            <display value="Components" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-Composition-model" />
+            <display value="Composition" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-ConclusionCode-model" />
+            <display value="ConclusionCode" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-ConclusionText-model" />
+            <display value="ConclusionText" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-Condition-model" />
+            <display value="Condition" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-ConditionStudied-model" />
+            <display value="ConditionStudied" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-ConfidentialityCode-model" />
+            <display value="ConfidentialityCode" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-ContactDetail-model" />
+            <display value="ContactDetail" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-ContactPerson-model" />
+            <display value="ContactPerson" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-ContactPoint-model" />
+            <display value="ContactPoint" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-ContentType-model" />
+            <display value="ContentType" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-CorrectionFactor-model" />
+            <display value="CorrectionFactor" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-CostOrPercentage-model" />
+            <display value="CostOrPercentage" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-CostToBeneficiary-model" />
+            <display value="CostToBeneficiary" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-Count-model" />
+            <display value="Count" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-Country-model" />
+            <display value="Country" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-CourseOfTherapyType-model" />
+            <display value="CourseOfTherapyType" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-Coverage-model" />
+            <display value="Coverage" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-CoverageClassification-model" />
+            <display value="CoverageClassification" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-CoverageType-model" />
+            <display value="CoverageType" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-CreationDateTime-model" />
+            <display value="CreationDateTime" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-Currency-model" />
+            <display value="Currency" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/breastrad-CystTypes-model" />
+            <display value="CystTypes" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-DailyLifeEvent-model" />
+            <display value="DailyLifeEvent" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-DailyLifeEventOffset-model" />
+            <display value="DailyLifeEventOffset" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-DataAbsentReason-model" />
+            <display value="DataAbsentReason" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-DataAsString-model" />
+            <display value="DataAsString" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-DataValue-model" />
+            <display value="DataValue" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-DateOfDiagnosis-model" />
+            <display value="DateOfDiagnosis" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-DayOfWeek-model" />
+            <display value="DayOfWeek" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-Deceased-model" />
+            <display value="Deceased" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-Denominator-model" />
+            <display value="Denominator" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-DependentIdentifier-model" />
+            <display value="DependentIdentifier" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-DerivedFrom-model" />
+            <display value="DerivedFrom" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-DescriptionMarkdown-model" />
+            <display value="DescriptionMarkdown" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-DetailsUri-model" />
+            <display value="DetailsUri" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-Device-model" />
+            <display value="Device" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-DeviceDesignation-model" />
+            <display value="DeviceDesignation" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-DeviceIdentifier-model" />
+            <display value="DeviceIdentifier" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-DeviceName-model" />
+            <display value="DeviceName" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-DiagnosisCode-model" />
+            <display value="DiagnosisCode" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-DiagnosticReport-model" />
+            <display value="DiagnosticReport" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-DiagnosticReportPerformer-model" />
+            <display value="DiagnosticReportPerformer" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-Dimensions-model" />
+            <display value="Dimensions" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-DispenseInterval-model" />
+            <display value="DispenseInterval" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-DispenseRequest-model" />
+            <display value="DispenseRequest" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-DisplayText-model" />
+            <display value="DisplayText" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-DistinctIdentifier-model" />
+            <display value="DistinctIdentifier" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-District-model" />
+            <display value="District" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-DoNotPerform-model" />
+            <display value="DoNotPerform" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-DocumentAuthor-model" />
+            <display value="DocumentAuthor" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-DocumentReference-model" />
+            <display value="DocumentReference" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-DocumentReferenced-model" />
+            <display value="DocumentReferenced" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-DocumentStatus-model" />
+            <display value="DocumentStatus" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-DomainResource-model" />
+            <display value="DomainResource" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-Dosage-model" />
+            <display value="Dosage" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-DoseAmount-model" />
+            <display value="DoseAmount" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-DoseAndRate-model" />
+            <display value="DoseAndRate" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-DoseForm-model" />
+            <display value="DoseForm" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-DoseRate-model" />
+            <display value="DoseRate" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-DoseSequenceNumber-model" />
+            <display value="DoseSequenceNumber" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-Duration-model" />
+            <display value="Duration" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-EffectiveTimePeriod-model" />
+            <display value="EffectiveTimePeriod" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-EmbeddedContent-model" />
+            <display value="EmbeddedContent" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-EmptyReason-model" />
+            <display value="EmptyReason" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-Encounter-model" />
+            <display value="Encounter" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-EncounterClass-model" />
+            <display value="EncounterClass" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-EncounterDiagnosis-model" />
+            <display value="EncounterDiagnosis" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-EncounterLocation-model" />
+            <display value="EncounterLocation" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-EncounterOrEpisode-model" />
+            <display value="EncounterOrEpisode" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-EncounterParticipant-model" />
+            <display value="EncounterParticipant" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-EncounterReasonReference-model" />
+            <display value="EncounterReasonReference" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-EndDateTime-model" />
+            <display value="EndDateTime" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-Enrollment-model" />
+            <display value="Enrollment" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-Entity-model" />
+            <display value="Entity" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-EntityOrRole-model" />
+            <display value="EntityOrRole" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-EpisodeOfCare-model" />
+            <display value="EpisodeOfCare" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-Ethnicity-model" />
+            <display value="Ethnicity" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-EthnicityCode-model" />
+            <display value="EthnicityCode" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-EthnicityDetail-model" />
+            <display value="EthnicityDetail" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-EventContext-model" />
+            <display value="EventContext" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-Evidence-model" />
+            <display value="Evidence" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-Exception-model" />
+            <display value="Exception" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-ExcludeFlag-model" />
+            <display value="ExcludeFlag" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-ExpectedPerformanceTime-model" />
+            <display value="ExpectedPerformanceTime" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-ExpectedPerformer-model" />
+            <display value="ExpectedPerformer" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-ExpectedPerformerType-model" />
+            <display value="ExpectedPerformerType" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-ExpirationDate-model" />
+            <display value="ExpirationDate" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-FacilityType-model" />
+            <display value="FacilityType" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-FamilyName-model" />
+            <display value="FamilyName" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/breastrad-FindingSummaryBiRadCode-model" />
+            <display value="FindingSummaryBiRadCode" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/breastrad-Findings-model" />
+            <display value="Findings" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/breastrad-FindingsLeftBreast-model" />
+            <display value="FindingsLeftBreast" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/breastrad-FindingsRightBreast-model" />
+            <display value="FindingsRightBreast" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-FocalDevice-model" />
+            <display value="FocalDevice" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-FocalDeviceAction-model" />
+            <display value="FocalDeviceAction" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-FocalSubject-model" />
+            <display value="FocalSubject" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-FollowUp-model" />
+            <display value="FollowUp" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-Frames-model" />
+            <display value="Frames" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-GeneralPractitioner-model" />
+            <display value="GeneralPractitioner" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-Geoposition-model" />
+            <display value="Geoposition" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-GivenName-model" />
+            <display value="GivenName" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-Group-model" />
+            <display value="Group" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-GroupCharacteristic-model" />
+            <display value="GroupCharacteristic" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-GroupCharacteristicValue-model" />
+            <display value="GroupCharacteristicValue" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-GroupIdentifier-model" />
+            <display value="GroupIdentifier" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-GroupParticipant-model" />
+            <display value="GroupParticipant" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-GroupParticipation-model" />
+            <display value="GroupParticipation" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-HandlingRisk-model" />
+            <display value="HandlingRisk" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-Hash-model" />
+            <display value="Hash" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-HoursOfOperation-model" />
+            <display value="HoursOfOperation" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-HumanName-model" />
+            <display value="HumanName" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-Identifier-model" />
+            <display value="Identifier" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-IdentifierString-model" />
+            <display value="IdentifierString" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-ImplicitRules-model" />
+            <display value="ImplicitRules" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/breastrad-Impressions-model" />
+            <display value="Impressions" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-Inactive-model" />
+            <display value="Inactive" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-Indication-model" />
+            <display value="Indication" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-InformationItem-model" />
+            <display value="InformationItem" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-InformationSource-model" />
+            <display value="InformationSource" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-Ingredient-model" />
+            <display value="Ingredient" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-IngredientStrength-model" />
+            <display value="IngredientStrength" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-InitialFill-model" />
+            <display value="InitialFill" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-InstructionCode-model" />
+            <display value="InstructionCode" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-InstructionText-model" />
+            <display value="InstructionText" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-Insurance-model" />
+            <display value="Insurance" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-InsurerNetwork-model" />
+            <display value="InsurerNetwork" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-Interpretation-model" />
+            <display value="Interpretation" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-IsActiveIngredient-model" />
+            <display value="IsActiveIngredient" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-Issuer-model" />
+            <display value="Issuer" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-Jurisdiction-model" />
+            <display value="Jurisdiction" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-Keyword-model" />
+            <display value="Keyword" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-LabelText-model" />
+            <display value="LabelText" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-LandmarkLocation-model" />
+            <display value="LandmarkLocation" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-LandmarkToBodyLocationDirection-model" />
+            <display value="LandmarkToBodyLocationDirection" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-LandmarkToBodyLocationDistance-model" />
+            <display value="LandmarkToBodyLocationDistance" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-LandmarkType-model" />
+            <display value="LandmarkType" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-Language-model" />
+            <display value="Language" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-LastUpdated-model" />
+            <display value="LastUpdated" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-Laterality-model" />
+            <display value="Laterality" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-Latitude-model" />
+            <display value="Latitude" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-Location-model" />
+            <display value="Location" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-LocationType-model" />
+            <display value="LocationType" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-Longitude-model" />
+            <display value="Longitude" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-LotNumber-model" />
+            <display value="LotNumber" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-LowerBound-model" />
+            <display value="LowerBound" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-LowerLimit-model" />
+            <display value="LowerLimit" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-ManagingEntity-model" />
+            <display value="ManagingEntity" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-ManagingOrganization-model" />
+            <display value="ManagingOrganization" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-Manifestation-model" />
+            <display value="Manifestation" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-ManufactureDate-model" />
+            <display value="ManufactureDate" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-Manufacturer-model" />
+            <display value="Manufacturer" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-ManufacturerName-model" />
+            <display value="ManufacturerName" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/breastrad-Margin-model" />
+            <display value="Margin" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-MaritalStatus-model" />
+            <display value="MaritalStatus" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/breastrad-MassTypes-model" />
+            <display value="MassTypes" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-MasterIdentifier-model" />
+            <display value="MasterIdentifier" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-MaterialUsedReference-model" />
+            <display value="MaterialUsedReference" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-MaxDosePerAdministration-model" />
+            <display value="MaxDosePerAdministration" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-MaxDosePerLifetime-model" />
+            <display value="MaxDosePerLifetime" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-MaxDosePerPeriod-model" />
+            <display value="MaxDosePerPeriod" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/breastrad-MaxLength-model" />
+            <display value="MaxLength" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/breastrad-MaxWidth-model" />
+            <display value="MaxWidth" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-Media-model" />
+            <display value="Media" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-MediaBasedOn-model" />
+            <display value="MediaBasedOn" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-MediaIncluded-model" />
+            <display value="MediaIncluded" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-MediaSubjectOfRecord-model" />
+            <display value="MediaSubjectOfRecord" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-Medication-model" />
+            <display value="Medication" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-MedicationAction-model" />
+            <display value="MedicationAction" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-MedicationAdministration-model" />
+            <display value="MedicationAdministration" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-MedicationAdministrationBasedOn-model" />
+            <display value="MedicationAdministrationBasedOn" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-MedicationAdministrationPartOf-model" />
+            <display value="MedicationAdministrationPartOf" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-MedicationBasedOn-model" />
+            <display value="MedicationBasedOn" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-MedicationCodeOrReference-model" />
+            <display value="MedicationCodeOrReference" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-MedicationDispense-model" />
+            <display value="MedicationDispense" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-MedicationInformationSource-model" />
+            <display value="MedicationInformationSource" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-MedicationReasonReference-model" />
+            <display value="MedicationReasonReference" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-MedicationRequest-model" />
+            <display value="MedicationRequest" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-MedicationStatement-model" />
+            <display value="MedicationStatement" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-MedicationStatementPartOf-model" />
+            <display value="MedicationStatementPartOf" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-Metadata-model" />
+            <display value="Metadata" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-Method-model" />
+            <display value="Method" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-MillisecondsBetweenSamples-model" />
+            <display value="MillisecondsBetweenSamples" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-Modality-model" />
+            <display value="Modality" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-Mode-model" />
+            <display value="Mode" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-ModelNumber-model" />
+            <display value="ModelNumber" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-Money-model" />
+            <display value="Money" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-MoneyAmount-model" />
+            <display value="MoneyAmount" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-MultipleBirth-model" />
+            <display value="MultipleBirth" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-Name-model" />
+            <display value="Name" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-Narrative-model" />
+            <display value="Narrative" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-NarrativeQualifier-model" />
+            <display value="NarrativeQualifier" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-NarrativeText-model" />
+            <display value="NarrativeText" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-NationalProviderIdentifier-model" />
+            <display value="NationalProviderIdentifier" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-Need-model" />
+            <display value="Need" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/breastrad-NodeTypes-model" />
+            <display value="NodeTypes" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-Number-model" />
+            <display value="Number" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-NumberOfRefillsAllowed-model" />
+            <display value="NumberOfRefillsAllowed" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-NumberOfSecondsDuration-model" />
+            <display value="NumberOfSecondsDuration" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-Numerator-model" />
+            <display value="Numerator" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-Observation-model" />
+            <display value="Observation" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-ObservationBasedOn-model" />
+            <display value="ObservationBasedOn" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-ObservationComponent-model" />
+            <display value="ObservationComponent" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-ObservationDerivedFrom-model" />
+            <display value="ObservationDerivedFrom" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-ObservationPartOf-model" />
+            <display value="ObservationPartOf" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-ObservationSubjectOfRecord-model" />
+            <display value="ObservationSubjectOfRecord" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-OccurrenceTime-model" />
+            <display value="OccurrenceTime" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-OccurrenceTimeOrPeriod-model" />
+            <display value="OccurrenceTimeOrPeriod" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-OnBehalfOf-model" />
+            <display value="OnBehalfOf" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-Onset-model" />
+            <display value="Onset" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-OpeningTime-model" />
+            <display value="OpeningTime" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-OperationalStatus-model" />
+            <display value="OperationalStatus" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-Organization-model" />
+            <display value="Organization" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-Origin-model" />
+            <display value="Origin" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-Outcome-model" />
+            <display value="Outcome" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-Owner-model" />
+            <display value="Owner" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-PackageAmount-model" />
+            <display value="PackageAmount" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-PanelMembers-model" />
+            <display value="PanelMembers" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-PartOf-model" />
+            <display value="PartOf" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-Participant-model" />
+            <display value="Participant" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-Participation-model" />
+            <display value="Participation" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-ParticipationPeriod-model" />
+            <display value="ParticipationPeriod" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-ParticipationType-model" />
+            <display value="ParticipationType" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-Patient-model" />
+            <display value="Patient" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/breastrad-PatientHistory-model" />
+            <display value="PatientHistory" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-PatientInstruction-model" />
+            <display value="PatientInstruction" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/breastrad-PatientRisk-model" />
+            <display value="PatientRisk" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-Payor-model" />
+            <display value="Payor" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-Performer-model" />
+            <display value="Performer" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-PersonAuthor-model" />
+            <display value="PersonAuthor" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-PersonInformationSource-model" />
+            <display value="PersonInformationSource" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-PersonParticipant-model" />
+            <display value="PersonParticipant" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-PhotographicImage-model" />
+            <display value="PhotographicImage" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-PhysicalType-model" />
+            <display value="PhysicalType" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-PixelHeight-model" />
+            <display value="PixelHeight" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-PixelWidth-model" />
+            <display value="PixelWidth" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-PolicyHolder-model" />
+            <display value="PolicyHolder" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-PostalCode-model" />
+            <display value="PostalCode" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-Practitioner-model" />
+            <display value="Practitioner" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-PractitionerRole-model" />
+            <display value="PractitionerRole" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-Preferred-model" />
+            <display value="Preferred" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-Prefix-model" />
+            <display value="Prefix" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-PresentedForm-model" />
+            <display value="PresentedForm" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-PrincipalInvestigator-model" />
+            <display value="PrincipalInvestigator" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/breastrad-PriorReports-model" />
+            <display value="PriorReports" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-PriorityCode-model" />
+            <display value="PriorityCode" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-PriorityRank-model" />
+            <display value="PriorityRank" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-Procedure-model" />
+            <display value="Procedure" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-ProcedureBasedOn-model" />
+            <display value="ProcedureBasedOn" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-ProcedurePartOf-model" />
+            <display value="ProcedurePartOf" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-ProcedureParticipant-model" />
+            <display value="ProcedureParticipant" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-ProcedureReasonReference-model" />
+            <display value="ProcedureReasonReference" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-ProcedureRequest-model" />
+            <display value="ProcedureRequest" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-ProcedureRequestReasonReference-model" />
+            <display value="ProcedureRequestReasonReference" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-ProcedureRequestSubjectOfRecord-model" />
+            <display value="ProcedureRequestSubjectOfRecord" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-ProcedureRequester-model" />
+            <display value="ProcedureRequester" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-Profile-model" />
+            <display value="Profile" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-Purpose-model" />
+            <display value="Purpose" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-Qualification-model" />
+            <display value="Qualification" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-QuantitativeObservationComponent-model" />
+            <display value="QuantitativeObservationComponent" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-Quantity-model" />
+            <display value="Quantity" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-QuantityPerDispense-model" />
+            <display value="QuantityPerDispense" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-Question-model" />
+            <display value="Question" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-QuestionnaireCanonical-model" />
+            <display value="QuestionnaireCanonical" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-QuestionnaireResponse-model" />
+            <display value="QuestionnaireResponse" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-QuestionnaireResponseBasedOn-model" />
+            <display value="QuestionnaireResponseBasedOn" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-QuestionnaireResponseItem-model" />
+            <display value="QuestionnaireResponseItem" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-QuestionnaireResponsePartOf-model" />
+            <display value="QuestionnaireResponsePartOf" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-QuestionnaireResponseRecorder-model" />
+            <display value="QuestionnaireResponseRecorder" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-Race-model" />
+            <display value="Race" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-RaceCode-model" />
+            <display value="RaceCode" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-RaceDetail-model" />
+            <display value="RaceDetail" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-Range-model" />
+            <display value="Range" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-Ratio-model" />
+            <display value="Ratio" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-ReasonCode-model" />
+            <display value="ReasonCode" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-ReasonReference-model" />
+            <display value="ReasonReference" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-ReceivedTime-model" />
+            <display value="ReceivedTime" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/breastrad-Recommendations-model" />
+            <display value="Recommendations" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-ReferenceRange-model" />
+            <display value="ReferenceRange" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-ReferralBasedOn-model" />
+            <display value="ReferralBasedOn" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-ReferralReasonReference-model" />
+            <display value="ReferralReasonReference" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-ReferralRecipient-model" />
+            <display value="ReferralRecipient" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-ReferralRequest-model" />
+            <display value="ReferralRequest" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-ReferralRequestSubjectOfRecord-model" />
+            <display value="ReferralRequestSubjectOfRecord" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-ReferralRequester-model" />
+            <display value="ReferralRequester" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-RelatedArtifact-model" />
+            <display value="RelatedArtifact" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-RelatedDocument-model" />
+            <display value="RelatedDocument" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-RelatedPerson-model" />
+            <display value="RelatedPerson" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-RelationToLandmark-model" />
+            <display value="RelationToLandmark" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-Relationship-model" />
+            <display value="Relationship" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-RelevantTime-model" />
+            <display value="RelevantTime" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-Repeat-model" />
+            <display value="Repeat" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-RepeatBounds-model" />
+            <display value="RepeatBounds" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-RepeatCount-model" />
+            <display value="RepeatCount" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-RepeatCountMax-model" />
+            <display value="RepeatCountMax" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-RepeatDuration-model" />
+            <display value="RepeatDuration" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-RepeatDurationMax-model" />
+            <display value="RepeatDurationMax" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-RepeatDurationUnit-model" />
+            <display value="RepeatDurationUnit" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-RepeatFrequency-model" />
+            <display value="RepeatFrequency" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-RepeatFrequencyMax-model" />
+            <display value="RepeatFrequencyMax" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-RepeatPeriod-model" />
+            <display value="RepeatPeriod" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-RepeatPeriodMax-model" />
+            <display value="RepeatPeriodMax" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-RepeatPeriodUnit-model" />
+            <display value="RepeatPeriodUnit" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-Replaces-model" />
+            <display value="Replaces" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-Reported-model" />
+            <display value="Reported" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-RequestIntent-model" />
+            <display value="RequestIntent" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-RequestQuantity-model" />
+            <display value="RequestQuantity" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-RequestSubjectOfRecord-model" />
+            <display value="RequestSubjectOfRecord" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-Requester-model" />
+            <display value="Requester" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-ResearchStudy-model" />
+            <display value="ResearchStudy" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-ResearchStudyPhase-model" />
+            <display value="ResearchStudyPhase" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-ResearchSubject-model" />
+            <display value="ResearchSubject" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-Resource-model" />
+            <display value="Resource" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-ResourceLocation-model" />
+            <display value="ResourceLocation" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-ResourceSize-model" />
+            <display value="ResourceSize" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/breastrad-ResultComposition-model" />
+            <display value="ResultComposition" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-ResultsInterpreter-model" />
+            <display value="ResultsInterpreter" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-Role-model" />
+            <display value="Role" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-RouteIntoBody-model" />
+            <display value="RouteIntoBody" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-Safety-model" />
+            <display value="Safety" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-SamePersonAs-model" />
+            <display value="SamePersonAs" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-SampledData-model" />
+            <display value="SampledData" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-Section-model" />
+            <display value="Section" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-SecurityLabel-model" />
+            <display value="SecurityLabel" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-SequenceNumber-model" />
+            <display value="SequenceNumber" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-SerialNumber-model" />
+            <display value="SerialNumber" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-ServiceBasedOn-model" />
+            <display value="ServiceBasedOn" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-ServiceCategory-model" />
+            <display value="ServiceCategory" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-ServiceDetails-model" />
+            <display value="ServiceDetails" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-ServiceReasonReference-model" />
+            <display value="ServiceReasonReference" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-ServiceRequest-model" />
+            <display value="ServiceRequest" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-Setting-model" />
+            <display value="Setting" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-Severity-model" />
+            <display value="Severity" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/breastrad-Shape-model" />
+            <display value="Shape" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-SimpleQuantity-model" />
+            <display value="SimpleQuantity" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-SituationStatement-model" />
+            <display value="SituationStatement" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-SortOrder-model" />
+            <display value="SortOrder" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-SourceSystem-model" />
+            <display value="SourceSystem" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-SpecialHandling-model" />
+            <display value="SpecialHandling" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-Specialty-model" />
+            <display value="Specialty" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-Specimen-model" />
+            <display value="Specimen" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-SpecimenContainer-model" />
+            <display value="SpecimenContainer" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-SpecimenQuantity-model" />
+            <display value="SpecimenQuantity" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-SpecimenTreatment-model" />
+            <display value="SpecimenTreatment" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-SpecimenType-model" />
+            <display value="SpecimenType" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-Sponsor-model" />
+            <display value="Sponsor" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-StageDetail-model" />
+            <display value="StageDetail" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-StageInformation-model" />
+            <display value="StageInformation" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-StageSummary-model" />
+            <display value="StageSummary" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-State-model" />
+            <display value="State" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-StatementDateTime-model" />
+            <display value="StatementDateTime" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-Status-model" />
+            <display value="Status" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-StatusHistory-model" />
+            <display value="StatusHistory" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-StatusReason-model" />
+            <display value="StatusReason" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-StudyArm-model" />
+            <display value="StudyArm" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-StudyObjective-model" />
+            <display value="StudyObjective" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-SubjectOfRecord-model" />
+            <display value="SubjectOfRecord" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-Subrogation-model" />
+            <display value="Subrogation" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-Subscriber-model" />
+            <display value="Subscriber" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-SubscriberId-model" />
+            <display value="SubscriberId" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-Substance-model" />
+            <display value="Substance" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-SubstanceOrCode-model" />
+            <display value="SubstanceOrCode" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-Substitution-model" />
+            <display value="Substitution" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-SubstitutionAllowed-model" />
+            <display value="SubstitutionAllowed" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-SubstitutionReason-model" />
+            <display value="SubstitutionReason" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-Suffix-model" />
+            <display value="Suffix" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/breastrad-SummaryBiRadCode-model" />
+            <display value="SummaryBiRadCode" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-SupplyDuration-model" />
+            <display value="SupplyDuration" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-SupportingInformation-model" />
+            <display value="SupportingInformation" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-Tag-model" />
+            <display value="Tag" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-TargetDocument-model" />
+            <display value="TargetDocument" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-TaxIdentificationNumber-model" />
+            <display value="TaxIdentificationNumber" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-TelecomNumberOrAddress-model" />
+            <display value="TelecomNumberOrAddress" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-TerminationReason-model" />
+            <display value="TerminationReason" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-Text-model" />
+            <display value="Text" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-TextMarkdown-model" />
+            <display value="TextMarkdown" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-TimeOfDay-model" />
+            <display value="TimeOfDay" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-TimePeriod-model" />
+            <display value="TimePeriod" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-Timing-model" />
+            <display value="Timing" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-TimingCode-model" />
+            <display value="TimingCode" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-Title-model" />
+            <display value="Title" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-TreatmentIntent-model" />
+            <display value="TreatmentIntent" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-Type-model" />
+            <display value="Type" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-UdiCarrier-model" />
+            <display value="UdiCarrier" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-Units-model" />
+            <display value="Units" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-UpperBound-model" />
+            <display value="UpperBound" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-UpperLimit-model" />
+            <display value="UpperLimit" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-Url-model" />
+            <display value="Url" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-UsedCode-model" />
+            <display value="UsedCode" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-UsedReference-model" />
+            <display value="UsedReference" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-ValidityPeriod-model" />
+            <display value="ValidityPeriod" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/breastrad-Vascularity-model" />
+            <display value="Vascularity" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-VersionId-model" />
+            <display value="VersionId" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-datatype-VersionString-model" />
+            <display value="VersionString" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/obf-View-model" />
+            <display value="View" />
+          </sourceReference>
+      </resource>
+      <resource>
+          <example value="false" />
+          <sourceReference>
+            <reference value="StructureDefinition/breastrad-Wall-model" />
+            <display value="Wall" />
+          </sourceReference>
+      </resource>
+      
+    </package>
+    <page>
+        <source value="index.html" />
+        <title value="Breast Radiology Reporting" />
+        <kind value="page" />
+    </page>
+</ImplementationGuide>

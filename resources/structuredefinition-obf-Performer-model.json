@@ -1,0 +1,142 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "obf-Performer-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>Performer Logical Model</b></p>\n  <p>The actor that carried out the observation or action.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Performer-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/breast-radiology",
+      "value": "obf.Performer"
+    }
+  ],
+  "name": "Performer",
+  "title": "obf-Performer",
+  "status": "draft",
+  "date": "2019-07-30",
+  "publisher": "Hl7",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://BreastRadReport.com"
+        }
+      ]
+    }
+  ],
+  "description": "The actor that carried out the observation or action.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "obf-Performer-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "obf-Performer-model",
+        "path": "obf-Performer-model",
+        "definition": "The actor that carried out the observation or action.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Performer-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Performer-model.value[x]",
+        "path": "obf-Performer-model.value[x]",
+        "short": "Choice of types representing the actor that carried out the observation or action.",
+        "definition": "Choice of types representing the actor that carried out the observation or action.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-Performer-model.value[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Practitioner-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Organization-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Patient-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-RelatedPerson-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "obf-Performer-model",
+        "path": "obf-Performer-model",
+        "definition": "The actor that carried out the observation or action.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Performer-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Performer-model.value[x]",
+        "path": "obf-Performer-model.value[x]",
+        "short": "Choice of types representing the actor that carried out the observation or action.",
+        "definition": "Choice of types representing the actor that carried out the observation or action.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-Performer-model.value[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Practitioner-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Organization-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Patient-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-RelatedPerson-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

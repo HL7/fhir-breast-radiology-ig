@@ -1,0 +1,142 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "obf-QuestionnaireResponseRecorder-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>QuestionnaireResponseRecorder Logical Model</b></p>\n  <p>The recorder of the information, who received and recorded the answers. For example, the nurse taking a list of medications reported by the patient.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-QuestionnaireResponseRecorder-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/breast-radiology",
+      "value": "obf.QuestionnaireResponseRecorder"
+    }
+  ],
+  "name": "QuestionnaireResponseRecorder",
+  "title": "obf-QuestionnaireResponseRecorder",
+  "status": "draft",
+  "date": "2019-07-30",
+  "publisher": "Hl7",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://BreastRadReport.com"
+        }
+      ]
+    }
+  ],
+  "description": "The recorder of the information, who received and recorded the answers. For example, the nurse taking a list of medications reported by the patient.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "obf-QuestionnaireResponseRecorder-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "obf-QuestionnaireResponseRecorder-model",
+        "path": "obf-QuestionnaireResponseRecorder-model",
+        "definition": "The recorder of the information, who received and recorded the answers. For example, the nurse taking a list of medications reported by the patient.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-QuestionnaireResponseRecorder-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-QuestionnaireResponseRecorder-model.value[x]",
+        "path": "obf-QuestionnaireResponseRecorder-model.value[x]",
+        "short": "Choice of types representing the recorder of the information, who received and recorded the answers. For example, the nurse taking a list of medications reported by the patient.",
+        "definition": "Choice of types representing the recorder of the information, who received and recorded the answers. For example, the nurse taking a list of medications reported by the patient.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-QuestionnaireResponseRecorder-model.value[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Practitioner-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Patient-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-RelatedPerson-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Device-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "obf-QuestionnaireResponseRecorder-model",
+        "path": "obf-QuestionnaireResponseRecorder-model",
+        "definition": "The recorder of the information, who received and recorded the answers. For example, the nurse taking a list of medications reported by the patient.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-QuestionnaireResponseRecorder-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-QuestionnaireResponseRecorder-model.value[x]",
+        "path": "obf-QuestionnaireResponseRecorder-model.value[x]",
+        "short": "Choice of types representing the recorder of the information, who received and recorded the answers. For example, the nurse taking a list of medications reported by the patient.",
+        "definition": "Choice of types representing the recorder of the information, who received and recorded the answers. For example, the nurse taking a list of medications reported by the patient.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-QuestionnaireResponseRecorder-model.value[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Practitioner-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Patient-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-RelatedPerson-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Device-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

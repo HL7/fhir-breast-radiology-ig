@@ -1,0 +1,283 @@
+---
+# jekyll header
+---
+{% include header.html %}
+
+<!-- ============BreadCrumb=============== -->
+<div id="segment-breadcrumb" class="segmnt">
+  <!-- segment-breadcrumb -->
+  <div class="container">
+    <!-- container -->
+    <ul class="breadcrumb">
+      <li title="home"><a href="index.html"><b>Home</b></a></li>
+      <li><b>Value Sets</b></li>
+    </ul>
+  </div>
+  <!-- /container -->
+</div>
+<!-- /segment-breadcrumb -->
+
+{% include container-start.html %}
+
+<!-- ============CONTENT CONTENT=============== -->
+
+<h2>Primary local value sets used in this Implementation Guide</h2>
+
+<table class="codes local">
+  <thead>
+    <tr>
+      <td>
+        <b>Name</b>
+      </td>
+      <td>
+        <b>Definition</b>
+      </td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+          <td><a href="ValueSet-breastrad-AbnormalityDensityVS.html">AbnormalityDensityVS</a></td>
+          <td>{% capture md_text %}Visually estimated content of fibroglandular-density tissue within the breast{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        <tr>
+          <td><a href="ValueSet-breastrad-AbnormalityTypeVS.html">AbnormalityTypeVS</a></td>
+          <td>{% capture md_text %}Abnormality Type value{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        <tr>
+          <td><a href="ValueSet-obf-datatype-AnatomicalDirectionVS.html">AnatomicalDirectionVS</a></td>
+          <td>{% capture md_text %}Terms that specify anatomical direction.{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        <tr>
+          <td><a href="ValueSet-obf-datatype-AnatomicalOrientationVS.html">AnatomicalOrientationVS</a></td>
+          <td>{% capture md_text %}Terms that specify anatomical orientation. The orientation value set is part of BodyLocation, a flexible structure that allows the location to be determined by a single code, or a code plus laterality and/or orientation. The body location can also be specified in relation to one or more body landmarks. SNOMED CT is used in all cases.
+
+* Code only: The code should include (precoordinate) laterality and/orientation to the degree necessary to completely specify the body location.
+* Code plus laterality and/or orientation: The basic code augmented by codes specifying the body side and/or anatomical orientation.
+* Relation to landmark: The location relative to a landmark is specified by:
+1. Establishing the location and type of landmark using a body site code and optional laterality/orientation, and
+2. Specifying the direction and distance from the landmark to the body location.
+
+Note that BodyLocation is a data type (a reusable structure), not a stand-alone entity. The concept is similar to how a postal address can apply to a person, location, or organization. This contrasts with FHIR's stand-alone BodySite (aka BodyStructure in r4) which 'is not ... intended for describing the type of anatomical location but rather a specific body site on a specific patient' (FHIR 3.5).{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        <tr>
+          <td><a href="ValueSet-breastrad-AsymmetryTypesVS.html">AsymmetryTypesVS</a></td>
+          <td>{% capture md_text %}Currently many studies utilize cortical thickening and hilum absence as criteria for definition of the risk for metastasis(11,12-16). ... Metastatic deposits accumulate in the lymph node peripheral area, causing enlargement of the cortex, usually focal (at early stages), or uniform.{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        <tr>
+          <td><a href="ValueSet-breastrad-BiRadCodeVS.html">BiRadCodeVS</a></td>
+          <td>{% capture md_text %}Bi-Rad code value{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        <tr>
+          <td><a href="ValueSet-breastrad-BreastDensityVS.html">BreastDensityVS</a></td>
+          <td>{% capture md_text %}Breast density values{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        <tr>
+          <td><a href="ValueSet-breastrad-ChangeVS.html">ChangeVS</a></td>
+          <td>{% capture md_text %}Change value{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        <tr>
+          <td><a href="ValueSet-obf-datatype-ClockFaceDirectionVS.html">ClockFaceDirectionVS</a></td>
+          <td>{% capture md_text %}The relative direction of an object described using the analogy of a 12-hour clock to describe angles and directions. One imagines a clock face lying either upright or flat in front of oneself, and identifies the twelve hour markings with the directions in which they point.{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        <tr>
+          <td><a href="ValueSet-breastrad-CystTypesVS.html">CystTypesVS</a></td>
+          <td>{% capture md_text %}Cyst Types{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        <tr>
+          <td><a href="ValueSet-breastrad-DepthVS.html">DepthVS</a></td>
+          <td>{% capture md_text %}Depth{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        <tr>
+          <td><a href="ValueSet-breastrad-DiagnosticTechniqueVS.html">DiagnosticTechniqueVS</a></td>
+          <td>{% capture md_text %}Breast exam diagnostic technique{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        <tr>
+          <td><a href="ValueSet-obf-datatype-LandmarkTypeVS.html">LandmarkTypeVS</a></td>
+          <td>{% capture md_text %}The type of feature that constitutes the landmark, for example, particularly if the landmark is an acquired body structure or physical object. The landmark type value set is part of BodyLocation, a flexible structure that allows the location to be determined by a single code, or a code plus laterality and/or orientation. The body location can also be specified in relation to one or more body landmarks. SNOMED CT is used in all cases.
+
+* Code only: The code should include (precoordinate) laterality and/orientation to the degree necessary to completely specify the body location.
+* Code plus laterality and/or orientation: The basic code augmented by codes specifying the body side and/or anatomical orientation.
+* Relation to landmark: The location relative to a landmark is specified by:
+1. Establishing the location and type of landmark using a body site code and optional laterality/orientation, and
+2. Specifying the direction and distance from the landmark to the body location.
+
+Note that BodyLocation is a data type (a reusable structure), not a stand-alone entity. The concept is similar to how a postal address can apply to a person, location, or organization. This contrasts with FHIR's stand-alone BodySite (aka BodyStructure in r4) which 'is not ... intended for describing the type of anatomical location but rather a specific body site on a specific patient' (FHIR 3.5).{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        <tr>
+          <td><a href="ValueSet-breastrad-MarginVS.html">MarginVS</a></td>
+          <td>{% capture md_text %}When breast cancer is surgically removed (during a surgical biopsy, lumpectomy or mastectomy), a rim of normal tissue surrounding the tumor is also removed. This rim is called a margin. Margins help show whether or not all of the tumor was removed.{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        <tr>
+          <td><a href="ValueSet-breastrad-MassTypesVS.html">MassTypesVS</a></td>
+          <td>{% capture md_text %}Mass Types{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        <tr>
+          <td><a href="ValueSet-breastrad-NodeTypesVS.html">NodeTypesVS</a></td>
+          <td>{% capture md_text %}Node Types{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        <tr>
+          <td><a href="ValueSet-breastrad-ShapeVS.html">ShapeVS</a></td>
+          <td>{% capture md_text %}Shape{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        <tr>
+          <td><a href="ValueSet-obf-datatype-UnitsOfLengthVS.html">UnitsOfLengthVS</a></td>
+          <td>{% capture md_text %}Units of measure related to length or distance.{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        <tr>
+          <td><a href="ValueSet-breastrad-VascularityVS.html">VascularityVS</a></td>
+          <td>{% capture md_text %}Vascularity{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        <tr>
+          <td><a href="ValueSet-breastrad-WallVS.html">WallVS</a></td>
+          <td>{% capture md_text %}Wall{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        
+  </tbody>
+</table>
+
+<h2>Primary external value sets used in this Implementation Guide</h2>
+
+<table class="codes external">
+  <thead>
+    <tr>
+      <td>
+        <b>Name</b>
+      </td>
+      <td>
+        <b>Definition</b>
+      </td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+        <td><a href="http://hl7.org/fhir/ValueSet/security-labels">All Security Labels</a></td>
+        <td>{% capture md_text %}A single value set for all security labels defined by FHIR.{% endcapture %}{{ md_text | markdownify }}</td>
+      </tr>
+      <tr>
+        <td><a href="http://hl7.org/fhir/ValueSet/languages">Common Languages</a></td>
+        <td>{% capture md_text %}This value set includes common codes from BCP-47 (http://tools.ietf.org/html/bcp47){% endcapture %}{{ md_text | markdownify }}</td>
+      </tr>
+      <tr>
+        <td><a href="http://hl7.org/fhir/ValueSet/common-tags">Common Tags</a></td>
+        <td>{% capture md_text %}Common Tag Codes defined by FHIR project{% endcapture %}{{ md_text | markdownify }}</td>
+      </tr>
+      <tr>
+        <td><a href="http://hl7.org/fhir/ValueSet/composition-attestation-mode">CompositionAttestationMode</a></td>
+        <td>{% capture md_text %}The way in which a person authenticated a composition.{% endcapture %}{{ md_text | markdownify }}</td>
+      </tr>
+      <tr>
+        <td><a href="http://hl7.org/fhir/ValueSet/composition-status">CompositionStatus</a></td>
+        <td>{% capture md_text %}The workflow/clinical status of the composition.{% endcapture %}{{ md_text | markdownify }}</td>
+      </tr>
+      <tr>
+        <td><a href="http://hl7.org/fhir/ValueSet/data-absent-reason">DataAbsentReason</a></td>
+        <td>{% capture md_text %}Used to specify why the normally expected content of the data element is missing.{% endcapture %}{{ md_text | markdownify }}</td>
+      </tr>
+      <tr>
+        <td><a href="http://hl7.org/fhir/ValueSet/diagnostic-service-sections">Diagnostic Service Section Codes</a></td>
+        <td>{% capture md_text %}This value set includes all the codes in HL7 v2 table 0074.{% endcapture %}{{ md_text | markdownify }}</td>
+      </tr>
+      <tr>
+        <td><a href="http://hl7.org/fhir/ValueSet/diagnostic-report-status">DiagnosticReportStatus</a></td>
+        <td>{% capture md_text %}The status of the diagnostic report as a whole.{% endcapture %}{{ md_text | markdownify }}</td>
+      </tr>
+      <tr>
+        <td><a href="http://hl7.org/fhir/ValueSet/doc-section-codes">Document Section Codes</a></td>
+        <td>{% capture md_text %}Document section codes (LOINC codes used in CCDA sections).{% endcapture %}{{ md_text | markdownify }}</td>
+      </tr>
+      <tr>
+        <td><a href="http://hl7.org/fhir/ValueSet/document-relationship-type">DocumentRelationshipType</a></td>
+        <td>{% capture md_text %}The type of relationship between documents.{% endcapture %}{{ md_text | markdownify }}</td>
+      </tr>
+      <tr>
+        <td><a href="http://hl7.org/fhir/ValueSet/doc-classcodes">FHIR Document Class Codes</a></td>
+        <td>{% capture md_text %}LOINC codes for Document Kind, taken from the LOINC document ontology.{% endcapture %}{{ md_text | markdownify }}</td>
+      </tr>
+      <tr>
+        <td><a href="http://hl7.org/fhir/ValueSet/doc-typecodes">FHIR Document Type Codes</a></td>
+        <td>{% capture md_text %}FHIR Document Codes - all LOINC codes where scale type = 'DOC'.{% endcapture %}{{ md_text | markdownify }}</td>
+      </tr>
+      <tr>
+        <td><a href="http://hl7.org/fhir/ValueSet/observation-codes">LOINC Codes</a></td>
+        <td>{% capture md_text %}This value set includes all LOINC codes{% endcapture %}{{ md_text | markdownify }}</td>
+      </tr>
+      <tr>
+        <td><a href="http://hl7.org/fhir/ValueSet/report-codes">LOINC Diagnostic Report Codes</a></td>
+        <td>{% capture md_text %}This value set includes all the LOINC codes which relate to Diagnostic Observations.{% endcapture %}{{ md_text | markdownify }}</td>
+      </tr>
+      <tr>
+        <td><a href="http://hl7.org/fhir/ValueSet/bodysite-laterality">Laterality</a></td>
+        <td>{% capture md_text %}Laterality: SNOMED-CT concepts for 'left', 'right', and 'bilateral'{% endcapture %}{{ md_text | markdownify }}</td>
+      </tr>
+      <tr>
+        <td><a href="http://hl7.org/fhir/ValueSet/list-empty-reason">List Empty Reasons</a></td>
+        <td>{% capture md_text %}General reasons for a list to be empty. Reasons are either related to a summary list (i.e. problem or medication list) or to a workflow related list (i.e. consultation list).{% endcapture %}{{ md_text | markdownify }}</td>
+      </tr>
+      <tr>
+        <td><a href="http://hl7.org/fhir/ValueSet/list-order">List Order Codes</a></td>
+        <td>{% capture md_text %}Base values for the order of the items in a list resource.{% endcapture %}{{ md_text | markdownify }}</td>
+      </tr>
+      <tr>
+        <td><a href="http://hl7.org/fhir/ValueSet/list-mode">ListMode</a></td>
+        <td>{% capture md_text %}The processing mode that applies to this list{% endcapture %}{{ md_text | markdownify }}</td>
+      </tr>
+      <tr>
+        <td><a href="http://hl7.org/fhir/ValueSet/observation-category">Observation Category Codes</a></td>
+        <td>{% capture md_text %}Observation Category codes.{% endcapture %}{{ md_text | markdownify }}</td>
+      </tr>
+      <tr>
+        <td><a href="http://hl7.org/fhir/ValueSet/observation-interpretation">Observation Interpretation Codes</a></td>
+        <td>{% capture md_text %}This value set defines the set of codes that can be used to indicate the meaning/use of a reference range.{% endcapture %}{{ md_text | markdownify }}</td>
+      </tr>
+      <tr>
+        <td><a href="http://hl7.org/fhir/ValueSet/observation-methods">Observation Methods</a></td>
+        <td>{% capture md_text %}Observation Method codes from [SNOMED CT](http://snomed.info/sct) where concept is-a 272394005 (Technique (qualifier value)) or is-a 129264002 (Action (qualifier value)) or is-a 386053000 (Evaluation procedure(procedure)){% endcapture %}{{ md_text | markdownify }}</td>
+      </tr>
+      <tr>
+        <td><a href="http://hl7.org/fhir/ValueSet/referencerange-appliesto">Observation Reference Range Applies To Codes</a></td>
+        <td>{% capture md_text %}This value set defines a set of codes that can be used to indicate the a particular target population the reference range applies to.{% endcapture %}{{ md_text | markdownify }}</td>
+      </tr>
+      <tr>
+        <td><a href="http://hl7.org/fhir/ValueSet/referencerange-meaning">Observation Reference Range Meaning Codes</a></td>
+        <td>{% capture md_text %}This value set defines a set of codes that can be used to indicate the meaning/use of a reference range for a particular target population.{% endcapture %}{{ md_text | markdownify }}</td>
+      </tr>
+      <tr>
+        <td><a href="http://hl7.org/fhir/ValueSet/observation-relationshiptypes">ObservationRelationshipType</a></td>
+        <td>{% capture md_text %}Codes specifying how two observations are related.{% endcapture %}{{ md_text | markdownify }}</td>
+      </tr>
+      <tr>
+        <td><a href="http://hl7.org/fhir/ValueSet/observation-status">ObservationStatus</a></td>
+        <td>{% capture md_text %}Codes providing the status of an observation.{% endcapture %}{{ md_text | markdownify }}</td>
+      </tr>
+      <tr>
+        <td><a href="http://hl7.org/fhir/ValueSet/performer-role">Procedure Performer Role Codes</a></td>
+        <td>{% capture md_text %}This examples value set defines the set of codes that can be used to indicate a role of procedure performer.{% endcapture %}{{ md_text | markdownify }}</td>
+      </tr>
+      <tr>
+        <td><a href="http://hl7.org/fhir/ValueSet/quantity-comparator">QuantityComparator</a></td>
+        <td>{% capture md_text %}How the Quantity should be understood and represented.{% endcapture %}{{ md_text | markdownify }}</td>
+      </tr>
+      <tr>
+        <td><a href="http://hl7.org/fhir/ValueSet/body-site">SNOMED CT Body Structures</a></td>
+        <td>{% capture md_text %}This value set includes all codes from [SNOMED CT](http://snomed.info/sct) where concept is-a 442083009 (Anatomical or acquired body site (body structure)).{% endcapture %}{{ md_text | markdownify }}</td>
+      </tr>
+      <tr>
+        <td><a href="http://hl7.org/fhir/ValueSet/clinical-findings">SNOMED CT Clinical Findings</a></td>
+        <td>{% capture md_text %}This value set includes all the "Clinical finding" [SNOMED CT](http://snomed.info/sct) codes - concepts where concept is-a 404684003 (Clinical finding (finding)).{% endcapture %}{{ md_text | markdownify }}</td>
+      </tr>
+      <tr>
+        <td><a href="http://hl7.org/fhir/ValueSet/v3-ConfidentialityClassification">http://hl7.org/fhir/ValueSet/v3-ConfidentialityClassification</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a href="http://terminology.hl7.org/ValueSet/v3-ActCode">http://terminology.hl7.org/ValueSet/v3-ActCode</a></td>
+        <td></td>
+      </tr>
+      
+  </tbody>
+</table>
+
+<!-- ==============END CONTENT END CONTENT=================== -->
+
+{% include container-end.html %}
+{% include footer.html %}

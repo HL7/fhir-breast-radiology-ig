@@ -1,0 +1,118 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "obf-PrincipalInvestigator-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>PrincipalInvestigator Logical Model</b></p>\n  <p>Indicates the individual who has primary oversite of the execution of the study.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-PrincipalInvestigator-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/breast-radiology",
+      "value": "obf.PrincipalInvestigator"
+    }
+  ],
+  "name": "PrincipalInvestigator",
+  "title": "obf-PrincipalInvestigator",
+  "status": "draft",
+  "date": "2019-07-30",
+  "publisher": "Hl7",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://BreastRadReport.com"
+        }
+      ]
+    }
+  ],
+  "description": "Indicates the individual who has primary oversite of the execution of the study.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "obf-PrincipalInvestigator-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "obf-PrincipalInvestigator-model",
+        "path": "obf-PrincipalInvestigator-model",
+        "definition": "Indicates the individual who has primary oversite of the execution of the study.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-PrincipalInvestigator-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-PrincipalInvestigator-model.value",
+        "path": "obf-PrincipalInvestigator-model.value",
+        "short": "Practitioner representing indicates the individual who has primary oversite of the execution of the study.",
+        "definition": "Practitioner representing indicates the individual who has primary oversite of the execution of the study.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-PrincipalInvestigator-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Practitioner-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "obf-PrincipalInvestigator-model",
+        "path": "obf-PrincipalInvestigator-model",
+        "definition": "Indicates the individual who has primary oversite of the execution of the study.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-PrincipalInvestigator-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-PrincipalInvestigator-model.value",
+        "path": "obf-PrincipalInvestigator-model.value",
+        "short": "Practitioner representing indicates the individual who has primary oversite of the execution of the study.",
+        "definition": "Practitioner representing indicates the individual who has primary oversite of the execution of the study.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-PrincipalInvestigator-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Practitioner-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,2184 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "obf-MedicationAdministration-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>MedicationAdministration Logical Model</b></p>\n  <p>A record of the use of a medication. If the medication is given as part of a course of treatment, the PartOf attribute should refer to the CourseOfTreatment.\nAlthough FHIR MedicationAdministration supports date of administration, information source, performer, it lacks common provenance elements, statement creation date, author, and recorder. These are supported as optional extensions.\nFHIR DSTU2 lacks a category attribute, which is provided as an extension in that version.\nSHR does not allow the &#039;not given&#039; attributes from DSTU2 and STU3, since they are dropped in R4. The status element is used to document medications not given.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-MedicationAdministration-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/breast-radiology",
+      "value": "obf.MedicationAdministration"
+    }
+  ],
+  "name": "MedicationAdministration",
+  "title": "obf-MedicationAdministration",
+  "status": "draft",
+  "date": "2019-07-30",
+  "publisher": "Hl7",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://BreastRadReport.com"
+        }
+      ]
+    }
+  ],
+  "description": "A record of the use of a medication. If the medication is given as part of a course of treatment, the PartOf attribute should refer to the CourseOfTreatment.\nAlthough FHIR MedicationAdministration supports date of administration, information source, performer, it lacks common provenance elements, statement creation date, author, and recorder. These are supported as optional extensions.\nFHIR DSTU2 lacks a category attribute, which is provided as an extension in that version.\nSHR does not allow the 'not given' attributes from DSTU2 and STU3, since they are dropped in R4. The status element is used to document medications not given.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "obf-MedicationAdministration-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "obf-MedicationAdministration-model",
+        "path": "obf-MedicationAdministration-model",
+        "definition": "A record of the use of a medication. If the medication is given as part of a course of treatment, the PartOf attribute should refer to the CourseOfTreatment.\nAlthough FHIR MedicationAdministration supports date of administration, information source, performer, it lacks common provenance elements, statement creation date, author, and recorder. These are supported as optional extensions.\nFHIR DSTU2 lacks a category attribute, which is provided as an extension in that version.\nSHR does not allow the 'not given' attributes from DSTU2 and STU3, since they are dropped in R4. The status element is used to document medications not given.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-MedicationAdministration-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-MedicationAdministration-model.metadata",
+        "path": "obf-MedicationAdministration-model.metadata",
+        "short": "Elements that belong to all information items.",
+        "definition": "Elements that belong to all information items.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-MedicationAdministration-model.metadata",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Metadata-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-MedicationAdministration-model.language",
+        "path": "obf-MedicationAdministration-model.language",
+        "short": "A human language, spoken or written.",
+        "definition": "A human language, spoken or written.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-MedicationAdministration-model.language",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-MedicationAdministration-model.implicitRules",
+        "path": "obf-MedicationAdministration-model.implicitRules",
+        "short": "A set of rules under which this content was created",
+        "definition": "A set of rules under which this content was created",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-MedicationAdministration-model.implicitRules",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-MedicationAdministration-model.narrative",
+        "path": "obf-MedicationAdministration-model.narrative",
+        "short": "A human-readable narrative, potentially including images, that contains a summary of the resource, and may be used to represent the content of the resource to a human.",
+        "definition": "A human-readable narrative, potentially including images, that contains a summary of the resource, and may be used to represent the content of the resource to a human.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-MedicationAdministration-model.narrative",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Narrative-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-MedicationAdministration-model.status",
+        "path": "obf-MedicationAdministration-model.status",
+        "short": "A state that relates to the workflow or interpretation of this resource. Certain status values can modify the meaning of the resource, for example, entered-in-error. When a boolean value is used, Status of true indicates the record is active, false means inactive.",
+        "definition": "A state that relates to the workflow or interpretation of this resource. Certain status values can modify the meaning of the resource, for example, entered-in-error. When a boolean value is used, Status of true indicates the record is active, false means inactive.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-MedicationAdministration-model.status",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/medication-admin-status"
+          }
+        }
+      },
+      {
+        "id": "obf-MedicationAdministration-model.statusReason",
+        "path": "obf-MedicationAdministration-model.statusReason",
+        "short": "Captures the reason for the current state of the procedure.",
+        "definition": "Captures the reason for the current state of the procedure.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-MedicationAdministration-model.statusReason",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-MedicationAdministration-model.identifier",
+        "path": "obf-MedicationAdministration-model.identifier",
+        "short": "Business identifier or external id for this resource.",
+        "definition": "Business identifier or external id for this resource.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-MedicationAdministration-model.identifier",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-Identifier-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-MedicationAdministration-model.subjectOfRecord",
+        "path": "obf-MedicationAdministration-model.subjectOfRecord",
+        "short": "The subject of a clinical statement, often called the Patient or the Subject. The SubjectOfRecord typically identifies the clinical record in which this statement is contained. If the statement should be in John Doe's patient record, then John Doe is the subject of record. When there is no patient, the SubjectOfRecord can also be a location, group, or other entity that statement pertains to. For example, observations concerning a hospital ward would have a Location as the SubjectOfRecord.",
+        "definition": "The subject of a clinical statement, often called the Patient or the Subject. The SubjectOfRecord typically identifies the clinical record in which this statement is contained. If the statement should be in John Doe's patient record, then John Doe is the subject of record. When there is no patient, the SubjectOfRecord can also be a location, group, or other entity that statement pertains to. For example, observations concerning a hospital ward would have a Location as the SubjectOfRecord.\n\nNote that the word 'Subject' is used here in the sense of a person or entity subjected to observations or actions, not subject as in a conceptual topic, like heart disease.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-MedicationAdministration-model.subjectOfRecord",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Patient-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-MedicationAdministration-model.careContext[x]",
+        "path": "obf-MedicationAdministration-model.careContext[x]",
+        "short": "The encounter or episode of care",
+        "definition": "The encounter or episode of care",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-MedicationAdministration-model.careContext[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Encounter-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-EpisodeOfCare-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-MedicationAdministration-model.statementDateTime",
+        "path": "obf-MedicationAdministration-model.statementDateTime",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C3669169"
+          }
+        ],
+        "short": "The point in time when the statement was created.",
+        "definition": "The point in time when the statement was created.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-MedicationAdministration-model.statementDateTime",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-MedicationAdministration-model.reasonCode",
+        "path": "obf-MedicationAdministration-model.reasonCode",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0566251"
+          }
+        ],
+        "short": "The explanation or justification for the current item or action, as a code.",
+        "definition": "The explanation or justification for the current item or action, as a code.\nReason is a string or CodeableConcept in DSTU2 but in later versions only a CodeableConcept.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-MedicationAdministration-model.reasonCode",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-MedicationAdministration-model.medicationReasonReference[x]",
+        "path": "obf-MedicationAdministration-model.medicationReasonReference[x]",
+        "short": "Condition or observation that supports why the medication is being/was taken",
+        "definition": "Condition or observation that supports why the medication is being/was taken",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-MedicationAdministration-model.medicationReasonReference[x]",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Condition-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Observation-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-DiagnosticReport-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-MedicationAdministration-model.medicationAdministrationBasedOn[x]",
+        "path": "obf-MedicationAdministration-model.medicationAdministrationBasedOn[x]",
+        "short": "The original request, instruction or authority to perform the administration.",
+        "definition": "The original request, instruction or authority to perform the administration.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-MedicationAdministration-model.medicationAdministrationBasedOn[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-MedicationRequest-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-MedicationAdministration-model.occurrenceTimeOrPeriod[x]",
+        "path": "obf-MedicationAdministration-model.occurrenceTimeOrPeriod[x]",
+        "short": "The point or period of time when the event takes place. Times can be precise (dateTime) or approximate (date). If a time period is used, and the start date or dateTime is missing, the start of the period is not known. If the end date or dateTime is missing, it means that the period is ongoing.",
+        "definition": "The point or period of time when the event takes place. Times can be precise (dateTime) or approximate (date). If a time period is used, and the start date or dateTime is missing, the start of the period is not known. If the end date or dateTime is missing, it means that the period is ongoing.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-MedicationAdministration-model.occurrenceTimeOrPeriod[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "date"
+          },
+          {
+            "code": "dateTime"
+          },
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-TimePeriod-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-MedicationAdministration-model.participation",
+        "path": "obf-MedicationAdministration-model.participation",
+        "short": "Record of someone or something involvement in an activity or event.",
+        "definition": "Record of someone or something involvement in an activity or event.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-MedicationAdministration-model.participation",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-MedicationAdministration-model.participation.personParticipant[x]",
+        "path": "obf-MedicationAdministration-model.participation.personParticipant[x]",
+        "short": "A choice of Patient, Practitioner and RelatedPerson as participant.",
+        "definition": "A choice of Patient, Practitioner and RelatedPerson as participant.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-MedicationAdministration-model.participation.personParticipant[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Patient-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Practitioner-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-RelatedPerson-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-MedicationAdministration-model.participation.participationType",
+        "path": "obf-MedicationAdministration-model.participation.participationType",
+        "short": "The role played by the participant engaged in the action, for example, as the attending physician, surgical assistant, etc.",
+        "definition": "The role played by the participant engaged in the action, for example, as the attending physician, surgical assistant, etc.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-MedicationAdministration-model.participation.participationType",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "example",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/performer-role"
+          }
+        }
+      },
+      {
+        "id": "obf-MedicationAdministration-model.participation.participationPeriod",
+        "path": "obf-MedicationAdministration-model.participation.participationPeriod",
+        "short": "The point in time or span of time the participant is involved.",
+        "definition": "The point in time or span of time the participant is involved.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-MedicationAdministration-model.participation.participationPeriod",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-TimePeriod-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-MedicationAdministration-model.participation.onBehalfOf[x]",
+        "path": "obf-MedicationAdministration-model.participation.onBehalfOf[x]",
+        "short": "The party represented by the actual participant.",
+        "definition": "The party represented by the actual participant.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-MedicationAdministration-model.participation.onBehalfOf[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Practitioner-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-RelatedPerson-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Patient-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Device-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Organization-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-MedicationAdministration-model.method",
+        "path": "obf-MedicationAdministration-model.method",
+        "short": "The technique used to carry out an action, for example, the specific imaging technical or assessment vehicle.",
+        "definition": "The technique used to carry out an action, for example, the specific imaging technical or assessment vehicle.",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "obf-MedicationAdministration-model.method",
+          "min": 0,
+          "max": "0"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-MedicationAdministration-model.medicationCodeOrReference[x]",
+        "path": "obf-MedicationAdministration-model.medicationCodeOrReference[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "short": "A choice of a medication code or reference.",
+        "definition": "A choice of a medication code or reference.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-MedicationAdministration-model.medicationCodeOrReference[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Medication-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-MedicationAdministration-model.medicationCodeOrReferenceCoding:concept",
+        "path": "obf-MedicationAdministration-model.medicationCodeOrReferenceCoding",
+        "sliceName": "concept",
+        "short": "concept",
+        "definition": "concept",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-MedicationAdministration-model.medicationCodeOrReference[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "extensible",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/us/core/ValueSet/us-core-medication-codes"
+          }
+        }
+      },
+      {
+        "id": "obf-MedicationAdministration-model.dosage",
+        "path": "obf-MedicationAdministration-model.dosage",
+        "short": "The dosage of the medication. The data structure is flexible and can describe a dosage prescribed, administered, or reported.",
+        "definition": "The dosage of the medication. The data structure is flexible and can describe a dosage prescribed, administered, or reported.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-MedicationAdministration-model.dosage",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Dosage-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-MedicationAdministration-model.dosage.doseSequenceNumber",
+        "path": "obf-MedicationAdministration-model.dosage.doseSequenceNumber",
+        "short": "Dose number within series.",
+        "definition": "Dose number within series.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-MedicationAdministration-model.dosage.doseSequenceNumber",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "integer"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-MedicationAdministration-model.dosage.instructionText",
+        "path": "obf-MedicationAdministration-model.dosage.instructionText",
+        "short": "The directions (signetur) on the drug prescription or dispensing record.",
+        "definition": "The directions (signetur) on the drug prescription or dispensing record.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-MedicationAdministration-model.dosage.instructionText",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-MedicationAdministration-model.dosage.instructionCode",
+        "path": "obf-MedicationAdministration-model.dosage.instructionCode",
+        "short": "Coded instructions, e.g., 'with meals'.",
+        "definition": "Coded instructions, e.g., 'with meals'.",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "obf-MedicationAdministration-model.dosage.instructionCode",
+          "min": 0,
+          "max": "0"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "example",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/additional-instruction-codes"
+          }
+        }
+      },
+      {
+        "id": "obf-MedicationAdministration-model.dosage.patientInstruction",
+        "path": "obf-MedicationAdministration-model.dosage.patientInstruction",
+        "short": "Patient or consumer-oriented instructions.",
+        "definition": "Patient or consumer-oriented instructions.",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "obf-MedicationAdministration-model.dosage.patientInstruction",
+          "min": 0,
+          "max": "0"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-MedicationAdministration-model.dosage.timing",
+        "path": "obf-MedicationAdministration-model.dosage.timing",
+        "short": "A timing schedule that specifies an event that may occur multiple times.",
+        "definition": "A timing schedule that specifies an event that may occur multiple times.\nTiming offers a choice of multiple OccurrenceTime (used is used to specify specific times), or recurrence patterns.",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "obf-MedicationAdministration-model.dosage.timing",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-Timing-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-MedicationAdministration-model.dosage.asNeeded[x]",
+        "path": "obf-MedicationAdministration-model.dosage.asNeeded[x]",
+        "short": "Preconditions for service, either 'true' indicating to be performed if needed, or a code indicating the pre-condition for performing the service. For example 'pain', 'on flare-up', etc.",
+        "definition": "Preconditions for service, either 'true' indicating to be performed if needed, or a code indicating the pre-condition for performing the service. For example 'pain', 'on flare-up', etc.",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "obf-MedicationAdministration-model.dosage.asNeeded[x]",
+          "min": 0,
+          "max": "0"
+        },
+        "type": [
+          {
+            "code": "boolean"
+          },
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-MedicationAdministration-model.dosage.administrationSite",
+        "path": "obf-MedicationAdministration-model.dosage.administrationSite",
+        "short": "The anatomic site at which the medication applied.",
+        "definition": "The anatomic site at which the medication applied.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-MedicationAdministration-model.dosage.administrationSite",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "example",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/us/breast-radiology/obf/datatype/vs/BodyLocationVS"
+          }
+        }
+      },
+      {
+        "id": "obf-MedicationAdministration-model.dosage.routeIntoBody",
+        "path": "obf-MedicationAdministration-model.dosage.routeIntoBody",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0013153"
+          }
+        ],
+        "short": "The way a substance enters an organism after contact, particularly, the route of drug administration.",
+        "definition": "The way a substance enters an organism after contact, particularly, the route of drug administration.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-MedicationAdministration-model.dosage.routeIntoBody",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/route-codes"
+          }
+        }
+      },
+      {
+        "id": "obf-MedicationAdministration-model.dosage.method",
+        "path": "obf-MedicationAdministration-model.dosage.method",
+        "short": "The technique used to carry out an action, for example, the specific imaging technical or assessment vehicle.",
+        "definition": "The technique used to carry out an action, for example, the specific imaging technical or assessment vehicle.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-MedicationAdministration-model.dosage.method",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "preferred",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/administration-method-codes"
+          }
+        }
+      },
+      {
+        "id": "obf-MedicationAdministration-model.dosage.doseAndRate",
+        "path": "obf-MedicationAdministration-model.dosage.doseAndRate",
+        "short": "The amount of medication administered.",
+        "definition": "The amount of medication administered.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-MedicationAdministration-model.dosage.doseAndRate",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-DoseAndRate-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-MedicationAdministration-model.dosage.maxDosePerPeriod",
+        "path": "obf-MedicationAdministration-model.dosage.maxDosePerPeriod",
+        "short": "The maximum amount of a medication to be taken in a given period of time (e.g., no more than x in any 24-hour period)",
+        "definition": "The maximum amount of a medication to be taken in a given period of time (e.g., no more than x in any 24-hour period)",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "obf-MedicationAdministration-model.dosage.maxDosePerPeriod",
+          "min": 0,
+          "max": "0"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-Ratio-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-MedicationAdministration-model.dosage.maxDosePerAdministration",
+        "path": "obf-MedicationAdministration-model.dosage.maxDosePerAdministration",
+        "short": "Upper limit on medication per administration.",
+        "definition": "Upper limit on medication per administration.",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "obf-MedicationAdministration-model.dosage.maxDosePerAdministration",
+          "min": 0,
+          "max": "0"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-SimpleQuantity-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-MedicationAdministration-model.dosage.maxDosePerLifetime",
+        "path": "obf-MedicationAdministration-model.dosage.maxDosePerLifetime",
+        "short": "Upper limit on medication per lifetime of the patient.",
+        "definition": "Upper limit on medication per lifetime of the patient.",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "obf-MedicationAdministration-model.dosage.maxDosePerLifetime",
+          "min": 0,
+          "max": "0"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-SimpleQuantity-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-MedicationAdministration-model.medicationAdministrationPartOf[x]",
+        "path": "obf-MedicationAdministration-model.medicationAdministrationPartOf[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "short": "A larger event of which this particular event is a component or step.",
+        "definition": "A larger event of which this particular event is a component or step.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-MedicationAdministration-model.medicationAdministrationPartOf[x]",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-MedicationAdministration-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Procedure-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-MedicationAdministration-model.medicationAdministrationPartOfObf-MedicationAdministration-model:MedicationAdministration",
+        "path": "obf-MedicationAdministration-model.medicationAdministrationPartOfObf-MedicationAdministration-model",
+        "sliceName": "MedicationAdministration",
+        "short": "A record of the use of a medication. If the medication is given as part of a course of treatment, the PartOf attribute should refer to the CourseOfTreatment.",
+        "definition": "A record of the use of a medication. If the medication is given as part of a course of treatment, the PartOf attribute should refer to the CourseOfTreatment.\nAlthough FHIR MedicationAdministration supports date of administration, information source, performer, it lacks common provenance elements, statement creation date, author, and recorder. These are supported as optional extensions.\nFHIR DSTU2 lacks a category attribute, which is provided as an extension in that version.\nSHR does not allow the 'not given' attributes from DSTU2 and STU3, since they are dropped in R4. The status element is used to document medications not given.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-MedicationAdministration-model.medicationAdministrationPartOf[x]",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-MedicationAdministration-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-MedicationAdministration-model.medicationAdministrationPartOfObf-Procedure-model:Procedure",
+        "path": "obf-MedicationAdministration-model.medicationAdministrationPartOfObf-Procedure-model",
+        "sliceName": "Procedure",
+        "short": "An action that is or was performed on or for a patient. This can be a physical intervention like an operation, or less invasive like long term services, counseling, or hypnotherapy.",
+        "definition": "An action that is or was performed on or for a patient. This can be a physical intervention like an operation, or less invasive like long term services, counseling, or hypnotherapy.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-MedicationAdministration-model.medicationAdministrationPartOf[x]",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Procedure-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-MedicationAdministration-model.category",
+        "path": "obf-MedicationAdministration-model.category",
+        "short": "The general type or class of this item.",
+        "definition": "The general type or class of this item.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-MedicationAdministration-model.category",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "preferred",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/medication-admin-category"
+          }
+        }
+      },
+      {
+        "id": "obf-MedicationAdministration-model.supportingInformation",
+        "path": "obf-MedicationAdministration-model.supportingInformation",
+        "short": "Additional information to support this request.",
+        "definition": "Additional information to support this request.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-MedicationAdministration-model.supportingInformation",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Resource-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-MedicationAdministration-model.device",
+        "path": "obf-MedicationAdministration-model.device",
+        "short": "A specific durable physical device used in diagnosis or treatment. The value is the coding for a type of device, for example, a CPAP machine. The same device might be used on multiple patients.",
+        "definition": "A specific durable physical device used in diagnosis or treatment. The value is the coding for a type of device, for example, a CPAP machine. The same device might be used on multiple patients.\nDevice status cannot be reconciled between Argonaut and US-Core, each having different required value sets.\nDevice type has extensible mappings to different value sets in Argonaut and US-Core, however both value sets have identical SNOMED content (descendants of 49062001 (Device). We adopt the US-Core value set, which is allowable because the binding is extensible.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-MedicationAdministration-model.device",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Device-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-MedicationAdministration-model.annotation",
+        "path": "obf-MedicationAdministration-model.annotation",
+        "short": "An added or follow-up note, often after the fact, that contains metadata about who made the statement and when.",
+        "definition": "An added or follow-up note, often after the fact, that contains metadata about who made the statement and when.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-MedicationAdministration-model.annotation",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Annotation-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "obf-MedicationAdministration-model",
+        "path": "obf-MedicationAdministration-model",
+        "definition": "A record of the use of a medication. If the medication is given as part of a course of treatment, the PartOf attribute should refer to the CourseOfTreatment.\nAlthough FHIR MedicationAdministration supports date of administration, information source, performer, it lacks common provenance elements, statement creation date, author, and recorder. These are supported as optional extensions.\nFHIR DSTU2 lacks a category attribute, which is provided as an extension in that version.\nSHR does not allow the 'not given' attributes from DSTU2 and STU3, since they are dropped in R4. The status element is used to document medications not given.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-MedicationAdministration-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-MedicationAdministration-model.metadata",
+        "path": "obf-MedicationAdministration-model.metadata",
+        "short": "Elements that belong to all information items.",
+        "definition": "Elements that belong to all information items.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-MedicationAdministration-model.metadata",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Metadata-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-MedicationAdministration-model.language",
+        "path": "obf-MedicationAdministration-model.language",
+        "short": "A human language, spoken or written.",
+        "definition": "A human language, spoken or written.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-MedicationAdministration-model.language",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-MedicationAdministration-model.implicitRules",
+        "path": "obf-MedicationAdministration-model.implicitRules",
+        "short": "A set of rules under which this content was created",
+        "definition": "A set of rules under which this content was created",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-MedicationAdministration-model.implicitRules",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-MedicationAdministration-model.narrative",
+        "path": "obf-MedicationAdministration-model.narrative",
+        "short": "A human-readable narrative, potentially including images, that contains a summary of the resource, and may be used to represent the content of the resource to a human.",
+        "definition": "A human-readable narrative, potentially including images, that contains a summary of the resource, and may be used to represent the content of the resource to a human.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-MedicationAdministration-model.narrative",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Narrative-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-MedicationAdministration-model.status",
+        "path": "obf-MedicationAdministration-model.status",
+        "short": "A state that relates to the workflow or interpretation of this resource. Certain status values can modify the meaning of the resource, for example, entered-in-error. When a boolean value is used, Status of true indicates the record is active, false means inactive.",
+        "definition": "A state that relates to the workflow or interpretation of this resource. Certain status values can modify the meaning of the resource, for example, entered-in-error. When a boolean value is used, Status of true indicates the record is active, false means inactive.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-MedicationAdministration-model.status",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/medication-admin-status"
+          }
+        }
+      },
+      {
+        "id": "obf-MedicationAdministration-model.statusReason",
+        "path": "obf-MedicationAdministration-model.statusReason",
+        "short": "Captures the reason for the current state of the procedure.",
+        "definition": "Captures the reason for the current state of the procedure.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-MedicationAdministration-model.statusReason",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-MedicationAdministration-model.identifier",
+        "path": "obf-MedicationAdministration-model.identifier",
+        "short": "Business identifier or external id for this resource.",
+        "definition": "Business identifier or external id for this resource.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-MedicationAdministration-model.identifier",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-Identifier-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-MedicationAdministration-model.subjectOfRecord",
+        "path": "obf-MedicationAdministration-model.subjectOfRecord",
+        "short": "The subject of a clinical statement, often called the Patient or the Subject. The SubjectOfRecord typically identifies the clinical record in which this statement is contained. If the statement should be in John Doe's patient record, then John Doe is the subject of record. When there is no patient, the SubjectOfRecord can also be a location, group, or other entity that statement pertains to. For example, observations concerning a hospital ward would have a Location as the SubjectOfRecord.",
+        "definition": "The subject of a clinical statement, often called the Patient or the Subject. The SubjectOfRecord typically identifies the clinical record in which this statement is contained. If the statement should be in John Doe's patient record, then John Doe is the subject of record. When there is no patient, the SubjectOfRecord can also be a location, group, or other entity that statement pertains to. For example, observations concerning a hospital ward would have a Location as the SubjectOfRecord.\n\nNote that the word 'Subject' is used here in the sense of a person or entity subjected to observations or actions, not subject as in a conceptual topic, like heart disease.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-MedicationAdministration-model.subjectOfRecord",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Patient-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-MedicationAdministration-model.careContext[x]",
+        "path": "obf-MedicationAdministration-model.careContext[x]",
+        "short": "The encounter or episode of care",
+        "definition": "The encounter or episode of care",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-MedicationAdministration-model.careContext[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Encounter-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-EpisodeOfCare-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-MedicationAdministration-model.statementDateTime",
+        "path": "obf-MedicationAdministration-model.statementDateTime",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C3669169"
+          }
+        ],
+        "short": "The point in time when the statement was created.",
+        "definition": "The point in time when the statement was created.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-MedicationAdministration-model.statementDateTime",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-MedicationAdministration-model.reasonCode",
+        "path": "obf-MedicationAdministration-model.reasonCode",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0566251"
+          }
+        ],
+        "short": "The explanation or justification for the current item or action, as a code.",
+        "definition": "The explanation or justification for the current item or action, as a code.\nReason is a string or CodeableConcept in DSTU2 but in later versions only a CodeableConcept.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-MedicationAdministration-model.reasonCode",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-MedicationAdministration-model.medicationReasonReference[x]",
+        "path": "obf-MedicationAdministration-model.medicationReasonReference[x]",
+        "short": "Condition or observation that supports why the medication is being/was taken",
+        "definition": "Condition or observation that supports why the medication is being/was taken",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-MedicationAdministration-model.medicationReasonReference[x]",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Condition-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Observation-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-DiagnosticReport-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-MedicationAdministration-model.medicationAdministrationBasedOn[x]",
+        "path": "obf-MedicationAdministration-model.medicationAdministrationBasedOn[x]",
+        "short": "The original request, instruction or authority to perform the administration.",
+        "definition": "The original request, instruction or authority to perform the administration.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-MedicationAdministration-model.medicationAdministrationBasedOn[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-MedicationRequest-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-MedicationAdministration-model.occurrenceTimeOrPeriod[x]",
+        "path": "obf-MedicationAdministration-model.occurrenceTimeOrPeriod[x]",
+        "short": "The point or period of time when the event takes place. Times can be precise (dateTime) or approximate (date). If a time period is used, and the start date or dateTime is missing, the start of the period is not known. If the end date or dateTime is missing, it means that the period is ongoing.",
+        "definition": "The point or period of time when the event takes place. Times can be precise (dateTime) or approximate (date). If a time period is used, and the start date or dateTime is missing, the start of the period is not known. If the end date or dateTime is missing, it means that the period is ongoing.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-MedicationAdministration-model.occurrenceTimeOrPeriod[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "date"
+          },
+          {
+            "code": "dateTime"
+          },
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-TimePeriod-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-MedicationAdministration-model.participation",
+        "path": "obf-MedicationAdministration-model.participation",
+        "short": "Record of someone or something involvement in an activity or event.",
+        "definition": "Record of someone or something involvement in an activity or event.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-MedicationAdministration-model.participation",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-MedicationAdministration-model.participation.personParticipant[x]",
+        "path": "obf-MedicationAdministration-model.participation.personParticipant[x]",
+        "short": "A choice of Patient, Practitioner and RelatedPerson as participant.",
+        "definition": "A choice of Patient, Practitioner and RelatedPerson as participant.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-MedicationAdministration-model.participation.personParticipant[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Patient-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Practitioner-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-RelatedPerson-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-MedicationAdministration-model.participation.participationType",
+        "path": "obf-MedicationAdministration-model.participation.participationType",
+        "short": "The role played by the participant engaged in the action, for example, as the attending physician, surgical assistant, etc.",
+        "definition": "The role played by the participant engaged in the action, for example, as the attending physician, surgical assistant, etc.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-MedicationAdministration-model.participation.participationType",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "example",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/performer-role"
+          }
+        }
+      },
+      {
+        "id": "obf-MedicationAdministration-model.participation.participationPeriod",
+        "path": "obf-MedicationAdministration-model.participation.participationPeriod",
+        "short": "The point in time or span of time the participant is involved.",
+        "definition": "The point in time or span of time the participant is involved.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-MedicationAdministration-model.participation.participationPeriod",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-TimePeriod-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-MedicationAdministration-model.participation.onBehalfOf[x]",
+        "path": "obf-MedicationAdministration-model.participation.onBehalfOf[x]",
+        "short": "The party represented by the actual participant.",
+        "definition": "The party represented by the actual participant.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-MedicationAdministration-model.participation.onBehalfOf[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Practitioner-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-RelatedPerson-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Patient-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Device-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Organization-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-MedicationAdministration-model.method",
+        "path": "obf-MedicationAdministration-model.method",
+        "short": "The technique used to carry out an action, for example, the specific imaging technical or assessment vehicle.",
+        "definition": "The technique used to carry out an action, for example, the specific imaging technical or assessment vehicle.",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "obf-MedicationAdministration-model.method",
+          "min": 0,
+          "max": "0"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-MedicationAdministration-model.medicationCodeOrReference[x]",
+        "path": "obf-MedicationAdministration-model.medicationCodeOrReference[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "short": "A choice of a medication code or reference.",
+        "definition": "A choice of a medication code or reference.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-MedicationAdministration-model.medicationCodeOrReference[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Medication-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-MedicationAdministration-model.medicationCodeOrReferenceCoding:concept",
+        "path": "obf-MedicationAdministration-model.medicationCodeOrReferenceCoding",
+        "sliceName": "concept",
+        "short": "concept",
+        "definition": "concept",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-MedicationAdministration-model.medicationCodeOrReference[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "extensible",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/us/core/ValueSet/us-core-medication-codes"
+          }
+        }
+      },
+      {
+        "id": "obf-MedicationAdministration-model.dosage",
+        "path": "obf-MedicationAdministration-model.dosage",
+        "short": "The dosage of the medication. The data structure is flexible and can describe a dosage prescribed, administered, or reported.",
+        "definition": "The dosage of the medication. The data structure is flexible and can describe a dosage prescribed, administered, or reported.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-MedicationAdministration-model.dosage",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Dosage-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-MedicationAdministration-model.dosage.doseSequenceNumber",
+        "path": "obf-MedicationAdministration-model.dosage.doseSequenceNumber",
+        "short": "Dose number within series.",
+        "definition": "Dose number within series.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-MedicationAdministration-model.dosage.doseSequenceNumber",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "integer"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-MedicationAdministration-model.dosage.instructionText",
+        "path": "obf-MedicationAdministration-model.dosage.instructionText",
+        "short": "The directions (signetur) on the drug prescription or dispensing record.",
+        "definition": "The directions (signetur) on the drug prescription or dispensing record.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-MedicationAdministration-model.dosage.instructionText",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-MedicationAdministration-model.dosage.instructionCode",
+        "path": "obf-MedicationAdministration-model.dosage.instructionCode",
+        "short": "Coded instructions, e.g., 'with meals'.",
+        "definition": "Coded instructions, e.g., 'with meals'.",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "obf-MedicationAdministration-model.dosage.instructionCode",
+          "min": 0,
+          "max": "0"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "example",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/additional-instruction-codes"
+          }
+        }
+      },
+      {
+        "id": "obf-MedicationAdministration-model.dosage.patientInstruction",
+        "path": "obf-MedicationAdministration-model.dosage.patientInstruction",
+        "short": "Patient or consumer-oriented instructions.",
+        "definition": "Patient or consumer-oriented instructions.",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "obf-MedicationAdministration-model.dosage.patientInstruction",
+          "min": 0,
+          "max": "0"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-MedicationAdministration-model.dosage.timing",
+        "path": "obf-MedicationAdministration-model.dosage.timing",
+        "short": "A timing schedule that specifies an event that may occur multiple times.",
+        "definition": "A timing schedule that specifies an event that may occur multiple times.\nTiming offers a choice of multiple OccurrenceTime (used is used to specify specific times), or recurrence patterns.",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "obf-MedicationAdministration-model.dosage.timing",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-Timing-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-MedicationAdministration-model.dosage.asNeeded[x]",
+        "path": "obf-MedicationAdministration-model.dosage.asNeeded[x]",
+        "short": "Preconditions for service, either 'true' indicating to be performed if needed, or a code indicating the pre-condition for performing the service. For example 'pain', 'on flare-up', etc.",
+        "definition": "Preconditions for service, either 'true' indicating to be performed if needed, or a code indicating the pre-condition for performing the service. For example 'pain', 'on flare-up', etc.",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "obf-MedicationAdministration-model.dosage.asNeeded[x]",
+          "min": 0,
+          "max": "0"
+        },
+        "type": [
+          {
+            "code": "boolean"
+          },
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-MedicationAdministration-model.dosage.administrationSite",
+        "path": "obf-MedicationAdministration-model.dosage.administrationSite",
+        "short": "The anatomic site at which the medication applied.",
+        "definition": "The anatomic site at which the medication applied.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-MedicationAdministration-model.dosage.administrationSite",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "example",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/us/breast-radiology/obf/datatype/vs/BodyLocationVS"
+          }
+        }
+      },
+      {
+        "id": "obf-MedicationAdministration-model.dosage.routeIntoBody",
+        "path": "obf-MedicationAdministration-model.dosage.routeIntoBody",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C0013153"
+          }
+        ],
+        "short": "The way a substance enters an organism after contact, particularly, the route of drug administration.",
+        "definition": "The way a substance enters an organism after contact, particularly, the route of drug administration.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-MedicationAdministration-model.dosage.routeIntoBody",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/route-codes"
+          }
+        }
+      },
+      {
+        "id": "obf-MedicationAdministration-model.dosage.method",
+        "path": "obf-MedicationAdministration-model.dosage.method",
+        "short": "The technique used to carry out an action, for example, the specific imaging technical or assessment vehicle.",
+        "definition": "The technique used to carry out an action, for example, the specific imaging technical or assessment vehicle.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-MedicationAdministration-model.dosage.method",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "preferred",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/administration-method-codes"
+          }
+        }
+      },
+      {
+        "id": "obf-MedicationAdministration-model.dosage.doseAndRate",
+        "path": "obf-MedicationAdministration-model.dosage.doseAndRate",
+        "short": "The amount of medication administered.",
+        "definition": "The amount of medication administered.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-MedicationAdministration-model.dosage.doseAndRate",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-DoseAndRate-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-MedicationAdministration-model.dosage.maxDosePerPeriod",
+        "path": "obf-MedicationAdministration-model.dosage.maxDosePerPeriod",
+        "short": "The maximum amount of a medication to be taken in a given period of time (e.g., no more than x in any 24-hour period)",
+        "definition": "The maximum amount of a medication to be taken in a given period of time (e.g., no more than x in any 24-hour period)",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "obf-MedicationAdministration-model.dosage.maxDosePerPeriod",
+          "min": 0,
+          "max": "0"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-Ratio-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-MedicationAdministration-model.dosage.maxDosePerAdministration",
+        "path": "obf-MedicationAdministration-model.dosage.maxDosePerAdministration",
+        "short": "Upper limit on medication per administration.",
+        "definition": "Upper limit on medication per administration.",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "obf-MedicationAdministration-model.dosage.maxDosePerAdministration",
+          "min": 0,
+          "max": "0"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-SimpleQuantity-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-MedicationAdministration-model.dosage.maxDosePerLifetime",
+        "path": "obf-MedicationAdministration-model.dosage.maxDosePerLifetime",
+        "short": "Upper limit on medication per lifetime of the patient.",
+        "definition": "Upper limit on medication per lifetime of the patient.",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "obf-MedicationAdministration-model.dosage.maxDosePerLifetime",
+          "min": 0,
+          "max": "0"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-SimpleQuantity-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-MedicationAdministration-model.medicationAdministrationPartOf[x]",
+        "path": "obf-MedicationAdministration-model.medicationAdministrationPartOf[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "short": "A larger event of which this particular event is a component or step.",
+        "definition": "A larger event of which this particular event is a component or step.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-MedicationAdministration-model.medicationAdministrationPartOf[x]",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-MedicationAdministration-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Procedure-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-MedicationAdministration-model.medicationAdministrationPartOfObf-MedicationAdministration-model:MedicationAdministration",
+        "path": "obf-MedicationAdministration-model.medicationAdministrationPartOfObf-MedicationAdministration-model",
+        "sliceName": "MedicationAdministration",
+        "short": "A record of the use of a medication. If the medication is given as part of a course of treatment, the PartOf attribute should refer to the CourseOfTreatment.",
+        "definition": "A record of the use of a medication. If the medication is given as part of a course of treatment, the PartOf attribute should refer to the CourseOfTreatment.\nAlthough FHIR MedicationAdministration supports date of administration, information source, performer, it lacks common provenance elements, statement creation date, author, and recorder. These are supported as optional extensions.\nFHIR DSTU2 lacks a category attribute, which is provided as an extension in that version.\nSHR does not allow the 'not given' attributes from DSTU2 and STU3, since they are dropped in R4. The status element is used to document medications not given.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-MedicationAdministration-model.medicationAdministrationPartOf[x]",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-MedicationAdministration-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-MedicationAdministration-model.medicationAdministrationPartOfObf-Procedure-model:Procedure",
+        "path": "obf-MedicationAdministration-model.medicationAdministrationPartOfObf-Procedure-model",
+        "sliceName": "Procedure",
+        "short": "An action that is or was performed on or for a patient. This can be a physical intervention like an operation, or less invasive like long term services, counseling, or hypnotherapy.",
+        "definition": "An action that is or was performed on or for a patient. This can be a physical intervention like an operation, or less invasive like long term services, counseling, or hypnotherapy.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-MedicationAdministration-model.medicationAdministrationPartOf[x]",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Procedure-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-MedicationAdministration-model.category",
+        "path": "obf-MedicationAdministration-model.category",
+        "short": "The general type or class of this item.",
+        "definition": "The general type or class of this item.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-MedicationAdministration-model.category",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "preferred",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/medication-admin-category"
+          }
+        }
+      },
+      {
+        "id": "obf-MedicationAdministration-model.supportingInformation",
+        "path": "obf-MedicationAdministration-model.supportingInformation",
+        "short": "Additional information to support this request.",
+        "definition": "Additional information to support this request.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-MedicationAdministration-model.supportingInformation",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Resource-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-MedicationAdministration-model.device",
+        "path": "obf-MedicationAdministration-model.device",
+        "short": "A specific durable physical device used in diagnosis or treatment. The value is the coding for a type of device, for example, a CPAP machine. The same device might be used on multiple patients.",
+        "definition": "A specific durable physical device used in diagnosis or treatment. The value is the coding for a type of device, for example, a CPAP machine. The same device might be used on multiple patients.\nDevice status cannot be reconciled between Argonaut and US-Core, each having different required value sets.\nDevice type has extensible mappings to different value sets in Argonaut and US-Core, however both value sets have identical SNOMED content (descendants of 49062001 (Device). We adopt the US-Core value set, which is allowable because the binding is extensible.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-MedicationAdministration-model.device",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Device-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-MedicationAdministration-model.annotation",
+        "path": "obf-MedicationAdministration-model.annotation",
+        "short": "An added or follow-up note, often after the fact, that contains metadata about who made the statement and when.",
+        "definition": "An added or follow-up note, often after the fact, that contains metadata about who made the statement and when.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-MedicationAdministration-model.annotation",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Annotation-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

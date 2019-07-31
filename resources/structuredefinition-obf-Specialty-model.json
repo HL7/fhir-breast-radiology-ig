@@ -1,0 +1,128 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "obf-Specialty-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>Specialty Logical Model</b></p>\n  <p>The specialty of a practitioner who (should, will, or did) perform a service.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Specialty-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/breast-radiology",
+      "value": "obf.Specialty"
+    }
+  ],
+  "name": "Specialty",
+  "title": "obf-Specialty",
+  "status": "draft",
+  "date": "2019-07-30",
+  "publisher": "Hl7",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://BreastRadReport.com"
+        }
+      ]
+    }
+  ],
+  "description": "The specialty of a practitioner who (should, will, or did) perform a service.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "obf-Specialty-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "obf-Specialty-model",
+        "path": "obf-Specialty-model",
+        "definition": "The specialty of a practitioner who (should, will, or did) perform a service.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Specialty-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Specialty-model.value",
+        "path": "obf-Specialty-model.value",
+        "short": "Concept representing the specialty of a practitioner who (should, will, or did) perform a service.",
+        "definition": "Concept representing the specialty of a practitioner who (should, will, or did) perform a service.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-Specialty-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "preferred",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/c80-practice-codes"
+          }
+        }
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "obf-Specialty-model",
+        "path": "obf-Specialty-model",
+        "definition": "The specialty of a practitioner who (should, will, or did) perform a service.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Specialty-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Specialty-model.value",
+        "path": "obf-Specialty-model.value",
+        "short": "Concept representing the specialty of a practitioner who (should, will, or did) perform a service.",
+        "definition": "Concept representing the specialty of a practitioner who (should, will, or did) perform a service.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-Specialty-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "preferred",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/c80-practice-codes"
+          }
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,128 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "obf-datatype-Currency-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>Currency Logical Model</b></p>\n  <p>ISO 4217 Currency Code</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-Currency-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/breast-radiology",
+      "value": "obf.datatype.Currency"
+    }
+  ],
+  "name": "Currency",
+  "title": "obf-datatype-Currency",
+  "status": "draft",
+  "date": "2019-07-30",
+  "publisher": "Hl7",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://BreastRadReport.com"
+        }
+      ]
+    }
+  ],
+  "description": "ISO 4217 Currency Code",
+  "kind": "logical",
+  "abstract": false,
+  "type": "obf-datatype-Currency-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "obf-datatype-Currency-model",
+        "path": "obf-datatype-Currency-model",
+        "definition": "ISO 4217 Currency Code",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-datatype-Currency-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-datatype-Currency-model.value",
+        "path": "obf-datatype-Currency-model.value",
+        "short": "Concept representing iSO 4217 Currency Code",
+        "definition": "Concept representing iSO 4217 Currency Code",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-datatype-Currency-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/currencies"
+          }
+        }
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "obf-datatype-Currency-model",
+        "path": "obf-datatype-Currency-model",
+        "definition": "ISO 4217 Currency Code",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-datatype-Currency-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-datatype-Currency-model.value",
+        "path": "obf-datatype-Currency-model.value",
+        "short": "Concept representing iSO 4217 Currency Code",
+        "definition": "Concept representing iSO 4217 Currency Code",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-datatype-Currency-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/currencies"
+          }
+        }
+      }
+    ]
+  }
+}

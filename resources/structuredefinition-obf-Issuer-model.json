@@ -1,0 +1,118 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "obf-Issuer-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>Issuer Logical Model</b></p>\n  <p>An organization who issues a qualification, identifier, or license.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Issuer-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/breast-radiology",
+      "value": "obf.Issuer"
+    }
+  ],
+  "name": "Issuer",
+  "title": "obf-Issuer",
+  "status": "draft",
+  "date": "2019-07-30",
+  "publisher": "Hl7",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://BreastRadReport.com"
+        }
+      ]
+    }
+  ],
+  "description": "An organization who issues a qualification, identifier, or license.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "obf-Issuer-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "obf-Issuer-model",
+        "path": "obf-Issuer-model",
+        "definition": "An organization who issues a qualification, identifier, or license.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Issuer-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Issuer-model.value",
+        "path": "obf-Issuer-model.value",
+        "short": "Organization representing an organization who issues a qualification, identifier, or license.",
+        "definition": "Organization representing an organization who issues a qualification, identifier, or license.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-Issuer-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Organization-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "obf-Issuer-model",
+        "path": "obf-Issuer-model",
+        "definition": "An organization who issues a qualification, identifier, or license.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Issuer-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Issuer-model.value",
+        "path": "obf-Issuer-model.value",
+        "short": "Organization representing an organization who issues a qualification, identifier, or license.",
+        "definition": "Organization representing an organization who issues a qualification, identifier, or license.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-Issuer-model.value",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Organization-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

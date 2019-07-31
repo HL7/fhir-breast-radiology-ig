@@ -1,0 +1,150 @@
+---
+# jekyll header
+---
+{% include header.html %}
+
+<!-- ============BreadCrumb=============== -->
+<div id="segment-breadcrumb" class="segmnt">
+  <!-- segment-breadcrumb -->
+  <div class="container">
+    <!-- container -->
+    <ul class="breadcrumb">
+      <li title="home"><a href="index.html"><b>Home</b></a></li>
+      <li><b>Extensions</b></li>
+    </ul>
+  </div>
+  <!-- /container -->
+</div>
+<!-- /segment-breadcrumb -->
+
+{% include container-start.html %}
+
+<!-- ============CONTENT CONTENT=============== -->
+
+<h2>Primary extensions defined as part of this Implementation Guide</h2>
+
+<table class="codes">
+  <thead>
+    <tr>
+      <td>
+        <b>Name</b>
+      </td>
+      <td>
+        <b>Definition</b>
+      </td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+          <td><a href="StructureDefinition-obf-datatype-AnatomicalOrientation-extension.html">AnatomicalOrientation</a></td>
+          <td>{% capture md_text %}AnatomicalOrientation of the body location, if needed to distinguish from a similar location in another orientation.
+The orientation element is part of BodyLocation, a flexible structure that allows the location to be determined by a single code, or a code plus laterality and/or orientation. The body location can also be specified in relation to one or more body landmarks. SNOMED CT is used in all cases.
+
+* Code only: The code should include (precoordinate) laterality and/orientation to the degree necessary to completely specify the body location.
+* Code plus laterality and/or orientation: The basic code augmented by codes specifying the body side and/or anatomical orientation.
+* Relation to landmark: The location relative to a landmark is specified by:
+1. Establishing the location and type of landmark using a body site code and optional laterality/orientation, and
+2. Specifying the direction and distance from the landmark to the body location.
+
+Note that BodyLocation is a data type (a reusable structure), not a stand-alone entity. The concept is similar to how a postal address can apply to a person, location, or organization. This contrasts with FHIR's stand-alone BodySite (aka BodyStructure in r4) which 'is not ... intended for describing the type of anatomical location but rather a specific body site on a specific patient' (FHIR 3.5).{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        <tr>
+          <td><a href="StructureDefinition-obf-Annotation-extension.html">Annotation</a></td>
+          <td>{% capture md_text %}An added or follow-up note, often after the fact, that contains metadata about who made the statement and when.{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        <tr>
+          <td><a href="StructureDefinition-obf-Author-extension.html">Author</a></td>
+          <td>{% capture md_text %}The actor who created the item and it responsible for the content (regardless of the information source or who recorded it). If only the author is given, it is assumed the author is the information source and the recorder.{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        <tr>
+          <td><a href="StructureDefinition-breastrad-BreastExamTechnique-extension.html">BreastExamTechnique</a></td>
+          <td>{% capture md_text %}Technique used during breast examination.{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        <tr>
+          <td><a href="StructureDefinition-obf-datatype-Code-extension.html">Code</a></td>
+          <td>{% capture md_text %}The main type identifier for a lab, procedure, condition, etc., usually drawn from a controlled vocabulary.{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        <tr>
+          <td><a href="StructureDefinition-obf-FocalSubject-extension.html">FocalSubject</a></td>
+          <td>{% capture md_text %}The person or entity that the information in this resource relates to, if different than the person of record. The subject of information can be a reference or a code, the latter when the subject is described generically, for example, in terms of a relationship to the subject of record (e.g., wife).{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        <tr>
+          <td><a href="StructureDefinition-obf-datatype-LandmarkLocation-extension.html">LandmarkLocation</a></td>
+          <td>{% capture md_text %}The body location of the landmark, specified by a location code and optional laterality and orientation.{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        <tr>
+          <td><a href="StructureDefinition-obf-datatype-LandmarkToBodyLocationDirection-extension.html">LandmarkToBodyLocationDirection</a></td>
+          <td>{% capture md_text %}The direction from the landmark to the body location of interest, given as a clockface direction or anatomical direction.{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        <tr>
+          <td><a href="StructureDefinition-obf-datatype-LandmarkToBodyLocationDistance-extension.html">LandmarkToBodyLocationDistance</a></td>
+          <td>{% capture md_text %}How far the body location of interest is from the given landmark.{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        <tr>
+          <td><a href="StructureDefinition-obf-datatype-LandmarkType-extension.html">LandmarkType</a></td>
+          <td>{% capture md_text %}The type of feature that constitutes the landmark, particularly if the landmark is an acquired body structure or physical object.{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        <tr>
+          <td><a href="StructureDefinition-obf-datatype-Laterality-extension.html">Laterality</a></td>
+          <td>{% capture md_text %}Body side of the body location, if needed to distinguish from a similar location on the other side of the body.
+
+The laterality element is part of BodyLocation, a flexible structure that allows the location to be determined by a single code, or a code plus laterality and/or orientation. The body location can also be specified in relation to one or more body landmarks. SNOMED CT is used in all cases.
+
+* Code only: The code should include (precoordinate) laterality and/orientation to the degree necessary to completely specify the body location.
+* Code plus laterality and/or orientation: The basic code augmented by codes specifying the body side and/or anatomical orientation.
+* Relation to landmark: The location relative to a landmark is specified by:
+1. Establishing the location and type of landmark using a body site code and optional laterality/orientation, and
+2. Specifying the direction and distance from the landmark to the body location.
+
+Note that BodyLocation is a data type (a reusable structure), not a stand-alone entity. The concept is similar to how a postal address can apply to a person, location, or organization. This contrasts with FHIR's stand-alone BodySite (aka BodyStructure in r4) which 'is not ... intended for describing the type of anatomical location but rather a specific body site on a specific patient' (FHIR 3.5).{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        <tr>
+          <td><a href="StructureDefinition-obf-ObservationDerivedFrom-extension.html">ObservationDerivedFrom</a></td>
+          <td>{% capture md_text %}The target resource that represents a measurement from which this observation value is derived. For example, a calculated anion gap or a fetal measurement based on an ultrasound image.{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        <tr>
+          <td><a href="StructureDefinition-obf-ObservationPartOf-extension.html">ObservationPartOf</a></td>
+          <td>{% capture md_text %}A larger event of which this particular Observation is a component or step. For example, an observation as part of a procedure.{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        <tr>
+          <td><a href="StructureDefinition-obf-datatype-RelationToLandmark-extension.html">RelationToLandmark</a></td>
+          <td>{% capture md_text %}The relationship between a landmark that helps determine a body location and the body location itself. The location relative to a landmark is specified by:
+* Specifying the location and type of landmark using a body site code and optional laterality/orientation,
+* Specifying the direction from the landmark to the body location, and
+* Specifying the distance from the landmark to the body location.
+
+The RelationToLandmark element is part of BodyLocation, a flexible structure that allows the location to be determined by a single code, or a code plus laterality and/or orientation. The body location can also be specified in relation to one or more body landmarks. SNOMED CT is used in all cases.
+
+* Code only: The code should include (precoordinate) laterality and/orientation to the degree necessary to completely specify the body location.
+* Code plus laterality and/or orientation: The basic code augmented by codes specifying the body side and/or anatomical orientation.
+* Relation to landmark: The location relative to a landmark is specified by:
+1. Establishing the location and type of landmark using a body site code and optional laterality/orientation, and
+2. Specifying the direction and distance from the landmark to the body location.
+
+Note that BodyLocation is a data type (a reusable structure), not a stand-alone entity. The concept is similar to how a postal address can apply to a person, location, or organization. This contrasts with FHIR's stand-alone BodySite (aka BodyStructure in r4) which 'is not ... intended for describing the type of anatomical location but rather a specific body site on a specific patient' (FHIR 3.5).{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        <tr>
+          <td><a href="StructureDefinition-breastrad-ResultComposition-extension.html">ResultComposition</a></td>
+          <td>{% capture md_text %}Reference to the document containing detailed information about the breast radiology report, including assocated sections{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        <tr>
+          <td><a href="StructureDefinition-obf-ResultsInterpreter-extension.html">ResultsInterpreter</a></td>
+          <td>{% capture md_text %}The practitioner or organization that is responsible for the report's conclusions and interpretations.{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        <tr>
+          <td><a href="StructureDefinition-obf-SourceSystem-extension.html">SourceSystem</a></td>
+          <td>{% capture md_text %}FHIR: This provides a minimal amount of Provenance information that can be used to track or differentiate the source of information in the resource. The source may identify another FHIR server, document, message, database, etc.
+FHIM: Identifies the computer system that created the medical record. This optional field may also be used to indicate that the medical record was originally created by a different organization from the one that is currently storing or utilizing the record in that the assigning authority of the Id could be set to that originating organization. This property is optional, as some systems will assume that all records that it contains originated in that system, however it is anticipated that it will become increasingly commonplace for records from multiple systems and organizations will be comingled in order to provide a complete picture of the patient's health record.{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        <tr>
+          <td><a href="StructureDefinition-breastrad-SummaryBiRadCode-extension.html">SummaryBiRadCode</a></td>
+          <td>{% capture md_text %}BiRd code that summarizes a set of BiRad codes in a the document. Generally the most concerning/important BiRad code in the document.{% endcapture %}{{ md_text | markdownify }}</td>
+        </tr>
+        
+  </tbody>
+</table>
+
+<!-- ==============END CONTENT END CONTENT=================== -->
+
+{% include container-end.html %}
+{% include footer.html %}

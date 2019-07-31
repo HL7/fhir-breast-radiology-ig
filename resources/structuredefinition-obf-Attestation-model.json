@@ -1,0 +1,266 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "obf-Attestation-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>Attestation Logical Model</b></p>\n  <p>A certification or assertion of the accuracy of the content.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Attestation-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/breast-radiology",
+      "value": "obf.Attestation"
+    }
+  ],
+  "name": "Attestation",
+  "title": "obf-Attestation",
+  "status": "draft",
+  "date": "2019-07-30",
+  "publisher": "Hl7",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://BreastRadReport.com"
+        }
+      ]
+    }
+  ],
+  "description": "A certification or assertion of the accuracy of the content.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "obf-Attestation-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "obf-Attestation-model",
+        "path": "obf-Attestation-model",
+        "definition": "A certification or assertion of the accuracy of the content.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Attestation-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Attestation-model.attestationMode",
+        "path": "obf-Attestation-model.attestationMode",
+        "short": "The type of attestation the authenticator offers.",
+        "definition": "The type of attestation the authenticator offers.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-Attestation-model.attestationMode",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/composition-attestation-mode"
+          }
+        }
+      },
+      {
+        "id": "obf-Attestation-model.creationDateTime",
+        "path": "obf-Attestation-model.creationDateTime",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C3669169"
+          }
+        ],
+        "short": "The point in time when the item was created.",
+        "definition": "The point in time when the item was created.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Attestation-model.creationDateTime",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Attestation-model.attester[x]",
+        "path": "obf-Attestation-model.attester[x]",
+        "short": "The actor who has certified or assented to the accuracy of the composition/document.",
+        "definition": "The actor who has certified or assented to the accuracy of the composition/document.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Attestation-model.attester[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Patient-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Practitioner-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-RelatedPerson-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Organization-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Device-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-PractitionerRole-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "obf-Attestation-model",
+        "path": "obf-Attestation-model",
+        "definition": "A certification or assertion of the accuracy of the content.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-Attestation-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Attestation-model.attestationMode",
+        "path": "obf-Attestation-model.attestationMode",
+        "short": "The type of attestation the authenticator offers.",
+        "definition": "The type of attestation the authenticator offers.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-Attestation-model.attestationMode",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/composition-attestation-mode"
+          }
+        }
+      },
+      {
+        "id": "obf-Attestation-model.creationDateTime",
+        "path": "obf-Attestation-model.creationDateTime",
+        "code": [
+          {
+            "system": "http://ncimeta.nci.nih.gov",
+            "code": "C3669169"
+          }
+        ],
+        "short": "The point in time when the item was created.",
+        "definition": "The point in time when the item was created.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Attestation-model.creationDateTime",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-Attestation-model.attester[x]",
+        "path": "obf-Attestation-model.attester[x]",
+        "short": "The actor who has certified or assented to the accuracy of the composition/document.",
+        "definition": "The actor who has certified or assented to the accuracy of the composition/document.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-Attestation-model.attester[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Patient-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Practitioner-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-RelatedPerson-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Organization-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Device-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-PractitionerRole-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

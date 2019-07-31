@@ -1,0 +1,36 @@
+
+<p> </p>
+<p><b>Mapping Source</b></p>
+<p>This structure represents the following mapping definition:</p>
+<pre>
+obf.DiagnosticReport maps to DiagnosticReport:
+  Language maps to language
+  ImplicitRules maps to implicitRules
+  Metadata.VersionId maps to meta.versionId
+  Metadata.SourceSystem maps to meta.extension
+  Metadata.Profile maps to meta.profile
+  Metadata.LastUpdated maps to meta.lastUpdated
+  Metadata.SecurityLabel maps to meta.security
+  Metadata.Tag maps to meta.tag
+  Narrative maps to text
+  Identifier maps to identifier
+  BasedOn maps to basedOn
+  Status maps to status
+  Category maps to category
+  ObservationSubjectOfRecord maps to subject
+  Code maps to code
+  CareContext maps to context
+  RelevantTime maps to effective[x]
+  StatementDateTime maps to issued
+  constrain performer to 0..1
+  DiagnosticReportPerformer maps to performer.actor
+  ResultsInterpreter maps to extension
+  Specimen maps to specimen
+  Observation maps to result (slice on = target.reference.resolve(); slice on type = profile; slice strategy = includes)
+  MediaIncluded.CommentOrDescription maps to image.comment
+  MediaIncluded.Media maps to image.link
+  ConclusionText maps to conclusion
+  ConclusionCode maps to codedDiagnosis
+  PresentedForm maps to presentedForm
+
+</pre>

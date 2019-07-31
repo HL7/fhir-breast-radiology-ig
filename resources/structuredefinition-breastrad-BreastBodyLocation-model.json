@@ -1,0 +1,1768 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "breastrad-BreastBodyLocation-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>BreastBodyLocation Logical Model</b></p>\n  <p>Location of the breast abnormality.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/breastrad-BreastBodyLocation-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/breast-radiology",
+      "value": "breastrad.BreastBodyLocation"
+    }
+  ],
+  "name": "BreastBodyLocation",
+  "title": "breastrad-BreastBodyLocation",
+  "status": "draft",
+  "date": "2019-07-30",
+  "publisher": "Hl7",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://BreastRadReport.com"
+        }
+      ]
+    }
+  ],
+  "description": "Location of the breast abnormality.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "breastrad-BreastBodyLocation-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "breastrad-BreastBodyLocation-model",
+        "path": "breastrad-BreastBodyLocation-model",
+        "definition": "Location of the breast abnormality.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "breastrad-BreastBodyLocation-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "breastrad-BreastBodyLocation-model.code",
+        "path": "breastrad-BreastBodyLocation-model.code",
+        "short": "The main type identifier for a lab, procedure, condition, etc., usually drawn from a controlled vocabulary.",
+        "definition": "The main type identifier for a lab, procedure, condition, etc., usually drawn from a controlled vocabulary.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "breastrad-BreastBodyLocation-model.code",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "breastrad-BreastBodyLocation-model.code.id",
+        "path": "breastrad-BreastBodyLocation-model.code.id",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "xml:id (or equivalent in JSON)",
+        "definition": "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Element.id",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "breastrad-BreastBodyLocation-model.code.extension",
+        "path": "breastrad-BreastBodyLocation-model.code.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "description": "Extensions are always sliced by (at least) url",
+          "rules": "open"
+        },
+        "short": "Additional Content defined by implementations",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Element.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "breastrad-BreastBodyLocation-model.code.system",
+        "path": "breastrad-BreastBodyLocation-model.code.system",
+        "short": "Identity of the terminology system",
+        "definition": "The identification of the code system that defines the meaning of the symbol in the code.",
+        "comment": "The URI may be an OID (urn:oid:...) or a UUID (urn:uuid:...).  OIDs and UUIDs SHALL be references to the HL7 OID registry. Otherwise, the URI should come from HL7's list of FHIR defined special URIs or it should de-reference to some definition that establish the system clearly and unambiguously.",
+        "requirements": "Need to be unambiguous about the source of the definition of the symbol.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Coding.system",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "fixedUri": "http://snomed.info/sct",
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "C*E.3"
+          },
+          {
+            "identity": "rim",
+            "map": "./codeSystem"
+          },
+          {
+            "identity": "orim",
+            "map": "fhir:Coding.system rdfs:subPropertyOf dt:CDCoding.codeSystem"
+          }
+        ]
+      },
+      {
+        "id": "breastrad-BreastBodyLocation-model.code.version",
+        "path": "breastrad-BreastBodyLocation-model.code.version",
+        "short": "Version of the system - if relevant",
+        "definition": "The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured. and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged.",
+        "comment": "Where the terminology does not clearly define what string should be used to identify code system versions, the recommendation is to use the date (expressed in FHIR date format) on which that version was officially published as the version date.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Coding.version",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "C*E.7"
+          },
+          {
+            "identity": "rim",
+            "map": "./codeSystemVersion"
+          },
+          {
+            "identity": "orim",
+            "map": "fhir:Coding.version rdfs:subPropertyOf dt:CDCoding.codeSystemVersion"
+          }
+        ]
+      },
+      {
+        "id": "breastrad-BreastBodyLocation-model.code.code",
+        "path": "breastrad-BreastBodyLocation-model.code.code",
+        "short": "Symbol in syntax defined by the system",
+        "definition": "A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination).",
+        "requirements": "Need to refer to a particular code in the system.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Coding.code",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "fixedCode": "76752008",
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "C*E.1"
+          },
+          {
+            "identity": "rim",
+            "map": "./code"
+          },
+          {
+            "identity": "orim",
+            "map": "fhir:Coding.code rdfs:subPropertyOf dt:CDCoding.code"
+          }
+        ]
+      },
+      {
+        "id": "breastrad-BreastBodyLocation-model.code.display",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
+            "valueBoolean": true
+          }
+        ],
+        "path": "breastrad-BreastBodyLocation-model.code.display",
+        "short": "Representation defined by the system",
+        "definition": "A representation of the meaning of the code in the system, following the rules of the system.",
+        "requirements": "Need to be able to carry a human-readable meaning of the code for readers that do not know  the system.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Coding.display",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "C*E.2 - but note this is not well followed"
+          },
+          {
+            "identity": "rim",
+            "map": "CV.displayName"
+          },
+          {
+            "identity": "orim",
+            "map": "fhir:Coding.display rdfs:subPropertyOf dt:CDCoding.displayName"
+          }
+        ]
+      },
+      {
+        "id": "breastrad-BreastBodyLocation-model.code.userSelected",
+        "path": "breastrad-BreastBodyLocation-model.code.userSelected",
+        "short": "If this coding was chosen directly by the user",
+        "definition": "Indicates that this coding was chosen by a user directly - i.e. off a pick list of available items (codes or displays).",
+        "comment": "Amongst a set of alternatives, a directly chosen code is the most appropriate starting point for new translations. There is some ambiguity about what exactly 'directly chosen' implies, and trading partner agreement may be needed to clarify the use of this element and its consequences more completely.",
+        "requirements": "This has been identified as a clinical safety criterium - that this exact system/code pair was chosen explicitly, rather than inferred by the system based on some rules or language processing.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Coding.userSelected",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ],
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "Sometimes implied by being first"
+          },
+          {
+            "identity": "rim",
+            "map": "CD.codingRationale"
+          },
+          {
+            "identity": "orim",
+            "map": "fhir:Coding.userSelected fhir:mapsTo dt:CDCoding.codingRationale. fhir:Coding.userSelected fhir:hasMap fhir:Coding.userSelected.map. fhir:Coding.userSelected.map a fhir:Map;   fhir:target dt:CDCoding.codingRationale. fhir:Coding.userSelected\\#true a [     fhir:source \"true\";     fhir:target dt:CDCoding.codingRationale\\#O   ]"
+          }
+        ]
+      },
+      {
+        "id": "breastrad-BreastBodyLocation-model.laterality",
+        "path": "breastrad-BreastBodyLocation-model.laterality",
+        "short": "Body side of the body location, if needed to distinguish from a similar location on the other side of the body.",
+        "definition": "Body side of the body location, if needed to distinguish from a similar location on the other side of the body.\n\nThe laterality element is part of BodyLocation, a flexible structure that allows the location to be determined by a single code, or a code plus laterality and/or orientation. The body location can also be specified in relation to one or more body landmarks. SNOMED CT is used in all cases.\n\n* Code only: The code should include (precoordinate) laterality and/orientation to the degree necessary to completely specify the body location.\n* Code plus laterality and/or orientation: The basic code augmented by codes specifying the body side and/or anatomical orientation.\n* Relation to landmark: The location relative to a landmark is specified by:\n1. Establishing the location and type of landmark using a body site code and optional laterality/orientation, and\n2. Specifying the direction and distance from the landmark to the body location.\n\nNote that BodyLocation is a data type (a reusable structure), not a stand-alone entity. The concept is similar to how a postal address can apply to a person, location, or organization. This contrasts with FHIR's stand-alone BodySite (aka BodyStructure in r4) which 'is not ... intended for describing the type of anatomical location but rather a specific body site on a specific patient' (FHIR 3.5).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "breastrad-BreastBodyLocation-model.laterality",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "extensible",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/bodysite-laterality"
+          }
+        }
+      },
+      {
+        "id": "breastrad-BreastBodyLocation-model.anatomicalOrientation",
+        "path": "breastrad-BreastBodyLocation-model.anatomicalOrientation",
+        "short": "AnatomicalOrientation of the body location, if needed to distinguish from a similar location in another orientation.",
+        "definition": "AnatomicalOrientation of the body location, if needed to distinguish from a similar location in another orientation.\nThe orientation element is part of BodyLocation, a flexible structure that allows the location to be determined by a single code, or a code plus laterality and/or orientation. The body location can also be specified in relation to one or more body landmarks. SNOMED CT is used in all cases.\n\n* Code only: The code should include (precoordinate) laterality and/orientation to the degree necessary to completely specify the body location.\n* Code plus laterality and/or orientation: The basic code augmented by codes specifying the body side and/or anatomical orientation.\n* Relation to landmark: The location relative to a landmark is specified by:\n1. Establishing the location and type of landmark using a body site code and optional laterality/orientation, and\n2. Specifying the direction and distance from the landmark to the body location.\n\nNote that BodyLocation is a data type (a reusable structure), not a stand-alone entity. The concept is similar to how a postal address can apply to a person, location, or organization. This contrasts with FHIR's stand-alone BodySite (aka BodyStructure in r4) which 'is not ... intended for describing the type of anatomical location but rather a specific body site on a specific patient' (FHIR 3.5).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "breastrad-BreastBodyLocation-model.anatomicalOrientation",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "extensible",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/us/breast-radiology/obf/datatype/vs/AnatomicalOrientationVS"
+          }
+        }
+      },
+      {
+        "id": "breastrad-BreastBodyLocation-model.relationToLandmark",
+        "path": "breastrad-BreastBodyLocation-model.relationToLandmark",
+        "short": "The relationship between a landmark that helps determine a body location and the body location itself. The location relative to a landmark is specified by:",
+        "definition": "The relationship between a landmark that helps determine a body location and the body location itself. The location relative to a landmark is specified by:\n* Specifying the location and type of landmark using a body site code and optional laterality/orientation,\n* Specifying the direction from the landmark to the body location, and\n* Specifying the distance from the landmark to the body location.\n\nThe RelationToLandmark element is part of BodyLocation, a flexible structure that allows the location to be determined by a single code, or a code plus laterality and/or orientation. The body location can also be specified in relation to one or more body landmarks. SNOMED CT is used in all cases.\n\n* Code only: The code should include (precoordinate) laterality and/orientation to the degree necessary to completely specify the body location.\n* Code plus laterality and/or orientation: The basic code augmented by codes specifying the body side and/or anatomical orientation.\n* Relation to landmark: The location relative to a landmark is specified by:\n1. Establishing the location and type of landmark using a body site code and optional laterality/orientation, and\n2. Specifying the direction and distance from the landmark to the body location.\n\nNote that BodyLocation is a data type (a reusable structure), not a stand-alone entity. The concept is similar to how a postal address can apply to a person, location, or organization. This contrasts with FHIR's stand-alone BodySite (aka BodyStructure in r4) which 'is not ... intended for describing the type of anatomical location but rather a specific body site on a specific patient' (FHIR 3.5).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "breastrad-BreastBodyLocation-model.relationToLandmark",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-RelationToLandmark-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "breastrad-BreastBodyLocation-model.relationToLandmark.landmarkType",
+        "path": "breastrad-BreastBodyLocation-model.relationToLandmark.landmarkType",
+        "short": "The type of feature that constitutes the landmark, particularly if the landmark is an acquired body structure or physical object.",
+        "definition": "The type of feature that constitutes the landmark, particularly if the landmark is an acquired body structure or physical object.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "breastrad-BreastBodyLocation-model.relationToLandmark.landmarkType",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "breastrad-BreastBodyLocation-model.relationToLandmark.landmarkType.id",
+        "path": "breastrad-BreastBodyLocation-model.relationToLandmark.landmarkType.id",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "xml:id (or equivalent in JSON)",
+        "definition": "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Element.id",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "breastrad-BreastBodyLocation-model.relationToLandmark.landmarkType.extension",
+        "path": "breastrad-BreastBodyLocation-model.relationToLandmark.landmarkType.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "description": "Extensions are always sliced by (at least) url",
+          "rules": "open"
+        },
+        "short": "Additional Content defined by implementations",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Element.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "breastrad-BreastBodyLocation-model.relationToLandmark.landmarkType.system",
+        "path": "breastrad-BreastBodyLocation-model.relationToLandmark.landmarkType.system",
+        "short": "Identity of the terminology system",
+        "definition": "The identification of the code system that defines the meaning of the symbol in the code.",
+        "comment": "The URI may be an OID (urn:oid:...) or a UUID (urn:uuid:...).  OIDs and UUIDs SHALL be references to the HL7 OID registry. Otherwise, the URI should come from HL7's list of FHIR defined special URIs or it should de-reference to some definition that establish the system clearly and unambiguously.",
+        "requirements": "Need to be unambiguous about the source of the definition of the symbol.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Coding.system",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "fixedUri": "http://snomed.info/sct",
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "C*E.3"
+          },
+          {
+            "identity": "rim",
+            "map": "./codeSystem"
+          },
+          {
+            "identity": "orim",
+            "map": "fhir:Coding.system rdfs:subPropertyOf dt:CDCoding.codeSystem"
+          }
+        ]
+      },
+      {
+        "id": "breastrad-BreastBodyLocation-model.relationToLandmark.landmarkType.version",
+        "path": "breastrad-BreastBodyLocation-model.relationToLandmark.landmarkType.version",
+        "short": "Version of the system - if relevant",
+        "definition": "The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured. and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged.",
+        "comment": "Where the terminology does not clearly define what string should be used to identify code system versions, the recommendation is to use the date (expressed in FHIR date format) on which that version was officially published as the version date.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Coding.version",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "C*E.7"
+          },
+          {
+            "identity": "rim",
+            "map": "./codeSystemVersion"
+          },
+          {
+            "identity": "orim",
+            "map": "fhir:Coding.version rdfs:subPropertyOf dt:CDCoding.codeSystemVersion"
+          }
+        ]
+      },
+      {
+        "id": "breastrad-BreastBodyLocation-model.relationToLandmark.landmarkType.code",
+        "path": "breastrad-BreastBodyLocation-model.relationToLandmark.landmarkType.code",
+        "short": "Symbol in syntax defined by the system",
+        "definition": "A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination).",
+        "requirements": "Need to refer to a particular code in the system.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Coding.code",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "fixedCode": "361083003",
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "C*E.1"
+          },
+          {
+            "identity": "rim",
+            "map": "./code"
+          },
+          {
+            "identity": "orim",
+            "map": "fhir:Coding.code rdfs:subPropertyOf dt:CDCoding.code"
+          }
+        ]
+      },
+      {
+        "id": "breastrad-BreastBodyLocation-model.relationToLandmark.landmarkType.display",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
+            "valueBoolean": true
+          }
+        ],
+        "path": "breastrad-BreastBodyLocation-model.relationToLandmark.landmarkType.display",
+        "short": "Representation defined by the system",
+        "definition": "A representation of the meaning of the code in the system, following the rules of the system.",
+        "requirements": "Need to be able to carry a human-readable meaning of the code for readers that do not know  the system.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Coding.display",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "C*E.2 - but note this is not well followed"
+          },
+          {
+            "identity": "rim",
+            "map": "CV.displayName"
+          },
+          {
+            "identity": "orim",
+            "map": "fhir:Coding.display rdfs:subPropertyOf dt:CDCoding.displayName"
+          }
+        ]
+      },
+      {
+        "id": "breastrad-BreastBodyLocation-model.relationToLandmark.landmarkType.userSelected",
+        "path": "breastrad-BreastBodyLocation-model.relationToLandmark.landmarkType.userSelected",
+        "short": "If this coding was chosen directly by the user",
+        "definition": "Indicates that this coding was chosen by a user directly - i.e. off a pick list of available items (codes or displays).",
+        "comment": "Amongst a set of alternatives, a directly chosen code is the most appropriate starting point for new translations. There is some ambiguity about what exactly 'directly chosen' implies, and trading partner agreement may be needed to clarify the use of this element and its consequences more completely.",
+        "requirements": "This has been identified as a clinical safety criterium - that this exact system/code pair was chosen explicitly, rather than inferred by the system based on some rules or language processing.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Coding.userSelected",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ],
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "Sometimes implied by being first"
+          },
+          {
+            "identity": "rim",
+            "map": "CD.codingRationale"
+          },
+          {
+            "identity": "orim",
+            "map": "fhir:Coding.userSelected fhir:mapsTo dt:CDCoding.codingRationale. fhir:Coding.userSelected fhir:hasMap fhir:Coding.userSelected.map. fhir:Coding.userSelected.map a fhir:Map;   fhir:target dt:CDCoding.codingRationale. fhir:Coding.userSelected\\#true a [     fhir:source \"true\";     fhir:target dt:CDCoding.codingRationale\\#O   ]"
+          }
+        ]
+      },
+      {
+        "id": "breastrad-BreastBodyLocation-model.relationToLandmark.landmarkLocation",
+        "path": "breastrad-BreastBodyLocation-model.relationToLandmark.landmarkLocation",
+        "short": "The body location of the landmark, specified by a location code and optional laterality and orientation.",
+        "definition": "The body location of the landmark, specified by a location code and optional laterality and orientation.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "breastrad-BreastBodyLocation-model.relationToLandmark.landmarkLocation",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-LandmarkLocation-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "breastrad-BreastBodyLocation-model.relationToLandmark.landmarkLocation.code",
+        "path": "breastrad-BreastBodyLocation-model.relationToLandmark.landmarkLocation.code",
+        "short": "The main type identifier for a lab, procedure, condition, etc., usually drawn from a controlled vocabulary.",
+        "definition": "The main type identifier for a lab, procedure, condition, etc., usually drawn from a controlled vocabulary.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "breastrad-BreastBodyLocation-model.relationToLandmark.landmarkLocation.code",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "breastrad-BreastBodyLocation-model.relationToLandmark.landmarkLocation.laterality",
+        "path": "breastrad-BreastBodyLocation-model.relationToLandmark.landmarkLocation.laterality",
+        "short": "Body side of the body location, if needed to distinguish from a similar location on the other side of the body.",
+        "definition": "Body side of the body location, if needed to distinguish from a similar location on the other side of the body.\n\nThe laterality element is part of BodyLocation, a flexible structure that allows the location to be determined by a single code, or a code plus laterality and/or orientation. The body location can also be specified in relation to one or more body landmarks. SNOMED CT is used in all cases.\n\n* Code only: The code should include (precoordinate) laterality and/orientation to the degree necessary to completely specify the body location.\n* Code plus laterality and/or orientation: The basic code augmented by codes specifying the body side and/or anatomical orientation.\n* Relation to landmark: The location relative to a landmark is specified by:\n1. Establishing the location and type of landmark using a body site code and optional laterality/orientation, and\n2. Specifying the direction and distance from the landmark to the body location.\n\nNote that BodyLocation is a data type (a reusable structure), not a stand-alone entity. The concept is similar to how a postal address can apply to a person, location, or organization. This contrasts with FHIR's stand-alone BodySite (aka BodyStructure in r4) which 'is not ... intended for describing the type of anatomical location but rather a specific body site on a specific patient' (FHIR 3.5).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "breastrad-BreastBodyLocation-model.relationToLandmark.landmarkLocation.laterality",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "extensible",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/bodysite-laterality"
+          }
+        }
+      },
+      {
+        "id": "breastrad-BreastBodyLocation-model.relationToLandmark.landmarkLocation.anatomicalOrientation",
+        "path": "breastrad-BreastBodyLocation-model.relationToLandmark.landmarkLocation.anatomicalOrientation",
+        "short": "AnatomicalOrientation of the body location, if needed to distinguish from a similar location in another orientation.",
+        "definition": "AnatomicalOrientation of the body location, if needed to distinguish from a similar location in another orientation.\nThe orientation element is part of BodyLocation, a flexible structure that allows the location to be determined by a single code, or a code plus laterality and/or orientation. The body location can also be specified in relation to one or more body landmarks. SNOMED CT is used in all cases.\n\n* Code only: The code should include (precoordinate) laterality and/orientation to the degree necessary to completely specify the body location.\n* Code plus laterality and/or orientation: The basic code augmented by codes specifying the body side and/or anatomical orientation.\n* Relation to landmark: The location relative to a landmark is specified by:\n1. Establishing the location and type of landmark using a body site code and optional laterality/orientation, and\n2. Specifying the direction and distance from the landmark to the body location.\n\nNote that BodyLocation is a data type (a reusable structure), not a stand-alone entity. The concept is similar to how a postal address can apply to a person, location, or organization. This contrasts with FHIR's stand-alone BodySite (aka BodyStructure in r4) which 'is not ... intended for describing the type of anatomical location but rather a specific body site on a specific patient' (FHIR 3.5).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "breastrad-BreastBodyLocation-model.relationToLandmark.landmarkLocation.anatomicalOrientation",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "extensible",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/us/breast-radiology/obf/datatype/vs/AnatomicalOrientationVS"
+          }
+        }
+      },
+      {
+        "id": "breastrad-BreastBodyLocation-model.relationToLandmark.landmarkToBodyLocationDirection",
+        "path": "breastrad-BreastBodyLocation-model.relationToLandmark.landmarkToBodyLocationDirection",
+        "short": "The direction from the landmark to the body location of interest, given as a clockface direction or anatomical direction.",
+        "definition": "The direction from the landmark to the body location of interest, given as a clockface direction or anatomical direction.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "breastrad-BreastBodyLocation-model.relationToLandmark.landmarkToBodyLocationDirection",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/us/breast-radiology/obf/datatype/vs/ClockFaceDirectionVS"
+          }
+        }
+      },
+      {
+        "id": "breastrad-BreastBodyLocation-model.relationToLandmark.landmarkToBodyLocationDistance",
+        "path": "breastrad-BreastBodyLocation-model.relationToLandmark.landmarkToBodyLocationDistance",
+        "short": "How far the body location of interest is from the given landmark.",
+        "definition": "How far the body location of interest is from the given landmark.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "breastrad-BreastBodyLocation-model.relationToLandmark.landmarkToBodyLocationDistance",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-Quantity-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "breastrad-BreastBodyLocation-model.relationToLandmark.landmarkToBodyLocationDistance.number",
+        "path": "breastrad-BreastBodyLocation-model.relationToLandmark.landmarkToBodyLocationDistance.number",
+        "short": "A decimal value.",
+        "definition": "A decimal value.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "breastrad-BreastBodyLocation-model.relationToLandmark.landmarkToBodyLocationDistance.number",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "decimal"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "breastrad-BreastBodyLocation-model.relationToLandmark.landmarkToBodyLocationDistance.comparator",
+        "path": "breastrad-BreastBodyLocation-model.relationToLandmark.landmarkToBodyLocationDistance.comparator",
+        "short": "A code indicated if the value represents an upper or lower bound",
+        "definition": "A code indicated if the value represents an upper or lower bound",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "breastrad-BreastBodyLocation-model.relationToLandmark.landmarkToBodyLocationDistance.comparator",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/quantity-comparator"
+          }
+        }
+      },
+      {
+        "id": "breastrad-BreastBodyLocation-model.relationToLandmark.landmarkToBodyLocationDistance.units",
+        "path": "breastrad-BreastBodyLocation-model.relationToLandmark.landmarkToBodyLocationDistance.units",
+        "short": "The unit of measure of the quantity.",
+        "definition": "The unit of measure of the quantity.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "breastrad-BreastBodyLocation-model.relationToLandmark.landmarkToBodyLocationDistance.units",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/us/breast-radiology/obf/datatype/vs/UnitsOfLengthVS"
+          }
+        }
+      },
+      {
+        "id": "breastrad-BreastBodyLocation-model.breastDepth",
+        "path": "breastrad-BreastBodyLocation-model.breastDepth",
+        "short": "Depth in breast of abnormality.",
+        "definition": "Depth in breast of abnormality.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "breastrad-BreastBodyLocation-model.breastDepth",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/DepthVS"
+          }
+        }
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "breastrad-BreastBodyLocation-model",
+        "path": "breastrad-BreastBodyLocation-model",
+        "definition": "Location of the breast abnormality.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "breastrad-BreastBodyLocation-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "breastrad-BreastBodyLocation-model.code",
+        "path": "breastrad-BreastBodyLocation-model.code",
+        "short": "The main type identifier for a lab, procedure, condition, etc., usually drawn from a controlled vocabulary.",
+        "definition": "The main type identifier for a lab, procedure, condition, etc., usually drawn from a controlled vocabulary.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "breastrad-BreastBodyLocation-model.code",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "breastrad-BreastBodyLocation-model.code.id",
+        "path": "breastrad-BreastBodyLocation-model.code.id",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "xml:id (or equivalent in JSON)",
+        "definition": "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Element.id",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "breastrad-BreastBodyLocation-model.code.extension",
+        "path": "breastrad-BreastBodyLocation-model.code.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "description": "Extensions are always sliced by (at least) url",
+          "rules": "open"
+        },
+        "short": "Additional Content defined by implementations",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Element.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "breastrad-BreastBodyLocation-model.code.system",
+        "path": "breastrad-BreastBodyLocation-model.code.system",
+        "short": "Identity of the terminology system",
+        "definition": "The identification of the code system that defines the meaning of the symbol in the code.",
+        "comment": "The URI may be an OID (urn:oid:...) or a UUID (urn:uuid:...).  OIDs and UUIDs SHALL be references to the HL7 OID registry. Otherwise, the URI should come from HL7's list of FHIR defined special URIs or it should de-reference to some definition that establish the system clearly and unambiguously.",
+        "requirements": "Need to be unambiguous about the source of the definition of the symbol.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Coding.system",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "fixedUri": "http://snomed.info/sct",
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "C*E.3"
+          },
+          {
+            "identity": "rim",
+            "map": "./codeSystem"
+          },
+          {
+            "identity": "orim",
+            "map": "fhir:Coding.system rdfs:subPropertyOf dt:CDCoding.codeSystem"
+          }
+        ]
+      },
+      {
+        "id": "breastrad-BreastBodyLocation-model.code.version",
+        "path": "breastrad-BreastBodyLocation-model.code.version",
+        "short": "Version of the system - if relevant",
+        "definition": "The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured. and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged.",
+        "comment": "Where the terminology does not clearly define what string should be used to identify code system versions, the recommendation is to use the date (expressed in FHIR date format) on which that version was officially published as the version date.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Coding.version",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "C*E.7"
+          },
+          {
+            "identity": "rim",
+            "map": "./codeSystemVersion"
+          },
+          {
+            "identity": "orim",
+            "map": "fhir:Coding.version rdfs:subPropertyOf dt:CDCoding.codeSystemVersion"
+          }
+        ]
+      },
+      {
+        "id": "breastrad-BreastBodyLocation-model.code.code",
+        "path": "breastrad-BreastBodyLocation-model.code.code",
+        "short": "Symbol in syntax defined by the system",
+        "definition": "A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination).",
+        "requirements": "Need to refer to a particular code in the system.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Coding.code",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "fixedCode": "76752008",
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "C*E.1"
+          },
+          {
+            "identity": "rim",
+            "map": "./code"
+          },
+          {
+            "identity": "orim",
+            "map": "fhir:Coding.code rdfs:subPropertyOf dt:CDCoding.code"
+          }
+        ]
+      },
+      {
+        "id": "breastrad-BreastBodyLocation-model.code.display",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
+            "valueBoolean": true
+          }
+        ],
+        "path": "breastrad-BreastBodyLocation-model.code.display",
+        "short": "Representation defined by the system",
+        "definition": "A representation of the meaning of the code in the system, following the rules of the system.",
+        "requirements": "Need to be able to carry a human-readable meaning of the code for readers that do not know  the system.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Coding.display",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "C*E.2 - but note this is not well followed"
+          },
+          {
+            "identity": "rim",
+            "map": "CV.displayName"
+          },
+          {
+            "identity": "orim",
+            "map": "fhir:Coding.display rdfs:subPropertyOf dt:CDCoding.displayName"
+          }
+        ]
+      },
+      {
+        "id": "breastrad-BreastBodyLocation-model.code.userSelected",
+        "path": "breastrad-BreastBodyLocation-model.code.userSelected",
+        "short": "If this coding was chosen directly by the user",
+        "definition": "Indicates that this coding was chosen by a user directly - i.e. off a pick list of available items (codes or displays).",
+        "comment": "Amongst a set of alternatives, a directly chosen code is the most appropriate starting point for new translations. There is some ambiguity about what exactly 'directly chosen' implies, and trading partner agreement may be needed to clarify the use of this element and its consequences more completely.",
+        "requirements": "This has been identified as a clinical safety criterium - that this exact system/code pair was chosen explicitly, rather than inferred by the system based on some rules or language processing.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Coding.userSelected",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ],
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "Sometimes implied by being first"
+          },
+          {
+            "identity": "rim",
+            "map": "CD.codingRationale"
+          },
+          {
+            "identity": "orim",
+            "map": "fhir:Coding.userSelected fhir:mapsTo dt:CDCoding.codingRationale. fhir:Coding.userSelected fhir:hasMap fhir:Coding.userSelected.map. fhir:Coding.userSelected.map a fhir:Map;   fhir:target dt:CDCoding.codingRationale. fhir:Coding.userSelected\\#true a [     fhir:source \"true\";     fhir:target dt:CDCoding.codingRationale\\#O   ]"
+          }
+        ]
+      },
+      {
+        "id": "breastrad-BreastBodyLocation-model.laterality",
+        "path": "breastrad-BreastBodyLocation-model.laterality",
+        "short": "Body side of the body location, if needed to distinguish from a similar location on the other side of the body.",
+        "definition": "Body side of the body location, if needed to distinguish from a similar location on the other side of the body.\n\nThe laterality element is part of BodyLocation, a flexible structure that allows the location to be determined by a single code, or a code plus laterality and/or orientation. The body location can also be specified in relation to one or more body landmarks. SNOMED CT is used in all cases.\n\n* Code only: The code should include (precoordinate) laterality and/orientation to the degree necessary to completely specify the body location.\n* Code plus laterality and/or orientation: The basic code augmented by codes specifying the body side and/or anatomical orientation.\n* Relation to landmark: The location relative to a landmark is specified by:\n1. Establishing the location and type of landmark using a body site code and optional laterality/orientation, and\n2. Specifying the direction and distance from the landmark to the body location.\n\nNote that BodyLocation is a data type (a reusable structure), not a stand-alone entity. The concept is similar to how a postal address can apply to a person, location, or organization. This contrasts with FHIR's stand-alone BodySite (aka BodyStructure in r4) which 'is not ... intended for describing the type of anatomical location but rather a specific body site on a specific patient' (FHIR 3.5).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "breastrad-BreastBodyLocation-model.laterality",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "extensible",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/bodysite-laterality"
+          }
+        }
+      },
+      {
+        "id": "breastrad-BreastBodyLocation-model.anatomicalOrientation",
+        "path": "breastrad-BreastBodyLocation-model.anatomicalOrientation",
+        "short": "AnatomicalOrientation of the body location, if needed to distinguish from a similar location in another orientation.",
+        "definition": "AnatomicalOrientation of the body location, if needed to distinguish from a similar location in another orientation.\nThe orientation element is part of BodyLocation, a flexible structure that allows the location to be determined by a single code, or a code plus laterality and/or orientation. The body location can also be specified in relation to one or more body landmarks. SNOMED CT is used in all cases.\n\n* Code only: The code should include (precoordinate) laterality and/orientation to the degree necessary to completely specify the body location.\n* Code plus laterality and/or orientation: The basic code augmented by codes specifying the body side and/or anatomical orientation.\n* Relation to landmark: The location relative to a landmark is specified by:\n1. Establishing the location and type of landmark using a body site code and optional laterality/orientation, and\n2. Specifying the direction and distance from the landmark to the body location.\n\nNote that BodyLocation is a data type (a reusable structure), not a stand-alone entity. The concept is similar to how a postal address can apply to a person, location, or organization. This contrasts with FHIR's stand-alone BodySite (aka BodyStructure in r4) which 'is not ... intended for describing the type of anatomical location but rather a specific body site on a specific patient' (FHIR 3.5).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "breastrad-BreastBodyLocation-model.anatomicalOrientation",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "extensible",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/us/breast-radiology/obf/datatype/vs/AnatomicalOrientationVS"
+          }
+        }
+      },
+      {
+        "id": "breastrad-BreastBodyLocation-model.relationToLandmark",
+        "path": "breastrad-BreastBodyLocation-model.relationToLandmark",
+        "short": "The relationship between a landmark that helps determine a body location and the body location itself. The location relative to a landmark is specified by:",
+        "definition": "The relationship between a landmark that helps determine a body location and the body location itself. The location relative to a landmark is specified by:\n* Specifying the location and type of landmark using a body site code and optional laterality/orientation,\n* Specifying the direction from the landmark to the body location, and\n* Specifying the distance from the landmark to the body location.\n\nThe RelationToLandmark element is part of BodyLocation, a flexible structure that allows the location to be determined by a single code, or a code plus laterality and/or orientation. The body location can also be specified in relation to one or more body landmarks. SNOMED CT is used in all cases.\n\n* Code only: The code should include (precoordinate) laterality and/orientation to the degree necessary to completely specify the body location.\n* Code plus laterality and/or orientation: The basic code augmented by codes specifying the body side and/or anatomical orientation.\n* Relation to landmark: The location relative to a landmark is specified by:\n1. Establishing the location and type of landmark using a body site code and optional laterality/orientation, and\n2. Specifying the direction and distance from the landmark to the body location.\n\nNote that BodyLocation is a data type (a reusable structure), not a stand-alone entity. The concept is similar to how a postal address can apply to a person, location, or organization. This contrasts with FHIR's stand-alone BodySite (aka BodyStructure in r4) which 'is not ... intended for describing the type of anatomical location but rather a specific body site on a specific patient' (FHIR 3.5).",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "breastrad-BreastBodyLocation-model.relationToLandmark",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-RelationToLandmark-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "breastrad-BreastBodyLocation-model.relationToLandmark.landmarkType",
+        "path": "breastrad-BreastBodyLocation-model.relationToLandmark.landmarkType",
+        "short": "The type of feature that constitutes the landmark, particularly if the landmark is an acquired body structure or physical object.",
+        "definition": "The type of feature that constitutes the landmark, particularly if the landmark is an acquired body structure or physical object.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "breastrad-BreastBodyLocation-model.relationToLandmark.landmarkType",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "breastrad-BreastBodyLocation-model.relationToLandmark.landmarkType.id",
+        "path": "breastrad-BreastBodyLocation-model.relationToLandmark.landmarkType.id",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "xml:id (or equivalent in JSON)",
+        "definition": "unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Element.id",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "breastrad-BreastBodyLocation-model.relationToLandmark.landmarkType.extension",
+        "path": "breastrad-BreastBodyLocation-model.relationToLandmark.landmarkType.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "description": "Extensions are always sliced by (at least) url",
+          "rules": "open"
+        },
+        "short": "Additional Content defined by implementations",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Element.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "breastrad-BreastBodyLocation-model.relationToLandmark.landmarkType.system",
+        "path": "breastrad-BreastBodyLocation-model.relationToLandmark.landmarkType.system",
+        "short": "Identity of the terminology system",
+        "definition": "The identification of the code system that defines the meaning of the symbol in the code.",
+        "comment": "The URI may be an OID (urn:oid:...) or a UUID (urn:uuid:...).  OIDs and UUIDs SHALL be references to the HL7 OID registry. Otherwise, the URI should come from HL7's list of FHIR defined special URIs or it should de-reference to some definition that establish the system clearly and unambiguously.",
+        "requirements": "Need to be unambiguous about the source of the definition of the symbol.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Coding.system",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "fixedUri": "http://snomed.info/sct",
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "C*E.3"
+          },
+          {
+            "identity": "rim",
+            "map": "./codeSystem"
+          },
+          {
+            "identity": "orim",
+            "map": "fhir:Coding.system rdfs:subPropertyOf dt:CDCoding.codeSystem"
+          }
+        ]
+      },
+      {
+        "id": "breastrad-BreastBodyLocation-model.relationToLandmark.landmarkType.version",
+        "path": "breastrad-BreastBodyLocation-model.relationToLandmark.landmarkType.version",
+        "short": "Version of the system - if relevant",
+        "definition": "The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured. and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged.",
+        "comment": "Where the terminology does not clearly define what string should be used to identify code system versions, the recommendation is to use the date (expressed in FHIR date format) on which that version was officially published as the version date.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Coding.version",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "C*E.7"
+          },
+          {
+            "identity": "rim",
+            "map": "./codeSystemVersion"
+          },
+          {
+            "identity": "orim",
+            "map": "fhir:Coding.version rdfs:subPropertyOf dt:CDCoding.codeSystemVersion"
+          }
+        ]
+      },
+      {
+        "id": "breastrad-BreastBodyLocation-model.relationToLandmark.landmarkType.code",
+        "path": "breastrad-BreastBodyLocation-model.relationToLandmark.landmarkType.code",
+        "short": "Symbol in syntax defined by the system",
+        "definition": "A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination).",
+        "requirements": "Need to refer to a particular code in the system.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Coding.code",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "fixedCode": "361083003",
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "C*E.1"
+          },
+          {
+            "identity": "rim",
+            "map": "./code"
+          },
+          {
+            "identity": "orim",
+            "map": "fhir:Coding.code rdfs:subPropertyOf dt:CDCoding.code"
+          }
+        ]
+      },
+      {
+        "id": "breastrad-BreastBodyLocation-model.relationToLandmark.landmarkType.display",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
+            "valueBoolean": true
+          }
+        ],
+        "path": "breastrad-BreastBodyLocation-model.relationToLandmark.landmarkType.display",
+        "short": "Representation defined by the system",
+        "definition": "A representation of the meaning of the code in the system, following the rules of the system.",
+        "requirements": "Need to be able to carry a human-readable meaning of the code for readers that do not know  the system.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Coding.display",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "C*E.2 - but note this is not well followed"
+          },
+          {
+            "identity": "rim",
+            "map": "CV.displayName"
+          },
+          {
+            "identity": "orim",
+            "map": "fhir:Coding.display rdfs:subPropertyOf dt:CDCoding.displayName"
+          }
+        ]
+      },
+      {
+        "id": "breastrad-BreastBodyLocation-model.relationToLandmark.landmarkType.userSelected",
+        "path": "breastrad-BreastBodyLocation-model.relationToLandmark.landmarkType.userSelected",
+        "short": "If this coding was chosen directly by the user",
+        "definition": "Indicates that this coding was chosen by a user directly - i.e. off a pick list of available items (codes or displays).",
+        "comment": "Amongst a set of alternatives, a directly chosen code is the most appropriate starting point for new translations. There is some ambiguity about what exactly 'directly chosen' implies, and trading partner agreement may be needed to clarify the use of this element and its consequences more completely.",
+        "requirements": "This has been identified as a clinical safety criterium - that this exact system/code pair was chosen explicitly, rather than inferred by the system based on some rules or language processing.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Coding.userSelected",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ],
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "Sometimes implied by being first"
+          },
+          {
+            "identity": "rim",
+            "map": "CD.codingRationale"
+          },
+          {
+            "identity": "orim",
+            "map": "fhir:Coding.userSelected fhir:mapsTo dt:CDCoding.codingRationale. fhir:Coding.userSelected fhir:hasMap fhir:Coding.userSelected.map. fhir:Coding.userSelected.map a fhir:Map;   fhir:target dt:CDCoding.codingRationale. fhir:Coding.userSelected\\#true a [     fhir:source \"true\";     fhir:target dt:CDCoding.codingRationale\\#O   ]"
+          }
+        ]
+      },
+      {
+        "id": "breastrad-BreastBodyLocation-model.relationToLandmark.landmarkLocation",
+        "path": "breastrad-BreastBodyLocation-model.relationToLandmark.landmarkLocation",
+        "short": "The body location of the landmark, specified by a location code and optional laterality and orientation.",
+        "definition": "The body location of the landmark, specified by a location code and optional laterality and orientation.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "breastrad-BreastBodyLocation-model.relationToLandmark.landmarkLocation",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-LandmarkLocation-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "breastrad-BreastBodyLocation-model.relationToLandmark.landmarkLocation.code",
+        "path": "breastrad-BreastBodyLocation-model.relationToLandmark.landmarkLocation.code",
+        "short": "The main type identifier for a lab, procedure, condition, etc., usually drawn from a controlled vocabulary.",
+        "definition": "The main type identifier for a lab, procedure, condition, etc., usually drawn from a controlled vocabulary.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "breastrad-BreastBodyLocation-model.relationToLandmark.landmarkLocation.code",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "breastrad-BreastBodyLocation-model.relationToLandmark.landmarkLocation.laterality",
+        "path": "breastrad-BreastBodyLocation-model.relationToLandmark.landmarkLocation.laterality",
+        "short": "Body side of the body location, if needed to distinguish from a similar location on the other side of the body.",
+        "definition": "Body side of the body location, if needed to distinguish from a similar location on the other side of the body.\n\nThe laterality element is part of BodyLocation, a flexible structure that allows the location to be determined by a single code, or a code plus laterality and/or orientation. The body location can also be specified in relation to one or more body landmarks. SNOMED CT is used in all cases.\n\n* Code only: The code should include (precoordinate) laterality and/orientation to the degree necessary to completely specify the body location.\n* Code plus laterality and/or orientation: The basic code augmented by codes specifying the body side and/or anatomical orientation.\n* Relation to landmark: The location relative to a landmark is specified by:\n1. Establishing the location and type of landmark using a body site code and optional laterality/orientation, and\n2. Specifying the direction and distance from the landmark to the body location.\n\nNote that BodyLocation is a data type (a reusable structure), not a stand-alone entity. The concept is similar to how a postal address can apply to a person, location, or organization. This contrasts with FHIR's stand-alone BodySite (aka BodyStructure in r4) which 'is not ... intended for describing the type of anatomical location but rather a specific body site on a specific patient' (FHIR 3.5).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "breastrad-BreastBodyLocation-model.relationToLandmark.landmarkLocation.laterality",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "extensible",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/bodysite-laterality"
+          }
+        }
+      },
+      {
+        "id": "breastrad-BreastBodyLocation-model.relationToLandmark.landmarkLocation.anatomicalOrientation",
+        "path": "breastrad-BreastBodyLocation-model.relationToLandmark.landmarkLocation.anatomicalOrientation",
+        "short": "AnatomicalOrientation of the body location, if needed to distinguish from a similar location in another orientation.",
+        "definition": "AnatomicalOrientation of the body location, if needed to distinguish from a similar location in another orientation.\nThe orientation element is part of BodyLocation, a flexible structure that allows the location to be determined by a single code, or a code plus laterality and/or orientation. The body location can also be specified in relation to one or more body landmarks. SNOMED CT is used in all cases.\n\n* Code only: The code should include (precoordinate) laterality and/orientation to the degree necessary to completely specify the body location.\n* Code plus laterality and/or orientation: The basic code augmented by codes specifying the body side and/or anatomical orientation.\n* Relation to landmark: The location relative to a landmark is specified by:\n1. Establishing the location and type of landmark using a body site code and optional laterality/orientation, and\n2. Specifying the direction and distance from the landmark to the body location.\n\nNote that BodyLocation is a data type (a reusable structure), not a stand-alone entity. The concept is similar to how a postal address can apply to a person, location, or organization. This contrasts with FHIR's stand-alone BodySite (aka BodyStructure in r4) which 'is not ... intended for describing the type of anatomical location but rather a specific body site on a specific patient' (FHIR 3.5).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "breastrad-BreastBodyLocation-model.relationToLandmark.landmarkLocation.anatomicalOrientation",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "extensible",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/us/breast-radiology/obf/datatype/vs/AnatomicalOrientationVS"
+          }
+        }
+      },
+      {
+        "id": "breastrad-BreastBodyLocation-model.relationToLandmark.landmarkToBodyLocationDirection",
+        "path": "breastrad-BreastBodyLocation-model.relationToLandmark.landmarkToBodyLocationDirection",
+        "short": "The direction from the landmark to the body location of interest, given as a clockface direction or anatomical direction.",
+        "definition": "The direction from the landmark to the body location of interest, given as a clockface direction or anatomical direction.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "breastrad-BreastBodyLocation-model.relationToLandmark.landmarkToBodyLocationDirection",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/us/breast-radiology/obf/datatype/vs/ClockFaceDirectionVS"
+          }
+        }
+      },
+      {
+        "id": "breastrad-BreastBodyLocation-model.relationToLandmark.landmarkToBodyLocationDistance",
+        "path": "breastrad-BreastBodyLocation-model.relationToLandmark.landmarkToBodyLocationDistance",
+        "short": "How far the body location of interest is from the given landmark.",
+        "definition": "How far the body location of interest is from the given landmark.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "breastrad-BreastBodyLocation-model.relationToLandmark.landmarkToBodyLocationDistance",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-Quantity-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "breastrad-BreastBodyLocation-model.relationToLandmark.landmarkToBodyLocationDistance.number",
+        "path": "breastrad-BreastBodyLocation-model.relationToLandmark.landmarkToBodyLocationDistance.number",
+        "short": "A decimal value.",
+        "definition": "A decimal value.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "breastrad-BreastBodyLocation-model.relationToLandmark.landmarkToBodyLocationDistance.number",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "decimal"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "breastrad-BreastBodyLocation-model.relationToLandmark.landmarkToBodyLocationDistance.comparator",
+        "path": "breastrad-BreastBodyLocation-model.relationToLandmark.landmarkToBodyLocationDistance.comparator",
+        "short": "A code indicated if the value represents an upper or lower bound",
+        "definition": "A code indicated if the value represents an upper or lower bound",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "breastrad-BreastBodyLocation-model.relationToLandmark.landmarkToBodyLocationDistance.comparator",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/quantity-comparator"
+          }
+        }
+      },
+      {
+        "id": "breastrad-BreastBodyLocation-model.relationToLandmark.landmarkToBodyLocationDistance.units",
+        "path": "breastrad-BreastBodyLocation-model.relationToLandmark.landmarkToBodyLocationDistance.units",
+        "short": "The unit of measure of the quantity.",
+        "definition": "The unit of measure of the quantity.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "breastrad-BreastBodyLocation-model.relationToLandmark.landmarkToBodyLocationDistance.units",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/us/breast-radiology/obf/datatype/vs/UnitsOfLengthVS"
+          }
+        }
+      },
+      {
+        "id": "breastrad-BreastBodyLocation-model.breastDepth",
+        "path": "breastrad-BreastBodyLocation-model.breastDepth",
+        "short": "Depth in breast of abnormality.",
+        "definition": "Depth in breast of abnormality.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "breastrad-BreastBodyLocation-model.breastDepth",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/DepthVS"
+          }
+        }
+      }
+    ]
+  }
+}

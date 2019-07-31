@@ -1,0 +1,128 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "obf-GroupCharacteristicValue-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>GroupCharacteristicValue Logical Model</b></p>\n  <p>The value or range of the characteristic.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-GroupCharacteristicValue-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/breast-radiology",
+      "value": "obf.GroupCharacteristicValue"
+    }
+  ],
+  "name": "GroupCharacteristicValue",
+  "title": "obf-GroupCharacteristicValue",
+  "status": "draft",
+  "date": "2019-07-30",
+  "publisher": "Hl7",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://BreastRadReport.com"
+        }
+      ]
+    }
+  ],
+  "description": "The value or range of the characteristic.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "obf-GroupCharacteristicValue-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "obf-GroupCharacteristicValue-model",
+        "path": "obf-GroupCharacteristicValue-model",
+        "definition": "The value or range of the characteristic.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-GroupCharacteristicValue-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-GroupCharacteristicValue-model.value[x]",
+        "path": "obf-GroupCharacteristicValue-model.value[x]",
+        "short": "Choice of types representing the value or range of the characteristic.",
+        "definition": "Choice of types representing the value or range of the characteristic.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-GroupCharacteristicValue-model.value[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "boolean"
+          },
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-Quantity-model"
+          },
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-Range-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "obf-GroupCharacteristicValue-model",
+        "path": "obf-GroupCharacteristicValue-model",
+        "definition": "The value or range of the characteristic.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-GroupCharacteristicValue-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-GroupCharacteristicValue-model.value[x]",
+        "path": "obf-GroupCharacteristicValue-model.value[x]",
+        "short": "Choice of types representing the value or range of the characteristic.",
+        "definition": "Choice of types representing the value or range of the characteristic.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-GroupCharacteristicValue-model.value[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "boolean"
+          },
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-Quantity-model"
+          },
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-Range-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

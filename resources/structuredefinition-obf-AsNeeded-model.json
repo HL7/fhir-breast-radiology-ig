@@ -1,0 +1,122 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "obf-AsNeeded-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>AsNeeded Logical Model</b></p>\n  <p>Preconditions for service, either &#039;true&#039; indicating to be performed if needed, or a code indicating the pre-condition for performing the service. For example &#039;pain&#039;, &#039;on flare-up&#039;, etc.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-AsNeeded-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/breast-radiology",
+      "value": "obf.AsNeeded"
+    }
+  ],
+  "name": "AsNeeded",
+  "title": "obf-AsNeeded",
+  "status": "draft",
+  "date": "2019-07-30",
+  "publisher": "Hl7",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://BreastRadReport.com"
+        }
+      ]
+    }
+  ],
+  "description": "Preconditions for service, either 'true' indicating to be performed if needed, or a code indicating the pre-condition for performing the service. For example 'pain', 'on flare-up', etc.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "obf-AsNeeded-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "obf-AsNeeded-model",
+        "path": "obf-AsNeeded-model",
+        "definition": "Preconditions for service, either 'true' indicating to be performed if needed, or a code indicating the pre-condition for performing the service. For example 'pain', 'on flare-up', etc.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-AsNeeded-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-AsNeeded-model.value[x]",
+        "path": "obf-AsNeeded-model.value[x]",
+        "short": "Boolean or concept representing preconditions for service, either 'true' indicating to be performed if needed, or a code indicating the pre-condition for performing the service. For example 'pain', 'on flare-up', etc.",
+        "definition": "Boolean or concept representing preconditions for service, either 'true' indicating to be performed if needed, or a code indicating the pre-condition for performing the service. For example 'pain', 'on flare-up', etc.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-AsNeeded-model.value[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "boolean"
+          },
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "obf-AsNeeded-model",
+        "path": "obf-AsNeeded-model",
+        "definition": "Preconditions for service, either 'true' indicating to be performed if needed, or a code indicating the pre-condition for performing the service. For example 'pain', 'on flare-up', etc.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-AsNeeded-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-AsNeeded-model.value[x]",
+        "path": "obf-AsNeeded-model.value[x]",
+        "short": "Boolean or concept representing preconditions for service, either 'true' indicating to be performed if needed, or a code indicating the pre-condition for performing the service. For example 'pain', 'on flare-up', etc.",
+        "definition": "Boolean or concept representing preconditions for service, either 'true' indicating to be performed if needed, or a code indicating the pre-condition for performing the service. For example 'pain', 'on flare-up', etc.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-AsNeeded-model.value[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "boolean"
+          },
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

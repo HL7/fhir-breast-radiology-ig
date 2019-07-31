@@ -1,0 +1,292 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "obf-MaterialUsedReference-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>MaterialUsedReference Logical Model</b></p>\n  <p>Identifies medications, devices and any other substance used as part of the procedure.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-MaterialUsedReference-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/breast-radiology",
+      "value": "obf.MaterialUsedReference"
+    }
+  ],
+  "name": "MaterialUsedReference",
+  "title": "obf-MaterialUsedReference",
+  "status": "draft",
+  "date": "2019-07-30",
+  "publisher": "Hl7",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://BreastRadReport.com"
+        }
+      ]
+    }
+  ],
+  "description": "Identifies medications, devices and any other substance used as part of the procedure.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "obf-MaterialUsedReference-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "obf-MaterialUsedReference-model",
+        "path": "obf-MaterialUsedReference-model",
+        "definition": "Identifies medications, devices and any other substance used as part of the procedure.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-MaterialUsedReference-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-MaterialUsedReference-model.value[x]",
+        "path": "obf-MaterialUsedReference-model.value[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "short": "Choice of types representing identifies medications, devices and any other substance used as part of the procedure.",
+        "definition": "Choice of types representing identifies medications, devices and any other substance used as part of the procedure.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-MaterialUsedReference-model.value[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Device-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Medication-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Substance-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-MaterialUsedReference-model.valueObf-Substance-model:Substance",
+        "path": "obf-MaterialUsedReference-model.valueObf-Substance-model",
+        "sliceName": "Substance",
+        "short": "Any matter of defined composition that has discrete existence, whose origin may be biological, mineral or chemical.",
+        "definition": "Any matter of defined composition that has discrete existence, whose origin may be biological, mineral or chemical.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-MaterialUsedReference-model.value[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Substance-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-MaterialUsedReference-model.valueObf-Medication-model:Medication",
+        "path": "obf-MaterialUsedReference-model.valueObf-Medication-model",
+        "sliceName": "Medication",
+        "short": "A type of prescription drug or over-the-counter drug that is used to prevent, treat, or relieve symptoms of a disease or abnormal condition, but excluding vaccines.",
+        "definition": "A type of prescription drug or over-the-counter drug that is used to prevent, treat, or relieve symptoms of a disease or abnormal condition, but excluding vaccines.\nIn FHIR DSTU2 and STU3, Medication lacks the identifier attribute, which is included in SHR as an extension.\nDSTU2 lacks the status attribute, which is required by US-Core.\nBatch is 0..1 in FHIR R4, and accordingly is restricted here.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-MaterialUsedReference-model.value[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Medication-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-MaterialUsedReference-model.valueObf-Device-model:Device",
+        "path": "obf-MaterialUsedReference-model.valueObf-Device-model",
+        "sliceName": "Device",
+        "short": "A specific durable physical device used in diagnosis or treatment. The value is the coding for a type of device, for example, a CPAP machine. The same device might be used on multiple patients.",
+        "definition": "A specific durable physical device used in diagnosis or treatment. The value is the coding for a type of device, for example, a CPAP machine. The same device might be used on multiple patients.\nDevice status cannot be reconciled between Argonaut and US-Core, each having different required value sets.\nDevice type has extensible mappings to different value sets in Argonaut and US-Core, however both value sets have identical SNOMED content (descendants of 49062001 (Device). We adopt the US-Core value set, which is allowable because the binding is extensible.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-MaterialUsedReference-model.value[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Device-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "obf-MaterialUsedReference-model",
+        "path": "obf-MaterialUsedReference-model",
+        "definition": "Identifies medications, devices and any other substance used as part of the procedure.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-MaterialUsedReference-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-MaterialUsedReference-model.value[x]",
+        "path": "obf-MaterialUsedReference-model.value[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "short": "Choice of types representing identifies medications, devices and any other substance used as part of the procedure.",
+        "definition": "Choice of types representing identifies medications, devices and any other substance used as part of the procedure.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-MaterialUsedReference-model.value[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Device-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Medication-model"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Substance-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-MaterialUsedReference-model.valueObf-Substance-model:Substance",
+        "path": "obf-MaterialUsedReference-model.valueObf-Substance-model",
+        "sliceName": "Substance",
+        "short": "Any matter of defined composition that has discrete existence, whose origin may be biological, mineral or chemical.",
+        "definition": "Any matter of defined composition that has discrete existence, whose origin may be biological, mineral or chemical.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-MaterialUsedReference-model.value[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Substance-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-MaterialUsedReference-model.valueObf-Medication-model:Medication",
+        "path": "obf-MaterialUsedReference-model.valueObf-Medication-model",
+        "sliceName": "Medication",
+        "short": "A type of prescription drug or over-the-counter drug that is used to prevent, treat, or relieve symptoms of a disease or abnormal condition, but excluding vaccines.",
+        "definition": "A type of prescription drug or over-the-counter drug that is used to prevent, treat, or relieve symptoms of a disease or abnormal condition, but excluding vaccines.\nIn FHIR DSTU2 and STU3, Medication lacks the identifier attribute, which is included in SHR as an extension.\nDSTU2 lacks the status attribute, which is required by US-Core.\nBatch is 0..1 in FHIR R4, and accordingly is restricted here.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-MaterialUsedReference-model.value[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Medication-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-MaterialUsedReference-model.valueObf-Device-model:Device",
+        "path": "obf-MaterialUsedReference-model.valueObf-Device-model",
+        "sliceName": "Device",
+        "short": "A specific durable physical device used in diagnosis or treatment. The value is the coding for a type of device, for example, a CPAP machine. The same device might be used on multiple patients.",
+        "definition": "A specific durable physical device used in diagnosis or treatment. The value is the coding for a type of device, for example, a CPAP machine. The same device might be used on multiple patients.\nDevice status cannot be reconciled between Argonaut and US-Core, each having different required value sets.\nDevice type has extensible mappings to different value sets in Argonaut and US-Core, however both value sets have identical SNOMED content (descendants of 49062001 (Device). We adopt the US-Core value set, which is allowable because the binding is extensible.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-MaterialUsedReference-model.value[x]",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Device-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,606 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "obf-ResearchSubject-model",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>ResearchSubject Logical Model</b></p>\n  <p>Record of a subject&#039;s enrollment and participation in a research study.</p>\n</div>"
+  },
+  "url": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-ResearchSubject-model",
+  "identifier": [
+    {
+      "system": "http://hl7.org/fhir/us/breast-radiology",
+      "value": "obf.ResearchSubject"
+    }
+  ],
+  "name": "ResearchSubject",
+  "title": "obf-ResearchSubject",
+  "status": "draft",
+  "date": "2019-07-30",
+  "publisher": "Hl7",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://BreastRadReport.com"
+        }
+      ]
+    }
+  ],
+  "description": "Record of a subject's enrollment and participation in a research study.",
+  "kind": "logical",
+  "abstract": false,
+  "type": "obf-ResearchSubject-model",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Element",
+  "derivation": "specialization",
+  "snapshot": {
+    "element": [
+      {
+        "id": "obf-ResearchSubject-model",
+        "path": "obf-ResearchSubject-model",
+        "definition": "Record of a subject's enrollment and participation in a research study.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-ResearchSubject-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-ResearchSubject-model.metadata",
+        "path": "obf-ResearchSubject-model.metadata",
+        "short": "Elements that belong to all information items.",
+        "definition": "Elements that belong to all information items.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-ResearchSubject-model.metadata",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Metadata-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-ResearchSubject-model.language",
+        "path": "obf-ResearchSubject-model.language",
+        "short": "A human language, spoken or written.",
+        "definition": "A human language, spoken or written.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-ResearchSubject-model.language",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-ResearchSubject-model.implicitRules",
+        "path": "obf-ResearchSubject-model.implicitRules",
+        "short": "A set of rules under which this content was created",
+        "definition": "A set of rules under which this content was created",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-ResearchSubject-model.implicitRules",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-ResearchSubject-model.narrative",
+        "path": "obf-ResearchSubject-model.narrative",
+        "short": "A human-readable narrative, potentially including images, that contains a summary of the resource, and may be used to represent the content of the resource to a human.",
+        "definition": "A human-readable narrative, potentially including images, that contains a summary of the resource, and may be used to represent the content of the resource to a human.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-ResearchSubject-model.narrative",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Narrative-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-ResearchSubject-model.status",
+        "path": "obf-ResearchSubject-model.status",
+        "short": "A state that relates to the workflow or interpretation of this resource. Certain status values can modify the meaning of the resource, for example, entered-in-error. When a boolean value is used, Status of true indicates the record is active, false means inactive.",
+        "definition": "A state that relates to the workflow or interpretation of this resource. Certain status values can modify the meaning of the resource, for example, entered-in-error. When a boolean value is used, Status of true indicates the record is active, false means inactive.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-ResearchSubject-model.status",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/research-subject-status"
+          }
+        }
+      },
+      {
+        "id": "obf-ResearchSubject-model.identifier",
+        "path": "obf-ResearchSubject-model.identifier",
+        "short": "Business identifier or external id for this resource.",
+        "definition": "Business identifier or external id for this resource.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-ResearchSubject-model.identifier",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-Identifier-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-ResearchSubject-model.participationPeriod",
+        "path": "obf-ResearchSubject-model.participationPeriod",
+        "short": "The point in time or span of time the participant is involved.",
+        "definition": "The point in time or span of time the participant is involved.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-ResearchSubject-model.participationPeriod",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-TimePeriod-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-ResearchSubject-model.researchStudy",
+        "path": "obf-ResearchSubject-model.researchStudy",
+        "short": "A clinical trial or similar research study. Reference: list of FDA data elements describing a research study: prsinfo.clinicaltrials.gov/definitions.html",
+        "definition": "A clinical trial or similar research study. Reference: list of FDA data elements describing a research study: prsinfo.clinicaltrials.gov/definitions.html",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-ResearchSubject-model.researchStudy",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-ResearchStudy-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-ResearchSubject-model.patient",
+        "path": "obf-ResearchSubject-model.patient",
+        "short": "A person in the role of a patient. Sometimes, the patient is not the subject of information in a clinical statement where the Patient is the SubjectOfRecord.",
+        "definition": "A person in the role of a patient. Sometimes, the patient is not the subject of information in a clinical statement where the Patient is the SubjectOfRecord.\n\nCompatibility: Lies at the intersection of Argonaut and US Core Patient. MaritalStatus has a required binding in Argonaut, but an extensible binding in US-Core. To be feasible under both DSTU2 Argonaut and STU3 US-Core, the required binding strength is adopted.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-ResearchSubject-model.patient",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Patient-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-ResearchSubject-model.assignedArm",
+        "path": "obf-ResearchSubject-model.assignedArm",
+        "short": "The name of the arm in the study the subject is expected to follow as part of this study.",
+        "definition": "The name of the arm in the study the subject is expected to follow as part of this study.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-ResearchSubject-model.assignedArm",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-ResearchSubject-model.actualArm",
+        "path": "obf-ResearchSubject-model.actualArm",
+        "short": "The name of the arm in the study the subject actually followed as part of this study.",
+        "definition": "The name of the arm in the study the subject actually followed as part of this study.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-ResearchSubject-model.actualArm",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-ResearchSubject-model.terminationReason",
+        "path": "obf-ResearchSubject-model.terminationReason",
+        "short": "A code explaining unplanned or premature termination of a plan of treatment, course of medication, or research study.",
+        "definition": "A code explaining unplanned or premature termination of a plan of treatment, course of medication, or research study.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-ResearchSubject-model.terminationReason",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/us/breast-radiology/obf/vs/ResearchSubjectTerminationReasonVS"
+          }
+        }
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "obf-ResearchSubject-model",
+        "path": "obf-ResearchSubject-model",
+        "definition": "Record of a subject's enrollment and participation in a research study.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "obf-ResearchSubject-model",
+          "min": 0,
+          "max": "*"
+        },
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-ResearchSubject-model.metadata",
+        "path": "obf-ResearchSubject-model.metadata",
+        "short": "Elements that belong to all information items.",
+        "definition": "Elements that belong to all information items.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-ResearchSubject-model.metadata",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Metadata-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-ResearchSubject-model.language",
+        "path": "obf-ResearchSubject-model.language",
+        "short": "A human language, spoken or written.",
+        "definition": "A human language, spoken or written.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-ResearchSubject-model.language",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-ResearchSubject-model.implicitRules",
+        "path": "obf-ResearchSubject-model.implicitRules",
+        "short": "A set of rules under which this content was created",
+        "definition": "A set of rules under which this content was created",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-ResearchSubject-model.implicitRules",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-ResearchSubject-model.narrative",
+        "path": "obf-ResearchSubject-model.narrative",
+        "short": "A human-readable narrative, potentially including images, that contains a summary of the resource, and may be used to represent the content of the resource to a human.",
+        "definition": "A human-readable narrative, potentially including images, that contains a summary of the resource, and may be used to represent the content of the resource to a human.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-ResearchSubject-model.narrative",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Narrative-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-ResearchSubject-model.status",
+        "path": "obf-ResearchSubject-model.status",
+        "short": "A state that relates to the workflow or interpretation of this resource. Certain status values can modify the meaning of the resource, for example, entered-in-error. When a boolean value is used, Status of true indicates the record is active, false means inactive.",
+        "definition": "A state that relates to the workflow or interpretation of this resource. Certain status values can modify the meaning of the resource, for example, entered-in-error. When a boolean value is used, Status of true indicates the record is active, false means inactive.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-ResearchSubject-model.status",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/ValueSet/research-subject-status"
+          }
+        }
+      },
+      {
+        "id": "obf-ResearchSubject-model.identifier",
+        "path": "obf-ResearchSubject-model.identifier",
+        "short": "Business identifier or external id for this resource.",
+        "definition": "Business identifier or external id for this resource.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-ResearchSubject-model.identifier",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-Identifier-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-ResearchSubject-model.participationPeriod",
+        "path": "obf-ResearchSubject-model.participationPeriod",
+        "short": "The point in time or span of time the participant is involved.",
+        "definition": "The point in time or span of time the participant is involved.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-ResearchSubject-model.participationPeriod",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-TimePeriod-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-ResearchSubject-model.researchStudy",
+        "path": "obf-ResearchSubject-model.researchStudy",
+        "short": "A clinical trial or similar research study. Reference: list of FDA data elements describing a research study: prsinfo.clinicaltrials.gov/definitions.html",
+        "definition": "A clinical trial or similar research study. Reference: list of FDA data elements describing a research study: prsinfo.clinicaltrials.gov/definitions.html",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-ResearchSubject-model.researchStudy",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-ResearchStudy-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-ResearchSubject-model.patient",
+        "path": "obf-ResearchSubject-model.patient",
+        "short": "A person in the role of a patient. Sometimes, the patient is not the subject of information in a clinical statement where the Patient is the SubjectOfRecord.",
+        "definition": "A person in the role of a patient. Sometimes, the patient is not the subject of information in a clinical statement where the Patient is the SubjectOfRecord.\n\nCompatibility: Lies at the intersection of Argonaut and US Core Patient. MaritalStatus has a required binding in Argonaut, but an extensible binding in US-Core. To be feasible under both DSTU2 Argonaut and STU3 US-Core, the required binding strength is adopted.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "obf-ResearchSubject-model.patient",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Patient-model"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-ResearchSubject-model.assignedArm",
+        "path": "obf-ResearchSubject-model.assignedArm",
+        "short": "The name of the arm in the study the subject is expected to follow as part of this study.",
+        "definition": "The name of the arm in the study the subject is expected to follow as part of this study.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-ResearchSubject-model.assignedArm",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-ResearchSubject-model.actualArm",
+        "path": "obf-ResearchSubject-model.actualArm",
+        "short": "The name of the arm in the study the subject actually followed as part of this study.",
+        "definition": "The name of the arm in the study the subject actually followed as part of this study.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-ResearchSubject-model.actualArm",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false
+      },
+      {
+        "id": "obf-ResearchSubject-model.terminationReason",
+        "path": "obf-ResearchSubject-model.terminationReason",
+        "short": "A code explaining unplanned or premature termination of a plan of treatment, course of medication, or research study.",
+        "definition": "A code explaining unplanned or premature termination of a plan of treatment, course of medication, or research study.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "obf-ResearchSubject-model.terminationReason",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSetReference": {
+            "reference": "http://hl7.org/fhir/us/breast-radiology/obf/vs/ResearchSubjectTerminationReasonVS"
+          }
+        }
+      }
+    ]
+  }
+}
