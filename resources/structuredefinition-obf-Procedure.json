@@ -5,7 +5,7 @@
     "status": "generated",
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>Procedure Profile</b></p>\n  <p>An action that is or was performed on or for a patient. This can be a physical intervention like an operation, or less invasive like long term services, counseling, or hypnotherapy.</p>\n  <p><b>Mapping Summary</b></p>\n  <p><pre>obf.Procedure maps to http://hl7.org/fhir/us/core/StructureDefinition/us-core-procedure:\n  Language maps to language\n  ImplicitRules maps to implicitRules\n  Metadata.VersionId maps to meta.versionId\n  Metadata.SourceSystem maps to meta.source\n  Metadata.Profile maps to meta.profile\n  Metadata.LastUpdated maps to meta.lastUpdated\n  Metadata.SecurityLabel maps to meta.security\n  Metadata.Tag maps to meta.tag\n  Narrative maps to text\n  Identifier maps to identifier\n  ProcedureBasedOn maps to basedOn\n  ProcedurePartOf maps to partOf  // add Observation, MedicationAdministration\n  Status maps to status\n  StatusReason maps to statusReason\n  Category maps to category\n  Code maps to code\n  SubjectOfRecord maps to subject\n  CareContext maps to encounter\n  OccurrenceTimeOrPeriod maps to performed[x]\n  PersonAuthor maps to recorder\n  PersonInformationSource maps to asserter\n  Participation maps to performer\n  Participation.Participant maps to performer.actor  // Added Target Type PractitionerRole -- not implemented\n  Participation.ParticipationType maps to performer.function  // renamed role to function in R4\n  Participation.OnBehalfOf maps to performer.onBehalfOf\n  Location maps to location\n  ReasonCode maps to reasonCode\n  ProcedureReasonReference maps to reasonReference\n  BodyLocation.Code maps to bodySite\n  BodyLocation.Laterality maps to bodySite.extension\n  BodyLocation.AnatomicalOrientation maps to bodySite.extension\n  BodyLocation.RelationToLandmark maps to bodySite.extension\n  Annotation maps to note\n  Outcome maps to outcome\n  DiagnosticReport maps to report\n  ComplicationCode maps to complication\n  ComplicationReference maps to complicationDetail\n  FollowUp maps to followUp\n  FocalDevice maps to focalDevice\n  FocalDevice.Device maps to focalDevice.manipulated\n  FocalDevice.FocalDeviceAction maps to focalDevice.action\n  MaterialUsedReference maps to usedReference\n  UsedCode maps to usedCode\n</pre></p>\n</div>"
   },
-  "url": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Procedure",
+  "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-Procedure",
   "name": "Procedure",
   "title": "obf-Procedure",
   "status": "active",
@@ -380,7 +380,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-StatementDateTime-extension"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-StatementDateTime-extension"
             ]
           }
         ],
@@ -403,7 +403,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-TreatmentIntent-extension"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-TreatmentIntent-extension"
             ]
           }
         ],
@@ -608,9 +608,9 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Procedure",
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-Procedure",
               "http://hl7.org/fhir/StructureDefinition/MedicationAdministration",
-              "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Observation"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-Observation"
             ]
           }
         ],
@@ -836,7 +836,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Patient"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-Patient"
             ]
           }
         ],
@@ -975,7 +975,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Patient",
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-Patient",
               "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner",
               "http://hl7.org/fhir/StructureDefinition/RelatedPerson"
             ]
@@ -1010,7 +1010,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Patient",
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-Patient",
               "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner",
               "http://hl7.org/fhir/StructureDefinition/RelatedPerson"
             ]
@@ -1228,7 +1228,7 @@
             "targetProfile": [
               "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner",
               "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization",
-              "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Patient",
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-Patient",
               "http://hl7.org/fhir/StructureDefinition/RelatedPerson",
               "http://hl7.org/fhir/us/core/StructureDefinition/us-core-device"
             ]
@@ -1382,10 +1382,10 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Condition",
-              "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Observation",
-              "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Procedure",
-              "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-DiagnosticReport",
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-Condition",
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-Observation",
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-Procedure",
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-DiagnosticReport",
               "http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference"
             ]
           }
@@ -1429,7 +1429,7 @@
         "isSummary": true,
         "binding": {
           "strength": "preferred",
-          "valueSet": "http://hl7.org/fhir/us/breast-radiology/obf/datatype/vs/BodyLocationVS"
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/obf-datatype-BodyLocationVS"
         },
         "mapping": [
           {
@@ -1527,7 +1527,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-Laterality-extension"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-datatype-Laterality-extension"
             ]
           }
         ],
@@ -1550,7 +1550,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-AnatomicalOrientation-extension"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-datatype-AnatomicalOrientation-extension"
             ]
           }
         ],
@@ -1573,7 +1573,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-RelationToLandmark-extension"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-datatype-RelationToLandmark-extension"
             ]
           }
         ],
@@ -1714,7 +1714,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-DiagnosticReport"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-DiagnosticReport"
             ]
           }
         ],
@@ -1782,7 +1782,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Condition"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-Condition"
             ]
           }
         ],
@@ -2176,7 +2176,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-StatementDateTime-extension"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-StatementDateTime-extension"
             ]
           }
         ],
@@ -2199,7 +2199,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-TreatmentIntent-extension"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-TreatmentIntent-extension"
             ]
           }
         ],
@@ -2231,9 +2231,9 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Procedure",
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-Procedure",
               "http://hl7.org/fhir/StructureDefinition/MedicationAdministration",
-              "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Observation"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-Observation"
             ]
           }
         ]
@@ -2245,7 +2245,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Patient"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-Patient"
             ]
           }
         ]
@@ -2269,7 +2269,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Patient",
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-Patient",
               "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner",
               "http://hl7.org/fhir/StructureDefinition/RelatedPerson"
             ]
@@ -2285,7 +2285,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Patient",
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-Patient",
               "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner",
               "http://hl7.org/fhir/StructureDefinition/RelatedPerson"
             ]
@@ -2307,7 +2307,7 @@
             "targetProfile": [
               "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner",
               "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization",
-              "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Patient",
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-Patient",
               "http://hl7.org/fhir/StructureDefinition/RelatedPerson",
               "http://hl7.org/fhir/us/core/StructureDefinition/us-core-device"
             ]
@@ -2355,10 +2355,10 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Condition",
-              "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Observation",
-              "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Procedure",
-              "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-DiagnosticReport",
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-Condition",
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-Observation",
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-Procedure",
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-DiagnosticReport",
               "http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference"
             ]
           }
@@ -2370,7 +2370,7 @@
         "path": "Procedure.bodySite",
         "binding": {
           "strength": "preferred",
-          "valueSet": "http://hl7.org/fhir/us/breast-radiology/obf/datatype/vs/BodyLocationVS"
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/obf-datatype-BodyLocationVS"
         }
       },
       {
@@ -2388,7 +2388,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-Laterality-extension"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-datatype-Laterality-extension"
             ]
           }
         ],
@@ -2411,7 +2411,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-AnatomicalOrientation-extension"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-datatype-AnatomicalOrientation-extension"
             ]
           }
         ],
@@ -2434,7 +2434,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-RelationToLandmark-extension"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-datatype-RelationToLandmark-extension"
             ]
           }
         ],
@@ -2449,7 +2449,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-DiagnosticReport"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-DiagnosticReport"
             ]
           }
         ]
@@ -2461,7 +2461,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Condition"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-Condition"
             ]
           }
         ]

@@ -5,7 +5,7 @@
     "status": "generated",
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n  <p><b>BreastAbnormality Profile</b></p>\n  <p>Breast Abnormality Form</p>\n  <p><b>Mapping Summary</b></p>\n  <p><pre>breastrad.BreastAbnormality maps to Observation:\n  Language maps to language\n  ImplicitRules maps to implicitRules\n  Metadata.VersionId maps to meta.versionId\n  Metadata.SourceSystem maps to meta.source\n  Metadata.Profile maps to meta.profile\n  Metadata.LastUpdated maps to meta.lastUpdated\n  Metadata.SecurityLabel maps to meta.security\n  Metadata.Tag maps to meta.tag\n  Narrative maps to text\n  Identifier maps to identifier\n  ObservationBasedOn maps to basedOn\n  ObservationPartOf maps to partOf\n  Status maps to status\n  Category maps to category\n  Code maps to code\n  ObservationSubjectOfRecord maps to subject\n  FocalSubject maps to focus\n  CareContext maps to encounter\n  RelevantTime maps to effective[x] // Add Types Timing, instant\n  StatementDateTime maps to issued\n  Performer maps to performer // Added Target Types PractitionerRole, CareTeam\n  DataValue maps to value[x] // Add Type integer, remove Type Attachment\n  DataAbsentReason maps to dataAbsentReason\n  Interpretation maps to interpretation\n  Annotation maps to note\n  BreastBodyLocation.Code maps to bodySite\n  BreastBodyLocation.Laterality maps to bodySite.extension\n  BreastBodyLocation.AnatomicalOrientation maps to bodySite.extension\n  BreastBodyLocation.RelationToLandmark maps to bodySite.extension\n  Method maps to method\n  Specimen maps to specimen\n  Device maps to device\n  ReferenceRange maps to referenceRange\n  ReferenceRange.LowerBound maps to referenceRange.low\n  ReferenceRange.UpperBound maps to referenceRange.high\n  ReferenceRange.Type maps to referenceRange.type\n  ReferenceRange.ApplicableSubpopulation maps to referenceRange.appliesTo\n  ReferenceRange.ApplicableAgeRange maps to referenceRange.age\n  ReferenceRange.Text maps to referenceRange.text\n  PanelMembers.Observation maps to hasMember (slice on = $this.resolve().code.coding.code; slice strategy = includes)\n  ObservationDerivedFrom maps to derivedFrom\n  Components.ObservationComponent maps to component (slice on = code.coding.code; slice strategy = includes)\n  Components.ObservationComponent.Code maps to component.code\n  Components.ObservationComponent.DataValue maps to component.value[x]\n  Components.ObservationComponent.DataAbsentReason maps to component.dataAbsentReason\n  Components.ObservationComponent.Interpretation maps to component.interpretation\n  Components.ObservationComponent.ReferenceRange maps to component.referenceRange\n  Components.ObservationComponent.ReferenceRange.LowerBound maps to component.referenceRange.low\n  Components.ObservationComponent.ReferenceRange.UpperBound maps to component.referenceRange.high\n  Components.ObservationComponent.ReferenceRange.Type maps to component.referenceRange.type\n  Components.ObservationComponent.ReferenceRange.ApplicableSubpopulation maps to component.referenceRange.appliesTo\n  Components.ObservationComponent.ReferenceRange.ApplicableAgeRange maps to component.referenceRange.age\n  Components.ObservationComponent.ReferenceRange.Text maps to component.referenceRange.text\n</pre></p>\n</div>"
   },
-  "url": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/breastrad-BreastAbnormality",
+  "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/breastrad-BreastAbnormality",
   "name": "BreastAbnormality",
   "status": "active",
   "date": "2019-08-01",
@@ -506,8 +506,8 @@
             "code": "Reference",
             "targetProfile": [
               "http://hl7.org/fhir/StructureDefinition/MedicationAdministration",
-              "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-MedicationStatement",
-              "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Procedure"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-MedicationStatement",
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-Procedure"
             ]
           }
         ],
@@ -1147,7 +1147,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Patient",
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-Patient",
               "http://hl7.org/fhir/StructureDefinition/Group",
               "http://hl7.org/fhir/us/core/StructureDefinition/us-core-device",
               "http://hl7.org/fhir/us/core/StructureDefinition/us-core-location"
@@ -1373,7 +1373,7 @@
             "targetProfile": [
               "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner",
               "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization",
-              "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Patient",
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-Patient",
               "http://hl7.org/fhir/StructureDefinition/RelatedPerson"
             ]
           }
@@ -1432,7 +1432,7 @@
           {
             "code": "SampledData",
             "profile": [
-              "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-SampledData"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-datatype-SampledData"
             ]
           },
           {
@@ -1736,7 +1736,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-Laterality-extension"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-datatype-Laterality-extension"
             ]
           }
         ],
@@ -1759,7 +1759,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-AnatomicalOrientation-extension"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-datatype-AnatomicalOrientation-extension"
             ]
           }
         ],
@@ -1782,7 +1782,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-RelationToLandmark-extension"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-datatype-RelationToLandmark-extension"
             ]
           }
         ],
@@ -1875,7 +1875,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-LandmarkType-extension"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-datatype-LandmarkType-extension"
             ]
           }
         ],
@@ -1988,7 +1988,7 @@
             "map": "N/A"
           }
         ],
-        "fixedUri": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-LandmarkType-extension"
+        "fixedUri": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-datatype-LandmarkType-extension"
       },
       {
         "id": "Observation.bodySite.extension:relationtolandmark.extension:landmarktype.valueCodeableConcept",
@@ -2017,7 +2017,7 @@
         ],
         "binding": {
           "strength": "extensible",
-          "valueSet": "http://hl7.org/fhir/us/breast-radiology/obf/datatype/vs/LandmarkTypeVS"
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/obf-datatype-LandmarkTypeVS"
         }
       },
       {
@@ -2469,7 +2469,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-LandmarkLocation-extension"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-datatype-LandmarkLocation-extension"
             ]
           }
         ],
@@ -2568,7 +2568,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-Code-extension"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-datatype-Code-extension"
             ]
           }
         ],
@@ -2681,7 +2681,7 @@
             "map": "N/A"
           }
         ],
-        "fixedUri": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-Code-extension"
+        "fixedUri": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-datatype-Code-extension"
       },
       {
         "id": "Observation.bodySite.extension:relationtolandmark.extension:landmarklocation.extension:code.valueCodeableConcept",
@@ -3158,7 +3158,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-Laterality-extension"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-datatype-Laterality-extension"
             ]
           }
         ],
@@ -3187,7 +3187,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-AnatomicalOrientation-extension"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-datatype-AnatomicalOrientation-extension"
             ]
           }
         ],
@@ -3230,7 +3230,7 @@
             "map": "N/A"
           }
         ],
-        "fixedUri": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-LandmarkLocation-extension"
+        "fixedUri": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-datatype-LandmarkLocation-extension"
       },
       {
         "id": "Observation.bodySite.extension:relationtolandmark.extension:landmarklocation.value[x]",
@@ -3417,7 +3417,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-LandmarkToBodyLocationDirection-extension"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-datatype-LandmarkToBodyLocationDirection-extension"
             ]
           }
         ],
@@ -3530,7 +3530,7 @@
             "map": "N/A"
           }
         ],
-        "fixedUri": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-LandmarkToBodyLocationDirection-extension"
+        "fixedUri": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-datatype-LandmarkToBodyLocationDirection-extension"
       },
       {
         "id": "Observation.bodySite.extension:relationtolandmark.extension:landmarktobodylocationdirection.valueCodeableConcept",
@@ -3559,7 +3559,7 @@
         ],
         "binding": {
           "strength": "required",
-          "valueSet": "http://hl7.org/fhir/us/breast-radiology/obf/datatype/vs/ClockFaceDirectionVS"
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/obf-datatype-ClockFaceDirectionVS"
         }
       },
       {
@@ -3577,7 +3577,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-LandmarkToBodyLocationDistance-extension"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-datatype-LandmarkToBodyLocationDistance-extension"
             ]
           }
         ],
@@ -3690,7 +3690,7 @@
             "map": "N/A"
           }
         ],
-        "fixedUri": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-LandmarkToBodyLocationDistance-extension"
+        "fixedUri": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-datatype-LandmarkToBodyLocationDistance-extension"
       },
       {
         "id": "Observation.bodySite.extension:relationtolandmark.extension:landmarktobodylocationdistance.valueQuantity",
@@ -3719,7 +3719,7 @@
         ],
         "binding": {
           "strength": "required",
-          "valueSet": "http://hl7.org/fhir/us/breast-radiology/obf/datatype/vs/UnitsOfLengthVS"
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/obf-datatype-UnitsOfLengthVS"
         }
       },
       {
@@ -4002,7 +4002,7 @@
             "map": "N/A"
           }
         ],
-        "fixedUri": "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-RelationToLandmark-extension"
+        "fixedUri": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-datatype-RelationToLandmark-extension"
       },
       {
         "id": "Observation.bodySite.extension:relationtolandmark.value[x]",
@@ -5048,7 +5048,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Observation"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-Observation"
             ]
           }
         ],
@@ -5085,7 +5085,7 @@
               "http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference",
               "http://hl7.org/fhir/StructureDefinition/Media",
               "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse",
-              "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Observation"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-Observation"
             ]
           }
         ],
@@ -5333,7 +5333,7 @@
           {
             "code": "SampledData",
             "profile": [
-              "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-SampledData"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-datatype-SampledData"
             ]
           },
           {
@@ -6477,7 +6477,7 @@
         ],
         "binding": {
           "strength": "required",
-          "valueSet": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/AbnormalityDensityVS"
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/breastrad-AbnormalityDensityVS"
         }
       },
       {
@@ -7590,7 +7590,7 @@
         ],
         "binding": {
           "strength": "required",
-          "valueSet": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/AbnormalityTypeVS"
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/breastrad-AbnormalityTypeVS"
         }
       },
       {
@@ -8703,7 +8703,7 @@
         ],
         "binding": {
           "strength": "required",
-          "valueSet": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/AsymmetryTypesVS"
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/breastrad-AsymmetryTypesVS"
         }
       },
       {
@@ -9816,7 +9816,7 @@
         ],
         "binding": {
           "strength": "required",
-          "valueSet": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/BiRadCodeVS"
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/breastrad-BiRadCodeVS"
         }
       },
       {
@@ -10929,7 +10929,7 @@
         ],
         "binding": {
           "strength": "required",
-          "valueSet": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/ChangeVS"
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/breastrad-ChangeVS"
         }
       },
       {
@@ -12042,7 +12042,7 @@
         ],
         "binding": {
           "strength": "required",
-          "valueSet": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/CystTypesVS"
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/breastrad-CystTypesVS"
         }
       },
       {
@@ -13155,7 +13155,7 @@
         ],
         "binding": {
           "strength": "required",
-          "valueSet": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/MarginVS"
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/breastrad-MarginVS"
         }
       },
       {
@@ -14268,7 +14268,7 @@
         ],
         "binding": {
           "strength": "required",
-          "valueSet": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/MassTypesVS"
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/breastrad-MassTypesVS"
         }
       },
       {
@@ -15381,7 +15381,7 @@
         ],
         "binding": {
           "strength": "required",
-          "valueSet": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/NodeTypesVS"
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/breastrad-NodeTypesVS"
         }
       },
       {
@@ -16494,7 +16494,7 @@
         ],
         "binding": {
           "strength": "required",
-          "valueSet": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/ShapeVS"
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/breastrad-ShapeVS"
         }
       },
       {
@@ -17607,7 +17607,7 @@
         ],
         "binding": {
           "strength": "required",
-          "valueSet": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/VascularityVS"
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/breastrad-VascularityVS"
         }
       },
       {
@@ -18720,7 +18720,7 @@
         ],
         "binding": {
           "strength": "required",
-          "valueSet": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/WallVS"
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/breastrad-WallVS"
         }
       },
       {
@@ -21381,8 +21381,8 @@
             "code": "Reference",
             "targetProfile": [
               "http://hl7.org/fhir/StructureDefinition/MedicationAdministration",
-              "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-MedicationStatement",
-              "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Procedure"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-MedicationStatement",
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-Procedure"
             ]
           }
         ],
@@ -21466,7 +21466,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Patient",
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-Patient",
               "http://hl7.org/fhir/StructureDefinition/Group",
               "http://hl7.org/fhir/us/core/StructureDefinition/us-core-device",
               "http://hl7.org/fhir/us/core/StructureDefinition/us-core-location"
@@ -21509,7 +21509,7 @@
             "targetProfile": [
               "http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner",
               "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization",
-              "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Patient",
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-Patient",
               "http://hl7.org/fhir/StructureDefinition/RelatedPerson"
             ]
           }
@@ -21539,7 +21539,7 @@
           {
             "code": "SampledData",
             "profile": [
-              "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-SampledData"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-datatype-SampledData"
             ]
           },
           {
@@ -21578,7 +21578,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-Laterality-extension"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-datatype-Laterality-extension"
             ]
           }
         ],
@@ -21601,7 +21601,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-AnatomicalOrientation-extension"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-datatype-AnatomicalOrientation-extension"
             ]
           }
         ],
@@ -21624,7 +21624,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-RelationToLandmark-extension"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-datatype-RelationToLandmark-extension"
             ]
           }
         ],
@@ -21755,7 +21755,7 @@
         "path": "Observation.bodySite.extension.extension.valueCodeableConcept",
         "binding": {
           "strength": "required",
-          "valueSet": "http://hl7.org/fhir/us/breast-radiology/obf/datatype/vs/ClockFaceDirectionVS"
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/obf-datatype-ClockFaceDirectionVS"
         }
       },
       {
@@ -21886,7 +21886,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Observation"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-Observation"
             ]
           }
         ]
@@ -21901,7 +21901,7 @@
               "http://hl7.org/fhir/us/core/StructureDefinition/us-core-documentreference",
               "http://hl7.org/fhir/StructureDefinition/Media",
               "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse",
-              "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-Observation"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-Observation"
             ]
           }
         ]
@@ -21943,7 +21943,7 @@
           {
             "code": "SampledData",
             "profile": [
-              "http://hl7.org/fhir/us/breast-radiology/fhir/StructureDefinition/obf-datatype-SampledData"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/obf-datatype-SampledData"
             ]
           },
           {
@@ -22056,7 +22056,7 @@
         "path": "Observation.component.valueCodeableConcept",
         "binding": {
           "strength": "required",
-          "valueSet": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/AbnormalityDensityVS"
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/breastrad-AbnormalityDensityVS"
         },
         "type": [
           {
@@ -22171,7 +22171,7 @@
         "path": "Observation.component.valueCodeableConcept",
         "binding": {
           "strength": "required",
-          "valueSet": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/AbnormalityTypeVS"
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/breastrad-AbnormalityTypeVS"
         },
         "type": [
           {
@@ -22286,7 +22286,7 @@
         "path": "Observation.component.valueCodeableConcept",
         "binding": {
           "strength": "required",
-          "valueSet": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/AsymmetryTypesVS"
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/breastrad-AsymmetryTypesVS"
         },
         "type": [
           {
@@ -22401,7 +22401,7 @@
         "path": "Observation.component.valueCodeableConcept",
         "binding": {
           "strength": "required",
-          "valueSet": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/BiRadCodeVS"
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/breastrad-BiRadCodeVS"
         },
         "type": [
           {
@@ -22516,7 +22516,7 @@
         "path": "Observation.component.valueCodeableConcept",
         "binding": {
           "strength": "required",
-          "valueSet": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/ChangeVS"
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/breastrad-ChangeVS"
         },
         "type": [
           {
@@ -22631,7 +22631,7 @@
         "path": "Observation.component.valueCodeableConcept",
         "binding": {
           "strength": "required",
-          "valueSet": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/CystTypesVS"
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/breastrad-CystTypesVS"
         },
         "type": [
           {
@@ -22746,7 +22746,7 @@
         "path": "Observation.component.valueCodeableConcept",
         "binding": {
           "strength": "required",
-          "valueSet": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/MarginVS"
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/breastrad-MarginVS"
         },
         "type": [
           {
@@ -22861,7 +22861,7 @@
         "path": "Observation.component.valueCodeableConcept",
         "binding": {
           "strength": "required",
-          "valueSet": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/MassTypesVS"
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/breastrad-MassTypesVS"
         },
         "type": [
           {
@@ -22976,7 +22976,7 @@
         "path": "Observation.component.valueCodeableConcept",
         "binding": {
           "strength": "required",
-          "valueSet": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/NodeTypesVS"
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/breastrad-NodeTypesVS"
         },
         "type": [
           {
@@ -23091,7 +23091,7 @@
         "path": "Observation.component.valueCodeableConcept",
         "binding": {
           "strength": "required",
-          "valueSet": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/ShapeVS"
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/breastrad-ShapeVS"
         },
         "type": [
           {
@@ -23206,7 +23206,7 @@
         "path": "Observation.component.valueCodeableConcept",
         "binding": {
           "strength": "required",
-          "valueSet": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/VascularityVS"
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/breastrad-VascularityVS"
         },
         "type": [
           {
@@ -23321,7 +23321,7 @@
         "path": "Observation.component.valueCodeableConcept",
         "binding": {
           "strength": "required",
-          "valueSet": "http://hl7.org/fhir/us/breast-radiology/breastrad/vs/WallVS"
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/breastrad-WallVS"
         },
         "type": [
           {
