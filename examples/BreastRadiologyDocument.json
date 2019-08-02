@@ -8,8 +8,32 @@
   },
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\r\n<b>Id</b>: BreastRadiologyDocumentExample1<br/>\r\n<b>Status</b>: final<br/>\r\n<b>Type</b>: <br/>\r\nSection List<br/>\r\nPatient History<br/>\r\nFindings<br/>\r\n&nbsp;&nbsp;&nbsp;&nbsp;Findings Left Breast<br/>\r\n&nbsp;&nbsp;&nbsp;&nbsp;Findings Right Breast<br/>\r\nImpressions<br/>\r\nRecommendations<br/>\r\nPatient Rick<br/>\r\nPrior Reports<br/>\r\n</div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\r\n<b>Id</b>: BreastRadiologyDocumentExample1<br/>\r\n<b>Status</b>: 'Final'<br/>\r\n<b>Type</b>: [http://loinc.org] '10193-1'<br/>\r\n<b>Title</b>: Breast Radiology Document<br/>\r\n<b>Author</b>: 'Reference to document author'<br/>\r\nSection List<br/>\r\nPatient History<br/>\r\nFindings<br/>\r\n&nbsp;&nbsp;&nbsp;&nbsp;Findings Left Breast<br/>\r\n&nbsp;&nbsp;&nbsp;&nbsp;Findings Right Breast<br/>\r\nImpressions<br/>\r\nRecommendations<br/>\r\nPatient Risk<br/>\r\nPrior Reports<br/>\r\n</div>"
   },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/breastrad-SummaryBiRadCode-extension",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/breastrad-BiRadCodeCS",
+            "code": "BIRAD1Negative"
+          }
+        ]
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/breastrad-BreastExamTechnique-extension",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "http://loinc.org",
+            "code": "34117-2"
+          }
+        ]
+      }
+    }
+  ],
   "status": "final",
   "type": {
     "coding": [
@@ -18,6 +42,9 @@
         "code": "10193-1"
       }
     ]
+  },
+  "subject": {
+    "display": "Reference to document subject"
   },
   "date": "2019-01-01T00:00:00+00:00",
   "author": [
@@ -36,7 +63,12 @@
             "code": "34117-2"
           }
         ]
-      }
+      },
+      "entry": [
+        {
+          "display": "Reference to Patient History Observation"
+        }
+      ]
     },
     {
       "title": "Findings",
@@ -58,7 +90,12 @@
                 "code": "26215-4"
               }
             ]
-          }
+          },
+          "entry": [
+            {
+              "display": "Reference to BreastAbnormality Observation for left breast"
+            }
+          ]
         },
         {
           "title": "Findings Right Breast",
@@ -69,7 +106,12 @@
                 "code": "26216-2"
               }
             ]
-          }
+          },
+          "entry": [
+            {
+              "display": "Reference to BreastAbnormality Observation for right breast"
+            }
+          ]
         }
       ]
     },
@@ -82,7 +124,12 @@
             "code": "19005-8"
           }
         ]
-      }
+      },
+      "entry": [
+        {
+          "display": "Reference to Impression Condition"
+        }
+      ]
     },
     {
       "title": "Recommendations",
@@ -93,10 +140,15 @@
             "code": "18783-1"
           }
         ]
-      }
+      },
+      "entry": [
+        {
+          "display": "Reference to Recommendation ActionRequest"
+        }
+      ]
     },
     {
-      "title": "Patient Rick",
+      "title": "Patient Risk",
       "code": {
         "coding": [
           {
@@ -104,7 +156,12 @@
             "code": "76546-1"
           }
         ]
-      }
+      },
+      "entry": [
+        {
+          "display": "Reference to patientRisk Resource"
+        }
+      ]
     },
     {
       "title": "Prior Reports",
@@ -115,7 +172,12 @@
             "code": "76546-1"
           }
         ]
-      }
+      },
+      "entry": [
+        {
+          "display": "Reference to prior BreastRadiologyReport"
+        }
+      ]
     }
   ]
 }

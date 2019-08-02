@@ -42,7 +42,7 @@ breastrad.BreastRadiologyDocument maps to Composition:
   Section.SortOrder maps to section.orderedBy // terrible FHIR name!
   Section.Resource maps to section.entry  (slice on = reference.resolve(); slice on type = profile; slice strategy = includes)
   Section.EmptyReason maps to section.emptyReason
-  Section.Section maps to section.section (slice on = code; slice strategy = includes)
+  Section.Section maps to section.section
   Section.Section.Title maps to section.section.title
   Section.Section.Code maps to section.section.code
   Section.Section.Author maps to section.section.author
@@ -50,7 +50,7 @@ breastrad.BreastRadiologyDocument maps to Composition:
   Section.Section.Narrative maps to section.section.text
   Section.Section.Type maps to section.section.mode
   Section.Section.SortOrder maps to section.section.orderedBy
-  Section.Section.Resource maps to section.section.entry (slice on = code; slice strategy = includes)
+  Section.Section.Resource maps to section.section.entry
   Section.Section.EmptyReason maps to section.section.emptyReason
   Section.Section.Section maps to section.section.section
 
