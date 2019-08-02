@@ -24,6 +24,9 @@
 <p>This is the first For-Comment Ballot for the Breast Cancer Data FHIR Implementation Guide (IG) sponsored by Clinical Information Council (CIC) Work Group, and co-sponsored by the Clinical Information Modeling Initiative (CIMI) and Imaging Integration Work Groups. The Breast Radiology FHIR IG was organized by the Cancer Interoperability Group, a voluntary group representing a wide variety of organizations and perspectives, including providers, medical professional societies, vendors, and governmental organizations.</p>
 <h2>Table of Contents</h2>
 <ul>
+<li><a href="#Introduction">Introduction</a></li>
+<li><a href="#Overview">Overview</a></li>
+<li><a href="#Modeling">FHIR Modeling choices</a></li>
 <li><a href="#Guidance">Guidance for HL7 Voters</a></li>
 <li><a href="#Purpose">Purpose</a></li>
 <li><a href="#Background">Background</a></li>
@@ -34,8 +37,16 @@
 <li><a href="#CIMI">Relationship to CIMI</a></li>
 <li><a href="#Disclaimers">Disclaimers</a></li>
 <li><a href="#TerminologySources">Terminology Sources</a></li>
-<li>[ProfileOverview] Profile Overview</li>
 </ul>
+<h2><a name="Introduction"/>Introduction</h2>
+<p>Breast radiology is a very narrow and highly specialized niche of medicine which is predominantly, but not exclusively, focused on screening, diagnosing and guiding treatment of breast cancer.  Breast radiology is also unique in that most studies are read by specialists that are solely focused on this singular body location and collection of modalities and techniques that are narrowly focused.  It is also worth noting that this field was the very first to explore specific regulatory requirements for encoding information for standardized categorization of clinical status and to mandate precise communications between the radiologist, referring physician and patient, including bi-annual screening reminder letters among others.</p>
+<p>The team that has worked to produce this initial for comment ballot feels that for every aspect of our ballot that is unique to the narrow field of breast radiology there are a dozen issues, concerns and challenges that will be felt by a very broad variety of structured clinical communication between specialists and care teams.  Clinical pathology reports, post operative surgery reports, clinical genomics reports among others, all share cross cutting concerns that have yet to be fully explored in FHIR profiles.  Conventions and expectations related to how information is organized within existing narrative reports have challenged the development of this particular ballot leading our team to believe that changes still need to be made to certain existing FHIR Resources to fully meet the needs of similar projects.</p>
+<h2><a name="Overview"/>Overview of a breast radiology report</h2>
+<p>The following graphic should provide a high-level view of the existing expectations and documentation conventions of a typical breast radiology report.</p>
+<p><img src="ProfileOverview.jpg" alt="Profile Overview" /></p>
+<h2><a name="Modeling"/>FHIR Modeling choices</h2>
+<p>In the context of FHIR we are currently utilizing the FHIR DiagnosticReport anchor resource as since it provides a resource definition that can be referenced in a broad variety of other clinical communications as the reason for other treatment and diagnostic choices.  This resource does not however provide the structural capabilities to aggregate together collections of observation, conditions and recommendations into the sections and subsections that are currently expected in a breast radiology report.  For this ballot we have chosen to use the Composition resource which was designed for this purpose.  Since DiagnosticReport did not inherently provide a method to reference Composition in this way, we were left with the somewhat awkward option of constraining out the Result attribute and then adding back in a nearly identical attribute ResultComposition which allows for referencing Composition.</p>
+<p>While nothing being done here is specifically forbidden within FHIR, we feel that taken together this strategy has.  We also feel that when a solution is found to these structural challenges it should be clearly documented so that as the many hundreds of similar profiling projects scale up future teams will benefit from clear guidance and more obvious design choices.</p>
 <h2><a name="Guidance"/>Guidance for HL7 Voters</h2>
 <p>Breast Radiology Reporting has long been an outlier in the radiology space in that structured guidelines for consistent reporting of the clinical data are well documented and non controversial, so the clinical content has been authored to fully align with accepted practices.</p>
 <p>The authors of this Implementation Guide must humbly admit that we are uncomfortable with some of the modeling options that are represented herein and are asking the FHIR community to constructively contribute to the consideration of issues which we believe to be cross-cutting challenges to a broad constituency of similar use cases.</p>
@@ -121,8 +132,6 @@ Modeling lab is an experimental and free web-application that focuses on the spe
 <li>SNOMED CT  <a href="https://www.snomed.org/snomed-ct/get-snomed-ct">SNOMED International</a></li>
 <li>LOINC      <a href="https://loinc.org/license/">Regenstrief Institute</a></li>
 </ul>
-<h2><a name="ProfileOverview"/>Profile Overview</h2>
-<p><img src="ProfileOverview.jpg" alt="Profile Overview" /></p>
 
 
 <!-- ==============END CONTENT END CONTENT=================== -->
