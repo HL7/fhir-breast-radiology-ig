@@ -5813,8 +5813,8 @@
       {
         "id": "Observation.component:breastrad-AbnormalityDensity",
         "path": "Observation.component",
-        "short": "AbnormalityDensity: Visually estimated content of fibroglandular-density tissue within the breast",
-        "definition": "Visually estimated content of fibroglandular-density tissue within the breast.\n<br>This item will be a slice of Observation.Component.\n<br>The slice will be on  Observation.Component.Code.\n<br>This slice code will be modified in a future  versions to be a suitable public terminology value.",
+        "short": "AbnormalityDensity: Ductal carcinoma in situ (DCIS) is the presence of abnormal cells inside a milk duct in the breast",
+        "definition": "Ductal carcinoma in situ (DCIS) is the presence of abnormal cells inside a milk duct in the breast.\nDCIS is considered the earliest form of breast cancer. DCIS is noninvasive, meaning it hasn't spread out of the milk duct and has a low risk of becoming invasive..\n<br>This item will be a slice of Observation.Component.\n<br>The slice will be on  Observation.Component.Code.\n<br>This slice code will be modified in a future  versions to be a suitable public terminology value.",
         "min": 0,
         "max": "1",
         "base": {
@@ -12489,6 +12489,1119 @@
         ]
       },
       {
+        "id": "Observation.component:breastrad-ConsistentWith",
+        "path": "Observation.component",
+        "short": "ConsistentWith: Consistent With",
+        "definition": "Consistent With.\n<br>This item will be a slice of Observation.Component.\n<br>The slice will be on  Observation.Component.Code.\n<br>This slice code will be modified in a future  versions to be a suitable public terminology value.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Observation.component",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "Element"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "containment by OBX-4?"
+          },
+          {
+            "identity": "rim",
+            "map": "outBoundRelationship[typeCode=COMP]"
+          }
+        ],
+        "sliceName": "breastrad-ConsistentWith"
+      },
+      {
+        "id": "Observation.component:breastrad-ConsistentWith.id",
+        "path": "Observation.component.id",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "Unique id for inter-element referencing",
+        "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Element.id",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component:breastrad-ConsistentWith.extension",
+        "path": "Observation.component.extension",
+        "short": "Additional content defined by implementations",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "alias": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Element.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component:breastrad-ConsistentWith.modifierExtension",
+        "path": "Observation.component.modifierExtension",
+        "short": "Extensions that cannot be ignored even if unrecognized",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
+        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "requirements": "Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](extensibility.html#modifierExtension).",
+        "alias": [
+          "extensions",
+          "user content",
+          "modifiers"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "BackboneElement.modifierExtension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isModifier": true,
+        "isModifierReason": "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component:breastrad-ConsistentWith.code",
+        "path": "Observation.component.code",
+        "short": "Type of component observation (code / type)",
+        "definition": "Describes what was observed. Sometimes this is called the observation \"code\".",
+        "comment": "*All* code-value and  component.code-component.value pairs need to be taken into account to correctly understand the meaning of the observation.",
+        "requirements": "Knowing what kind of observation is being made is essential to understanding the observation.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Observation.component.code",
+          "min": 1,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": true,
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "ObservationCode"
+            }
+          ],
+          "strength": "example",
+          "description": "Codes identifying names of simple observations.",
+          "valueSet": "http://hl7.org/fhir/ValueSet/observation-codes"
+        },
+        "mapping": [
+          {
+            "identity": "w5",
+            "map": "FiveWs.what[x]"
+          },
+          {
+            "identity": "sct-concept",
+            "map": "< 363787002 |Observable entity| OR \r< 386053000 |Evaluation procedure|"
+          },
+          {
+            "identity": "v2",
+            "map": "OBX-3"
+          },
+          {
+            "identity": "rim",
+            "map": "code"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component:breastrad-ConsistentWith.code.id",
+        "path": "Observation.component.code.id",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "Unique id for inter-element referencing",
+        "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Element.id",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component:breastrad-ConsistentWith.code.extension",
+        "path": "Observation.component.code.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "description": "Extensions are always sliced by (at least) url",
+          "rules": "open"
+        },
+        "short": "Additional content defined by implementations",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "alias": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Element.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component:breastrad-ConsistentWith.code.coding",
+        "path": "Observation.component.code.coding",
+        "short": "Code defined by a terminology system",
+        "definition": "A reference to a code defined by a terminology system.",
+        "comment": "Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true.",
+        "requirements": "Allows for alternative encodings within a code system, and translations to other code systems.",
+        "min": 1,
+        "max": "*",
+        "base": {
+          "path": "CodeableConcept.coding",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "C*E.1-8, C*E.10-22"
+          },
+          {
+            "identity": "rim",
+            "map": "union(., ./translation)"
+          },
+          {
+            "identity": "orim",
+            "map": "fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding"
+          }
+        ],
+        "slicing": {
+          "id": "12",
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "code"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        }
+      },
+      {
+        "id": "Observation.component:breastrad-ConsistentWith.code.coding:Fixed_ConsistentWith",
+        "path": "Observation.component.code.coding",
+        "sliceName": "Fixed_ConsistentWith",
+        "short": "Code defined by a terminology system",
+        "definition": "A reference to a code defined by a terminology system.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "CodeableConcept.coding",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "id": "Observation.component:breastrad-ConsistentWith.code.coding:Fixed_ConsistentWith.id",
+        "path": "Observation.component.code.coding.id",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "Unique id for inter-element referencing",
+        "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Element.id",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component:breastrad-ConsistentWith.code.coding:Fixed_ConsistentWith.extension",
+        "path": "Observation.component.code.coding.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "description": "Extensions are always sliced by (at least) url",
+          "rules": "open"
+        },
+        "short": "Additional content defined by implementations",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "alias": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Element.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component:breastrad-ConsistentWith.code.coding:Fixed_ConsistentWith.system",
+        "path": "Observation.component.code.coding.system",
+        "short": "Identity of the terminology system",
+        "definition": "The identification of the code system that defines the meaning of the symbol in the code.",
+        "comment": "The URI may be an OID (urn:oid:...) or a UUID (urn:uuid:...).  OIDs and UUIDs SHALL be references to the HL7 OID registry. Otherwise, the URI should come from HL7's list of FHIR defined special URIs or it should reference to some definition that establishes the system clearly and unambiguously.",
+        "requirements": "Need to be unambiguous about the source of the definition of the symbol.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Coding.system",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "C*E.3"
+          },
+          {
+            "identity": "rim",
+            "map": "./codeSystem"
+          },
+          {
+            "identity": "orim",
+            "map": "fhir:Coding.system rdfs:subPropertyOf dt:CDCoding.codeSystem"
+          }
+        ],
+        "fixedUri": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/breastrad-BreastAbnormalityCodesCS"
+      },
+      {
+        "id": "Observation.component:breastrad-ConsistentWith.code.coding:Fixed_ConsistentWith.version",
+        "path": "Observation.component.code.coding.version",
+        "short": "Version of the system - if relevant",
+        "definition": "The version of the code system which was used when choosing this code. Note that a well-maintained code system does not need the version reported, because the meaning of codes is consistent across versions. However this cannot consistently be assured, and when the meaning is not guaranteed to be consistent, the version SHOULD be exchanged.",
+        "comment": "Where the terminology does not clearly define what string should be used to identify code system versions, the recommendation is to use the date (expressed in FHIR date format) on which that version was officially published as the version date.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Coding.version",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "C*E.7"
+          },
+          {
+            "identity": "rim",
+            "map": "./codeSystemVersion"
+          },
+          {
+            "identity": "orim",
+            "map": "fhir:Coding.version rdfs:subPropertyOf dt:CDCoding.codeSystemVersion"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component:breastrad-ConsistentWith.code.coding:Fixed_ConsistentWith.code",
+        "path": "Observation.component.code.coding.code",
+        "short": "Symbol in syntax defined by the system",
+        "definition": "A symbol in syntax defined by the system. The symbol may be a predefined code or an expression in a syntax defined by the coding system (e.g. post-coordination).",
+        "requirements": "Need to refer to a particular code in the system.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Coding.code",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "C*E.1"
+          },
+          {
+            "identity": "rim",
+            "map": "./code"
+          },
+          {
+            "identity": "orim",
+            "map": "fhir:Coding.code rdfs:subPropertyOf dt:CDCoding.code"
+          }
+        ],
+        "fixedCode": "ConsistentWith"
+      },
+      {
+        "id": "Observation.component:breastrad-ConsistentWith.code.coding:Fixed_ConsistentWith.display",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
+            "valueBoolean": true
+          }
+        ],
+        "path": "Observation.component.code.coding.display",
+        "short": "Representation defined by the system",
+        "definition": "A representation of the meaning of the code in the system, following the rules of the system.",
+        "requirements": "Need to be able to carry a human-readable meaning of the code for readers that do not know  the system.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Coding.display",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "C*E.2 - but note this is not well followed"
+          },
+          {
+            "identity": "rim",
+            "map": "CV.displayName"
+          },
+          {
+            "identity": "orim",
+            "map": "fhir:Coding.display rdfs:subPropertyOf dt:CDCoding.displayName"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component:breastrad-ConsistentWith.code.coding:Fixed_ConsistentWith.userSelected",
+        "path": "Observation.component.code.coding.userSelected",
+        "short": "If this coding was chosen directly by the user",
+        "definition": "Indicates that this coding was chosen by a user directly - e.g. off a pick list of available items (codes or displays).",
+        "comment": "Amongst a set of alternatives, a directly chosen code is the most appropriate starting point for new translations. There is some ambiguity about what exactly 'directly chosen' implies, and trading partner agreement may be needed to clarify the use of this element and its consequences more completely.",
+        "requirements": "This has been identified as a clinical safety criterium - that this exact system/code pair was chosen explicitly, rather than inferred by the system based on some rules or language processing.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Coding.userSelected",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "Sometimes implied by being first"
+          },
+          {
+            "identity": "rim",
+            "map": "CD.codingRationale"
+          },
+          {
+            "identity": "orim",
+            "map": "fhir:Coding.userSelected fhir:mapsTo dt:CDCoding.codingRationale. fhir:Coding.userSelected fhir:hasMap fhir:Coding.userSelected.map. fhir:Coding.userSelected.map a fhir:Map;   fhir:target dt:CDCoding.codingRationale. fhir:Coding.userSelected\\#true a [     fhir:source \"true\";     fhir:target dt:CDCoding.codingRationale\\#O   ]"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component:breastrad-ConsistentWith.code.text",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
+            "valueBoolean": true
+          }
+        ],
+        "path": "Observation.component.code.text",
+        "short": "Plain text representation of the concept",
+        "definition": "A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user.",
+        "comment": "Very often the text is the same as a displayName of one of the codings.",
+        "requirements": "The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "CodeableConcept.text",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "C*E.9. But note many systems use C*E.2 for this"
+          },
+          {
+            "identity": "rim",
+            "map": "./originalText[mediaType/code=\"text/plain\"]/data"
+          },
+          {
+            "identity": "orim",
+            "map": "fhir:CodeableConcept.text rdfs:subPropertyOf dt:CD.originalText"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component:breastrad-ConsistentWith.valueCodeableConcept",
+        "path": "Observation.component.valueCodeableConcept",
+        "short": "Actual component result",
+        "definition": "The information determined as a result of making the observation, if the information has a simple value.",
+        "comment": "Used when observation has a set of component observations. An observation may have both a value (e.g. an  Apgar score)  and component observations (the observations from which the Apgar score was derived). If a value is present, the datatype for this element should be determined by Observation.code. A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.",
+        "requirements": "An observation exists to have a value, though it might not if it is in error, or if it represents a group of observations.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Observation.component.value[x]",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "sct-concept",
+            "map": "363714003 |Interprets| < 441742003 |Evaluation finding|"
+          },
+          {
+            "identity": "v2",
+            "map": "OBX.2, OBX.5, OBX.6"
+          },
+          {
+            "identity": "rim",
+            "map": "value"
+          },
+          {
+            "identity": "sct-attr",
+            "map": "363714003 |Interprets|"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/breastrad-ConsistentWithVS"
+        }
+      },
+      {
+        "id": "Observation.component:breastrad-ConsistentWith.dataAbsentReason",
+        "path": "Observation.component.dataAbsentReason",
+        "short": "Why the component result is missing",
+        "definition": "Provides a reason why the expected value in the element Observation.component.value[x] is missing.",
+        "comment": "\"Null\" or exceptional values can be represented two ways in FHIR Observations.  One way is to simply include them in the value set and represent the exceptions in the value.  For example, measurement values for a serology test could be  \"detected\", \"not detected\", \"inconclusive\", or  \"test not done\". \n\nThe alternate way is to use the value element for actual observations and use the explicit dataAbsentReason element to record exceptional values.  For example, the dataAbsentReason code \"error\" could be used when the measurement was not completed.  Because of these options, use-case agreements are required to interpret general observations for exceptional values.",
+        "requirements": "For many results it is necessary to handle exceptional values in measurements.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Observation.component.dataAbsentReason",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "condition": [
+          "obs-6"
+        ],
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "ObservationValueAbsentReason"
+            }
+          ],
+          "strength": "extensible",
+          "description": "Codes specifying why the result (`Observation.value[x]`) is missing.",
+          "valueSet": "http://hl7.org/fhir/ValueSet/data-absent-reason"
+        },
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "N/A"
+          },
+          {
+            "identity": "rim",
+            "map": "value.nullFlavor"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component:breastrad-ConsistentWith.interpretation",
+        "path": "Observation.component.interpretation",
+        "short": "High, low, normal, etc.",
+        "definition": "A categorical assessment of an observation value.  For example, high, low, normal.",
+        "comment": "Historically used for laboratory results (known as 'abnormal flag' ),  its use extends to other use cases where coded interpretations  are relevant.  Often reported as one or more simple compact codes this element is often placed adjacent to the result value in reports and flow sheets to signal the meaning/normalcy status of the result.",
+        "requirements": "For some results, particularly numeric results, an interpretation is necessary to fully understand the significance of a result.",
+        "alias": [
+          "Abnormal Flag"
+        ],
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Observation.component.interpretation",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "ObservationInterpretation"
+            }
+          ],
+          "strength": "extensible",
+          "description": "Codes identifying interpretations of observations.",
+          "valueSet": "http://hl7.org/fhir/ValueSet/observation-interpretation"
+        },
+        "mapping": [
+          {
+            "identity": "sct-concept",
+            "map": "< 260245000 |Findings values|"
+          },
+          {
+            "identity": "v2",
+            "map": "OBX-8"
+          },
+          {
+            "identity": "rim",
+            "map": "interpretationCode"
+          },
+          {
+            "identity": "sct-attr",
+            "map": "363713009 |Has interpretation|"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component:breastrad-ConsistentWith.referenceRange",
+        "path": "Observation.component.referenceRange",
+        "short": "Provides guide for interpretation of component result",
+        "definition": "Guidance on how to interpret the value by comparison to a normal or recommended range.",
+        "comment": "Most observations only have one generic reference range. Systems MAY choose to restrict to only supplying the relevant reference range based on knowledge about the patient (e.g., specific to the patient's age, gender, weight and other factors), but this might not be possible or appropriate. Whenever more than one reference range is supplied, the differences between them SHOULD be provided in the reference range and/or age properties.",
+        "requirements": "Knowing what values are considered \"normal\" can help evaluate the significance of a particular result. Need to be able to provide multiple reference ranges for different contexts.",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "Observation.component.referenceRange",
+          "min": 0,
+          "max": "*"
+        },
+        "isModifier": false,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "OBX.7"
+          },
+          {
+            "identity": "rim",
+            "map": "outboundRelationship[typeCode=REFV]/target[classCode=OBS, moodCode=EVN]"
+          }
+        ],
+        "type": [
+          {
+            "code": "BackboneElement"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component:breastrad-ConsistentWith.referenceRange.id",
+        "path": "Observation.component.referenceRange.id",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "Unique id for inter-element referencing",
+        "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Element.id",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component:breastrad-ConsistentWith.referenceRange.extension",
+        "path": "Observation.component.referenceRange.extension",
+        "short": "Additional content defined by implementations",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "alias": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Element.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component:breastrad-ConsistentWith.referenceRange.modifierExtension",
+        "path": "Observation.component.referenceRange.modifierExtension",
+        "short": "Extensions that cannot be ignored even if unrecognized",
+        "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
+        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "requirements": "Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](extensibility.html#modifierExtension).",
+        "alias": [
+          "extensions",
+          "user content",
+          "modifiers"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "BackboneElement.modifierExtension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isModifier": true,
+        "isModifierReason": "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component:breastrad-ConsistentWith.referenceRange.low",
+        "path": "Observation.component.referenceRange.low",
+        "short": "Low Range, if relevant",
+        "definition": "The value of the low bound of the reference range.  The low bound of the reference range endpoint is inclusive of the value (e.g.  reference range is >=5 - <=9). If the low bound is omitted,  it is assumed to be meaningless (e.g. reference range is <=2.3).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Observation.referenceRange.low",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Quantity",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/SimpleQuantity"
+            ]
+          }
+        ],
+        "condition": [
+          "obs-3"
+        ],
+        "isModifier": false,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "OBX-7"
+          },
+          {
+            "identity": "rim",
+            "map": "value:IVL_PQ.low"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component:breastrad-ConsistentWith.referenceRange.high",
+        "path": "Observation.component.referenceRange.high",
+        "short": "High Range, if relevant",
+        "definition": "The value of the high bound of the reference range.  The high bound of the reference range endpoint is inclusive of the value (e.g.  reference range is >=5 - <=9). If the high bound is omitted,  it is assumed to be meaningless (e.g. reference range is >= 2.3).",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Observation.referenceRange.high",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Quantity",
+            "profile": [
+              "http://hl7.org/fhir/StructureDefinition/SimpleQuantity"
+            ]
+          }
+        ],
+        "condition": [
+          "obs-3"
+        ],
+        "isModifier": false,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "OBX-7"
+          },
+          {
+            "identity": "rim",
+            "map": "value:IVL_PQ.high"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component:breastrad-ConsistentWith.referenceRange.type",
+        "path": "Observation.component.referenceRange.type",
+        "short": "Reference range qualifier",
+        "definition": "Codes to indicate the what part of the targeted reference population it applies to. For example, the normal or therapeutic range.",
+        "comment": "This SHOULD be populated if there is more than one range.  If this element is not present then the normal range is assumed.",
+        "requirements": "Need to be able to say what kind of reference range this is - normal, recommended, therapeutic, etc.,  - for proper interpretation.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Observation.referenceRange.type",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "ObservationRangeMeaning"
+            }
+          ],
+          "strength": "extensible",
+          "description": "Code for the meaning of a reference range.",
+          "valueSet": "http://hl7.org/fhir/ValueSet/referencerange-meaning"
+        },
+        "mapping": [
+          {
+            "identity": "sct-concept",
+            "map": "< 260245000 |Findings values| OR  \r< 365860008 |General clinical state finding| \rOR \r< 250171008 |Clinical history or observation findings| OR  \r< 415229000 |Racial group| OR \r< 365400002 |Finding of puberty stage| OR\r< 443938003 |Procedure carried out on subject|"
+          },
+          {
+            "identity": "v2",
+            "map": "OBX-10"
+          },
+          {
+            "identity": "rim",
+            "map": "interpretationCode"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component:breastrad-ConsistentWith.referenceRange.appliesTo",
+        "path": "Observation.component.referenceRange.appliesTo",
+        "short": "Reference range population",
+        "definition": "Codes to indicate the target population this reference range applies to.  For example, a reference range may be based on the normal population or a particular sex or race.  Multiple `appliesTo`  are interpreted as an \"AND\" of the target populations.  For example, to represent a target population of African American females, both a code of female and a code for African American would be used.",
+        "comment": "This SHOULD be populated if there is more than one range.  If this element is not present then the normal population is assumed.",
+        "requirements": "Need to be able to identify the target population for proper interpretation.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Observation.referenceRange.appliesTo",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": false,
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "ObservationRangeType"
+            }
+          ],
+          "strength": "extensible",
+          "description": "Codes identifying the population the reference range applies to.",
+          "valueSet": "http://hl7.org/fhir/ValueSet/referencerange-appliesto"
+        },
+        "mapping": [
+          {
+            "identity": "sct-concept",
+            "map": "< 260245000 |Findings values| OR  \r< 365860008 |General clinical state finding| \rOR \r< 250171008 |Clinical history or observation findings| OR  \r< 415229000 |Racial group| OR \r< 365400002 |Finding of puberty stage| OR\r< 443938003 |Procedure carried out on subject|"
+          },
+          {
+            "identity": "v2",
+            "map": "OBX-10"
+          },
+          {
+            "identity": "rim",
+            "map": "interpretationCode"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component:breastrad-ConsistentWith.referenceRange.age",
+        "path": "Observation.component.referenceRange.age",
+        "short": "Applicable age range, if relevant",
+        "definition": "The age at which this reference range is applicable. This is a neonatal age (e.g. number of weeks at term) if the meaning says so.",
+        "requirements": "Some analytes vary greatly over age.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Observation.referenceRange.age",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "Range"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "outboundRelationship[typeCode=PRCN].targetObservationCriterion[code=\"age\"].value"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component:breastrad-ConsistentWith.referenceRange.text",
+        "path": "Observation.component.referenceRange.text",
+        "short": "Text based reference range in an observation",
+        "definition": "Text based reference range in an observation which may be used when a quantitative range is not appropriate for an observation.  An example would be a reference value of \"Negative\" or a list or table of \"normals\".",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Observation.referenceRange.text",
+          "min": 0,
+          "max": "1"
+        },
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "OBX-7"
+          },
+          {
+            "identity": "rim",
+            "map": "value:ST"
+          }
+        ]
+      },
+      {
         "id": "Observation.component:breastrad-CystTypes",
         "path": "Observation.component",
         "short": "CystTypes: Cyst Types",
@@ -12780,7 +13893,7 @@
           }
         ],
         "slicing": {
-          "id": "12",
+          "id": "13",
           "discriminator": [
             {
               "type": "value",
@@ -13893,7 +15006,7 @@
           }
         ],
         "slicing": {
-          "id": "13",
+          "id": "14",
           "discriminator": [
             {
               "type": "value",
@@ -15006,7 +16119,7 @@
           }
         ],
         "slicing": {
-          "id": "14",
+          "id": "15",
           "discriminator": [
             {
               "type": "value",
@@ -16119,7 +17232,7 @@
           }
         ],
         "slicing": {
-          "id": "15",
+          "id": "16",
           "discriminator": [
             {
               "type": "value",
@@ -17232,7 +18345,7 @@
           }
         ],
         "slicing": {
-          "id": "16",
+          "id": "17",
           "discriminator": [
             {
               "type": "value",
@@ -18345,7 +19458,7 @@
           }
         ],
         "slicing": {
-          "id": "17",
+          "id": "18",
           "discriminator": [
             {
               "type": "value",
@@ -19458,7 +20571,7 @@
           }
         ],
         "slicing": {
-          "id": "18",
+          "id": "19",
           "discriminator": [
             {
               "type": "value",
@@ -20571,7 +21684,7 @@
           }
         ],
         "slicing": {
-          "id": "19",
+          "id": "20",
           "discriminator": [
             {
               "type": "value",
@@ -21684,7 +22797,7 @@
           }
         ],
         "slicing": {
-          "id": "20",
+          "id": "21",
           "discriminator": [
             {
               "type": "value",
@@ -22797,7 +23910,7 @@
           }
         ],
         "slicing": {
-          "id": "21",
+          "id": "22",
           "discriminator": [
             {
               "type": "value",
@@ -23910,7 +25023,7 @@
           }
         ],
         "slicing": {
-          "id": "22",
+          "id": "23",
           "discriminator": [
             {
               "type": "value",
@@ -24998,7 +26111,7 @@
           }
         ],
         "slicing": {
-          "id": "23",
+          "id": "24",
           "discriminator": [
             {
               "type": "value",
@@ -26435,8 +27548,8 @@
         "id": "Observation.component:breastrad-AbnormalityDensity",
         "path": "Observation.component",
         "sliceName": "breastrad-AbnormalityDensity",
-        "short": "AbnormalityDensity: Visually estimated content of fibroglandular-density tissue within the breast",
-        "definition": "Visually estimated content of fibroglandular-density tissue within the breast.\n<br>This item will be a slice of Observation.Component.\n<br>The slice will be on  Observation.Component.Code.\n<br>This slice code will be modified in a future  versions to be a suitable public terminology value.",
+        "short": "AbnormalityDensity: Ductal carcinoma in situ (DCIS) is the presence of abnormal cells inside a milk duct in the breast",
+        "definition": "Ductal carcinoma in situ (DCIS) is the presence of abnormal cells inside a milk duct in the breast.\nDCIS is considered the earliest form of breast cancer. DCIS is noninvasive, meaning it hasn't spread out of the milk duct and has a low risk of becoming invasive..\n<br>This item will be a slice of Observation.Component.\n<br>The slice will be on  Observation.Component.Code.\n<br>This slice code will be modified in a future  versions to be a suitable public terminology value.",
         "min": 0,
         "max": "1"
       },
@@ -27122,6 +28235,121 @@
         }
       },
       {
+        "id": "Observation.component:breastrad-ConsistentWith",
+        "path": "Observation.component",
+        "sliceName": "breastrad-ConsistentWith",
+        "short": "ConsistentWith: Consistent With",
+        "definition": "Consistent With.\n<br>This item will be a slice of Observation.Component.\n<br>The slice will be on  Observation.Component.Code.\n<br>This slice code will be modified in a future  versions to be a suitable public terminology value.",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Observation.component:breastrad-ConsistentWith.code",
+        "path": "Observation.component.code"
+      },
+      {
+        "id": "Observation.component:breastrad-ConsistentWith.code.coding",
+        "path": "Observation.component.code.coding",
+        "slicing": {
+          "id": "12",
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "code"
+            }
+          ],
+          "ordered": false,
+          "rules": "open"
+        },
+        "min": 1,
+        "max": "*"
+      },
+      {
+        "id": "Observation.component:breastrad-ConsistentWith.code.coding:Fixed_ConsistentWith",
+        "path": "Observation.component.code.coding",
+        "sliceName": "Fixed_ConsistentWith",
+        "short": "Code defined by a terminology system",
+        "definition": "A reference to a code defined by a terminology system.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "CodeableConcept.coding",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "id": "Observation.component:breastrad-ConsistentWith.code.coding:Fixed_ConsistentWith.system",
+        "path": "Observation.component.code.coding.system",
+        "fixedUri": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/breastrad-BreastAbnormalityCodesCS"
+      },
+      {
+        "id": "Observation.component:breastrad-ConsistentWith.code.coding:Fixed_ConsistentWith.code",
+        "path": "Observation.component.code.coding.code",
+        "fixedCode": "ConsistentWith"
+      },
+      {
+        "id": "Observation.component:breastrad-ConsistentWith.valueCodeableConcept",
+        "path": "Observation.component.valueCodeableConcept",
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/breastrad-ConsistentWithVS"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
+      },
+      {
+        "id": "Observation.component:breastrad-ConsistentWith.interpretation",
+        "path": "Observation.component.interpretation",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Observation.component:breastrad-ConsistentWith.referenceRange",
+        "path": "Observation.component.referenceRange",
+        "min": 0,
+        "max": "0"
+      },
+      {
+        "id": "Observation.component:breastrad-ConsistentWith.referenceRange.type",
+        "path": "Observation.component.referenceRange.type",
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "ObservationRangeMeaning"
+            }
+          ],
+          "strength": "extensible",
+          "description": "Code for the meaning of a reference range.",
+          "valueSet": "http://hl7.org/fhir/ValueSet/referencerange-meaning"
+        }
+      },
+      {
+        "id": "Observation.component:breastrad-ConsistentWith.referenceRange.appliesTo",
+        "path": "Observation.component.referenceRange.appliesTo",
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "ObservationRangeType"
+            }
+          ],
+          "strength": "extensible",
+          "description": "Codes identifying the population the reference range applies to.",
+          "valueSet": "http://hl7.org/fhir/ValueSet/referencerange-appliesto"
+        }
+      },
+      {
         "id": "Observation.component:breastrad-CystTypes",
         "path": "Observation.component",
         "sliceName": "breastrad-CystTypes",
@@ -27138,7 +28366,7 @@
         "id": "Observation.component:breastrad-CystTypes.code.coding",
         "path": "Observation.component.code.coding",
         "slicing": {
-          "id": "12",
+          "id": "13",
           "discriminator": [
             {
               "type": "value",
@@ -27253,7 +28481,7 @@
         "id": "Observation.component:breastrad-ForeignBody.code.coding",
         "path": "Observation.component.code.coding",
         "slicing": {
-          "id": "13",
+          "id": "14",
           "discriminator": [
             {
               "type": "value",
@@ -27368,7 +28596,7 @@
         "id": "Observation.component:breastrad-Hilum.code.coding",
         "path": "Observation.component.code.coding",
         "slicing": {
-          "id": "14",
+          "id": "15",
           "discriminator": [
             {
               "type": "value",
@@ -27483,7 +28711,7 @@
         "id": "Observation.component:breastrad-LymphNodeQualifiers.code.coding",
         "path": "Observation.component.code.coding",
         "slicing": {
-          "id": "15",
+          "id": "16",
           "discriminator": [
             {
               "type": "value",
@@ -27598,7 +28826,7 @@
         "id": "Observation.component:breastrad-Margin.code.coding",
         "path": "Observation.component.code.coding",
         "slicing": {
-          "id": "16",
+          "id": "17",
           "discriminator": [
             {
               "type": "value",
@@ -27713,7 +28941,7 @@
         "id": "Observation.component:breastrad-MassTypes.code.coding",
         "path": "Observation.component.code.coding",
         "slicing": {
-          "id": "17",
+          "id": "18",
           "discriminator": [
             {
               "type": "value",
@@ -27828,7 +29056,7 @@
         "id": "Observation.component:breastrad-NodeTypes.code.coding",
         "path": "Observation.component.code.coding",
         "slicing": {
-          "id": "18",
+          "id": "19",
           "discriminator": [
             {
               "type": "value",
@@ -27943,7 +29171,7 @@
         "id": "Observation.component:breastrad-Shape.code.coding",
         "path": "Observation.component.code.coding",
         "slicing": {
-          "id": "19",
+          "id": "20",
           "discriminator": [
             {
               "type": "value",
@@ -28058,7 +29286,7 @@
         "id": "Observation.component:breastrad-Vascularity.code.coding",
         "path": "Observation.component.code.coding",
         "slicing": {
-          "id": "20",
+          "id": "21",
           "discriminator": [
             {
               "type": "value",
@@ -28173,7 +29401,7 @@
         "id": "Observation.component:breastrad-Wall.code.coding",
         "path": "Observation.component.code.coding",
         "slicing": {
-          "id": "21",
+          "id": "22",
           "discriminator": [
             {
               "type": "value",
@@ -28288,7 +29516,7 @@
         "id": "Observation.component:breastrad-MaxLength.code.coding",
         "path": "Observation.component.code.coding",
         "slicing": {
-          "id": "22",
+          "id": "23",
           "discriminator": [
             {
               "type": "value",
@@ -28406,7 +29634,7 @@
         "id": "Observation.component:breastrad-MaxWidth.code.coding",
         "path": "Observation.component.code.coding",
         "slicing": {
-          "id": "23",
+          "id": "24",
           "discriminator": [
             {
               "type": "value",
