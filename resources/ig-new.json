@@ -3,15 +3,15 @@
   "id" : "hl7.fhir.us.breast-radiology-0.1.0",
   "extension" : [{
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource",
-    "valueString" : "C:\\Development\\MITRE\\cimpl\\Fhir-BreastRadiologyReport\\out.v4\\fhir\\guide\\resources"
+    "valueString" : "C:\\Development\\Penrad\\FhirKhit\\Projects\\BreastRadiology\\IG\\guide\\resources"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource",
-    "valueString" : "C:\\Development\\MITRE\\cimpl\\Fhir-BreastRadiologyReport\\out.v4\\fhir\\guide\\examples"
+    "valueString" : "C:\\Development\\Penrad\\FhirKhit\\Projects\\BreastRadiology\\IG\\guide\\examples"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages",
-    "valueString" : "C:\\Development\\MITRE\\cimpl\\Fhir-BreastRadiologyReport\\out.v4\\fhir\\guide\\pages"
+    "valueString" : "C:\\Development\\Penrad\\FhirKhit\\Projects\\BreastRadiology\\IG\\guide\\pages"
   }],
   "url" : "http://hl7.org/fhir/us/breast-radiology/ImplementationGuide/hl7.fhir.us.breast-radiology-0.1.0",
   "version" : "0.1.0",
@@ -29,12 +29,6 @@
   "license" : "CC0-1.0",
   "fhirVersion" : ["4.0.0",
   "4.0.0"],
-  "dependsOn" : [{
-    "id" : "uscore",
-    "uri" : "http://hl7.org/fhir/us/core",
-    "packageId" : "hl7.fhir.us.core",
-    "version" : "3.0.0"
-  }],
   "definition" : {
     "grouping" : [{
       "name" : "Profiles in this Implementation Guide",
@@ -42,920 +36,479 @@
     }],
     "resource" : [{
       "reference" : {
-        "reference" : "StructureDefinition/obf-ActionPerformed"
-      },
-      "name" : "obf-ActionPerformed",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/obf-ActionRequest"
-      },
-      "name" : "obf-ActionRequest",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/obf-ActionStatement"
-      },
-      "name" : "obf-ActionStatement",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/breastrad-BreastAbnormality"
-      },
-      "name" : "breastrad-BreastAbnormality",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/breastrad-BreastRadiologyDocument"
-      },
-      "name" : "breastrad-BreastRadiologyDocument",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/breastrad-BreastRadiologyReport"
-      },
-      "name" : "breastrad-BreastRadiologyReport",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/obf-ClinicalStatement"
-      },
-      "name" : "obf-ClinicalStatement",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/obf-Composition"
-      },
-      "name" : "obf-Composition",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/obf-Condition"
-      },
-      "name" : "obf-Condition",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/obf-DiagnosticReport"
-      },
-      "name" : "obf-DiagnosticReport",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/obf-DomainResource"
-      },
-      "name" : "obf-DomainResource",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/obf-EncounterOrEpisode"
-      },
-      "name" : "obf-EncounterOrEpisode",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/obf-Entity"
-      },
-      "name" : "obf-Entity",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/obf-EntityOrRole"
-      },
-      "name" : "obf-EntityOrRole",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/obf-InformationItem"
-      },
-      "name" : "obf-InformationItem",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/obf-MedicationAction"
-      },
-      "name" : "obf-MedicationAction",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/obf-MedicationDispense"
-      },
-      "name" : "obf-MedicationDispense",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/obf-MedicationStatement"
-      },
-      "name" : "obf-MedicationStatement",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/obf-Observation"
-      },
-      "name" : "obf-Observation",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/obf-Procedure"
-      },
-      "name" : "obf-Procedure",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/obf-Role"
-      },
-      "name" : "obf-Role",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/obf-SituationStatement"
-      },
-      "name" : "obf-SituationStatement",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/obf-datatype-AnatomicalOrientation-extension"
-      },
-      "name" : "obf-datatype-AnatomicalOrientation",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/obf-Annotation-extension"
-      },
-      "name" : "obf-Annotation",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/obf-BasedOn-extension"
-      },
-      "name" : "obf-BasedOn",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/breastrad-BreastExamTechnique-extension"
-      },
-      "name" : "breastrad-BreastExamTechnique",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/obf-CareContext-extension"
-      },
-      "name" : "obf-CareContext",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/obf-datatype-Category-extension"
-      },
-      "name" : "obf-datatype-Category",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/obf-datatype-Code-extension"
-      },
-      "name" : "obf-datatype-Code",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/obf-Condition-extension"
-      },
-      "name" : "obf-Condition",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/obf-DiagnosisCode-extension"
-      },
-      "name" : "obf-DiagnosisCode",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/obf-Dosage-extension"
-      },
-      "name" : "obf-Dosage",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/obf-EncounterDiagnosis-extension"
-      },
-      "name" : "obf-EncounterDiagnosis",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/obf-ExpectedPerformanceTime-extension"
-      },
-      "name" : "obf-ExpectedPerformanceTime",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/obf-ExpectedPerformer-extension"
-      },
-      "name" : "obf-ExpectedPerformer",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/obf-ExpectedPerformerType-extension"
-      },
-      "name" : "obf-ExpectedPerformerType",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/obf-datatype-Identifier-extension"
-      },
-      "name" : "obf-datatype-Identifier",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/obf-datatype-LandmarkLocation-extension"
-      },
-      "name" : "obf-datatype-LandmarkLocation",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/obf-datatype-LandmarkToBodyLocationDirection-extension"
-      },
-      "name" : "obf-datatype-LandmarkToBodyLocationDirection",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/obf-datatype-LandmarkToBodyLocationDistance-extension"
-      },
-      "name" : "obf-datatype-LandmarkToBodyLocationDistance",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/obf-datatype-LandmarkType-extension"
-      },
-      "name" : "obf-datatype-LandmarkType",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/obf-datatype-Laterality-extension"
-      },
-      "name" : "obf-datatype-Laterality",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/obf-MedicationCodeOrReference-extension"
-      },
-      "name" : "obf-MedicationCodeOrReference",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/obf-Method-extension"
-      },
-      "name" : "obf-Method",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/obf-datatype-OccurrenceTimeOrPeriod-extension"
-      },
-      "name" : "obf-datatype-OccurrenceTimeOrPeriod",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/obf-OnBehalfOf-extension"
-      },
-      "name" : "obf-OnBehalfOf",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/obf-Organization-extension"
-      },
-      "name" : "obf-Organization",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/obf-PartOf-extension"
-      },
-      "name" : "obf-PartOf",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/obf-Participant-extension"
-      },
-      "name" : "obf-Participant",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/obf-Participation-extension"
-      },
-      "name" : "obf-Participation",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/obf-ParticipationPeriod-extension"
-      },
-      "name" : "obf-ParticipationPeriod",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/obf-ParticipationType-extension"
-      },
-      "name" : "obf-ParticipationType",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/obf-datatype-PriorityCode-extension"
-      },
-      "name" : "obf-datatype-PriorityCode",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/obf-datatype-PriorityRank-extension"
-      },
-      "name" : "obf-datatype-PriorityRank",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/obf-ReasonCode-extension"
-      },
-      "name" : "obf-ReasonCode",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/obf-ReasonReference-extension"
-      },
-      "name" : "obf-ReasonReference",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/obf-datatype-RelationToLandmark-extension"
-      },
-      "name" : "obf-datatype-RelationToLandmark",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/obf-RequestIntent-extension"
-      },
-      "name" : "obf-RequestIntent",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/obf-Requester-extension"
-      },
-      "name" : "obf-Requester",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/breastrad-ResultComposition-extension"
-      },
-      "name" : "breastrad-ResultComposition",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/obf-StatementDateTime-extension"
-      },
-      "name" : "obf-StatementDateTime",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/obf-Status-extension"
-      },
-      "name" : "obf-Status",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/obf-StatusHistory-extension"
-      },
-      "name" : "obf-StatusHistory",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/obf-SubjectOfRecord-extension"
-      },
-      "name" : "obf-SubjectOfRecord",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/breastrad-SummaryBiRadCode-extension"
-      },
-      "name" : "breastrad-SummaryBiRadCode",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/obf-TerminationReason-extension"
-      },
-      "name" : "obf-TerminationReason",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/obf-datatype-TimePeriod-extension"
-      },
-      "name" : "obf-datatype-TimePeriod",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/obf-TreatmentIntent-extension"
-      },
-      "name" : "obf-TreatmentIntent",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "StructureDefinition/obf-datatype-Type-extension"
-      },
-      "name" : "obf-datatype-Type",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "ValueSet/breastrad-AbnormalityDensityVS"
-      },
-      "name" : "AbnormalityDensityVS",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "ValueSet/breastrad-AbnormalityTypeVS"
-      },
-      "name" : "AbnormalityTypeVS",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "ValueSet/obf-datatype-AnatomicalDirectionVS"
-      },
-      "name" : "AnatomicalDirectionVS",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "ValueSet/obf-datatype-AnatomicalOrientationVS"
-      },
-      "name" : "AnatomicalOrientationVS",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "ValueSet/breastrad-AssociatedFindingsVS"
-      },
-      "name" : "AssociatedFindingsVS",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "ValueSet/breastrad-AsymmetryTypesVS"
-      },
-      "name" : "AsymmetryTypesVS",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "ValueSet/breastrad-BiRadCodeVS"
-      },
-      "name" : "BiRadCodeVS",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "ValueSet/obf-datatype-BodyLocationVS"
-      },
-      "name" : "BodyLocationVS",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "ValueSet/breastrad-BreastAbnormalityCodesVS"
-      },
-      "name" : "BreastAbnormalityCodesVS",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "ValueSet/breastrad-BreastDensityVS"
-      },
-      "name" : "BreastDensityVS",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "ValueSet/breastrad-BreastDepthVS"
-      },
-      "name" : "BreastDepthVS",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "ValueSet/breastrad-BreastDirectionVS"
-      },
-      "name" : "BreastDirectionVS",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "ValueSet/breastrad-CalcificationTypeVS"
-      },
-      "name" : "CalcificationTypeVS",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "ValueSet/breastrad-ChangeVS"
-      },
-      "name" : "ChangeVS",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "ValueSet/breastrad-ConsistentWithVS"
-      },
-      "name" : "ConsistentWithVS",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "ValueSet/breastrad-CystTypesVS"
-      },
-      "name" : "CystTypesVS",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "ValueSet/breastrad-ForeignBodyVS"
-      },
-      "name" : "ForeignBodyVS",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "ValueSet/breastrad-HilumVS"
-      },
-      "name" : "HilumVS",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "ValueSet/obf-datatype-LandmarkTypeVS"
-      },
-      "name" : "LandmarkTypeVS",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "ValueSet/breastrad-LymphNodeQualifiersVS"
-      },
-      "name" : "LymphNodeQualifiersVS",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "ValueSet/breastrad-MarginVS"
-      },
-      "name" : "MarginVS",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "ValueSet/breastrad-MassTypesVS"
-      },
-      "name" : "MassTypesVS",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "ValueSet/breastrad-NodeTypesVS"
-      },
-      "name" : "NodeTypesVS",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "ValueSet/breastrad-RadiologicProcedureVS"
-      },
-      "name" : "RadiologicProcedureVS",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "ValueSet/obf-ResearchSubjectTerminationReasonVS"
-      },
-      "name" : "ResearchSubjectTerminationReasonVS",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "ValueSet/obf-datatype-SettingVS"
-      },
-      "name" : "SettingVS",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "ValueSet/breastrad-ShapeVS"
-      },
-      "name" : "ShapeVS",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "ValueSet/obf-StudyArmTypeVS"
-      },
-      "name" : "StudyArmTypeVS",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "ValueSet/obf-TreatmentIntentVS"
-      },
-      "name" : "TreatmentIntentVS",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "ValueSet/obf-TreatmentTerminationReasonVS"
-      },
-      "name" : "TreatmentTerminationReasonVS",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "ValueSet/obf-datatype-UnitsOfLengthVS"
-      },
-      "name" : "UnitsOfLengthVS",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "ValueSet/breastrad-VascularityVS"
-      },
-      "name" : "VascularityVS",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "ValueSet/breastrad-WallVS"
-      },
-      "name" : "WallVS",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "CodeSystem/breastrad-AbnormalityDensityCS"
+        "reference" : "CodeSystem/AbnormalityDensityCS"
       },
       "name" : "AbnormalityDensityCS",
       "exampleBoolean" : false
     },
     {
       "reference" : {
-        "reference" : "CodeSystem/breastrad-AbnormalityTypeCS"
+        "reference" : "CodeSystem/AbnormalityTypeCS"
       },
       "name" : "AbnormalityTypeCS",
       "exampleBoolean" : false
     },
     {
       "reference" : {
-        "reference" : "CodeSystem/breastrad-AssociatedFindingsCS"
+        "reference" : "CodeSystem/AssociatedFindingsCS"
       },
       "name" : "AssociatedFindingsCS",
       "exampleBoolean" : false
     },
     {
       "reference" : {
-        "reference" : "CodeSystem/breastrad-AsymmetryTypesCS"
+        "reference" : "CodeSystem/AsymmetryTypesCS"
       },
       "name" : "AsymmetryTypesCS",
       "exampleBoolean" : false
     },
     {
       "reference" : {
-        "reference" : "CodeSystem/breastrad-BiRadCodeCS"
+        "reference" : "CodeSystem/BiRadCodeCS"
       },
       "name" : "BiRadCodeCS",
       "exampleBoolean" : false
     },
     {
       "reference" : {
-        "reference" : "CodeSystem/breastrad-BreastAbnormalityCodesCS"
+        "reference" : "CodeSystem/BreastAbnormalityCodesCS"
       },
       "name" : "BreastAbnormalityCodesCS",
       "exampleBoolean" : false
     },
     {
       "reference" : {
-        "reference" : "CodeSystem/breastrad-BreastDensityCS"
-      },
-      "name" : "BreastDensityCS",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "CodeSystem/breastrad-BreastDepthCS"
-      },
-      "name" : "BreastDepthCS",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "CodeSystem/breastrad-BreastDirectionCS"
-      },
-      "name" : "BreastDirectionCS",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "CodeSystem/breastrad-CalcificationTypeCS"
+        "reference" : "CodeSystem/CalcificationTypeCS"
       },
       "name" : "CalcificationTypeCS",
       "exampleBoolean" : false
     },
     {
       "reference" : {
-        "reference" : "CodeSystem/breastrad-ChangeCS"
+        "reference" : "CodeSystem/ChangeCS"
       },
       "name" : "ChangeCS",
       "exampleBoolean" : false
     },
     {
       "reference" : {
-        "reference" : "CodeSystem/breastrad-ConsistentWithCS"
+        "reference" : "CodeSystem/ConsistentWithCS"
       },
       "name" : "ConsistentWithCS",
       "exampleBoolean" : false
     },
     {
       "reference" : {
-        "reference" : "CodeSystem/breastrad-CystTypesCS"
+        "reference" : "CodeSystem/CystTypesCS"
       },
       "name" : "CystTypesCS",
       "exampleBoolean" : false
     },
     {
       "reference" : {
-        "reference" : "CodeSystem/breastrad-ForeignBodyCS"
+        "reference" : "CodeSystem/ForeignBodyCS"
       },
       "name" : "ForeignBodyCS",
       "exampleBoolean" : false
     },
     {
       "reference" : {
-        "reference" : "CodeSystem/breastrad-HilumCS"
+        "reference" : "CodeSystem/HilumCS"
       },
       "name" : "HilumCS",
       "exampleBoolean" : false
     },
     {
       "reference" : {
-        "reference" : "CodeSystem/breastrad-LymphNodeQualifiersCS"
+        "reference" : "CodeSystem/LymphNodeQualifiersCS"
       },
       "name" : "LymphNodeQualifiersCS",
       "exampleBoolean" : false
     },
     {
       "reference" : {
-        "reference" : "CodeSystem/breastrad-MarginCS"
+        "reference" : "CodeSystem/MarginCS"
       },
       "name" : "MarginCS",
       "exampleBoolean" : false
     },
     {
       "reference" : {
-        "reference" : "CodeSystem/breastrad-MassTypesCS"
+        "reference" : "CodeSystem/MassTypesCS"
       },
       "name" : "MassTypesCS",
       "exampleBoolean" : false
     },
     {
       "reference" : {
-        "reference" : "CodeSystem/breastrad-NodeTypesCS"
+        "reference" : "CodeSystem/NodeTypesCS"
       },
       "name" : "NodeTypesCS",
       "exampleBoolean" : false
     },
     {
       "reference" : {
-        "reference" : "CodeSystem/breastrad-RadiologicProcedureCS"
-      },
-      "name" : "RadiologicProcedureCS",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "CodeSystem/obf-ResearchSubjectTerminationReasonCS"
-      },
-      "name" : "ResearchSubjectTerminationReasonCS",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "CodeSystem/obf-datatype-SettingCS"
-      },
-      "name" : "SettingCS",
-      "exampleBoolean" : false
-    },
-    {
-      "reference" : {
-        "reference" : "CodeSystem/breastrad-ShapeCS"
+        "reference" : "CodeSystem/ShapeCS"
       },
       "name" : "ShapeCS",
       "exampleBoolean" : false
     },
     {
       "reference" : {
-        "reference" : "CodeSystem/breastrad-VascularityCS"
+        "reference" : "CodeSystem/VascularityCS"
       },
       "name" : "VascularityCS",
       "exampleBoolean" : false
     },
     {
       "reference" : {
-        "reference" : "CodeSystem/breastrad-WallCS"
+        "reference" : "CodeSystem/WallCS"
       },
       "name" : "WallCS",
       "exampleBoolean" : false
     },
     {
       "reference" : {
-        "reference" : "Observation/BreastAbnormalityExample1"
+        "reference" : "StructureDefinition/BreastRadiologyAbnormality"
       },
-      "name" : "Example: BreastAbnormalityExample1",
-      "exampleBoolean" : true
+      "name" : "BreastRadiologyAbnormality",
+      "exampleBoolean" : false
     },
     {
       "reference" : {
-        "reference" : "Observation/BreastAbnormalityExample2"
+        "reference" : "StructureDefinition/BreastRadiologyAbnormalityAssociatedFindings"
       },
-      "name" : "Example: BreastAbnormalityExample2",
-      "exampleBoolean" : true
+      "name" : "BreastRadiologyAbnormalityAssociatedFindings",
+      "exampleBoolean" : false
     },
     {
       "reference" : {
-        "reference" : "Composition/BreastRadiologyDocumentExample1"
+        "reference" : "StructureDefinition/BreastRadiologyAbnormalityAsymmetryType"
       },
-      "name" : "Example: BreastRadiologyDocumentExample1",
-      "exampleBoolean" : true
+      "name" : "BreastRadiologyAbnormalityAsymmetryType",
+      "exampleBoolean" : false
     },
     {
       "reference" : {
-        "reference" : "DiagnosticReport/BreastRadiologyReportExample1"
+        "reference" : "StructureDefinition/BreastRadiologyAbnormalityBiRadCode"
       },
-      "name" : "Example: BreastRadiologyReportExample1",
-      "exampleBoolean" : true
+      "name" : "BreastRadiologyAbnormalityBiRadCode",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadiologyAbnormalityCalcificationType"
+      },
+      "name" : "BreastRadiologyAbnormalityCalcificationType",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadiologyAbnormalityChange"
+      },
+      "name" : "BreastRadiologyAbnormalityChange",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadiologyAbnormalityConsistentWith"
+      },
+      "name" : "BreastRadiologyAbnormalityConsistentWith",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadiologyAbnormalityCystTypes"
+      },
+      "name" : "BreastRadiologyAbnormalityCystTypes",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadiologyAbnormalityDensity"
+      },
+      "name" : "BreastRadiologyAbnormalityDensity",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadiologyAbnormalityForeignBody"
+      },
+      "name" : "BreastRadiologyAbnormalityForeignBody",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadiologyAbnormalityHilum"
+      },
+      "name" : "BreastRadiologyAbnormalityHilum",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadiologyAbnormalityLymphNodeQualifiers"
+      },
+      "name" : "BreastRadiologyAbnormalityLymphNodeQualifiers",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadiologyAbnormalityMargin"
+      },
+      "name" : "BreastRadiologyAbnormalityMargin",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadiologyAbnormalityMassTypes"
+      },
+      "name" : "BreastRadiologyAbnormalityMassTypes",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadiologyAbnormalityMaxLength"
+      },
+      "name" : "BreastRadiologyAbnormalityMaxLength",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadiologyAbnormalityNodeTypes"
+      },
+      "name" : "BreastRadiologyAbnormalityNodeTypes",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadiologyAbnormalityShape"
+      },
+      "name" : "BreastRadiologyAbnormalityShape",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadiologyAbnormalityType"
+      },
+      "name" : "BreastRadiologyAbnormalityType",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadiologyAbnormalityVascularity"
+      },
+      "name" : "BreastRadiologyAbnormalityVascularity",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadiologyAbnormalityWall"
+      },
+      "name" : "BreastRadiologyAbnormalityWall",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadiologyObservation"
+      },
+      "name" : "BreastRadiologyObservation",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadiologyObservationFindings"
+      },
+      "name" : "BreastRadiologyObservationFindings",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadiologyObservationFindingsLeftBreast"
+      },
+      "name" : "BreastRadiologyObservationFindingsLeftBreast",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadiologyObservationFindingsRightBreast"
+      },
+      "name" : "BreastRadiologyObservationFindingsRightBreast",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadiologyObservationImpressions"
+      },
+      "name" : "BreastRadiologyObservationImpressions",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadiologyObservationPatientHistory"
+      },
+      "name" : "BreastRadiologyObservationPatientHistory",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadiologyObservationPatientRisk"
+      },
+      "name" : "BreastRadiologyObservationPatientRisk",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadiologyPriorReports"
+      },
+      "name" : "BreastRadiologyPriorReports",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadiologyRecommendations"
+      },
+      "name" : "BreastRadiologyRecommendations",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/BreastRadiologyReport"
+      },
+      "name" : "BreastRadiologyReport",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "ValueSet/AbnormalityDensityVS"
+      },
+      "name" : "AbnormalityDensityVS",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "ValueSet/AbnormalityTypeVS"
+      },
+      "name" : "AbnormalityTypeVS",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "ValueSet/AssociatedFindingsVS"
+      },
+      "name" : "AssociatedFindingsVS",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "ValueSet/AsymmetryTypesVS"
+      },
+      "name" : "AsymmetryTypesVS",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "ValueSet/BiRadCodeVS"
+      },
+      "name" : "BiRadCodeVS",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "ValueSet/BreastAbnormalityCodesVS"
+      },
+      "name" : "BreastAbnormalityCodesVS",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "ValueSet/CalcificationTypeVS"
+      },
+      "name" : "CalcificationTypeVS",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "ValueSet/ChangeVS"
+      },
+      "name" : "ChangeVS",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "ValueSet/ConsistentWithVS"
+      },
+      "name" : "ConsistentWithVS",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "ValueSet/CystTypesVS"
+      },
+      "name" : "CystTypesVS",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "ValueSet/ForeignBodyVS"
+      },
+      "name" : "ForeignBodyVS",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "ValueSet/HilumVS"
+      },
+      "name" : "HilumVS",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "ValueSet/LymphNodeQualifiersVS"
+      },
+      "name" : "LymphNodeQualifiersVS",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "ValueSet/MarginVS"
+      },
+      "name" : "MarginVS",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "ValueSet/MassTypesVS"
+      },
+      "name" : "MassTypesVS",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "ValueSet/NodeTypesVS"
+      },
+      "name" : "NodeTypesVS",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "ValueSet/ShapeVS"
+      },
+      "name" : "ShapeVS",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "ValueSet/VascularityVS"
+      },
+      "name" : "VascularityVS",
+      "exampleBoolean" : false
+    },
+    {
+      "reference" : {
+        "reference" : "ValueSet/WallVS"
+      },
+      "name" : "WallVS",
+      "exampleBoolean" : false
     }],
     "page" : {
       "nameUrl" : "index.html",
