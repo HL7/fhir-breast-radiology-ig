@@ -44,9 +44,6 @@
 <h3><a name="Overview"></a>Overview of a breast radiology report</h3>
 <p>The following graphic should provide a high-level view of the existing expectations and documentation conventions of a typical breast radiology report.</p>
 <p><img src="ProfileOverview.jpg" alt="Profile Overview" /></p>
-<p>The following graphic provides details of the existing observations 
-that are made and expected of a breast abnormality.</p>
-<p><img src="BreastAbnormality.jpg" alt="Breast Abnormality Observation Overview" /></p>
 <h3><a name="Modeling"></a>FHIR Modeling choices</h3>
 <p>In the context of FHIR we are currently utilizing the FHIR DiagnosticReport anchor resource as since it provides a resource definition that can be referenced in a broad variety of other clinical communications as the reason for other treatment and diagnostic choices.  This resource does not however provide the structural capabilities to aggregate together collections of observation, conditions and recommendations into the sections and subsections that are currently expected in a breast radiology report.  For this ballot we have chosen to use the Composition resource which was designed for this purpose.  Since DiagnosticReport did not inherently provide a method to reference Composition in this way, we were left with the somewhat awkward option of constraining out the Result attribute and then adding back in a nearly identical attribute ResultComposition which allows for referencing Composition.</p>
 <p>While nothing being done here is specifically forbidden within FHIR, we feel that taken together this strategy has.  We also feel that when a solution is found to these structural challenges it should be clearly documented so that as the many hundreds of similar profiling projects scale up future teams will benefit from clear guidance and more obvious design choices.</p>
