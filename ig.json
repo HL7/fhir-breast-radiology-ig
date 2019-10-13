@@ -21,7 +21,14 @@
   "gen-examples": "false",
   "do-transforms": "false",
   "canonicalBase": "http://hl7.org/fhir/us/breast-radiology",
-  "dependencyList": [],
+  "dependencyList": [
+    {
+      "package": "hl7.fhir.us.core",
+      "version": "3.0.0",
+      "name": "uscore",
+      "location": "http://hl7.org/fhir/us/core"
+    }
+  ],
   "defaults": {
     "StructureDefinition": {
       "template-base": "sd.html",
@@ -57,137 +64,449 @@
     "examples"
   ],
   "resources": {
-    "CodeSystem/AssymetriesCS": {
-      "base": "CodeSystem-AssymetriesCS.html"
+    "StructureDefinition/obf-ActionPerformed": {
+      "base": "StructureDefinition-obf-ActionPerformed.html"
     },
-    "CodeSystem/BreastDensityCS": {
-      "base": "CodeSystem-BreastDensityCS.html"
+    "StructureDefinition/obf-ActionRequest": {
+      "base": "StructureDefinition-obf-ActionRequest.html"
     },
-    "CodeSystem/BreastLocationClockCS": {
-      "base": "CodeSystem-BreastLocationClockCS.html"
+    "StructureDefinition/obf-ActionStatement": {
+      "base": "StructureDefinition-obf-ActionStatement.html"
     },
-    "CodeSystem/BreastLocationDepthCS": {
-      "base": "CodeSystem-BreastLocationDepthCS.html"
+    "StructureDefinition/breastrad-BreastAbnormality": {
+      "base": "StructureDefinition-breastrad-BreastAbnormality.html"
     },
-    "CodeSystem/BreastLocationQuadrantCS": {
-      "base": "CodeSystem-BreastLocationQuadrantCS.html"
+    "StructureDefinition/breastrad-BreastRadiologyDocument": {
+      "base": "StructureDefinition-breastrad-BreastRadiologyDocument.html"
     },
-    "CodeSystem/BreastRadiologyAbnormalityMammographyMassDensityCS": {
-      "base": "CodeSystem-BreastRadiologyAbnormalityMammographyMassDensityCS.html"
+    "StructureDefinition/breastrad-BreastRadiologyReport": {
+      "base": "StructureDefinition-breastrad-BreastRadiologyReport.html"
     },
-    "CodeSystem/BreastRadiologyAbnormalityMammographyMassMarginCS": {
-      "base": "CodeSystem-BreastRadiologyAbnormalityMammographyMassMarginCS.html"
+    "StructureDefinition/obf-ClinicalStatement": {
+      "base": "StructureDefinition-obf-ClinicalStatement.html"
     },
-    "CodeSystem/BreastRadiologyAbnormalityMassShapeCS": {
-      "base": "CodeSystem-BreastRadiologyAbnormalityMassShapeCS.html"
+    "StructureDefinition/obf-Composition": {
+      "base": "StructureDefinition-obf-Composition.html"
     },
-    "CodeSystem/CalcificationDistributionCS": {
-      "base": "CodeSystem-CalcificationDistributionCS.html"
+    "StructureDefinition/obf-Condition": {
+      "base": "StructureDefinition-obf-Condition.html"
     },
-    "CodeSystem/CalcificationTypeCS": {
-      "base": "CodeSystem-CalcificationTypeCS.html"
+    "StructureDefinition/obf-DiagnosticReport": {
+      "base": "StructureDefinition-obf-DiagnosticReport.html"
     },
-    "StructureDefinition/BreastBodyLocation": {
-      "base": "StructureDefinition-BreastBodyLocation.html"
+    "StructureDefinition/obf-DomainResource": {
+      "base": "StructureDefinition-obf-DomainResource.html"
     },
-    "StructureDefinition/BreastRadiologyAbnormalityMammography": {
-      "base": "StructureDefinition-BreastRadiologyAbnormalityMammography.html"
+    "StructureDefinition/obf-EncounterOrEpisode": {
+      "base": "StructureDefinition-obf-EncounterOrEpisode.html"
     },
-    "StructureDefinition/BreastRadiologyAbnormalityMammographyArchitecturalDistortion": {
-      "base": "StructureDefinition-BreastRadiologyAbnormalityMammographyArchitecturalDistortion.html"
+    "StructureDefinition/obf-Entity": {
+      "base": "StructureDefinition-obf-Entity.html"
     },
-    "StructureDefinition/BreastRadiologyAbnormalityMammographyAssymetries": {
-      "base": "StructureDefinition-BreastRadiologyAbnormalityMammographyAssymetries.html"
+    "StructureDefinition/obf-EntityOrRole": {
+      "base": "StructureDefinition-obf-EntityOrRole.html"
     },
-    "StructureDefinition/BreastRadiologyAbnormalityMammographyBreastDensity": {
-      "base": "StructureDefinition-BreastRadiologyAbnormalityMammographyBreastDensity.html"
+    "StructureDefinition/obf-InformationItem": {
+      "base": "StructureDefinition-obf-InformationItem.html"
     },
-    "StructureDefinition/BreastRadiologyAbnormalityMammographyCalcificationDistribution": {
-      "base": "StructureDefinition-BreastRadiologyAbnormalityMammographyCalcificationDistribution.html"
+    "StructureDefinition/obf-MedicationAction": {
+      "base": "StructureDefinition-obf-MedicationAction.html"
     },
-    "StructureDefinition/BreastRadiologyAbnormalityMammographyCalcificationType": {
-      "base": "StructureDefinition-BreastRadiologyAbnormalityMammographyCalcificationType.html"
+    "StructureDefinition/obf-MedicationDispense": {
+      "base": "StructureDefinition-obf-MedicationDispense.html"
     },
-    "StructureDefinition/BreastRadiologyAbnormalityMammographyMassDensity": {
-      "base": "StructureDefinition-BreastRadiologyAbnormalityMammographyMassDensity.html"
+    "StructureDefinition/obf-MedicationStatement": {
+      "base": "StructureDefinition-obf-MedicationStatement.html"
     },
-    "StructureDefinition/BreastRadiologyAbnormalityMammographyMassMargin": {
-      "base": "StructureDefinition-BreastRadiologyAbnormalityMammographyMassMargin.html"
+    "StructureDefinition/obf-Observation": {
+      "base": "StructureDefinition-obf-Observation.html"
     },
-    "StructureDefinition/BreastRadiologyAbnormalityMassShape": {
-      "base": "StructureDefinition-BreastRadiologyAbnormalityMassShape.html"
+    "StructureDefinition/obf-Procedure": {
+      "base": "StructureDefinition-obf-Procedure.html"
     },
-    "StructureDefinition/BreastRadiologyAbnormalityMRI": {
-      "base": "StructureDefinition-BreastRadiologyAbnormalityMRI.html"
+    "StructureDefinition/obf-Role": {
+      "base": "StructureDefinition-obf-Role.html"
     },
-    "StructureDefinition/BreastRadiologyAbnormalityUltraSound": {
-      "base": "StructureDefinition-BreastRadiologyAbnormalityUltraSound.html"
+    "StructureDefinition/obf-SituationStatement": {
+      "base": "StructureDefinition-obf-SituationStatement.html"
     },
-    "StructureDefinition/BreastRadiologyMammographyCalcifications": {
-      "base": "StructureDefinition-BreastRadiologyMammographyCalcifications.html"
+    "StructureDefinition/obf-datatype-AnatomicalOrientation-extension": {
+      "base": "StructureDefinition-obf-datatype-AnatomicalOrientation-extension.html",
+      "template-base": "sd-extension.html"
     },
-    "StructureDefinition/BreastRadiologyMammographyMass": {
-      "base": "StructureDefinition-BreastRadiologyMammographyMass.html"
+    "StructureDefinition/obf-Annotation-extension": {
+      "base": "StructureDefinition-obf-Annotation-extension.html",
+      "template-base": "sd-extension.html"
     },
-    "StructureDefinition/BreastRadiologyPriorReports": {
-      "base": "StructureDefinition-BreastRadiologyPriorReports.html"
+    "StructureDefinition/obf-BasedOn-extension": {
+      "base": "StructureDefinition-obf-BasedOn-extension.html",
+      "template-base": "sd-extension.html"
     },
-    "StructureDefinition/BreastRadiologyRecommendations": {
-      "base": "StructureDefinition-BreastRadiologyRecommendations.html"
+    "StructureDefinition/breastrad-BreastExamTechnique-extension": {
+      "base": "StructureDefinition-breastrad-BreastExamTechnique-extension.html",
+      "template-base": "sd-extension.html"
     },
-    "StructureDefinition/BreastRadiologyReport": {
-      "base": "StructureDefinition-BreastRadiologyReport.html"
+    "StructureDefinition/obf-CareContext-extension": {
+      "base": "StructureDefinition-obf-CareContext-extension.html",
+      "template-base": "sd-extension.html"
     },
-    "StructureDefinition/BreastRadiologySectionFindings": {
-      "base": "StructureDefinition-BreastRadiologySectionFindings.html"
+    "StructureDefinition/obf-datatype-Category-extension": {
+      "base": "StructureDefinition-obf-datatype-Category-extension.html",
+      "template-base": "sd-extension.html"
     },
-    "StructureDefinition/BreastRadiologySectionFindingsLeftBreast": {
-      "base": "StructureDefinition-BreastRadiologySectionFindingsLeftBreast.html"
+    "StructureDefinition/obf-datatype-Code-extension": {
+      "base": "StructureDefinition-obf-datatype-Code-extension.html",
+      "template-base": "sd-extension.html"
     },
-    "StructureDefinition/BreastRadiologySectionFindingsRightBreast": {
-      "base": "StructureDefinition-BreastRadiologySectionFindingsRightBreast.html"
+    "StructureDefinition/obf-Condition-extension": {
+      "base": "StructureDefinition-obf-Condition-extension.html",
+      "template-base": "sd-extension.html"
     },
-    "StructureDefinition/BreastRadiologySectionPatientHistory": {
-      "base": "StructureDefinition-BreastRadiologySectionPatientHistory.html"
+    "StructureDefinition/obf-DiagnosisCode-extension": {
+      "base": "StructureDefinition-obf-DiagnosisCode-extension.html",
+      "template-base": "sd-extension.html"
     },
-    "StructureDefinition/BreastRadiologySectionPatientRisk": {
-      "base": "StructureDefinition-BreastRadiologySectionPatientRisk.html"
+    "StructureDefinition/obf-Dosage-extension": {
+      "base": "StructureDefinition-obf-Dosage-extension.html",
+      "template-base": "sd-extension.html"
     },
-    "StructureDefinition/BreastRadiologySectionRoot": {
-      "base": "StructureDefinition-BreastRadiologySectionRoot.html"
+    "StructureDefinition/obf-EncounterDiagnosis-extension": {
+      "base": "StructureDefinition-obf-EncounterDiagnosis-extension.html",
+      "template-base": "sd-extension.html"
     },
-    "ValueSet/AssymetriesVS": {
-      "base": "ValueSet-AssymetriesVS.html"
+    "StructureDefinition/obf-ExpectedPerformanceTime-extension": {
+      "base": "StructureDefinition-obf-ExpectedPerformanceTime-extension.html",
+      "template-base": "sd-extension.html"
     },
-    "ValueSet/BreastDensityVS": {
-      "base": "ValueSet-BreastDensityVS.html"
+    "StructureDefinition/obf-ExpectedPerformer-extension": {
+      "base": "StructureDefinition-obf-ExpectedPerformer-extension.html",
+      "template-base": "sd-extension.html"
     },
-    "ValueSet/BreastLocationClockVS": {
-      "base": "ValueSet-BreastLocationClockVS.html"
+    "StructureDefinition/obf-ExpectedPerformerType-extension": {
+      "base": "StructureDefinition-obf-ExpectedPerformerType-extension.html",
+      "template-base": "sd-extension.html"
     },
-    "ValueSet/BreastLocationDepthVS": {
-      "base": "ValueSet-BreastLocationDepthVS.html"
+    "StructureDefinition/obf-datatype-Identifier-extension": {
+      "base": "StructureDefinition-obf-datatype-Identifier-extension.html",
+      "template-base": "sd-extension.html"
     },
-    "ValueSet/BreastLocationQuadrantVS": {
-      "base": "ValueSet-BreastLocationQuadrantVS.html"
+    "StructureDefinition/obf-datatype-LandmarkLocation-extension": {
+      "base": "StructureDefinition-obf-datatype-LandmarkLocation-extension.html",
+      "template-base": "sd-extension.html"
     },
-    "ValueSet/BreastRadiologyAbnormalityMammographyMassDensityVS": {
-      "base": "ValueSet-BreastRadiologyAbnormalityMammographyMassDensityVS.html"
+    "StructureDefinition/obf-datatype-LandmarkToBodyLocationDirection-extension": {
+      "base": "StructureDefinition-obf-datatype-LandmarkToBodyLocationDirection-extension.html",
+      "template-base": "sd-extension.html"
     },
-    "ValueSet/BreastRadiologyAbnormalityMammographyMassMarginVS": {
-      "base": "ValueSet-BreastRadiologyAbnormalityMammographyMassMarginVS.html"
+    "StructureDefinition/obf-datatype-LandmarkToBodyLocationDistance-extension": {
+      "base": "StructureDefinition-obf-datatype-LandmarkToBodyLocationDistance-extension.html",
+      "template-base": "sd-extension.html"
     },
-    "ValueSet/BreastRadiologyAbnormalityMassShapeVS": {
-      "base": "ValueSet-BreastRadiologyAbnormalityMassShapeVS.html"
+    "StructureDefinition/obf-datatype-LandmarkType-extension": {
+      "base": "StructureDefinition-obf-datatype-LandmarkType-extension.html",
+      "template-base": "sd-extension.html"
     },
-    "ValueSet/CalcificationDistributionVS": {
-      "base": "ValueSet-CalcificationDistributionVS.html"
+    "StructureDefinition/obf-datatype-Laterality-extension": {
+      "base": "StructureDefinition-obf-datatype-Laterality-extension.html",
+      "template-base": "sd-extension.html"
     },
-    "ValueSet/CalcificationTypeVS": {
-      "base": "ValueSet-CalcificationTypeVS.html"
+    "StructureDefinition/obf-MedicationCodeOrReference-extension": {
+      "base": "StructureDefinition-obf-MedicationCodeOrReference-extension.html",
+      "template-base": "sd-extension.html"
     },
-    "ValueSet/UnitsOfLengthVS": {
-      "base": "ValueSet-UnitsOfLengthVS.html"
+    "StructureDefinition/obf-Method-extension": {
+      "base": "StructureDefinition-obf-Method-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/obf-datatype-OccurrenceTimeOrPeriod-extension": {
+      "base": "StructureDefinition-obf-datatype-OccurrenceTimeOrPeriod-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/obf-OnBehalfOf-extension": {
+      "base": "StructureDefinition-obf-OnBehalfOf-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/obf-Organization-extension": {
+      "base": "StructureDefinition-obf-Organization-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/obf-PartOf-extension": {
+      "base": "StructureDefinition-obf-PartOf-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/obf-Participant-extension": {
+      "base": "StructureDefinition-obf-Participant-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/obf-Participation-extension": {
+      "base": "StructureDefinition-obf-Participation-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/obf-ParticipationPeriod-extension": {
+      "base": "StructureDefinition-obf-ParticipationPeriod-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/obf-ParticipationType-extension": {
+      "base": "StructureDefinition-obf-ParticipationType-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/obf-datatype-PriorityCode-extension": {
+      "base": "StructureDefinition-obf-datatype-PriorityCode-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/obf-datatype-PriorityRank-extension": {
+      "base": "StructureDefinition-obf-datatype-PriorityRank-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/obf-ReasonCode-extension": {
+      "base": "StructureDefinition-obf-ReasonCode-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/obf-ReasonReference-extension": {
+      "base": "StructureDefinition-obf-ReasonReference-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/obf-datatype-RelationToLandmark-extension": {
+      "base": "StructureDefinition-obf-datatype-RelationToLandmark-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/obf-RequestIntent-extension": {
+      "base": "StructureDefinition-obf-RequestIntent-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/obf-Requester-extension": {
+      "base": "StructureDefinition-obf-Requester-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/breastrad-ResultComposition-extension": {
+      "base": "StructureDefinition-breastrad-ResultComposition-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/obf-StatementDateTime-extension": {
+      "base": "StructureDefinition-obf-StatementDateTime-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/obf-Status-extension": {
+      "base": "StructureDefinition-obf-Status-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/obf-StatusHistory-extension": {
+      "base": "StructureDefinition-obf-StatusHistory-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/obf-SubjectOfRecord-extension": {
+      "base": "StructureDefinition-obf-SubjectOfRecord-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/breastrad-SummaryBiRadCode-extension": {
+      "base": "StructureDefinition-breastrad-SummaryBiRadCode-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/obf-TerminationReason-extension": {
+      "base": "StructureDefinition-obf-TerminationReason-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/obf-datatype-TimePeriod-extension": {
+      "base": "StructureDefinition-obf-datatype-TimePeriod-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/obf-TreatmentIntent-extension": {
+      "base": "StructureDefinition-obf-TreatmentIntent-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "StructureDefinition/obf-datatype-Type-extension": {
+      "base": "StructureDefinition-obf-datatype-Type-extension.html",
+      "template-base": "sd-extension.html"
+    },
+    "ValueSet/breastrad-AbnormalityDensityVS": {
+      "base": "ValueSet-breastrad-AbnormalityDensityVS.html"
+    },
+    "ValueSet/breastrad-AbnormalityTypeVS": {
+      "base": "ValueSet-breastrad-AbnormalityTypeVS.html"
+    },
+    "ValueSet/obf-datatype-AnatomicalDirectionVS": {
+      "base": "ValueSet-obf-datatype-AnatomicalDirectionVS.html"
+    },
+    "ValueSet/obf-datatype-AnatomicalOrientationVS": {
+      "base": "ValueSet-obf-datatype-AnatomicalOrientationVS.html"
+    },
+    "ValueSet/breastrad-AssociatedFindingsVS": {
+      "base": "ValueSet-breastrad-AssociatedFindingsVS.html"
+    },
+    "ValueSet/breastrad-AsymmetryTypesVS": {
+      "base": "ValueSet-breastrad-AsymmetryTypesVS.html"
+    },
+    "ValueSet/breastrad-BiRadCodeVS": {
+      "base": "ValueSet-breastrad-BiRadCodeVS.html"
+    },
+    "ValueSet/obf-datatype-BodyLocationVS": {
+      "base": "ValueSet-obf-datatype-BodyLocationVS.html"
+    },
+    "ValueSet/breastrad-BreastAbnormalityCodesVS": {
+      "base": "ValueSet-breastrad-BreastAbnormalityCodesVS.html"
+    },
+    "ValueSet/breastrad-BreastDensityVS": {
+      "base": "ValueSet-breastrad-BreastDensityVS.html"
+    },
+    "ValueSet/breastrad-BreastDepthVS": {
+      "base": "ValueSet-breastrad-BreastDepthVS.html"
+    },
+    "ValueSet/breastrad-BreastDirectionVS": {
+      "base": "ValueSet-breastrad-BreastDirectionVS.html"
+    },
+    "ValueSet/breastrad-CalcificationTypeVS": {
+      "base": "ValueSet-breastrad-CalcificationTypeVS.html"
+    },
+    "ValueSet/breastrad-ChangeVS": {
+      "base": "ValueSet-breastrad-ChangeVS.html"
+    },
+    "ValueSet/breastrad-ConsistentWithVS": {
+      "base": "ValueSet-breastrad-ConsistentWithVS.html"
+    },
+    "ValueSet/breastrad-CystTypesVS": {
+      "base": "ValueSet-breastrad-CystTypesVS.html"
+    },
+    "ValueSet/breastrad-ForeignBodyVS": {
+      "base": "ValueSet-breastrad-ForeignBodyVS.html"
+    },
+    "ValueSet/breastrad-HilumVS": {
+      "base": "ValueSet-breastrad-HilumVS.html"
+    },
+    "ValueSet/obf-datatype-LandmarkTypeVS": {
+      "base": "ValueSet-obf-datatype-LandmarkTypeVS.html"
+    },
+    "ValueSet/breastrad-LymphNodeQualifiersVS": {
+      "base": "ValueSet-breastrad-LymphNodeQualifiersVS.html"
+    },
+    "ValueSet/breastrad-MarginVS": {
+      "base": "ValueSet-breastrad-MarginVS.html"
+    },
+    "ValueSet/breastrad-MassTypesVS": {
+      "base": "ValueSet-breastrad-MassTypesVS.html"
+    },
+    "ValueSet/breastrad-NodeTypesVS": {
+      "base": "ValueSet-breastrad-NodeTypesVS.html"
+    },
+    "ValueSet/breastrad-RadiologicProcedureVS": {
+      "base": "ValueSet-breastrad-RadiologicProcedureVS.html"
+    },
+    "ValueSet/obf-ResearchSubjectTerminationReasonVS": {
+      "base": "ValueSet-obf-ResearchSubjectTerminationReasonVS.html"
+    },
+    "ValueSet/obf-datatype-SettingVS": {
+      "base": "ValueSet-obf-datatype-SettingVS.html"
+    },
+    "ValueSet/breastrad-ShapeVS": {
+      "base": "ValueSet-breastrad-ShapeVS.html"
+    },
+    "ValueSet/obf-StudyArmTypeVS": {
+      "base": "ValueSet-obf-StudyArmTypeVS.html"
+    },
+    "ValueSet/obf-TreatmentIntentVS": {
+      "base": "ValueSet-obf-TreatmentIntentVS.html"
+    },
+    "ValueSet/obf-TreatmentTerminationReasonVS": {
+      "base": "ValueSet-obf-TreatmentTerminationReasonVS.html"
+    },
+    "ValueSet/obf-datatype-UnitsOfLengthVS": {
+      "base": "ValueSet-obf-datatype-UnitsOfLengthVS.html"
+    },
+    "ValueSet/breastrad-VascularityVS": {
+      "base": "ValueSet-breastrad-VascularityVS.html"
+    },
+    "ValueSet/breastrad-WallVS": {
+      "base": "ValueSet-breastrad-WallVS.html"
+    },
+    "CodeSystem/breastrad-AbnormalityDensityCS": {
+      "base": "CodeSystem-breastrad-AbnormalityDensityCS.html"
+    },
+    "CodeSystem/breastrad-AbnormalityTypeCS": {
+      "base": "CodeSystem-breastrad-AbnormalityTypeCS.html"
+    },
+    "CodeSystem/breastrad-AssociatedFindingsCS": {
+      "base": "CodeSystem-breastrad-AssociatedFindingsCS.html"
+    },
+    "CodeSystem/breastrad-AsymmetryTypesCS": {
+      "base": "CodeSystem-breastrad-AsymmetryTypesCS.html"
+    },
+    "CodeSystem/breastrad-BiRadCodeCS": {
+      "base": "CodeSystem-breastrad-BiRadCodeCS.html"
+    },
+    "CodeSystem/breastrad-BreastAbnormalityCodesCS": {
+      "base": "CodeSystem-breastrad-BreastAbnormalityCodesCS.html"
+    },
+    "CodeSystem/breastrad-BreastDensityCS": {
+      "base": "CodeSystem-breastrad-BreastDensityCS.html"
+    },
+    "CodeSystem/breastrad-BreastDepthCS": {
+      "base": "CodeSystem-breastrad-BreastDepthCS.html"
+    },
+    "CodeSystem/breastrad-BreastDirectionCS": {
+      "base": "CodeSystem-breastrad-BreastDirectionCS.html"
+    },
+    "CodeSystem/breastrad-CalcificationTypeCS": {
+      "base": "CodeSystem-breastrad-CalcificationTypeCS.html"
+    },
+    "CodeSystem/breastrad-ChangeCS": {
+      "base": "CodeSystem-breastrad-ChangeCS.html"
+    },
+    "CodeSystem/breastrad-ConsistentWithCS": {
+      "base": "CodeSystem-breastrad-ConsistentWithCS.html"
+    },
+    "CodeSystem/breastrad-CystTypesCS": {
+      "base": "CodeSystem-breastrad-CystTypesCS.html"
+    },
+    "CodeSystem/breastrad-ForeignBodyCS": {
+      "base": "CodeSystem-breastrad-ForeignBodyCS.html"
+    },
+    "CodeSystem/breastrad-HilumCS": {
+      "base": "CodeSystem-breastrad-HilumCS.html"
+    },
+    "CodeSystem/breastrad-LymphNodeQualifiersCS": {
+      "base": "CodeSystem-breastrad-LymphNodeQualifiersCS.html"
+    },
+    "CodeSystem/breastrad-MarginCS": {
+      "base": "CodeSystem-breastrad-MarginCS.html"
+    },
+    "CodeSystem/breastrad-MassTypesCS": {
+      "base": "CodeSystem-breastrad-MassTypesCS.html"
+    },
+    "CodeSystem/breastrad-NodeTypesCS": {
+      "base": "CodeSystem-breastrad-NodeTypesCS.html"
+    },
+    "CodeSystem/breastrad-RadiologicProcedureCS": {
+      "base": "CodeSystem-breastrad-RadiologicProcedureCS.html"
+    },
+    "CodeSystem/obf-ResearchSubjectTerminationReasonCS": {
+      "base": "CodeSystem-obf-ResearchSubjectTerminationReasonCS.html"
+    },
+    "CodeSystem/obf-datatype-SettingCS": {
+      "base": "CodeSystem-obf-datatype-SettingCS.html"
+    },
+    "CodeSystem/breastrad-ShapeCS": {
+      "base": "CodeSystem-breastrad-ShapeCS.html"
+    },
+    "CodeSystem/breastrad-VascularityCS": {
+      "base": "CodeSystem-breastrad-VascularityCS.html"
+    },
+    "CodeSystem/breastrad-WallCS": {
+      "base": "CodeSystem-breastrad-WallCS.html"
+    },
+    "Observation/BreastAbnormalityExample1": {
+      "base": "Observation-BreastAbnormalityExample1.html",
+      "source": "BreastAbnormality1.json"
+    },
+    "Observation/BreastAbnormalityExample2": {
+      "base": "Observation-BreastAbnormalityExample2.html",
+      "source": "BreastAbnormality2.json"
+    },
+    "Composition/BreastRadiologyDocumentExample1": {
+      "base": "Composition-BreastRadiologyDocumentExample1.html",
+      "source": "BreastRadiologyDocument.json"
+    },
+    "DiagnosticReport/BreastRadiologyReportExample1": {
+      "base": "DiagnosticReport-BreastRadiologyReportExample1.html",
+      "source": "BreastRadiologyReport.json"
     }
   },
   "special-urls": [],

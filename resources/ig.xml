@@ -1,342 +1,946 @@
-<?xml version="1.0" encoding="utf-8"?>
 <ImplementationGuide xmlns="http://hl7.org/fhir">
-  <id value="hl7.fhir.us.breast-radiology-0.1.0" />
-  <url value="http://hl7.org/fhir/us/breast-radiology/ImplementationGuide/hl7.fhir.us.breast-radiology-0.1.0" />
-  <version value="0.1.0" />
-  <name value="Breast_Radiology_Reporting_1st_for_comment_ballot" />
-  <title value="Breast Radiology Reporting - 1st for comment ballot" />
-  <status value="draft" />
-  <publisher value="Hl7 - Clinical Interoperability Council" />
-  <contact>
-    <telecom>
-      <system value="url" />
-      <value value="http://www.hl7.org/Special/committees/cic" />
-    </telecom>
-  </contact>
-  <packageId value="hl7.fhir.us.breast-radiology" />
-  <license value="CC0-1.0" />
-  <fhirVersion value="4.0.0" />
-  <definition>
-    <grouping>
-      <name value="Profiles in this Implementation Guide" />
-      <description value="Profiles in this Implementation Guide" />
-    </grouping>
-    <grouping id="Base">
-      <name value="Base Name" />
-      <description value="Base Description" />
-    </grouping>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/BreastRadiologyAbnormalityMammography" />
-      </reference>
-      <name value="BreastRadiologyAbnormalityMammography" />
-      <exampleBoolean value="false" />
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/BreastRadiologyAbnormalityMRI" />
-      </reference>
-      <name value="BreastRadiologyAbnormalityMRI" />
-      <exampleBoolean value="false" />
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/BreastRadiologyAbnormalityUltraSound" />
-      </reference>
-      <name value="BreastRadiologyAbnormalityUltraSound" />
-      <exampleBoolean value="false" />
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/BreastRadiologyPriorReports" />
-      </reference>
-      <name value="BreastRadiologyPriorReports" />
-      <exampleBoolean value="false" />
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/BreastRadiologyRecommendations" />
-      </reference>
-      <name value="BreastRadiologyRecommendations" />
-      <exampleBoolean value="false" />
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/BreastRadiologyReport" />
-      </reference>
-      <name value="BreastRadiologyReport" />
-      <exampleBoolean value="false" />
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/BreastRadiologySectionFindings" />
-      </reference>
-      <name value="BreastRadiologySectionFindings" />
-      <exampleBoolean value="false" />
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/BreastRadiologySectionFindingsLeftBreast" />
-      </reference>
-      <name value="BreastRadiologySectionFindingsLeftBreast" />
-      <exampleBoolean value="false" />
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/BreastRadiologySectionFindingsRightBreast" />
-      </reference>
-      <name value="BreastRadiologySectionFindingsRightBreast" />
-      <exampleBoolean value="false" />
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/BreastRadiologySectionPatientHistory" />
-      </reference>
-      <name value="BreastRadiologySectionPatientHistory" />
-      <exampleBoolean value="false" />
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/BreastRadiologySectionPatientRisk" />
-      </reference>
-      <name value="BreastRadiologySectionPatientRisk" />
-      <exampleBoolean value="false" />
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/BreastRadiologySectionRoot" />
-      </reference>
-      <name value="BreastRadiologySectionRoot" />
-      <exampleBoolean value="false" />
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/BreastRadiologyAbnormalityMammographyBreastDensity" />
-      </reference>
-      <name value="BreastRadiologyAbnormalityMammographyBreastDensity" />
-      <exampleBoolean value="false" />
-    </resource>
-    <resource>
-      <reference>
-        <reference value="CodeSystem/BreastRadiologyAbnormalityMassShapeCS" />
-      </reference>
-      <name value="BreastRadiologyAbnormalityMassShapeCS" />
-      <exampleBoolean value="false" />
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/BreastRadiologyAbnormalityMassShape" />
-      </reference>
-      <name value="BreastRadiologyAbnormalityMassShape" />
-      <exampleBoolean value="false" />
-    </resource>
-    <resource>
-      <reference>
-        <reference value="ValueSet/BreastRadiologyAbnormalityMassShapeVS" />
-      </reference>
-      <name value="BreastRadiologyAbnormalityMassShapeVS" />
-      <exampleBoolean value="false" />
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/BreastRadiologyMammographyMass" />
-      </reference>
-      <name value="BreastRadiologyMammographyMass" />
-      <exampleBoolean value="false" />
-    </resource>
-    <resource>
-      <reference>
-        <reference value="CodeSystem/BreastRadiologyAbnormalityMammographyMassDensityCS" />
-      </reference>
-      <name value="BreastRadiologyAbnormalityMammographyMassDensityCS" />
-      <exampleBoolean value="false" />
-    </resource>
-    <resource>
-      <reference>
-        <reference value="CodeSystem/BreastRadiologyAbnormalityMammographyMassMarginCS" />
-      </reference>
-      <name value="BreastRadiologyAbnormalityMammographyMassMarginCS" />
-      <exampleBoolean value="false" />
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/BreastRadiologyAbnormalityMammographyMassDensity" />
-      </reference>
-      <name value="BreastRadiologyAbnormalityMammographyMassDensity" />
-      <exampleBoolean value="false" />
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/BreastRadiologyAbnormalityMammographyMassMargin" />
-      </reference>
-      <name value="BreastRadiologyAbnormalityMammographyMassMargin" />
-      <exampleBoolean value="false" />
-    </resource>
-    <resource>
-      <reference>
-        <reference value="ValueSet/BreastRadiologyAbnormalityMammographyMassDensityVS" />
-      </reference>
-      <name value="BreastRadiologyAbnormalityMammographyMassDensityVS" />
-      <exampleBoolean value="false" />
-    </resource>
-    <resource>
-      <reference>
-        <reference value="ValueSet/BreastRadiologyAbnormalityMammographyMassMarginVS" />
-      </reference>
-      <name value="BreastRadiologyAbnormalityMammographyMassMarginVS" />
-      <exampleBoolean value="false" />
-    </resource>
-    <resource>
-      <reference>
-        <reference value="CodeSystem/BreastDensityCS" />
-      </reference>
-      <name value="BreastDensityCS" />
-      <exampleBoolean value="false" />
-    </resource>
-    <resource>
-      <reference>
-        <reference value="ValueSet/BreastDensityVS" />
-      </reference>
-      <name value="BreastDensityVS" />
-      <exampleBoolean value="false" />
-    </resource>
-    <resource>
-      <reference>
-        <reference value="CodeSystem/AssymetriesCS" />
-      </reference>
-      <name value="AssymetriesCS" />
-      <exampleBoolean value="false" />
-    </resource>
-    <resource>
-      <reference>
-        <reference value="CodeSystem/CalcificationDistributionCS" />
-      </reference>
-      <name value="CalcificationDistributionCS" />
-      <exampleBoolean value="false" />
-    </resource>
-    <resource>
-      <reference>
-        <reference value="CodeSystem/CalcificationTypeCS" />
-      </reference>
-      <name value="CalcificationTypeCS" />
-      <exampleBoolean value="false" />
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/BreastRadiologyAbnormalityMammographyArchitecturalDistortion" />
-      </reference>
-      <name value="BreastRadiologyAbnormalityMammographyArchitecturalDistortion" />
-      <exampleBoolean value="false" />
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/BreastRadiologyAbnormalityMammographyAssymetries" />
-      </reference>
-      <name value="BreastRadiologyAbnormalityMammographyAssymetries" />
-      <exampleBoolean value="false" />
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/BreastRadiologyAbnormalityMammographyCalcificationDistribution" />
-      </reference>
-      <name value="BreastRadiologyAbnormalityMammographyCalcificationDistribution" />
-      <exampleBoolean value="false" />
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/BreastRadiologyAbnormalityMammographyCalcificationType" />
-      </reference>
-      <name value="BreastRadiologyAbnormalityMammographyCalcificationType" />
-      <exampleBoolean value="false" />
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/BreastRadiologyMammographyCalcifications" />
-      </reference>
-      <name value="BreastRadiologyMammographyCalcifications" />
-      <exampleBoolean value="false" />
-    </resource>
-    <resource>
-      <reference>
-        <reference value="ValueSet/AssymetriesVS" />
-      </reference>
-      <name value="AssymetriesVS" />
-      <exampleBoolean value="false" />
-    </resource>
-    <resource>
-      <reference>
-        <reference value="ValueSet/CalcificationDistributionVS" />
-      </reference>
-      <name value="CalcificationDistributionVS" />
-      <exampleBoolean value="false" />
-    </resource>
-    <resource>
-      <reference>
-        <reference value="ValueSet/CalcificationTypeVS" />
-      </reference>
-      <name value="CalcificationTypeVS" />
-      <exampleBoolean value="false" />
-    </resource>
-    <resource>
-      <reference>
-        <reference value="CodeSystem/BreastLocationClockCS" />
-      </reference>
-      <name value="BreastLocationClockCS" />
-      <exampleBoolean value="false" />
-    </resource>
-    <resource>
-      <reference>
-        <reference value="CodeSystem/BreastLocationDepthCS" />
-      </reference>
-      <name value="BreastLocationDepthCS" />
-      <exampleBoolean value="false" />
-    </resource>
-    <resource>
-      <reference>
-        <reference value="CodeSystem/BreastLocationQuadrantCS" />
-      </reference>
-      <name value="BreastLocationQuadrantCS" />
-      <exampleBoolean value="false" />
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/BreastBodyLocation" />
-      </reference>
-      <name value="BreastBodyLocation" />
-      <exampleBoolean value="false" />
-    </resource>
-    <resource>
-      <reference>
-        <reference value="ValueSet/BreastLocationClockVS" />
-      </reference>
-      <name value="BreastLocationClockVS" />
-      <exampleBoolean value="false" />
-    </resource>
-    <resource>
-      <reference>
-        <reference value="ValueSet/BreastLocationDepthVS" />
-      </reference>
-      <name value="BreastLocationDepthVS" />
-      <exampleBoolean value="false" />
-    </resource>
-    <resource>
-      <reference>
-        <reference value="ValueSet/BreastLocationQuadrantVS" />
-      </reference>
-      <name value="BreastLocationQuadrantVS" />
-      <exampleBoolean value="false" />
-    </resource>
-    <resource>
-      <reference>
-        <reference value="ValueSet/UnitsOfLengthVS" />
-      </reference>
-      <name value="UnitsOfLengthVS" />
-      <exampleBoolean value="false" />
-    </resource>
-    <page>
-      <nameUrl value="index.html" />
-      <title value="Breast Radiology Reporting - 1st for comment ballot" />
-      <generation value="html" />
-    </page>
-  </definition>
+    <id value="hl7.fhir.us.breast-radiology-0.1.0" />
+    <url value="http://hl7.org/fhir/us/breast-radiology/ImplementationGuide/hl7.fhir.us.breast-radiology-0.1.0" />
+    <name value="Breast_Radiology_Reporting_1st_for_comment_ballot" />
+    <title value="Breast Radiology Reporting - 1st for comment ballot" />
+    <status value="draft" />
+    <publisher value="Hl7 - Clinical Interoperability Council"/>
+    <contact>
+      <telecom>
+        <system value="url"/>
+        <value value="http://www.hl7.org/Special/committees/cic"/>
+      </telecom>
+    </contact>
+
+    <packageId value="hl7.fhir.us.breast-radiology"/>
+    <fhirVersion value="4.0.0"/>
+    <definition>
+        <grouping>
+            <name value="Profiles in this Implementation Guide"/>
+            <description value="Profiles in this Implementation Guide"/>
+        </grouping>
+        <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-ActionPerformed" />
+          </reference>
+          <name value="obf-ActionPerformed" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-ActionRequest" />
+          </reference>
+          <name value="obf-ActionRequest" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-ActionStatement" />
+          </reference>
+          <name value="obf-ActionStatement" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/breastrad-BreastAbnormality" />
+          </reference>
+          <name value="breastrad-BreastAbnormality" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/breastrad-BreastRadiologyDocument" />
+          </reference>
+          <name value="breastrad-BreastRadiologyDocument" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/breastrad-BreastRadiologyReport" />
+          </reference>
+          <name value="breastrad-BreastRadiologyReport" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-ClinicalStatement" />
+          </reference>
+          <name value="obf-ClinicalStatement" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-Composition" />
+          </reference>
+          <name value="obf-Composition" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-Condition" />
+          </reference>
+          <name value="obf-Condition" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-DiagnosticReport" />
+          </reference>
+          <name value="obf-DiagnosticReport" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-DomainResource" />
+          </reference>
+          <name value="obf-DomainResource" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-EncounterOrEpisode" />
+          </reference>
+          <name value="obf-EncounterOrEpisode" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-Entity" />
+          </reference>
+          <name value="obf-Entity" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-EntityOrRole" />
+          </reference>
+          <name value="obf-EntityOrRole" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-InformationItem" />
+          </reference>
+          <name value="obf-InformationItem" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-MedicationAction" />
+          </reference>
+          <name value="obf-MedicationAction" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-MedicationDispense" />
+          </reference>
+          <name value="obf-MedicationDispense" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-MedicationStatement" />
+          </reference>
+          <name value="obf-MedicationStatement" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-Observation" />
+          </reference>
+          <name value="obf-Observation" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-Procedure" />
+          </reference>
+          <name value="obf-Procedure" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-Role" />
+          </reference>
+          <name value="obf-Role" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-SituationStatement" />
+          </reference>
+          <name value="obf-SituationStatement" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-datatype-AnatomicalOrientation-extension" />
+          </reference>
+          <name value="obf-datatype-AnatomicalOrientation" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-Annotation-extension" />
+          </reference>
+          <name value="obf-Annotation" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-BasedOn-extension" />
+          </reference>
+          <name value="obf-BasedOn" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/breastrad-BreastExamTechnique-extension" />
+          </reference>
+          <name value="breastrad-BreastExamTechnique" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-CareContext-extension" />
+          </reference>
+          <name value="obf-CareContext" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-datatype-Category-extension" />
+          </reference>
+          <name value="obf-datatype-Category" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-datatype-Code-extension" />
+          </reference>
+          <name value="obf-datatype-Code" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-Condition-extension" />
+          </reference>
+          <name value="obf-Condition" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-DiagnosisCode-extension" />
+          </reference>
+          <name value="obf-DiagnosisCode" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-Dosage-extension" />
+          </reference>
+          <name value="obf-Dosage" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-EncounterDiagnosis-extension" />
+          </reference>
+          <name value="obf-EncounterDiagnosis" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-ExpectedPerformanceTime-extension" />
+          </reference>
+          <name value="obf-ExpectedPerformanceTime" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-ExpectedPerformer-extension" />
+          </reference>
+          <name value="obf-ExpectedPerformer" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-ExpectedPerformerType-extension" />
+          </reference>
+          <name value="obf-ExpectedPerformerType" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-datatype-Identifier-extension" />
+          </reference>
+          <name value="obf-datatype-Identifier" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-datatype-LandmarkLocation-extension" />
+          </reference>
+          <name value="obf-datatype-LandmarkLocation" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-datatype-LandmarkToBodyLocationDirection-extension" />
+          </reference>
+          <name value="obf-datatype-LandmarkToBodyLocationDirection" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-datatype-LandmarkToBodyLocationDistance-extension" />
+          </reference>
+          <name value="obf-datatype-LandmarkToBodyLocationDistance" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-datatype-LandmarkType-extension" />
+          </reference>
+          <name value="obf-datatype-LandmarkType" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-datatype-Laterality-extension" />
+          </reference>
+          <name value="obf-datatype-Laterality" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-MedicationCodeOrReference-extension" />
+          </reference>
+          <name value="obf-MedicationCodeOrReference" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-Method-extension" />
+          </reference>
+          <name value="obf-Method" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-datatype-OccurrenceTimeOrPeriod-extension" />
+          </reference>
+          <name value="obf-datatype-OccurrenceTimeOrPeriod" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-OnBehalfOf-extension" />
+          </reference>
+          <name value="obf-OnBehalfOf" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-Organization-extension" />
+          </reference>
+          <name value="obf-Organization" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-PartOf-extension" />
+          </reference>
+          <name value="obf-PartOf" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-Participant-extension" />
+          </reference>
+          <name value="obf-Participant" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-Participation-extension" />
+          </reference>
+          <name value="obf-Participation" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-ParticipationPeriod-extension" />
+          </reference>
+          <name value="obf-ParticipationPeriod" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-ParticipationType-extension" />
+          </reference>
+          <name value="obf-ParticipationType" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-datatype-PriorityCode-extension" />
+          </reference>
+          <name value="obf-datatype-PriorityCode" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-datatype-PriorityRank-extension" />
+          </reference>
+          <name value="obf-datatype-PriorityRank" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-ReasonCode-extension" />
+          </reference>
+          <name value="obf-ReasonCode" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-ReasonReference-extension" />
+          </reference>
+          <name value="obf-ReasonReference" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-datatype-RelationToLandmark-extension" />
+          </reference>
+          <name value="obf-datatype-RelationToLandmark" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-RequestIntent-extension" />
+          </reference>
+          <name value="obf-RequestIntent" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-Requester-extension" />
+          </reference>
+          <name value="obf-Requester" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/breastrad-ResultComposition-extension" />
+          </reference>
+          <name value="breastrad-ResultComposition" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-StatementDateTime-extension" />
+          </reference>
+          <name value="obf-StatementDateTime" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-Status-extension" />
+          </reference>
+          <name value="obf-Status" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-StatusHistory-extension" />
+          </reference>
+          <name value="obf-StatusHistory" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-SubjectOfRecord-extension" />
+          </reference>
+          <name value="obf-SubjectOfRecord" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/breastrad-SummaryBiRadCode-extension" />
+          </reference>
+          <name value="breastrad-SummaryBiRadCode" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-TerminationReason-extension" />
+          </reference>
+          <name value="obf-TerminationReason" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-datatype-TimePeriod-extension" />
+          </reference>
+          <name value="obf-datatype-TimePeriod" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-TreatmentIntent-extension" />
+          </reference>
+          <name value="obf-TreatmentIntent" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="StructureDefinition/obf-datatype-Type-extension" />
+          </reference>
+          <name value="obf-datatype-Type" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="ValueSet/breastrad-AbnormalityDensityVS" />
+          </reference>
+          <name value="AbnormalityDensityVS" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="ValueSet/breastrad-AbnormalityTypeVS" />
+          </reference>
+          <name value="AbnormalityTypeVS" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="ValueSet/obf-datatype-AnatomicalDirectionVS" />
+          </reference>
+          <name value="AnatomicalDirectionVS" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="ValueSet/obf-datatype-AnatomicalOrientationVS" />
+          </reference>
+          <name value="AnatomicalOrientationVS" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="ValueSet/breastrad-AssociatedFindingsVS" />
+          </reference>
+          <name value="AssociatedFindingsVS" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="ValueSet/breastrad-AsymmetryTypesVS" />
+          </reference>
+          <name value="AsymmetryTypesVS" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="ValueSet/breastrad-BiRadCodeVS" />
+          </reference>
+          <name value="BiRadCodeVS" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="ValueSet/obf-datatype-BodyLocationVS" />
+          </reference>
+          <name value="BodyLocationVS" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="ValueSet/breastrad-BreastAbnormalityCodesVS" />
+          </reference>
+          <name value="BreastAbnormalityCodesVS" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="ValueSet/breastrad-BreastDensityVS" />
+          </reference>
+          <name value="BreastDensityVS" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="ValueSet/breastrad-BreastDepthVS" />
+          </reference>
+          <name value="BreastDepthVS" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="ValueSet/breastrad-BreastDirectionVS" />
+          </reference>
+          <name value="BreastDirectionVS" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="ValueSet/breastrad-CalcificationTypeVS" />
+          </reference>
+          <name value="CalcificationTypeVS" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="ValueSet/breastrad-ChangeVS" />
+          </reference>
+          <name value="ChangeVS" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="ValueSet/breastrad-ConsistentWithVS" />
+          </reference>
+          <name value="ConsistentWithVS" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="ValueSet/breastrad-CystTypesVS" />
+          </reference>
+          <name value="CystTypesVS" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="ValueSet/breastrad-ForeignBodyVS" />
+          </reference>
+          <name value="ForeignBodyVS" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="ValueSet/breastrad-HilumVS" />
+          </reference>
+          <name value="HilumVS" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="ValueSet/obf-datatype-LandmarkTypeVS" />
+          </reference>
+          <name value="LandmarkTypeVS" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="ValueSet/breastrad-LymphNodeQualifiersVS" />
+          </reference>
+          <name value="LymphNodeQualifiersVS" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="ValueSet/breastrad-MarginVS" />
+          </reference>
+          <name value="MarginVS" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="ValueSet/breastrad-MassTypesVS" />
+          </reference>
+          <name value="MassTypesVS" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="ValueSet/breastrad-NodeTypesVS" />
+          </reference>
+          <name value="NodeTypesVS" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="ValueSet/breastrad-RadiologicProcedureVS" />
+          </reference>
+          <name value="RadiologicProcedureVS" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="ValueSet/obf-ResearchSubjectTerminationReasonVS" />
+          </reference>
+          <name value="ResearchSubjectTerminationReasonVS" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="ValueSet/obf-datatype-SettingVS" />
+          </reference>
+          <name value="SettingVS" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="ValueSet/breastrad-ShapeVS" />
+          </reference>
+          <name value="ShapeVS" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="ValueSet/obf-StudyArmTypeVS" />
+          </reference>
+          <name value="StudyArmTypeVS" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="ValueSet/obf-TreatmentIntentVS" />
+          </reference>
+          <name value="TreatmentIntentVS" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="ValueSet/obf-TreatmentTerminationReasonVS" />
+          </reference>
+          <name value="TreatmentTerminationReasonVS" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="ValueSet/obf-datatype-UnitsOfLengthVS" />
+          </reference>
+          <name value="UnitsOfLengthVS" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="ValueSet/breastrad-VascularityVS" />
+          </reference>
+          <name value="VascularityVS" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="ValueSet/breastrad-WallVS" />
+          </reference>
+          <name value="WallVS" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="CodeSystem/breastrad-AbnormalityDensityCS" />
+          </reference>
+          <name value="AbnormalityDensityCS" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="CodeSystem/breastrad-AbnormalityTypeCS" />
+          </reference>
+          <name value="AbnormalityTypeCS" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="CodeSystem/breastrad-AssociatedFindingsCS" />
+          </reference>
+          <name value="AssociatedFindingsCS" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="CodeSystem/breastrad-AsymmetryTypesCS" />
+          </reference>
+          <name value="AsymmetryTypesCS" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="CodeSystem/breastrad-BiRadCodeCS" />
+          </reference>
+          <name value="BiRadCodeCS" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="CodeSystem/breastrad-BreastAbnormalityCodesCS" />
+          </reference>
+          <name value="BreastAbnormalityCodesCS" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="CodeSystem/breastrad-BreastDensityCS" />
+          </reference>
+          <name value="BreastDensityCS" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="CodeSystem/breastrad-BreastDepthCS" />
+          </reference>
+          <name value="BreastDepthCS" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="CodeSystem/breastrad-BreastDirectionCS" />
+          </reference>
+          <name value="BreastDirectionCS" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="CodeSystem/breastrad-CalcificationTypeCS" />
+          </reference>
+          <name value="CalcificationTypeCS" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="CodeSystem/breastrad-ChangeCS" />
+          </reference>
+          <name value="ChangeCS" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="CodeSystem/breastrad-ConsistentWithCS" />
+          </reference>
+          <name value="ConsistentWithCS" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="CodeSystem/breastrad-CystTypesCS" />
+          </reference>
+          <name value="CystTypesCS" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="CodeSystem/breastrad-ForeignBodyCS" />
+          </reference>
+          <name value="ForeignBodyCS" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="CodeSystem/breastrad-HilumCS" />
+          </reference>
+          <name value="HilumCS" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="CodeSystem/breastrad-LymphNodeQualifiersCS" />
+          </reference>
+          <name value="LymphNodeQualifiersCS" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="CodeSystem/breastrad-MarginCS" />
+          </reference>
+          <name value="MarginCS" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="CodeSystem/breastrad-MassTypesCS" />
+          </reference>
+          <name value="MassTypesCS" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="CodeSystem/breastrad-NodeTypesCS" />
+          </reference>
+          <name value="NodeTypesCS" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="CodeSystem/breastrad-RadiologicProcedureCS" />
+          </reference>
+          <name value="RadiologicProcedureCS" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="CodeSystem/obf-ResearchSubjectTerminationReasonCS" />
+          </reference>
+          <name value="ResearchSubjectTerminationReasonCS" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="CodeSystem/obf-datatype-SettingCS" />
+          </reference>
+          <name value="SettingCS" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="CodeSystem/breastrad-ShapeCS" />
+          </reference>
+          <name value="ShapeCS" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="CodeSystem/breastrad-VascularityCS" />
+          </reference>
+          <name value="VascularityCS" />
+      </resource>
+      <resource>
+          <exampleBoolean value="false" />
+          <reference>
+            <reference value="CodeSystem/breastrad-WallCS" />
+          </reference>
+          <name value="WallCS" />
+      </resource>
+      <resource>
+          <exampleBoolean value="true" />
+          <reference>
+            <reference value="Observation/BreastAbnormalityExample1" />
+          </reference>
+          <name value="Example: BreastAbnormalityExample1" />
+      </resource>
+      <resource>
+          <exampleBoolean value="true" />
+          <reference>
+            <reference value="Observation/BreastAbnormalityExample2" />
+          </reference>
+          <name value="Example: BreastAbnormalityExample2" />
+      </resource>
+      <resource>
+          <exampleBoolean value="true" />
+          <reference>
+            <reference value="Composition/BreastRadiologyDocumentExample1" />
+          </reference>
+          <name value="Example: BreastRadiologyDocumentExample1" />
+      </resource>
+      <resource>
+          <exampleBoolean value="true" />
+          <reference>
+            <reference value="DiagnosticReport/BreastRadiologyReportExample1" />
+          </reference>
+          <name value="Example: BreastRadiologyReportExample1" />
+      </resource>
+      
+        <page>
+            <nameUrl value="index.html" />
+            <title value="Breast Radiology Reporting - 1st for comment ballot" />
+            <generation value="html" />
+        </page>
+    </definition>
 </ImplementationGuide>
