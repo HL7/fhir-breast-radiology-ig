@@ -35,132 +35,122 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-          <td><a href="ValueSet-breastrad-AbnormalityDensityVS.html">AbnormalityDensityVS</a></td>
-          <td>{% capture md_text %}Ductal carcinoma in situ (DCIS) is the presence of abnormal cells inside a milk duct in the breast.
-DCIS is considered the earliest form of breast cancer. DCIS is noninvasive, meaning it hasn't spread out of the milk duct and has a low risk of becoming invasive.{% endcapture %}{{ md_text | markdownify }}</td>
-        </tr>
-        <tr>
-          <td><a href="ValueSet-breastrad-AbnormalityTypeVS.html">AbnormalityTypeVS</a></td>
-          <td>{% capture md_text %}Abnormality Type value{% endcapture %}{{ md_text | markdownify }}</td>
-        </tr>
-        <tr>
-          <td><a href="ValueSet-obf-datatype-AnatomicalDirectionVS.html">AnatomicalDirectionVS</a></td>
-          <td>{% capture md_text %}Terms that specify anatomical direction.{% endcapture %}{{ md_text | markdownify }}</td>
-        </tr>
-        <tr>
-          <td><a href="ValueSet-obf-datatype-AnatomicalOrientationVS.html">AnatomicalOrientationVS</a></td>
-          <td>{% capture md_text %}Terms that specify anatomical orientation. The orientation value set is part of BodyLocation, a flexible structure that allows the location to be determined by a single code, or a code plus laterality and/or orientation. The body location can also be specified in relation to one or more body landmarks. SNOMED CT is used in all cases.
+<tr>
+<td><a href="ValueSet-BreastLocationClockVS.html">BreastLocationClockVS</a></td>
+<td>{% capture md_text %}
+Breast Location Clock
+{% endcapture %}{{ md_text | markdownify }}</td>
+</tr>
+<tr>
+<td><a href="ValueSet-BreastLocationDepthVS.html">BreastLocationDepthVS</a></td>
+<td>{% capture md_text %}
+Breast Location Depth
+{% endcapture %}{{ md_text | markdownify }}</td>
+</tr>
+<tr>
+<td><a href="ValueSet-BreastLocationQuadrantVS.html">BreastLocationQuadrantVS</a></td>
+<td>{% capture md_text %}
+Breast Location Quadrant
+{% endcapture %}{{ md_text | markdownify }}</td>
+</tr>
+<tr>
+<td><a href="ValueSet-BreastRadMammoBreastDensityVS.html">BreastRadMammoBreastDensityVS</a></td>
+<td>{% capture md_text %}
+Breast Radiology Mammography Breast Density/Composition Observation
+{% endcapture %}{{ md_text | markdownify }}</td>
+</tr>
+<tr>
+<td><a href="ValueSet-BreastRadMammoMassDensityVS.html">BreastRadMammoMassDensityVS</a></td>
+<td>{% capture md_text %}
+Breast Radiology Mammography Mass Density
+{% endcapture %}{{ md_text | markdownify }}</td>
+</tr>
+<tr>
+<td><a href="ValueSet-BreastRadMammoMassMarginVS.html">BreastRadMammoMassMarginVS</a></td>
+<td>{% capture md_text %}
+Breast Radiology Mammography Mass Margin
+{% endcapture %}{{ md_text | markdownify }}</td>
+</tr>
+<tr>
+<td><a href="ValueSet-BreastRadMassShapeVS.html">BreastRadMassShapeVS</a></td>
+<td>{% capture md_text %}
+Breast Radiology Mass Shape
+{% endcapture %}{{ md_text | markdownify }}</td>
+</tr>
+<tr>
+<td><a href="ValueSet-BreastRadMemmoAsymmetriesVS.html">BreastRadMemmoAsymmetriesVS</a></td>
+<td>{% capture md_text %}
+Breast Radiology Mammography Asymmetries Observation
+{% endcapture %}{{ md_text | markdownify }}</td>
+</tr>
+<tr>
+<td><a href="ValueSet-BreastRadUSMassEchoPatternVS.html">BreastRadUSMassEchoPatternVS</a></td>
+<td>{% capture md_text %}
+Breast Radiology Ultra-Sound Mass Echo Pattern
+{% endcapture %}{{ md_text | markdownify }}</td>
+</tr>
+<tr>
+<td><a href="ValueSet-BreastRadUSMassMarginNotCircumscribedVS.html">BreastRadUSMassMarginNotCircumscribedVS</a></td>
+<td>{% capture md_text %}
+Breast Radiology Ultra-Sound Mass Margin Not Circumscribed Values
+{% endcapture %}{{ md_text | markdownify }}</td>
+</tr>
+<tr>
+<td><a href="ValueSet-BreastRadUSMassMarginVS.html">BreastRadUSMassMarginVS</a></td>
+<td>{% capture md_text %}
+Breast Radiology Ultra-Sound Mass Margin
+{% endcapture %}{{ md_text | markdownify }}</td>
+</tr>
+<tr>
+<td><a href="ValueSet-BreastRadUSMassOrientationVS.html">BreastRadUSMassOrientationVS</a></td>
+<td>{% capture md_text %}
+Breast Radiology Ultra-Sound Mass Orientation
+{% endcapture %}{{ md_text | markdownify }}</td>
+</tr>
+<tr>
+<td><a href="ValueSet-BreastRadUSMassPosteriorAcousticFeaturesVS.html">BreastRadUSMassPosteriorAcousticFeaturesVS</a></td>
+<td>{% capture md_text %}
+Breast Radiology Ultra-Sound Mass Posterior Acoustic Features
+{% endcapture %}{{ md_text | markdownify }}</td>
+</tr>
+<tr>
+<td><a href="ValueSet-BreastRadUSTissueCompositionVS.html">BreastRadUSTissueCompositionVS</a></td>
+<td>{% capture md_text %}
+Breast Radiology Ultra-Sound Tissue Composition Observation
 
-* Code only: The code should include (precoordinate) laterality and/orientation to the degree necessary to completely specify the body location.
-* Code plus laterality and/or orientation: The basic code augmented by codes specifying the body side and/or anatomical orientation.
-* Relation to landmark: The location relative to a landmark is specified by:
-1. Establishing the location and type of landmark using a body site code and optional laterality/orientation, and
-2. Specifying the direction and distance from the landmark to the body location.
 
-Note that BodyLocation is a data type (a reusable structure), not a stand-alone entity. The concept is similar to how a postal address can apply to a person, location, or organization. This contrasts with FHIR's stand-alone BodySite (aka BodyStructure in r4) which 'is not ... intended for describing the type of anatomical location but rather a specific body site on a specific patient' (FHIR 3.5).{% endcapture %}{{ md_text | markdownify }}</td>
-        </tr>
-        <tr>
-          <td><a href="ValueSet-breastrad-AssociatedFindingsVS.html">AssociatedFindingsVS</a></td>
-          <td>{% capture md_text %}Associated Findings{% endcapture %}{{ md_text | markdownify }}</td>
-        </tr>
-        <tr>
-          <td><a href="ValueSet-breastrad-AsymmetryTypesVS.html">AsymmetryTypesVS</a></td>
-          <td>{% capture md_text %}Currently many studies utilize cortical thickening and hilum absence as criteria for definition of the risk for metastasis(11,12-16). ... Metastatic deposits accumulate in the lymph node peripheral area, causing enlargement of the cortex, usually focal (at early stages), or uniform.{% endcapture %}{{ md_text | markdownify }}</td>
-        </tr>
-        <tr>
-          <td><a href="ValueSet-breastrad-BiRadCodeVS.html">BiRadCodeVS</a></td>
-          <td>{% capture md_text %}Bi-Rad code value{% endcapture %}{{ md_text | markdownify }}</td>
-        </tr>
-        <tr>
-          <td><a href="ValueSet-breastrad-BreastAbnormalityCodesVS.html">BreastAbnormalityCodesVS</a></td>
-          <td>{% capture md_text %}Breast Abnormality  Codes{% endcapture %}{{ md_text | markdownify }}</td>
-        </tr>
-        <tr>
-          <td><a href="ValueSet-breastrad-BreastDensityVS.html">BreastDensityVS</a></td>
-          <td>{% capture md_text %}Breast density values{% endcapture %}{{ md_text | markdownify }}</td>
-        </tr>
-        <tr>
-          <td><a href="ValueSet-breastrad-BreastDepthVS.html">BreastDepthVS</a></td>
-          <td>{% capture md_text %}Breast Depth{% endcapture %}{{ md_text | markdownify }}</td>
-        </tr>
-        <tr>
-          <td><a href="ValueSet-breastrad-BreastDirectionVS.html">BreastDirectionVS</a></td>
-          <td>{% capture md_text %}The relative direction of an object described using the analogy of a 12-hour clock to describe angles and directions. One imagines a clock face lying either upright or flat in front of oneself, and identifies the twelve hour markings with the directions in which they point.{% endcapture %}{{ md_text | markdownify }}</td>
-        </tr>
-        <tr>
-          <td><a href="ValueSet-breastrad-CalcificationTypeVS.html">CalcificationTypeVS</a></td>
-          <td>{% capture md_text %}Calcification Type{% endcapture %}{{ md_text | markdownify }}</td>
-        </tr>
-        <tr>
-          <td><a href="ValueSet-breastrad-ChangeVS.html">ChangeVS</a></td>
-          <td>{% capture md_text %}Change value{% endcapture %}{{ md_text | markdownify }}</td>
-        </tr>
-        <tr>
-          <td><a href="ValueSet-breastrad-ConsistentWithVS.html">ConsistentWithVS</a></td>
-          <td>{% capture md_text %}Consistent With{% endcapture %}{{ md_text | markdownify }}</td>
-        </tr>
-        <tr>
-          <td><a href="ValueSet-breastrad-CystTypesVS.html">CystTypesVS</a></td>
-          <td>{% capture md_text %}Cyst Types{% endcapture %}{{ md_text | markdownify }}</td>
-        </tr>
-        <tr>
-          <td><a href="ValueSet-breastrad-ForeignBodyVS.html">ForeignBodyVS</a></td>
-          <td>{% capture md_text %}Foreign Body{% endcapture %}{{ md_text | markdownify }}</td>
-        </tr>
-        <tr>
-          <td><a href="ValueSet-breastrad-HilumVS.html">HilumVS</a></td>
-          <td>{% capture md_text %}Hilum{% endcapture %}{{ md_text | markdownify }}</td>
-        </tr>
-        <tr>
-          <td><a href="ValueSet-obf-datatype-LandmarkTypeVS.html">LandmarkTypeVS</a></td>
-          <td>{% capture md_text %}The type of feature that constitutes the landmark, for example, particularly if the landmark is an acquired body structure or physical object. The landmark type value set is part of BodyLocation, a flexible structure that allows the location to be determined by a single code, or a code plus laterality and/or orientation. The body location can also be specified in relation to one or more body landmarks. SNOMED CT is used in all cases.
+> The wide normal variability in tissue composition seen on mammograms can also be observed
+> on US images. Just as increasing breast density diminishes the sensitivity of mammography in the
+> detection of small masses, heterogeneous background echotexture of the breast may affect the
+> sensitivity of breast sonograms for lesion detection.
+>> -- BI-RADS® ATLAS — MAMMOGRAPHY FIFTH EDITION — 2013
+{% endcapture %}{{ md_text | markdownify }}</td>
+</tr>
+<tr>
+<td><a href="ValueSet-MammoCalcificationDistributionVS.html">MammoCalcificationDistributionVS</a></td>
+<td>{% capture md_text %}
+Mammography Calcification Distribution
 
-* Code only: The code should include (precoordinate) laterality and/orientation to the degree necessary to completely specify the body location.
-* Code plus laterality and/or orientation: The basic code augmented by codes specifying the body side and/or anatomical orientation.
-* Relation to landmark: The location relative to a landmark is specified by:
-1. Establishing the location and type of landmark using a body site code and optional laterality/orientation, and
-2. Specifying the direction and distance from the landmark to the body location.
 
-Note that BodyLocation is a data type (a reusable structure), not a stand-alone entity. The concept is similar to how a postal address can apply to a person, location, or organization. This contrasts with FHIR's stand-alone BodySite (aka BodyStructure in r4) which 'is not ... intended for describing the type of anatomical location but rather a specific body site on a specific patient' (FHIR 3.5).{% endcapture %}{{ md_text | markdownify }}</td>
-        </tr>
-        <tr>
-          <td><a href="ValueSet-breastrad-LymphNodeQualifiersVS.html">LymphNodeQualifiersVS</a></td>
-          <td>{% capture md_text %}Lymph Node Qualifiers{% endcapture %}{{ md_text | markdownify }}</td>
-        </tr>
-        <tr>
-          <td><a href="ValueSet-breastrad-MarginVS.html">MarginVS</a></td>
-          <td>{% capture md_text %}When breast cancer is surgically removed (during a surgical biopsy, lumpectomy or mastectomy), a rim of normal tissue surrounding the tumor is also removed. This rim is called a margin. Margins help show whether or not all of the tumor was removed.{% endcapture %}{{ md_text | markdownify }}</td>
-        </tr>
-        <tr>
-          <td><a href="ValueSet-breastrad-MassTypesVS.html">MassTypesVS</a></td>
-          <td>{% capture md_text %}Mass Types{% endcapture %}{{ md_text | markdownify }}</td>
-        </tr>
-        <tr>
-          <td><a href="ValueSet-breastrad-NodeTypesVS.html">NodeTypesVS</a></td>
-          <td>{% capture md_text %}Node Types{% endcapture %}{{ md_text | markdownify }}</td>
-        </tr>
-        <tr>
-          <td><a href="ValueSet-breastrad-RadiologicProcedureVS.html">RadiologicProcedureVS</a></td>
-          <td>{% capture md_text %}Radiologic Procedure{% endcapture %}{{ md_text | markdownify }}</td>
-        </tr>
-        <tr>
-          <td><a href="ValueSet-breastrad-ShapeVS.html">ShapeVS</a></td>
-          <td>{% capture md_text %}Shape{% endcapture %}{{ md_text | markdownify }}</td>
-        </tr>
-        <tr>
-          <td><a href="ValueSet-obf-datatype-UnitsOfLengthVS.html">UnitsOfLengthVS</a></td>
-          <td>{% capture md_text %}Units of measure related to length or distance.{% endcapture %}{{ md_text | markdownify }}</td>
-        </tr>
-        <tr>
-          <td><a href="ValueSet-breastrad-VascularityVS.html">VascularityVS</a></td>
-          <td>{% capture md_text %}Vascularity{% endcapture %}{{ md_text | markdownify }}</td>
-        </tr>
-        <tr>
-          <td><a href="ValueSet-breastrad-WallVS.html">WallVS</a></td>
-          <td>{% capture md_text %}Wall{% endcapture %}{{ md_text | markdownify }}</td>
-        </tr>
-        
+> These descriptors are used to indicate the arrangement of calcifications in the breast. Multiple
+> similar groups may be described in the report when there is more than one group of calcifications
+> that are similar in morphology and distribution. In evaluating the likelihood of malignancy for calcifications, 
+> distribution is at least as important as morphology.
+>> -- BI-RADS® ATLAS — MAMMOGRAPHY FIFTH EDITION — 2013
+{% endcapture %}{{ md_text | markdownify }}</td>
+</tr>
+<tr>
+<td><a href="ValueSet-MammoCalcificationTypeVS.html">MammoCalcificationTypeVS</a></td>
+<td>{% capture md_text %}
+Mammography Calcification Type
+{% endcapture %}{{ md_text | markdownify }}</td>
+</tr>
+<tr>
+<td><a href="ValueSet-UnitsOfLengthVS.html">UnitsOfLengthVS</a></td>
+<td>{% capture md_text %}
+Units of measure related to length or distance.
+{% endcapture %}{{ md_text | markdownify }}</td>
+</tr>
   </tbody>
 </table>
 
@@ -178,119 +168,6 @@ Note that BodyLocation is a data type (a reusable structure), not a stand-alone 
     </tr>
   </thead>
   <tbody>
-    <tr>
-        <td><a href="http://hl7.org/fhir/ValueSet/languages">CommonLanguages</a></td>
-        <td>{% capture md_text %}This value set includes common codes from BCP-47 (http://tools.ietf.org/html/bcp47){% endcapture %}{{ md_text | markdownify }}</td>
-      </tr>
-      <tr>
-        <td><a href="http://hl7.org/fhir/ValueSet/composition-attestation-mode">CompositionAttestationMode</a></td>
-        <td>{% capture md_text %}The way in which a person authenticated a composition.{% endcapture %}{{ md_text | markdownify }}</td>
-      </tr>
-      <tr>
-        <td><a href="http://hl7.org/fhir/ValueSet/composition-status">CompositionStatus</a></td>
-        <td>{% capture md_text %}The workflow/clinical status of the composition.{% endcapture %}{{ md_text | markdownify }}</td>
-      </tr>
-      <tr>
-        <td><a href="http://hl7.org/fhir/ValueSet/data-absent-reason">DataAbsentReason</a></td>
-        <td>{% capture md_text %}Used to specify why the normally expected content of the data element is missing.{% endcapture %}{{ md_text | markdownify }}</td>
-      </tr>
-      <tr>
-        <td><a href="http://hl7.org/fhir/ValueSet/diagnostic-report-status">DiagnosticReportStatus</a></td>
-        <td>{% capture md_text %}The status of the diagnostic report.{% endcapture %}{{ md_text | markdownify }}</td>
-      </tr>
-      <tr>
-        <td><a href="http://hl7.org/fhir/ValueSet/document-classcodes">DocumentClassValueSet</a></td>
-        <td>{% capture md_text %}This is the code specifying the high-level kind of document (e.g. Prescription, Discharge Summary, Report, etc.). Note: Class code for documents comes from LOINC, and is based upon one of the following:The type of service described by the document. It is described at a very high level in Section 7.3 of the LOINC Manual. The type study performed. It was determined by identifying modalities for study reports. The section of the chart where the document is placed. It was determined from the SETs created for Claims Attachment requests.{% endcapture %}{{ md_text | markdownify }}</td>
-      </tr>
-      <tr>
-        <td><a href="http://hl7.org/fhir/ValueSet/document-relationship-type">DocumentRelationshipType</a></td>
-        <td>{% capture md_text %}The type of relationship between documents.{% endcapture %}{{ md_text | markdownify }}</td>
-      </tr>
-      <tr>
-        <td><a href="http://hl7.org/fhir/ValueSet/doc-section-codes">DocumentSectionCodes</a></td>
-        <td>{% capture md_text %}Document section codes (LOINC codes used in CCDA sections).{% endcapture %}{{ md_text | markdownify }}</td>
-      </tr>
-      <tr>
-        <td><a href="http://hl7.org/fhir/ValueSet/doc-typecodes">FHIRDocumentTypeCodes</a></td>
-        <td>{% capture md_text %}FHIR Document Codes - all LOINC codes where scale type = 'DOC'.{% endcapture %}{{ md_text | markdownify }}</td>
-      </tr>
-      <tr>
-        <td><a href="http://hl7.org/fhir/ValueSet/observation-codes">LOINCCodes</a></td>
-        <td>{% capture md_text %}This value set includes all LOINC codes{% endcapture %}{{ md_text | markdownify }}</td>
-      </tr>
-      <tr>
-        <td><a href="http://hl7.org/fhir/ValueSet/bodysite-laterality">Laterality</a></td>
-        <td>{% capture md_text %}Laterality: SNOMED-CT concepts for 'left', 'right', and 'bilateral'{% endcapture %}{{ md_text | markdownify }}</td>
-      </tr>
-      <tr>
-        <td><a href="http://hl7.org/fhir/ValueSet/list-empty-reason">ListEmptyReasons</a></td>
-        <td>{% capture md_text %}General reasons for a list to be empty. Reasons are either related to a summary list (i.e. problem or medication list) or to a workflow related list (i.e. consultation list).{% endcapture %}{{ md_text | markdownify }}</td>
-      </tr>
-      <tr>
-        <td><a href="http://hl7.org/fhir/ValueSet/list-mode">ListMode</a></td>
-        <td>{% capture md_text %}The processing mode that applies to this list.{% endcapture %}{{ md_text | markdownify }}</td>
-      </tr>
-      <tr>
-        <td><a href="http://hl7.org/fhir/ValueSet/list-order">ListOrderCodes</a></td>
-        <td>{% capture md_text %}Base values for the order of the items in a list resource.{% endcapture %}{{ md_text | markdownify }}</td>
-      </tr>
-      <tr>
-        <td><a href="http://hl7.org/fhir/ValueSet/observation-category">ObservationCategoryCodes</a></td>
-        <td>{% capture md_text %}Observation Category codes.{% endcapture %}{{ md_text | markdownify }}</td>
-      </tr>
-      <tr>
-        <td><a href="http://hl7.org/fhir/ValueSet/observation-interpretation">ObservationInterpretationCodes</a></td>
-        <td>{% capture md_text %}A categorical assessment, providing a rough qualitative interpretation of the observation value,    such as “normal”/ “abnormal”,”low” / “high”, “better” / “worse”, “susceptible” / “resistant”, “expected”/ “not expected”.    The value set is intended to be for ANY use where coded representation of an interpretation is needed.   
-   
-   Notes:
-   
-   This is being communicated in v2.x in OBX-8 (Observation Interpretation), in v3 in ObservationInterpretation (CWE) in R1 (Representative Realm) and in FHIR in    Observation.interpretation. Historically these values come from the laboratory domain, and these codes are extensively    used. The value set binding is extensible, so codes outside the value set that are needed for interpretation concepts    (i.e. particular meanings) that are not included in the value set can be used, and these new codes may also be added to    the value set and published in a future version.{% endcapture %}{{ md_text | markdownify }}</td>
-      </tr>
-      <tr>
-        <td><a href="http://hl7.org/fhir/ValueSet/observation-methods">ObservationMethods</a></td>
-        <td>{% capture md_text %}Observation Method codes from [SNOMED CT](http://snomed.info/sct) where concept is-a 272394005 (Technique (qualifier value)) or is-a 129264002 (Action (qualifier value)) or is-a 386053000 (Evaluation procedure(procedure)){% endcapture %}{{ md_text | markdownify }}</td>
-      </tr>
-      <tr>
-        <td><a href="http://hl7.org/fhir/ValueSet/referencerange-appliesto">ObservationReferenceRangeAppliesToCodes</a></td>
-        <td>{% capture md_text %}This value set defines a set of codes that can be used to indicate the particular target population the reference range applies to.{% endcapture %}{{ md_text | markdownify }}</td>
-      </tr>
-      <tr>
-        <td><a href="http://hl7.org/fhir/ValueSet/referencerange-meaning">ObservationReferenceRangeMeaningCodes</a></td>
-        <td>{% capture md_text %}This value set defines a set of codes that can be used to indicate the meaning/use of a reference range for a particular target population.{% endcapture %}{{ md_text | markdownify }}</td>
-      </tr>
-      <tr>
-        <td><a href="http://hl7.org/fhir/ValueSet/observation-status">ObservationStatus</a></td>
-        <td>{% capture md_text %}Codes providing the status of an observation.{% endcapture %}{{ md_text | markdownify }}</td>
-      </tr>
-      <tr>
-        <td><a href="http://hl7.org/fhir/ValueSet/quantity-comparator">QuantityComparator</a></td>
-        <td>{% capture md_text %}How the Quantity should be understood and represented.{% endcapture %}{{ md_text | markdownify }}</td>
-      </tr>
-      <tr>
-        <td><a href="http://hl7.org/fhir/ValueSet/body-site">SNOMEDCTBodyStructures</a></td>
-        <td>{% capture md_text %}This value set includes all codes from [SNOMED CT](http://snomed.info/sct) where concept is-a 442083009 (Anatomical or acquired body site (body structure)).{% endcapture %}{{ md_text | markdownify }}</td>
-      </tr>
-      <tr>
-        <td><a href="http://hl7.org/fhir/ValueSet/clinical-findings">SNOMEDCTClinicalFindings</a></td>
-        <td>{% capture md_text %}This value set includes all the "Clinical finding" [SNOMED CT](http://snomed.info/sct) codes - concepts where concept is-a 404684003 (Clinical finding (finding)).{% endcapture %}{{ md_text | markdownify }}</td>
-      </tr>
-      <tr>
-        <td><a href="http://www.hl7.org/fhir/us/core/ValueSet-us-core-diagnosticreport-category.html">USCoreDiagnosticReportCategory</a></td>
-        <td>{% capture md_text %}The US Core Diagnostic Report Category Value Set is a 'starter set' of categories supported for fetching and Diagnostic Reports and notes.{% endcapture %}{{ md_text | markdownify }}</td>
-      </tr>
-      <tr>
-        <td><a href="http://www.hl7.org/fhir/us/core/ValueSet-us-core-diagnosticreport-report-and-note-codes.html">USCoreDiagnosticreportReportAndNoteCodes</a></td>
-        <td>{% capture md_text %}This value set currently contains all of LOINC. The codes selected should represent discrete and narrative diagnostic observations and reports{% endcapture %}{{ md_text | markdownify }}</td>
-      </tr>
-      <tr>
-        <td><a href="http://terminology.hl7.org/ValueSet/v3-ActCode">http://terminology.hl7.org/ValueSet/v3-ActCode</a></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a href="http://terminology.hl7.org/ValueSet/v3-ConfidentialityClassification">http://terminology.hl7.org/ValueSet/v3-ConfidentialityClassification</a></td>
-        <td></td>
-      </tr>
-      
   </tbody>
 </table>
 

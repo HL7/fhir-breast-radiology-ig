@@ -39,24 +39,531 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td><a href="StructureDefinition-breastrad-BreastAbnormality.html">BreastAbnormality</a></td>
-      <td><a href="http://hl7.org/fhir/R4/observation.html">Observation</a></td>
-      <td>{% capture md_text %}Breast Abnormality Form{% endcapture %}{{ md_text | markdownify }}</td>
-    </tr>
-    <tr>
-      <td><a href="StructureDefinition-breastrad-BreastRadiologyDocument.html">BreastRadiologyDocument</a></td>
-      <td><a href="http://hl7.org/fhir/R4/composition.html">Composition</a></td>
-      <td>{% capture md_text %}Breast Radiology Document. This Composition contains the details of a specific Breast Radiology Report.{% endcapture %}{{ md_text | markdownify }}</td>
-    </tr>
-    <tr>
-      <td><a href="StructureDefinition-breastrad-BreastRadiologyReport.html">BreastRadiologyReport</a></td>
-      <td><a href="http://hl7.org/fhir/R4/diagnosticreport.html">DiagnosticReport</a></td>
-      <td>{% capture md_text %}Breast Radiology Diagnostic Report.
-<br>This diagnostic report is the base of the Breast Radiology Report, and contains a summary of the report findings.
-<br>Detailed information about the reports document is contained in the Breast Radiology Document linked to by the [resultComposition] field.{% endcapture %}{{ md_text | markdownify }}</td>
-    </tr>
-    
+<tr>
+<td><a href="StructureDefinition-BreastRadMammoArchitecturalDistortion.html">BreastRadMammoArchitecturalDistortion</a></td>
+<td><a href="http://hl7.org/fhir/StructureDefinition/Observation">Observation</a></td>
+<td>{% capture md_text %}
+Breast Radiology Mammography Architectural Distortion Observation
+
+
+If this observation is present, and dataAbsentReason is empty, then an architectural distortion was observed.
+
+
+If this observation is present, and dataAbsentReason is not empty, then an architectural distortion was not observed and dataAbsentReason contains the reason why.
+
+
+> The parenchyma is distorted with no definite mass visible. For mammography, this includes thin
+> straight lines or spiculations radiating from a point, and focal retraction, distortion or straightening
+> at the anterior or posterior edge of the parenchyma. Architectural distortion may also be associ-
+> ated with a mass, asymmetry, or calcifications. In the absence of appropriate history of trauma or
+> surgery, architectural distortion is suspicious for malignancy or radial scar, and tissue diagnosis is
+> appropriate.
+> As an ASSOCIATED FEATURE, architectural distortion may be used in conjunction with another
+> finding to indicate that the parenchyma is distorted or retracted adjacent to the FINDING
+>> -- BI-RADS® ATLAS — MAMMOGRAPHY FIFTH EDITION — 2013
+{% endcapture %}{{ md_text | markdownify }}</td>
+</tr>
+<tr>
+<td><a href="StructureDefinition-BreastRadMammoAssociatedFeatures.html">BreastRadMammoAssociatedFeatures</a></td>
+<td><a href="http://hl7.org/fhir/StructureDefinition/Observation">Observation</a></td>
+<td>{% capture md_text %}
+Mammography Associated Features Observation
+
+
+Used with masses, asymmetries, or calcifications, or may stand alone as Features when no other abnormality is present.
+{% endcapture %}{{ md_text | markdownify }}</td>
+</tr>
+<tr>
+<td><a href="StructureDefinition-BreastRadMammoAsymmetries.html">BreastRadMammoAsymmetries</a></td>
+<td><a href="http://hl7.org/fhir/StructureDefinition/Observation">Observation</a></td>
+<td>{% capture md_text %}
+Breast Radiology Mammography Asymmetries Observation
+
+
+If this observation is present, and dataAbsentReason is empty, then an asymmetry was observed.
+
+
+If this observation is present, and dataAbsentReason is not empty, then an asymmetry was not observed and dataAbsentReason contains the reason why.
+
+
+> The several types of asymmetry involve a spectrum of mammographic findings that represent
+> unilateral deposits of fibroglandular tissue not conforming to the definition of a radiodense mass.
+> The asymmetry, unlike a mass, is visible on only 1 mammographic projection. The other 3 types of
+> asymmetry, although visible on more than 1 projection, have concave-outward borders and usu-
+> ally are seen to be interspersed with fat, whereas a radiodense mass displays completely or partially
+> convex-outward borders and appears to be denser in the center than at the periphery.
+>> -- BI-RADS® ATLAS — MAMMOGRAPHY FIFTH EDITION — 2013
+{% endcapture %}{{ md_text | markdownify }}</td>
+</tr>
+<tr>
+<td><a href="StructureDefinition-BreastRadMammoAxillaryAdenopathy.html">BreastRadMammoAxillaryAdenopathy</a></td>
+<td><a href="http://hl7.org/fhir/StructureDefinition/Observation">Observation</a></td>
+<td>{% capture md_text %}
+Breast Radiology Mammography Axillary Adenopathy Observation
+
+
+If this observation is present, and dataAbsentReason is empty, then an axillary adenopathy was observed.
+
+
+If this observation is present, and dataAbsentReason is not empty, then an axillary adenopathy was not observed and dataAbsentReason contains the reason why.
+
+
+> Enlarged axillary lymph nodes may warrant comment, clinical correlation, and additional 
+> evaluation, especially if new or considerably larger or rounder when compared to previous examination.
+> A review of the patient’s medical history may elucidate the cause for axillary adenopathy, averting
+> recommendation for additional evaluation. When one or more large axillary nodes are 
+> substantially composed of fat, this is a normal variant.
+>> -- BI-RADS® ATLAS — MAMMOGRAPHY FIFTH EDITION — 2013
+{% endcapture %}{{ md_text | markdownify }}</td>
+</tr>
+<tr>
+<td><a href="StructureDefinition-BreastRadMammoBreastDensity.html">BreastRadMammoBreastDensity</a></td>
+<td><a href="http://hl7.org/fhir/StructureDefinition/Observation">Observation</a></td>
+<td>{% capture md_text %}
+Breast Radiology Mammography Breast Density Observation
+
+
+> The following four categories of breast composition are defined by the visually estimated content of fibroglandular-density tissue within the breasts. Please note that the 
+> categories are listed as a, b, c, and d so as not to be confused with the numbered BI-RADS® assessment categories. If the breasts are not of apparently equal density, the 
+> denser breast should be used to categorize breast density. The sensitivity of mammography for noncalcified lesions decreases as the BI-RADS® breast density category 
+> increases. The denser the breast, the larger the lesion(s) that may be obscured. There is considerable intra- and inter-observer variation in visually estimating breast density 
+> between any two adjacent density categories. Furthermore, there is only a minimal and insignificant difference in the sensitivity of mammography between the densest breast 
+> in a lower-density category and the least dense breast in the next-higher-density category. These factors limit the clinical relevance of breast density categorization for the 
+> individual woman. 
+>> -- BI-RADS® ATLAS — MAMMOGRAPHY FIFTH EDITION — 2013
+{% endcapture %}{{ md_text | markdownify }}</td>
+</tr>
+<tr>
+<td><a href="StructureDefinition-BreastRadMammoCalcification.html">BreastRadMammoCalcification</a></td>
+<td><a href="http://hl7.org/fhir/StructureDefinition/Observation">Observation</a></td>
+<td>{% capture md_text %}
+Breast Radiology Mammography Calcification Observation
+
+
+If this observation is present, and dataAbsentReason is empty, then a calcification was observed.
+
+
+If this observation is present, and dataAbsentReason is not empty, then a calcification was not observed and dataAbsentReason contains the reason why and no Type or Distribution observations should be referenced by this observation
+
+
+> Calcifications that are assessed as benign at mammography are typically larger, coarser, round with
+> smooth margins, and more easily seen than malignant calcifications. Calcifications associated with
+> malignancy (and many benign calcifications as well) are usually very small and often require the use
+> of magnification to be seen well. When a specific typically benign etiology cannot be assigned, a
+> description of calcifications should include their morphology and distribution. Calcifications that are
+> obviously benign need not be reported, especially if the interpreting physician is concerned that
+> the referring clinician or patient might infer anything other than absolute confidence in benignity
+> were such calcifications described in the report. However, typically benign calcifications should be
+> reported if the interpreting physician is concerned that other observers might misinterpret them as
+> anything but benign were such calcifications not described in the report.
+> As an ASSOCIATED FEATURE, this may be used in conjunction with one or more other FINDING(S)
+> to describe calcifications within or immediately adjacent to the finding(s)
+>> -- BI-RADS® ATLAS — MAMMOGRAPHY FIFTH EDITION — 2013
+This observation has the following two member observations
+
+
+** Calcification Type
+** Calcification Distribution
+{% endcapture %}{{ md_text | markdownify }}</td>
+</tr>
+<tr>
+<td><a href="StructureDefinition-BreastRadMammoCalcificationDistribution.html">BreastRadMammoCalcificationDistribution</a></td>
+<td><a href="http://hl7.org/fhir/StructureDefinition/Observation">Observation</a></td>
+<td>{% capture md_text %}
+Breast Radiology Mammography Calcification Distribution Observation
+{% endcapture %}{{ md_text | markdownify }}</td>
+</tr>
+<tr>
+<td><a href="StructureDefinition-BreastRadMammoCalcificationType.html">BreastRadMammoCalcificationType</a></td>
+<td><a href="http://hl7.org/fhir/StructureDefinition/Observation">Observation</a></td>
+<td>{% capture md_text %}
+Breast Radiology Mammography Calcification Type Observation
+{% endcapture %}{{ md_text | markdownify }}</td>
+</tr>
+<tr>
+<td><a href="StructureDefinition-BreastRadMammoFinding.html">BreastRadMammoFinding</a></td>
+<td><a href="http://hl7.org/fhir/StructureDefinition/Observation">Observation</a></td>
+<td>{% capture md_text %}
+Breast Radiology Mammography Finding
+
+
+> A "MASS" is three dimensional and occupies space. It is seen on two different mammographic pro-
+> jections. It has completely or partially convex-outward borders and (when radiodense) appears
+> denser in the center than at the periphery. If a potential mass is seen only on a single projection, it
+> should be called an "ASYMMETRY" until its 3-dimensionality is confirmed (See Section D on Asym-
+> metries and also the Guidance chapter). (Insert links/page #s)
+>> -- BI-RADS® ATLAS — MAMMOGRAPHY FIFTH EDITION — 2013
+{% endcapture %}{{ md_text | markdownify }}</td>
+</tr>
+<tr>
+<td><a href="StructureDefinition-BreastRadMammoIntramammaryLymphNode.html">BreastRadMammoIntramammaryLymphNode</a></td>
+<td><a href="http://hl7.org/fhir/StructureDefinition/Observation">Observation</a></td>
+<td>{% capture md_text %}
+Breast Radiology Mammography Intramammary LymphNode Observation
+
+
+If this observation is present, and dataAbsentReason is empty, then an intramammary lymph node was observed.
+
+
+If this observation is present, and dataAbsentReason is not empty, then an intramammary lymph node was not observed and dataAbsentReason contains the reason why.
+
+
+> These are circumscribed masses that are reniform and have hilar fat. They are generally 1 cm or smaller
+> in size. They may be larger than 1 cm and characterized as normal when fat replacement is pro-
+> nounced. They frequently occur in the lateral and usually upper portions of the breast closer to the
+> axilla, although they may occur anywhere in the breast. They usually are seen adjacent to a vein,
+> because the lymphatic drainage of the breast parallels the venous drainage.
+>> -- BI-RADS® ATLAS — MAMMOGRAPHY FIFTH EDITION — 2013
+{% endcapture %}{{ md_text | markdownify }}</td>
+</tr>
+<tr>
+<td><a href="StructureDefinition-BreastRadMammoMass.html">BreastRadMammoMass</a></td>
+<td><a href="http://hl7.org/fhir/StructureDefinition/Observation">Observation</a></td>
+<td>{% capture md_text %}
+Breast Radiology Mammography Mass Observation
+
+
+If this observation is present, and dataAbsentReason is empty, then a mass was observed.
+
+
+If this observation is present, and dataAbsentReason is not empty, then a mass was not observed and dataAbsentReason contains the reason whyand no Shape, Margin, or Density observations should be referenced by this observation
+
+
+> "MASS" is three dimensional and occupies space. It is seen on two different mammographic pro-
+> jections. It has completely or partially convex-outward borders and (when radiodense) appears
+> denser in the center than at the periphery. If a potential mass is seen only on a single projection, it
+> should be called an "ASYMMETRY" until its 3-dimensionality is confirmed
+>> -- BI-RADS® ATLAS — MAMMOGRAPHY FIFTH EDITION — 2013
+This observation has the following three member observations
+
+
+** Shape
+** Margin
+** Density
+{% endcapture %}{{ md_text | markdownify }}</td>
+</tr>
+<tr>
+<td><a href="StructureDefinition-BreastRadMammoMassDensity.html">BreastRadMammoMassDensity</a></td>
+<td><a href="http://hl7.org/fhir/StructureDefinition/Observation">Observation</a></td>
+<td>{% capture md_text %}
+Breast Radiology Mammography Mass Density Observation
+
+
+If this observation is present, and dataAbsentReason is empty, then a mass density was observed.
+
+
+If this observation is present, and dataAbsentReason is not empty, then a mass density was not observed and dataAbsentReason contains the reason why.
+
+
+> Radiographic density is considered an important feature in the evaluation of noncalcified breast masses, yet
+> no studies assessing its value have been published. The radiographic densities of 91 biopsy-proved, nonfatty,
+> noncalcified breast masses were evaluated by three mammographers. The density determinations made by
+> each observer were compared with the histologic outcome for the 51 benign and 40 malignant lesions. With
+> the kappa statistic, interobserver agreement was relatively poor (0.22 to 0.49), and intraobserver agreement for
+> one expert mammographer was 0.50. When the majority opinion of the mammographers was used, sensitivity
+> was 48%, specificity was 80%, and both positive and negative predictive values were 66%. As a solitary feature
+> in lesion analysis, mammographic density is difficult to assess and is of limited value for the prediction of the
+> benign or malignant nature of noncalcified breast masses.
+>> -- BI-RADS® ATLAS — MAMMOGRAPHY FIFTH EDITION — 2013
+{% endcapture %}{{ md_text | markdownify }}</td>
+</tr>
+<tr>
+<td><a href="StructureDefinition-BreastRadMammoMassMargin.html">BreastRadMammoMassMargin</a></td>
+<td><a href="http://hl7.org/fhir/StructureDefinition/Observation">Observation</a></td>
+<td>{% capture md_text %}
+Breast Radiology Mammography Mass Margin Observation
+
+
+If this observation is present, and dataAbsentReason is empty, then a mass margin was observed.
+
+
+If this observation is present, and dataAbsentReason is not empty, then a mass margin was not observed and dataAbsentReason contains the reason why.
+
+
+> The margin is the edge or border of the lesion. The descriptors of margin, like the descriptors of shape, are important predictors of whether a mass is benign or malignant. 
+>> -- BI-RADS® ATLAS — MAMMOGRAPHY FIFTH EDITION — 2013
+{% endcapture %}{{ md_text | markdownify }}</td>
+</tr>
+<tr>
+<td><a href="StructureDefinition-BreastRadMammoNippleRetraction.html">BreastRadMammoNippleRetraction</a></td>
+<td><a href="http://hl7.org/fhir/StructureDefinition/Observation">Observation</a></td>
+<td>{% capture md_text %}
+Breast Radiology Mammography Nipple Retraction Observation
+
+
+If this observation is present, and dataAbsentReason is empty, then a nipple retraction was observed.
+
+
+If this observation is present, and dataAbsentReason is not empty, then a nipple retraction was not observed and dataAbsentReason contains the reason why.
+
+
+> The nipple is pulled in. This should not be confused with nipple inversion, which is often bilateral 
+> and which in the absence of any suspicious findings and when stable for a long period of time, 
+> is not a sign of malignancy. However, if nipple retraction is new, suspicion for underlying malignancy is increased.
+>> -- BI-RADS® ATLAS — MAMMOGRAPHY FIFTH EDITION — 2013
+{% endcapture %}{{ md_text | markdownify }}</td>
+</tr>
+<tr>
+<td><a href="StructureDefinition-BreastRadMammoSkinLesion.html">BreastRadMammoSkinLesion</a></td>
+<td><a href="http://hl7.org/fhir/StructureDefinition/Observation">Observation</a></td>
+<td>{% capture md_text %}
+Breast Radiology Mammography Skin Lesion Observation
+
+
+If this observation is present, and dataAbsentReason is empty, then a skin lesion was observed.
+
+
+If this observation is present, and dataAbsentReason is not empty, then a skin lesion was not observed and dataAbsentReason contains the reason why.
+
+
+> This finding may be described in the mammography report or annotated on the mammographic
+> image when it projects over the breast (especially on 2 different projections), and may be mistaken
+> for an intramammary lesion. A raised skin lesion sufficiently large to be seen at mammography
+> should be marked by the technologist with a radiopaque device designated for use as a marker for
+> a skin lesion.
+>> -- BI-RADS® ATLAS — MAMMOGRAPHY FIFTH EDITION — 2013
+{% endcapture %}{{ md_text | markdownify }}</td>
+</tr>
+<tr>
+<td><a href="StructureDefinition-BreastRadMammoSkinRetraction.html">BreastRadMammoSkinRetraction</a></td>
+<td><a href="http://hl7.org/fhir/StructureDefinition/Observation">Observation</a></td>
+<td>{% capture md_text %}
+Skin Retraction Observation
+
+
+> The skin is pulled in abnormally
+>> -- BI-RADS® ATLAS — MAMMOGRAPHY FIFTH EDITION — 2013
+If this observation is present, and dataAbsentReason is empty, then a skin retraction was observed.
+
+
+If this observation is present, and dataAbsentReason is not empty, then a skin retraction was not observed and dataAbsentReason contains the reason why.
+{% endcapture %}{{ md_text | markdownify }}</td>
+</tr>
+<tr>
+<td><a href="StructureDefinition-BreastRadMammoSkinThickening.html">BreastRadMammoSkinThickening</a></td>
+<td><a href="http://hl7.org/fhir/StructureDefinition/Observation">Observation</a></td>
+<td>{% capture md_text %}
+Skin Thickening Observation
+
+
+> Skin thickening may be focal or diffuse, and is defined as being greater than 2 mm in thickness. This 
+> finding is of particular concern if it represents a change from previous mammography examinations. 
+> However, unilateral skin thickening is an expected finding after radiation therapy.
+>> -- BI-RADS® ATLAS — MAMMOGRAPHY FIFTH EDITION — 2013
+{% endcapture %}{{ md_text | markdownify }}</td>
+</tr>
+<tr>
+<td><a href="StructureDefinition-BreastRadMammoSolitaryDilatedDuct.html">BreastRadMammoSolitaryDilatedDuct</a></td>
+<td><a href="http://hl7.org/fhir/StructureDefinition/Observation">Observation</a></td>
+<td>{% capture md_text %}
+Breat Radiology Mammography Solitary Dilated Duct Observation
+
+
+If this observation is present, and dataAbsentReason is empty, then a solitary dilated duct was observed.
+
+
+If this observation is present, and dataAbsentReason is not empty, then a solitary dilated duct was not observed and dataAbsentReason contains the reason why.
+
+
+> This is a unilateral tubular or branching structure that likely represents a dilated or otherwise en-
+> larged duct. It is a rare finding. Even if unassociated with other suspicious clinical or mammographic
+> findings, it has been reported to be associated with noncalcified DCIS.
+>> -- BI-RADS® ATLAS — MAMMOGRAPHY FIFTH EDITION — 2013
+{% endcapture %}{{ md_text | markdownify }}</td>
+</tr>
+<tr>
+<td><a href="StructureDefinition-BreastRadMassShape.html">BreastRadMassShape</a></td>
+<td><a href="http://hl7.org/fhir/StructureDefinition/Observation">Observation</a></td>
+<td>{% capture md_text %}
+Breast Radiology Mass Shape Observation
+
+
+If this observation is present, and dataAbsentReason is empty, then a mass shape was observed.
+
+
+If this observation is present, and dataAbsentReason is not empty, then a mass shape was not observed and dataAbsentReason contains the reason why.
+{% endcapture %}{{ md_text | markdownify }}</td>
+</tr>
+<tr>
+<td><a href="StructureDefinition-BreastRadMassSize.html">BreastRadMassSize</a></td>
+<td><a href="http://hl7.org/fhir/StructureDefinition/Observation">Observation</a></td>
+<td>{% capture md_text %}
+Breast Radiology Mass Size Observation
+
+
+If this observation is present, and dataAbsentReason is empty, then a mass size was observed.
+
+
+If this observation is present, and dataAbsentReason is not empty, then a mass size was not observed and dataAbsentReason contains the reason why.
+{% endcapture %}{{ md_text | markdownify }}</td>
+</tr>
+<tr>
+<td><a href="StructureDefinition-BreastRadMRIFinding.html">BreastRadMRIFinding</a></td>
+<td><a href="http://hl7.org/fhir/StructureDefinition/Observation">Observation</a></td>
+<td>{% capture md_text %}
+Breast Radiology MRI Finding
+{% endcapture %}{{ md_text | markdownify }}</td>
+</tr>
+<tr>
+<td><a href="StructureDefinition-BreastRadReport.html">BreastRadReport</a></td>
+<td><a href="http://hl7.org/fhir/StructureDefinition/DiagnosticReport">DiagnosticReport</a></td>
+<td>{% capture md_text %}
+Breast Radiology Diagnostic Report.
+
+
+This diagnostic report has links to the data that comprise a Breast Radiology Report, including
+
+
+** references to prior breast radiology reports for this patient
+** references to the observations of this report
+** references to the recommendations of this report
+** a summary of the report findings in a human readable format
+{% endcapture %}{{ md_text | markdownify }}</td>
+</tr>
+<tr>
+<td><a href="StructureDefinition-BreastRadSectionFindings.html">BreastRadSectionFindings</a></td>
+<td><a href="http://hl7.org/fhir/StructureDefinition/Observation">Observation</a></td>
+<td>{% capture md_text %}
+Findings Section
+{% endcapture %}{{ md_text | markdownify }}</td>
+</tr>
+<tr>
+<td><a href="StructureDefinition-BreastRadSectionFindingsLeftBreast.html">BreastRadSectionFindingsLeftBreast</a></td>
+<td><a href="http://hl7.org/fhir/StructureDefinition/Observation">Observation</a></td>
+<td>{% capture md_text %}
+Findings Left Breast Section
+{% endcapture %}{{ md_text | markdownify }}</td>
+</tr>
+<tr>
+<td><a href="StructureDefinition-BreastRadSectionFindingsRightBreast.html">BreastRadSectionFindingsRightBreast</a></td>
+<td><a href="http://hl7.org/fhir/StructureDefinition/Observation">Observation</a></td>
+<td>{% capture md_text %}
+Findings Right Breast Section
+{% endcapture %}{{ md_text | markdownify }}</td>
+</tr>
+<tr>
+<td><a href="StructureDefinition-BreastRadSectionPatientHistory.html">BreastRadSectionPatientHistory</a></td>
+<td><a href="http://hl7.org/fhir/StructureDefinition/Observation">Observation</a></td>
+<td>{% capture md_text %}
+Patient History Section
+{% endcapture %}{{ md_text | markdownify }}</td>
+</tr>
+<tr>
+<td><a href="StructureDefinition-BreastRadSectionPatientRisk.html">BreastRadSectionPatientRisk</a></td>
+<td><a href="http://hl7.org/fhir/StructureDefinition/Observation">Observation</a></td>
+<td>{% capture md_text %}
+Patient Risk Section
+{% endcapture %}{{ md_text | markdownify }}</td>
+</tr>
+<tr>
+<td><a href="StructureDefinition-BreastRadUltraSoundFinding.html">BreastRadUltraSoundFinding</a></td>
+<td><a href="http://hl7.org/fhir/StructureDefinition/Observation">Observation</a></td>
+<td>{% capture md_text %}
+Breast Radiology Ultra Sound Finding
+{% endcapture %}{{ md_text | markdownify }}</td>
+</tr>
+<tr>
+<td><a href="StructureDefinition-BreastRadUSMass.html">BreastRadUSMass</a></td>
+<td><a href="http://hl7.org/fhir/StructureDefinition/Observation">Observation</a></td>
+<td>{% capture md_text %}
+Breast Radiology Mammography Mass Observation
+
+
+If this observation is present, and dataAbsentReason is empty, then a mass was observed.
+
+
+If this observation is present, and dataAbsentReason is not empty, then a mass was not observed and dataAbsentReason contains the reason whyand no Shape, Orientation, Margin, Echo Pattern, or Posterior Acoustic Feature observations should be referenced by this observation
+
+
+> A mass is three dimensional and occupies space. With 2-D ultrasound, it should be seen in two
+> different planes, and in three planes with volumetric acquisitions. Masses can be distinguished
+> from normal anatomic structures, such as ribs or fat lobules, using two or more projections and
+> real-time scanning.
+>> -- BI-RADS® ATLAS — MAMMOGRAPHY FIFTH EDITION — 2013
+This observation has the following three member observations
+
+
+** Shape
+** Orientation
+** Margin
+** Echo Pattern
+** Posterior acoustic features
+{% endcapture %}{{ md_text | markdownify }}</td>
+</tr>
+<tr>
+<td><a href="StructureDefinition-BreastRadUSMassEchoPattern.html">BreastRadUSMassEchoPattern</a></td>
+<td><a href="http://hl7.org/fhir/StructureDefinition/Observation">Observation</a></td>
+<td>{% capture md_text %}
+Breast Radiology Ultra-Sound Mass Echo Pattern Observation
+
+
+> The echogenicity of most benign and malignant masses is hypoechoic compared with 
+> mammary fat. While many completely echogenic masses are benign, prospective assessment as
+> benign has greater dependency on marginal circumscription. Although the echo pattern
+> contributes with other feature categories to the assessment of a breast lesion, echogenicity
+> alone has little specificity.
+>> -- BI-RADS® ATLAS — MAMMOGRAPHY FIFTH EDITION — 2013
+{% endcapture %}{{ md_text | markdownify }}</td>
+</tr>
+<tr>
+<td><a href="StructureDefinition-BreastRadUSMassMargin.html">BreastRadUSMassMargin</a></td>
+<td><a href="http://hl7.org/fhir/StructureDefinition/Observation">Observation</a></td>
+<td>{% capture md_text %}
+Breast Radiology Ultra-Sound Mass Margin Observation
+
+
+If this observation is present, and dataAbsentReason is empty, then a mass margin was observed.
+
+
+If this observation is present, and dataAbsentReason is not empty, then a mass margin was not observed and dataAbsentReason contains the reason why.
+
+
+> The margin is the edge or border of the lesion. The descriptors of margin, like the descriptors of shape, are important predictors of whether a mass is benign or malignant. 
+>> -- BI-RADS® ATLAS — MAMMOGRAPHY FIFTH EDITION — 2013
+{% endcapture %}{{ md_text | markdownify }}</td>
+</tr>
+<tr>
+<td><a href="StructureDefinition-BreastRadUSMassOrientation.html">BreastRadUSMassOrientation</a></td>
+<td><a href="http://hl7.org/fhir/StructureDefinition/Observation">Observation</a></td>
+<td>{% capture md_text %}
+Breast Radiology Ultra-Sound Mass Orientation Observation
+
+
+If this observation is present, and dataAbsentReason is empty, then a mass orientation was observed.
+
+
+If this observation is present, and dataAbsentReason is not empty, then a mass orientation was not observed and dataAbsentReason contains the reason why.
+
+
+> This feature of masses is unique to US imaging. Orientation is defined with reference to the skin
+> line. Obliquely situated masses may follow a radial pattern, and their long axes will help determine
+> classification as parallel or not parallel. Parallel or "wider-than-tall" orientation is a property of most
+> benign masses, notably fibroadenomas; however, many carcinomas have this orientation as well.
+> Orientation alone should not be used as an isolated feature in assessing a mass for its likelihood of
+> malignancy.
+>> -- BI-RADS® ATLAS — MAMMOGRAPHY FIFTH EDITION — 2013
+{% endcapture %}{{ md_text | markdownify }}</td>
+</tr>
+<tr>
+<td><a href="StructureDefinition-BreastRadUSMassPosteriorAcousticFeatures.html">BreastRadUSMassPosteriorAcousticFeatures</a></td>
+<td><a href="http://hl7.org/fhir/StructureDefinition/Observation">Observation</a></td>
+<td>{% capture md_text %}
+Breast Radiology Ultra-Sound Mass Posterior Acoustic Features Observation
+
+
+> Posterior acoustic features represent the attenuation characteristics of a mass with respect to its
+> acoustic transmission. Attenuation (shadowing) and enhancement are additional attributes of
+> masses, mostly of secondary rather than primary predictive value..
+>> -- BI-RADS® ATLAS — MAMMOGRAPHY FIFTH EDITION — 2013
+{% endcapture %}{{ md_text | markdownify }}</td>
+</tr>
+<tr>
+<td><a href="StructureDefinition-BreastRadUSTissueComposition.html">BreastRadUSTissueComposition</a></td>
+<td><a href="http://hl7.org/fhir/StructureDefinition/Observation">Observation</a></td>
+<td>{% capture md_text %}
+Breast Radiology Ultra-Sound Tissue Composition Observation
+{% endcapture %}{{ md_text | markdownify }}</td>
+</tr>
   </tbody>
 </table>
 
@@ -78,117 +585,6 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td><a href="StructureDefinition-obf-ActionPerformed.html">ActionPerformed</a></td>
-      <td><a href="http://hl7.org/fhir/R4/domainresource.html">DomainResource</a></td>
-      <td>{% capture md_text %}Abstract class representing an event occurrence or performance of any type of action.{% endcapture %}{{ md_text | markdownify }}</td>
-    </tr>
-    <tr>
-      <td><a href="StructureDefinition-obf-ActionRequest.html">ActionRequest</a></td>
-      <td><a href="http://hl7.org/fhir/R4/domainresource.html">DomainResource</a></td>
-      <td>{% capture md_text %}Abstract class representing a request for any type of action to be performed.{% endcapture %}{{ md_text | markdownify }}</td>
-    </tr>
-    <tr>
-      <td><a href="StructureDefinition-obf-ActionStatement.html">ActionStatement</a></td>
-      <td><a href="http://hl7.org/fhir/R4/domainresource.html">DomainResource</a></td>
-      <td>{% capture md_text %}Abstract class representing any type of action or event.{% endcapture %}{{ md_text | markdownify }}</td>
-    </tr>
-    <tr>
-      <td><a href="StructureDefinition-obf-ClinicalStatement.html">ClinicalStatement</a></td>
-      <td><a href="http://hl7.org/fhir/R4/domainresource.html">DomainResource</a></td>
-      <td>{% capture md_text %}This abstract class provides properties and behaviors common to entries in a medical record. Patient and Encounter are ubiquitous in clinical statements. This class also allows for common representation of simple data provenance elements asserter, recorder, and creation date.{% endcapture %}{{ md_text | markdownify }}</td>
-    </tr>
-    <tr>
-      <td><a href="StructureDefinition-obf-Composition.html">Composition</a></td>
-      <td><a href="http://hl7.org/fhir/R4/composition.html">Composition</a></td>
-      <td>{% capture md_text %}A composition represents a set of Entries sharing common provenance, a document such as an extract from a patient record, a knowledge artifact, or a catalog definition.{% endcapture %}{{ md_text | markdownify }}</td>
-    </tr>
-    <tr>
-      <td><a href="StructureDefinition-obf-Condition.html">Condition</a></td>
-      <td><a href="http://hl7.org/fhir/R4/condition.html">Condition</a></td>
-      <td>{% capture md_text %}A condition that is or may be present in a subject. 'Condition' is interpreted broadly and could be a disorder, abnormality, problem, injury, complaint, functionality, illness, disease, ailment, sickness, affliction, upset, difficulty, disorder, symptom, worry, or trouble.
-The Observation-based class, ConditionAbsent, should be used to describe conditions that are not present or negative findings.
-This profiled Condition uses the BodyLocation structure that includes not only a code, but optional laterality, direction, and relation to landmark(s).{% endcapture %}{{ md_text | markdownify }}</td>
-    </tr>
-    <tr>
-      <td><a href="StructureDefinition-obf-DiagnosticReport.html">DiagnosticReport</a></td>
-      <td><a href="http://hl7.org/fhir/R4/diagnosticreport.html">DiagnosticReport</a></td>
-      <td>{% capture md_text %}The findings and interpretation of diagnostic tests performed on patients, groups of patients, devices, and locations, and/or specimens derived from these. The report includes clinical context such as requesting and provider information, and some mix of atomic results, images, textual and coded interpretations, and formatted representation of diagnostic reports.{% endcapture %}{{ md_text | markdownify }}</td>
-    </tr>
-    <tr>
-      <td><a href="StructureDefinition-obf-DomainResource.html">DomainResource</a></td>
-      <td><a href="http://hl7.org/fhir/R4/domainresource.html">DomainResource</a></td>
-      <td>{% capture md_text %}Parent class for any item in clinical or administrative health-related system. A DomainResource can belong to a single person's health record, or represent an entity that surfaces in multiple records, such as organizations, providers, payments, decision support artifacts, etc.
-
-Note to FHIR implementers: Objective FHIR includes Status and Identifier fields on DomainResource because these two attributes occur in almost every FHIR resource. The most significant exception are 3 or 4 resources that use an 'active' flag instead of coded status value. There is no apparent pattern to this inconsistency. FHIR resources that use a coded status have active and inactive as status values. In the spirit of providing a consistent object-oriented logical model for FHIR, Objective FHIR uses status across all domain resources.{% endcapture %}{{ md_text | markdownify }}</td>
-    </tr>
-    <tr>
-      <td><a href="StructureDefinition-obf-EncounterOrEpisode.html">EncounterOrEpisode</a></td>
-      <td><a href="http://hl7.org/fhir/R4/domainresource.html">DomainResource</a></td>
-      <td>{% capture md_text %}Abstract element representing a group of services delivered to a patient.{% endcapture %}{{ md_text | markdownify }}</td>
-    </tr>
-    <tr>
-      <td><a href="StructureDefinition-obf-Entity.html">Entity</a></td>
-      <td><a href="http://hl7.org/fhir/R4/domainresource.html">DomainResource</a></td>
-      <td>{% capture md_text %}Root class for entities such as people, organizations, and devices that have a separately identifiable existence.{% endcapture %}{{ md_text | markdownify }}</td>
-    </tr>
-    <tr>
-      <td><a href="StructureDefinition-obf-EntityOrRole.html">EntityOrRole</a></td>
-      <td><a href="http://hl7.org/fhir/R4/domainresource.html">DomainResource</a></td>
-      <td>{% capture md_text %}Abstract parent class for both Entity and Role.{% endcapture %}{{ md_text | markdownify }}</td>
-    </tr>
-    <tr>
-      <td><a href="StructureDefinition-obf-InformationItem.html">InformationItem</a></td>
-      <td><a href="http://hl7.org/fhir/R4/domainresource.html">DomainResource</a></td>
-      <td>{% capture md_text %}An abstract class representing items such as administrative records, knowledge artifacts, definitional items, and entities such as organizations and entities. These items are often independent of a single patient, and do not represent clinical judgements or observations about a patient.{% endcapture %}{{ md_text | markdownify }}</td>
-    </tr>
-    <tr>
-      <td><a href="StructureDefinition-obf-MedicationAction.html">MedicationAction</a></td>
-      <td><a href="http://hl7.org/fhir/R4/domainresource.html">DomainResource</a></td>
-      <td>{% capture md_text %}Abstract class representing medication exposure, independent of whether reported in a medication statement or medication administration. Does not include medication requests (prescriptions).{% endcapture %}{{ md_text | markdownify }}</td>
-    </tr>
-    <tr>
-      <td><a href="StructureDefinition-obf-MedicationDispense.html">MedicationDispense</a></td>
-      <td><a href="http://hl7.org/fhir/R4/domainresource.html">DomainResource</a></td>
-      <td>{% capture md_text %}Indicates that a medication product has been dispensed for a named person/patient. This includes a description of the medication product (supply) provided and the instructions for administering the medication. The medication dispense is the result of a pharmacy system responding to a medication order.{% endcapture %}{{ md_text | markdownify }}</td>
-    </tr>
-    <tr>
-      <td><a href="StructureDefinition-obf-MedicationStatement.html">MedicationStatement</a></td>
-      <td><a href="http://hl7.org/fhir/R4/medicationstatement.html">MedicationStatement</a></td>
-      <td>{% capture md_text %}A record of the use of a medication. The use may be reported by the patient or clinician and adminstration does not have to be directly observed.
-
-FHIR Notes:
-
-Although FHIR supports the asserter (information source) and date asserted, it does not have a place for the author (who created and is responsible for the statement) and recorder (who entered the statement). Extensions are provided.
-
-The treatment of 'not taken' has changed from DSTU2 and STU3 to R4. In R4, status and statusReason are used to indicate medications not taken. For upward compatibility, the 'not taken' attributes are profiled out.
-ReasonCode is a choice of CodeableConcept or ref(Condition) in DSTU2, and limited to one reason (pick a type). In STU3 and R4, there can be multiple reason codes, and multiple reason references, simultaneously.
-
-Preference is given to using the National Library of Medicine (NLM) RxNorm terminology for medications. RxNorm is a coding standard established by the Office of the National Coordinator (ONC). However, RxNorm is restricted to FDA-approved drugs and does not include clinical trial drugs. MedicationStatement allows for the inclusion of other coding systems like the NCI Thesaurus (NCIT) to represent clinical trial oncology drugs.{% endcapture %}{{ md_text | markdownify }}</td>
-    </tr>
-    <tr>
-      <td><a href="StructureDefinition-obf-Observation.html">Observation</a></td>
-      <td><a href="http://hl7.org/fhir/R4/observation.html">Observation</a></td>
-      <td>{% capture md_text %}Represents the result of evaluations (measurements, tests, or questions) that have been performed.
-Observation has a value representing the result (answer), or an DataAbsentReason indicating why the value is not present. Things observed about the subject can include social and behavioral factors, subjective and objective observations, and assessments.
-For an Observation, the Code describes the aspect or property of the subject being observed or measured. The Code is the 'question code' that pairs to the 'answer' contained in the Value.{% endcapture %}{{ md_text | markdownify }}</td>
-    </tr>
-    <tr>
-      <td><a href="StructureDefinition-obf-Procedure.html">Procedure</a></td>
-      <td><a href="http://hl7.org/fhir/R4/procedure.html">Procedure</a></td>
-      <td>{% capture md_text %}An action that is or was performed on or for a patient. This can be a physical intervention like an operation, or less invasive like long term services, counseling, or hypnotherapy.{% endcapture %}{{ md_text | markdownify }}</td>
-    </tr>
-    <tr>
-      <td><a href="StructureDefinition-obf-Role.html">Role</a></td>
-      <td><a href="http://hl7.org/fhir/R4/domainresource.html">DomainResource</a></td>
-      <td>{% capture md_text %}Capacity in which an actor is involved in an activity. For instance, 'attending physician'. Note that attributes of the actor (an entity) that remain constant regardless of the role the actor plays should be part of the entity and not the role. For instance, a person may be a practitioner and a patient. In both cases their date of birth will be the same and thus such information should not be part of the role.{% endcapture %}{{ md_text | markdownify }}</td>
-    </tr>
-    <tr>
-      <td><a href="StructureDefinition-obf-SituationStatement.html">SituationStatement</a></td>
-      <td><a href="http://hl7.org/fhir/R4/domainresource.html">DomainResource</a></td>
-      <td>{% capture md_text %}An assertion, determination, opinion, evaluation, result, observation, or measurement made by a person or device.{% endcapture %}{{ md_text | markdownify }}</td>
-    </tr>
-    
   </tbody>
 </table>
 

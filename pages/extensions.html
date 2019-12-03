@@ -35,83 +35,24 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-          <td><a href="StructureDefinition-obf-datatype-AnatomicalOrientation-extension.html">AnatomicalOrientation</a></td>
-          <td>{% capture md_text %}AnatomicalOrientation of the body location, if needed to distinguish from a similar location in another orientation.
-The orientation element is part of BodyLocation, a flexible structure that allows the location to be determined by a single code, or a code plus laterality and/or orientation. The body location can also be specified in relation to one or more body landmarks. SNOMED CT is used in all cases.
-
-* Code only: The code should include (precoordinate) laterality and/orientation to the degree necessary to completely specify the body location.
-* Code plus laterality and/or orientation: The basic code augmented by codes specifying the body side and/or anatomical orientation.
-* Relation to landmark: The location relative to a landmark is specified by:
-1. Establishing the location and type of landmark using a body site code and optional laterality/orientation, and
-2. Specifying the direction and distance from the landmark to the body location.
-
-Note that BodyLocation is a data type (a reusable structure), not a stand-alone entity. The concept is similar to how a postal address can apply to a person, location, or organization. This contrasts with FHIR's stand-alone BodySite (aka BodyStructure in r4) which 'is not ... intended for describing the type of anatomical location but rather a specific body site on a specific patient' (FHIR 3.5).{% endcapture %}{{ md_text | markdownify }}</td>
-        </tr>
-        <tr>
-          <td><a href="StructureDefinition-breastrad-BreastExamTechnique-extension.html">BreastExamTechnique</a></td>
-          <td>{% capture md_text %}Technique used during breast examination.{% endcapture %}{{ md_text | markdownify }}</td>
-        </tr>
-        <tr>
-          <td><a href="StructureDefinition-obf-datatype-Code-extension.html">Code</a></td>
-          <td>{% capture md_text %}The main type identifier for a lab, procedure, condition, etc., usually drawn from a controlled vocabulary.{% endcapture %}{{ md_text | markdownify }}</td>
-        </tr>
-        <tr>
-          <td><a href="StructureDefinition-obf-datatype-LandmarkLocation-extension.html">LandmarkLocation</a></td>
-          <td>{% capture md_text %}The body location of the landmark, specified by a location code and optional laterality and orientation.{% endcapture %}{{ md_text | markdownify }}</td>
-        </tr>
-        <tr>
-          <td><a href="StructureDefinition-obf-datatype-LandmarkToBodyLocationDirection-extension.html">LandmarkToBodyLocationDirection</a></td>
-          <td>{% capture md_text %}The direction from the landmark to the body location of interest, given as a clockface direction or anatomical direction.{% endcapture %}{{ md_text | markdownify }}</td>
-        </tr>
-        <tr>
-          <td><a href="StructureDefinition-obf-datatype-LandmarkToBodyLocationDistance-extension.html">LandmarkToBodyLocationDistance</a></td>
-          <td>{% capture md_text %}How far the body location of interest is from the given landmark.{% endcapture %}{{ md_text | markdownify }}</td>
-        </tr>
-        <tr>
-          <td><a href="StructureDefinition-obf-datatype-LandmarkType-extension.html">LandmarkType</a></td>
-          <td>{% capture md_text %}The type of feature that constitutes the landmark, particularly if the landmark is an acquired body structure or physical object.{% endcapture %}{{ md_text | markdownify }}</td>
-        </tr>
-        <tr>
-          <td><a href="StructureDefinition-obf-datatype-Laterality-extension.html">Laterality</a></td>
-          <td>{% capture md_text %}Body side of the body location, if needed to distinguish from a similar location on the other side of the body.
-
-The laterality element is part of BodyLocation, a flexible structure that allows the location to be determined by a single code, or a code plus laterality and/or orientation. The body location can also be specified in relation to one or more body landmarks. SNOMED CT is used in all cases.
-
-* Code only: The code should include (precoordinate) laterality and/orientation to the degree necessary to completely specify the body location.
-* Code plus laterality and/or orientation: The basic code augmented by codes specifying the body side and/or anatomical orientation.
-* Relation to landmark: The location relative to a landmark is specified by:
-1. Establishing the location and type of landmark using a body site code and optional laterality/orientation, and
-2. Specifying the direction and distance from the landmark to the body location.
-
-Note that BodyLocation is a data type (a reusable structure), not a stand-alone entity. The concept is similar to how a postal address can apply to a person, location, or organization. This contrasts with FHIR's stand-alone BodySite (aka BodyStructure in r4) which 'is not ... intended for describing the type of anatomical location but rather a specific body site on a specific patient' (FHIR 3.5).{% endcapture %}{{ md_text | markdownify }}</td>
-        </tr>
-        <tr>
-          <td><a href="StructureDefinition-obf-datatype-RelationToLandmark-extension.html">RelationToLandmark</a></td>
-          <td>{% capture md_text %}The relationship between a landmark that helps determine a body location and the body location itself. The location relative to a landmark is specified by:
-* Specifying the location and type of landmark using a body site code and optional laterality/orientation,
-* Specifying the direction from the landmark to the body location, and
-* Specifying the distance from the landmark to the body location.
-
-The RelationToLandmark element is part of BodyLocation, a flexible structure that allows the location to be determined by a single code, or a code plus laterality and/or orientation. The body location can also be specified in relation to one or more body landmarks. SNOMED CT is used in all cases.
-
-* Code only: The code should include (precoordinate) laterality and/orientation to the degree necessary to completely specify the body location.
-* Code plus laterality and/or orientation: The basic code augmented by codes specifying the body side and/or anatomical orientation.
-* Relation to landmark: The location relative to a landmark is specified by:
-1. Establishing the location and type of landmark using a body site code and optional laterality/orientation, and
-2. Specifying the direction and distance from the landmark to the body location.
-
-Note that BodyLocation is a data type (a reusable structure), not a stand-alone entity. The concept is similar to how a postal address can apply to a person, location, or organization. This contrasts with FHIR's stand-alone BodySite (aka BodyStructure in r4) which 'is not ... intended for describing the type of anatomical location but rather a specific body site on a specific patient' (FHIR 3.5).{% endcapture %}{{ md_text | markdownify }}</td>
-        </tr>
-        <tr>
-          <td><a href="StructureDefinition-breastrad-ResultComposition-extension.html">ResultComposition</a></td>
-          <td>{% capture md_text %}Reference to the document containing detailed information about the breast radiology report, including assocated sections{% endcapture %}{{ md_text | markdownify }}</td>
-        </tr>
-        <tr>
-          <td><a href="StructureDefinition-breastrad-SummaryBiRadCode-extension.html">SummaryBiRadCode</a></td>
-          <td>{% capture md_text %}BiRd code that summarizes a set of BiRad codes in a the document. Generally the most concerning/important BiRad code in the document.{% endcapture %}{{ md_text | markdownify }}</td>
-        </tr>
-        
+<tr>
+<td><a href="StructureDefinition-BreastBodyLocation.html">BreastBodyLocation</a></td>
+<td>{% capture md_text %}
+Breast Body Location extension
+{% endcapture %}{{ md_text | markdownify }}</td>
+</tr>
+<tr>
+<td><a href="StructureDefinition-BreastRadPriorReports.html">BreastRadPriorReports</a></td>
+<td>{% capture md_text %}
+Prior Diagnostic Report extension
+{% endcapture %}{{ md_text | markdownify }}</td>
+</tr>
+<tr>
+<td><a href="StructureDefinition-BreastRadRecommendations.html">BreastRadRecommendations</a></td>
+<td>{% capture md_text %}
+Diagnostic Report recommendations section extension
+{% endcapture %}{{ md_text | markdownify }}</td>
+</tr>
   </tbody>
 </table>
 
