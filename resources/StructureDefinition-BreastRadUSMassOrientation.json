@@ -17,7 +17,7 @@
       ]
     }
   ],
-  "description": "Breast Radiology Ultra-Sound Mass Orientation Observation\n\n\nIf this observation is present, and dataAbsentReason is empty, then a mass orientation was observed.\n\n\nIf this observation is present, and dataAbsentReason is not empty, then a mass orientation was not observed and dataAbsentReason contains the reason why.\n\n\n> This feature of masses is unique to US imaging. Orientation is defined with reference to the skin\n> line. Obliquely situated masses may follow a radial pattern, and their long axes will help determine\n> classification as parallel or not parallel. Parallel or \"wider-than-tall\" orientation is a property of most\n> benign masses, notably fibroadenomas; however, many carcinomas have this orientation as well.\n> Orientation alone should not be used as an isolated feature in assessing a mass for its likelihood of\n> malignancy.\n>> -- {BiRadCitatio}",
+  "description": "Breast Radiology Ultra-Sound Mass Orientation Observation\n\n\nIf this observation is present, and dataAbsentReason is empty, then a mass orientation was observed.\n\n\nIf this observation is present, and dataAbsentReason is not empty, then a mass orientation was not observed and dataAbsentReason contains the reason why.\n\n\nThis feature of masses is unique to US imaging. Orientation is defined with reference to the skin\nline. Obliquely situated masses may follow a radial pattern, and their long axes will help determine\nclassification as parallel or not parallel. Parallel or \"wider-than-tall\" orientation is a property of most\nbenign masses, notably fibroadenomas; however, many carcinomas have this orientation as well.\nOrientation alone should not be used as an isolated feature in assessing a mass for its likelihood of\nmalignancy.\n-- Bi-Rads® Atlas — Mammography Fifth Ed. 2013",
   "fhirVersion": "4.0.0",
   "kind": "resource",
   "abstract": false,
@@ -1880,8 +1880,8 @@
         "short": "Related resource that belongs to the Observation group",
         "definition": "This observation is a group observation (e.g. a battery, a panel of tests, a set of vital sign measurements) that includes the target as a member of the group.",
         "comment": "When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.  Note that a system may calculate results from [QuestionnaireResponse](questionnaireresponse.html)  into a final score and represent the score as an Observation.",
-        "min": 1,
-        "max": "1",
+        "min": 0,
+        "max": "0",
         "base": {
           "path": "Observation.hasMember",
           "min": 0,
@@ -2774,8 +2774,8 @@
         "short": "Related resource that belongs to the Observation group",
         "definition": "This observation is a group observation (e.g. a battery, a panel of tests, a set of vital sign measurements) that includes the target as a member of the group.",
         "comment": "When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.  Note that a system may calculate results from [QuestionnaireResponse](questionnaireresponse.html)  into a final score and represent the score as an Observation.",
-        "min": 1,
-        "max": "1",
+        "min": 0,
+        "max": "0",
         "base": {
           "path": "Observation.hasMember",
           "min": 0,

@@ -17,7 +17,7 @@
       ]
     }
   ],
-  "description": "Breast Radiology Mammography Skin Lesion Observation\n\n\nIf this observation is present, and dataAbsentReason is empty, then a skin lesion was observed.\n\n\nIf this observation is present, and dataAbsentReason is not empty, then a skin lesion was not observed and dataAbsentReason contains the reason why.\n\n\n> This finding may be described in the mammography report or annotated on the mammographic\n> image when it projects over the breast (especially on 2 different projections), and may be mistaken\n> for an intramammary lesion. A raised skin lesion sufficiently large to be seen at mammography\n> should be marked by the technologist with a radiopaque device designated for use as a marker for\n> a skin lesion.\n>> -- {BiRadCitatio}",
+  "description": "Breast Radiology Mammography Skin Lesion Observation\n\n\nIf this observation is present, and dataAbsentReason is empty, then a skin lesion was observed.\n\n\nIf this observation is present, and dataAbsentReason is not empty, then a skin lesion was not observed and dataAbsentReason contains the reason why.\n\n\nThis finding may be described in the mammography report or annotated on the mammographic\nimage when it projects over the breast (especially on 2 different projections), and may be mistaken\nfor an intramammary lesion. A raised skin lesion sufficiently large to be seen at mammography\nshould be marked by the technologist with a radiopaque device designated for use as a marker for\na skin lesion.\n-- Bi-Rads® Atlas — Mammography Fifth Ed. 2013",
   "fhirVersion": "4.0.0",
   "kind": "resource",
   "abstract": false,
@@ -1906,8 +1906,8 @@
         "short": "Related resource that belongs to the Observation group",
         "definition": "This observation is a group observation (e.g. a battery, a panel of tests, a set of vital sign measurements) that includes the target as a member of the group.",
         "comment": "When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.  Note that a system may calculate results from [QuestionnaireResponse](questionnaireresponse.html)  into a final score and represent the score as an Observation.",
-        "min": 1,
-        "max": "1",
+        "min": 0,
+        "max": "0",
         "base": {
           "path": "Observation.hasMember",
           "min": 0,
@@ -2828,8 +2828,8 @@
         "short": "Related resource that belongs to the Observation group",
         "definition": "This observation is a group observation (e.g. a battery, a panel of tests, a set of vital sign measurements) that includes the target as a member of the group.",
         "comment": "When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.  Note that a system may calculate results from [QuestionnaireResponse](questionnaireresponse.html)  into a final score and represent the score as an Observation.",
-        "min": 1,
-        "max": "1",
+        "min": 0,
+        "max": "0",
         "base": {
           "path": "Observation.hasMember",
           "min": 0,
