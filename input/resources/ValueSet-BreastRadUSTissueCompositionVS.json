@@ -1,0 +1,43 @@
+{
+  "resourceType": "ValueSet",
+  "id": "BreastRadUSTissueCompositionVS",
+  "url": "http://hl7.org/fhir/us/breast-radiology/ValueSet/BreastRadUSTissueCompositionVS",
+  "version": "0.0.2",
+  "name": "BreastRadUSTissueCompositionVS",
+  "title": "US Tissue Composition",
+  "status": "draft",
+  "date": "2019-11-01",
+  "publisher": "Hl7-Clinical Interoperability Council",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/cic"
+        }
+      ]
+    }
+  ],
+  "description": "Breast Radiology Ultra-Sound Tissue Composition Observation\n\n\nThe wide normal variability in tissue composition seen on mammograms can also be observed\non US images. Just as increasing breast density diminishes the sensitivity of mammography in the\ndetection of small masses, heterogeneous background echotexture of the breast may affect the\nsensitivity of breast sonograms for lesion detection.\n-- Bi-Rads® Atlas — Mammography Fifth Ed. 2013",
+  "compose": {
+    "include": [
+      {
+        "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastRadUSTissueCompositionCS",
+        "concept": [
+          {
+            "code": "Fat",
+            "display": "Homogenous Background Echotexture - Fat"
+          },
+          {
+            "code": "Fibroglandular",
+            "display": "Homogenous Background Echotexture - Fibroglandular"
+          },
+          {
+            "code": "Heterogeneous",
+            "display": "Heterogeneous Background Echo Texture"
+          }
+        ]
+      }
+    ]
+  }
+}

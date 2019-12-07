@@ -1,0 +1,51 @@
+{
+  "resourceType": "ValueSet",
+  "id": "MammoCalcificationDistributionVS",
+  "url": "http://hl7.org/fhir/us/breast-radiology/ValueSet/MammoCalcificationDistributionVS",
+  "version": "0.0.2",
+  "name": "MammoCalcificationDistributionVS",
+  "title": "Mammo Calcification Distribution",
+  "status": "draft",
+  "date": "2019-11-01",
+  "publisher": "Hl7-Clinical Interoperability Council",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/cic"
+        }
+      ]
+    }
+  ],
+  "description": "Mammography Calcification Distribution\n\n\nThese descriptors are used to indicate the arrangement of calcifications in the breast. Multiple\nsimilar groups may be described in the report when there is more than one group of calcifications\nthat are similar in morphology and distribution. In evaluating the likelihood of malignancy for calcifications, \ndistribution is at least as important as morphology.\n-- Bi-Rads® Atlas — Mammography Fifth Ed. 2013",
+  "compose": {
+    "include": [
+      {
+        "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/MammoCalcificationDistributionCS",
+        "concept": [
+          {
+            "code": "Diffuse",
+            "display": "Diffuse Calcification Distribution"
+          },
+          {
+            "code": "Regional",
+            "display": "Regional  Calcification Distribution"
+          },
+          {
+            "code": "Grouped",
+            "display": "Grouped  Calcification Distribution"
+          },
+          {
+            "code": "Linear",
+            "display": "Linear  Calcification Distribution"
+          },
+          {
+            "code": "Segmental",
+            "display": "Segmental Calcification Distribution"
+          }
+        ]
+      }
+    ]
+  }
+}
