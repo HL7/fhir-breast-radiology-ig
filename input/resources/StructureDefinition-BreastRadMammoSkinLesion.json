@@ -284,7 +284,7 @@
           "contained resources"
         ],
         "min": 0,
-        "max": "*",
+        "max": "0",
         "base": {
           "path": "DomainResource.contained",
           "min": 0,
@@ -1332,7 +1332,7 @@
         "comment": "May include general statements about the observation, or statements about significant, unexpected or unreliable results values, or information about its source when relevant to its interpretation.",
         "requirements": "Need to be able to provide free text additional information.",
         "min": 0,
-        "max": "*",
+        "max": "0",
         "base": {
           "path": "Observation.note",
           "min": 0,
@@ -1414,7 +1414,7 @@
         "comment": "Only used if not implicit in code for Observation.code.",
         "requirements": "In some cases, method can impact results and is thus used for determining whether results can be compared or determining significance of results.",
         "min": 0,
-        "max": "1",
+        "max": "0",
         "base": {
           "path": "Observation.method",
           "min": 0,
@@ -1456,7 +1456,7 @@
         "definition": "The specimen that was used when this observation was made.",
         "comment": "Should only be used if not implicit in code found in `Observation.code`.  Observations are not made on specimens themselves; they are made on a subject, but in many cases by the means of a specimen. Note that although specimens are often involved, they are not always tracked and reported explicitly. Also note that observation resources may be used in contexts that track the specimen explicitly (e.g. Diagnostic Report).",
         "min": 0,
-        "max": "1",
+        "max": "0",
         "base": {
           "path": "Observation.specimen",
           "min": 0,
@@ -1498,7 +1498,7 @@
         "definition": "The device used to generate the observation data.",
         "comment": "Note that this is not meant to represent a device involved in the transmission of the result, e.g., a gateway.  Such devices may be documented using the Provenance resource where relevant.",
         "min": 0,
-        "max": "1",
+        "max": "0",
         "base": {
           "path": "Observation.device",
           "min": 0,
@@ -1904,11 +1904,21 @@
       {
         "id": "Observation.hasMember",
         "path": "Observation.hasMember",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": true,
+          "rules": "openAtEnd"
+        },
         "short": "Related resource that belongs to the Observation group",
         "definition": "This observation is a group observation (e.g. a battery, a panel of tests, a set of vital sign measurements) that includes the target as a member of the group.",
         "comment": "When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.  Note that a system may calculate results from [QuestionnaireResponse](questionnaireresponse.html)  into a final score and represent the score as an Observation.",
         "min": 0,
-        "max": "0",
+        "max": "*",
         "base": {
           "path": "Observation.hasMember",
           "min": 0,
@@ -1921,6 +1931,146 @@
               "http://hl7.org/fhir/StructureDefinition/Observation",
               "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse",
               "http://hl7.org/fhir/StructureDefinition/MolecularSequence"
+            ]
+          }
+        ],
+        "isModifier": false,
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "Relationships established by OBX-4 usage"
+          },
+          {
+            "identity": "rim",
+            "map": "outBoundRelationship"
+          }
+        ]
+      },
+      {
+        "id": "Observation.hasMember:breastRadSize",
+        "path": "Observation.hasMember",
+        "sliceName": "breastRadSize",
+        "short": "Related resource that belongs to the Observation group",
+        "definition": "This observation is a group observation (e.g. a battery, a panel of tests, a set of vital sign measurements) that includes the target as a member of the group.",
+        "comment": "When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.  Note that a system may calculate results from [QuestionnaireResponse](questionnaireresponse.html)  into a final score and represent the score as an Observation.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Observation.hasMember",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadSize"
+            ]
+          }
+        ],
+        "isModifier": false,
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "Relationships established by OBX-4 usage"
+          },
+          {
+            "identity": "rim",
+            "map": "outBoundRelationship"
+          }
+        ]
+      },
+      {
+        "id": "Observation.hasMember:breastRadCount",
+        "path": "Observation.hasMember",
+        "sliceName": "breastRadCount",
+        "short": "Related resource that belongs to the Observation group",
+        "definition": "This observation is a group observation (e.g. a battery, a panel of tests, a set of vital sign measurements) that includes the target as a member of the group.",
+        "comment": "When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.  Note that a system may calculate results from [QuestionnaireResponse](questionnaireresponse.html)  into a final score and represent the score as an Observation.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Observation.hasMember",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadCount"
+            ]
+          }
+        ],
+        "isModifier": false,
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "Relationships established by OBX-4 usage"
+          },
+          {
+            "identity": "rim",
+            "map": "outBoundRelationship"
+          }
+        ]
+      },
+      {
+        "id": "Observation.hasMember:breastRadObservedChanges",
+        "path": "Observation.hasMember",
+        "sliceName": "breastRadObservedChanges",
+        "short": "Related resource that belongs to the Observation group",
+        "definition": "This observation is a group observation (e.g. a battery, a panel of tests, a set of vital sign measurements) that includes the target as a member of the group.",
+        "comment": "When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.  Note that a system may calculate results from [QuestionnaireResponse](questionnaireresponse.html)  into a final score and represent the score as an Observation.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Observation.hasMember",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadObservedChanges"
+            ]
+          }
+        ],
+        "isModifier": false,
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "Relationships established by OBX-4 usage"
+          },
+          {
+            "identity": "rim",
+            "map": "outBoundRelationship"
+          }
+        ]
+      },
+      {
+        "id": "Observation.hasMember:breastRadObservedState",
+        "path": "Observation.hasMember",
+        "sliceName": "breastRadObservedState",
+        "short": "Related resource that belongs to the Observation group",
+        "definition": "This observation is a group observation (e.g. a battery, a panel of tests, a set of vital sign measurements) that includes the target as a member of the group.",
+        "comment": "When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.  Note that a system may calculate results from [QuestionnaireResponse](questionnaireresponse.html)  into a final score and represent the score as an Observation.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Observation.hasMember",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadObservedState"
             ]
           }
         ],
@@ -2370,6 +2520,17 @@
         "path": "Observation"
       },
       {
+        "id": "Observation.contained",
+        "path": "Observation.contained",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "Observation.contained",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
         "id": "Observation.extension",
         "path": "Observation.extension",
         "slicing": {
@@ -2536,12 +2697,56 @@
         }
       },
       {
+        "id": "Observation.note",
+        "path": "Observation.note",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "Observation.note",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
         "id": "Observation.bodySite",
         "path": "Observation.bodySite",
         "min": 1,
         "max": "1",
         "base": {
           "path": "Observation.bodySite",
+          "min": 0,
+          "max": "1"
+        }
+      },
+      {
+        "id": "Observation.method",
+        "path": "Observation.method",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "Observation.method",
+          "min": 0,
+          "max": "1"
+        }
+      },
+      {
+        "id": "Observation.specimen",
+        "path": "Observation.specimen",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "Observation.specimen",
+          "min": 0,
+          "max": "1"
+        }
+      },
+      {
+        "id": "Observation.device",
+        "path": "Observation.device",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "Observation.device",
           "min": 0,
           "max": "1"
         }
@@ -2577,13 +2782,161 @@
       {
         "id": "Observation.hasMember",
         "path": "Observation.hasMember",
-        "min": 0,
-        "max": "0",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": true,
+          "rules": "openAtEnd"
+        },
         "base": {
           "path": "Observation.hasMember",
           "min": 0,
           "max": "*"
         }
+      },
+      {
+        "id": "Observation.hasMember:breastRadSize",
+        "path": "Observation.hasMember",
+        "sliceName": "breastRadSize",
+        "short": "Related resource that belongs to the Observation group",
+        "definition": "This observation is a group observation (e.g. a battery, a panel of tests, a set of vital sign measurements) that includes the target as a member of the group.",
+        "comment": "When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.  Note that a system may calculate results from [QuestionnaireResponse](questionnaireresponse.html)  into a final score and represent the score as an Observation.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Observation.hasMember",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadSize"
+            ]
+          }
+        ],
+        "isModifier": false,
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "Relationships established by OBX-4 usage"
+          },
+          {
+            "identity": "rim",
+            "map": "outBoundRelationship"
+          }
+        ]
+      },
+      {
+        "id": "Observation.hasMember:breastRadCount",
+        "path": "Observation.hasMember",
+        "sliceName": "breastRadCount",
+        "short": "Related resource that belongs to the Observation group",
+        "definition": "This observation is a group observation (e.g. a battery, a panel of tests, a set of vital sign measurements) that includes the target as a member of the group.",
+        "comment": "When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.  Note that a system may calculate results from [QuestionnaireResponse](questionnaireresponse.html)  into a final score and represent the score as an Observation.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Observation.hasMember",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadCount"
+            ]
+          }
+        ],
+        "isModifier": false,
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "Relationships established by OBX-4 usage"
+          },
+          {
+            "identity": "rim",
+            "map": "outBoundRelationship"
+          }
+        ]
+      },
+      {
+        "id": "Observation.hasMember:breastRadObservedChanges",
+        "path": "Observation.hasMember",
+        "sliceName": "breastRadObservedChanges",
+        "short": "Related resource that belongs to the Observation group",
+        "definition": "This observation is a group observation (e.g. a battery, a panel of tests, a set of vital sign measurements) that includes the target as a member of the group.",
+        "comment": "When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.  Note that a system may calculate results from [QuestionnaireResponse](questionnaireresponse.html)  into a final score and represent the score as an Observation.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Observation.hasMember",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadObservedChanges"
+            ]
+          }
+        ],
+        "isModifier": false,
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "Relationships established by OBX-4 usage"
+          },
+          {
+            "identity": "rim",
+            "map": "outBoundRelationship"
+          }
+        ]
+      },
+      {
+        "id": "Observation.hasMember:breastRadObservedState",
+        "path": "Observation.hasMember",
+        "sliceName": "breastRadObservedState",
+        "short": "Related resource that belongs to the Observation group",
+        "definition": "This observation is a group observation (e.g. a battery, a panel of tests, a set of vital sign measurements) that includes the target as a member of the group.",
+        "comment": "When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.  Note that a system may calculate results from [QuestionnaireResponse](questionnaireresponse.html)  into a final score and represent the score as an Observation.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Observation.hasMember",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadObservedState"
+            ]
+          }
+        ],
+        "isModifier": false,
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "Relationships established by OBX-4 usage"
+          },
+          {
+            "identity": "rim",
+            "map": "outBoundRelationship"
+          }
+        ]
       },
       {
         "id": "Observation.derivedFrom",

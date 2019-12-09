@@ -284,7 +284,7 @@
           "contained resources"
         ],
         "min": 0,
-        "max": "*",
+        "max": "0",
         "base": {
           "path": "DomainResource.contained",
           "min": 0,
@@ -2323,6 +2323,17 @@
       {
         "id": "Observation",
         "path": "Observation"
+      },
+      {
+        "id": "Observation.contained",
+        "path": "Observation.contained",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "Observation.contained",
+          "min": 0,
+          "max": "*"
+        }
       },
       {
         "id": "Observation.basedOn",

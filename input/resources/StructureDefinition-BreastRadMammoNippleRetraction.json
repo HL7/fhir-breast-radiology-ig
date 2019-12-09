@@ -284,7 +284,7 @@
           "contained resources"
         ],
         "min": 0,
-        "max": "*",
+        "max": "0",
         "base": {
           "path": "DomainResource.contained",
           "min": 0,
@@ -1456,7 +1456,7 @@
         "definition": "The specimen that was used when this observation was made.",
         "comment": "Should only be used if not implicit in code found in `Observation.code`.  Observations are not made on specimens themselves; they are made on a subject, but in many cases by the means of a specimen. Note that although specimens are often involved, they are not always tracked and reported explicitly. Also note that observation resources may be used in contexts that track the specimen explicitly (e.g. Diagnostic Report).",
         "min": 0,
-        "max": "1",
+        "max": "0",
         "base": {
           "path": "Observation.specimen",
           "min": 0,
@@ -1498,7 +1498,7 @@
         "definition": "The device used to generate the observation data.",
         "comment": "Note that this is not meant to represent a device involved in the transmission of the result, e.g., a gateway.  Such devices may be documented using the Provenance resource where relevant.",
         "min": 0,
-        "max": "1",
+        "max": "0",
         "base": {
           "path": "Observation.device",
           "min": 0,
@@ -2370,6 +2370,17 @@
         "path": "Observation"
       },
       {
+        "id": "Observation.contained",
+        "path": "Observation.contained",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "Observation.contained",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
         "id": "Observation.extension",
         "path": "Observation.extension",
         "slicing": {
@@ -2542,6 +2553,28 @@
         "max": "1",
         "base": {
           "path": "Observation.bodySite",
+          "min": 0,
+          "max": "1"
+        }
+      },
+      {
+        "id": "Observation.specimen",
+        "path": "Observation.specimen",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "Observation.specimen",
+          "min": 0,
+          "max": "1"
+        }
+      },
+      {
+        "id": "Observation.device",
+        "path": "Observation.device",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "Observation.device",
           "min": 0,
           "max": "1"
         }
