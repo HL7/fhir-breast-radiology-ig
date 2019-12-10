@@ -17,7 +17,7 @@
       ]
     }
   ],
-  "description": "Breast Body Location extension",
+  "description": "Breast Body Location extension\n\nthis extension defines the fields that are used to describe thelocation of an observed item in a breat radiology report\n\n\nBreast radiology exams have specific ways of defining a location that are unique to this field.",
   "fhirVersion": "4.0.0",
   "kind": "complex-type",
   "abstract": false,
@@ -45,8 +45,8 @@
           }
         ],
         "path": "Extension",
-        "short": "Optional Extensions Element",
-        "definition": "Optional Extension Element - found in all resources.",
+        "short": "Breast Body Location extension",
+        "definition": "this extension defines the fields that are used to describe thelocation of an observed item in a breat radiology report\n\n\nBreast radiology exams have specific ways of defining a location that are unique to this field.",
         "min": 0,
         "max": "*",
         "base": {
@@ -71,7 +71,8 @@
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() != value.exists()",
-            "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"
+            "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
+            "source": "Extension"
           }
         ],
         "isModifier": false,
@@ -924,7 +925,41 @@
     "element": [
       {
         "id": "Extension",
-        "path": "Extension"
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
+        "path": "Extension",
+        "short": "Breast Body Location extension",
+        "definition": "this extension defines the fields that are used to describe thelocation of an observed item in a breat radiology report\n\n\nBreast radiology exams have specific ways of defining a location that are unique to this field.",
+        "base": {
+          "path": "Extension",
+          "min": 0,
+          "max": "*"
+        },
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "Element"
+          },
+          {
+            "key": "ext-1",
+            "severity": "error",
+            "human": "Must have either extensions or value[x], not both",
+            "expression": "extension.exists() != value.exists()",
+            "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"
+          }
+        ]
       },
       {
         "id": "Extension.extension",

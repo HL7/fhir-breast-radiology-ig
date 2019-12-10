@@ -17,7 +17,7 @@
       ]
     }
   ],
-  "description": "Prior Diagnostic Report extension",
+  "description": "Prior Diagnostic Report extension\n\nThis extension defines the prior reports section of a breast radiology report, linking a report to the resources that are the prior reports.",
   "fhirVersion": "4.0.0",
   "kind": "complex-type",
   "abstract": false,
@@ -45,8 +45,8 @@
           }
         ],
         "path": "Extension",
-        "short": "Optional Extensions Element",
-        "definition": "Optional Extension Element - found in all resources.",
+        "short": "Prior Diagnostic Report extension",
+        "definition": "This extension defines the prior reports section of a breast radiology report, linking a report to the resources that are the prior reports.",
         "min": 0,
         "max": "*",
         "base": {
@@ -71,7 +71,8 @@
             "severity": "error",
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() != value.exists()",
-            "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"
+            "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])",
+            "source": "Extension"
           }
         ],
         "isModifier": false,
@@ -222,7 +223,41 @@
     "element": [
       {
         "id": "Extension",
-        "path": "Extension"
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
+        "path": "Extension",
+        "short": "Prior Diagnostic Report extension",
+        "definition": "This extension defines the prior reports section of a breast radiology report, linking a report to the resources that are the prior reports.",
+        "base": {
+          "path": "Extension",
+          "min": 0,
+          "max": "*"
+        },
+        "constraint": [
+          {
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
+            "xpath": "@value|f:*|h:div",
+            "source": "Element"
+          },
+          {
+            "key": "ext-1",
+            "severity": "error",
+            "human": "Must have either extensions or value[x], not both",
+            "expression": "extension.exists() != value.exists()",
+            "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"
+          }
+        ]
       },
       {
         "id": "Extension.extension",

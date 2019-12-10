@@ -17,7 +17,7 @@
       ]
     }
   ],
-  "description": "Breast Radiology Count Observation\n\n\nIf this observation is present, and dataAbsentReason is empty, then an objects Count was observed.\n\n\nIf this observation is present, and dataAbsentReason is not empty, then an objects Count was not observed and dataAbsentReason contains the reason why.",
+  "description": "Breast Radiology Count Observation\n\nThis observations describes the number of discrete items in an observed item.\n\n\nIf this observation is present, and dataAbsentReason is empty, then an objects Count was observed.\n\n\nIf this observation is present, and dataAbsentReason is not empty, then an objects Count was not observed and dataAbsentReason contains the reason why.\n\n\n*** TODO Items ***** Should value[x] be SimpleQuantity.\n** is 'tot' correct ucum units for count?",
   "fhirVersion": "4.0.0",
   "kind": "resource",
   "abstract": false,
@@ -29,8 +29,8 @@
       {
         "id": "Observation",
         "path": "Observation",
-        "short": "Measurements and simple assertions",
-        "definition": "Measurements and simple assertions made about a patient, device or other subject.",
+        "short": "Breast Radiology Count Observation",
+        "definition": "This observations describes the number of discrete items in an observed item.\n\n\nIf this observation is present, and dataAbsentReason is empty, then an objects Count was observed.\n\n\nIf this observation is present, and dataAbsentReason is not empty, then an objects Count was not observed and dataAbsentReason contains the reason why.\n\n\n*** TODO Items ***** Should value[x] be SimpleQuantity.\n** is 'tot' correct ucum units for count?",
         "comment": "Used for simple observations such as device measurements, laboratory atomic results, vital signs, height, weight, smoking status, comments, etc.  Other resources are used to provide context for observations such as laboratory reports, etc.",
         "alias": [
           "Vital Signs",
@@ -101,14 +101,16 @@
             "severity": "error",
             "human": "If Observation.code is the same as an Observation.component.code then the value element associated with the code SHALL NOT be present",
             "expression": "value.empty() or component.code.where( (coding.code = %resource.code.coding.code) and (coding.system = %resource.code.coding.system)).empty()",
-            "xpath": "not(f:*[starts-with(local-name(.), 'value')] and (for $coding in f:code/f:coding return f:component/f:code/f:coding[f:code/@value=$coding/f:code/@value] [f:system/@value=$coding/f:system/@value]))"
+            "xpath": "not(f:*[starts-with(local-name(.), 'value')] and (for $coding in f:code/f:coding return f:component/f:code/f:coding[f:code/@value=$coding/f:code/@value] [f:system/@value=$coding/f:system/@value]))",
+            "source": "Observation"
           },
           {
             "key": "obs-6",
             "severity": "error",
             "human": "dataAbsentReason SHALL only be present if Observation.value[x] is not present",
             "expression": "dataAbsentReason.empty() or value.empty()",
-            "xpath": "not(exists(f:dataAbsentReason)) or (not(exists(*[starts-with(local-name(.), 'value')])))"
+            "xpath": "not(exists(f:dataAbsentReason)) or (not(exists(*[starts-with(local-name(.), 'value')])))",
+            "source": "Observation"
           }
         ],
         "isModifier": false,
@@ -1110,7 +1112,7 @@
         "id": "Observation.value[x]",
         "path": "Observation.value[x]",
         "short": "Actual result",
-        "definition": "Count of an object\n\n\nThis is either an integer count, or a Range (min..max) count\n\n\nA range value with no maximum specified implies count is min or more.\n\n\nA range value with no minimum specified implies count is max or less.",
+        "definition": "Count of an object.\n\n\nThis is either an integer count, or a Range (min..max) count.\n\n\nA range value with no maximum specified implies count is min or more.\n\n\nA range value with no minimum specified implies count is max or less.",
         "comment": "An observation may have; 1)  a single value here, 2)  both a value and a set of related or component values,  or 3)  only a set of related or component values. If a value is present, the datatype for this element should be determined by Observation.code.  A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.",
         "requirements": "An observation exists to have a value, though it might not if it is in error, or if it represents a group of observations.",
         "min": 1,
@@ -2295,7 +2297,80 @@
     "element": [
       {
         "id": "Observation",
-        "path": "Observation"
+        "path": "Observation",
+        "short": "Breast Radiology Count Observation",
+        "definition": "This observations describes the number of discrete items in an observed item.\n\n\nIf this observation is present, and dataAbsentReason is empty, then an objects Count was observed.\n\n\nIf this observation is present, and dataAbsentReason is not empty, then an objects Count was not observed and dataAbsentReason contains the reason why.\n\n\n*** TODO Items ***** Should value[x] be SimpleQuantity.\n** is 'tot' correct ucum units for count?",
+        "base": {
+          "path": "Observation",
+          "min": 0,
+          "max": "*"
+        },
+        "constraint": [
+          {
+            "key": "dom-2",
+            "severity": "error",
+            "human": "If the resource is contained in another resource, it SHALL NOT contain nested Resources",
+            "expression": "contained.contained.empty()",
+            "xpath": "not(parent::f:contained and f:contained)",
+            "source": "DomainResource"
+          },
+          {
+            "key": "dom-4",
+            "severity": "error",
+            "human": "If a resource is contained in another resource, it SHALL NOT have a meta.versionId or a meta.lastUpdated",
+            "expression": "contained.meta.versionId.empty() and contained.meta.lastUpdated.empty()",
+            "xpath": "not(exists(f:contained/*/f:meta/f:versionId)) and not(exists(f:contained/*/f:meta/f:lastUpdated))",
+            "source": "DomainResource"
+          },
+          {
+            "key": "dom-3",
+            "severity": "error",
+            "human": "If the resource is contained in another resource, it SHALL be referred to from elsewhere in the resource or SHALL refer to the containing resource",
+            "expression": "contained.where((('#'+id in (%resource.descendants().reference | %resource.descendants().as(canonical) | %resource.descendants().as(uri) | %resource.descendants().as(url))) or descendants().where(reference = '#').exists() or descendants().where(as(canonical) = '#').exists() or descendants().where(as(canonical) = '#').exists()).not()).trace('unmatched', id).empty()",
+            "xpath": "not(exists(for $contained in f:contained return $contained[not(parent::*/descendant::f:reference/@value=concat('#', $contained/*/id/@value) or descendant::f:reference[@value='#'])]))",
+            "source": "DomainResource"
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice",
+                "valueBoolean": true
+              },
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice-explanation",
+                "valueMarkdown": "When a resource has no narrative, only systems that fully understand the data can display the resource to a human safely. Including a human readable representation in the resource makes for a much more robust eco-system and cheaper handling of resources by intermediary systems. Some ecosystems restrict distribution of resources to only those systems that do fully understand the resources, and as a consequence implementers may believe that the narrative is superfluous. However experience shows that such eco-systems often open up to new participants over time."
+              }
+            ],
+            "key": "dom-6",
+            "severity": "warning",
+            "human": "A resource should have narrative for robust management",
+            "expression": "text.div.exists()",
+            "xpath": "exists(f:text/h:div)",
+            "source": "DomainResource"
+          },
+          {
+            "key": "dom-5",
+            "severity": "error",
+            "human": "If a resource is contained in another resource, it SHALL NOT have a security label",
+            "expression": "contained.meta.security.empty()",
+            "xpath": "not(exists(f:contained/*/f:meta/f:security))",
+            "source": "DomainResource"
+          },
+          {
+            "key": "obs-7",
+            "severity": "error",
+            "human": "If Observation.code is the same as an Observation.component.code then the value element associated with the code SHALL NOT be present",
+            "expression": "value.empty() or component.code.where( (coding.code = %resource.code.coding.code) and (coding.system = %resource.code.coding.system)).empty()",
+            "xpath": "not(f:*[starts-with(local-name(.), 'value')] and (for $coding in f:code/f:coding return f:component/f:code/f:coding[f:code/@value=$coding/f:code/@value] [f:system/@value=$coding/f:system/@value]))"
+          },
+          {
+            "key": "obs-6",
+            "severity": "error",
+            "human": "dataAbsentReason SHALL only be present if Observation.value[x] is not present",
+            "expression": "dataAbsentReason.empty() or value.empty()",
+            "xpath": "not(exists(f:dataAbsentReason)) or (not(exists(*[starts-with(local-name(.), 'value')])))"
+          }
+        ]
       },
       {
         "id": "Observation.contained",
@@ -2401,7 +2476,7 @@
       {
         "id": "Observation.value[x]",
         "path": "Observation.value[x]",
-        "definition": "Count of an object\n\n\nThis is either an integer count, or a Range (min..max) count\n\n\nA range value with no maximum specified implies count is min or more.\n\n\nA range value with no minimum specified implies count is max or less.",
+        "definition": "Count of an object.\n\n\nThis is either an integer count, or a Range (min..max) count.\n\n\nA range value with no maximum specified implies count is min or more.\n\n\nA range value with no minimum specified implies count is max or less.",
         "min": 1,
         "max": "1",
         "base": {
