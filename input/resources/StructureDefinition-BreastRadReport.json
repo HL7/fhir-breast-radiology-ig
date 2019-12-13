@@ -368,8 +368,8 @@
         "id": "DiagnosticReport.extension:priorReports",
         "path": "DiagnosticReport.extension",
         "sliceName": "priorReports",
-        "short": "Recommendations for future care",
-        "definition": "Recommendations for future care",
+        "short": "Prior breast radiology reports",
+        "definition": "Prior breast radiology reports",
         "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
         "alias": [
           "extensions",
@@ -387,6 +387,76 @@
             "code": "Extension",
             "profile": [
               "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadPriorReportsExtension"
+            ]
+          }
+        ],
+        "isModifier": false,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "id": "DiagnosticReport.extension:impressions",
+        "path": "DiagnosticReport.extension",
+        "sliceName": "impressions",
+        "short": "Exam impressions",
+        "definition": "Exam impressions.",
+        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "alias": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadImpressionsExtension"
+            ]
+          }
+        ],
+        "isModifier": false,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "id": "DiagnosticReport.extension:patientRisk",
+        "path": "DiagnosticReport.extension",
+        "sliceName": "patientRisk",
+        "short": "Patient Risk",
+        "definition": "Patient Risk.",
+        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "alias": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadPatientRiskExtension"
             ]
           }
         ],
@@ -1326,53 +1396,6 @@
         ]
       },
       {
-        "id": "DiagnosticReport.result:breastRadSectionPatientRisk",
-        "path": "DiagnosticReport.result",
-        "sliceName": "breastRadSectionPatientRisk",
-        "short": "Observations",
-        "definition": "[Observations](observation.html)  that are part of this diagnostic report.",
-        "comment": "Observations can contain observations.",
-        "requirements": "Need to support individual results, or  groups of results, where the result grouping is arbitrary, but meaningful.",
-        "alias": [
-          "Data",
-          "Atomic Value",
-          "Result",
-          "Atomic result",
-          "Data",
-          "Test",
-          "Analyte",
-          "Battery",
-          "Organizer"
-        ],
-        "min": 1,
-        "max": "1",
-        "base": {
-          "path": "DiagnosticReport.result",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadSectionPatientRisk"
-            ]
-          }
-        ],
-        "isModifier": false,
-        "isSummary": false,
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "OBXs"
-          },
-          {
-            "identity": "rim",
-            "map": "outboundRelationship[typeCode=COMP].target"
-          }
-        ]
-      },
-      {
         "id": "DiagnosticReport.imagingStudy",
         "path": "DiagnosticReport.imagingStudy",
         "short": "Reference to full details of imaging associated with the diagnostic report",
@@ -1831,8 +1854,8 @@
         "id": "DiagnosticReport.extension:priorReports",
         "path": "DiagnosticReport.extension",
         "sliceName": "priorReports",
-        "short": "Recommendations for future care",
-        "definition": "Recommendations for future care",
+        "short": "Prior breast radiology reports",
+        "definition": "Prior breast radiology reports",
         "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
         "alias": [
           "extensions",
@@ -1850,6 +1873,76 @@
             "code": "Extension",
             "profile": [
               "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadPriorReportsExtension"
+            ]
+          }
+        ],
+        "isModifier": false,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "id": "DiagnosticReport.extension:impressions",
+        "path": "DiagnosticReport.extension",
+        "sliceName": "impressions",
+        "short": "Exam impressions",
+        "definition": "Exam impressions.",
+        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "alias": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadImpressionsExtension"
+            ]
+          }
+        ],
+        "isModifier": false,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "id": "DiagnosticReport.extension:patientRisk",
+        "path": "DiagnosticReport.extension",
+        "sliceName": "patientRisk",
+        "short": "Patient Risk",
+        "definition": "Patient Risk.",
+        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "alias": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadPatientRiskExtension"
             ]
           }
         ],
@@ -2027,53 +2120,6 @@
             "code": "Reference",
             "targetProfile": [
               "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadSectionFindings"
-            ]
-          }
-        ],
-        "isModifier": false,
-        "isSummary": false,
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "OBXs"
-          },
-          {
-            "identity": "rim",
-            "map": "outboundRelationship[typeCode=COMP].target"
-          }
-        ]
-      },
-      {
-        "id": "DiagnosticReport.result:breastRadSectionPatientRisk",
-        "path": "DiagnosticReport.result",
-        "sliceName": "breastRadSectionPatientRisk",
-        "short": "Observations",
-        "definition": "[Observations](observation.html)  that are part of this diagnostic report.",
-        "comment": "Observations can contain observations.",
-        "requirements": "Need to support individual results, or  groups of results, where the result grouping is arbitrary, but meaningful.",
-        "alias": [
-          "Data",
-          "Atomic Value",
-          "Result",
-          "Atomic result",
-          "Data",
-          "Test",
-          "Analyte",
-          "Battery",
-          "Organizer"
-        ],
-        "min": 1,
-        "max": "1",
-        "base": {
-          "path": "DiagnosticReport.result",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadSectionPatientRisk"
             ]
           }
         ],
