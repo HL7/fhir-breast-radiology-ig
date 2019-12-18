@@ -1,0 +1,65 @@
+{
+  "resourceType": "ValueSet",
+  "id": "BreastRadMRIMassMarginVS",
+  "extension": [
+    {
+      "url": "http://www.fragment.com/fragment",
+      "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/HeaderFragment"
+    },
+    {
+      "url": "http://www.fragment.com/mapname",
+      "valueString": "MRI/Mass/Margin/Values"
+    },
+    {
+      "url": "http://www.fragment.com/mapname",
+      "valueString": "Common"
+    }
+  ],
+  "url": "http://hl7.org/fhir/us/breast-radiology/ValueSet/BreastRadMRIMassMarginVS",
+  "version": "0.0.2",
+  "name": "BreastRadMRIMassMarginVS",
+  "title": "MRI Mass Margin ValueSet",
+  "status": "draft",
+  "date": "2019-11-01",
+  "publisher": "Hl7-Clinical Interoperability Council",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/cic"
+        }
+      ]
+    }
+  ],
+  "description": "MRI mass margin codes.",
+  "compose": {
+    "include": [
+      {
+        "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastRadMRIMassMarginCS",
+        "concept": [
+          {
+            "code": "Irregular",
+            "display": "Irregular Margin"
+          },
+          {
+            "code": "Macrolobulated",
+            "display": "Microlobulated Margin"
+          },
+          {
+            "code": "Obscured",
+            "display": "Obscured Margin"
+          },
+          {
+            "code": "Smooth",
+            "display": "Smooth Margin"
+          },
+          {
+            "code": "Spiculated",
+            "display": "Spiculated Margin"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,6 +1,20 @@
 {
   "resourceType": "ValueSet",
   "id": "BreastRadMammoMassMarginVS",
+  "extension": [
+    {
+      "url": "http://www.fragment.com/fragment",
+      "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/HeaderFragment"
+    },
+    {
+      "url": "http://www.fragment.com/mapname",
+      "valueString": "Mammo/Mass/Margin/Values"
+    },
+    {
+      "url": "http://www.fragment.com/mapname",
+      "valueString": "Common"
+    }
+  ],
   "url": "http://hl7.org/fhir/us/breast-radiology/ValueSet/BreastRadMammoMassMarginVS",
   "version": "0.0.2",
   "name": "BreastRadMammoMassMarginVS",
@@ -22,27 +36,39 @@
   "compose": {
     "include": [
       {
-        "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastRadMammoMassMarginCS",
+        "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastRadMarginCS",
         "concept": [
+          {
+            "code": "Angular",
+            "display": "Not Circumscribed - Angular"
+          },
           {
             "code": "Circumscribed",
             "display": "Circumscribed Margin"
-          },
-          {
-            "code": "Obscured",
-            "display": "Obscured Margin"
-          },
-          {
-            "code": "Microlobulated",
-            "display": "Microlobulated Margin"
           },
           {
             "code": "Indistinct",
             "display": "Indistinct Margin"
           },
           {
+            "code": "Irregular",
+            "display": "Irregular Margin"
+          },
+          {
+            "code": "Macrolobulated",
+            "display": "Microlobulated Margin"
+          },
+          {
+            "code": "Microlobulated",
+            "display": "Not Circumscribed - Microlobulated"
+          },
+          {
+            "code": "Obscured",
+            "display": "Obscured Margin"
+          },
+          {
             "code": "Spiculated",
-            "display": "Spiculated Margin"
+            "display": "Not Circumscribed - Spiculated"
           }
         ]
       }

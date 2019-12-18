@@ -1,0 +1,65 @@
+{
+  "resourceType": "ValueSet",
+  "id": "MammoShapeVS",
+  "extension": [
+    {
+      "url": "http://www.fragment.com/fragment",
+      "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/HeaderFragment"
+    },
+    {
+      "url": "http://www.fragment.com/mapname",
+      "valueString": "Shape/Values"
+    },
+    {
+      "url": "http://www.fragment.com/mapname",
+      "valueString": "Common"
+    }
+  ],
+  "url": "http://hl7.org/fhir/us/breast-radiology/ValueSet/MammoShapeVS",
+  "version": "0.0.2",
+  "name": "MammoShapeVS",
+  "title": "Shape ValueSet",
+  "status": "draft",
+  "date": "2019-11-01",
+  "publisher": "Hl7-Clinical Interoperability Council",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/cic"
+        }
+      ]
+    }
+  ],
+  "description": "Codes defining shape values.",
+  "compose": {
+    "include": [
+      {
+        "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ShapeCS",
+        "concept": [
+          {
+            "code": "Irregular",
+            "display": "Irregular Shape"
+          },
+          {
+            "code": "Lobulated",
+            "display": "Lobulated Shape"
+          },
+          {
+            "code": "Oval",
+            "display": "Elliptical/Egg-shaped"
+          },
+          {
+            "code": "Reniform",
+            "display": "Reniform Shape"
+          },
+          {
+            "code": "Round",
+            "display": "Round Shape"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "resourceType": "ValueSet",
+  "id": "BreastRadNMMassMarginVS",
+  "extension": [
+    {
+      "url": "http://www.fragment.com/fragment",
+      "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/HeaderFragment"
+    },
+    {
+      "url": "http://www.fragment.com/mapname",
+      "valueString": "NM/Mass/Margin/Values"
+    },
+    {
+      "url": "http://www.fragment.com/mapname",
+      "valueString": "Common"
+    }
+  ],
+  "url": "http://hl7.org/fhir/us/breast-radiology/ValueSet/BreastRadNMMassMarginVS",
+  "version": "0.0.2",
+  "name": "BreastRadNMMassMarginVS",
+  "title": "NM Mass Margin ValueSet",
+  "status": "draft",
+  "date": "2019-11-01",
+  "publisher": "Hl7-Clinical Interoperability Council",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/cic"
+        }
+      ]
+    }
+  ],
+  "description": "NM mass margin codes.",
+  "compose": {
+    "include": [
+      {
+        "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastRadNMMassMarginCS",
+        "concept": [
+          {
+            "code": "Circumscribed",
+            "display": "Circumscribed Margin"
+          }
+        ]
+      }
+    ]
+  }
+}

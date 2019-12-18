@@ -1,5 +1,71 @@
 {
   "resourceType": "StructureDefinition",
+  "extension": [
+    {
+      "url": "http://www.fragment.com/mapname",
+      "valueString": "UltraSound/Finding"
+    },
+    {
+      "url": "http://www.fragment.com/fragment",
+      "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ObservationSectionFragment"
+    },
+    {
+      "url": "http://www.fragment.com/maplink",
+      "valueString": "fragment|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ObservationSectionFragment"
+    },
+    {
+      "url": "http://www.fragment.com/fragment",
+      "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadObservationNoValueFragment"
+    },
+    {
+      "url": "http://www.fragment.com/maplink",
+      "valueString": "fragment|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadObservationNoValueFragment"
+    },
+    {
+      "url": "http://www.fragment.com/maplink",
+      "valueString": "target|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/CommonForeignObject"
+    },
+    {
+      "url": "http://www.fragment.com/maplink",
+      "valueString": "target|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadUSMass"
+    },
+    {
+      "url": "http://www.fragment.com/maplink",
+      "valueString": "target|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadUSTissueComposition"
+    },
+    {
+      "url": "http://www.fragment.com/mapname",
+      "valueString": "Section/Fragment"
+    },
+    {
+      "url": "http://www.fragment.com/maplink",
+      "valueString": "fragment|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadObservationFragment"
+    },
+    {
+      "url": "http://www.fragment.com/mapname",
+      "valueString": "Observation/Fragment"
+    },
+    {
+      "url": "http://www.fragment.com/maplink",
+      "valueString": "fragment|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/HeaderFragment"
+    },
+    {
+      "url": "http://www.fragment.com/maplink",
+      "valueString": "fragment|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/CategoryFragment"
+    },
+    {
+      "url": "http://www.fragment.com/mapname",
+      "valueString": "Common"
+    },
+    {
+      "url": "http://www.fragment.com/mapname",
+      "valueString": "Category/Fragment"
+    },
+    {
+      "url": "http://www.fragment.com/mapname",
+      "valueString": "NoValue/Observation/Fragment"
+    }
+  ],
   "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadUltraSoundFinding",
   "version": "0.0.2",
   "name": "BreastRadUltraSoundFinding",
@@ -17,7 +83,7 @@
       ]
     }
   ],
-  "description": "Breast Radiology Ultra Sound Finding\n\n*** TODO Items ***** Device Metrics detailing the observation devices parameters (transducer freq, etc).\n** BiRads US calcifications are only listed as - calc in a mass - calc outside a mass - intraductal calcification. Can we use the Mammo calcification structure instead?\n** US Special cases (page 155 E.). How to handle?\n** Associated features: MammoResources/Ultra-Sound/MRI associated fetures are similar. Can we merge?us has- Edema- Vascularity- Elasticity AssessmentMammo has- Trabecular thickening- Axillary adenopathymri has- Skin INvasion- Nipple Invasion\n** MammoResources/Ultra-Sound/MRI Mass Margin are different.Not Circumscribed differently.Can they be aligned?\n** MammoResources/Ultra-Sound/MRI Breast Density similar but not same.Can they be aligned?",
+  "description": "Breast Radiology Ultra Sound Finding\n\n*** TODO Items ***** Device Metrics detailing the observation devices parameters (transducer freq, etc).\n** BiRads US calcifications are only listed as - calc in a mass - calc outside a mass - intraductal calcification. Can we use the Mammo calcification structure instead?\n** US Special cases (page 155 E.). How to handle?\n** Associated features: MGResources/Ultra-Sound/MRI associated fetures are similar. Can we merge?us has- Edema- Vascularity- Elasticity AssessmentMammo has- Trabecular thickening- Axillary adenopathymri has- Skin INvasion- Nipple Invasion\n** MGResources/Ultra-Sound/MRI Mass Margin are different.Not Circumscribed differently.Can they be aligned?\n** MGResources/Ultra-Sound/MRI Breast Density similar but not same.Can they be aligned?",
   "fhirVersion": "4.0.0",
   "kind": "resource",
   "abstract": false,
@@ -30,7 +96,7 @@
         "id": "Observation",
         "path": "Observation",
         "short": "Breast Radiology Ultra Sound Finding",
-        "definition": "*** TODO Items ***** Device Metrics detailing the observation devices parameters (transducer freq, etc).\n** BiRads US calcifications are only listed as - calc in a mass - calc outside a mass - intraductal calcification. Can we use the Mammo calcification structure instead?\n** US Special cases (page 155 E.). How to handle?\n** Associated features: MammoResources/Ultra-Sound/MRI associated fetures are similar. Can we merge?us has- Edema- Vascularity- Elasticity AssessmentMammo has- Trabecular thickening- Axillary adenopathymri has- Skin INvasion- Nipple Invasion\n** MammoResources/Ultra-Sound/MRI Mass Margin are different.Not Circumscribed differently.Can they be aligned?\n** MammoResources/Ultra-Sound/MRI Breast Density similar but not same.Can they be aligned?",
+        "definition": "*** TODO Items ***** Device Metrics detailing the observation devices parameters (transducer freq, etc).\n** BiRads US calcifications are only listed as - calc in a mass - calc outside a mass - intraductal calcification. Can we use the Mammo calcification structure instead?\n** US Special cases (page 155 E.). How to handle?\n** Associated features: MGResources/Ultra-Sound/MRI associated fetures are similar. Can we merge?us has- Edema- Vascularity- Elasticity AssessmentMammo has- Trabecular thickening- Axillary adenopathymri has- Skin INvasion- Nipple Invasion\n** MGResources/Ultra-Sound/MRI Mass Margin are different.Not Circumscribed differently.Can they be aligned?\n** MGResources/Ultra-Sound/MRI Breast Density similar but not same.Can they be aligned?",
         "comment": "Used for simple observations such as device measurements, laboratory atomic results, vital signs, height, weight, smoking status, comments, etc.  Other resources are used to provide context for observations such as laboratory reports, etc.",
         "alias": [
           "Vital Signs",
@@ -1905,14 +1971,14 @@
         ]
       },
       {
-        "id": "Observation.hasMember:breastRadUSTissueComposition",
+        "id": "Observation.hasMember:commonForeignObject",
         "path": "Observation.hasMember",
-        "sliceName": "breastRadUSTissueComposition",
+        "sliceName": "commonForeignObject",
         "short": "Related resource that belongs to the Observation group",
         "definition": "This observation is a group observation (e.g. a battery, a panel of tests, a set of vital sign measurements) that includes the target as a member of the group.",
         "comment": "When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.  Note that a system may calculate results from [QuestionnaireResponse](questionnaireresponse.html)  into a final score and represent the score as an Observation.",
-        "min": 1,
-        "max": "1",
+        "min": 0,
+        "max": "*",
         "base": {
           "path": "Observation.hasMember",
           "min": 0,
@@ -1922,7 +1988,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadUSTissueComposition"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/CommonForeignObject"
             ]
           }
         ],
@@ -1975,13 +2041,48 @@
         ]
       },
       {
+        "id": "Observation.hasMember:breastRadUSTissueComposition",
+        "path": "Observation.hasMember",
+        "sliceName": "breastRadUSTissueComposition",
+        "short": "Related resource that belongs to the Observation group",
+        "definition": "This observation is a group observation (e.g. a battery, a panel of tests, a set of vital sign measurements) that includes the target as a member of the group.",
+        "comment": "When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.  Note that a system may calculate results from [QuestionnaireResponse](questionnaireresponse.html)  into a final score and represent the score as an Observation.",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Observation.hasMember",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadUSTissueComposition"
+            ]
+          }
+        ],
+        "isModifier": false,
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "Relationships established by OBX-4 usage"
+          },
+          {
+            "identity": "rim",
+            "map": "outBoundRelationship"
+          }
+        ]
+      },
+      {
         "id": "Observation.derivedFrom",
         "path": "Observation.derivedFrom",
         "short": "Related measurements the observation is made from",
         "definition": "The target resource that represents a measurement from which this observation value is derived. For example, a calculated anion gap or a fetal measurement based on an ultrasound image.",
         "comment": "All the reference choices that are listed in this element can represent clinical observations and other measurements that may be the source for a derived value.  The most common reference will be another Observation.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.",
         "min": 0,
-        "max": "0",
+        "max": "*",
         "base": {
           "path": "Observation.derivedFrom",
           "min": 0,
@@ -2406,7 +2507,7 @@
         "id": "Observation",
         "path": "Observation",
         "short": "Breast Radiology Ultra Sound Finding",
-        "definition": "*** TODO Items ***** Device Metrics detailing the observation devices parameters (transducer freq, etc).\n** BiRads US calcifications are only listed as - calc in a mass - calc outside a mass - intraductal calcification. Can we use the Mammo calcification structure instead?\n** US Special cases (page 155 E.). How to handle?\n** Associated features: MammoResources/Ultra-Sound/MRI associated fetures are similar. Can we merge?us has- Edema- Vascularity- Elasticity AssessmentMammo has- Trabecular thickening- Axillary adenopathymri has- Skin INvasion- Nipple Invasion\n** MammoResources/Ultra-Sound/MRI Mass Margin are different.Not Circumscribed differently.Can they be aligned?\n** MammoResources/Ultra-Sound/MRI Breast Density similar but not same.Can they be aligned?",
+        "definition": "*** TODO Items ***** Device Metrics detailing the observation devices parameters (transducer freq, etc).\n** BiRads US calcifications are only listed as - calc in a mass - calc outside a mass - intraductal calcification. Can we use the Mammo calcification structure instead?\n** US Special cases (page 155 E.). How to handle?\n** Associated features: MGResources/Ultra-Sound/MRI associated fetures are similar. Can we merge?us has- Edema- Vascularity- Elasticity AssessmentMammo has- Trabecular thickening- Axillary adenopathymri has- Skin INvasion- Nipple Invasion\n** MGResources/Ultra-Sound/MRI Mass Margin are different.Not Circumscribed differently.Can they be aligned?\n** MGResources/Ultra-Sound/MRI Breast Density similar but not same.Can they be aligned?",
         "base": {
           "path": "Observation",
           "min": 0,
@@ -2683,14 +2784,14 @@
         }
       },
       {
-        "id": "Observation.hasMember:breastRadUSTissueComposition",
+        "id": "Observation.hasMember:commonForeignObject",
         "path": "Observation.hasMember",
-        "sliceName": "breastRadUSTissueComposition",
+        "sliceName": "commonForeignObject",
         "short": "Related resource that belongs to the Observation group",
         "definition": "This observation is a group observation (e.g. a battery, a panel of tests, a set of vital sign measurements) that includes the target as a member of the group.",
         "comment": "When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.  Note that a system may calculate results from [QuestionnaireResponse](questionnaireresponse.html)  into a final score and represent the score as an Observation.",
-        "min": 1,
-        "max": "1",
+        "min": 0,
+        "max": "*",
         "base": {
           "path": "Observation.hasMember",
           "min": 0,
@@ -2700,7 +2801,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadUSTissueComposition"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/CommonForeignObject"
             ]
           }
         ],
@@ -2753,15 +2854,39 @@
         ]
       },
       {
-        "id": "Observation.derivedFrom",
-        "path": "Observation.derivedFrom",
-        "min": 0,
-        "max": "0",
+        "id": "Observation.hasMember:breastRadUSTissueComposition",
+        "path": "Observation.hasMember",
+        "sliceName": "breastRadUSTissueComposition",
+        "short": "Related resource that belongs to the Observation group",
+        "definition": "This observation is a group observation (e.g. a battery, a panel of tests, a set of vital sign measurements) that includes the target as a member of the group.",
+        "comment": "When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.  Note that a system may calculate results from [QuestionnaireResponse](questionnaireresponse.html)  into a final score and represent the score as an Observation.",
+        "min": 1,
+        "max": "1",
         "base": {
-          "path": "Observation.derivedFrom",
+          "path": "Observation.hasMember",
           "min": 0,
           "max": "*"
-        }
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadUSTissueComposition"
+            ]
+          }
+        ],
+        "isModifier": false,
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "Relationships established by OBX-4 usage"
+          },
+          {
+            "identity": "rim",
+            "map": "outBoundRelationship"
+          }
+        ]
       },
       {
         "id": "Observation.component",

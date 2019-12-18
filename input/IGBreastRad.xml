@@ -39,15 +39,15 @@
       <name value="Common CodeSystems" />
       <description value="This section contains code systems that are commonly used throughout a Breast Radiology Report" />
     </grouping>
-    <grouping id="MammoResources">
+    <grouping id="MGResources">
       <name value="Mammography Resources" />
       <description value="This section contains resources used specifically in a Mammography exam" />
     </grouping>
-    <grouping id="MammoCodesVS">
+    <grouping id="MGCodesVS">
       <name value="Mammography ValueSets" />
       <description value="This section contains value sets used specifically in a Mammography exam" />
     </grouping>
-    <grouping id="MammoCodesCS">
+    <grouping id="MGCodesCS">
       <name value="Mammography CodeSystems" />
       <description value="This section contains code systems used specifically in a Mammography exam" />
     </grouping>
@@ -134,7 +134,7 @@
       <name value="Mammo Breast Density CodeSystem" />
       <description value="Codes for mammography breast density values." />
       <exampleBoolean value="false" />
-      <groupingId value="MammoCodesCS" />
+      <groupingId value="MGCodesCS" />
     </resource>
     <resource>
       <reference>
@@ -143,23 +143,14 @@
       <name value="Mammo Mass Density CodeSystem" />
       <description value="Mammography mass density codes." />
       <exampleBoolean value="false" />
-      <groupingId value="MammoCodesCS" />
+      <groupingId value="MGCodesCS" />
     </resource>
     <resource>
       <reference>
-        <reference value="CodeSystem/BreastRadMammoMassMarginCS" />
+        <reference value="CodeSystem/BreastRadMarginCS" />
       </reference>
-      <name value="Mammo Mass Margin CodeSystem" />
-      <description value="Mammography mass margin codes." />
-      <exampleBoolean value="false" />
-      <groupingId value="MammoCodesCS" />
-    </resource>
-    <resource>
-      <reference>
-        <reference value="CodeSystem/BreastRadMassShapeCS" />
-      </reference>
-      <name value="Mass Shape CodeSystem" />
-      <description value="Codes defining mass shape values." />
+      <name value="Margin CodeSystem" />
+      <description value="Margin codes." />
       <exampleBoolean value="false" />
       <groupingId value="CommonCodesCS" />
     </resource>
@@ -170,67 +161,48 @@
       <name value="Mammo Asymmetries CodeSystem" />
       <description value="Codes defining types of mammography asymmetries." />
       <exampleBoolean value="false" />
-      <groupingId value="MammoCodesCS" />
+      <groupingId value="MGCodesCS" />
     </resource>
     <resource>
       <reference>
-        <reference value="CodeSystem/BreastRadObservedChangesCS" />
+        <reference value="CodeSystem/BreastRadMRIMassMarginCS" />
       </reference>
-      <name value="Observed Changes CodeSystem" />
-      <description value="Codes defining types of observed changes in an abnormality over time." />
+      <name value="MRI Mass Margin CodeSystem" />
+      <description value="MRI mass margin codes." />
       <exampleBoolean value="false" />
-      <groupingId value="CommonCodesCS" />
+      <groupingId value="MRICodesCS" />
     </resource>
     <resource>
       <reference>
-        <reference value="CodeSystem/BreastRadObservedStateCS" />
+        <reference value="CodeSystem/BreastRadNMMassMarginCS" />
       </reference>
-      <name value="Observed State CodeSystem" />
-      <description value="Codes for observed state of an abnormality." />
+      <name value="NM Mass Margin CodeSystem" />
+      <description value="NM mass margin codes." />
       <exampleBoolean value="false" />
-      <groupingId value="CommonCodesCS" />
     </resource>
     <resource>
       <reference>
-        <reference value="CodeSystem/BreastRadUSMassEchoPatternCS" />
+        <reference value="CodeSystem/BreastRadUSEchoPatternCS" />
       </reference>
-      <name value="US Mass Echo Pattern CodeSystem" />
+      <name value="US Echo Pattern CodeSystem" />
       <description value="Ultra-sound mass echo pattern codes." />
       <exampleBoolean value="false" />
       <groupingId value="USCodesCS" />
     </resource>
     <resource>
       <reference>
-        <reference value="CodeSystem/BreastRadUSMassMarginCS" />
+        <reference value="CodeSystem/BreastRadUSElasticityCS" />
       </reference>
-      <name value="US Mass Margin CodeSystem" />
-      <description value="Ultra-sound mass margin codes." />
+      <name value="US Echo Pattern CodeSystem" />
+      <description value="Ultra-sound Elasticity codes." />
       <exampleBoolean value="false" />
       <groupingId value="USCodesCS" />
     </resource>
     <resource>
       <reference>
-        <reference value="CodeSystem/BreastRadUSMassMarginNotCircumscribedCS" />
+        <reference value="CodeSystem/BreastRadUSPosteriorAcousticFeaturesCS" />
       </reference>
-      <name value="US Mass Margin Not Circumscribed values CodeSystem" />
-      <description value="Ultra-sound mass margin 'Not Circumscribed' codes." />
-      <exampleBoolean value="false" />
-      <groupingId value="USCodesCS" />
-    </resource>
-    <resource>
-      <reference>
-        <reference value="CodeSystem/BreastRadUSMassOrientationCS" />
-      </reference>
-      <name value="US Mass Orientation CodeSystem" />
-      <description value="Ultra-sound mass orientation codes" />
-      <exampleBoolean value="false" />
-      <groupingId value="USCodesCS" />
-    </resource>
-    <resource>
-      <reference>
-        <reference value="CodeSystem/BreastRadUSMassPosteriorAcousticFeaturesCS" />
-      </reference>
-      <name value="US Mass Posterior Acoustic Features CodeSystem" />
+      <name value="US Posterior Acoustic Features CodeSystem" />
       <description value="Ultra-sound mass Posterior acoustic features codes." />
       <exampleBoolean value="false" />
       <groupingId value="USCodesCS" />
@@ -246,12 +218,66 @@
     </resource>
     <resource>
       <reference>
+        <reference value="CodeSystem/BreastRadUSVascularityCS" />
+      </reference>
+      <name value="US Echo Pattern CodeSystem" />
+      <description value="Ultra-sound Vascularity codes." />
+      <exampleBoolean value="false" />
+      <groupingId value="USCodesCS" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="CodeSystem/CommonAbnormalitiesCS" />
+      </reference>
+      <name value="Foreign Object CodeSystem" />
+      <description value="Foreign object codes defining types of foreign objects observed during a Breast Radiology exam" />
+      <exampleBoolean value="false" />
+      <groupingId value="CommonCodesCS" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="CodeSystem/CommonHilumCS" />
+      </reference>
+      <name value="Hilum Values CodeSystem" />
+      <description value="Codes defining hilum values." />
+      <exampleBoolean value="false" />
+      <groupingId value="CommonCodesCS" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="CodeSystem/CommonObservedChangesCS" />
+      </reference>
+      <name value="Observed Changes CodeSystem" />
+      <description value="Codes defining types of observed changes in an abnormality over time." />
+      <exampleBoolean value="false" />
+      <groupingId value="CommonCodesCS" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="CodeSystem/CommonObservedStateCS" />
+      </reference>
+      <name value="Observed State CodeSystem" />
+      <description value="Codes for observed state of an abnormality." />
+      <exampleBoolean value="false" />
+      <groupingId value="CommonCodesCS" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="CodeSystem/CommonOrientationCS" />
+      </reference>
+      <name value="Orientation CodeSystem" />
+      <description value="Orientation codes" />
+      <exampleBoolean value="false" />
+      <groupingId value="CommonCodesCS" />
+    </resource>
+    <resource>
+      <reference>
         <reference value="CodeSystem/MammoCalcificationDistributionCS" />
       </reference>
       <name value="Mammo Calcification Distribution CodeSystem" />
       <description value="Mammography calcification distribution codes." />
       <exampleBoolean value="false" />
-      <groupingId value="MammoCodesCS" />
+      <groupingId value="MGCodesCS" />
     </resource>
     <resource>
       <reference>
@@ -260,7 +286,25 @@
       <name value="Mammo Calcification Type CodeSystem" />
       <description value="Mammography calcification type codes." />
       <exampleBoolean value="false" />
-      <groupingId value="MammoCodesCS" />
+      <groupingId value="MGCodesCS" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="CodeSystem/ShapeCS" />
+      </reference>
+      <name value="Shape CodeSystem" />
+      <description value="Codes defining shape values." />
+      <exampleBoolean value="false" />
+      <groupingId value="CommonCodesCS" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="CodeSystem/USBoundaryCS" />
+      </reference>
+      <name value="UltraSound Boundary CodeSystem" />
+      <description value="Ultra Sound Boundary codes." />
+      <exampleBoolean value="false" />
+      <groupingId value="USCodesCS" />
     </resource>
     <resource>
       <reference>
@@ -305,7 +349,7 @@
       <name value="Mammo Breast Density ValueSet" />
       <description value="Codes for mammography breast density values." />
       <exampleBoolean value="false" />
-      <groupingId value="MammoCodesVS" />
+      <groupingId value="MGCodesVS" />
     </resource>
     <resource>
       <reference>
@@ -314,7 +358,7 @@
       <name value="Mammo Mass Density ValueSet" />
       <description value="Mammography mass density codes." />
       <exampleBoolean value="false" />
-      <groupingId value="MammoCodesVS" />
+      <groupingId value="MGCodesVS" />
     </resource>
     <resource>
       <reference>
@@ -323,16 +367,7 @@
       <name value="Mammo Mass Margin ValueSet" />
       <description value="Mammography mass margin codes." />
       <exampleBoolean value="false" />
-      <groupingId value="MammoCodesVS" />
-    </resource>
-    <resource>
-      <reference>
-        <reference value="ValueSet/BreastRadMassShapeVS" />
-      </reference>
-      <name value="Mass Shape ValueSet" />
-      <description value="Codes defining mass shape values." />
-      <exampleBoolean value="false" />
-      <groupingId value="CommonCodesVS" />
+      <groupingId value="MGCodesVS" />
     </resource>
     <resource>
       <reference>
@@ -341,67 +376,57 @@
       <name value="Mammo Asymmetries ValueSet" />
       <description value="Codes defining types of mammography asymmetries." />
       <exampleBoolean value="false" />
-      <groupingId value="MammoCodesVS" />
+      <groupingId value="MGCodesVS" />
     </resource>
     <resource>
       <reference>
-        <reference value="ValueSet/BreastRadObservedChangesVS" />
+        <reference value="ValueSet/BreastRadMRIMassMarginVS" />
       </reference>
-      <name value="Observed Changes ValueSet" />
-      <description value="Codes defining types of observed changes in an abnormality over time." />
+      <name value="MRI Mass Margin ValueSet" />
+      <description value="MRI mass margin codes." />
       <exampleBoolean value="false" />
-      <groupingId value="CommonCodesVS" />
+      <groupingId value="MRICodesVS" />
     </resource>
     <resource>
       <reference>
-        <reference value="ValueSet/BreastRadObservedStateVS" />
+        <reference value="ValueSet/BreastRadNMMassMarginVS" />
       </reference>
-      <name value="Observed State ValueSet" />
-      <description value="Codes for observed state of an abnormality." />
+      <name value="NM Mass Margin ValueSet" />
+      <description value="NM mass margin codes." />
       <exampleBoolean value="false" />
-      <groupingId value="CommonCodesVS" />
     </resource>
     <resource>
       <reference>
-        <reference value="ValueSet/BreastRadUSMassEchoPatternVS" />
+        <reference value="ValueSet/BreastRadUSEchoPatternVS" />
       </reference>
-      <name value="US Mass Echo Pattern ValueSet" />
+      <name value="US Echo Pattern ValueSet" />
       <description value="Ultra-sound mass echo pattern codes." />
       <exampleBoolean value="false" />
       <groupingId value="USCodesVS" />
     </resource>
     <resource>
       <reference>
-        <reference value="ValueSet/BreastRadUSMassMarginNotCircumscribedVS" />
+        <reference value="ValueSet/BreastRadUSElasticityVS" />
       </reference>
-      <name value="US Mass Margin Not Circumscribed values ValueSet" />
-      <description value="Ultra-sound mass margin 'Not Circumscribed' codes." />
+      <name value="US Elasticity ValueSet" />
+      <description value="Ultra-sound Elasticity codes." />
       <exampleBoolean value="false" />
       <groupingId value="USCodesVS" />
     </resource>
     <resource>
       <reference>
-        <reference value="ValueSet/BreastRadUSMassMarginVS" />
+        <reference value="ValueSet/BreastRadUSMarginVS" />
       </reference>
-      <name value="US Mass Margin ValueSet" />
+      <name value="US Margin ValueSet" />
       <description value="Ultra-sound mass margin codes." />
       <exampleBoolean value="false" />
       <groupingId value="USCodesVS" />
     </resource>
     <resource>
       <reference>
-        <reference value="ValueSet/BreastRadUSMassOrientationVS" />
+        <reference value="ValueSet/BreastRadUSPosteriorAcousticFeaturesVS" />
       </reference>
-      <name value="US Mass Orientation ValueSet" />
-      <description value="Ultra-sound mass orientation codes" />
-      <exampleBoolean value="false" />
-      <groupingId value="USCodesVS" />
-    </resource>
-    <resource>
-      <reference>
-        <reference value="ValueSet/BreastRadUSMassPosteriorAcousticFeaturesVS" />
-      </reference>
-      <name value="US Mass Posterior Acoustic Features ValueSet" />
+      <name value="US Posterior Acoustic Features ValueSet" />
       <description value="Ultra-sound mass Posterior acoustic features codes." />
       <exampleBoolean value="false" />
       <groupingId value="USCodesVS" />
@@ -417,12 +442,66 @@
     </resource>
     <resource>
       <reference>
+        <reference value="ValueSet/BreastRadUSVascularityVS" />
+      </reference>
+      <name value="US Vascularity ValueSet" />
+      <description value="Ultra-sound Vascularity codes." />
+      <exampleBoolean value="false" />
+      <groupingId value="USCodesVS" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="ValueSet/CommonAbnormalitiesVS" />
+      </reference>
+      <name value="Foreign Object ValueSet" />
+      <description value="Foreign object codes defining types of foreign objects observed during a Breast Radiology exam" />
+      <exampleBoolean value="false" />
+      <groupingId value="CommonCodesVS" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="ValueSet/CommonHilumVS" />
+      </reference>
+      <name value="Hilum Values ValueSet" />
+      <description value="Codes defining hilum values." />
+      <exampleBoolean value="false" />
+      <groupingId value="CommonCodesVS" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="ValueSet/CommonObservedChangesVS" />
+      </reference>
+      <name value="Observed Changes ValueSet" />
+      <description value="Codes defining types of observed changes in an abnormality over time." />
+      <exampleBoolean value="false" />
+      <groupingId value="CommonCodesVS" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="ValueSet/CommonObservedStateVS" />
+      </reference>
+      <name value="Observed State ValueSet" />
+      <description value="Codes for observed state of an abnormality." />
+      <exampleBoolean value="false" />
+      <groupingId value="CommonCodesVS" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="ValueSet/CommonOrientationVS" />
+      </reference>
+      <name value="Orientation ValueSet" />
+      <description value="Orientation codes" />
+      <exampleBoolean value="false" />
+      <groupingId value="CommonCodesVS" />
+    </resource>
+    <resource>
+      <reference>
         <reference value="ValueSet/MammoCalcificationDistributionVS" />
       </reference>
       <name value="Mammo Calcification Distribution ValueSet" />
       <description value="Mammography calcification distribution codes." />
       <exampleBoolean value="false" />
-      <groupingId value="MammoCodesVS" />
+      <groupingId value="MGCodesVS" />
     </resource>
     <resource>
       <reference>
@@ -431,7 +510,34 @@
       <name value="Mammo Calcification Type ValueSet" />
       <description value="Mammography calcification type codes." />
       <exampleBoolean value="false" />
-      <groupingId value="MammoCodesVS" />
+      <groupingId value="MGCodesVS" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="ValueSet/MammoShapeVS" />
+      </reference>
+      <name value="Shape ValueSet" />
+      <description value="Codes defining shape values." />
+      <exampleBoolean value="false" />
+      <groupingId value="MGCodesVS" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="ValueSet/UltraSoundShapeVS" />
+      </reference>
+      <name value="Shape ValueSet" />
+      <description value="Codes defining shape values." />
+      <exampleBoolean value="false" />
+      <groupingId value="USCodesVS" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="ValueSet/USBoundaryVS" />
+      </reference>
+      <name value="UltraSound Boundary ValueSet" />
+      <description value="UltraSound Boundary Codes." />
+      <exampleBoolean value="false" />
+      <groupingId value="USCodesVS" />
     </resource>
     <resource>
       <reference>
@@ -516,16 +622,25 @@
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/BreastRadMassShape" />
+        <reference value="StructureDefinition/CommonForeignObject" />
       </reference>
-      <name value="Mass Shape" />
-      <description value="Breast Radiology Mass Shape Observation" />
+      <name value="ForeignObject" />
+      <description value="Breast Radiology Foreign Object Observation" />
       <exampleBoolean value="false" />
       <groupingId value="CommonResources" />
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/BreastRadObservedChanges" />
+        <reference value="StructureDefinition/CommonHilum" />
+      </reference>
+      <name value="Hilum Shape" />
+      <description value="Breast Radiology Hilum Observation" />
+      <exampleBoolean value="false" />
+      <groupingId value="CommonResources" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/CommonObservedChanges" />
       </reference>
       <name value="Observed Changes" />
       <description value="Breast Radiology Observed Changes Observation" />
@@ -534,7 +649,7 @@
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/BreastRadCount" />
+        <reference value="StructureDefinition/CommonCount" />
       </reference>
       <name value="Count" />
       <description value="Breast Radiology Count Observation" />
@@ -543,7 +658,7 @@
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/BreastRadSize" />
+        <reference value="StructureDefinition/CommonSize" />
       </reference>
       <name value="Size" />
       <description value="Breast Radiology Size Observation" />
@@ -552,10 +667,37 @@
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/BreastRadObservedState" />
+        <reference value="StructureDefinition/CommonObservedState" />
       </reference>
       <name value="Observed State" />
       <description value="Breast Radiology Observed State Observation" />
+      <exampleBoolean value="false" />
+      <groupingId value="CommonResources" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/CommonOrientation" />
+      </reference>
+      <name value="Orientation" />
+      <description value="Breast Radiology Orientation Observation" />
+      <exampleBoolean value="false" />
+      <groupingId value="CommonResources" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/MammoShape" />
+      </reference>
+      <name value="Shape" />
+      <description value="Breast Radiology Shape Observation" />
+      <exampleBoolean value="false" />
+      <groupingId value="CommonResources" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/UltraSoundShape" />
+      </reference>
+      <name value="Shape" />
+      <description value="Breast Radiology Shape Observation" />
       <exampleBoolean value="false" />
       <groupingId value="CommonResources" />
     </resource>
@@ -611,7 +753,7 @@
       <name value="Mammo Finding" />
       <description value="Breast Radiology Mammography Finding" />
       <exampleBoolean value="false" />
-      <groupingId value="MammoResources" />
+      <groupingId value="MGResources" />
     </resource>
     <resource>
       <reference>
@@ -620,7 +762,7 @@
       <name value="Mammo Architectural Distortion" />
       <description value="Breast Radiology Mammography Architectural Distortion Observation" />
       <exampleBoolean value="false" />
-      <groupingId value="MammoResources" />
+      <groupingId value="MGResources" />
     </resource>
     <resource>
       <reference>
@@ -629,7 +771,7 @@
       <name value="Mammo Associated Features" />
       <description value="Mammography Associated Features Observation" />
       <exampleBoolean value="false" />
-      <groupingId value="MammoResources" />
+      <groupingId value="MGResources" />
     </resource>
     <resource>
       <reference>
@@ -638,7 +780,7 @@
       <name value="Mammo Axillary Adenopathy" />
       <description value="Breast Radiology Mammography Axillary Adenopathy Observation" />
       <exampleBoolean value="false" />
-      <groupingId value="MammoResources" />
+      <groupingId value="MGResources" />
     </resource>
     <resource>
       <reference>
@@ -647,7 +789,7 @@
       <name value="Mammo Nipple Retraction" />
       <description value="Breast Radiology Mammography Nipple Retraction Observation" />
       <exampleBoolean value="false" />
-      <groupingId value="MammoResources" />
+      <groupingId value="MGResources" />
     </resource>
     <resource>
       <reference>
@@ -656,7 +798,7 @@
       <name value="Mammo Skin Retraction" />
       <description value="Mammography Skin Retraction Observation" />
       <exampleBoolean value="false" />
-      <groupingId value="MammoResources" />
+      <groupingId value="MGResources" />
     </resource>
     <resource>
       <reference>
@@ -665,7 +807,7 @@
       <name value="Mammo Skin Thickening" />
       <description value="Mammography Skin Thickening Observation" />
       <exampleBoolean value="false" />
-      <groupingId value="MammoResources" />
+      <groupingId value="MGResources" />
     </resource>
     <resource>
       <reference>
@@ -674,7 +816,7 @@
       <name value="Mammo Asymmetries" />
       <description value="Breast Radiology Mammography Asymmetries Observation" />
       <exampleBoolean value="false" />
-      <groupingId value="MammoResources" />
+      <groupingId value="MGResources" />
     </resource>
     <resource>
       <reference>
@@ -683,7 +825,7 @@
       <name value="Mammo Breast Density" />
       <description value="Breast Radiology Mammography Breast Density Observation" />
       <exampleBoolean value="false" />
-      <groupingId value="MammoResources" />
+      <groupingId value="MGResources" />
     </resource>
     <resource>
       <reference>
@@ -692,7 +834,7 @@
       <name value="Mammo Calcification" />
       <description value="Breast Radiology Mammography Calcification Observation" />
       <exampleBoolean value="false" />
-      <groupingId value="MammoResources" />
+      <groupingId value="MGResources" />
     </resource>
     <resource>
       <reference>
@@ -701,7 +843,7 @@
       <name value="Mammo Calcification Distribution" />
       <description value="Breast Radiology Mammography Calcification Distribution Observation" />
       <exampleBoolean value="false" />
-      <groupingId value="MammoResources" />
+      <groupingId value="MGResources" />
     </resource>
     <resource>
       <reference>
@@ -710,7 +852,25 @@
       <name value="Mammo Calcification Type" />
       <description value="Breast Radiology Mammography Calcification Type Observation" />
       <exampleBoolean value="false" />
-      <groupingId value="MammoResources" />
+      <groupingId value="MGResources" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/BreastRadMammoCyst" />
+      </reference>
+      <name value="Mammo Cyst" />
+      <description value="Breast Radiology Mammography Cyst Observation" />
+      <exampleBoolean value="false" />
+      <groupingId value="MGResources" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/BreastRadMammoFatNecrosis" />
+      </reference>
+      <name value="Mammo Fat Necrosis" />
+      <description value="Breast Radiology Mammography Fat Necrosis Observation" />
+      <exampleBoolean value="false" />
+      <groupingId value="MGResources" />
     </resource>
     <resource>
       <reference>
@@ -719,7 +879,7 @@
       <name value="Mammo Intramammary LymphNode" />
       <description value="Breast Radiology Mammography Intramammary LymphNode Observation" />
       <exampleBoolean value="false" />
-      <groupingId value="MammoResources" />
+      <groupingId value="MGResources" />
     </resource>
     <resource>
       <reference>
@@ -728,7 +888,7 @@
       <name value="Mammo Mass" />
       <description value="Breast Radiology Mammography Mass Observation" />
       <exampleBoolean value="false" />
-      <groupingId value="MammoResources" />
+      <groupingId value="MGResources" />
     </resource>
     <resource>
       <reference>
@@ -737,7 +897,7 @@
       <name value="Mammo Mass Density" />
       <description value="Breast Radiology Mammography Mass Density Observation" />
       <exampleBoolean value="false" />
-      <groupingId value="MammoResources" />
+      <groupingId value="MGResources" />
     </resource>
     <resource>
       <reference>
@@ -746,7 +906,7 @@
       <name value="Mammo Mass Margin" />
       <description value="Breast Radiology Mammography Mass Margin Observation" />
       <exampleBoolean value="false" />
-      <groupingId value="MammoResources" />
+      <groupingId value="MGResources" />
     </resource>
     <resource>
       <reference>
@@ -755,7 +915,7 @@
       <name value="Mammo Skin Lesion" />
       <description value="Breast Radiology Mammography Skin Lesion Observation" />
       <exampleBoolean value="false" />
-      <groupingId value="MammoResources" />
+      <groupingId value="MGResources" />
     </resource>
     <resource>
       <reference>
@@ -764,7 +924,7 @@
       <name value="Mammo Solitary Dilated Duct" />
       <description value="Breat Radiology Mammography Solitary Dilated Duct Observation" />
       <exampleBoolean value="false" />
-      <groupingId value="MammoResources" />
+      <groupingId value="MGResources" />
     </resource>
     <resource>
       <reference>
@@ -777,10 +937,79 @@
     </resource>
     <resource>
       <reference>
+        <reference value="StructureDefinition/BreastRadMRIMass" />
+      </reference>
+      <name value="MRI Mass" />
+      <description value="Breast Radiology MRIgraphy Mass Observation" />
+      <exampleBoolean value="false" />
+      <groupingId value="MRIResources" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/BreastRadMRIMassMargin" />
+      </reference>
+      <name value="MRI Mass Margin" />
+      <description value="Breast Radiology MRI Mass Margin Observation" />
+      <exampleBoolean value="false" />
+      <groupingId value="MRIResources" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/BreastRadNMFinding" />
+      </reference>
+      <name value="NM Finding" />
+      <description value="Breast Radiology NMgraphy Finding" />
+      <exampleBoolean value="false" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/BreastRadNMMass" />
+      </reference>
+      <name value="NM Mass" />
+      <description value="Breast Radiology NM Mass Observation" />
+      <exampleBoolean value="false" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/BreastRadNMMassMargin" />
+      </reference>
+      <name value="NM Mass Margin" />
+      <description value="Breast Radiology NM Mass Margin Observation" />
+      <exampleBoolean value="false" />
+    </resource>
+    <resource>
+      <reference>
         <reference value="StructureDefinition/BreastRadUltraSoundFinding" />
       </reference>
       <name value="UltraSound Finding" />
       <description value="Breast Radiology Ultra Sound Finding" />
+      <exampleBoolean value="false" />
+      <groupingId value="USResources" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/BreastRadUSBoundary" />
+      </reference>
+      <name value="Ultra Sound Boundary" />
+      <description value="Breast Radiology Ultra-Sound Boundary Observation" />
+      <exampleBoolean value="false" />
+      <groupingId value="USResources" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/BreastRadUSEchoPattern" />
+      </reference>
+      <name value="US Echo Pattern" />
+      <description value="Breast Radiology Ultra-Sound Echo Pattern Observation" />
+      <exampleBoolean value="false" />
+      <groupingId value="USResources" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/BreastRadUSElasticity" />
+      </reference>
+      <name value="US Elasticity" />
+      <description value="Breast Radiology Ultra-Sound Elasticity Observation" />
       <exampleBoolean value="false" />
       <groupingId value="USResources" />
     </resource>
@@ -795,37 +1024,10 @@
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/BreastRadUSMassEchoPattern" />
+        <reference value="StructureDefinition/BreastRadUSMargin" />
       </reference>
-      <name value="US Mass Echo Pattern" />
-      <description value="Breast Radiology Ultra-Sound Mass Echo Pattern Observation" />
-      <exampleBoolean value="false" />
-      <groupingId value="USResources" />
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/BreastRadUSMassMargin" />
-      </reference>
-      <name value="US Mass Margin" />
-      <description value="Breast Radiology Ultra-Sound Mass Margin Observation" />
-      <exampleBoolean value="false" />
-      <groupingId value="USResources" />
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/BreastRadUSMassOrientation" />
-      </reference>
-      <name value="US Mass Orientation" />
-      <description value="Breast Radiology Ultra-Sound Mass Orientation Observation" />
-      <exampleBoolean value="false" />
-      <groupingId value="USResources" />
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/BreastRadUSMassPosteriorAcousticFeatures" />
-      </reference>
-      <name value="US Mass Posterior Acoustic Features" />
-      <description value="Breast Radiology Ultra-Sound Mass Posterior Acoustic Features Observation" />
+      <name value="US Margin" />
+      <description value="Breast Radiology Ultra-Sound Margin Observation" />
       <exampleBoolean value="false" />
       <groupingId value="USResources" />
     </resource>
@@ -835,6 +1037,24 @@
       </reference>
       <name value="US Tissue Composition" />
       <description value="Breast Radiology Ultra-Sound Tissue Composition Observation" />
+      <exampleBoolean value="false" />
+      <groupingId value="USResources" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/BreastRadUSPosteriorAcousticFeatures" />
+      </reference>
+      <name value="US Posterior Acoustic Features" />
+      <description value="Breast Radiology Ultra-Sound Posterior Acoustic Features Observation" />
+      <exampleBoolean value="false" />
+      <groupingId value="USResources" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/BreastRadUSVascularity" />
+      </reference>
+      <name value="US Vascularity" />
+      <description value="Breast Radiology Ultra-Sound Vascularity Observation" />
       <exampleBoolean value="false" />
       <groupingId value="USResources" />
     </resource>

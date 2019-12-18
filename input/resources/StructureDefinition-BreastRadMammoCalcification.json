@@ -1,5 +1,123 @@
 {
   "resourceType": "StructureDefinition",
+  "extension": [
+    {
+      "url": "http://www.fragment.com/mapname",
+      "valueString": "Mammo/Calc."
+    },
+    {
+      "url": "http://www.fragment.com/fragment",
+      "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadObservationNoDeviceFragment"
+    },
+    {
+      "url": "http://www.fragment.com/maplink",
+      "valueString": "fragment|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadObservationNoDeviceFragment"
+    },
+    {
+      "url": "http://www.fragment.com/fragment",
+      "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastBodyLocationRequiredFragment"
+    },
+    {
+      "url": "http://www.fragment.com/maplink",
+      "valueString": "fragment|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastBodyLocationRequiredFragment"
+    },
+    {
+      "url": "http://www.fragment.com/fragment",
+      "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ObservationSectionFragment"
+    },
+    {
+      "url": "http://www.fragment.com/maplink",
+      "valueString": "fragment|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ObservationSectionFragment"
+    },
+    {
+      "url": "http://www.fragment.com/fragment",
+      "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadObservationNoValueFragment"
+    },
+    {
+      "url": "http://www.fragment.com/maplink",
+      "valueString": "fragment|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadObservationNoValueFragment"
+    },
+    {
+      "url": "http://www.fragment.com/maplink",
+      "valueString": "target|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BiRadsAssessmentCategory"
+    },
+    {
+      "url": "http://www.fragment.com/maplink",
+      "valueString": "target|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/CommonCount"
+    },
+    {
+      "url": "http://www.fragment.com/maplink",
+      "valueString": "target|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/CommonObservedChanges"
+    },
+    {
+      "url": "http://www.fragment.com/maplink",
+      "valueString": "target|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/CommonSize"
+    },
+    {
+      "url": "http://www.fragment.com/maplink",
+      "valueString": "target|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/CommonObservedState"
+    },
+    {
+      "url": "http://www.fragment.com/maplink",
+      "valueString": "target|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadMammoCalcificationType"
+    },
+    {
+      "url": "http://www.fragment.com/maplink",
+      "valueString": "target|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadMammoCalcificationDistribution"
+    },
+    {
+      "url": "http://www.fragment.com/maplink",
+      "valueString": "target|False|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadMammoAssociatedFeatures"
+    },
+    {
+      "url": "http://www.fragment.com/mapname",
+      "valueString": "NoDevice/Observation/Fragment"
+    },
+    {
+      "url": "http://www.fragment.com/maplink",
+      "valueString": "fragment|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadObservationFragment"
+    },
+    {
+      "url": "http://www.fragment.com/mapname",
+      "valueString": "Observation/Fragment"
+    },
+    {
+      "url": "http://www.fragment.com/maplink",
+      "valueString": "fragment|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/HeaderFragment"
+    },
+    {
+      "url": "http://www.fragment.com/maplink",
+      "valueString": "fragment|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/CategoryFragment"
+    },
+    {
+      "url": "http://www.fragment.com/mapname",
+      "valueString": "Common"
+    },
+    {
+      "url": "http://www.fragment.com/mapname",
+      "valueString": "Category/Fragment"
+    },
+    {
+      "url": "http://www.fragment.com/mapname",
+      "valueString": "Breast/Body/Location/Fragment/(Required)"
+    },
+    {
+      "url": "http://www.fragment.com/maplink",
+      "valueString": "extension|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastBodyLocation"
+    },
+    {
+      "url": "http://www.fragment.com/maplink",
+      "valueString": "target|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastBodyLocation"
+    },
+    {
+      "url": "http://www.fragment.com/mapname",
+      "valueString": "Section/Fragment"
+    },
+    {
+      "url": "http://www.fragment.com/mapname",
+      "valueString": "NoValue/Observation/Fragment"
+    }
+  ],
   "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadMammoCalcification",
   "version": "0.0.2",
   "name": "BreastRadMammoCalcification",
@@ -17,7 +135,7 @@
       ]
     }
   ],
-  "description": "Breast Radiology Mammography Calcification Observation\n\nIf this observation is present, and dataAbsentReason is empty, then a calcification was observed.\n\n\nIf this observation is present, and dataAbsentReason is not empty, then a calcification was not observed and dataAbsentReason contains the reason why and no Type or Distribution observations should be referenced by this observation\n\n\nCalcifications that are assessed as benign at mammography are typically larger, coarser, round with\nsmooth margins, and more easily seen than malignant calcifications. Calcifications associated with\nmalignancy (and many benign calcifications as well) are usually very small and often require the use\nof magnification to be seen well. When a specific typically benign etiology cannot be assigned, a\ndescription of calcifications should include their morphology and distribution. Calcifications that are\nobviously benign need not be reported, especially if the interpreting physician is concerned that\nthe referring clinician or patient might infer anything other than absolute confidence in benignity\nwere such calcifications described in the report. However, typically benign calcifications should be\nreported if the interpreting physician is concerned that other observers might misinterpret them as\nanything but benign were such calcifications not described in the report.\nAs an ASSOCIATED FEATURE, this may be used in conjunction with one or more other FINDING(S)\nto describe calcifications within or immediately adjacent to the finding(s)\n-- Bi-Rads® Atlas — Mammography Fifth Ed. 2013 \nThis observation has the following member observations:\n\n\n** Calcification Type\n** Calcification Distribution",
+  "description": "Breast Radiology Mammography Calcification Observation\n\nIf this observation is present, and dataAbsentReason is empty, then a calcification was observed.\n\n\nIf this observation is present, and dataAbsentReason is not empty, then a calcification was not observed and dataAbsentReason contains the reason why and no Type or Distribution observations should be referenced by this observation\n\n\nCalcifications that are assessed as benign at mammography are typically larger, coarser, round with\nsmooth margins, and more easily seen than malignant calcifications. Calcifications associated with\nmalignancy (and many benign calcifications as well) are usually very small and often require the use\nof magnification to be seen well. When a specific typically benign etiology cannot be assigned, a\ndescription of calcifications should include their morphology and distribution. Calcifications that are\nobviously benign need not be reported, especially if the interpreting physician is concerned that\nthe referring clinician or patient might infer anything other than absolute confidence in benignity\nwere such calcifications described in the report. However, typically benign calcifications should be\nreported if the interpreting physician is concerned that other observers might misinterpret them as\nanything but benign were such calcifications not described in the report.\nAs an ASSOCIATED FEATURE, this may be used in conjunction with one or more other FINDING(S)\nto describe calcifications within or immediately adjacent to the finding(s)\n-- Bi-Rads® Atlas — Mammography Fifth Ed. 2013",
   "fhirVersion": "4.0.0",
   "kind": "resource",
   "abstract": false,
@@ -30,7 +148,7 @@
         "id": "Observation",
         "path": "Observation",
         "short": "Breast Radiology Mammography Calcification Observation",
-        "definition": "If this observation is present, and dataAbsentReason is empty, then a calcification was observed.\n\n\nIf this observation is present, and dataAbsentReason is not empty, then a calcification was not observed and dataAbsentReason contains the reason why and no Type or Distribution observations should be referenced by this observation\n\n\nCalcifications that are assessed as benign at mammography are typically larger, coarser, round with\nsmooth margins, and more easily seen than malignant calcifications. Calcifications associated with\nmalignancy (and many benign calcifications as well) are usually very small and often require the use\nof magnification to be seen well. When a specific typically benign etiology cannot be assigned, a\ndescription of calcifications should include their morphology and distribution. Calcifications that are\nobviously benign need not be reported, especially if the interpreting physician is concerned that\nthe referring clinician or patient might infer anything other than absolute confidence in benignity\nwere such calcifications described in the report. However, typically benign calcifications should be\nreported if the interpreting physician is concerned that other observers might misinterpret them as\nanything but benign were such calcifications not described in the report.\nAs an ASSOCIATED FEATURE, this may be used in conjunction with one or more other FINDING(S)\nto describe calcifications within or immediately adjacent to the finding(s)\n-- Bi-Rads® Atlas — Mammography Fifth Ed. 2013 \nThis observation has the following member observations:\n\n\n** Calcification Type\n** Calcification Distribution",
+        "definition": "If this observation is present, and dataAbsentReason is empty, then a calcification was observed.\n\n\nIf this observation is present, and dataAbsentReason is not empty, then a calcification was not observed and dataAbsentReason contains the reason why and no Type or Distribution observations should be referenced by this observation\n\n\nCalcifications that are assessed as benign at mammography are typically larger, coarser, round with\nsmooth margins, and more easily seen than malignant calcifications. Calcifications associated with\nmalignancy (and many benign calcifications as well) are usually very small and often require the use\nof magnification to be seen well. When a specific typically benign etiology cannot be assigned, a\ndescription of calcifications should include their morphology and distribution. Calcifications that are\nobviously benign need not be reported, especially if the interpreting physician is concerned that\nthe referring clinician or patient might infer anything other than absolute confidence in benignity\nwere such calcifications described in the report. However, typically benign calcifications should be\nreported if the interpreting physician is concerned that other observers might misinterpret them as\nanything but benign were such calcifications not described in the report.\nAs an ASSOCIATED FEATURE, this may be used in conjunction with one or more other FINDING(S)\nto describe calcifications within or immediately adjacent to the finding(s)\n-- Bi-Rads® Atlas — Mammography Fifth Ed. 2013",
         "comment": "Used for simple observations such as device measurements, laboratory atomic results, vital signs, height, weight, smoking status, comments, etc.  Other resources are used to provide context for observations such as laboratory reports, etc.",
         "alias": [
           "Vital Signs",
@@ -1950,9 +2068,9 @@
         ]
       },
       {
-        "id": "Observation.hasMember:breastRadSize",
+        "id": "Observation.hasMember:biRadsAssessmentCategory",
         "path": "Observation.hasMember",
-        "sliceName": "breastRadSize",
+        "sliceName": "biRadsAssessmentCategory",
         "short": "Related resource that belongs to the Observation group",
         "definition": "This observation is a group observation (e.g. a battery, a panel of tests, a set of vital sign measurements) that includes the target as a member of the group.",
         "comment": "When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.  Note that a system may calculate results from [QuestionnaireResponse](questionnaireresponse.html)  into a final score and represent the score as an Observation.",
@@ -1967,7 +2085,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadSize"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BiRadsAssessmentCategory"
             ]
           }
         ],
@@ -1985,9 +2103,9 @@
         ]
       },
       {
-        "id": "Observation.hasMember:breastRadCount",
+        "id": "Observation.hasMember:commonCount",
         "path": "Observation.hasMember",
-        "sliceName": "breastRadCount",
+        "sliceName": "commonCount",
         "short": "Related resource that belongs to the Observation group",
         "definition": "This observation is a group observation (e.g. a battery, a panel of tests, a set of vital sign measurements) that includes the target as a member of the group.",
         "comment": "When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.  Note that a system may calculate results from [QuestionnaireResponse](questionnaireresponse.html)  into a final score and represent the score as an Observation.",
@@ -2002,7 +2120,112 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadCount"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/CommonCount"
+            ]
+          }
+        ],
+        "isModifier": false,
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "Relationships established by OBX-4 usage"
+          },
+          {
+            "identity": "rim",
+            "map": "outBoundRelationship"
+          }
+        ]
+      },
+      {
+        "id": "Observation.hasMember:commonObservedChanges",
+        "path": "Observation.hasMember",
+        "sliceName": "commonObservedChanges",
+        "short": "Related resource that belongs to the Observation group",
+        "definition": "This observation is a group observation (e.g. a battery, a panel of tests, a set of vital sign measurements) that includes the target as a member of the group.",
+        "comment": "When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.  Note that a system may calculate results from [QuestionnaireResponse](questionnaireresponse.html)  into a final score and represent the score as an Observation.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Observation.hasMember",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/CommonObservedChanges"
+            ]
+          }
+        ],
+        "isModifier": false,
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "Relationships established by OBX-4 usage"
+          },
+          {
+            "identity": "rim",
+            "map": "outBoundRelationship"
+          }
+        ]
+      },
+      {
+        "id": "Observation.hasMember:commonSize",
+        "path": "Observation.hasMember",
+        "sliceName": "commonSize",
+        "short": "Related resource that belongs to the Observation group",
+        "definition": "This observation is a group observation (e.g. a battery, a panel of tests, a set of vital sign measurements) that includes the target as a member of the group.",
+        "comment": "When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.  Note that a system may calculate results from [QuestionnaireResponse](questionnaireresponse.html)  into a final score and represent the score as an Observation.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Observation.hasMember",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/CommonSize"
+            ]
+          }
+        ],
+        "isModifier": false,
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "Relationships established by OBX-4 usage"
+          },
+          {
+            "identity": "rim",
+            "map": "outBoundRelationship"
+          }
+        ]
+      },
+      {
+        "id": "Observation.hasMember:commonObservedState",
+        "path": "Observation.hasMember",
+        "sliceName": "commonObservedState",
+        "short": "Related resource that belongs to the Observation group",
+        "definition": "This observation is a group observation (e.g. a battery, a panel of tests, a set of vital sign measurements) that includes the target as a member of the group.",
+        "comment": "When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.  Note that a system may calculate results from [QuestionnaireResponse](questionnaireresponse.html)  into a final score and represent the score as an Observation.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Observation.hasMember",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/CommonObservedState"
             ]
           }
         ],
@@ -2090,41 +2313,6 @@
         ]
       },
       {
-        "id": "Observation.hasMember:breastRadObservedChanges",
-        "path": "Observation.hasMember",
-        "sliceName": "breastRadObservedChanges",
-        "short": "Related resource that belongs to the Observation group",
-        "definition": "This observation is a group observation (e.g. a battery, a panel of tests, a set of vital sign measurements) that includes the target as a member of the group.",
-        "comment": "When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.  Note that a system may calculate results from [QuestionnaireResponse](questionnaireresponse.html)  into a final score and represent the score as an Observation.",
-        "min": 0,
-        "max": "*",
-        "base": {
-          "path": "Observation.hasMember",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadObservedChanges"
-            ]
-          }
-        ],
-        "isModifier": false,
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "Relationships established by OBX-4 usage"
-          },
-          {
-            "identity": "rim",
-            "map": "outBoundRelationship"
-          }
-        ]
-      },
-      {
         "id": "Observation.hasMember:breastRadMammoAssociatedFeatures",
         "path": "Observation.hasMember",
         "sliceName": "breastRadMammoAssociatedFeatures",
@@ -2160,48 +2348,13 @@
         ]
       },
       {
-        "id": "Observation.hasMember:breastRadObservedState",
-        "path": "Observation.hasMember",
-        "sliceName": "breastRadObservedState",
-        "short": "Related resource that belongs to the Observation group",
-        "definition": "This observation is a group observation (e.g. a battery, a panel of tests, a set of vital sign measurements) that includes the target as a member of the group.",
-        "comment": "When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.  Note that a system may calculate results from [QuestionnaireResponse](questionnaireresponse.html)  into a final score and represent the score as an Observation.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Observation.hasMember",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadObservedState"
-            ]
-          }
-        ],
-        "isModifier": false,
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "Relationships established by OBX-4 usage"
-          },
-          {
-            "identity": "rim",
-            "map": "outBoundRelationship"
-          }
-        ]
-      },
-      {
         "id": "Observation.derivedFrom",
         "path": "Observation.derivedFrom",
         "short": "Related measurements the observation is made from",
         "definition": "The target resource that represents a measurement from which this observation value is derived. For example, a calculated anion gap or a fetal measurement based on an ultrasound image.",
         "comment": "All the reference choices that are listed in this element can represent clinical observations and other measurements that may be the source for a derived value.  The most common reference will be another Observation.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.",
         "min": 0,
-        "max": "0",
+        "max": "*",
         "base": {
           "path": "Observation.derivedFrom",
           "min": 0,
@@ -2626,7 +2779,7 @@
         "id": "Observation",
         "path": "Observation",
         "short": "Breast Radiology Mammography Calcification Observation",
-        "definition": "If this observation is present, and dataAbsentReason is empty, then a calcification was observed.\n\n\nIf this observation is present, and dataAbsentReason is not empty, then a calcification was not observed and dataAbsentReason contains the reason why and no Type or Distribution observations should be referenced by this observation\n\n\nCalcifications that are assessed as benign at mammography are typically larger, coarser, round with\nsmooth margins, and more easily seen than malignant calcifications. Calcifications associated with\nmalignancy (and many benign calcifications as well) are usually very small and often require the use\nof magnification to be seen well. When a specific typically benign etiology cannot be assigned, a\ndescription of calcifications should include their morphology and distribution. Calcifications that are\nobviously benign need not be reported, especially if the interpreting physician is concerned that\nthe referring clinician or patient might infer anything other than absolute confidence in benignity\nwere such calcifications described in the report. However, typically benign calcifications should be\nreported if the interpreting physician is concerned that other observers might misinterpret them as\nanything but benign were such calcifications not described in the report.\nAs an ASSOCIATED FEATURE, this may be used in conjunction with one or more other FINDING(S)\nto describe calcifications within or immediately adjacent to the finding(s)\n-- Bi-Rads® Atlas — Mammography Fifth Ed. 2013 \nThis observation has the following member observations:\n\n\n** Calcification Type\n** Calcification Distribution",
+        "definition": "If this observation is present, and dataAbsentReason is empty, then a calcification was observed.\n\n\nIf this observation is present, and dataAbsentReason is not empty, then a calcification was not observed and dataAbsentReason contains the reason why and no Type or Distribution observations should be referenced by this observation\n\n\nCalcifications that are assessed as benign at mammography are typically larger, coarser, round with\nsmooth margins, and more easily seen than malignant calcifications. Calcifications associated with\nmalignancy (and many benign calcifications as well) are usually very small and often require the use\nof magnification to be seen well. When a specific typically benign etiology cannot be assigned, a\ndescription of calcifications should include their morphology and distribution. Calcifications that are\nobviously benign need not be reported, especially if the interpreting physician is concerned that\nthe referring clinician or patient might infer anything other than absolute confidence in benignity\nwere such calcifications described in the report. However, typically benign calcifications should be\nreported if the interpreting physician is concerned that other observers might misinterpret them as\nanything but benign were such calcifications not described in the report.\nAs an ASSOCIATED FEATURE, this may be used in conjunction with one or more other FINDING(S)\nto describe calcifications within or immediately adjacent to the finding(s)\n-- Bi-Rads® Atlas — Mammography Fifth Ed. 2013",
         "base": {
           "path": "Observation",
           "min": 0,
@@ -2979,9 +3132,9 @@
         }
       },
       {
-        "id": "Observation.hasMember:breastRadSize",
+        "id": "Observation.hasMember:biRadsAssessmentCategory",
         "path": "Observation.hasMember",
-        "sliceName": "breastRadSize",
+        "sliceName": "biRadsAssessmentCategory",
         "short": "Related resource that belongs to the Observation group",
         "definition": "This observation is a group observation (e.g. a battery, a panel of tests, a set of vital sign measurements) that includes the target as a member of the group.",
         "comment": "When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.  Note that a system may calculate results from [QuestionnaireResponse](questionnaireresponse.html)  into a final score and represent the score as an Observation.",
@@ -2996,7 +3149,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadSize"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BiRadsAssessmentCategory"
             ]
           }
         ],
@@ -3014,9 +3167,9 @@
         ]
       },
       {
-        "id": "Observation.hasMember:breastRadCount",
+        "id": "Observation.hasMember:commonCount",
         "path": "Observation.hasMember",
-        "sliceName": "breastRadCount",
+        "sliceName": "commonCount",
         "short": "Related resource that belongs to the Observation group",
         "definition": "This observation is a group observation (e.g. a battery, a panel of tests, a set of vital sign measurements) that includes the target as a member of the group.",
         "comment": "When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.  Note that a system may calculate results from [QuestionnaireResponse](questionnaireresponse.html)  into a final score and represent the score as an Observation.",
@@ -3031,7 +3184,112 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadCount"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/CommonCount"
+            ]
+          }
+        ],
+        "isModifier": false,
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "Relationships established by OBX-4 usage"
+          },
+          {
+            "identity": "rim",
+            "map": "outBoundRelationship"
+          }
+        ]
+      },
+      {
+        "id": "Observation.hasMember:commonObservedChanges",
+        "path": "Observation.hasMember",
+        "sliceName": "commonObservedChanges",
+        "short": "Related resource that belongs to the Observation group",
+        "definition": "This observation is a group observation (e.g. a battery, a panel of tests, a set of vital sign measurements) that includes the target as a member of the group.",
+        "comment": "When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.  Note that a system may calculate results from [QuestionnaireResponse](questionnaireresponse.html)  into a final score and represent the score as an Observation.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Observation.hasMember",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/CommonObservedChanges"
+            ]
+          }
+        ],
+        "isModifier": false,
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "Relationships established by OBX-4 usage"
+          },
+          {
+            "identity": "rim",
+            "map": "outBoundRelationship"
+          }
+        ]
+      },
+      {
+        "id": "Observation.hasMember:commonSize",
+        "path": "Observation.hasMember",
+        "sliceName": "commonSize",
+        "short": "Related resource that belongs to the Observation group",
+        "definition": "This observation is a group observation (e.g. a battery, a panel of tests, a set of vital sign measurements) that includes the target as a member of the group.",
+        "comment": "When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.  Note that a system may calculate results from [QuestionnaireResponse](questionnaireresponse.html)  into a final score and represent the score as an Observation.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Observation.hasMember",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/CommonSize"
+            ]
+          }
+        ],
+        "isModifier": false,
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "Relationships established by OBX-4 usage"
+          },
+          {
+            "identity": "rim",
+            "map": "outBoundRelationship"
+          }
+        ]
+      },
+      {
+        "id": "Observation.hasMember:commonObservedState",
+        "path": "Observation.hasMember",
+        "sliceName": "commonObservedState",
+        "short": "Related resource that belongs to the Observation group",
+        "definition": "This observation is a group observation (e.g. a battery, a panel of tests, a set of vital sign measurements) that includes the target as a member of the group.",
+        "comment": "When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.  Note that a system may calculate results from [QuestionnaireResponse](questionnaireresponse.html)  into a final score and represent the score as an Observation.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Observation.hasMember",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/CommonObservedState"
             ]
           }
         ],
@@ -3119,41 +3377,6 @@
         ]
       },
       {
-        "id": "Observation.hasMember:breastRadObservedChanges",
-        "path": "Observation.hasMember",
-        "sliceName": "breastRadObservedChanges",
-        "short": "Related resource that belongs to the Observation group",
-        "definition": "This observation is a group observation (e.g. a battery, a panel of tests, a set of vital sign measurements) that includes the target as a member of the group.",
-        "comment": "When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.  Note that a system may calculate results from [QuestionnaireResponse](questionnaireresponse.html)  into a final score and represent the score as an Observation.",
-        "min": 0,
-        "max": "*",
-        "base": {
-          "path": "Observation.hasMember",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadObservedChanges"
-            ]
-          }
-        ],
-        "isModifier": false,
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "Relationships established by OBX-4 usage"
-          },
-          {
-            "identity": "rim",
-            "map": "outBoundRelationship"
-          }
-        ]
-      },
-      {
         "id": "Observation.hasMember:breastRadMammoAssociatedFeatures",
         "path": "Observation.hasMember",
         "sliceName": "breastRadMammoAssociatedFeatures",
@@ -3187,52 +3410,6 @@
             "map": "outBoundRelationship"
           }
         ]
-      },
-      {
-        "id": "Observation.hasMember:breastRadObservedState",
-        "path": "Observation.hasMember",
-        "sliceName": "breastRadObservedState",
-        "short": "Related resource that belongs to the Observation group",
-        "definition": "This observation is a group observation (e.g. a battery, a panel of tests, a set of vital sign measurements) that includes the target as a member of the group.",
-        "comment": "When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.  Note that a system may calculate results from [QuestionnaireResponse](questionnaireresponse.html)  into a final score and represent the score as an Observation.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Observation.hasMember",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadObservedState"
-            ]
-          }
-        ],
-        "isModifier": false,
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "Relationships established by OBX-4 usage"
-          },
-          {
-            "identity": "rim",
-            "map": "outBoundRelationship"
-          }
-        ]
-      },
-      {
-        "id": "Observation.derivedFrom",
-        "path": "Observation.derivedFrom",
-        "min": 0,
-        "max": "0",
-        "base": {
-          "path": "Observation.derivedFrom",
-          "min": 0,
-          "max": "*"
-        }
       },
       {
         "id": "Observation.component",

@@ -1,5 +1,91 @@
 {
   "resourceType": "StructureDefinition",
+  "extension": [
+    {
+      "url": "http://www.fragment.com/mapname",
+      "valueString": "US/Tissue/Composition"
+    },
+    {
+      "url": "http://www.fragment.com/fragment",
+      "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadObservationNoDeviceFragment"
+    },
+    {
+      "url": "http://www.fragment.com/maplink",
+      "valueString": "fragment|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadObservationNoDeviceFragment"
+    },
+    {
+      "url": "http://www.fragment.com/fragment",
+      "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/CodedValueObservationFragment"
+    },
+    {
+      "url": "http://www.fragment.com/maplink",
+      "valueString": "fragment|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/CodedValueObservationFragment"
+    },
+    {
+      "url": "http://www.fragment.com/fragment",
+      "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ObservationLeafFragment"
+    },
+    {
+      "url": "http://www.fragment.com/maplink",
+      "valueString": "fragment|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ObservationLeafFragment"
+    },
+    {
+      "url": "http://www.fragment.com/maplink",
+      "valueString": "valueSet|True|http://hl7.org/fhir/us/breast-radiology/ValueSet/BreastRadUSTissueCompositionVS"
+    },
+    {
+      "url": "http://www.fragment.com/mapname",
+      "valueString": "NoDevice/Observation/Fragment"
+    },
+    {
+      "url": "http://www.fragment.com/maplink",
+      "valueString": "fragment|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadObservationFragment"
+    },
+    {
+      "url": "http://www.fragment.com/mapname",
+      "valueString": "Observation/Fragment"
+    },
+    {
+      "url": "http://www.fragment.com/maplink",
+      "valueString": "fragment|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/HeaderFragment"
+    },
+    {
+      "url": "http://www.fragment.com/maplink",
+      "valueString": "fragment|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/CategoryFragment"
+    },
+    {
+      "url": "http://www.fragment.com/mapname",
+      "valueString": "Common"
+    },
+    {
+      "url": "http://www.fragment.com/mapname",
+      "valueString": "Category/Fragment"
+    },
+    {
+      "url": "http://www.fragment.com/mapname",
+      "valueString": "Observation/CodedValue/Fragment"
+    },
+    {
+      "url": "http://www.fragment.com/maplink",
+      "valueString": "fragment|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastBodyLocationRequiredFragment"
+    },
+    {
+      "url": "http://www.fragment.com/mapname",
+      "valueString": "Breast/Body/Location/Fragment/(Required)"
+    },
+    {
+      "url": "http://www.fragment.com/maplink",
+      "valueString": "extension|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastBodyLocation"
+    },
+    {
+      "url": "http://www.fragment.com/maplink",
+      "valueString": "target|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastBodyLocation"
+    },
+    {
+      "url": "http://www.fragment.com/mapname",
+      "valueString": "Observation/Leaf/Fragment"
+    }
+  ],
   "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadUSTissueComposition",
   "version": "0.0.2",
   "name": "BreastRadUSTissueComposition",
@@ -1920,7 +2006,7 @@
         "definition": "The target resource that represents a measurement from which this observation value is derived. For example, a calculated anion gap or a fetal measurement based on an ultrasound image.",
         "comment": "All the reference choices that are listed in this element can represent clinical observations and other measurements that may be the source for a derived value.  The most common reference will be another Observation.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.",
         "min": 0,
-        "max": "0",
+        "max": "*",
         "base": {
           "path": "Observation.derivedFrom",
           "min": 0,
@@ -2670,17 +2756,6 @@
         "max": "0",
         "base": {
           "path": "Observation.hasMember",
-          "min": 0,
-          "max": "*"
-        }
-      },
-      {
-        "id": "Observation.derivedFrom",
-        "path": "Observation.derivedFrom",
-        "min": 0,
-        "max": "0",
-        "base": {
-          "path": "Observation.derivedFrom",
           "min": 0,
           "max": "*"
         }
