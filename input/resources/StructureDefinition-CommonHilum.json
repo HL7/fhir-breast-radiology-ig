@@ -66,22 +66,6 @@
       "valueString": "Observation/CodedValue/Fragment"
     },
     {
-      "url": "http://www.fragment.com/maplink",
-      "valueString": "fragment|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastBodyLocationRequiredFragment"
-    },
-    {
-      "url": "http://www.fragment.com/mapname",
-      "valueString": "Breast/Body/Location/Fragment/(Required)"
-    },
-    {
-      "url": "http://www.fragment.com/maplink",
-      "valueString": "extension|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastBodyLocation"
-    },
-    {
-      "url": "http://www.fragment.com/maplink",
-      "valueString": "target|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastBodyLocation"
-    },
-    {
       "url": "http://www.fragment.com/mapname",
       "valueString": "Observation/Leaf/Fragment"
     }
@@ -395,16 +379,6 @@
       {
         "id": "Observation.extension",
         "path": "Observation.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": true,
-          "rules": "openAtEnd"
-        },
         "short": "Additional content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
         "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
@@ -422,41 +396,6 @@
         "type": [
           {
             "code": "Extension"
-          }
-        ],
-        "isModifier": false,
-        "isSummary": false,
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "N/A"
-          }
-        ]
-      },
-      {
-        "id": "Observation.extension:breastBodyLocation",
-        "path": "Observation.extension",
-        "sliceName": "breastBodyLocation",
-        "short": "Additional content defined by implementations",
-        "definition": "May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
-        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
-        "alias": [
-          "extensions",
-          "user content"
-        ],
-        "min": 1,
-        "max": "1",
-        "base": {
-          "path": "DomainResource.extension",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastBodyLocation"
-            ]
           }
         ],
         "isModifier": false,
@@ -1424,7 +1363,7 @@
         "short": "Observed body part",
         "definition": "Indicates the site on the subject's body where the observation was made (i.e. the target site).",
         "comment": "Only used if not implicit in code found in Observation.code.  In many systems, this may be represented as a related observation instead of an inline component.   \n\nIf the use case requires BodySite to be handled as a separate resource (e.g. to identify and track separately) then use the standard extension[ bodySite](extension-bodysite.html).",
-        "min": 1,
+        "min": 0,
         "max": "1",
         "base": {
           "path": "Observation.bodySite",
@@ -2516,60 +2455,6 @@
         }
       },
       {
-        "id": "Observation.extension",
-        "path": "Observation.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": true,
-          "rules": "openAtEnd"
-        },
-        "base": {
-          "path": "Observation.extension",
-          "min": 0,
-          "max": "*"
-        }
-      },
-      {
-        "id": "Observation.extension:breastBodyLocation",
-        "path": "Observation.extension",
-        "sliceName": "breastBodyLocation",
-        "short": "Additional content defined by implementations",
-        "definition": "May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
-        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
-        "alias": [
-          "extensions",
-          "user content"
-        ],
-        "min": 1,
-        "max": "1",
-        "base": {
-          "path": "DomainResource.extension",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastBodyLocation"
-            ]
-          }
-        ],
-        "isModifier": false,
-        "isSummary": false,
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "N/A"
-          }
-        ]
-      },
-      {
         "id": "Observation.basedOn",
         "path": "Observation.basedOn",
         "min": 0,
@@ -2686,17 +2571,6 @@
           "path": "Observation.interpretation",
           "min": 0,
           "max": "*"
-        }
-      },
-      {
-        "id": "Observation.bodySite",
-        "path": "Observation.bodySite",
-        "min": 1,
-        "max": "1",
-        "base": {
-          "path": "Observation.bodySite",
-          "min": 0,
-          "max": "1"
         }
       },
       {
