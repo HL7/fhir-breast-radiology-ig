@@ -3,7 +3,7 @@
   "extension": [
     {
       "url": "http://www.fragment.com/mapname",
-      "valueString": "Mg Asymmetries"
+      "valueString": "Mg Fibroadenoma"
     },
     {
       "url": "http://www.fragment.com/fragment",
@@ -23,19 +23,27 @@
     },
     {
       "url": "http://www.fragment.com/fragment",
-      "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/CodedValueObservationFragment"
-    },
-    {
-      "url": "http://www.fragment.com/maplink",
-      "valueString": "fragment|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/CodedValueObservationFragment"
-    },
-    {
-      "url": "http://www.fragment.com/fragment",
       "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ObservationSectionFragment"
     },
     {
       "url": "http://www.fragment.com/maplink",
       "valueString": "fragment|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ObservationSectionFragment"
+    },
+    {
+      "url": "http://www.fragment.com/fragment",
+      "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadObservationNoValueFragment"
+    },
+    {
+      "url": "http://www.fragment.com/maplink",
+      "valueString": "fragment|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadObservationNoValueFragment"
+    },
+    {
+      "url": "http://www.fragment.com/fragment",
+      "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ImagingStudyFragment"
+    },
+    {
+      "url": "http://www.fragment.com/maplink",
+      "valueString": "fragment|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ImagingStudyFragment"
     },
     {
       "url": "http://www.fragment.com/maplink",
@@ -63,11 +71,11 @@
     },
     {
       "url": "http://www.fragment.com/maplink",
-      "valueString": "target|False|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadMammoAssociatedFeatures"
+      "valueString": "target|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MammoShape"
     },
     {
       "url": "http://www.fragment.com/maplink",
-      "valueString": "valueSet|True|http://hl7.org/fhir/us/breast-radiology/ValueSet/BreastRadMemmoAsymmetriesVS"
+      "valueString": "valueSet|True|http://hl7.org/fhir/us/breast-radiology/ValueSet/MammoFibroadenomaVS"
     },
     {
       "url": "http://www.fragment.com/mapname",
@@ -111,17 +119,25 @@
     },
     {
       "url": "http://www.fragment.com/mapname",
-      "valueString": "Observation/CodedValue/Fragment"
+      "valueString": "Section/Fragment"
     },
     {
       "url": "http://www.fragment.com/mapname",
-      "valueString": "Section/Fragment"
+      "valueString": "NoValue/Observation/Fragment"
+    },
+    {
+      "url": "http://www.fragment.com/mapname",
+      "valueString": "ImagingStudy"
+    },
+    {
+      "url": "http://www.fragment.com/maplink",
+      "valueString": "target|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AimAnnotatedImagingStudy"
     }
   ],
-  "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadMammoAsymmetries",
+  "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadMammoFibroadenoma",
   "version": "0.0.2",
-  "name": "BreastRadMammoAsymmetries",
-  "title": "Mammography Asymmetries",
+  "name": "BreastRadMammoFibroadenoma",
+  "title": "Mammography Fibroadenoma",
   "status": "draft",
   "date": "2019-11-01",
   "publisher": "Hl7-Clinical Interoperability Council",
@@ -135,7 +151,7 @@
       ]
     }
   ],
-  "description": "Breast Radiology Mammography Asymmetries Observation\n\nIf this observation is present, and dataAbsentReason is empty, then an asymmetry was observed.\n\n\nIf this observation is present, and dataAbsentReason is not empty, then an asymmetry was not observed and dataAbsentReason contains the reason why.\n\n\nThe several types of asymmetry involve a spectrum of mammographic findings that represent\nunilateral deposits of fibroglandular tissue not conforming to the definition of a radiodense mass.\nThe asymmetry, unlike a mass, is visible on only 1 mammographic projection. The other 3 types of\nasymmetry, although visible on more than 1 projection, have concave-outward borders and usu-\nally are seen to be interspersed with fat, whereas a radiodense mass displays completely or partially\nconvex-outward borders and appears to be denser in the center than at the periphery.\n-- Bi-Rads® Atlas — Mammography Fifth Ed. 2013",
+  "description": "Breast Radiology Mammography Fibroadenoma Observation\n\nPenrad\n\n\nIf this observation is present, and dataAbsentReason is empty, then a Fibroadenoma was observed.\n\n\nIf this observation is present, and dataAbsentReason is not empty, then a Fibroadenoma was not observed and dataAbsentReason contains the reason why.",
   "fhirVersion": "4.0.0",
   "kind": "resource",
   "abstract": false,
@@ -147,8 +163,8 @@
       {
         "id": "Observation",
         "path": "Observation",
-        "short": "Breast Radiology Mammography Asymmetries Observation",
-        "definition": "If this observation is present, and dataAbsentReason is empty, then an asymmetry was observed.\n\n\nIf this observation is present, and dataAbsentReason is not empty, then an asymmetry was not observed and dataAbsentReason contains the reason why.\n\n\nThe several types of asymmetry involve a spectrum of mammographic findings that represent\nunilateral deposits of fibroglandular tissue not conforming to the definition of a radiodense mass.\nThe asymmetry, unlike a mass, is visible on only 1 mammographic projection. The other 3 types of\nasymmetry, although visible on more than 1 projection, have concave-outward borders and usu-\nally are seen to be interspersed with fat, whereas a radiodense mass displays completely or partially\nconvex-outward borders and appears to be denser in the center than at the periphery.\n-- Bi-Rads® Atlas — Mammography Fifth Ed. 2013",
+        "short": "Breast Radiology Mammography Fibroadenoma Observation",
+        "definition": "Penrad\n\n\nIf this observation is present, and dataAbsentReason is empty, then a Fibroadenoma was observed.\n\n\nIf this observation is present, and dataAbsentReason is not empty, then a Fibroadenoma was not observed and dataAbsentReason contains the reason why.",
         "comment": "Used for simple observations such as device measurements, laboratory atomic results, vital signs, height, weight, smoking status, comments, etc.  Other resources are used to provide context for observations such as laboratory reports, etc.",
         "alias": [
           "Vital Signs",
@@ -1279,7 +1295,7 @@
         "comment": "An observation may have; 1)  a single value here, 2)  both a value and a set of related or component values,  or 3)  only a set of related or component values. If a value is present, the datatype for this element should be determined by Observation.code.  A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.",
         "requirements": "An observation exists to have a value, though it might not if it is in error, or if it represents a group of observations.",
         "min": 0,
-        "max": "1",
+        "max": "0",
         "base": {
           "path": "Observation.value[x]",
           "min": 0,
@@ -1297,7 +1313,7 @@
         "isSummary": true,
         "binding": {
           "strength": "required",
-          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/BreastRadMemmoAsymmetriesVS"
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/MammoFibroadenomaVS"
         },
         "mapping": [
           {
@@ -2252,9 +2268,9 @@
         ]
       },
       {
-        "id": "Observation.hasMember:breastRadMammoAssociatedFeatures",
+        "id": "Observation.hasMember:mammoShape",
         "path": "Observation.hasMember",
-        "sliceName": "breastRadMammoAssociatedFeatures",
+        "sliceName": "mammoShape",
         "short": "Related resource that belongs to the Observation group",
         "definition": "This observation is a group observation (e.g. a battery, a panel of tests, a set of vital sign measurements) that includes the target as a member of the group.",
         "comment": "When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.  Note that a system may calculate results from [QuestionnaireResponse](questionnaireresponse.html)  into a final score and represent the score as an Observation.",
@@ -2269,7 +2285,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadMammoAssociatedFeatures"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MammoShape"
             ]
           }
         ],
@@ -2289,6 +2305,16 @@
       {
         "id": "Observation.derivedFrom",
         "path": "Observation.derivedFrom",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": true,
+          "rules": "openAtEnd"
+        },
         "short": "Related measurements the observation is made from",
         "definition": "The target resource that represents a measurement from which this observation value is derived. For example, a calculated anion gap or a fetal measurement based on an ultrasound image.",
         "comment": "All the reference choices that are listed in this element can represent clinical observations and other measurements that may be the source for a derived value.  The most common reference will be another Observation.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.",
@@ -2309,6 +2335,76 @@
               "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse",
               "http://hl7.org/fhir/StructureDefinition/Observation",
               "http://hl7.org/fhir/StructureDefinition/MolecularSequence"
+            ]
+          }
+        ],
+        "isModifier": false,
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "Relationships established by OBX-4 usage"
+          },
+          {
+            "identity": "rim",
+            "map": ".targetObservation"
+          }
+        ]
+      },
+      {
+        "id": "Observation.derivedFrom:imagingStudy",
+        "path": "Observation.derivedFrom",
+        "sliceName": "imagingStudy",
+        "short": "Related measurements the observation is made from",
+        "definition": "The target resource that represents a measurement from which this observation value is derived. For example, a calculated anion gap or a fetal measurement based on an ultrasound image.",
+        "comment": "All the reference choices that are listed in this element can represent clinical observations and other measurements that may be the source for a derived value.  The most common reference will be another Observation.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Observation.derivedFrom",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/ImagingStudy"
+            ]
+          }
+        ],
+        "isModifier": false,
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "Relationships established by OBX-4 usage"
+          },
+          {
+            "identity": "rim",
+            "map": ".targetObservation"
+          }
+        ]
+      },
+      {
+        "id": "Observation.derivedFrom:aimAnnotatedImagingStudy",
+        "path": "Observation.derivedFrom",
+        "sliceName": "aimAnnotatedImagingStudy",
+        "short": "Related measurements the observation is made from",
+        "definition": "The target resource that represents a measurement from which this observation value is derived. For example, a calculated anion gap or a fetal measurement based on an ultrasound image.",
+        "comment": "All the reference choices that are listed in this element can represent clinical observations and other measurements that may be the source for a derived value.  The most common reference will be another Observation.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Observation.derivedFrom",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AimAnnotatedImagingStudy"
             ]
           }
         ],
@@ -2717,8 +2813,8 @@
       {
         "id": "Observation",
         "path": "Observation",
-        "short": "Breast Radiology Mammography Asymmetries Observation",
-        "definition": "If this observation is present, and dataAbsentReason is empty, then an asymmetry was observed.\n\n\nIf this observation is present, and dataAbsentReason is not empty, then an asymmetry was not observed and dataAbsentReason contains the reason why.\n\n\nThe several types of asymmetry involve a spectrum of mammographic findings that represent\nunilateral deposits of fibroglandular tissue not conforming to the definition of a radiodense mass.\nThe asymmetry, unlike a mass, is visible on only 1 mammographic projection. The other 3 types of\nasymmetry, although visible on more than 1 projection, have concave-outward borders and usu-\nally are seen to be interspersed with fat, whereas a radiodense mass displays completely or partially\nconvex-outward borders and appears to be denser in the center than at the periphery.\n-- Bi-Rads® Atlas — Mammography Fifth Ed. 2013",
+        "short": "Breast Radiology Mammography Fibroadenoma Observation",
+        "definition": "Penrad\n\n\nIf this observation is present, and dataAbsentReason is empty, then a Fibroadenoma was observed.\n\n\nIf this observation is present, and dataAbsentReason is not empty, then a Fibroadenoma was not observed and dataAbsentReason contains the reason why.",
         "base": {
           "path": "Observation",
           "min": 0,
@@ -2949,6 +3045,8 @@
       {
         "id": "Observation.value[x]",
         "path": "Observation.value[x]",
+        "min": 0,
+        "max": "0",
         "base": {
           "path": "Observation.value[x]",
           "min": 0,
@@ -2961,7 +3059,7 @@
         ],
         "binding": {
           "strength": "required",
-          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/BreastRadMemmoAsymmetriesVS"
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/MammoFibroadenomaVS"
         }
       },
       {
@@ -3288,9 +3386,9 @@
         ]
       },
       {
-        "id": "Observation.hasMember:breastRadMammoAssociatedFeatures",
+        "id": "Observation.hasMember:mammoShape",
         "path": "Observation.hasMember",
-        "sliceName": "breastRadMammoAssociatedFeatures",
+        "sliceName": "mammoShape",
         "short": "Related resource that belongs to the Observation group",
         "definition": "This observation is a group observation (e.g. a battery, a panel of tests, a set of vital sign measurements) that includes the target as a member of the group.",
         "comment": "When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.  Note that a system may calculate results from [QuestionnaireResponse](questionnaireresponse.html)  into a final score and represent the score as an Observation.",
@@ -3305,7 +3403,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadMammoAssociatedFeatures"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MammoShape"
             ]
           }
         ],
@@ -3319,6 +3417,65 @@
           {
             "identity": "rim",
             "map": "outBoundRelationship"
+          }
+        ]
+      },
+      {
+        "id": "Observation.derivedFrom",
+        "path": "Observation.derivedFrom",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": true,
+          "rules": "openAtEnd"
+        },
+        "base": {
+          "path": "Observation.derivedFrom",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Observation.derivedFrom:imagingStudy",
+        "path": "Observation.derivedFrom",
+        "sliceName": "imagingStudy",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Observation.derivedFrom",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/ImagingStudy"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Observation.derivedFrom:aimAnnotatedImagingStudy",
+        "path": "Observation.derivedFrom",
+        "sliceName": "aimAnnotatedImagingStudy",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Observation.derivedFrom",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AimAnnotatedImagingStudy"
+            ]
           }
         ]
       },

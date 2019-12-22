@@ -1,0 +1,53 @@
+{
+  "resourceType": "ValueSet",
+  "id": "MammoFibroadenomaVS",
+  "extension": [
+    {
+      "url": "http://www.fragment.com/fragment",
+      "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/HeaderFragment"
+    },
+    {
+      "url": "http://www.fragment.com/mapname",
+      "valueString": "FibroadenomaValueSet"
+    },
+    {
+      "url": "http://www.fragment.com/mapname",
+      "valueString": "Common"
+    }
+  ],
+  "url": "http://hl7.org/fhir/us/breast-radiology/ValueSet/MammoFibroadenomaVS",
+  "version": "0.0.2",
+  "name": "MammoFibroadenomaVS",
+  "title": "Fibroadenoma ValueSet",
+  "status": "draft",
+  "date": "2019-11-01",
+  "publisher": "Hl7-Clinical Interoperability Council",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/cic"
+        }
+      ]
+    }
+  ],
+  "description": "Codes defining Fibroadenoma values.",
+  "compose": {
+    "include": [
+      {
+        "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/FibroadenomaCS",
+        "concept": [
+          {
+            "code": "Normal",
+            "display": "Normal"
+          },
+          {
+            "code": "Degenerated",
+            "display": "Degenerated"
+          }
+        ]
+      }
+    ]
+  }
+}
