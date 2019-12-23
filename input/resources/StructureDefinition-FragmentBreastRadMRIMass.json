@@ -51,23 +51,23 @@
     },
     {
       "url": "http://www.fragment.com/maplink",
-      "valueString": "target|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/CommonSize"
+      "valueString": "target|False|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/CommonSize"
     },
     {
       "url": "http://www.fragment.com/maplink",
-      "valueString": "target|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/CommonCount"
+      "valueString": "target|False|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/CommonCount"
     },
     {
       "url": "http://www.fragment.com/maplink",
-      "valueString": "target|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/CommonOrientation"
+      "valueString": "target|False|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/CommonOrientation"
     },
     {
       "url": "http://www.fragment.com/maplink",
-      "valueString": "target|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadMRIMassMargin"
+      "valueString": "target|False|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadMRIMassMargin"
     },
     {
       "url": "http://www.fragment.com/maplink",
-      "valueString": "target|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/CommonObservedChanges"
+      "valueString": "target|False|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/CommonObservedChangeInState"
     }
   ],
   "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/FragmentBreastRadMRIMass",
@@ -1937,9 +1937,9 @@
         ]
       },
       {
-        "id": "Observation.hasMember:commonObservedChanges",
+        "id": "Observation.hasMember:commonObservedChangeInState",
         "path": "Observation.hasMember",
-        "sliceName": "commonObservedChanges",
+        "sliceName": "commonObservedChangeInState",
         "short": "Related resource that belongs to the Observation group",
         "definition": "This observation is a group observation (e.g. a battery, a panel of tests, a set of vital sign measurements) that includes the target as a member of the group.",
         "comment": "When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.  Note that a system may calculate results from [QuestionnaireResponse](questionnaireresponse.html)  into a final score and represent the score as an Observation.",
@@ -1954,7 +1954,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/CommonObservedChanges"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/CommonObservedChangeInState"
             ]
           }
         ],
@@ -2509,9 +2509,9 @@
         ]
       },
       {
-        "id": "Observation.hasMember:commonObservedChanges",
+        "id": "Observation.hasMember:commonObservedChangeInState",
         "path": "Observation.hasMember",
-        "sliceName": "commonObservedChanges",
+        "sliceName": "commonObservedChangeInState",
         "min": 0,
         "max": "*",
         "base": {
@@ -2523,7 +2523,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/CommonObservedChanges"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/CommonObservedChangeInState"
             ]
           }
         ]

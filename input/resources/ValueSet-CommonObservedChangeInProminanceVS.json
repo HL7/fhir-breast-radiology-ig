@@ -1,0 +1,39 @@
+{
+  "resourceType": "ValueSet",
+  "id": "CommonObservedChangeInProminanceVS",
+  "url": "http://hl7.org/fhir/us/breast-radiology/ValueSet/CommonObservedChangeInProminanceVS",
+  "version": "0.0.2",
+  "name": "CommonObservedChangeInProminanceVS",
+  "title": "Observed Prominance Changes ValueSet",
+  "status": "draft",
+  "date": "2019-11-01",
+  "publisher": "Hl7-Clinical Interoperability Council",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/cic"
+        }
+      ]
+    }
+  ],
+  "description": "Codes defining types of observed changes in Prominance of an abnormality over time.",
+  "compose": {
+    "include": [
+      {
+        "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/CommonObservedChangeInProminanceCS",
+        "concept": [
+          {
+            "code": "MoreProminent",
+            "display": "More Prominent"
+          },
+          {
+            "code": "LessProminent",
+            "display": "Less Prominent"
+          }
+        ]
+      }
+    ]
+  }
+}
