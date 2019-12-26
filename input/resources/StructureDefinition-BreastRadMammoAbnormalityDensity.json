@@ -3,7 +3,7 @@
   "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadMammoAbnormalityDensity",
   "version": "0.0.2",
   "name": "BreastRadMammoAbnormalityDensity",
-  "title": "Mammography Density Abnormality",
+  "title": "Mammography Density",
   "status": "draft",
   "date": "2019-11-01",
   "publisher": "Hl7-Clinical Interoperability Council",
@@ -17,7 +17,7 @@
       ]
     }
   ],
-  "description": "Breat Radiology Mammography Density Abnormality Observation\n\nIf this observation is present, and dataAbsentReason is empty, then a Density abnormality was observed.\n\n\nIf this observation is present, and dataAbsentReason is not empty, then a Density abnormality was not observed and dataAbsentReason contains the reason why.\n\n\n*** TODO Items ***** should this be a leaf node (how about shape, density, location, etc).\n** default value? for refinement",
+  "description": "Breat Radiology Mammography Density Observation\n\nIf this observation is present, and dataAbsentReason is empty, then a Density abnormality was observed.\n\n\nIf this observation is present, and dataAbsentReason is not empty, then a Density abnormality was not observed and dataAbsentReason contains the reason why.\n\n\n*** TODO Items ***** should this be a leaf node (how about shape, density, location, etc).\n** default value? for refinement",
   "fhirVersion": "4.0.0",
   "kind": "resource",
   "abstract": false,
@@ -29,7 +29,7 @@
       {
         "id": "Observation",
         "path": "Observation",
-        "short": "Breat Radiology Mammography Density Abnormality Observation",
+        "short": "Breat Radiology Mammography Density Observation",
         "definition": "If this observation is present, and dataAbsentReason is empty, then a Density abnormality was observed.\n\n\nIf this observation is present, and dataAbsentReason is not empty, then a Density abnormality was not observed and dataAbsentReason contains the reason why.\n\n\n*** TODO Items ***** should this be a leaf node (how about shape, density, location, etc).\n** default value? for refinement",
         "comment": "Used for simple observations such as device measurements, laboratory atomic results, vital signs, height, weight, smoking status, comments, etc.  Other resources are used to provide context for observations such as laboratory reports, etc.",
         "alias": [
@@ -1894,7 +1894,7 @@
         "definition": "This observation is a group observation (e.g. a battery, a panel of tests, a set of vital sign measurements) that includes the target as a member of the group.",
         "comment": "When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.  Note that a system may calculate results from [QuestionnaireResponse](questionnaireresponse.html)  into a final score and represent the score as an Observation.",
         "min": 0,
-        "max": "0",
+        "max": "*",
         "base": {
           "path": "Observation.hasMember",
           "min": 0,
@@ -2774,7 +2774,7 @@
       {
         "id": "Observation",
         "path": "Observation",
-        "short": "Breat Radiology Mammography Density Abnormality Observation",
+        "short": "Breat Radiology Mammography Density Observation",
         "definition": "If this observation is present, and dataAbsentReason is empty, then a Density abnormality was observed.\n\n\nIf this observation is present, and dataAbsentReason is not empty, then a Density abnormality was not observed and dataAbsentReason contains the reason why.\n\n\n*** TODO Items ***** should this be a leaf node (how about shape, density, location, etc).\n** default value? for refinement",
         "base": {
           "path": "Observation",
@@ -3106,8 +3106,6 @@
           "ordered": true,
           "rules": "openAtEnd"
         },
-        "min": 0,
-        "max": "0",
         "base": {
           "path": "Observation.hasMember",
           "min": 0,
