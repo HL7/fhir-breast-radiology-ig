@@ -1,0 +1,47 @@
+{
+  "resourceType": "ValueSet",
+  "id": "MGAbnormalityAsymmetriesVS",
+  "url": "http://hl7.org/fhir/us/breast-radiology/ValueSet/MGAbnormalityAsymmetriesVS",
+  "version": "0.0.2",
+  "name": "MGAbnormalityAsymmetriesVS",
+  "title": "Mammography AsymmetryAbnormalities ValueSet ValueSet",
+  "status": "draft",
+  "date": "2019-11-01",
+  "publisher": "Hl7-Clinical Interoperability Council",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/cic"
+        }
+      ]
+    }
+  ],
+  "description": "Mammography asymmetry abnormality types value set.",
+  "compose": {
+    "include": [
+      {
+        "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/MGAbnormalityAsymmetryRefinementCS",
+        "concept": [
+          {
+            "code": "Asymmetry",
+            "display": "Asymmetry"
+          },
+          {
+            "code": "GlobalAsymmetry",
+            "display": "Global Asymmetry"
+          },
+          {
+            "code": "FocalAsymmetry",
+            "display": "Focal Asymmetry"
+          },
+          {
+            "code": "DevelopingAsymmetry",
+            "display": "Developing Asymmetry"
+          }
+        ]
+      }
+    ]
+  }
+}

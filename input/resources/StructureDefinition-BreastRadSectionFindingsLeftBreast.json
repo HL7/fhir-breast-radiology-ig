@@ -1289,7 +1289,7 @@
         "comment": "May include general statements about the observation, or statements about significant, unexpected or unreliable results values, or information about its source when relevant to its interpretation.",
         "requirements": "Need to be able to provide free text additional information.",
         "min": 0,
-        "max": "0",
+        "max": "*",
         "base": {
           "path": "Observation.note",
           "min": 0,
@@ -1940,9 +1940,9 @@
         ]
       },
       {
-        "id": "Observation.hasMember:breastRadMammoFinding",
+        "id": "Observation.hasMember:mGFinding",
         "path": "Observation.hasMember",
-        "sliceName": "breastRadMammoFinding",
+        "sliceName": "mGFinding",
         "short": "Related resource that belongs to the Observation group",
         "definition": "This observation is a group observation (e.g. a battery, a panel of tests, a set of vital sign measurements) that includes the target as a member of the group.",
         "comment": "When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.  Note that a system may calculate results from [QuestionnaireResponse](questionnaireresponse.html)  into a final score and represent the score as an Observation.",
@@ -1957,7 +1957,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadMammoFinding"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGFinding"
             ]
           }
         ],
@@ -1975,9 +1975,9 @@
         ]
       },
       {
-        "id": "Observation.hasMember:breastRadMRIFinding",
+        "id": "Observation.hasMember:mRIFinding",
         "path": "Observation.hasMember",
-        "sliceName": "breastRadMRIFinding",
+        "sliceName": "mRIFinding",
         "short": "Related resource that belongs to the Observation group",
         "definition": "This observation is a group observation (e.g. a battery, a panel of tests, a set of vital sign measurements) that includes the target as a member of the group.",
         "comment": "When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.  Note that a system may calculate results from [QuestionnaireResponse](questionnaireresponse.html)  into a final score and represent the score as an Observation.",
@@ -1992,7 +1992,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadMRIFinding"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MRIFinding"
             ]
           }
         ],
@@ -2010,9 +2010,9 @@
         ]
       },
       {
-        "id": "Observation.hasMember:breastRadNMFinding",
+        "id": "Observation.hasMember:nMFinding",
         "path": "Observation.hasMember",
-        "sliceName": "breastRadNMFinding",
+        "sliceName": "nMFinding",
         "short": "Related resource that belongs to the Observation group",
         "definition": "This observation is a group observation (e.g. a battery, a panel of tests, a set of vital sign measurements) that includes the target as a member of the group.",
         "comment": "When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.  Note that a system may calculate results from [QuestionnaireResponse](questionnaireresponse.html)  into a final score and represent the score as an Observation.",
@@ -2027,7 +2027,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadNMFinding"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/NMFinding"
             ]
           }
         ],
@@ -2045,9 +2045,9 @@
         ]
       },
       {
-        "id": "Observation.hasMember:breastRadUltraSoundFinding",
+        "id": "Observation.hasMember:uSFinding",
         "path": "Observation.hasMember",
-        "sliceName": "breastRadUltraSoundFinding",
+        "sliceName": "uSFinding",
         "short": "Related resource that belongs to the Observation group",
         "definition": "This observation is a group observation (e.g. a battery, a panel of tests, a set of vital sign measurements) that includes the target as a member of the group.",
         "comment": "When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.  Note that a system may calculate results from [QuestionnaireResponse](questionnaireresponse.html)  into a final score and represent the score as an Observation.",
@@ -2062,7 +2062,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadUltraSoundFinding"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/USFinding"
             ]
           }
         ],
@@ -2708,17 +2708,6 @@
         }
       },
       {
-        "id": "Observation.note",
-        "path": "Observation.note",
-        "min": 0,
-        "max": "0",
-        "base": {
-          "path": "Observation.note",
-          "min": 0,
-          "max": "*"
-        }
-      },
-      {
         "id": "Observation.bodySite",
         "path": "Observation.bodySite",
         "min": 0,
@@ -2845,9 +2834,9 @@
         ]
       },
       {
-        "id": "Observation.hasMember:breastRadMammoFinding",
+        "id": "Observation.hasMember:mGFinding",
         "path": "Observation.hasMember",
-        "sliceName": "breastRadMammoFinding",
+        "sliceName": "mGFinding",
         "short": "Related resource that belongs to the Observation group",
         "definition": "This observation is a group observation (e.g. a battery, a panel of tests, a set of vital sign measurements) that includes the target as a member of the group.",
         "comment": "When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.  Note that a system may calculate results from [QuestionnaireResponse](questionnaireresponse.html)  into a final score and represent the score as an Observation.",
@@ -2862,7 +2851,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadMammoFinding"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGFinding"
             ]
           }
         ],
@@ -2880,9 +2869,9 @@
         ]
       },
       {
-        "id": "Observation.hasMember:breastRadMRIFinding",
+        "id": "Observation.hasMember:mRIFinding",
         "path": "Observation.hasMember",
-        "sliceName": "breastRadMRIFinding",
+        "sliceName": "mRIFinding",
         "short": "Related resource that belongs to the Observation group",
         "definition": "This observation is a group observation (e.g. a battery, a panel of tests, a set of vital sign measurements) that includes the target as a member of the group.",
         "comment": "When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.  Note that a system may calculate results from [QuestionnaireResponse](questionnaireresponse.html)  into a final score and represent the score as an Observation.",
@@ -2897,7 +2886,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadMRIFinding"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MRIFinding"
             ]
           }
         ],
@@ -2915,9 +2904,9 @@
         ]
       },
       {
-        "id": "Observation.hasMember:breastRadNMFinding",
+        "id": "Observation.hasMember:nMFinding",
         "path": "Observation.hasMember",
-        "sliceName": "breastRadNMFinding",
+        "sliceName": "nMFinding",
         "short": "Related resource that belongs to the Observation group",
         "definition": "This observation is a group observation (e.g. a battery, a panel of tests, a set of vital sign measurements) that includes the target as a member of the group.",
         "comment": "When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.  Note that a system may calculate results from [QuestionnaireResponse](questionnaireresponse.html)  into a final score and represent the score as an Observation.",
@@ -2932,7 +2921,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadNMFinding"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/NMFinding"
             ]
           }
         ],
@@ -2950,9 +2939,9 @@
         ]
       },
       {
-        "id": "Observation.hasMember:breastRadUltraSoundFinding",
+        "id": "Observation.hasMember:uSFinding",
         "path": "Observation.hasMember",
-        "sliceName": "breastRadUltraSoundFinding",
+        "sliceName": "uSFinding",
         "short": "Related resource that belongs to the Observation group",
         "definition": "This observation is a group observation (e.g. a battery, a panel of tests, a set of vital sign measurements) that includes the target as a member of the group.",
         "comment": "When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.  Note that a system may calculate results from [QuestionnaireResponse](questionnaireresponse.html)  into a final score and represent the score as an Observation.",
@@ -2967,7 +2956,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadUltraSoundFinding"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/USFinding"
             ]
           }
         ],

@@ -1,0 +1,47 @@
+{
+  "resourceType": "ValueSet",
+  "id": "ConsistentWithQualifierVS",
+  "url": "http://hl7.org/fhir/us/breast-radiology/ValueSet/ConsistentWithQualifierVS",
+  "version": "0.0.2",
+  "name": "ConsistentWithQualifierVS",
+  "title": "ConsistentWithQualifier ValueSet ValueSet",
+  "status": "draft",
+  "date": "2019-11-01",
+  "publisher": "Hl7-Clinical Interoperability Council",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/cic"
+        }
+      ]
+    }
+  ],
+  "description": "ConsistentWithQualifier value set.",
+  "compose": {
+    "include": [
+      {
+        "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ConsistentWithQualifierCS",
+        "concept": [
+          {
+            "code": "LikelyRepresents",
+            "display": "Likely represents"
+          },
+          {
+            "code": "MostLikely",
+            "display": "Most likely"
+          },
+          {
+            "code": "Resembles",
+            "display": "Resembles"
+          },
+          {
+            "code": "w/differentialDiagnosis",
+            "display": "w/differential diagnosis"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "resourceType": "ValueSet",
+  "id": "ObservedChangeInSizeVS",
+  "url": "http://hl7.org/fhir/us/breast-radiology/ValueSet/ObservedChangeInSizeVS",
+  "version": "0.0.2",
+  "name": "ObservedChangeInSizeVS",
+  "title": "Observed Changes ValueSet ValueSet",
+  "status": "draft",
+  "date": "2019-11-01",
+  "publisher": "Hl7-Clinical Interoperability Council",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/cic"
+        }
+      ]
+    }
+  ],
+  "description": "Observed changes in the size of an abnormality over time value set.",
+  "compose": {
+    "include": [
+      {
+        "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservedChangeInSizeCS",
+        "concept": [
+          {
+            "code": "IncreaseInSize",
+            "display": "Increase In Size"
+          },
+          {
+            "code": "DecreaseInSize",
+            "display": "Decrease In Size"
+          }
+        ]
+      }
+    ]
+  }
+}

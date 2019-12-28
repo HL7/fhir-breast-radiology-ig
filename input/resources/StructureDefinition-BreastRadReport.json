@@ -351,7 +351,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadRecommendationsExtension"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/RecommendationsExtension"
             ]
           }
         ],
@@ -386,7 +386,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadPriorReportsExtension"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/PriorReportsExtension"
             ]
           }
         ],
@@ -421,7 +421,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadImpressionsExtension"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ImpressionsExtension"
             ]
           }
         ],
@@ -456,7 +456,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadPatientRiskExtension"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/PatientRiskExtension"
             ]
           }
         ],
@@ -1302,9 +1302,9 @@
         ]
       },
       {
-        "id": "DiagnosticReport.result:breastRadSectionPatientHistory",
+        "id": "DiagnosticReport.result:sectionPatientHistory",
         "path": "DiagnosticReport.result",
-        "sliceName": "breastRadSectionPatientHistory",
+        "sliceName": "sectionPatientHistory",
         "short": "Observations",
         "definition": "[Observations](observation.html)  that are part of this diagnostic report.",
         "comment": "Observations can contain observations.",
@@ -1331,7 +1331,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadSectionPatientHistory"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/SectionPatientHistory"
             ]
           }
         ],
@@ -1349,9 +1349,9 @@
         ]
       },
       {
-        "id": "DiagnosticReport.result:breastRadSectionFindings",
+        "id": "DiagnosticReport.result:sectionFindings",
         "path": "DiagnosticReport.result",
-        "sliceName": "breastRadSectionFindings",
+        "sliceName": "sectionFindings",
         "short": "Observations",
         "definition": "[Observations](observation.html)  that are part of this diagnostic report.",
         "comment": "Observations can contain observations.",
@@ -1378,7 +1378,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadSectionFindings"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/SectionFindings"
             ]
           }
         ],
@@ -1837,7 +1837,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadRecommendationsExtension"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/RecommendationsExtension"
             ]
           }
         ],
@@ -1872,7 +1872,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadPriorReportsExtension"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/PriorReportsExtension"
             ]
           }
         ],
@@ -1907,7 +1907,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadImpressionsExtension"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ImpressionsExtension"
             ]
           }
         ],
@@ -1942,7 +1942,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadPatientRiskExtension"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/PatientRiskExtension"
             ]
           }
         ],
@@ -1977,7 +1977,12 @@
       },
       {
         "id": "DiagnosticReport.category.coding",
-        "path": "DiagnosticReport.category.coding"
+        "path": "DiagnosticReport.category.coding",
+        "base": {
+          "path": "Observation.category",
+          "min": 0,
+          "max": "*"
+        }
       },
       {
         "id": "DiagnosticReport.category.coding:category",
@@ -2043,9 +2048,9 @@
         }
       },
       {
-        "id": "DiagnosticReport.result:breastRadSectionPatientHistory",
+        "id": "DiagnosticReport.result:sectionPatientHistory",
         "path": "DiagnosticReport.result",
-        "sliceName": "breastRadSectionPatientHistory",
+        "sliceName": "sectionPatientHistory",
         "short": "Observations",
         "definition": "[Observations](observation.html)  that are part of this diagnostic report.",
         "comment": "Observations can contain observations.",
@@ -2072,7 +2077,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadSectionPatientHistory"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/SectionPatientHistory"
             ]
           }
         ],
@@ -2090,9 +2095,9 @@
         ]
       },
       {
-        "id": "DiagnosticReport.result:breastRadSectionFindings",
+        "id": "DiagnosticReport.result:sectionFindings",
         "path": "DiagnosticReport.result",
-        "sliceName": "breastRadSectionFindings",
+        "sliceName": "sectionFindings",
         "short": "Observations",
         "definition": "[Observations](observation.html)  that are part of this diagnostic report.",
         "comment": "Observations can contain observations.",
@@ -2119,7 +2124,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadSectionFindings"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/SectionFindings"
             ]
           }
         ],
