@@ -1,23 +1,5 @@
 {
   "resourceType": "StructureDefinition",
-  "extension": [
-    {
-      "url": "http://www.fragment.com/mapname",
-      "valueString": "Impressions/Extension"
-    },
-    {
-      "url": "http://www.fragment.com/Group",
-      "valueString": "ExtensionResources/Impressions"
-    },
-    {
-      "url": "http://www.fragment.com/fragment",
-      "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/HeaderFragment"
-    },
-    {
-      "url": "http://www.fragment.com/maplink",
-      "valueString": "fragment|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/HeaderFragment"
-    }
-  ],
   "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/FragmentImpressionsExtension",
   "name": "FragmentImpressionsExtension",
   "title": "Impressions Extension",
@@ -227,11 +209,24 @@
     "element": [
       {
         "id": "Extension",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
         "path": "Extension",
         "short": "Impressions extension",
         "definition": "This extension defines the impressions section of a breast radiology report, linking a report to the resources that the exam impressions.",
-        "min": 0,
-        "max": "*"
+        "base": {
+          "path": "Extension",
+          "min": 0,
+          "max": "*"
+        }
       },
       {
         "id": "Extension.extension",
@@ -247,8 +242,6 @@
       {
         "id": "Extension.url",
         "path": "Extension.url",
-        "min": 1,
-        "max": "1",
         "base": {
           "path": "Extension.url",
           "min": 1,

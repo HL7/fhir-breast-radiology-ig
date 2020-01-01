@@ -1,23 +1,5 @@
 {
   "resourceType": "StructureDefinition",
-  "extension": [
-    {
-      "url": "http://www.fragment.com/mapname",
-      "valueString": "Impression"
-    },
-    {
-      "url": "http://www.fragment.com/Group",
-      "valueString": "CommonResources/BreastRadImpression"
-    },
-    {
-      "url": "http://www.fragment.com/fragment",
-      "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/HeaderFragment"
-    },
-    {
-      "url": "http://www.fragment.com/maplink",
-      "valueString": "fragment|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/HeaderFragment"
-    }
-  ],
   "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/FragmentImpression",
   "name": "FragmentImpression",
   "title": "Impression",
@@ -1342,8 +1324,11 @@
         "path": "ClinicalImpression",
         "short": "Breast Radiology Impression (ClinicalImpression)",
         "definition": "Breast radiology exam clinical impression",
-        "min": 0,
-        "max": "*"
+        "base": {
+          "path": "ClinicalImpression",
+          "min": 0,
+          "max": "*"
+        }
       }
     ]
   }

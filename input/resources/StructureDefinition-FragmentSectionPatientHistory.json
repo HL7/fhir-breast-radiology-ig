@@ -1,31 +1,5 @@
 {
   "resourceType": "StructureDefinition",
-  "extension": [
-    {
-      "url": "http://www.fragment.com/mapname",
-      "valueString": "Patient History"
-    },
-    {
-      "url": "http://www.fragment.com/Group",
-      "valueString": "BaseResources/PatientHistory"
-    },
-    {
-      "url": "http://www.fragment.com/fragment",
-      "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadObservationNoDeviceFragment"
-    },
-    {
-      "url": "http://www.fragment.com/maplink",
-      "valueString": "fragment|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadObservationNoDeviceFragment"
-    },
-    {
-      "url": "http://www.fragment.com/fragment",
-      "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ObservationSectionFragment"
-    },
-    {
-      "url": "http://www.fragment.com/maplink",
-      "valueString": "fragment|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ObservationSectionFragment"
-    }
-  ],
   "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/FragmentSectionPatientHistory",
   "name": "FragmentSectionPatientHistory",
   "title": "Patient History",
@@ -2175,8 +2149,11 @@
         "path": "Observation",
         "short": "Patient History Section",
         "definition": "This resource is the head of the tree of previous observations.\n\n\nChild observations are referenced by the 'Observation.hasMember' field.\n\n\n*** TODO Items ***** What resources comprise a patient history. Currently we can only reference observations - this is probably inadequate",
-        "min": 0,
-        "max": "*"
+        "base": {
+          "path": "Observation",
+          "min": 0,
+          "max": "*"
+        }
       },
       {
         "id": "Observation.value[x]",

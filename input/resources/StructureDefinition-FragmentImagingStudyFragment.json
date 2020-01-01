@@ -1,23 +1,5 @@
 {
   "resourceType": "StructureDefinition",
-  "extension": [
-    {
-      "url": "http://www.fragment.com/mapname",
-      "valueString": "ImagingStudy"
-    },
-    {
-      "url": "http://www.fragment.com/Group",
-      "valueString": "Fragment/{name}"
-    },
-    {
-      "url": "http://www.fragment.com/isFragment",
-      "valueBoolean": true
-    },
-    {
-      "url": "http://www.fragment.com/maplink",
-      "valueString": "target|False|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AimAnnotatedImagingStudy"
-    }
-  ],
   "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/FragmentImagingStudyFragment",
   "name": "FragmentImagingStudyFragment",
   "title": "Imaging Study Fragment",
@@ -2247,8 +2229,11 @@
         "path": "Observation",
         "short": "Adds references to imaging studies.",
         "definition": "Fragment that adds derivedFrom references to imaging studies, including AIM annotated imaaging study.",
-        "min": 0,
-        "max": "*"
+        "base": {
+          "path": "Observation",
+          "min": 0,
+          "max": "*"
+        }
       },
       {
         "id": "Observation.derivedFrom",
@@ -2263,8 +2248,6 @@
           "ordered": true,
           "rules": "openAtEnd"
         },
-        "min": 0,
-        "max": "*",
         "base": {
           "path": "Observation.derivedFrom",
           "min": 0,

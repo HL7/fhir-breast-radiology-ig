@@ -1,19 +1,5 @@
 {
   "resourceType": "StructureDefinition",
-  "extension": [
-    {
-      "url": "http://www.fragment.com/mapname",
-      "valueString": "Category/Fragment"
-    },
-    {
-      "url": "http://www.fragment.com/Group",
-      "valueString": "Fragment/{name}"
-    },
-    {
-      "url": "http://www.fragment.com/isFragment",
-      "valueBoolean": true
-    }
-  ],
   "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/FragmentCategoryFragment",
   "name": "FragmentCategoryFragment",
   "title": "Category Fragment",
@@ -2325,8 +2311,11 @@
         "path": "Observation",
         "short": "Fragment definition to define Observation.category",
         "definition": "This fragment slices Observation.category and adds the required observation code value.",
-        "min": 0,
-        "max": "*"
+        "base": {
+          "path": "Observation",
+          "min": 0,
+          "max": "*"
+        }
       },
       {
         "id": "Observation.category",
@@ -2350,12 +2339,7 @@
       },
       {
         "id": "Observation.category.coding",
-        "path": "Observation.category.coding",
-        "base": {
-          "path": "Observation.category",
-          "min": 0,
-          "max": "*"
-        }
+        "path": "Observation.category.coding"
       },
       {
         "id": "Observation.category.coding:category",
@@ -2363,11 +2347,6 @@
         "sliceName": "category",
         "min": 1,
         "max": "1",
-        "base": {
-          "path": "Observation.category",
-          "min": 0,
-          "max": "*"
-        },
         "patternCoding": {
           "system": "http://terminology.hl7.org/CodeSystem/observation-category",
           "code": "imaging"

@@ -1,23 +1,5 @@
 {
   "resourceType": "StructureDefinition",
-  "extension": [
-    {
-      "url": "http://www.fragment.com/mapname",
-      "valueString": "Annotation/PolyLine/Location"
-    },
-    {
-      "url": "http://www.fragment.com/Group",
-      "valueString": "AimResources/AimAnnotationPolyLineExtension"
-    },
-    {
-      "url": "http://www.fragment.com/fragment",
-      "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AimHeaderFragment"
-    },
-    {
-      "url": "http://www.fragment.com/maplink",
-      "valueString": "fragment|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AimHeaderFragment"
-    }
-  ],
   "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/FragmentAimAnnotationPolyLineExtension",
   "name": "FragmentAimAnnotationPolyLineExtension",
   "title": "AIM Annotation PolyLine Extension",
@@ -1259,11 +1241,24 @@
     "element": [
       {
         "id": "Extension",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
         "path": "Extension",
         "short": "AIM Annotation PolyLine Extension",
         "definition": "this extension defines the fields that are used to describe apolygon line annotation of an image",
-        "min": 0,
-        "max": "*"
+        "base": {
+          "path": "Extension",
+          "min": 0,
+          "max": "*"
+        }
       },
       {
         "id": "Extension.extension",
@@ -1278,8 +1273,6 @@
           "ordered": true,
           "rules": "openAtEnd"
         },
-        "min": 0,
-        "max": "*",
         "base": {
           "path": "Extension.extension",
           "min": 0,
@@ -1289,88 +1282,186 @@
       {
         "id": "Extension.extension:opacity",
         "path": "Extension.extension",
-        "sliceName": "opacity"
+        "sliceName": "opacity",
+        "base": {
+          "path": "Extension.extension",
+          "min": 0,
+          "max": "*"
+        }
       },
       {
         "id": "Extension.extension:opacity.value[x]",
         "path": "Extension.extension.value[x]",
+        "short": "Value of extension",
+        "definition": "Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).",
         "min": 1,
         "max": "1",
+        "base": {
+          "path": "Extension.value[x]",
+          "min": 0,
+          "max": "1"
+        },
         "type": [
           {
             "code": "string"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
           }
         ]
       },
       {
         "id": "Extension.extension:style",
         "path": "Extension.extension",
-        "sliceName": "style"
+        "sliceName": "style",
+        "base": {
+          "path": "Extension.extension",
+          "min": 0,
+          "max": "*"
+        }
       },
       {
         "id": "Extension.extension:style.value[x]",
         "path": "Extension.extension.value[x]",
+        "short": "Value of extension",
+        "definition": "Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).",
         "min": 1,
         "max": "1",
+        "base": {
+          "path": "Extension.value[x]",
+          "min": 0,
+          "max": "1"
+        },
         "type": [
           {
             "code": "string"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
           }
         ]
       },
       {
         "id": "Extension.extension:thickness",
         "path": "Extension.extension",
-        "sliceName": "thickness"
+        "sliceName": "thickness",
+        "base": {
+          "path": "Extension.extension",
+          "min": 0,
+          "max": "*"
+        }
       },
       {
         "id": "Extension.extension:thickness.value[x]",
         "path": "Extension.extension.value[x]",
+        "short": "Value of extension",
+        "definition": "Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).",
         "min": 1,
         "max": "1",
+        "base": {
+          "path": "Extension.value[x]",
+          "min": 0,
+          "max": "1"
+        },
         "type": [
           {
             "code": "string"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
           }
         ]
       },
       {
         "id": "Extension.extension:color",
         "path": "Extension.extension",
-        "sliceName": "color"
+        "sliceName": "color",
+        "base": {
+          "path": "Extension.extension",
+          "min": 0,
+          "max": "*"
+        }
       },
       {
         "id": "Extension.extension:color.value[x]",
         "path": "Extension.extension.value[x]",
+        "short": "Value of extension",
+        "definition": "Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).",
         "min": 1,
         "max": "1",
+        "base": {
+          "path": "Extension.value[x]",
+          "min": 0,
+          "max": "1"
+        },
         "type": [
           {
             "code": "string"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
           }
         ]
       },
       {
         "id": "Extension.extension:coordinates",
         "path": "Extension.extension",
-        "sliceName": "coordinates"
+        "sliceName": "coordinates",
+        "base": {
+          "path": "Extension.extension",
+          "min": 0,
+          "max": "*"
+        }
       },
       {
         "id": "Extension.extension:coordinates.value[x]",
         "path": "Extension.extension.value[x]",
+        "short": "Value of extension",
+        "definition": "Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).",
         "min": 1,
         "max": "1",
+        "base": {
+          "path": "Extension.value[x]",
+          "min": 0,
+          "max": "1"
+        },
         "type": [
           {
             "code": "string"
+          }
+        ],
+        "isModifier": false,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
           }
         ]
       },
       {
         "id": "Extension.url",
         "path": "Extension.url",
-        "min": 1,
-        "max": "1",
         "base": {
           "path": "Extension.url",
           "min": 1,

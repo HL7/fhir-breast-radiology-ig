@@ -1,39 +1,5 @@
 {
   "resourceType": "StructureDefinition",
-  "extension": [
-    {
-      "url": "http://www.fragment.com/mapname",
-      "valueString": "MG Axillary/Adenopathy"
-    },
-    {
-      "url": "http://www.fragment.com/Group",
-      "valueString": "MGResources/AssociatedFeature/AxillaryAdenopathy"
-    },
-    {
-      "url": "http://www.fragment.com/fragment",
-      "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadObservationNoDeviceFragment"
-    },
-    {
-      "url": "http://www.fragment.com/maplink",
-      "valueString": "fragment|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadObservationNoDeviceFragment"
-    },
-    {
-      "url": "http://www.fragment.com/fragment",
-      "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadObservationNoValueFragment"
-    },
-    {
-      "url": "http://www.fragment.com/maplink",
-      "valueString": "fragment|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadObservationNoValueFragment"
-    },
-    {
-      "url": "http://www.fragment.com/fragment",
-      "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastBodyLocationRequiredFragment"
-    },
-    {
-      "url": "http://www.fragment.com/maplink",
-      "valueString": "fragment|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastBodyLocationRequiredFragment"
-    }
-  ],
   "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/FragmentMGAxillaryAdenopathy",
   "name": "FragmentMGAxillaryAdenopathy",
   "title": "Mammography Axillary Adenopathy",
@@ -2183,8 +2149,11 @@
         "path": "Observation",
         "short": "Breast Radiology Mammography Axillary Adenopathy Observation",
         "definition": "If this observation is present, and dataAbsentReason is empty, then an axillary adenopathy was observed.\n\n\nIf this observation is present, and dataAbsentReason is not empty, then an axillary adenopathy was not observed and dataAbsentReason contains the reason why.\n\n\nEnlarged axillary lymph nodes may warrant comment, clinical correlation, and additional \nevaluation, especially if new or considerably larger or rounder when compared to previous examination.\nA review of the patient’s medical history may elucidate the cause for axillary adenopathy, averting\nrecommendation for additional evaluation. When one or more large axillary nodes are \nsubstantially composed of fat, this is a normal variant.\n-- Bi-Rads® Atlas — Mammography Fifth Ed. 2013",
-        "min": 0,
-        "max": "*"
+        "base": {
+          "path": "Observation",
+          "min": 0,
+          "max": "*"
+        }
       }
     ]
   }

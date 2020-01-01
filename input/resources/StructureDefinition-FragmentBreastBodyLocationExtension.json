@@ -1,23 +1,5 @@
 {
   "resourceType": "StructureDefinition",
-  "extension": [
-    {
-      "url": "http://www.fragment.com/mapname",
-      "valueString": "Breast Body Loc."
-    },
-    {
-      "url": "http://www.fragment.com/Group",
-      "valueString": "ExtensionResources/BreastBodyLocation"
-    },
-    {
-      "url": "http://www.fragment.com/fragment",
-      "valueUrl": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/HeaderFragment"
-    },
-    {
-      "url": "http://www.fragment.com/maplink",
-      "valueString": "fragment|True|http://hl7.org/fhir/us/breast-radiology/StructureDefinition/HeaderFragment"
-    }
-  ],
   "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/FragmentBreastBodyLocationExtension",
   "name": "FragmentBreastBodyLocationExtension",
   "title": "Breast Body Location Extension",
@@ -166,8 +148,8 @@
         "id": "Extension.extension:laterality",
         "path": "Extension.extension",
         "sliceName": "laterality",
-        "short": "Additional content defined by implementations",
-        "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "short": "Laterality of the body location",
+        "definition": "The laterality of the body location",
         "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
         "alias": [
           "extensions",
@@ -317,8 +299,8 @@
       {
         "id": "Extension.extension:laterality.value[x]",
         "path": "Extension.extension.value[x]",
-        "short": "Laterality of the body location",
-        "definition": "The laterality of the body location",
+        "short": "Value of extension",
+        "definition": "Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).",
         "min": 1,
         "max": "1",
         "base": {
@@ -348,8 +330,8 @@
         "id": "Extension.extension:quadrant",
         "path": "Extension.extension",
         "sliceName": "quadrant",
-        "short": "Additional content defined by implementations",
-        "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "short": "Quadrant of the body location",
+        "definition": "The quadrant  of the body location",
         "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
         "alias": [
           "extensions",
@@ -499,8 +481,8 @@
       {
         "id": "Extension.extension:quadrant.value[x]",
         "path": "Extension.extension.value[x]",
-        "short": "Quadrant of the body location",
-        "definition": "The quadrant  of the body location",
+        "short": "Value of extension",
+        "definition": "Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).",
         "min": 1,
         "max": "1",
         "base": {
@@ -530,8 +512,8 @@
         "id": "Extension.extension:region",
         "path": "Extension.extension",
         "sliceName": "region",
-        "short": "Additional content defined by implementations",
-        "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "short": "Region of the body location",
+        "definition": "The region  of the body location",
         "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
         "alias": [
           "extensions",
@@ -681,8 +663,8 @@
       {
         "id": "Extension.extension:region.value[x]",
         "path": "Extension.extension.value[x]",
-        "short": "Region of the body location",
-        "definition": "The region  of the body location",
+        "short": "Value of extension",
+        "definition": "Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).",
         "min": 1,
         "max": "1",
         "base": {
@@ -712,8 +694,8 @@
         "id": "Extension.extension:clockDirection",
         "path": "Extension.extension",
         "sliceName": "clockDirection",
-        "short": "Additional content defined by implementations",
-        "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "short": "Clock direction of the body location",
+        "definition": "The clock direction of the body location.",
         "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
         "alias": [
           "extensions",
@@ -863,8 +845,8 @@
       {
         "id": "Extension.extension:clockDirection.value[x]",
         "path": "Extension.extension.value[x]",
-        "short": "Clock direction of the body location",
-        "definition": "The clock direction of the body location.",
+        "short": "Value of extension",
+        "definition": "Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).",
         "min": 1,
         "max": "1",
         "base": {
@@ -894,8 +876,8 @@
         "id": "Extension.extension:depth",
         "path": "Extension.extension",
         "sliceName": "depth",
-        "short": "Additional content defined by implementations",
-        "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "short": "Depth of the body location",
+        "definition": "The depth of the body location.",
         "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
         "alias": [
           "extensions",
@@ -1045,8 +1027,8 @@
       {
         "id": "Extension.extension:depth.value[x]",
         "path": "Extension.extension.value[x]",
-        "short": "Depth of the body location",
-        "definition": "The depth of the body location.",
+        "short": "Value of extension",
+        "definition": "Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).",
         "min": 1,
         "max": "1",
         "base": {
@@ -1076,15 +1058,15 @@
         "id": "Extension.extension:distanceFromNipple",
         "path": "Extension.extension",
         "sliceName": "distanceFromNipple",
-        "short": "Additional content defined by implementations",
-        "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "short": "Distance from nipple",
+        "definition": "Distance from nipple to body location",
         "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
         "alias": [
           "extensions",
           "user content"
         ],
         "min": 0,
-        "max": "*",
+        "max": "1",
         "base": {
           "path": "Element.extension",
           "min": 0,
@@ -1154,7 +1136,7 @@
           "user content"
         ],
         "min": 0,
-        "max": "*",
+        "max": "0",
         "base": {
           "path": "Element.extension",
           "min": 0,
@@ -1227,8 +1209,8 @@
       {
         "id": "Extension.extension:distanceFromNipple.value[x]",
         "path": "Extension.extension.value[x]",
-        "short": "Distance from nipple",
-        "definition": "Distance from nipple to body location",
+        "short": "Value of extension",
+        "definition": "Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).",
         "min": 1,
         "max": "1",
         "base": {
@@ -1508,15 +1490,15 @@
         "id": "Extension.extension:distanceFromSkin",
         "path": "Extension.extension",
         "sliceName": "distanceFromSkin",
-        "short": "Additional content defined by implementations",
-        "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "short": "Distance from skin",
+        "definition": "Distance from skin to body location",
         "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
         "alias": [
           "extensions",
           "user content"
         ],
         "min": 0,
-        "max": "*",
+        "max": "1",
         "base": {
           "path": "Element.extension",
           "min": 0,
@@ -1586,7 +1568,7 @@
           "user content"
         ],
         "min": 0,
-        "max": "*",
+        "max": "0",
         "base": {
           "path": "Element.extension",
           "min": 0,
@@ -1659,8 +1641,8 @@
       {
         "id": "Extension.extension:distanceFromSkin.value[x]",
         "path": "Extension.extension.value[x]",
-        "short": "Distance from skin",
-        "definition": "Distance from skin to body location",
+        "short": "Value of extension",
+        "definition": "Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).",
         "min": 1,
         "max": "1",
         "base": {
@@ -1940,15 +1922,15 @@
         "id": "Extension.extension:distanceFromChestWall",
         "path": "Extension.extension",
         "sliceName": "distanceFromChestWall",
-        "short": "Additional content defined by implementations",
-        "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "short": "Distance from chest wall",
+        "definition": "Distance from chest wall to body location",
         "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
         "alias": [
           "extensions",
           "user content"
         ],
         "min": 0,
-        "max": "*",
+        "max": "1",
         "base": {
           "path": "Element.extension",
           "min": 0,
@@ -2018,7 +2000,7 @@
           "user content"
         ],
         "min": 0,
-        "max": "*",
+        "max": "0",
         "base": {
           "path": "Element.extension",
           "min": 0,
@@ -2091,8 +2073,8 @@
       {
         "id": "Extension.extension:distanceFromChestWall.value[x]",
         "path": "Extension.extension.value[x]",
-        "short": "Distance from chest wall",
-        "definition": "Distance from chest wall to body location",
+        "short": "Value of extension",
+        "definition": "Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).",
         "min": 1,
         "max": "1",
         "base": {
@@ -2575,11 +2557,24 @@
     "element": [
       {
         "id": "Extension",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+            "valueCode": "normative"
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version",
+            "valueCode": "4.0.0"
+          }
+        ],
         "path": "Extension",
         "short": "Breast Body Location extension",
         "definition": "this extension defines the fields that are used to describe thelocation of an observed item in a breat radiology report\n\n\nBreast radiology exams have specific ways of defining a location that are unique to this field.",
-        "min": 0,
-        "max": "*"
+        "base": {
+          "path": "Extension",
+          "min": 0,
+          "max": "*"
+        }
       },
       {
         "id": "Extension.extension",
@@ -2594,8 +2589,6 @@
           "ordered": true,
           "rules": "openAtEnd"
         },
-        "min": 0,
-        "max": "*",
         "base": {
           "path": "Extension.extension",
           "min": 0,
@@ -2606,8 +2599,15 @@
         "id": "Extension.extension:laterality",
         "path": "Extension.extension",
         "sliceName": "laterality",
+        "short": "Laterality of the body location",
+        "definition": "The laterality of the body location",
         "min": 0,
-        "max": "1"
+        "max": "1",
+        "base": {
+          "path": "Extension.extension",
+          "min": 0,
+          "max": "*"
+        }
       },
       {
         "id": "Extension.extension:laterality.extension",
@@ -2618,8 +2618,6 @@
       {
         "id": "Extension.extension:laterality.value[x]",
         "path": "Extension.extension.value[x]",
-        "short": "Laterality of the body location",
-        "definition": "The laterality of the body location",
         "min": 1,
         "max": "1",
         "type": [
@@ -2636,8 +2634,15 @@
         "id": "Extension.extension:quadrant",
         "path": "Extension.extension",
         "sliceName": "quadrant",
+        "short": "Quadrant of the body location",
+        "definition": "The quadrant  of the body location",
         "min": 0,
-        "max": "1"
+        "max": "1",
+        "base": {
+          "path": "Extension.extension",
+          "min": 0,
+          "max": "*"
+        }
       },
       {
         "id": "Extension.extension:quadrant.extension",
@@ -2648,8 +2653,6 @@
       {
         "id": "Extension.extension:quadrant.value[x]",
         "path": "Extension.extension.value[x]",
-        "short": "Quadrant of the body location",
-        "definition": "The quadrant  of the body location",
         "min": 1,
         "max": "1",
         "type": [
@@ -2666,8 +2669,15 @@
         "id": "Extension.extension:region",
         "path": "Extension.extension",
         "sliceName": "region",
+        "short": "Region of the body location",
+        "definition": "The region  of the body location",
         "min": 0,
-        "max": "1"
+        "max": "1",
+        "base": {
+          "path": "Extension.extension",
+          "min": 0,
+          "max": "*"
+        }
       },
       {
         "id": "Extension.extension:region.extension",
@@ -2678,8 +2688,6 @@
       {
         "id": "Extension.extension:region.value[x]",
         "path": "Extension.extension.value[x]",
-        "short": "Region of the body location",
-        "definition": "The region  of the body location",
         "min": 1,
         "max": "1",
         "type": [
@@ -2696,8 +2704,15 @@
         "id": "Extension.extension:clockDirection",
         "path": "Extension.extension",
         "sliceName": "clockDirection",
+        "short": "Clock direction of the body location",
+        "definition": "The clock direction of the body location.",
         "min": 0,
-        "max": "1"
+        "max": "1",
+        "base": {
+          "path": "Extension.extension",
+          "min": 0,
+          "max": "*"
+        }
       },
       {
         "id": "Extension.extension:clockDirection.extension",
@@ -2708,8 +2723,6 @@
       {
         "id": "Extension.extension:clockDirection.value[x]",
         "path": "Extension.extension.value[x]",
-        "short": "Clock direction of the body location",
-        "definition": "The clock direction of the body location.",
         "min": 1,
         "max": "1",
         "type": [
@@ -2726,8 +2739,15 @@
         "id": "Extension.extension:depth",
         "path": "Extension.extension",
         "sliceName": "depth",
+        "short": "Depth of the body location",
+        "definition": "The depth of the body location.",
         "min": 0,
-        "max": "1"
+        "max": "1",
+        "base": {
+          "path": "Extension.extension",
+          "min": 0,
+          "max": "*"
+        }
       },
       {
         "id": "Extension.extension:depth.extension",
@@ -2738,8 +2758,6 @@
       {
         "id": "Extension.extension:depth.value[x]",
         "path": "Extension.extension.value[x]",
-        "short": "Depth of the body location",
-        "definition": "The depth of the body location.",
         "min": 1,
         "max": "1",
         "type": [
@@ -2755,13 +2773,26 @@
       {
         "id": "Extension.extension:distanceFromNipple",
         "path": "Extension.extension",
-        "sliceName": "distanceFromNipple"
+        "sliceName": "distanceFromNipple",
+        "short": "Distance from nipple",
+        "definition": "Distance from nipple to body location",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Extension.extension",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Extension.extension:distanceFromNipple.extension",
+        "path": "Extension.extension.extension",
+        "min": 0,
+        "max": "0"
       },
       {
         "id": "Extension.extension:distanceFromNipple.value[x]",
         "path": "Extension.extension.value[x]",
-        "short": "Distance from nipple",
-        "definition": "Distance from nipple to body location",
         "min": 1,
         "max": "1",
         "type": [
@@ -2800,13 +2831,26 @@
       {
         "id": "Extension.extension:distanceFromSkin",
         "path": "Extension.extension",
-        "sliceName": "distanceFromSkin"
+        "sliceName": "distanceFromSkin",
+        "short": "Distance from skin",
+        "definition": "Distance from skin to body location",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Extension.extension",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Extension.extension:distanceFromSkin.extension",
+        "path": "Extension.extension.extension",
+        "min": 0,
+        "max": "0"
       },
       {
         "id": "Extension.extension:distanceFromSkin.value[x]",
         "path": "Extension.extension.value[x]",
-        "short": "Distance from skin",
-        "definition": "Distance from skin to body location",
         "min": 1,
         "max": "1",
         "type": [
@@ -2845,13 +2889,26 @@
       {
         "id": "Extension.extension:distanceFromChestWall",
         "path": "Extension.extension",
-        "sliceName": "distanceFromChestWall"
+        "sliceName": "distanceFromChestWall",
+        "short": "Distance from chest wall",
+        "definition": "Distance from chest wall to body location",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Extension.extension",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Extension.extension:distanceFromChestWall.extension",
+        "path": "Extension.extension.extension",
+        "min": 0,
+        "max": "0"
       },
       {
         "id": "Extension.extension:distanceFromChestWall.value[x]",
         "path": "Extension.extension.value[x]",
-        "short": "Distance from chest wall",
-        "definition": "Distance from chest wall to body location",
         "min": 1,
         "max": "1",
         "type": [
@@ -2890,8 +2947,6 @@
       {
         "id": "Extension.url",
         "path": "Extension.url",
-        "min": 1,
-        "max": "1",
         "base": {
           "path": "Extension.url",
           "min": 1,
