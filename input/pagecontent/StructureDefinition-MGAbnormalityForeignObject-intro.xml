@@ -1,34 +1,52 @@
 <div xmlns="http://www.w3.org/1999/xhtml"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://hl7.org/fhir ../../src-generated/schemas/fhir-single.xsd">
-    <object data="Focus-MGAbnormalityForeignObject.svg" type="image/svg+xml">
-        <img src="Focus-MGAbnormalityForeignObject.svg" alt="image/svg+xml" />
-    </object>
-<p>ReviewStatus: NotReviewed</p>
-    <p>
-This resource is an leaf-node observation of a a foreign object abnormality.
-It is referenced by an parent Observation section that references other information about this specific abnormality
-Observation.value[x] is a single codeableConcept, and is bound to one of the following values
-    </p>
-    <ul>
-        <li>BB - BB</li>
-        <li>BiopsyClip - Biopsy Clip</li>
-        <li>BiopsyClipTitanium - Biopsy Clip Titanium</li>
-        <li>CatheterSleeve - Catheter Sleeve</li>
-        <li>ChemotherapyPort - Chemotherapy Port</li>
-        <li>Coil - Coil</li>
-        <li>GunShotWound - Gun Shot Wound</li>
-        <li>Metal - Metal</li>
-        <li>MetallicObjects - Metallic Objects</li>
-        <li>Needle - Needle</li>
-        <li>NippleJewelery - Nipple Jewelery</li>
-        <li>NonMetallicBody - Non Metallic Body</li>
-        <li>PaceMaker - Pace Maker</li>
-        <li>RadioactivePellet - Radioactive Pellet</li>
-        <li>Sponge - Sponge</li>
-        <li>SurgicalClip - Surgical Clip</li>
-        <li>Swab - Swab</li>
-        <li>Wire - Wire</li>
-        <li>WireFragment - Wire Fragment</li>
-    </ul>
+  <a name="intro"></a>
+  <h3 id="intro">Introduction</h3>
+  <p>
+    This resource is the observation section Foreign Object.
+  </p>
+  <p>
+    This profile contains references to multiple sub-observation pieces of this observation..
+  </p>
+  <h3 id="focusGraph">Graphical Overview</h3>
+  <p>
+    This graph provides an overview of how and where Foreign Object is
+    referenced,and what items Foreign Object itself references.
+  </p>
+  <object data="Focus-MGAbnormalityForeignObject.svg" type="image/svg+xml">
+    <img src="Focus-MGAbnormalityForeignObject.svg" alt="image/svg+xml" />
+  </object>
+  <!-- +reviewStatus-->
+<h3 id="reviewStatus">Review Status</h3>
+<p><b>NotReviewed</b></p>
+  <!-- -reviewStatus-->
+  <!-- +components-->
+  <a name="components"></a>
+  <h3 id="components">Member Fields</h3>
+  The following are fields of this observation that are contained in this resource. Each field contains one data item
+  and is stored in the Observation.component element.
+  <ul>
+    
+<li>MG AbnormalityForeignObject Type component</li>
+<li>BiRads Assessment Category component</li>
+<li>Change In Definition component</li>
+<li>Change In Number component</li>
+<li>Change In Prominance component</li>
+<li>Change In Size component</li>
+<li>Change In State component</li>
+<li>Size component</li>
+<li>Orientation component</li>
+  </ul>
+  <!-- -components-->
+  <!-- +hasMember-->
+  <a name="hasMembers"></a>
+  <h3 id="hasMember">Member Observations</h3>
+  The following are fields of this observation that are stored in seperate observation resources.
+  Each reference is stored as an item in the Observation.hasMember element.
+  <ul>
+    
+<li>'Consistent With' reference</li>
+  </ul>
+  <!-- -hasMember-->
 </div>

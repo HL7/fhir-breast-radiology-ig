@@ -1,13 +1,45 @@
 <div xmlns="http://www.w3.org/1999/xhtml"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://hl7.org/fhir ../../src-generated/schemas/fhir-single.xsd">
-    <object data="Focus-SectionFindings.svg" type="image/svg+xml">
-        <img src="Focus-SectionFindings.svg" alt="image/svg+xml" />
-    </object>
-<p>ReviewStatus: NotReviewed</p>
-    <p>
-This resource is an 'Finding' section.
-Information about the finding is contained in this observation and observations
-referenced by this resource's hasMember field.
-    </p>
+  <a name="intro"></a>
+  <h3 id="intro">Introduction</h3>
+  <p>
+    This resource is the observation section Findings.
+  </p>
+  <p>
+    This profile contains references to multiple sub-observation pieces of this observation..
+  </p>
+  <h3 id="focusGraph">Graphical Overview</h3>
+  <p>
+    This graph provides an overview of how and where Findings is
+    referenced,and what items Findings itself references.
+  </p>
+  <object data="Focus-SectionFindings.svg" type="image/svg+xml">
+    <img src="Focus-SectionFindings.svg" alt="image/svg+xml" />
+  </object>
+  <!-- +reviewStatus-->
+<h3 id="reviewStatus">Review Status</h3>
+<p><b>NotReviewed</b></p>
+  <!-- -reviewStatus-->
+  <!-- +components-->
+  <a name="components"></a>
+  <h3 id="components">Member Fields</h3>
+  The following are fields of this observation that are contained in this resource. Each field contains one data item
+  and is stored in the Observation.component element.
+  <ul>
+    
+<li>BiRads Assessment Category component</li>
+  </ul>
+  <!-- -components-->
+  <!-- +hasMember-->
+  <a name="hasMembers"></a>
+  <h3 id="hasMember">Member Observations</h3>
+  The following are fields of this observation that are stored in seperate observation resources.
+  Each reference is stored as an item in the Observation.hasMember element.
+  <ul>
+    
+<li>'Findings Left Breast' reference</li>
+<li>'Findings Right Breast' reference</li>
+  </ul>
+  <!-- -hasMember-->
 </div>

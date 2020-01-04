@@ -1683,6 +1683,16 @@
       {
         "id": "Observation.hasMember",
         "path": "Observation.hasMember",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": true,
+          "rules": "openAtEnd"
+        },
         "short": "Related resource that belongs to the Observation group",
         "definition": "This observation is a group observation (e.g. a battery, a panel of tests, a set of vital sign measurements) that includes the target as a member of the group.",
         "comment": "When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.  Note that a system may calculate results from [QuestionnaireResponse](questionnaireresponse.html)  into a final score and represent the score as an Observation.",
@@ -1717,65 +1727,16 @@
         ]
       },
       {
-        "id": "Observation.derivedFrom",
-        "path": "Observation.derivedFrom",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": true,
-          "rules": "openAtEnd"
-        },
-        "short": "Related measurements the observation is made from",
-        "definition": "The target resource that represents a measurement from which this observation value is derived. For example, a calculated anion gap or a fetal measurement based on an ultrasound image.",
-        "comment": "All the reference choices that are listed in this element can represent clinical observations and other measurements that may be the source for a derived value.  The most common reference will be another Observation.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.",
-        "min": 0,
-        "max": "*",
-        "base": {
-          "path": "Observation.derivedFrom",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/DocumentReference",
-              "http://hl7.org/fhir/StructureDefinition/ImagingStudy",
-              "http://hl7.org/fhir/StructureDefinition/Media",
-              "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse",
-              "http://hl7.org/fhir/StructureDefinition/Observation",
-              "http://hl7.org/fhir/StructureDefinition/MolecularSequence"
-            ]
-          }
-        ],
-        "isModifier": false,
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "Relationships established by OBX-4 usage"
-          },
-          {
-            "identity": "rim",
-            "map": ".targetObservation"
-          }
-        ]
-      },
-      {
-        "id": "Observation.derivedFrom:imagingStudy",
-        "path": "Observation.derivedFrom",
+        "id": "Observation.hasMember:imagingStudy",
+        "path": "Observation.hasMember",
         "sliceName": "imagingStudy",
-        "short": "Related measurements the observation is made from",
-        "definition": "The target resource that represents a measurement from which this observation value is derived. For example, a calculated anion gap or a fetal measurement based on an ultrasound image.",
-        "comment": "All the reference choices that are listed in this element can represent clinical observations and other measurements that may be the source for a derived value.  The most common reference will be another Observation.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.",
+        "short": "'ImagingStudy' reference",
+        "definition": "This slice references the target 'ImagingStudy'",
+        "comment": "When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.  Note that a system may calculate results from [QuestionnaireResponse](questionnaireresponse.html)  into a final score and represent the score as an Observation.",
         "min": 0,
         "max": "*",
         "base": {
-          "path": "Observation.derivedFrom",
+          "path": "Observation.hasMember",
           "min": 0,
           "max": "*"
         },
@@ -1796,19 +1757,53 @@
           },
           {
             "identity": "rim",
-            "map": ".targetObservation"
+            "map": "outBoundRelationship"
           }
         ]
       },
       {
-        "id": "Observation.derivedFrom:aimAnnotatedImagingStudy",
-        "path": "Observation.derivedFrom",
+        "id": "Observation.hasMember:aimAnnotatedImagingStudy",
+        "path": "Observation.hasMember",
         "sliceName": "aimAnnotatedImagingStudy",
+        "short": "'AIM Annotated Imaging Study' reference",
+        "definition": "This slice references the target 'AIM Annotated Imaging Study'",
+        "comment": "When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.  Note that a system may calculate results from [QuestionnaireResponse](questionnaireresponse.html)  into a final score and represent the score as an Observation.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Observation.hasMember",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AimAnnotatedImagingStudy"
+            ]
+          }
+        ],
+        "isModifier": false,
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "Relationships established by OBX-4 usage"
+          },
+          {
+            "identity": "rim",
+            "map": "outBoundRelationship"
+          }
+        ]
+      },
+      {
+        "id": "Observation.derivedFrom",
+        "path": "Observation.derivedFrom",
         "short": "Related measurements the observation is made from",
         "definition": "The target resource that represents a measurement from which this observation value is derived. For example, a calculated anion gap or a fetal measurement based on an ultrasound image.",
         "comment": "All the reference choices that are listed in this element can represent clinical observations and other measurements that may be the source for a derived value.  The most common reference will be another Observation.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.",
         "min": 0,
-        "max": "1",
+        "max": "*",
         "base": {
           "path": "Observation.derivedFrom",
           "min": 0,
@@ -1818,7 +1813,12 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AimAnnotatedImagingStudy"
+              "http://hl7.org/fhir/StructureDefinition/DocumentReference",
+              "http://hl7.org/fhir/StructureDefinition/ImagingStudy",
+              "http://hl7.org/fhir/StructureDefinition/Media",
+              "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse",
+              "http://hl7.org/fhir/StructureDefinition/Observation",
+              "http://hl7.org/fhir/StructureDefinition/MolecularSequence"
             ]
           }
         ],
@@ -2236,8 +2236,8 @@
         }
       },
       {
-        "id": "Observation.derivedFrom",
-        "path": "Observation.derivedFrom",
+        "id": "Observation.hasMember",
+        "path": "Observation.hasMember",
         "slicing": {
           "discriminator": [
             {
@@ -2249,19 +2249,21 @@
           "rules": "openAtEnd"
         },
         "base": {
-          "path": "Observation.derivedFrom",
+          "path": "Observation.hasMember",
           "min": 0,
           "max": "*"
         }
       },
       {
-        "id": "Observation.derivedFrom:imagingStudy",
-        "path": "Observation.derivedFrom",
+        "id": "Observation.hasMember:imagingStudy",
+        "path": "Observation.hasMember",
         "sliceName": "imagingStudy",
+        "short": "'ImagingStudy' reference",
+        "definition": "This slice references the target 'ImagingStudy'",
         "min": 0,
         "max": "*",
         "base": {
-          "path": "Observation.derivedFrom",
+          "path": "Observation.hasMember",
           "min": 0,
           "max": "*"
         },
@@ -2275,13 +2277,15 @@
         ]
       },
       {
-        "id": "Observation.derivedFrom:aimAnnotatedImagingStudy",
-        "path": "Observation.derivedFrom",
+        "id": "Observation.hasMember:aimAnnotatedImagingStudy",
+        "path": "Observation.hasMember",
         "sliceName": "aimAnnotatedImagingStudy",
+        "short": "'AIM Annotated Imaging Study' reference",
+        "definition": "This slice references the target 'AIM Annotated Imaging Study'",
         "min": 0,
         "max": "1",
         "base": {
-          "path": "Observation.derivedFrom",
+          "path": "Observation.hasMember",
           "min": 0,
           "max": "*"
         },

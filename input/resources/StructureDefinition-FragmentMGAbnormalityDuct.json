@@ -939,7 +939,7 @@
         "comment": "An observation may have; 1)  a single value here, 2)  both a value and a set of related or component values,  or 3)  only a set of related or component values. If a value is present, the datatype for this element should be determined by Observation.code.  A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.",
         "requirements": "An observation exists to have a value, though it might not if it is in error, or if it represents a group of observations.",
         "min": 0,
-        "max": "1",
+        "max": "0",
         "base": {
           "path": "Observation.value[x]",
           "min": 0,
@@ -947,7 +947,37 @@
         },
         "type": [
           {
+            "code": "Quantity"
+          },
+          {
             "code": "CodeableConcept"
+          },
+          {
+            "code": "string"
+          },
+          {
+            "code": "boolean"
+          },
+          {
+            "code": "integer"
+          },
+          {
+            "code": "Range"
+          },
+          {
+            "code": "Ratio"
+          },
+          {
+            "code": "SampledData"
+          },
+          {
+            "code": "time"
+          },
+          {
+            "code": "dateTime"
+          },
+          {
+            "code": "Period"
           }
         ],
         "condition": [
@@ -955,10 +985,6 @@
         ],
         "isModifier": false,
         "isSummary": true,
-        "binding": {
-          "strength": "required",
-          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/MGAbnormalityDuctVS"
-        },
         "mapping": [
           {
             "identity": "sct-concept",
@@ -1657,6 +1683,16 @@
       {
         "id": "Observation.hasMember",
         "path": "Observation.hasMember",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": true,
+          "rules": "openAtEnd"
+        },
         "short": "Related resource that belongs to the Observation group",
         "definition": "This observation is a group observation (e.g. a battery, a panel of tests, a set of vital sign measurements) that includes the target as a member of the group.",
         "comment": "When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.  Note that a system may calculate results from [QuestionnaireResponse](questionnaireresponse.html)  into a final score and represent the score as an Observation.",
@@ -1674,6 +1710,41 @@
               "http://hl7.org/fhir/StructureDefinition/Observation",
               "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse",
               "http://hl7.org/fhir/StructureDefinition/MolecularSequence"
+            ]
+          }
+        ],
+        "isModifier": false,
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "Relationships established by OBX-4 usage"
+          },
+          {
+            "identity": "rim",
+            "map": "outBoundRelationship"
+          }
+        ]
+      },
+      {
+        "id": "Observation.hasMember:consistentWith",
+        "path": "Observation.hasMember",
+        "sliceName": "consistentWith",
+        "short": "'Consistent With' reference",
+        "definition": "This slice references the target 'Consistent With'",
+        "comment": "When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.  Note that a system may calculate results from [QuestionnaireResponse](questionnaireresponse.html)  into a final score and represent the score as an Observation.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Observation.hasMember",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ConsistentWith"
             ]
           }
         ],
@@ -2124,15 +2195,15 @@
         ]
       },
       {
-        "id": "Observation.component:consistentWith",
+        "id": "Observation.component:mgAbnormalityDuctType",
         "path": "Observation.component",
-        "sliceName": "consistentWith",
-        "short": "Component results",
-        "definition": "Some observations have multiple component observations.  These component observations are expressed as separate code value pairs that share the same attributes.  Examples include systolic and diastolic component observations for blood pressure measurement and multiple component observations for genetics observations.",
-        "comment": "For a discussion on the ways Observations can be assembled in groups together see [Notes](observation.html#notes) below.",
+        "sliceName": "mgAbnormalityDuctType",
+        "short": "MG AbnormalityDuct Type component",
+        "definition": "This component slice contains the MG AbnormalityDuct Type value",
+        "comment": "This is one component of a group of components that comprise the observation.",
         "requirements": "Component observations share the same attributes in the Observation resource as the primary observation and are always treated a part of a single observation (they are not separable).   However, the reference range for the primary observation value is not inherited by the component values and is required when appropriate for each component observation.",
-        "min": 0,
-        "max": "*",
+        "min": 1,
+        "max": "1",
         "base": {
           "path": "Observation.component",
           "min": 0,
@@ -2167,7 +2238,7 @@
         ]
       },
       {
-        "id": "Observation.component:consistentWith.id",
+        "id": "Observation.component:mgAbnormalityDuctType.id",
         "path": "Observation.component.id",
         "representation": [
           "xmlAttr"
@@ -2196,7 +2267,7 @@
         ]
       },
       {
-        "id": "Observation.component:consistentWith.extension",
+        "id": "Observation.component:mgAbnormalityDuctType.extension",
         "path": "Observation.component.extension",
         "short": "Additional content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
@@ -2227,7 +2298,7 @@
         ]
       },
       {
-        "id": "Observation.component:consistentWith.modifierExtension",
+        "id": "Observation.component:mgAbnormalityDuctType.modifierExtension",
         "path": "Observation.component.modifierExtension",
         "short": "Extensions that cannot be ignored even if unrecognized",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
@@ -2261,10 +2332,10 @@
         ]
       },
       {
-        "id": "Observation.component:consistentWith.code",
+        "id": "Observation.component:mgAbnormalityDuctType.code",
         "path": "Observation.component.code",
-        "short": "Type of component observation (code / type)",
-        "definition": "Describes what was observed. Sometimes this is called the observation \"code\".",
+        "short": "MG AbnormalityDuct Type component code",
+        "definition": "This code identifies the MG AbnormalityDuct Type value",
         "comment": "*All* code-value and  component.code-component.value pairs need to be taken into account to correctly understand the meaning of the observation.",
         "requirements": "Knowing what kind of observation is being made is essential to understanding the observation.",
         "min": 1,
@@ -2283,7 +2354,7 @@
           "coding": [
             {
               "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ComponentSliceCodes",
-              "code": "targetBiRads"
+              "code": "mgAbnormalityDuctType"
             }
           ]
         },
@@ -2320,10 +2391,10 @@
         ]
       },
       {
-        "id": "Observation.component:consistentWith.value[x]",
+        "id": "Observation.component:mgAbnormalityDuctType.value[x]",
         "path": "Observation.component.value[x]",
-        "short": "Actual component result",
-        "definition": "The information determined as a result of making the observation, if the information has a simple value.",
+        "short": "MG AbnormalityDuct Type component value",
+        "definition": "Count of an object.\n\n\nThis is either an integer count, or a Range (min..max) count.\n\n\nA range value with no maximum specified implies count is min or more.\n\n\nA range value with no minimum specified implies count is max or less.",
         "comment": "Used when observation has a set of component observations. An observation may have both a value (e.g. an  Apgar score)  and component observations (the observations from which the Apgar score was derived). If a value is present, the datatype for this element should be determined by Observation.code. A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.",
         "requirements": "An observation exists to have a value, though it might not if it is in error, or if it represents a group of observations.",
         "min": 1,
@@ -2341,8 +2412,8 @@
         "isModifier": false,
         "isSummary": true,
         "binding": {
-          "strength": "extensible",
-          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/ConsistentWithVS"
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/MGAbnormalityDuctVS"
         },
         "mapping": [
           {
@@ -2364,7 +2435,7 @@
         ]
       },
       {
-        "id": "Observation.component:consistentWith.dataAbsentReason",
+        "id": "Observation.component:mgAbnormalityDuctType.dataAbsentReason",
         "path": "Observation.component.dataAbsentReason",
         "short": "Why the component result is missing",
         "definition": "Provides a reason why the expected value in the element Observation.component.value[x] is missing.",
@@ -2410,7 +2481,7 @@
         ]
       },
       {
-        "id": "Observation.component:consistentWith.interpretation",
+        "id": "Observation.component:mgAbnormalityDuctType.interpretation",
         "path": "Observation.component.interpretation",
         "short": "High, low, normal, etc.",
         "definition": "A categorical assessment of an observation value.  For example, high, low, normal.",
@@ -2464,7 +2535,7 @@
         ]
       },
       {
-        "id": "Observation.component:consistentWith.referenceRange",
+        "id": "Observation.component:mgAbnormalityDuctType.referenceRange",
         "path": "Observation.component.referenceRange",
         "short": "Provides guide for interpretation of component result",
         "definition": "Guidance on how to interpret the value by comparison to a normal or recommended range.",
@@ -2495,9 +2566,9 @@
         "id": "Observation.component:observedCount",
         "path": "Observation.component",
         "sliceName": "observedCount",
-        "short": "Component results",
-        "definition": "Some observations have multiple component observations.  These component observations are expressed as separate code value pairs that share the same attributes.  Examples include systolic and diastolic component observations for blood pressure measurement and multiple component observations for genetics observations.",
-        "comment": "For a discussion on the ways Observations can be assembled in groups together see [Notes](observation.html#notes) below.",
+        "short": "Observed Count component",
+        "definition": "This component slice contains the Observed Count quantity",
+        "comment": "This is one component of a group of components that comprise the observation.",
         "requirements": "Component observations share the same attributes in the Observation resource as the primary observation and are always treated a part of a single observation (they are not separable).   However, the reference range for the primary observation value is not inherited by the component values and is required when appropriate for each component observation.",
         "min": 0,
         "max": "1",
@@ -2647,6 +2718,14 @@
             "code": "CodeableConcept"
           }
         ],
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ComponentSliceCodes",
+              "code": "observedSize"
+            }
+          ]
+        },
         "isModifier": false,
         "isSummary": true,
         "binding": {
@@ -2683,7 +2762,7 @@
         "id": "Observation.component:observedCount.value[x]",
         "path": "Observation.component.value[x]",
         "short": "Actual component result",
-        "definition": "Count of an object.\n\n\nThis is either an integer count, or a Range (min..max) count.\n\n\nA range value with no maximum specified implies count is min or more.\n\n\nA range value with no minimum specified implies count is max or less.",
+        "definition": "The information determined as a result of making the observation, if the information has a simple value.",
         "comment": "Used when observation has a set of component observations. An observation may have both a value (e.g. an  Apgar score)  and component observations (the observations from which the Apgar score was derived). If a value is present, the datatype for this element should be determined by Observation.code. A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.",
         "requirements": "An observation exists to have a value, though it might not if it is in error, or if it represents a group of observations.",
         "min": 1,
@@ -2868,20 +2947,54 @@
       {
         "id": "Observation.value[x]",
         "path": "Observation.value[x]",
+        "min": 0,
+        "max": "0",
         "base": {
           "path": "Observation.value[x]",
           "min": 0,
           "max": "1"
+        }
+      },
+      {
+        "id": "Observation.hasMember",
+        "path": "Observation.hasMember",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": true,
+          "rules": "openAtEnd"
+        },
+        "base": {
+          "path": "Observation.hasMember",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Observation.hasMember:consistentWith",
+        "path": "Observation.hasMember",
+        "sliceName": "consistentWith",
+        "short": "'Consistent With' reference",
+        "definition": "This slice references the target 'Consistent With'",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Observation.hasMember",
+          "min": 0,
+          "max": "*"
         },
         "type": [
           {
-            "code": "CodeableConcept"
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ConsistentWith"
+            ]
           }
-        ],
-        "binding": {
-          "strength": "required",
-          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/MGAbnormalityDuctVS"
-        }
+        ]
       },
       {
         "id": "Observation.component",
@@ -2902,11 +3015,14 @@
         }
       },
       {
-        "id": "Observation.component:consistentWith",
+        "id": "Observation.component:mgAbnormalityDuctType",
         "path": "Observation.component",
-        "sliceName": "consistentWith",
-        "min": 0,
-        "max": "*",
+        "sliceName": "mgAbnormalityDuctType",
+        "short": "MG AbnormalityDuct Type component",
+        "definition": "This component slice contains the MG AbnormalityDuct Type value",
+        "comment": "This is one component of a group of components that comprise the observation.",
+        "min": 1,
+        "max": "1",
         "base": {
           "path": "Observation.component",
           "min": 0,
@@ -2914,8 +3030,10 @@
         }
       },
       {
-        "id": "Observation.component:consistentWith.code",
+        "id": "Observation.component:mgAbnormalityDuctType.code",
         "path": "Observation.component.code",
+        "short": "MG AbnormalityDuct Type component code",
+        "definition": "This code identifies the MG AbnormalityDuct Type value",
         "min": 1,
         "max": "1",
         "base": {
@@ -2927,14 +3045,16 @@
           "coding": [
             {
               "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ComponentSliceCodes",
-              "code": "targetBiRads"
+              "code": "mgAbnormalityDuctType"
             }
           ]
         }
       },
       {
-        "id": "Observation.component:consistentWith.value[x]",
+        "id": "Observation.component:mgAbnormalityDuctType.value[x]",
         "path": "Observation.component.value[x]",
+        "short": "MG AbnormalityDuct Type component value",
+        "definition": "Count of an object.\n\n\nThis is either an integer count, or a Range (min..max) count.\n\n\nA range value with no maximum specified implies count is min or more.\n\n\nA range value with no minimum specified implies count is max or less.",
         "min": 1,
         "max": "1",
         "base": {
@@ -2948,14 +3068,17 @@
           }
         ],
         "binding": {
-          "strength": "extensible",
-          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/ConsistentWithVS"
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/MGAbnormalityDuctVS"
         }
       },
       {
         "id": "Observation.component:observedCount",
         "path": "Observation.component",
         "sliceName": "observedCount",
+        "short": "Observed Count component",
+        "definition": "This component slice contains the Observed Count quantity",
+        "comment": "This is one component of a group of components that comprise the observation.",
         "min": 0,
         "max": "1",
         "base": {
@@ -2965,9 +3088,27 @@
         }
       },
       {
+        "id": "Observation.component:observedCount.code",
+        "path": "Observation.component.code",
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Observation.component.code",
+          "min": 1,
+          "max": "1"
+        },
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ComponentSliceCodes",
+              "code": "observedSize"
+            }
+          ]
+        }
+      },
+      {
         "id": "Observation.component:observedCount.value[x]",
         "path": "Observation.component.value[x]",
-        "definition": "Count of an object.\n\n\nThis is either an integer count, or a Range (min..max) count.\n\n\nA range value with no maximum specified implies count is min or more.\n\n\nA range value with no minimum specified implies count is max or less.",
         "min": 1,
         "max": "1",
         "base": {
