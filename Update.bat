@@ -6,17 +6,14 @@ del ig.ini
 del package-list.json
 
 mkdir .\input
-xcopy /Q /E /Y ..\BreastRadiology2020FebBallot\IG\guide\input .\input
+xcopy /Q /E /Y ..\BreastRadiologyProfiles\IG\guide\input .\input
 
 mkdir .\template
-xcopy /Q /E /Y ..\BreastRadiology2020FebBallot\IG\guide\template .\template
+xcopy /Q /E /Y ..\BreastRadiologyProfiles\IG\guide\template .\template
 
-mkdir .\txCache
-xcopy /Q /E /Y ..\BreastRadiology2020FebBallot\IG\guide\txCache .\txCache
-
-copy ..\BreastRadiology2020FebBallot\IG\guide\.gitignore .\.gitignore
-copy ..\BreastRadiology2020FebBallot\IG\guide\ig.ini .\ig.ini
-copy ..\BreastRadiology2020FebBallot\IG\guide\package-list.json .\package-list.json
+copy ..\BreastRadiologyProfiles\IG\guide\.gitignore .\.gitignore
+copy ..\BreastRadiologyProfiles\IG\guide\ig.ini .\ig.ini
+copy ..\BreastRadiologyProfiles\IG\guide\package-list.json .\package-list.json
 
 pause
 
