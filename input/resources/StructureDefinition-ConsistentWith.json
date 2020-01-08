@@ -17,7 +17,7 @@
       ]
     }
   ],
-  "description": "Breast Radiology 'Consistent With' Observation\n\nIf this observation is present, and dataAbsentReason is empty, then a consistentWith was observed.\n\n\nIf this observation is present, and dataAbsentReason is not empty, then a consistentWith was not observed and dataAbsentReason contains the reason why.\n\n\n*** TODO Items ***** There is a CodeSystem and ValueSet created solely to identify the the component slices. Is this appropriate",
+  "description": "Breast Radiology 'Consistent With' Observation\n\nIf this observation is present, and dataAbsentReason is empty, then a consistentWith was observed.\n\n\nIf this observation is present, and dataAbsentReason is not empty, then a consistentWith was not observed and dataAbsentReason contains the reason why.",
   "fhirVersion": "4.0.0",
   "kind": "resource",
   "abstract": false,
@@ -30,7 +30,7 @@
         "id": "Observation",
         "path": "Observation",
         "short": "Breast Radiology 'Consistent With' Observation",
-        "definition": "If this observation is present, and dataAbsentReason is empty, then a consistentWith was observed.\n\n\nIf this observation is present, and dataAbsentReason is not empty, then a consistentWith was not observed and dataAbsentReason contains the reason why.\n\n\n*** TODO Items ***** There is a CodeSystem and ValueSet created solely to identify the the component slices. Is this appropriate",
+        "definition": "If this observation is present, and dataAbsentReason is empty, then a consistentWith was observed.\n\n\nIf this observation is present, and dataAbsentReason is not empty, then a consistentWith was not observed and dataAbsentReason contains the reason why.",
         "comment": "Used for simple observations such as device measurements, laboratory atomic results, vital signs, height, weight, smoking status, comments, etc.  Other resources are used to provide context for observations such as laboratory reports, etc.",
         "alias": [
           "Vital Signs",
@@ -1862,7 +1862,7 @@
         "definition": "This observation is a group observation (e.g. a battery, a panel of tests, a set of vital sign measurements) that includes the target as a member of the group.",
         "comment": "When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.  Note that a system may calculate results from [QuestionnaireResponse](questionnaireresponse.html)  into a final score and represent the score as an Observation.",
         "min": 0,
-        "max": "*",
+        "max": "0",
         "base": {
           "path": "Observation.hasMember",
           "min": 0,
@@ -1947,7 +1947,7 @@
         "comment": "For a discussion on the ways Observations can be assembled in groups together see [Notes](observation.html#notes) below.",
         "requirements": "Component observations share the same attributes in the Observation resource as the primary observation and are always treated a part of a single observation (they are not separable).   However, the reference range for the primary observation value is not inherited by the component values and is required when appropriate for each component observation.",
         "min": 0,
-        "max": "*",
+        "max": "0",
         "base": {
           "path": "Observation.component",
           "min": 0,
@@ -3068,7 +3068,7 @@
         "id": "Observation",
         "path": "Observation",
         "short": "Breast Radiology 'Consistent With' Observation",
-        "definition": "If this observation is present, and dataAbsentReason is empty, then a consistentWith was observed.\n\n\nIf this observation is present, and dataAbsentReason is not empty, then a consistentWith was not observed and dataAbsentReason contains the reason why.\n\n\n*** TODO Items ***** There is a CodeSystem and ValueSet created solely to identify the the component slices. Is this appropriate",
+        "definition": "If this observation is present, and dataAbsentReason is empty, then a consistentWith was observed.\n\n\nIf this observation is present, and dataAbsentReason is not empty, then a consistentWith was not observed and dataAbsentReason contains the reason why.",
         "base": {
           "path": "Observation",
           "min": 0,
@@ -3227,6 +3227,17 @@
         }
       },
       {
+        "id": "Observation.hasMember",
+        "path": "Observation.hasMember",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "Observation.hasMember",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
         "id": "Observation.component",
         "path": "Observation.component",
         "slicing": {
@@ -3238,6 +3249,8 @@
           ],
           "rules": "open"
         },
+        "min": 0,
+        "max": "0",
         "base": {
           "path": "Observation.component",
           "min": 0,

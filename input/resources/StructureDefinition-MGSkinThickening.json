@@ -17,7 +17,7 @@
       ]
     }
   ],
-  "description": "Mammography Skin Thickening Observation\n\nSkin thickening may be focal or diffuse, and is defined as being greater than 2 mm in thickness. This \nfinding is of particular concern if it represents a change from previous mammography examinations. \nHowever, unilateral skin thickening is an expected finding after radiation therapy.\n-- Bi-Rads® Atlas — Mammography Fifth Ed. 2013 \n*** TODO Items ***** Add choice for focal or diffuse (see definition)?",
+  "description": "Mammography Skin Thickening Observation\n\nSkin thickening may be focal or diffuse, and is defined as being greater than 2 mm in thickness. This \nfinding is of particular concern if it represents a change from previous mammography examinations. \nHowever, unilateral skin thickening is an expected finding after radiation therapy.\n-- Bi-Rads® Atlas — Mammography Fifth Ed. 2013",
   "fhirVersion": "4.0.0",
   "kind": "resource",
   "abstract": false,
@@ -30,7 +30,7 @@
         "id": "Observation",
         "path": "Observation",
         "short": "Mammography Skin Thickening Observation",
-        "definition": "Skin thickening may be focal or diffuse, and is defined as being greater than 2 mm in thickness. This \nfinding is of particular concern if it represents a change from previous mammography examinations. \nHowever, unilateral skin thickening is an expected finding after radiation therapy.\n-- Bi-Rads® Atlas — Mammography Fifth Ed. 2013 \n*** TODO Items ***** Add choice for focal or diffuse (see definition)?",
+        "definition": "Skin thickening may be focal or diffuse, and is defined as being greater than 2 mm in thickness. This \nfinding is of particular concern if it represents a change from previous mammography examinations. \nHowever, unilateral skin thickening is an expected finding after radiation therapy.\n-- Bi-Rads® Atlas — Mammography Fifth Ed. 2013",
         "comment": "Used for simple observations such as device measurements, laboratory atomic results, vital signs, height, weight, smoking status, comments, etc.  Other resources are used to provide context for observations such as laboratory reports, etc.",
         "alias": [
           "Vital Signs",
@@ -1907,7 +1907,7 @@
         "definition": "This observation is a group observation (e.g. a battery, a panel of tests, a set of vital sign measurements) that includes the target as a member of the group.",
         "comment": "When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.  Note that a system may calculate results from [QuestionnaireResponse](questionnaireresponse.html)  into a final score and represent the score as an Observation.",
         "min": 0,
-        "max": "*",
+        "max": "0",
         "base": {
           "path": "Observation.hasMember",
           "min": 0,
@@ -2368,7 +2368,7 @@
         "id": "Observation",
         "path": "Observation",
         "short": "Mammography Skin Thickening Observation",
-        "definition": "Skin thickening may be focal or diffuse, and is defined as being greater than 2 mm in thickness. This \nfinding is of particular concern if it represents a change from previous mammography examinations. \nHowever, unilateral skin thickening is an expected finding after radiation therapy.\n-- Bi-Rads® Atlas — Mammography Fifth Ed. 2013 \n*** TODO Items ***** Add choice for focal or diffuse (see definition)?",
+        "definition": "Skin thickening may be focal or diffuse, and is defined as being greater than 2 mm in thickness. This \nfinding is of particular concern if it represents a change from previous mammography examinations. \nHowever, unilateral skin thickening is an expected finding after radiation therapy.\n-- Bi-Rads® Atlas — Mammography Fifth Ed. 2013",
         "base": {
           "path": "Observation",
           "min": 0,
@@ -2576,6 +2576,17 @@
         "max": "0",
         "base": {
           "path": "Observation.referenceRange",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Observation.hasMember",
+        "path": "Observation.hasMember",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "Observation.hasMember",
           "min": 0,
           "max": "*"
         }

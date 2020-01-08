@@ -17,7 +17,7 @@
       ]
     }
   ],
-  "description": "Breast Radiology Mammography Finding\n\n*** TODO Items ***** Device Metrics detailing the observation devices parameters (transducer freq, etc).",
+  "description": "Breast Radiology Mammography Finding",
   "fhirVersion": "4.0.0",
   "kind": "resource",
   "abstract": false,
@@ -30,7 +30,7 @@
         "id": "Observation",
         "path": "Observation",
         "short": "Breast Radiology Mammography Finding",
-        "definition": "*** TODO Items ***** Device Metrics detailing the observation devices parameters (transducer freq, etc).",
+        "definition": "Measurements and simple assertions made about a patient, device or other subject.",
         "comment": "Used for simple observations such as device measurements, laboratory atomic results, vital signs, height, weight, smoking status, comments, etc.  Other resources are used to provide context for observations such as laboratory reports, etc.",
         "alias": [
           "Vital Signs",
@@ -2287,41 +2287,6 @@
         ]
       },
       {
-        "id": "Observation.hasMember:mGSkinLesion",
-        "path": "Observation.hasMember",
-        "sliceName": "mGSkinLesion",
-        "short": "'Mammography Skin Lesion' reference",
-        "definition": "This slice references the target 'Mammography Skin Lesion'",
-        "comment": "When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.  Note that a system may calculate results from [QuestionnaireResponse](questionnaireresponse.html)  into a final score and represent the score as an Observation.",
-        "min": 0,
-        "max": "*",
-        "base": {
-          "path": "Observation.hasMember",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGSkinLesion"
-            ]
-          }
-        ],
-        "isModifier": false,
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "Relationships established by OBX-4 usage"
-          },
-          {
-            "identity": "rim",
-            "map": "outBoundRelationship"
-          }
-        ]
-      },
-      {
         "id": "Observation.hasMember:mGAssociatedFeatures",
         "path": "Observation.hasMember",
         "sliceName": "mGAssociatedFeatures",
@@ -2375,6 +2340,41 @@
             "code": "Reference",
             "targetProfile": [
               "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGBreastDensity"
+            ]
+          }
+        ],
+        "isModifier": false,
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "Relationships established by OBX-4 usage"
+          },
+          {
+            "identity": "rim",
+            "map": "outBoundRelationship"
+          }
+        ]
+      },
+      {
+        "id": "Observation.hasMember:mGSkinLesion",
+        "path": "Observation.hasMember",
+        "sliceName": "mGSkinLesion",
+        "short": "'Mammography Skin Lesion' reference",
+        "definition": "This slice references the target 'Mammography Skin Lesion'",
+        "comment": "When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.  Note that a system may calculate results from [QuestionnaireResponse](questionnaireresponse.html)  into a final score and represent the score as an Observation.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Observation.hasMember",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGSkinLesion"
             ]
           }
         ],
@@ -2823,7 +2823,6 @@
         "id": "Observation",
         "path": "Observation",
         "short": "Breast Radiology Mammography Finding",
-        "definition": "*** TODO Items ***** Device Metrics detailing the observation devices parameters (transducer freq, etc).",
         "base": {
           "path": "Observation",
           "min": 0,
@@ -3386,41 +3385,6 @@
         ]
       },
       {
-        "id": "Observation.hasMember:mGSkinLesion",
-        "path": "Observation.hasMember",
-        "sliceName": "mGSkinLesion",
-        "short": "'Mammography Skin Lesion' reference",
-        "definition": "This slice references the target 'Mammography Skin Lesion'",
-        "comment": "When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.  Note that a system may calculate results from [QuestionnaireResponse](questionnaireresponse.html)  into a final score and represent the score as an Observation.",
-        "min": 0,
-        "max": "*",
-        "base": {
-          "path": "Observation.hasMember",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGSkinLesion"
-            ]
-          }
-        ],
-        "isModifier": false,
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "Relationships established by OBX-4 usage"
-          },
-          {
-            "identity": "rim",
-            "map": "outBoundRelationship"
-          }
-        ]
-      },
-      {
         "id": "Observation.hasMember:mGAssociatedFeatures",
         "path": "Observation.hasMember",
         "sliceName": "mGAssociatedFeatures",
@@ -3474,6 +3438,41 @@
             "code": "Reference",
             "targetProfile": [
               "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGBreastDensity"
+            ]
+          }
+        ],
+        "isModifier": false,
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "Relationships established by OBX-4 usage"
+          },
+          {
+            "identity": "rim",
+            "map": "outBoundRelationship"
+          }
+        ]
+      },
+      {
+        "id": "Observation.hasMember:mGSkinLesion",
+        "path": "Observation.hasMember",
+        "sliceName": "mGSkinLesion",
+        "short": "'Mammography Skin Lesion' reference",
+        "definition": "This slice references the target 'Mammography Skin Lesion'",
+        "comment": "When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.  Note that a system may calculate results from [QuestionnaireResponse](questionnaireresponse.html)  into a final score and represent the score as an Observation.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Observation.hasMember",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGSkinLesion"
             ]
           }
         ],
