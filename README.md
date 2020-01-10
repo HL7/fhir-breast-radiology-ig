@@ -1,15 +1,14 @@
-# fhir-breast-radiology-ig
-FHIR Breast Radiology IG
+### FHIR Breast Radiology IG
 
 Welcome to the FHIR Breast Radiology IG.
 
 This repository contains the files to create the FHIR Breast Radiology Implementation guide.
 
-### The most recent build version of the guide can be found at:
+### Authors:  Kurt W. Allen, Richard Esmond
+
+### The current build version of this guide can be found at:
 http://build.fhir.org/ig/HL7/fhir-breast-radiology-ig/
 
-
-Authors:  Kurt W. Allen, Richard Esmond
 
 -----
 
@@ -17,7 +16,7 @@ Authors:  Kurt W. Allen, Richard Esmond
 https://github.com/HL7/fhir-breast-radiology-ig/projects/1/
 
 -----
-FHIR R4 Implementation Guide
+### FHIR R4 Implementation Guide
 
 GitHub will automatically trigger a new build whenever you commit changes.
 
