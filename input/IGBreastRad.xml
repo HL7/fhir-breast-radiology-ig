@@ -307,6 +307,15 @@
     </resource>
     <resource>
       <reference>
+        <reference value="CodeSystem/ObservedFeatureCS" />
+      </reference>
+      <name value="Observed Feature CodeSystem" />
+      <description value="Observed Feature seen during a breast examination." />
+      <exampleBoolean value="false" />
+      <groupingId value="CommonCodesCS" />
+    </resource>
+    <resource>
+      <reference>
         <reference value="CodeSystem/OrientationCS" />
       </reference>
       <name value="Orientation CodeSystem" />
@@ -322,6 +331,15 @@
       <description value="Shape values code system." />
       <exampleBoolean value="false" />
       <groupingId value="CommonCodesCS" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="ValueSet/AbnormalitiesVS" />
+      </reference>
+      <name value="Foreign Object ValueSet" />
+      <description value="Foreign objects observed during a Breast Radiology exam value set" />
+      <exampleBoolean value="false" />
+      <groupingId value="CommonCodesVS" />
     </resource>
     <resource>
       <reference>
@@ -514,6 +532,15 @@
     </resource>
     <resource>
       <reference>
+        <reference value="ValueSet/ObservedFeatureVS" />
+      </reference>
+      <name value="Observed Feature ValueSet" />
+      <description value="Observed feature observed during a Breast Radiology exam value set" />
+      <exampleBoolean value="false" />
+      <groupingId value="CommonCodesVS" />
+    </resource>
+    <resource>
+      <reference>
         <reference value="ValueSet/OrientationVS" />
       </reference>
       <name value="Orientation ValueSet" />
@@ -586,6 +613,33 @@
     </resource>
     <resource>
       <reference>
+        <reference value="StructureDefinition/AbnormalityForeignObject" />
+      </reference>
+      <name value="Foreign Object" />
+      <description value="Foreign Object Observation" />
+      <exampleBoolean value="false" />
+      <groupingId value="CommonResources" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/AssociatedFeatures" />
+      </reference>
+      <name value="Associated Features" />
+      <description value="Associated Features Observation" />
+      <exampleBoolean value="false" />
+      <groupingId value="CommonResources" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/ObservedFeature" />
+      </reference>
+      <name value="Observed Feature" />
+      <description value="Observed Feature Observation" />
+      <exampleBoolean value="false" />
+      <groupingId value="CommonResources" />
+    </resource>
+    <resource>
+      <reference>
         <reference value="StructureDefinition/Impression" />
       </reference>
       <name value="Impression" />
@@ -598,7 +652,7 @@
         <reference value="StructureDefinition/ConsistentWith" />
       </reference>
       <name value="Consistent With" />
-      <description value="Breast Radiology 'Consistent With' Observation" />
+      <description value="'Consistent With' Observation" />
       <exampleBoolean value="false" />
       <groupingId value="CommonResources" />
     </resource>
@@ -651,7 +705,7 @@
       <reference>
         <reference value="StructureDefinition/MGFinding" />
       </reference>
-      <name value="Mammographi Finding" />
+      <name value="Mammography Finding" />
       <description value="Breast Radiology Mammography Finding" />
       <exampleBoolean value="false" />
       <groupingId value="MGResources" />
@@ -661,7 +715,7 @@
         <reference value="StructureDefinition/MGAbnormalityArchitecturalDistortion" />
       </reference>
       <name value="Mammography Architectural Distortion" />
-      <description value="Breast Radiology Mammography Architectural Distortion Observation" />
+      <description value="Architectural Distortion Observation" />
       <exampleBoolean value="false" />
       <groupingId value="MGResources" />
     </resource>
@@ -670,7 +724,7 @@
         <reference value="StructureDefinition/MGAbnormalityAsymmetry" />
       </reference>
       <name value="Mammography Asymmetry" />
-      <description value="Breast Radiology Mammography Asymmetry Observation" />
+      <description value="Asymmetry Observation" />
       <exampleBoolean value="false" />
       <groupingId value="MGResources" />
     </resource>
@@ -679,7 +733,7 @@
         <reference value="StructureDefinition/MGAbnormalityCyst" />
       </reference>
       <name value="Mammography Cyst" />
-      <description value="Breast Radiology Mammography Cyst Observation" />
+      <description value="Cyst Observation" />
       <exampleBoolean value="false" />
       <groupingId value="MGResources" />
     </resource>
@@ -706,7 +760,7 @@
         <reference value="StructureDefinition/MGAbnormalityFatNecrosis" />
       </reference>
       <name value="Mammography Fat Necrosis" />
-      <description value="Breast Radiology Mammography Fat Necrosis Observation" />
+      <description value="Fat Necrosis Observation" />
       <exampleBoolean value="false" />
       <groupingId value="MGResources" />
     </resource>
@@ -715,7 +769,7 @@
         <reference value="StructureDefinition/MGAbnormalityFibroadenoma" />
       </reference>
       <name value="Mammography Fibroadenoma" />
-      <description value="Breast Radiology Mammography Fibroadenoma Observation" />
+      <description value="Fibroadenoma Observation" />
       <exampleBoolean value="false" />
       <groupingId value="MGResources" />
     </resource>
@@ -733,7 +787,7 @@
         <reference value="StructureDefinition/MGAbnormalityLymphNode" />
       </reference>
       <name value="Mammography LymphNode" />
-      <description value="Breast Radiology Mammography LymphNode Observation" />
+      <description value="LymphNode Observation" />
       <exampleBoolean value="false" />
       <groupingId value="MGResources" />
     </resource>
@@ -787,7 +841,7 @@
         <reference value="StructureDefinition/MGBreastDensity" />
       </reference>
       <name value="Mammography Breast Density" />
-      <description value="Breast Radiology Mammography Breast Density Observation" />
+      <description value="Breast Density Observation" />
       <exampleBoolean value="false" />
       <groupingId value="MGResources" />
     </resource>
@@ -796,7 +850,7 @@
         <reference value="StructureDefinition/MGAbnormalityCalcification" />
       </reference>
       <name value="Mammography Calcification" />
-      <description value="Breast Radiology Mammography Calcification Observation" />
+      <description value="Calcification Observation" />
       <exampleBoolean value="false" />
       <groupingId value="MGResources" />
     </resource>
@@ -805,7 +859,7 @@
         <reference value="StructureDefinition/MGMass" />
       </reference>
       <name value="Mammography Mass" />
-      <description value="Breast Radiology Mammography Mass Observation" />
+      <description value="Mass Observation" />
       <exampleBoolean value="false" />
       <groupingId value="MGResources" />
     </resource>
@@ -923,6 +977,15 @@
       </reference>
       <name value="CodedValue Observation Fragment" />
       <description value="Fragment 'Fragment that defines values for coded observations'" />
+      <exampleBoolean value="false" />
+      <groupingId value="Fragments" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/CommonTargetsFragment" />
+      </reference>
+      <name value="Common Targets Fragment" />
+      <description value="Fragment 'Common Targets Fragment'" />
       <exampleBoolean value="false" />
       <groupingId value="Fragments" />
     </resource>

@@ -17,7 +17,7 @@
       ]
     }
   ],
-  "description": "Breast Radiology Mammography Cyst Observation\n\n[PR]\n\n\nIf this observation is present, and dataAbsentReason is empty, then a cyst was observed.\n\n\nIf this observation is present, and dataAbsentReason is not empty, then a cyst was not observed and dataAbsentReason contains the reason why.",
+  "description": "Cyst Observation\n\n[PR]\n\n\nIf this observation is present, and dataAbsentReason is empty, then a cyst was observed.\n\n\nIf this observation is present, and dataAbsentReason is not empty, then a cyst was not observed and dataAbsentReason contains the reason why.",
   "fhirVersion": "4.0.0",
   "kind": "resource",
   "abstract": false,
@@ -29,7 +29,7 @@
       {
         "id": "Observation",
         "path": "Observation",
-        "short": "Breast Radiology Mammography Cyst Observation",
+        "short": "Cyst Observation",
         "definition": "[PR]\n\n\nIf this observation is present, and dataAbsentReason is empty, then a cyst was observed.\n\n\nIf this observation is present, and dataAbsentReason is not empty, then a cyst was not observed and dataAbsentReason contains the reason why.",
         "comment": "Used for simple observations such as device measurements, laboratory atomic results, vital signs, height, weight, smoking status, comments, etc.  Other resources are used to provide context for observations such as laboratory reports, etc.",
         "alias": [
@@ -1947,11 +1947,11 @@
         ]
       },
       {
-        "id": "Observation.hasMember:mGAssociatedFeatures",
+        "id": "Observation.hasMember:associatedFeatures",
         "path": "Observation.hasMember",
-        "sliceName": "mGAssociatedFeatures",
-        "short": "'Mammography Associated Features' reference",
-        "definition": "This slice references the target 'Mammography Associated Features'",
+        "sliceName": "associatedFeatures",
+        "short": "'Associated Features' reference",
+        "definition": "This slice references the target 'Associated Features'",
         "comment": "When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.  Note that a system may calculate results from [QuestionnaireResponse](questionnaireresponse.html)  into a final score and represent the score as an Observation.",
         "min": 0,
         "max": "1",
@@ -1964,7 +1964,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGAssociatedFeatures"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AssociatedFeatures"
             ]
           }
         ],
@@ -5833,7 +5833,7 @@
       {
         "id": "Observation",
         "path": "Observation",
-        "short": "Breast Radiology Mammography Cyst Observation",
+        "short": "Cyst Observation",
         "definition": "[PR]\n\n\nIf this observation is present, and dataAbsentReason is empty, then a cyst was observed.\n\n\nIf this observation is present, and dataAbsentReason is not empty, then a cyst was not observed and dataAbsentReason contains the reason why.",
         "base": {
           "path": "Observation",
@@ -6068,11 +6068,11 @@
         }
       },
       {
-        "id": "Observation.hasMember:mGAssociatedFeatures",
+        "id": "Observation.hasMember:associatedFeatures",
         "path": "Observation.hasMember",
-        "sliceName": "mGAssociatedFeatures",
-        "short": "'Mammography Associated Features' reference",
-        "definition": "This slice references the target 'Mammography Associated Features'",
+        "sliceName": "associatedFeatures",
+        "short": "'Associated Features' reference",
+        "definition": "This slice references the target 'Associated Features'",
         "comment": "When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.  Note that a system may calculate results from [QuestionnaireResponse](questionnaireresponse.html)  into a final score and represent the score as an Observation.",
         "min": 0,
         "max": "1",
@@ -6085,7 +6085,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGAssociatedFeatures"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AssociatedFeatures"
             ]
           }
         ],
