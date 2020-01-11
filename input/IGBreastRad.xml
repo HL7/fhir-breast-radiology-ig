@@ -109,6 +109,33 @@
     </grouping>
     <resource>
       <reference>
+        <reference value="CodeSystem/AbnormalityCystTypeCS" />
+      </reference>
+      <name value="Cyst Type CodeSystem" />
+      <description value="Cyst abnormality type CodeSystem." />
+      <exampleBoolean value="false" />
+      <groupingId value="CommonCodesCS" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="CodeSystem/AbnormalityDuctCS" />
+      </reference>
+      <name value="Duct Type CodeSystem" />
+      <description value="Duct abnormality types code system." />
+      <exampleBoolean value="false" />
+      <groupingId value="CommonCodesCS" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="CodeSystem/AbnormalityLymphNodeCS" />
+      </reference>
+      <name value="Lymph Node Type CodeSystem" />
+      <description value="Lymph node abnormality types code system." />
+      <exampleBoolean value="false" />
+      <groupingId value="CommonCodesCS" />
+    </resource>
+    <resource>
+      <reference>
         <reference value="CodeSystem/BiRadsAssessmentCategoriesCS" />
       </reference>
       <name value="BiRads(r) Assessment Category Codes CodeSystem" />
@@ -244,37 +271,10 @@
     </resource>
     <resource>
       <reference>
-        <reference value="CodeSystem/MGAbnormalityCystTypeCS" />
-      </reference>
-      <name value="Mammography Cyst Type CodeSystem" />
-      <description value="Mammography cyst abnormality type CodeSystem." />
-      <exampleBoolean value="false" />
-      <groupingId value="MGCodesCS" />
-    </resource>
-    <resource>
-      <reference>
         <reference value="CodeSystem/MGAbnormalityDensityTypeCS" />
       </reference>
       <name value="Mammography Density Type CodeSystem" />
       <description value="Mammography density abnormality refinement types code system." />
-      <exampleBoolean value="false" />
-      <groupingId value="MGCodesCS" />
-    </resource>
-    <resource>
-      <reference>
-        <reference value="CodeSystem/MGAbnormalityDuctCS" />
-      </reference>
-      <name value="Mammography Duct Type CodeSystem" />
-      <description value="Mammography duct abnormality types code system." />
-      <exampleBoolean value="false" />
-      <groupingId value="MGCodesCS" />
-    </resource>
-    <resource>
-      <reference>
-        <reference value="CodeSystem/MGAbnormalityLymphNodeCS" />
-      </reference>
-      <name value="Mammography Lymph Node Type CodeSystem" />
-      <description value="Mammography lymph node abnormality types code system." />
       <exampleBoolean value="false" />
       <groupingId value="MGCodesCS" />
     </resource>
@@ -338,6 +338,33 @@
       </reference>
       <name value="Foreign Object ValueSet" />
       <description value="Foreign objects observed during a Breast Radiology exam value set" />
+      <exampleBoolean value="false" />
+      <groupingId value="CommonCodesVS" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="ValueSet/AbnormalityCystVS" />
+      </reference>
+      <name value="Cyst Abnormalities ValueSet" />
+      <description value="Cyst abnormality types value set." />
+      <exampleBoolean value="false" />
+      <groupingId value="CommonCodesVS" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="ValueSet/AbnormalityDuctVS" />
+      </reference>
+      <name value="Duct ValueSet" />
+      <description value="Duct node abnormality types value set." />
+      <exampleBoolean value="false" />
+      <groupingId value="CommonCodesVS" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="ValueSet/AbnormalityLymphNodeVS" />
+      </reference>
+      <name value="Lymph Node ValueSet" />
+      <description value="lymph node abnormality types value set." />
       <exampleBoolean value="false" />
       <groupingId value="CommonCodesVS" />
     </resource>
@@ -447,16 +474,7 @@
       <name value="Mass Type ValueSet" />
       <description value="Mass type value set." />
       <exampleBoolean value="false" />
-      <groupingId value="MGCodesVS" />
-    </resource>
-    <resource>
-      <reference>
-        <reference value="ValueSet/MGAbnormalitiesVS" />
-      </reference>
-      <name value="Foreign Object ValueSet" />
-      <description value="Foreign objects observed during a Breast Radiology exam value set" />
-      <exampleBoolean value="false" />
-      <groupingId value="MGCodesVS" />
+      <groupingId value="CommonCodesVS" />
     </resource>
     <resource>
       <reference>
@@ -469,37 +487,10 @@
     </resource>
     <resource>
       <reference>
-        <reference value="ValueSet/MGAbnormalityCystVS" />
-      </reference>
-      <name value="Mammography CystAbnormalities ValueSet" />
-      <description value="Mammography cyst abnormality types value set." />
-      <exampleBoolean value="false" />
-      <groupingId value="MGCodesVS" />
-    </resource>
-    <resource>
-      <reference>
         <reference value="ValueSet/MGAbnormalityDensityTypeVS" />
       </reference>
       <name value="Mammography Density Type ValueSet" />
       <description value="Mammography density abnormality refinement value set." />
-      <exampleBoolean value="false" />
-      <groupingId value="MGCodesVS" />
-    </resource>
-    <resource>
-      <reference>
-        <reference value="ValueSet/MGAbnormalityDuctVS" />
-      </reference>
-      <name value="Mammography Duct ValueSet" />
-      <description value="Mammography duct node abnormality types value set." />
-      <exampleBoolean value="false" />
-      <groupingId value="MGCodesVS" />
-    </resource>
-    <resource>
-      <reference>
-        <reference value="ValueSet/MGAbnormalityLymphNodeVS" />
-      </reference>
-      <name value="Mammography Lymph Node ValueSet" />
-      <description value="Mammography lymph node abnormality types value set." />
       <exampleBoolean value="false" />
       <groupingId value="MGCodesVS" />
     </resource>
@@ -613,10 +604,46 @@
     </resource>
     <resource>
       <reference>
+        <reference value="StructureDefinition/AbnormalityCyst" />
+      </reference>
+      <name value="Cyst" />
+      <description value="Cyst Observation" />
+      <exampleBoolean value="false" />
+      <groupingId value="CommonResources" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/AbnormalityDuct" />
+      </reference>
+      <name value="Duct" />
+      <description value="Breat Radiology Duct Observation" />
+      <exampleBoolean value="false" />
+      <groupingId value="CommonResources" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/AbnormalityFibroadenoma" />
+      </reference>
+      <name value="Fibroadenoma" />
+      <description value="Fibroadenoma Observation" />
+      <exampleBoolean value="false" />
+      <groupingId value="CommonResources" />
+    </resource>
+    <resource>
+      <reference>
         <reference value="StructureDefinition/AbnormalityForeignObject" />
       </reference>
       <name value="Foreign Object" />
       <description value="Foreign Object Observation" />
+      <exampleBoolean value="false" />
+      <groupingId value="CommonResources" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/AbnormalityLymphNode" />
+      </reference>
+      <name value="LymphNode" />
+      <description value="LymphNode Observation" />
       <exampleBoolean value="false" />
       <groupingId value="CommonResources" />
     </resource>
@@ -653,6 +680,15 @@
       </reference>
       <name value="Consistent With" />
       <description value="'Consistent With' Observation" />
+      <exampleBoolean value="false" />
+      <groupingId value="CommonResources" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/Mass" />
+      </reference>
+      <name value="Mass" />
+      <description value="Mass Observation" />
       <exampleBoolean value="false" />
       <groupingId value="CommonResources" />
     </resource>
@@ -730,15 +766,6 @@
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/MGAbnormalityCyst" />
-      </reference>
-      <name value="Mammography Cyst" />
-      <description value="Cyst Observation" />
-      <exampleBoolean value="false" />
-      <groupingId value="MGResources" />
-    </resource>
-    <resource>
-      <reference>
         <reference value="StructureDefinition/MGAbnormalityDensity" />
       </reference>
       <name value="Mammography Density" />
@@ -748,91 +775,10 @@
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/MGAbnormalityDuct" />
-      </reference>
-      <name value="Mammography Duct" />
-      <description value="Breat Radiology Mammography Duct Observation" />
-      <exampleBoolean value="false" />
-      <groupingId value="MGResources" />
-    </resource>
-    <resource>
-      <reference>
         <reference value="StructureDefinition/MGAbnormalityFatNecrosis" />
       </reference>
       <name value="Mammography Fat Necrosis" />
       <description value="Fat Necrosis Observation" />
-      <exampleBoolean value="false" />
-      <groupingId value="MGResources" />
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/MGAbnormalityFibroadenoma" />
-      </reference>
-      <name value="Mammography Fibroadenoma" />
-      <description value="Fibroadenoma Observation" />
-      <exampleBoolean value="false" />
-      <groupingId value="MGResources" />
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/MGAbnormalityForeignObject" />
-      </reference>
-      <name value="Foreign Object" />
-      <description value="Breast Radiology Foreign Object Observation" />
-      <exampleBoolean value="false" />
-      <groupingId value="MGResources" />
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/MGAbnormalityLymphNode" />
-      </reference>
-      <name value="Mammography LymphNode" />
-      <description value="LymphNode Observation" />
-      <exampleBoolean value="false" />
-      <groupingId value="MGResources" />
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/MGAssociatedFeatures" />
-      </reference>
-      <name value="Mammography Associated Features" />
-      <description value="Mammography Associated Features Observation" />
-      <exampleBoolean value="false" />
-      <groupingId value="MGResources" />
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/MGAxillaryAdenopathy" />
-      </reference>
-      <name value="Mammography Axillary Adenopathy" />
-      <description value="Breast Radiology Mammography Axillary Adenopathy Observation" />
-      <exampleBoolean value="false" />
-      <groupingId value="MGResources" />
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/MGNippleRetraction" />
-      </reference>
-      <name value="Mammography Nipple Retraction" />
-      <description value="Breast Radiology Mammography Nipple Retraction Observation" />
-      <exampleBoolean value="false" />
-      <groupingId value="MGResources" />
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/MGSkinRetraction" />
-      </reference>
-      <name value="Mammography Skin Retraction" />
-      <description value="Mammography Skin Retraction Observation" />
-      <exampleBoolean value="false" />
-      <groupingId value="MGResources" />
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/MGSkinThickening" />
-      </reference>
-      <name value="Mammography Skin Thickening" />
-      <description value="Mammography Skin Thickening Observation" />
       <exampleBoolean value="false" />
       <groupingId value="MGResources" />
     </resource>
@@ -851,24 +797,6 @@
       </reference>
       <name value="Mammography Calcification" />
       <description value="Calcification Observation" />
-      <exampleBoolean value="false" />
-      <groupingId value="MGResources" />
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/MGMass" />
-      </reference>
-      <name value="Mammography Mass" />
-      <description value="Mass Observation" />
-      <exampleBoolean value="false" />
-      <groupingId value="MGResources" />
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/MGSkinLesion" />
-      </reference>
-      <name value="Mammography Skin Lesion" />
-      <description value="Breast Radiology Mammography Skin Lesion Observation" />
       <exampleBoolean value="false" />
       <groupingId value="MGResources" />
     </resource>
@@ -1009,24 +937,6 @@
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/MgCommonTargetsFragment" />
-      </reference>
-      <name value="MG Common Targets Fragment" />
-      <description value="Fragment 'Mammography Common Targets Fragment'" />
-      <exampleBoolean value="false" />
-      <groupingId value="Fragments" />
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/MgShapeTargetsFragment" />
-      </reference>
-      <name value="MG Shape Targets Fragment" />
-      <description value="Fragment 'Mammography Shape Targets Fragment'" />
-      <exampleBoolean value="false" />
-      <groupingId value="Fragments" />
-    </resource>
-    <resource>
-      <reference>
         <reference value="StructureDefinition/ObservationLeafFragment" />
       </reference>
       <name value="Observation Leaf Fragment" />
@@ -1040,6 +950,15 @@
       </reference>
       <name value="Observation Section Fragment" />
       <description value="Fragment 'Fragment that constrains Observations to be sections.'" />
+      <exampleBoolean value="false" />
+      <groupingId value="Fragments" />
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/ShapeTargetsFragment" />
+      </reference>
+      <name value="Shape Targets Fragment" />
+      <description value="Fragment 'Mammography Shape Targets Fragment'" />
       <exampleBoolean value="false" />
       <groupingId value="Fragments" />
     </resource>

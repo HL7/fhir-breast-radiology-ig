@@ -1,0 +1,51 @@
+{
+  "resourceType": "ValueSet",
+  "id": "AbnormalityCystVS",
+  "url": "http://hl7.org/fhir/us/breast-radiology/ValueSet/AbnormalityCystVS",
+  "version": "0.0.2",
+  "name": "AbnormalityCystVS",
+  "title": "Cyst Abnormalities ValueSet",
+  "status": "draft",
+  "date": "2019-11-01",
+  "publisher": "Hl7-Clinical Interoperability Council",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/cic"
+        }
+      ]
+    }
+  ],
+  "description": "Cyst abnormality types value set.",
+  "compose": {
+    "include": [
+      {
+        "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/AbnormalityCystTypeCS",
+        "concept": [
+          {
+            "code": "Complex",
+            "display": "Complex cyst"
+          },
+          {
+            "code": "Oil",
+            "display": "Oil cyst"
+          },
+          {
+            "code": "Simple",
+            "display": "Simple cyst"
+          },
+          {
+            "code": "Complicated",
+            "display": "Complicated cyst"
+          },
+          {
+            "code": "WithDebris",
+            "display": "Cyst With Debris"
+          }
+        ]
+      }
+    ]
+  }
+}
