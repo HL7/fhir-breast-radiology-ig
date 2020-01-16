@@ -5,7 +5,7 @@
   "name": "BreastRadObservationFragment",
   "title": "BreastRad Observation Fragment",
   "status": "draft",
-  "description": "<b>Observation base fragment</b>\n\nBase fragment that performs common constrains used in all breast radiology observations.",
+  "description": "<b>Observation base fragment</b>\n\nBase fragment that performs common constrains used in all breast radiology observations.<br/>",
   "fhirVersion": "4.0.0",
   "kind": "resource",
   "abstract": true,
@@ -18,7 +18,7 @@
         "id": "Observation",
         "path": "Observation",
         "short": "Observation base fragment",
-        "definition": "Base fragment that performs common constrains used in all breast radiology observations.",
+        "definition": "Base fragment that performs common constrains used in all breast radiology observations.<br/>",
         "comment": "Used for simple observations such as device measurements, laboratory atomic results, vital signs, height, weight, smoking status, comments, etc.  Other resources are used to provide context for observations such as laboratory reports, etc.",
         "alias": [
           "Vital Signs",
@@ -661,8 +661,8 @@
         "definition": "The patient, or group of patients, location, or device this observation is about and into whose record the observation is placed. If the actual focus of the observation is different from the subject (or a sample of, part, or region of the subject), the `focus` element or the `code` itself specifies the actual focus of the observation.",
         "comment": "One would expect this element to be a cardinality of 1..1. The only circumstance in which the subject can be missing is when the observation is made by a device that does not know the patient. In this case, the observation SHALL be matched to a patient through some context/channel matching technique, and at this point, the observation should be updated.",
         "requirements": "Observations have no value if you don't know who or what they're about.",
-        "min": 1,
-        "max": "1",
+        "min": 0,
+        "max": "0",
         "base": {
           "path": "Observation.subject",
           "min": 0,
@@ -2149,7 +2149,7 @@
         "id": "Observation",
         "path": "Observation",
         "short": "Observation base fragment",
-        "definition": "Base fragment that performs common constrains used in all breast radiology observations.",
+        "definition": "Base fragment that performs common constrains used in all breast radiology observations.<br/>",
         "base": {
           "path": "Observation",
           "min": 0,
@@ -2192,8 +2192,8 @@
       {
         "id": "Observation.subject",
         "path": "Observation.subject",
-        "min": 1,
-        "max": "1",
+        "min": 0,
+        "max": "0",
         "base": {
           "path": "Observation.subject",
           "min": 0,
