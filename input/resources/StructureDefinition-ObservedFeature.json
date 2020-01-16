@@ -17,7 +17,7 @@
       ]
     }
   ],
-  "description": "<b>Observed Feature Observation</b>\n\n<p>The feature observed is defined by the codeable concept in the value[x] field.\n</p>",
+  "description": "<b>Observed Feature Observation</b>\n\nThe feature observed is defined by the codeable concept in the value[x] field.",
   "fhirVersion": "4.0.0",
   "kind": "resource",
   "abstract": false,
@@ -30,7 +30,7 @@
         "id": "Observation",
         "path": "Observation",
         "short": "Observed Feature Observation",
-        "definition": "<p>The feature observed is defined by the codeable concept in the value[x] field.\n</p>",
+        "definition": "The feature observed is defined by the codeable concept in the value[x] field.",
         "comment": "Used for simple observations such as device measurements, laboratory atomic results, vital signs, height, weight, smoking status, comments, etc.  Other resources are used to provide context for observations such as laboratory reports, etc.",
         "alias": [
           "Vital Signs",
@@ -2374,7 +2374,7 @@
         "path": "Observation.component",
         "sliceName": "featureType",
         "short": "Observed Feature Type component",
-        "definition": "<p>This slice contains the required component that defines the observed feature.\nThe value of this component is a codeable concept chosen from the ObservedFeatureVS valueset.\n</p>",
+        "definition": "This slice contains the required component that defines the observed feature.The value of this component is a codeable concept chosen from the ObservedFeatureVS valueset.",
         "comment": "This is one component of a group of components that comprise the observation.",
         "requirements": "Component observations share the same attributes in the Observation resource as the primary observation and are always treated a part of a single observation (they are not separable).   However, the reference range for the primary observation value is not inherited by the component values and is required when appropriate for each component observation.",
         "min": 1,
@@ -2569,7 +2569,7 @@
         "id": "Observation.component:featureType.value[x]",
         "path": "Observation.component.value[x]",
         "short": "Observed Feature Type component value",
-        "definition": "<p>Value is a codeable concept.\n</p>",
+        "definition": "Value is a codeable concept.",
         "comment": "Used when observation has a set of component observations. An observation may have both a value (e.g. an  Apgar score)  and component observations (the observations from which the Apgar score was derived). If a value is present, the datatype for this element should be determined by Observation.code. A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.",
         "requirements": "An observation exists to have a value, though it might not if it is in error, or if it represents a group of observations.",
         "min": 1,
@@ -3217,7 +3217,7 @@
         "id": "Observation",
         "path": "Observation",
         "short": "Observed Feature Observation",
-        "definition": "<p>The feature observed is defined by the codeable concept in the value[x] field.\n</p>",
+        "definition": "The feature observed is defined by the codeable concept in the value[x] field.",
         "base": {
           "path": "Observation",
           "min": 0,
@@ -3261,6 +3261,10 @@
         "short": "breastBodyLocation extension",
         "definition": "This extension slice contains the breastBodyLocation extension",
         "comment": "This is one component of a group of components that comprise the observation.",
+        "alias": [
+          "extensions",
+          "user content"
+        ],
         "min": 1,
         "max": "1",
         "base": {
@@ -3276,7 +3280,14 @@
             ]
           }
         ],
-        "isModifier": false
+        "isModifier": false,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
       },
       {
         "id": "Observation.basedOn",
@@ -3465,7 +3476,7 @@
         "path": "Observation.component",
         "sliceName": "featureType",
         "short": "Observed Feature Type component",
-        "definition": "<p>This slice contains the required component that defines the observed feature.\nThe value of this component is a codeable concept chosen from the ObservedFeatureVS valueset.\n</p>",
+        "definition": "This slice contains the required component that defines the observed feature.The value of this component is a codeable concept chosen from the ObservedFeatureVS valueset.",
         "comment": "This is one component of a group of components that comprise the observation.",
         "requirements": "Component observations share the same attributes in the Observation resource as the primary observation and are always treated a part of a single observation (they are not separable).   However, the reference range for the primary observation value is not inherited by the component values and is required when appropriate for each component observation.",
         "min": 1,
@@ -3660,7 +3671,7 @@
         "id": "Observation.component:featureType.value[x]",
         "path": "Observation.component.value[x]",
         "short": "Observed Feature Type component value",
-        "definition": "<p>Value is a codeable concept.\n</p>",
+        "definition": "Value is a codeable concept.",
         "comment": "Used when observation has a set of component observations. An observation may have both a value (e.g. an  Apgar score)  and component observations (the observations from which the Apgar score was derived). If a value is present, the datatype for this element should be determined by Observation.code. A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.",
         "requirements": "An observation exists to have a value, though it might not if it is in error, or if it represents a group of observations.",
         "min": 1,

@@ -5,7 +5,7 @@
   "name": "BreastRadObservationNoValueFragment",
   "title": "BreastRad Observation NoValue Fragment",
   "status": "draft",
-  "description": "<b>Fragment that constrains Observations to have no explicit value.</b>\n\n<p>Base fragment for all BreastRad observations that have no explicit value.\n</p>",
+  "description": "<b>Observation No Value fragment</b>\n\nBase fragment for all BreastRad observations that have no explicit value.",
   "fhirVersion": "4.0.0",
   "kind": "resource",
   "abstract": true,
@@ -17,8 +17,8 @@
       {
         "id": "Observation",
         "path": "Observation",
-        "short": "Fragment that constrains Observations to have no explicit value.",
-        "definition": "<p>Base fragment for all BreastRad observations that have no explicit value.\n</p>",
+        "short": "Observation No Value fragment",
+        "definition": "Base fragment for all BreastRad observations that have no explicit value.",
         "comment": "Used for simple observations such as device measurements, laboratory atomic results, vital signs, height, weight, smoking status, comments, etc.  Other resources are used to provide context for observations such as laboratory reports, etc.",
         "alias": [
           "Vital Signs",
@@ -1323,7 +1323,7 @@
         "comment": "Most observations only have one generic reference range. Systems MAY choose to restrict to only supplying the relevant reference range based on knowledge about the patient (e.g., specific to the patient's age, gender, weight and other factors), but this might not be possible or appropriate. Whenever more than one reference range is supplied, the differences between them SHOULD be provided in the reference range and/or age properties.",
         "requirements": "Knowing what values are considered \"normal\" can help evaluate the significance of a particular result. Need to be able to provide multiple reference ranges for different contexts.",
         "min": 0,
-        "max": "*",
+        "max": "0",
         "base": {
           "path": "Observation.referenceRange",
           "min": 0,
@@ -2148,8 +2148,8 @@
       {
         "id": "Observation",
         "path": "Observation",
-        "short": "Fragment that constrains Observations to have no explicit value.",
-        "definition": "<p>Base fragment for all BreastRad observations that have no explicit value.\n</p>",
+        "short": "Observation No Value fragment",
+        "definition": "Base fragment for all BreastRad observations that have no explicit value.",
         "base": {
           "path": "Observation",
           "min": 0,
@@ -2174,6 +2174,17 @@
         "max": "0",
         "base": {
           "path": "Observation.interpretation",
+          "min": 0,
+          "max": "*"
+        }
+      },
+      {
+        "id": "Observation.referenceRange",
+        "path": "Observation.referenceRange",
+        "min": 0,
+        "max": "0",
+        "base": {
+          "path": "Observation.referenceRange",
           "min": 0,
           "max": "*"
         }

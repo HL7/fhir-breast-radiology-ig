@@ -17,6 +17,7 @@
       ]
     }
   ],
+  "description": "<b>Common Header Fragment</b>\n\nResource fragment used to by all resources to define common values such as Contact and Date.",
   "fhirVersion": "4.0.0",
   "kind": "resource",
   "abstract": true,
@@ -28,8 +29,8 @@
       {
         "id": "Resource",
         "path": "Resource",
-        "short": "Base Resource",
-        "definition": "This is the base resource type for everything.",
+        "short": "Common Header Fragment",
+        "definition": "Resource fragment used to by all resources to define common values such as Contact and Date.",
         "min": 0,
         "max": "*",
         "base": {
@@ -147,6 +148,21 @@
           "strength": "preferred",
           "description": "A human language.",
           "valueSet": "http://hl7.org/fhir/ValueSet/languages"
+        }
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "id": "Resource",
+        "path": "Resource",
+        "short": "Common Header Fragment",
+        "definition": "Resource fragment used to by all resources to define common values such as Contact and Date.",
+        "base": {
+          "path": "Resource",
+          "min": 0,
+          "max": "*"
         }
       }
     ]

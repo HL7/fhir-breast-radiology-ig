@@ -17,7 +17,7 @@
       ]
     }
   ],
-  "description": "<b>Service Recommendation</b>\n\n<p>This resource is a profile of ServiceRequest. It's ServiceRequest.code is bound to a value set of common\nBreast Radiology Exam recommendations. It is not meant to be a comprehensive list, just a common list.\n</p><p>The Breast Radiology Report contains references to zero or more recommendations, which may include ServiceRecommendation instances\nbut is not limited to only ServiceRecommendation instances.\n</p>",
+  "description": "<b>Service Recommendation</b>\n\nThis resource is a profile of ServiceRequest. It's ServiceRequest.code is bound to a value set of commonBreast Radiology Exam recommendations. It is not meant to be a comprehensive list, just a common list.\nThe Breast Radiology Report contains references to zero or more recommendations, which may include ServiceRecommendation instancesbut is not limited to only ServiceRecommendation instances.",
   "fhirVersion": "4.0.0",
   "kind": "resource",
   "abstract": false,
@@ -30,7 +30,7 @@
         "id": "ServiceRequest",
         "path": "ServiceRequest",
         "short": "Service Recommendation",
-        "definition": "<p>This resource is a profile of ServiceRequest. It's ServiceRequest.code is bound to a value set of common\nBreast Radiology Exam recommendations. It is not meant to be a comprehensive list, just a common list.\n</p><p>The Breast Radiology Report contains references to zero or more recommendations, which may include ServiceRecommendation instances\nbut is not limited to only ServiceRecommendation instances.\n</p>",
+        "definition": "This resource is a profile of ServiceRequest. It's ServiceRequest.code is bound to a value set of commonBreast Radiology Exam recommendations. It is not meant to be a comprehensive list, just a common list.\nThe Breast Radiology Report contains references to zero or more recommendations, which may include ServiceRecommendation instancesbut is not limited to only ServiceRecommendation instances.",
         "alias": [
           "diagnostic request",
           "referral",
@@ -1821,7 +1821,7 @@
         "id": "ServiceRequest",
         "path": "ServiceRequest",
         "short": "Service Recommendation",
-        "definition": "<p>This resource is a profile of ServiceRequest. It's ServiceRequest.code is bound to a value set of common\nBreast Radiology Exam recommendations. It is not meant to be a comprehensive list, just a common list.\n</p><p>The Breast Radiology Report contains references to zero or more recommendations, which may include ServiceRecommendation instances\nbut is not limited to only ServiceRecommendation instances.\n</p>",
+        "definition": "This resource is a profile of ServiceRequest. It's ServiceRequest.code is bound to a value set of commonBreast Radiology Exam recommendations. It is not meant to be a comprehensive list, just a common list.\nThe Breast Radiology Report contains references to zero or more recommendations, which may include ServiceRecommendation instancesbut is not limited to only ServiceRecommendation instances.",
         "base": {
           "path": "ServiceRequest",
           "min": 0,
@@ -1838,6 +1838,7 @@
         },
         "binding": {
           "strength": "extensible",
+          "description": "Codes for tests or services that can be carried out by a designated individual, organization or healthcare service.  For laboratory, LOINC is  (preferred)[http://build.fhir.org/terminologies.html#preferred] and a valueset using LOINC Order codes is available [here](valueset-diagnostic-requests.html).",
           "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/RecommendationsVS"
         }
       }
