@@ -381,6 +381,41 @@
         ]
       },
       {
+        "id": "Observation.extension:serviceRecommendation",
+        "path": "Observation.extension",
+        "sliceName": "serviceRecommendation",
+        "short": "serviceRecommendation extension",
+        "definition": "This extension slice contains the serviceRecommendation extension",
+        "comment": "This is one component of a group of components that comprise the observation.",
+        "alias": [
+          "extensions",
+          "user content"
+        ],
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "DomainResource.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ServiceRecommendationExtension"
+            ]
+          }
+        ],
+        "isModifier": false,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
         "id": "Observation.modifierExtension",
         "path": "Observation.modifierExtension",
         "short": "Extensions that cannot be ignored",
@@ -7245,6 +7280,41 @@
             "code": "Extension",
             "profile": [
               "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastBodyLocationExtension"
+            ]
+          }
+        ],
+        "isModifier": false,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "id": "Observation.extension:serviceRecommendation",
+        "path": "Observation.extension",
+        "sliceName": "serviceRecommendation",
+        "short": "serviceRecommendation extension",
+        "definition": "This extension slice contains the serviceRecommendation extension",
+        "comment": "This is one component of a group of components that comprise the observation.",
+        "alias": [
+          "extensions",
+          "user content"
+        ],
+        "min": 1,
+        "max": "1",
+        "base": {
+          "path": "Observation.extension",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ServiceRecommendationExtension"
             ]
           }
         ],
