@@ -735,7 +735,7 @@
         "comment": "One would expect this element to be a cardinality of 1..1. The only circumstance in which the subject can be missing is when the observation is made by a device that does not know the patient. In this case, the observation SHALL be matched to a patient through some context/channel matching technique, and at this point, the observation should be updated.",
         "requirements": "Observations have no value if you don't know who or what they're about.",
         "min": 0,
-        "max": "0",
+        "max": "1",
         "base": {
           "path": "Observation.subject",
           "min": 0,
@@ -1012,7 +1012,7 @@
         "definition": "Composite BiRad value for Right Breast.\n\nTypically this is the most severe of all the BiRad codes set in any of the child observations.",
         "comment": "An observation may have; 1)  a single value here, 2)  both a value and a set of related or component values,  or 3)  only a set of related or component values. If a value is present, the datatype for this element should be determined by Observation.code.  A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.",
         "requirements": "An observation exists to have a value, though it might not if it is in error, or if it represents a group of observations.",
-        "min": 1,
+        "min": 0,
         "max": "1",
         "base": {
           "path": "Observation.value[x]",
@@ -2436,17 +2436,6 @@
         }
       },
       {
-        "id": "Observation.subject",
-        "path": "Observation.subject",
-        "min": 0,
-        "max": "0",
-        "base": {
-          "path": "Observation.subject",
-          "min": 0,
-          "max": "1"
-        }
-      },
-      {
         "id": "Observation.focus",
         "extension": [
           {
@@ -2467,8 +2456,6 @@
         "id": "Observation.value[x]",
         "path": "Observation.value[x]",
         "definition": "Composite BiRad value for Right Breast.\n\nTypically this is the most severe of all the BiRad codes set in any of the child observations.",
-        "min": 1,
-        "max": "1",
         "base": {
           "path": "Observation.value[x]",
           "min": 0,
