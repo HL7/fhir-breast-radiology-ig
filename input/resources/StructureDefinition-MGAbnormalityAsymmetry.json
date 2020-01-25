@@ -3738,11 +3738,11 @@
         ]
       },
       {
-        "id": "Observation.component:observedArea",
+        "id": "Observation.component:observedRegion",
         "path": "Observation.component",
-        "sliceName": "observedArea",
-        "short": "Observed Area component",
-        "definition": "This component slice contains the spherical area of an item observed.\nIf an area component is included in an observation, then what is being observed is not a single item,\nbut some number of items contained in the area of the observation\n\nThe size is the diameter of the area. The units are always cm.\nThis can be a quantity (i.e. 5 cm area ), or a range (1 to 5 cm area).\nIf the lower bound of the range is set but not the upper bound, then it means {lower bound} or more.\nIf the lower bound of the range is not set but not the upper bound is, then it means {upper bound} or less.",
+        "sliceName": "observedRegion",
+        "short": "Observed Region component",
+        "definition": "This component slice contains the spherical region of an item observed.\nIf a region component is included in an observation, then what is being observed is not a single item,\nbut some number of items contained in the region of the observation\n\nThe size is the diameter of the region.\nThis can be a quantity (i.e. 5 cm region ), or a range (1 to 5 cm region).\nIf the lower bound of the range is set but not the upper bound, then it means {lower bound} or more.\nIf the lower bound of the range is not set but not the upper bound is, then it means {upper bound} or less.",
         "comment": "This is one component of a group of components that comprise the observation.",
         "requirements": "Component observations share the same attributes in the Observation resource as the primary observation and are always treated a part of a single observation (they are not separable).   However, the reference range for the primary observation value is not inherited by the component values and is required when appropriate for each component observation.",
         "min": 0,
@@ -3781,7 +3781,7 @@
         ]
       },
       {
-        "id": "Observation.component:observedArea.id",
+        "id": "Observation.component:observedRegion.id",
         "path": "Observation.component.id",
         "representation": [
           "xmlAttr"
@@ -3810,7 +3810,7 @@
         ]
       },
       {
-        "id": "Observation.component:observedArea.extension",
+        "id": "Observation.component:observedRegion.extension",
         "path": "Observation.component.extension",
         "short": "Additional content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
@@ -3841,7 +3841,7 @@
         ]
       },
       {
-        "id": "Observation.component:observedArea.modifierExtension",
+        "id": "Observation.component:observedRegion.modifierExtension",
         "path": "Observation.component.modifierExtension",
         "short": "Extensions that cannot be ignored even if unrecognized",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
@@ -3875,7 +3875,7 @@
         ]
       },
       {
-        "id": "Observation.component:observedArea.code",
+        "id": "Observation.component:observedRegion.code",
         "path": "Observation.component.code",
         "short": "Type of component observation (code / type)",
         "definition": "Describes what was observed. Sometimes this is called the observation \"code\".",
@@ -3934,7 +3934,7 @@
         ]
       },
       {
-        "id": "Observation.component:observedArea.value[x]",
+        "id": "Observation.component:observedRegion.value[x]",
         "path": "Observation.component.value[x]",
         "slicing": {
           "discriminator": [
@@ -3986,7 +3986,7 @@
         ]
       },
       {
-        "id": "Observation.component:observedArea.value[x]:valueQuantity",
+        "id": "Observation.component:observedRegion.value[x]:valueQuantity",
         "path": "Observation.component.value[x]",
         "sliceName": "valueQuantity",
         "short": "Actual component result",
@@ -4030,7 +4030,7 @@
         ]
       },
       {
-        "id": "Observation.component:observedArea.value[x]:valueRange",
+        "id": "Observation.component:observedRegion.value[x]:valueRange",
         "path": "Observation.component.value[x]",
         "sliceName": "valueRange",
         "short": "Actual component result",
@@ -4079,7 +4079,7 @@
         ]
       },
       {
-        "id": "Observation.component:observedArea.dataAbsentReason",
+        "id": "Observation.component:observedRegion.dataAbsentReason",
         "path": "Observation.component.dataAbsentReason",
         "short": "Why the component result is missing",
         "definition": "Provides a reason why the expected value in the element Observation.component.value[x] is missing.",
@@ -4125,7 +4125,7 @@
         ]
       },
       {
-        "id": "Observation.component:observedArea.interpretation",
+        "id": "Observation.component:observedRegion.interpretation",
         "path": "Observation.component.interpretation",
         "short": "High, low, normal, etc.",
         "definition": "A categorical assessment of an observation value.  For example, high, low, normal.",
@@ -4179,7 +4179,7 @@
         ]
       },
       {
-        "id": "Observation.component:observedArea.referenceRange",
+        "id": "Observation.component:observedRegion.referenceRange",
         "path": "Observation.component.referenceRange",
         "short": "Provides guide for interpretation of component result",
         "definition": "Guidance on how to interpret the value by comparison to a normal or recommended range.",
@@ -8161,11 +8161,11 @@
         }
       },
       {
-        "id": "Observation.component:observedArea",
+        "id": "Observation.component:observedRegion",
         "path": "Observation.component",
-        "sliceName": "observedArea",
-        "short": "Observed Area component",
-        "definition": "This component slice contains the spherical area of an item observed.\nIf an area component is included in an observation, then what is being observed is not a single item,\nbut some number of items contained in the area of the observation\n\nThe size is the diameter of the area. The units are always cm.\nThis can be a quantity (i.e. 5 cm area ), or a range (1 to 5 cm area).\nIf the lower bound of the range is set but not the upper bound, then it means {lower bound} or more.\nIf the lower bound of the range is not set but not the upper bound is, then it means {upper bound} or less.",
+        "sliceName": "observedRegion",
+        "short": "Observed Region component",
+        "definition": "This component slice contains the spherical region of an item observed.\nIf a region component is included in an observation, then what is being observed is not a single item,\nbut some number of items contained in the region of the observation\n\nThe size is the diameter of the region.\nThis can be a quantity (i.e. 5 cm region ), or a range (1 to 5 cm region).\nIf the lower bound of the range is set but not the upper bound, then it means {lower bound} or more.\nIf the lower bound of the range is not set but not the upper bound is, then it means {upper bound} or less.",
         "comment": "This is one component of a group of components that comprise the observation.",
         "min": 0,
         "max": "1",
@@ -8176,7 +8176,7 @@
         }
       },
       {
-        "id": "Observation.component:observedArea.code",
+        "id": "Observation.component:observedRegion.code",
         "path": "Observation.component.code",
         "min": 1,
         "max": "1",
@@ -8195,7 +8195,7 @@
         }
       },
       {
-        "id": "Observation.component:observedArea.value[x]",
+        "id": "Observation.component:observedRegion.value[x]",
         "path": "Observation.component.value[x]",
         "slicing": {
           "discriminator": [
@@ -8223,7 +8223,7 @@
         ]
       },
       {
-        "id": "Observation.component:observedArea.value[x]:valueQuantity",
+        "id": "Observation.component:observedRegion.value[x]:valueQuantity",
         "path": "Observation.component.value[x]",
         "sliceName": "valueQuantity",
         "min": 0,
@@ -8243,7 +8243,7 @@
         }
       },
       {
-        "id": "Observation.component:observedArea.value[x]:valueRange",
+        "id": "Observation.component:observedRegion.value[x]:valueRange",
         "path": "Observation.component.value[x]",
         "sliceName": "valueRange",
         "min": 0,

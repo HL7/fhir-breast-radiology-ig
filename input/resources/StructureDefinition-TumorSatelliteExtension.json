@@ -162,7 +162,7 @@
         "path": "Extension.extension",
         "sliceName": "indexReference",
         "short": "Reference of index tumor",
-        "definition": "Optional reference to index tumor (tumor that this is a satellite of).",
+        "definition": "Optional reference to index tumor (tumor that this is a satellite of).\n\nGenerally this should be a reference to a Breast Radiology Abnormality Observation resource",
         "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
         "alias": [
           "extensions",
@@ -304,7 +304,10 @@
         },
         "type": [
           {
-            "code": "Reference"
+            "code": "Reference",
+            "targetProfile": [
+              "Observation"
+            ]
           }
         ],
         "isModifier": false,
@@ -466,11 +469,12 @@
             "code": "Quantity"
           }
         ],
-        "patternQuantity": {
-          "system": "http://hl7.org/fhir/us/breast-radiology/ValueSet/UnitsOfLengthVS"
-        },
         "isModifier": false,
         "isSummary": false,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/UnitsOfLengthVS"
+        },
         "mapping": [
           {
             "identity": "rim",
@@ -728,7 +732,7 @@
         "path": "Extension.extension",
         "sliceName": "indexReference",
         "short": "Reference of index tumor",
-        "definition": "Optional reference to index tumor (tumor that this is a satellite of).",
+        "definition": "Optional reference to index tumor (tumor that this is a satellite of).\n\nGenerally this should be a reference to a Breast Radiology Abnormality Observation resource",
         "min": 0,
         "max": "1",
         "base": {
@@ -760,7 +764,10 @@
         "max": "1",
         "type": [
           {
-            "code": "Reference"
+            "code": "Reference",
+            "targetProfile": [
+              "Observation"
+            ]
           }
         ]
       },
@@ -804,8 +811,9 @@
             "code": "Quantity"
           }
         ],
-        "patternQuantity": {
-          "system": "http://hl7.org/fhir/us/breast-radiology/ValueSet/UnitsOfLengthVS"
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/UnitsOfLengthVS"
         }
       },
       {
