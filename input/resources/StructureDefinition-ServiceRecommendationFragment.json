@@ -338,7 +338,7 @@
         "path": "Observation.extension",
         "sliceName": "serviceRecommendation",
         "short": "serviceRecommendation extension",
-        "definition": "This extension slice contains the serviceRecommendation extension",
+        "definition": "References to recommended action to be taken in response to this observation.\n\nAll Service Recommendations for a Breast Radiology Report will be referenced in the Breast Radiology Report, \nso that all recommendations can be found in one place.\nIn addition pecific Service Recommendations may also be referenced in an abnormality observations, indicating that the action\ntaken is inresponse to that abnormality observation,\nor in a finding observation, indicating that the action \ntaken is in response to one or more of the abnormality observations that are a part of the finding.\n\nAll Service Recommendations referenced in an abnormality observation or finding observation \nwill always be also referenced in the Breast Radiology Report",
         "comment": "This is one component of a group of components that comprise the observation.",
         "alias": [
           "extensions",
@@ -1188,7 +1188,7 @@
         "short": "Observed body part",
         "definition": "Indicates the site on the subject's body where the observation was made (i.e. the target site).",
         "comment": "Only used if not implicit in code found in Observation.code.  In many systems, this may be represented as a related observation instead of an inline component.   \n\nIf the use case requires BodySite to be handled as a separate resource (e.g. to identify and track separately) then use the standard extension[ bodySite](extension-bodysite.html).",
-        "min": 1,
+        "min": 0,
         "max": "1",
         "base": {
           "path": "Observation.bodySite",
@@ -2225,7 +2225,7 @@
         "path": "Observation.extension",
         "sliceName": "serviceRecommendation",
         "short": "serviceRecommendation extension",
-        "definition": "This extension slice contains the serviceRecommendation extension",
+        "definition": "References to recommended action to be taken in response to this observation.\n\nAll Service Recommendations for a Breast Radiology Report will be referenced in the Breast Radiology Report, \nso that all recommendations can be found in one place.\nIn addition pecific Service Recommendations may also be referenced in an abnormality observations, indicating that the action\ntaken is inresponse to that abnormality observation,\nor in a finding observation, indicating that the action \ntaken is in response to one or more of the abnormality observations that are a part of the finding.\n\nAll Service Recommendations referenced in an abnormality observation or finding observation \nwill always be also referenced in the Breast Radiology Report",
         "comment": "This is one component of a group of components that comprise the observation.",
         "min": 0,
         "max": "*",
@@ -2243,17 +2243,6 @@
           }
         ],
         "isModifier": false
-      },
-      {
-        "id": "Observation.bodySite",
-        "path": "Observation.bodySite",
-        "min": 1,
-        "max": "1",
-        "base": {
-          "path": "Observation.bodySite",
-          "min": 0,
-          "max": "1"
-        }
       }
     ]
   }
