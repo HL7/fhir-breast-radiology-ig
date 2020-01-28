@@ -1,12 +1,20 @@
 <div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas-r5/fhir-single.xsd">
-	<p>
-	The following graphic provides a high-level view of 
-	the existing expectations and documentation conventions of a 
-	typical breast radiology report.
-	</p>
-	<p>
-		<object data="ProfileOverview.svg" type="image/svg+xml">
-			<img src="ProfileOverview.svg" alt="Profile Overview" />
-		</object>
-	</p>
+  <p>
+    A Breast Radiology Document is an implementation of a Fhir Document. It is comprised of a Fhir Bundle
+    with a top level Fhir Composition Resource that contains links to all the resources included in the
+    Breast Radiology Report.
+  </p>
+  <p>
+    The Breast Radiology Document is an atomic item, meaning that no part in it can be changed without changing the entire
+    bundle, and that all the parts are contained and in a single bundle.
+  </p>
+  <p>
+    The following graphic provides a high-level view of the structure of a
+    Breast Radiology Document.
+  </p>
+  <p>
+    <object data="ProfileOverview.svg" type="image/svg+xml">
+      <img src="ProfileOverview.svg" alt="Profile Overview" />
+    </object>
+  </p>
 </div>
