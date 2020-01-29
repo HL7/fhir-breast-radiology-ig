@@ -1,27 +1,36 @@
-<?xml version="1.0" encoding="utf-8"?>
-<ImplementationGuide xmlns="http://hl7.org/fhir">
-  <id value="hl7.fhir.us.breast-radiology-0.1.0" />
-  <url value="http://hl7.org/fhir/us/breast-radiology/ImplementationGuide/hl7.fhir.us.breast-radiology-0.1.0" />
-  <name value="Breast_Radiology_Reporting_1st_STU_ballot" />
-  <title value="Breast Radiology Reporting - 1st STU ballot" />
-  <status value="draft" />
-  <experimental value="false" />
-  <publisher value="Hl7 - Clinical Interoperability Council" />
+<?xml version="1.0" encoding="UTF-8"?>
+<ImplementationGuide xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../input-cache/schemas-r5/fhir-single.xsd">
+  <id value="hl7.fhir.us.breast-radiology-0.1.0"/>
+  <url value="http://hl7.org/fhir/us/breast-radiology/ImplementationGuide/hl7.fhir.us.breast-radiology-0.1.0"/>
+  <name value="Breast_Radiology_Reporting_1st_STU_ballot"/>
+  <title value="Breast Radiology Reporting - 1st STU ballot"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <publisher value="Hl7 - Clinical Interoperability Council"/>
   <contact>
     <telecom>
-      <system value="other" />
-      <value value="http://hl7.org/Special/committees/cic" />
+      <!-- Or whatever URL and/or email address(es) are appropriate -->
+      <system value="other"/>
+      <value value="http://hl7.org/Special/committees/cic"/>
     </telecom>
   </contact>
-  <description value="Breast Radiology Reporting Implementation Guide" />
+  <description value="Breast Radiology Reporting Implementation Guide"/>
   <jurisdiction>
+    <!-- This will drive SNOMED release used -->
     <coding>
-      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm" />
-      <code value="001" />
+      <!-- This is the code for universal -->
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+      <!-- Change to this if the IG is country-specific
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+      -->
     </coding>
   </jurisdiction>
-  <packageId value="hl7.fhir.us.breast-radiology" />
-  <fhirVersion value="4.0.1" />
+  <packageId value="hl7.fhir.us.breast-radiology"/>
+  <!-- This is whatever FHIR version the IG artifacts are targeting (not the version of this file, which should always be 'current release') -->
+  <fhirVersion value="4.0.1"/>
+  <version value="0.0.2"/>
   <definition>
     <grouping id="BaseResources">
       <name value="Main Resources" />
@@ -32,7 +41,7 @@
       <description value="This section contains resources that are commonly used throughout a Breast Radiology Report" />
     </grouping>
     <grouping id="CommonCodesVS">
-      <name value="Common ValueSets" />
+      <name value="Common ValueSets " />
       <description value="This section contains value sets that are commonly used throughout a Breast Radiology Report" />
     </grouping>
     <grouping id="CommonCodesCS">
@@ -766,15 +775,6 @@
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/ServiceRecommendationExtension" />
-      </reference>
-      <name value="Service Recommendation Extension" />
-      <description value="Diagnostic Report Service Recommendation extension" />
-      <exampleBoolean value="false" />
-      <groupingId value="ExtensionResources" />
-    </resource>
-    <resource>
-      <reference>
         <reference value="StructureDefinition/TumorSatelliteExtension" />
       </reference>
       <name value="Tumor Satellite Extension" />
@@ -1036,15 +1036,6 @@
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/ServiceRecommendationFragment" />
-      </reference>
-      <name value="Service Recommendation Fragment" />
-      <description value="Fragment 'Service Recommendation Fragment fragment'" />
-      <exampleBoolean value="false" />
-      <groupingId value="Fragments" />
-    </resource>
-    <resource>
-      <reference>
         <reference value="StructureDefinition/ShapeComponentsFragment" />
       </reference>
       <name value="Shape Components Fragment" />
@@ -1061,60 +1052,100 @@
       <exampleBoolean value="false" />
       <groupingId value="Fragments" />
     </resource>
+    <!-- You don't need to define any groupings.  The IGPublisher will define them for you.  You only need to do so if your IG is 'special' and it's
+      inappropriate to use the defaults.  Feel free to provide feedback about the defaults... -->
+    <!--    <resource>
+      <reference>
+        <reference value="StructureDefinition/structuredefinition-somePatientProfile"/>
+      </reference>
+      <name value="Name you want in artifact list"/>
+      <description value="Description you want in artifact list"/>
+    </resource>-->
     <page>
-      <nameUrl value="toc.html" />
-      <title value="Table of Contents" />
-      <generation value="html" />
+      <!-- The root will always be toc.html - the template will force it if you don't do it -->
+      <nameUrl value="toc.html"/>
+      <title value="Table of Contents"/>
+      <generation value="html"/>
       <page>
-        <nameUrl value="index.html" />
-        <title value="Breast Radiology Reporting - 1st STU ballot" />
-        <generation value="html" />
+        <nameUrl value="index.html"/>
+		<title value="Breast Radiology Reporting - 1st STU ballot" />
+        <generation value="html"/>
       </page>
       <page>
-        <nameUrl value="background.html" />
-        <title value="Background" />
-        <generation value="html" />
+        <nameUrl value="background.html"/>
+        <title value="Background"/>
+        <generation value="html"/>
       </page>
       <page>
-        <nameUrl value="spec.html" />
-        <title value="Detailed Specification" />
-        <generation value="html" />
+        <nameUrl value="spec.html"/>
+        <title value="Detailed Specification"/>
+        <generation value="html"/>
       </page>
       <page>
-        <nameUrl value="mgfinding.html" />
-        <title value="Mammography Finding" />
-        <generation value="html" />
+        <nameUrl value="mgfinding.html"/>
+        <title value="Mammography Finding"/>
+        <generation value="html"/>
       </page>
       <page>
-        <nameUrl value="usfinding.html" />
-        <title value="Ultra-Sound Finding" />
-        <generation value="html" />
+        <nameUrl value="usfinding.html"/>
+        <title value="Ultra-Sound Finding"/>
+        <generation value="html"/>
       </page>
       <page>
-        <nameUrl value="mrifinding.html" />
-        <title value="MRI Finding" />
-        <generation value="html" />
+        <nameUrl value="mrifinding.html"/>
+        <title value="MRI Finding"/>
+        <generation value="html"/>
       </page>
       <page>
-        <nameUrl value="nmfinding.html" />
-        <title value="Nuclear Medicine Finding" />
-        <generation value="html" />
+        <nameUrl value="nmfinding.html"/>
+        <title value="Nuclear Medicine Finding"/>
+        <generation value="html"/>
       </page>
       <page>
-        <nameUrl value="fragments.html" />
-        <title value="Resource Fragments" />
-        <generation value="html" />
+        <nameUrl value="fragments.html"/>
+        <title value="Resource Fragments"/>
+        <generation value="html"/>
       </page>
       <page>
-        <nameUrl value="downloads.html" />
-        <title value="Useful Downloads" />
-        <generation value="html" />
+        <nameUrl value="downloads.html"/>
+        <title value="Useful Downloads"/>
+        <generation value="html"/>
       </page>
       <page>
-        <nameUrl value="changes.html" />
-        <title value="IG Change History" />
-        <generation value="html" />
+        <nameUrl value="changes.html"/>
+        <title value="IG Change History"/>
+        <generation value="html"/>
       </page>
     </page>
+    <parameter>
+      <code value="copyrightyear"/>
+      <value value="2019+"/>
+    </parameter>
+    <!-- releaselabel should be the ballot status for HL7-published IGs. -->
+    <parameter>
+      <code value="releaselabel"/>
+      <value value="CI Build"/>
+    </parameter>
+    <parameter>
+      <code value="find-other-resources"/>
+      <value value="true"/>
+    </parameter>
+	<!-- Uncomment one or more of these if you want to limit which syntaxes are supported or want to disable the display of mappings
+    <parameter>
+      <code value="excludexml"/>
+      <value value="true"/>
+    </parameter>
+    <parameter>
+      <code value="excludejson"/>
+      <value value="true"/>
+    </parameter>
+    <parameter>
+      <code value="excludettl"/>
+      <value value="true"/>
+    </parameter>
+    <parameter>
+      <code value="excludemap"/>
+      <value value="true"/>
+    </parameter>-->
   </definition>
 </ImplementationGuide>

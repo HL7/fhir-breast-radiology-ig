@@ -307,16 +307,6 @@
       {
         "id": "Observation.extension",
         "path": "Observation.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": true,
-          "rules": "openAtEnd"
-        },
         "short": "Additional content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
         "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
@@ -334,41 +324,6 @@
         "type": [
           {
             "code": "Extension"
-          }
-        ],
-        "isModifier": false,
-        "isSummary": false,
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "N/A"
-          }
-        ]
-      },
-      {
-        "id": "Observation.extension:serviceRecommendation",
-        "path": "Observation.extension",
-        "sliceName": "serviceRecommendation",
-        "short": "serviceRecommendation extension",
-        "definition": "References to recommended action to be taken in response to this observation.\n\nAll Service Recommendations for a Breast Radiology Report will be referenced in the Breast Radiology Report, \nso that all recommendations can be found in one place.\nIn addition pecific Service Recommendations may also be referenced in an abnormality observations, indicating that the action\ntaken is inresponse to that abnormality observation,\nor in a finding observation, indicating that the action \ntaken is in response to one or more of the abnormality observations that are a part of the finding.\n\nAll Service Recommendations referenced in an abnormality observation or finding observation \nwill always be also referenced in the Breast Radiology Report",
-        "comment": "This is one component of a group of components that comprise the observation.",
-        "alias": [
-          "extensions",
-          "user content"
-        ],
-        "min": 0,
-        "max": "*",
-        "base": {
-          "path": "DomainResource.extension",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ServiceRecommendationExtension"
-            ]
           }
         ],
         "isModifier": false,
@@ -1829,7 +1784,7 @@
         "path": "Observation.hasMember",
         "sliceName": "mGFinding",
         "short": "'Mammography Finding' reference",
-        "definition": "This slice references the target 'Mammography Finding'",
+        "definition": "This slice references the target 'Mammography Finding'.",
         "comment": "When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.  Note that a system may calculate results from [QuestionnaireResponse](questionnaireresponse.html)  into a final score and represent the score as an Observation.",
         "min": 0,
         "max": "*",
@@ -1865,7 +1820,7 @@
         "path": "Observation.hasMember",
         "sliceName": "mRIFinding",
         "short": "'MRI Finding' reference",
-        "definition": "This slice references the target 'MRI Finding'",
+        "definition": "This slice references the target 'MRI Finding'.",
         "comment": "When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.  Note that a system may calculate results from [QuestionnaireResponse](questionnaireresponse.html)  into a final score and represent the score as an Observation.",
         "min": 0,
         "max": "*",
@@ -1901,7 +1856,7 @@
         "path": "Observation.hasMember",
         "sliceName": "nMFinding",
         "short": "'NM Finding' reference",
-        "definition": "This slice references the target 'NM Finding'",
+        "definition": "This slice references the target 'NM Finding'.",
         "comment": "When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.  Note that a system may calculate results from [QuestionnaireResponse](questionnaireresponse.html)  into a final score and represent the score as an Observation.",
         "min": 0,
         "max": "*",
@@ -1937,7 +1892,7 @@
         "path": "Observation.hasMember",
         "sliceName": "uSFinding",
         "short": "'Ultra-Sound Finding' reference",
-        "definition": "This slice references the target 'Ultra-Sound Finding'",
+        "definition": "This slice references the target 'Ultra-Sound Finding'.",
         "comment": "When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.  Note that a system may calculate results from [QuestionnaireResponse](questionnaireresponse.html)  into a final score and represent the score as an Observation.",
         "min": 0,
         "max": "*",
@@ -2419,49 +2374,6 @@
         }
       },
       {
-        "id": "Observation.extension",
-        "path": "Observation.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": true,
-          "rules": "openAtEnd"
-        },
-        "base": {
-          "path": "Observation.extension",
-          "min": 0,
-          "max": "*"
-        }
-      },
-      {
-        "id": "Observation.extension:serviceRecommendation",
-        "path": "Observation.extension",
-        "sliceName": "serviceRecommendation",
-        "short": "serviceRecommendation extension",
-        "definition": "References to recommended action to be taken in response to this observation.\n\nAll Service Recommendations for a Breast Radiology Report will be referenced in the Breast Radiology Report, \nso that all recommendations can be found in one place.\nIn addition pecific Service Recommendations may also be referenced in an abnormality observations, indicating that the action\ntaken is inresponse to that abnormality observation,\nor in a finding observation, indicating that the action \ntaken is in response to one or more of the abnormality observations that are a part of the finding.\n\nAll Service Recommendations referenced in an abnormality observation or finding observation \nwill always be also referenced in the Breast Radiology Report",
-        "comment": "This is one component of a group of components that comprise the observation.",
-        "min": 0,
-        "max": "*",
-        "base": {
-          "path": "Observation.extension",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ServiceRecommendationExtension"
-            ]
-          }
-        ],
-        "isModifier": false
-      },
-      {
         "id": "Observation.basedOn",
         "path": "Observation.basedOn",
         "min": 0,
@@ -2641,7 +2553,7 @@
         "path": "Observation.hasMember",
         "sliceName": "mGFinding",
         "short": "'Mammography Finding' reference",
-        "definition": "This slice references the target 'Mammography Finding'",
+        "definition": "This slice references the target 'Mammography Finding'.",
         "comment": "When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.  Note that a system may calculate results from [QuestionnaireResponse](questionnaireresponse.html)  into a final score and represent the score as an Observation.",
         "min": 0,
         "max": "*",
@@ -2677,7 +2589,7 @@
         "path": "Observation.hasMember",
         "sliceName": "mRIFinding",
         "short": "'MRI Finding' reference",
-        "definition": "This slice references the target 'MRI Finding'",
+        "definition": "This slice references the target 'MRI Finding'.",
         "comment": "When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.  Note that a system may calculate results from [QuestionnaireResponse](questionnaireresponse.html)  into a final score and represent the score as an Observation.",
         "min": 0,
         "max": "*",
@@ -2713,7 +2625,7 @@
         "path": "Observation.hasMember",
         "sliceName": "nMFinding",
         "short": "'NM Finding' reference",
-        "definition": "This slice references the target 'NM Finding'",
+        "definition": "This slice references the target 'NM Finding'.",
         "comment": "When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.  Note that a system may calculate results from [QuestionnaireResponse](questionnaireresponse.html)  into a final score and represent the score as an Observation.",
         "min": 0,
         "max": "*",
@@ -2749,7 +2661,7 @@
         "path": "Observation.hasMember",
         "sliceName": "uSFinding",
         "short": "'Ultra-Sound Finding' reference",
-        "definition": "This slice references the target 'Ultra-Sound Finding'",
+        "definition": "This slice references the target 'Ultra-Sound Finding'.",
         "comment": "When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.  Note that a system may calculate results from [QuestionnaireResponse](questionnaireresponse.html)  into a final score and represent the score as an Observation.",
         "min": 0,
         "max": "*",
