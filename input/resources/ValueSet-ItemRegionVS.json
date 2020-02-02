@@ -1,0 +1,43 @@
+{
+  "resourceType": "ValueSet",
+  "id": "ItemRegionVS",
+  "url": "http://hl7.org/fhir/us/breast-radiology/ValueSet/ItemRegionVS",
+  "version": "0.0.2",
+  "name": "ItemRegionVS",
+  "title": "Item Region ValueSet",
+  "status": "draft",
+  "date": "2019-11-01",
+  "publisher": "Hl7-Clinical Interoperability Council",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/cic"
+        }
+      ]
+    }
+  ],
+  "description": "Item Region of abnormalities value set.",
+  "compose": {
+    "include": [
+      {
+        "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ItemRegion",
+        "concept": [
+          {
+            "code": "SingleItem",
+            "display": "Single Region"
+          },
+          {
+            "code": "MultipleItems",
+            "display": "Multiple Regions"
+          },
+          {
+            "code": "ClusterOfItems",
+            "display": "Cluster of Regions"
+          }
+        ]
+      }
+    ]
+  }
+}

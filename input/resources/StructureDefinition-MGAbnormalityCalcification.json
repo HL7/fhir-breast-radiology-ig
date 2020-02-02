@@ -17,7 +17,7 @@
       ]
     }
   ],
-  "description": "<b>Calcification Observation</b>\n\nCalcifications that are assessed as benign at mammography are typically larger, coarser, round with\nsmooth margins, and more easily seen than malignant calcifications. Calcifications associated with\nmalignancy (and many benign calcifications as well) are usually very small and often require the use\nof magnification to be seen well. When a specific typically benign etiology cannot be assigned, a\ndescription of calcifications should include their morphology and distribution. Calcifications that are\nobviously benign need not be reported, especially if the interpreting physician is concerned that\nthe referring clinician or patient might infer anything other than absolute confidence in benignity\nwere such calcifications described in the report. However, typically benign calcifications should be\nreported if the interpreting physician is concerned that other observers might misinterpret them as\nanything but benign were such calcifications not described in the report.\nAs an ASSOCIATED FEATURE, this may be used in conjunction with one or more other FINDING(S)\nto describe calcifications within or immediately adjacent to the finding(s)\n-- Bi-Rads® Atlas — Mammography Fifth Ed. 2013",
+  "description": "<b>Calcification Observation</b>",
   "fhirVersion": "4.0.0",
   "kind": "resource",
   "abstract": false,
@@ -30,7 +30,7 @@
         "id": "Observation",
         "path": "Observation",
         "short": "Calcification Observation",
-        "definition": "Calcifications that are assessed as benign at mammography are typically larger, coarser, round with\nsmooth margins, and more easily seen than malignant calcifications. Calcifications associated with\nmalignancy (and many benign calcifications as well) are usually very small and often require the use\nof magnification to be seen well. When a specific typically benign etiology cannot be assigned, a\ndescription of calcifications should include their morphology and distribution. Calcifications that are\nobviously benign need not be reported, especially if the interpreting physician is concerned that\nthe referring clinician or patient might infer anything other than absolute confidence in benignity\nwere such calcifications described in the report. However, typically benign calcifications should be\nreported if the interpreting physician is concerned that other observers might misinterpret them as\nanything but benign were such calcifications not described in the report.\nAs an ASSOCIATED FEATURE, this may be used in conjunction with one or more other FINDING(S)\nto describe calcifications within or immediately adjacent to the finding(s)\n-- Bi-Rads® Atlas — Mammography Fifth Ed. 2013",
+        "definition": "Measurements and simple assertions made about a patient, device or other subject.",
         "comment": "Used for simple observations such as device measurements, laboratory atomic results, vital signs, height, weight, smoking status, comments, etc.  Other resources are used to provide context for observations such as laboratory reports, etc.",
         "alias": [
           "Vital Signs",
@@ -687,6 +687,14 @@
             "code": "CodeableConcept"
           }
         ],
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationCodesUrl",
+              "code": "mgAbnormalityCalcificationObservation"
+            }
+          ]
+        },
         "isModifier": false,
         "isSummary": true,
         "binding": {
@@ -2055,6 +2063,78 @@
         ]
       },
       {
+        "id": "Observation.hasMember:observedItemGroup",
+        "path": "Observation.hasMember",
+        "sliceName": "observedItemGroup",
+        "short": "'Observed ItemGroup' reference",
+        "definition": "This slice references the target 'Observed ItemGroup'.",
+        "comment": "When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.  Note that a system may calculate results from [QuestionnaireResponse](questionnaireresponse.html)  into a final score and represent the score as an Observation.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Observation.hasMember",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ObservedItemGroup"
+            ]
+          }
+        ],
+        "mustSupport": true,
+        "isModifier": false,
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "Relationships established by OBX-4 usage"
+          },
+          {
+            "identity": "rim",
+            "map": "outBoundRelationship"
+          }
+        ]
+      },
+      {
+        "id": "Observation.hasMember:observedItemRegion",
+        "path": "Observation.hasMember",
+        "sliceName": "observedItemRegion",
+        "short": "'Observed ItemRegion' reference",
+        "definition": "This slice references the target 'Observed ItemRegion'.",
+        "comment": "When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.  Note that a system may calculate results from [QuestionnaireResponse](questionnaireresponse.html)  into a final score and represent the score as an Observation.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Observation.hasMember",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ObservedItemRegion"
+            ]
+          }
+        ],
+        "mustSupport": true,
+        "isModifier": false,
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "Relationships established by OBX-4 usage"
+          },
+          {
+            "identity": "rim",
+            "map": "outBoundRelationship"
+          }
+        ]
+      },
+      {
         "id": "Observation.derivedFrom",
         "path": "Observation.derivedFrom",
         "short": "Related measurements the observation is made from",
@@ -2492,7 +2572,7 @@
         "path": "Observation.component",
         "sliceName": "calcificationType",
         "short": "Calcification Type component",
-        "definition": "This slice contains the optional component that refines the calcification type.\nThe value of this component is a codeable concept chosen from the MammoCalcificationTypeVS valueset.",
+        "definition": "This slice contains the optional component that refines the calcification type.\n The value of this component is a codeable concept chosen from the MammoCalcificationTypeVS valueset.",
         "comment": "This is one component of a group of components that comprise the observation.",
         "requirements": "Component observations share the same attributes in the Observation resource as the primary observation and are always treated a part of a single observation (they are not separable).   However, the reference range for the primary observation value is not inherited by the component values and is required when appropriate for each component observation.",
         "min": 0,
@@ -2646,7 +2726,7 @@
         "patternCodeableConcept": {
           "coding": [
             {
-              "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ComponentSliceCodes",
+              "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodesUrl",
               "code": "mgCalcificationType"
             }
           ]
@@ -2860,7 +2940,7 @@
         "path": "Observation.component",
         "sliceName": "calcificationDistribution",
         "short": "Calcification Distribution component",
-        "definition": "This slice contains the optional component that defines the calcification distribution.\nThe value of this component is a codeable concept chosen from the MammoCalcificationDistributionVS valueset.",
+        "definition": "This slice contains the optional component that defines the calcification distribution.\n The value of this component is a codeable concept chosen from the MammoCalcificationDistributionVS valueset.",
         "comment": "This is one component of a group of components that comprise the observation.",
         "requirements": "Component observations share the same attributes in the Observation resource as the primary observation and are always treated a part of a single observation (they are not separable).   However, the reference range for the primary observation value is not inherited by the component values and is required when appropriate for each component observation.",
         "min": 0,
@@ -3014,7 +3094,7 @@
         "patternCodeableConcept": {
           "coding": [
             {
-              "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ComponentSliceCodes",
+              "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodesUrl",
               "code": "mgCalcificationDistribution"
             }
           ]
@@ -3228,7 +3308,7 @@
         "path": "Observation.component",
         "sliceName": "observedChanges",
         "short": "Observed Change In Abnormality component",
-        "definition": "This slice contains zero or more components that define observed changes in this abnormality.\nThe value of this component is a codeable concept chosen from the ObservedChangesVS valueset.",
+        "definition": "This slice contains zero or more components that define observed changes in this abnormality.\n The value of this component is a codeable concept chosen from the ObservedChangesVS valueset.",
         "comment": "This is one component of a group of components that comprise the observation.",
         "requirements": "Component observations share the same attributes in the Observation resource as the primary observation and are always treated a part of a single observation (they are not separable).   However, the reference range for the primary observation value is not inherited by the component values and is required when appropriate for each component observation.",
         "min": 0,
@@ -3382,7 +3462,7 @@
         "patternCodeableConcept": {
           "coding": [
             {
-              "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ComponentSliceCodes",
+              "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodesUrl",
               "code": "observedChanges"
             }
           ]
@@ -3592,949 +3672,11 @@
         ]
       },
       {
-        "id": "Observation.component:observedSize",
-        "path": "Observation.component",
-        "sliceName": "observedSize",
-        "short": "Observed Size component",
-        "definition": "This component slice contains the observed size of an item in cemtimeters.\nThis can be a quantity (i.e. 5 cm), or a range (1 cm to 5 cm).\nIf the lower bound of the range is set but not the upper bound, then it means {lower bound} cm or more.\nIf the lower bound of the range is not set but not the upper bound is, then it means {upper bound} cm or less.",
-        "comment": "This is one component of a group of components that comprise the observation.",
-        "requirements": "Component observations share the same attributes in the Observation resource as the primary observation and are always treated a part of a single observation (they are not separable).   However, the reference range for the primary observation value is not inherited by the component values and is required when appropriate for each component observation.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Observation.component",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "BackboneElement"
-          }
-        ],
-        "constraint": [
-          {
-            "key": "ele-1",
-            "severity": "error",
-            "human": "All FHIR elements must have a @value or children",
-            "expression": "hasValue() or (children().count() > id.count())",
-            "xpath": "@value|f:*|h:div",
-            "source": "Element"
-          }
-        ],
-        "isModifier": false,
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "containment by OBX-4?"
-          },
-          {
-            "identity": "rim",
-            "map": "outBoundRelationship[typeCode=COMP]"
-          }
-        ]
-      },
-      {
-        "id": "Observation.component:observedSize.id",
-        "path": "Observation.component.id",
-        "representation": [
-          "xmlAttr"
-        ],
-        "short": "Unique id for inter-element referencing",
-        "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Element.id",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "isModifier": false,
-        "isSummary": false,
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "n/a"
-          }
-        ]
-      },
-      {
-        "id": "Observation.component:observedSize.extension",
-        "path": "Observation.component.extension",
-        "short": "Additional content defined by implementations",
-        "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
-        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
-        "alias": [
-          "extensions",
-          "user content"
-        ],
-        "min": 0,
-        "max": "*",
-        "base": {
-          "path": "Element.extension",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Extension"
-          }
-        ],
-        "isModifier": false,
-        "isSummary": false,
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "n/a"
-          }
-        ]
-      },
-      {
-        "id": "Observation.component:observedSize.modifierExtension",
-        "path": "Observation.component.modifierExtension",
-        "short": "Extensions that cannot be ignored even if unrecognized",
-        "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
-        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
-        "requirements": "Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](extensibility.html#modifierExtension).",
-        "alias": [
-          "extensions",
-          "user content",
-          "modifiers"
-        ],
-        "min": 0,
-        "max": "*",
-        "base": {
-          "path": "BackboneElement.modifierExtension",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Extension"
-          }
-        ],
-        "isModifier": true,
-        "isModifierReason": "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "N/A"
-          }
-        ]
-      },
-      {
-        "id": "Observation.component:observedSize.code",
-        "path": "Observation.component.code",
-        "short": "Type of component observation (code / type)",
-        "definition": "Describes what was observed. Sometimes this is called the observation \"code\".",
-        "comment": "*All* code-value and  component.code-component.value pairs need to be taken into account to correctly understand the meaning of the observation.",
-        "requirements": "Knowing what kind of observation is being made is essential to understanding the observation.",
-        "min": 1,
-        "max": "1",
-        "base": {
-          "path": "Observation.component.code",
-          "min": 1,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ],
-        "patternCodeableConcept": {
-          "coding": [
-            {
-              "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ComponentSliceCodes",
-              "code": "observedSize"
-            }
-          ]
-        },
-        "isModifier": false,
-        "isSummary": true,
-        "binding": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-              "valueString": "ObservationCode"
-            }
-          ],
-          "strength": "example",
-          "description": "Codes identifying names of simple observations.",
-          "valueSet": "http://hl7.org/fhir/ValueSet/observation-codes"
-        },
-        "mapping": [
-          {
-            "identity": "w5",
-            "map": "FiveWs.what[x]"
-          },
-          {
-            "identity": "sct-concept",
-            "map": "< 363787002 |Observable entity| OR \r< 386053000 |Evaluation procedure|"
-          },
-          {
-            "identity": "v2",
-            "map": "OBX-3"
-          },
-          {
-            "identity": "rim",
-            "map": "code"
-          }
-        ]
-      },
-      {
-        "id": "Observation.component:observedSize.value[x]",
-        "path": "Observation.component.value[x]",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "type",
-              "path": "$this"
-            }
-          ],
-          "rules": "closed"
-        },
-        "short": "Actual component result",
-        "definition": "The information determined as a result of making the observation, if the information has a simple value.",
-        "comment": "Used when observation has a set of component observations. An observation may have both a value (e.g. an  Apgar score)  and component observations (the observations from which the Apgar score was derived). If a value is present, the datatype for this element should be determined by Observation.code. A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.",
-        "requirements": "An observation exists to have a value, though it might not if it is in error, or if it represents a group of observations.",
-        "min": 1,
-        "max": "1",
-        "base": {
-          "path": "Observation.component.value[x]",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "Quantity"
-          },
-          {
-            "code": "Range"
-          }
-        ],
-        "isModifier": false,
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "sct-concept",
-            "map": "363714003 |Interprets| < 441742003 |Evaluation finding|"
-          },
-          {
-            "identity": "v2",
-            "map": "OBX.2, OBX.5, OBX.6"
-          },
-          {
-            "identity": "rim",
-            "map": "value"
-          },
-          {
-            "identity": "sct-attr",
-            "map": "363714003 |Interprets|"
-          }
-        ]
-      },
-      {
-        "id": "Observation.component:observedSize.value[x]:valueQuantity",
-        "path": "Observation.component.value[x]",
-        "sliceName": "valueQuantity",
-        "short": "Actual component result",
-        "definition": "The information determined as a result of making the observation, if the information has a simple value.",
-        "comment": "Used when observation has a set of component observations. An observation may have both a value (e.g. an  Apgar score)  and component observations (the observations from which the Apgar score was derived). If a value is present, the datatype for this element should be determined by Observation.code. A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.",
-        "requirements": "An observation exists to have a value, though it might not if it is in error, or if it represents a group of observations.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Observation.component.value[x]",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "Quantity"
-          }
-        ],
-        "patternQuantity": {
-          "system": "http://hl7.org/fhir/us/breast-radiology/ValueSet/UnitsOfLengthVS"
-        },
-        "isModifier": false,
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "sct-concept",
-            "map": "363714003 |Interprets| < 441742003 |Evaluation finding|"
-          },
-          {
-            "identity": "v2",
-            "map": "OBX.2, OBX.5, OBX.6"
-          },
-          {
-            "identity": "rim",
-            "map": "value"
-          },
-          {
-            "identity": "sct-attr",
-            "map": "363714003 |Interprets|"
-          }
-        ]
-      },
-      {
-        "id": "Observation.component:observedSize.value[x]:valueRange",
-        "path": "Observation.component.value[x]",
-        "sliceName": "valueRange",
-        "short": "Actual component result",
-        "definition": "The information determined as a result of making the observation, if the information has a simple value.",
-        "comment": "Used when observation has a set of component observations. An observation may have both a value (e.g. an  Apgar score)  and component observations (the observations from which the Apgar score was derived). If a value is present, the datatype for this element should be determined by Observation.code. A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.",
-        "requirements": "An observation exists to have a value, though it might not if it is in error, or if it represents a group of observations.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Observation.component.value[x]",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "Range"
-          }
-        ],
-        "patternRange": {
-          "low": {
-            "system": "http://hl7.org/fhir/us/breast-radiology/ValueSet/UnitsOfLengthVS"
-          },
-          "high": {
-            "system": "http://hl7.org/fhir/us/breast-radiology/ValueSet/UnitsOfLengthVS"
-          }
-        },
-        "isModifier": false,
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "sct-concept",
-            "map": "363714003 |Interprets| < 441742003 |Evaluation finding|"
-          },
-          {
-            "identity": "v2",
-            "map": "OBX.2, OBX.5, OBX.6"
-          },
-          {
-            "identity": "rim",
-            "map": "value"
-          },
-          {
-            "identity": "sct-attr",
-            "map": "363714003 |Interprets|"
-          }
-        ]
-      },
-      {
-        "id": "Observation.component:observedSize.dataAbsentReason",
-        "path": "Observation.component.dataAbsentReason",
-        "short": "Why the component result is missing",
-        "definition": "Provides a reason why the expected value in the element Observation.component.value[x] is missing.",
-        "comment": "\"Null\" or exceptional values can be represented two ways in FHIR Observations.  One way is to simply include them in the value set and represent the exceptions in the value.  For example, measurement values for a serology test could be  \"detected\", \"not detected\", \"inconclusive\", or  \"test not done\". \n\nThe alternate way is to use the value element for actual observations and use the explicit dataAbsentReason element to record exceptional values.  For example, the dataAbsentReason code \"error\" could be used when the measurement was not completed.  Because of these options, use-case agreements are required to interpret general observations for exceptional values.",
-        "requirements": "For many results it is necessary to handle exceptional values in measurements.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Observation.component.dataAbsentReason",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ],
-        "condition": [
-          "obs-6"
-        ],
-        "isModifier": false,
-        "isSummary": false,
-        "binding": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-              "valueString": "ObservationValueAbsentReason"
-            }
-          ],
-          "strength": "extensible",
-          "description": "Codes specifying why the result (`Observation.value[x]`) is missing.",
-          "valueSet": "http://hl7.org/fhir/ValueSet/data-absent-reason"
-        },
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "N/A"
-          },
-          {
-            "identity": "rim",
-            "map": "value.nullFlavor"
-          }
-        ]
-      },
-      {
-        "id": "Observation.component:observedSize.interpretation",
-        "path": "Observation.component.interpretation",
-        "short": "High, low, normal, etc.",
-        "definition": "A categorical assessment of an observation value.  For example, high, low, normal.",
-        "comment": "Historically used for laboratory results (known as 'abnormal flag' ),  its use extends to other use cases where coded interpretations  are relevant.  Often reported as one or more simple compact codes this element is often placed adjacent to the result value in reports and flow sheets to signal the meaning/normalcy status of the result.",
-        "requirements": "For some results, particularly numeric results, an interpretation is necessary to fully understand the significance of a result.",
-        "alias": [
-          "Abnormal Flag"
-        ],
-        "min": 0,
-        "max": "*",
-        "base": {
-          "path": "Observation.component.interpretation",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ],
-        "isModifier": false,
-        "isSummary": false,
-        "binding": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-              "valueString": "ObservationInterpretation"
-            }
-          ],
-          "strength": "extensible",
-          "description": "Codes identifying interpretations of observations.",
-          "valueSet": "http://hl7.org/fhir/ValueSet/observation-interpretation"
-        },
-        "mapping": [
-          {
-            "identity": "sct-concept",
-            "map": "< 260245000 |Findings values|"
-          },
-          {
-            "identity": "v2",
-            "map": "OBX-8"
-          },
-          {
-            "identity": "rim",
-            "map": "interpretationCode"
-          },
-          {
-            "identity": "sct-attr",
-            "map": "363713009 |Has interpretation|"
-          }
-        ]
-      },
-      {
-        "id": "Observation.component:observedSize.referenceRange",
-        "path": "Observation.component.referenceRange",
-        "short": "Provides guide for interpretation of component result",
-        "definition": "Guidance on how to interpret the value by comparison to a normal or recommended range.",
-        "comment": "Most observations only have one generic reference range. Systems MAY choose to restrict to only supplying the relevant reference range based on knowledge about the patient (e.g., specific to the patient's age, gender, weight and other factors), but this might not be possible or appropriate. Whenever more than one reference range is supplied, the differences between them SHOULD be provided in the reference range and/or age properties.",
-        "requirements": "Knowing what values are considered \"normal\" can help evaluate the significance of a particular result. Need to be able to provide multiple reference ranges for different contexts.",
-        "min": 0,
-        "max": "*",
-        "base": {
-          "path": "Observation.component.referenceRange",
-          "min": 0,
-          "max": "*"
-        },
-        "contentReference": "#Observation.referenceRange",
-        "isModifier": false,
-        "isSummary": false,
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "OBX.7"
-          },
-          {
-            "identity": "rim",
-            "map": "outboundRelationship[typeCode=REFV]/target[classCode=OBS, moodCode=EVN]"
-          }
-        ]
-      },
-      {
-        "id": "Observation.component:observedRegion",
-        "path": "Observation.component",
-        "sliceName": "observedRegion",
-        "short": "Observed Region component",
-        "definition": "This component slice contains the spherical region of an item observed.\nIf a region component is included in an observation, then what is being observed is not a single item,\nbut some number of items contained in the region of the observation\n\nThe size is the diameter of the region.\nThis can be a quantity (i.e. 5 cm region ), or a range (1 to 5 cm region).\nIf the lower bound of the range is set but not the upper bound, then it means {lower bound} or more.\nIf the lower bound of the range is not set but not the upper bound is, then it means {upper bound} or less.",
-        "comment": "This is one component of a group of components that comprise the observation.",
-        "requirements": "Component observations share the same attributes in the Observation resource as the primary observation and are always treated a part of a single observation (they are not separable).   However, the reference range for the primary observation value is not inherited by the component values and is required when appropriate for each component observation.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Observation.component",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "BackboneElement"
-          }
-        ],
-        "constraint": [
-          {
-            "key": "ele-1",
-            "severity": "error",
-            "human": "All FHIR elements must have a @value or children",
-            "expression": "hasValue() or (children().count() > id.count())",
-            "xpath": "@value|f:*|h:div",
-            "source": "Element"
-          }
-        ],
-        "isModifier": false,
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "containment by OBX-4?"
-          },
-          {
-            "identity": "rim",
-            "map": "outBoundRelationship[typeCode=COMP]"
-          }
-        ]
-      },
-      {
-        "id": "Observation.component:observedRegion.id",
-        "path": "Observation.component.id",
-        "representation": [
-          "xmlAttr"
-        ],
-        "short": "Unique id for inter-element referencing",
-        "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Element.id",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "isModifier": false,
-        "isSummary": false,
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "n/a"
-          }
-        ]
-      },
-      {
-        "id": "Observation.component:observedRegion.extension",
-        "path": "Observation.component.extension",
-        "short": "Additional content defined by implementations",
-        "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
-        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
-        "alias": [
-          "extensions",
-          "user content"
-        ],
-        "min": 0,
-        "max": "*",
-        "base": {
-          "path": "Element.extension",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Extension"
-          }
-        ],
-        "isModifier": false,
-        "isSummary": false,
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "n/a"
-          }
-        ]
-      },
-      {
-        "id": "Observation.component:observedRegion.modifierExtension",
-        "path": "Observation.component.modifierExtension",
-        "short": "Extensions that cannot be ignored even if unrecognized",
-        "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
-        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
-        "requirements": "Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](extensibility.html#modifierExtension).",
-        "alias": [
-          "extensions",
-          "user content",
-          "modifiers"
-        ],
-        "min": 0,
-        "max": "*",
-        "base": {
-          "path": "BackboneElement.modifierExtension",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Extension"
-          }
-        ],
-        "isModifier": true,
-        "isModifierReason": "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "N/A"
-          }
-        ]
-      },
-      {
-        "id": "Observation.component:observedRegion.code",
-        "path": "Observation.component.code",
-        "short": "Type of component observation (code / type)",
-        "definition": "Describes what was observed. Sometimes this is called the observation \"code\".",
-        "comment": "*All* code-value and  component.code-component.value pairs need to be taken into account to correctly understand the meaning of the observation.",
-        "requirements": "Knowing what kind of observation is being made is essential to understanding the observation.",
-        "min": 1,
-        "max": "1",
-        "base": {
-          "path": "Observation.component.code",
-          "min": 1,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ],
-        "patternCodeableConcept": {
-          "coding": [
-            {
-              "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ComponentSliceCodes",
-              "code": "observedSize"
-            }
-          ]
-        },
-        "isModifier": false,
-        "isSummary": true,
-        "binding": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-              "valueString": "ObservationCode"
-            }
-          ],
-          "strength": "example",
-          "description": "Codes identifying names of simple observations.",
-          "valueSet": "http://hl7.org/fhir/ValueSet/observation-codes"
-        },
-        "mapping": [
-          {
-            "identity": "w5",
-            "map": "FiveWs.what[x]"
-          },
-          {
-            "identity": "sct-concept",
-            "map": "< 363787002 |Observable entity| OR \r< 386053000 |Evaluation procedure|"
-          },
-          {
-            "identity": "v2",
-            "map": "OBX-3"
-          },
-          {
-            "identity": "rim",
-            "map": "code"
-          }
-        ]
-      },
-      {
-        "id": "Observation.component:observedRegion.value[x]",
-        "path": "Observation.component.value[x]",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "type",
-              "path": "$this"
-            }
-          ],
-          "rules": "closed"
-        },
-        "short": "Actual component result",
-        "definition": "The information determined as a result of making the observation, if the information has a simple value.",
-        "comment": "Used when observation has a set of component observations. An observation may have both a value (e.g. an  Apgar score)  and component observations (the observations from which the Apgar score was derived). If a value is present, the datatype for this element should be determined by Observation.code. A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.",
-        "requirements": "An observation exists to have a value, though it might not if it is in error, or if it represents a group of observations.",
-        "min": 1,
-        "max": "1",
-        "base": {
-          "path": "Observation.component.value[x]",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "Quantity"
-          },
-          {
-            "code": "Range"
-          }
-        ],
-        "isModifier": false,
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "sct-concept",
-            "map": "363714003 |Interprets| < 441742003 |Evaluation finding|"
-          },
-          {
-            "identity": "v2",
-            "map": "OBX.2, OBX.5, OBX.6"
-          },
-          {
-            "identity": "rim",
-            "map": "value"
-          },
-          {
-            "identity": "sct-attr",
-            "map": "363714003 |Interprets|"
-          }
-        ]
-      },
-      {
-        "id": "Observation.component:observedRegion.value[x]:valueQuantity",
-        "path": "Observation.component.value[x]",
-        "sliceName": "valueQuantity",
-        "short": "Actual component result",
-        "definition": "The information determined as a result of making the observation, if the information has a simple value.",
-        "comment": "Used when observation has a set of component observations. An observation may have both a value (e.g. an  Apgar score)  and component observations (the observations from which the Apgar score was derived). If a value is present, the datatype for this element should be determined by Observation.code. A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.",
-        "requirements": "An observation exists to have a value, though it might not if it is in error, or if it represents a group of observations.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Observation.component.value[x]",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "Quantity"
-          }
-        ],
-        "patternQuantity": {
-          "system": "http://hl7.org/fhir/us/breast-radiology/ValueSet/UnitsOfLengthVS"
-        },
-        "isModifier": false,
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "sct-concept",
-            "map": "363714003 |Interprets| < 441742003 |Evaluation finding|"
-          },
-          {
-            "identity": "v2",
-            "map": "OBX.2, OBX.5, OBX.6"
-          },
-          {
-            "identity": "rim",
-            "map": "value"
-          },
-          {
-            "identity": "sct-attr",
-            "map": "363714003 |Interprets|"
-          }
-        ]
-      },
-      {
-        "id": "Observation.component:observedRegion.value[x]:valueRange",
-        "path": "Observation.component.value[x]",
-        "sliceName": "valueRange",
-        "short": "Actual component result",
-        "definition": "The information determined as a result of making the observation, if the information has a simple value.",
-        "comment": "Used when observation has a set of component observations. An observation may have both a value (e.g. an  Apgar score)  and component observations (the observations from which the Apgar score was derived). If a value is present, the datatype for this element should be determined by Observation.code. A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.",
-        "requirements": "An observation exists to have a value, though it might not if it is in error, or if it represents a group of observations.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Observation.component.value[x]",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "Range"
-          }
-        ],
-        "patternRange": {
-          "low": {
-            "system": "http://hl7.org/fhir/us/breast-radiology/ValueSet/UnitsOfLengthVS"
-          },
-          "high": {
-            "system": "http://hl7.org/fhir/us/breast-radiology/ValueSet/UnitsOfLengthVS"
-          }
-        },
-        "isModifier": false,
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "sct-concept",
-            "map": "363714003 |Interprets| < 441742003 |Evaluation finding|"
-          },
-          {
-            "identity": "v2",
-            "map": "OBX.2, OBX.5, OBX.6"
-          },
-          {
-            "identity": "rim",
-            "map": "value"
-          },
-          {
-            "identity": "sct-attr",
-            "map": "363714003 |Interprets|"
-          }
-        ]
-      },
-      {
-        "id": "Observation.component:observedRegion.dataAbsentReason",
-        "path": "Observation.component.dataAbsentReason",
-        "short": "Why the component result is missing",
-        "definition": "Provides a reason why the expected value in the element Observation.component.value[x] is missing.",
-        "comment": "\"Null\" or exceptional values can be represented two ways in FHIR Observations.  One way is to simply include them in the value set and represent the exceptions in the value.  For example, measurement values for a serology test could be  \"detected\", \"not detected\", \"inconclusive\", or  \"test not done\". \n\nThe alternate way is to use the value element for actual observations and use the explicit dataAbsentReason element to record exceptional values.  For example, the dataAbsentReason code \"error\" could be used when the measurement was not completed.  Because of these options, use-case agreements are required to interpret general observations for exceptional values.",
-        "requirements": "For many results it is necessary to handle exceptional values in measurements.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Observation.component.dataAbsentReason",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ],
-        "condition": [
-          "obs-6"
-        ],
-        "isModifier": false,
-        "isSummary": false,
-        "binding": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-              "valueString": "ObservationValueAbsentReason"
-            }
-          ],
-          "strength": "extensible",
-          "description": "Codes specifying why the result (`Observation.value[x]`) is missing.",
-          "valueSet": "http://hl7.org/fhir/ValueSet/data-absent-reason"
-        },
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "N/A"
-          },
-          {
-            "identity": "rim",
-            "map": "value.nullFlavor"
-          }
-        ]
-      },
-      {
-        "id": "Observation.component:observedRegion.interpretation",
-        "path": "Observation.component.interpretation",
-        "short": "High, low, normal, etc.",
-        "definition": "A categorical assessment of an observation value.  For example, high, low, normal.",
-        "comment": "Historically used for laboratory results (known as 'abnormal flag' ),  its use extends to other use cases where coded interpretations  are relevant.  Often reported as one or more simple compact codes this element is often placed adjacent to the result value in reports and flow sheets to signal the meaning/normalcy status of the result.",
-        "requirements": "For some results, particularly numeric results, an interpretation is necessary to fully understand the significance of a result.",
-        "alias": [
-          "Abnormal Flag"
-        ],
-        "min": 0,
-        "max": "*",
-        "base": {
-          "path": "Observation.component.interpretation",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ],
-        "isModifier": false,
-        "isSummary": false,
-        "binding": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-              "valueString": "ObservationInterpretation"
-            }
-          ],
-          "strength": "extensible",
-          "description": "Codes identifying interpretations of observations.",
-          "valueSet": "http://hl7.org/fhir/ValueSet/observation-interpretation"
-        },
-        "mapping": [
-          {
-            "identity": "sct-concept",
-            "map": "< 260245000 |Findings values|"
-          },
-          {
-            "identity": "v2",
-            "map": "OBX-8"
-          },
-          {
-            "identity": "rim",
-            "map": "interpretationCode"
-          },
-          {
-            "identity": "sct-attr",
-            "map": "363713009 |Has interpretation|"
-          }
-        ]
-      },
-      {
-        "id": "Observation.component:observedRegion.referenceRange",
-        "path": "Observation.component.referenceRange",
-        "short": "Provides guide for interpretation of component result",
-        "definition": "Guidance on how to interpret the value by comparison to a normal or recommended range.",
-        "comment": "Most observations only have one generic reference range. Systems MAY choose to restrict to only supplying the relevant reference range based on knowledge about the patient (e.g., specific to the patient's age, gender, weight and other factors), but this might not be possible or appropriate. Whenever more than one reference range is supplied, the differences between them SHOULD be provided in the reference range and/or age properties.",
-        "requirements": "Knowing what values are considered \"normal\" can help evaluate the significance of a particular result. Need to be able to provide multiple reference ranges for different contexts.",
-        "min": 0,
-        "max": "*",
-        "base": {
-          "path": "Observation.component.referenceRange",
-          "min": 0,
-          "max": "*"
-        },
-        "contentReference": "#Observation.referenceRange",
-        "isModifier": false,
-        "isSummary": false,
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "OBX.7"
-          },
-          {
-            "identity": "rim",
-            "map": "outboundRelationship[typeCode=REFV]/target[classCode=OBS, moodCode=EVN]"
-          }
-        ]
-      },
-      {
         "id": "Observation.component:biRadsAssessmentCategory",
         "path": "Observation.component",
         "sliceName": "biRadsAssessmentCategory",
         "short": "BiRads Assessment Category component",
-        "definition": "This slice contains the optional component that defines the BiRAD risk code.\nThe value of this component is a codeable concept chosen from the BiRadsAssessmentCategoriesVS valueset.",
+        "definition": "This slice contains the optional component that defines the BiRAD risk code.\n The value of this component is a codeable concept chosen from the BiRadsAssessmentCategoriesVS valueset.",
         "comment": "This is one component of a group of components that comprise the observation.",
         "requirements": "Component observations share the same attributes in the Observation resource as the primary observation and are always treated a part of a single observation (they are not separable).   However, the reference range for the primary observation value is not inherited by the component values and is required when appropriate for each component observation.",
         "min": 0,
@@ -4688,7 +3830,7 @@
         "patternCodeableConcept": {
           "coding": [
             {
-              "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ComponentSliceCodes",
+              "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodesUrl",
               "code": "targetBiRads"
             }
           ]
@@ -4902,7 +4044,7 @@
         "path": "Observation.component",
         "sliceName": "notPreviouslySeen",
         "short": "Not Previously Seen component",
-        "definition": "This slice contains zero or more components that define prevous encounters in which this abnormality was not seen.\nThe value of this component is a codeable concept chosen from the NotPreviouslySeenVS valueset.",
+        "definition": "This slice contains zero or more components that define prevous encounters in which this abnormality was not seen.\n The value of this component is a codeable concept chosen from the NotPreviouslySeenVS valueset.",
         "comment": "This is one component of a group of components that comprise the observation.",
         "requirements": "Component observations share the same attributes in the Observation resource as the primary observation and are always treated a part of a single observation (they are not separable).   However, the reference range for the primary observation value is not inherited by the component values and is required when appropriate for each component observation.",
         "min": 0,
@@ -5056,7 +4198,7 @@
         "patternCodeableConcept": {
           "coding": [
             {
-              "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ComponentSliceCodes",
+              "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodesUrl",
               "code": "notPreviouslySeen"
             }
           ]
@@ -5270,7 +4412,7 @@
         "path": "Observation.component",
         "sliceName": "observedCount",
         "short": "Observed Count component",
-        "definition": "This component slice contains the number of items observed.\nThis can be a quantity (i.e. 5), or a range (1 to 5).\nIf the lower bound of the range is set but not the upper bound, then it means {lower bound} or more.\nIf the lower bound of the range is not set but not the upper bound is, then it means {upper bound} or less.",
+        "definition": "This component slice contains the number of items observed.\n This can be a quantity (i.e. 5), or a range (1 to 5).\n If the lower bound of the range is set but not the upper bound, then it means {lower bound} or more.\n If the lower bound of the range is not set but not the upper bound is, then it means {upper bound} or less.",
         "comment": "This is one component of a group of components that comprise the observation.",
         "requirements": "Component observations share the same attributes in the Observation resource as the primary observation and are always treated a part of a single observation (they are not separable).   However, the reference range for the primary observation value is not inherited by the component values and is required when appropriate for each component observation.",
         "min": 0,
@@ -5424,8 +4566,8 @@
         "patternCodeableConcept": {
           "coding": [
             {
-              "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ComponentSliceCodes",
-              "code": "observedSize"
+              "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodesUrl",
+              "code": "observedCount"
             }
           ]
         },
@@ -5739,7 +4881,7 @@
         "path": "Observation.component",
         "sliceName": "correspondsWith",
         "short": "Corresponds With component",
-        "definition": "This slice contains zero or more components that defines what this observation correspomnds with.\nThe value of this component is a codeable concept chosen from the CorrespondsWithVS valueset.",
+        "definition": "This slice contains zero or more components that defines what this observation correspomnds with.\n The value of this component is a codeable concept chosen from the CorrespondsWithVS valueset.",
         "comment": "This is one component of a group of components that comprise the observation.",
         "requirements": "Component observations share the same attributes in the Observation resource as the primary observation and are always treated a part of a single observation (they are not separable).   However, the reference range for the primary observation value is not inherited by the component values and is required when appropriate for each component observation.",
         "min": 0,
@@ -5893,7 +5035,7 @@
         "patternCodeableConcept": {
           "coding": [
             {
-              "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ComponentSliceCodes",
+              "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodesUrl",
               "code": "correspondsWith"
             }
           ]
@@ -6110,7 +5252,6 @@
         "id": "Observation",
         "path": "Observation",
         "short": "Calcification Observation",
-        "definition": "Calcifications that are assessed as benign at mammography are typically larger, coarser, round with\nsmooth margins, and more easily seen than malignant calcifications. Calcifications associated with\nmalignancy (and many benign calcifications as well) are usually very small and often require the use\nof magnification to be seen well. When a specific typically benign etiology cannot be assigned, a\ndescription of calcifications should include their morphology and distribution. Calcifications that are\nobviously benign need not be reported, especially if the interpreting physician is concerned that\nthe referring clinician or patient might infer anything other than absolute confidence in benignity\nwere such calcifications described in the report. However, typically benign calcifications should be\nreported if the interpreting physician is concerned that other observers might misinterpret them as\nanything but benign were such calcifications not described in the report.\nAs an ASSOCIATED FEATURE, this may be used in conjunction with one or more other FINDING(S)\nto describe calcifications within or immediately adjacent to the finding(s)\n-- Bi-Rads® Atlas — Mammography Fifth Ed. 2013",
         "base": {
           "path": "Observation",
           "min": 0,
@@ -6186,6 +5327,23 @@
             {
               "system": "http://terminology.hl7.org/CodeSystem/observation-category",
               "code": "imaging"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Observation.code",
+        "path": "Observation.code",
+        "base": {
+          "path": "Observation.code",
+          "min": 1,
+          "max": "1"
+        },
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationCodesUrl",
+              "code": "mgAbnormalityCalcificationObservation"
             }
           ]
         }
@@ -6416,6 +5574,52 @@
         ]
       },
       {
+        "id": "Observation.hasMember:observedItemGroup",
+        "path": "Observation.hasMember",
+        "sliceName": "observedItemGroup",
+        "short": "'Observed ItemGroup' reference",
+        "definition": "This slice references the target 'Observed ItemGroup'.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Observation.hasMember",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ObservedItemGroup"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.hasMember:observedItemRegion",
+        "path": "Observation.hasMember",
+        "sliceName": "observedItemRegion",
+        "short": "'Observed ItemRegion' reference",
+        "definition": "This slice references the target 'Observed ItemRegion'.",
+        "min": 0,
+        "max": "1",
+        "base": {
+          "path": "Observation.hasMember",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ObservedItemRegion"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
         "id": "Observation.component",
         "path": "Observation.component",
         "slicing": {
@@ -6440,7 +5644,7 @@
         "path": "Observation.component",
         "sliceName": "calcificationType",
         "short": "Calcification Type component",
-        "definition": "This slice contains the optional component that refines the calcification type.\nThe value of this component is a codeable concept chosen from the MammoCalcificationTypeVS valueset.",
+        "definition": "This slice contains the optional component that refines the calcification type.\n The value of this component is a codeable concept chosen from the MammoCalcificationTypeVS valueset.",
         "comment": "This is one component of a group of components that comprise the observation.",
         "requirements": "Component observations share the same attributes in the Observation resource as the primary observation and are always treated a part of a single observation (they are not separable).   However, the reference range for the primary observation value is not inherited by the component values and is required when appropriate for each component observation.",
         "min": 0,
@@ -6594,7 +5798,7 @@
         "patternCodeableConcept": {
           "coding": [
             {
-              "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ComponentSliceCodes",
+              "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodesUrl",
               "code": "mgCalcificationType"
             }
           ]
@@ -6808,7 +6012,7 @@
         "path": "Observation.component",
         "sliceName": "calcificationDistribution",
         "short": "Calcification Distribution component",
-        "definition": "This slice contains the optional component that defines the calcification distribution.\nThe value of this component is a codeable concept chosen from the MammoCalcificationDistributionVS valueset.",
+        "definition": "This slice contains the optional component that defines the calcification distribution.\n The value of this component is a codeable concept chosen from the MammoCalcificationDistributionVS valueset.",
         "comment": "This is one component of a group of components that comprise the observation.",
         "requirements": "Component observations share the same attributes in the Observation resource as the primary observation and are always treated a part of a single observation (they are not separable).   However, the reference range for the primary observation value is not inherited by the component values and is required when appropriate for each component observation.",
         "min": 0,
@@ -6962,7 +6166,7 @@
         "patternCodeableConcept": {
           "coding": [
             {
-              "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ComponentSliceCodes",
+              "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodesUrl",
               "code": "mgCalcificationDistribution"
             }
           ]
@@ -7176,7 +6380,7 @@
         "path": "Observation.component",
         "sliceName": "observedChanges",
         "short": "Observed Change In Abnormality component",
-        "definition": "This slice contains zero or more components that define observed changes in this abnormality.\nThe value of this component is a codeable concept chosen from the ObservedChangesVS valueset.",
+        "definition": "This slice contains zero or more components that define observed changes in this abnormality.\n The value of this component is a codeable concept chosen from the ObservedChangesVS valueset.",
         "comment": "This is one component of a group of components that comprise the observation.",
         "min": 0,
         "max": "*",
@@ -7201,7 +6405,7 @@
         "patternCodeableConcept": {
           "coding": [
             {
-              "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ComponentSliceCodes",
+              "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodesUrl",
               "code": "observedChanges"
             }
           ]
@@ -7230,225 +6434,11 @@
         }
       },
       {
-        "id": "Observation.component:observedSize",
-        "path": "Observation.component",
-        "sliceName": "observedSize",
-        "short": "Observed Size component",
-        "definition": "This component slice contains the observed size of an item in cemtimeters.\nThis can be a quantity (i.e. 5 cm), or a range (1 cm to 5 cm).\nIf the lower bound of the range is set but not the upper bound, then it means {lower bound} cm or more.\nIf the lower bound of the range is not set but not the upper bound is, then it means {upper bound} cm or less.",
-        "comment": "This is one component of a group of components that comprise the observation.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Observation.component",
-          "min": 0,
-          "max": "*"
-        }
-      },
-      {
-        "id": "Observation.component:observedSize.code",
-        "path": "Observation.component.code",
-        "min": 1,
-        "max": "1",
-        "base": {
-          "path": "Observation.component.code",
-          "min": 1,
-          "max": "1"
-        },
-        "patternCodeableConcept": {
-          "coding": [
-            {
-              "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ComponentSliceCodes",
-              "code": "observedSize"
-            }
-          ]
-        }
-      },
-      {
-        "id": "Observation.component:observedSize.value[x]",
-        "path": "Observation.component.value[x]",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "type",
-              "path": "$this"
-            }
-          ],
-          "rules": "closed"
-        },
-        "min": 1,
-        "max": "1",
-        "base": {
-          "path": "Observation.component.value[x]",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "Quantity"
-          },
-          {
-            "code": "Range"
-          }
-        ]
-      },
-      {
-        "id": "Observation.component:observedSize.value[x]:valueQuantity",
-        "path": "Observation.component.value[x]",
-        "sliceName": "valueQuantity",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Observation.component.value[x]",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "Quantity"
-          }
-        ],
-        "patternQuantity": {
-          "system": "http://hl7.org/fhir/us/breast-radiology/ValueSet/UnitsOfLengthVS"
-        }
-      },
-      {
-        "id": "Observation.component:observedSize.value[x]:valueRange",
-        "path": "Observation.component.value[x]",
-        "sliceName": "valueRange",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Observation.component.value[x]",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "Range"
-          }
-        ],
-        "patternRange": {
-          "low": {
-            "system": "http://hl7.org/fhir/us/breast-radiology/ValueSet/UnitsOfLengthVS"
-          },
-          "high": {
-            "system": "http://hl7.org/fhir/us/breast-radiology/ValueSet/UnitsOfLengthVS"
-          }
-        }
-      },
-      {
-        "id": "Observation.component:observedRegion",
-        "path": "Observation.component",
-        "sliceName": "observedRegion",
-        "short": "Observed Region component",
-        "definition": "This component slice contains the spherical region of an item observed.\nIf a region component is included in an observation, then what is being observed is not a single item,\nbut some number of items contained in the region of the observation\n\nThe size is the diameter of the region.\nThis can be a quantity (i.e. 5 cm region ), or a range (1 to 5 cm region).\nIf the lower bound of the range is set but not the upper bound, then it means {lower bound} or more.\nIf the lower bound of the range is not set but not the upper bound is, then it means {upper bound} or less.",
-        "comment": "This is one component of a group of components that comprise the observation.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Observation.component",
-          "min": 0,
-          "max": "*"
-        }
-      },
-      {
-        "id": "Observation.component:observedRegion.code",
-        "path": "Observation.component.code",
-        "min": 1,
-        "max": "1",
-        "base": {
-          "path": "Observation.component.code",
-          "min": 1,
-          "max": "1"
-        },
-        "patternCodeableConcept": {
-          "coding": [
-            {
-              "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ComponentSliceCodes",
-              "code": "observedSize"
-            }
-          ]
-        }
-      },
-      {
-        "id": "Observation.component:observedRegion.value[x]",
-        "path": "Observation.component.value[x]",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "type",
-              "path": "$this"
-            }
-          ],
-          "rules": "closed"
-        },
-        "min": 1,
-        "max": "1",
-        "base": {
-          "path": "Observation.component.value[x]",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "Quantity"
-          },
-          {
-            "code": "Range"
-          }
-        ]
-      },
-      {
-        "id": "Observation.component:observedRegion.value[x]:valueQuantity",
-        "path": "Observation.component.value[x]",
-        "sliceName": "valueQuantity",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Observation.component.value[x]",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "Quantity"
-          }
-        ],
-        "patternQuantity": {
-          "system": "http://hl7.org/fhir/us/breast-radiology/ValueSet/UnitsOfLengthVS"
-        }
-      },
-      {
-        "id": "Observation.component:observedRegion.value[x]:valueRange",
-        "path": "Observation.component.value[x]",
-        "sliceName": "valueRange",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Observation.component.value[x]",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "Range"
-          }
-        ],
-        "patternRange": {
-          "low": {
-            "system": "http://hl7.org/fhir/us/breast-radiology/ValueSet/UnitsOfLengthVS"
-          },
-          "high": {
-            "system": "http://hl7.org/fhir/us/breast-radiology/ValueSet/UnitsOfLengthVS"
-          }
-        }
-      },
-      {
         "id": "Observation.component:biRadsAssessmentCategory",
         "path": "Observation.component",
         "sliceName": "biRadsAssessmentCategory",
         "short": "BiRads Assessment Category component",
-        "definition": "This slice contains the optional component that defines the BiRAD risk code.\nThe value of this component is a codeable concept chosen from the BiRadsAssessmentCategoriesVS valueset.",
+        "definition": "This slice contains the optional component that defines the BiRAD risk code.\n The value of this component is a codeable concept chosen from the BiRadsAssessmentCategoriesVS valueset.",
         "comment": "This is one component of a group of components that comprise the observation.",
         "min": 0,
         "max": "1",
@@ -7473,7 +6463,7 @@
         "patternCodeableConcept": {
           "coding": [
             {
-              "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ComponentSliceCodes",
+              "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodesUrl",
               "code": "targetBiRads"
             }
           ]
@@ -7506,7 +6496,7 @@
         "path": "Observation.component",
         "sliceName": "notPreviouslySeen",
         "short": "Not Previously Seen component",
-        "definition": "This slice contains zero or more components that define prevous encounters in which this abnormality was not seen.\nThe value of this component is a codeable concept chosen from the NotPreviouslySeenVS valueset.",
+        "definition": "This slice contains zero or more components that define prevous encounters in which this abnormality was not seen.\n The value of this component is a codeable concept chosen from the NotPreviouslySeenVS valueset.",
         "comment": "This is one component of a group of components that comprise the observation.",
         "requirements": "Component observations share the same attributes in the Observation resource as the primary observation and are always treated a part of a single observation (they are not separable).   However, the reference range for the primary observation value is not inherited by the component values and is required when appropriate for each component observation.",
         "min": 0,
@@ -7660,7 +6650,7 @@
         "patternCodeableConcept": {
           "coding": [
             {
-              "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ComponentSliceCodes",
+              "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodesUrl",
               "code": "notPreviouslySeen"
             }
           ]
@@ -7874,7 +6864,7 @@
         "path": "Observation.component",
         "sliceName": "observedCount",
         "short": "Observed Count component",
-        "definition": "This component slice contains the number of items observed.\nThis can be a quantity (i.e. 5), or a range (1 to 5).\nIf the lower bound of the range is set but not the upper bound, then it means {lower bound} or more.\nIf the lower bound of the range is not set but not the upper bound is, then it means {upper bound} or less.",
+        "definition": "This component slice contains the number of items observed.\n This can be a quantity (i.e. 5), or a range (1 to 5).\n If the lower bound of the range is set but not the upper bound, then it means {lower bound} or more.\n If the lower bound of the range is not set but not the upper bound is, then it means {upper bound} or less.",
         "comment": "This is one component of a group of components that comprise the observation.",
         "min": 0,
         "max": "1",
@@ -7897,8 +6887,8 @@
         "patternCodeableConcept": {
           "coding": [
             {
-              "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ComponentSliceCodes",
-              "code": "observedSize"
+              "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodesUrl",
+              "code": "observedCount"
             }
           ]
         }
@@ -7981,7 +6971,7 @@
         "path": "Observation.component",
         "sliceName": "correspondsWith",
         "short": "Corresponds With component",
-        "definition": "This slice contains zero or more components that defines what this observation correspomnds with.\nThe value of this component is a codeable concept chosen from the CorrespondsWithVS valueset.",
+        "definition": "This slice contains zero or more components that defines what this observation correspomnds with.\n The value of this component is a codeable concept chosen from the CorrespondsWithVS valueset.",
         "comment": "This is one component of a group of components that comprise the observation.",
         "min": 0,
         "max": "*",
@@ -8006,7 +6996,7 @@
         "patternCodeableConcept": {
           "coding": [
             {
-              "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ComponentSliceCodes",
+              "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodesUrl",
               "code": "correspondsWith"
             }
           ]

@@ -17,7 +17,7 @@
       ]
     }
   ],
-  "description": "<b>Breast Density Observation</b>\n\nThe following four categories of breast composition are defined by the visually estimated content of fibroglandular-density tissue within the breasts. Please note that the \ncategories are listed as a, b, c, and d so as not to be confused with the numbered BI-RADS® assessment categories. If the breasts are not of apparently equal density, the \ndenser breast should be used to categorize breast density. The sensitivity of mammography for noncalcified lesions decreases as the BI-RADS® breast density category \nincreases. The denser the breast, the larger the lesion(s) that may be obscured. There is considerable intra- and inter-observer variation in visually estimating breast density \nbetween any two adjacent density categories. Furthermore, there is only a minimal and insignificant difference in the sensitivity of mammography between the densest breast \nin a lower-density category and the least dense breast in the next-higher-density category. These factors limit the clinical relevance of breast density categorization for the \nindividual woman. \n-- Bi-Rads® Atlas — Mammography Fifth Ed. 2013",
+  "description": "<b>Breast Density Observation</b>",
   "fhirVersion": "4.0.0",
   "kind": "resource",
   "abstract": false,
@@ -30,7 +30,7 @@
         "id": "Observation",
         "path": "Observation",
         "short": "Breast Density Observation",
-        "definition": "The following four categories of breast composition are defined by the visually estimated content of fibroglandular-density tissue within the breasts. Please note that the \ncategories are listed as a, b, c, and d so as not to be confused with the numbered BI-RADS® assessment categories. If the breasts are not of apparently equal density, the \ndenser breast should be used to categorize breast density. The sensitivity of mammography for noncalcified lesions decreases as the BI-RADS® breast density category \nincreases. The denser the breast, the larger the lesion(s) that may be obscured. There is considerable intra- and inter-observer variation in visually estimating breast density \nbetween any two adjacent density categories. Furthermore, there is only a minimal and insignificant difference in the sensitivity of mammography between the densest breast \nin a lower-density category and the least dense breast in the next-higher-density category. These factors limit the clinical relevance of breast density categorization for the \nindividual woman. \n-- Bi-Rads® Atlas — Mammography Fifth Ed. 2013",
+        "definition": "Measurements and simple assertions made about a patient, device or other subject.",
         "comment": "Used for simple observations such as device measurements, laboratory atomic results, vital signs, height, weight, smoking status, comments, etc.  Other resources are used to provide context for observations such as laboratory reports, etc.",
         "alias": [
           "Vital Signs",
@@ -687,6 +687,14 @@
             "code": "CodeableConcept"
           }
         ],
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationCodesUrl",
+              "code": "mgBreastDensityObservation"
+            }
+          ]
+        },
         "isModifier": false,
         "isSummary": true,
         "binding": {
@@ -2196,7 +2204,6 @@
         "id": "Observation",
         "path": "Observation",
         "short": "Breast Density Observation",
-        "definition": "The following four categories of breast composition are defined by the visually estimated content of fibroglandular-density tissue within the breasts. Please note that the \ncategories are listed as a, b, c, and d so as not to be confused with the numbered BI-RADS® assessment categories. If the breasts are not of apparently equal density, the \ndenser breast should be used to categorize breast density. The sensitivity of mammography for noncalcified lesions decreases as the BI-RADS® breast density category \nincreases. The denser the breast, the larger the lesion(s) that may be obscured. There is considerable intra- and inter-observer variation in visually estimating breast density \nbetween any two adjacent density categories. Furthermore, there is only a minimal and insignificant difference in the sensitivity of mammography between the densest breast \nin a lower-density category and the least dense breast in the next-higher-density category. These factors limit the clinical relevance of breast density categorization for the \nindividual woman. \n-- Bi-Rads® Atlas — Mammography Fifth Ed. 2013",
         "base": {
           "path": "Observation",
           "min": 0,
@@ -2272,6 +2279,23 @@
             {
               "system": "http://terminology.hl7.org/CodeSystem/observation-category",
               "code": "imaging"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Observation.code",
+        "path": "Observation.code",
+        "base": {
+          "path": "Observation.code",
+          "min": 1,
+          "max": "1"
+        },
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationCodesUrl",
+              "code": "mgBreastDensityObservation"
             }
           ]
         }
