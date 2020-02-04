@@ -1,0 +1,51 @@
+{
+  "resourceType": "ValueSet",
+  "id": "ObservedDistributionVS",
+  "url": "http://hl7.org/fhir/us/breast-radiology/ValueSet/ObservedDistributionVS",
+  "version": "0.0.2",
+  "name": "ObservedDistributionVS",
+  "title": "Observed Distribution ValueSet",
+  "status": "draft",
+  "date": "2019-11-01",
+  "publisher": "Hl7-Clinical Interoperability Council",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/cic"
+        }
+      ]
+    }
+  ],
+  "description": "Observed Distribution of an abnormality value set.",
+  "compose": {
+    "include": [
+      {
+        "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservedDistributionCS",
+        "concept": [
+          {
+            "code": "Diffuse",
+            "display": "Diffuse (historically, \"scattered\")"
+          },
+          {
+            "code": "Regional",
+            "display": "Regional"
+          },
+          {
+            "code": "Grouped",
+            "display": "Grouped (historically, \"clustered\")"
+          },
+          {
+            "code": "Linear",
+            "display": "Linear"
+          },
+          {
+            "code": "Segmental",
+            "display": "Segmental"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -2063,78 +2063,6 @@
         ]
       },
       {
-        "id": "Observation.hasMember:observedItemGroup",
-        "path": "Observation.hasMember",
-        "sliceName": "observedItemGroup",
-        "short": "'Observed ItemGroup' reference",
-        "definition": "This slice references the target 'Observed ItemGroup'.",
-        "comment": "When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.  Note that a system may calculate results from [QuestionnaireResponse](questionnaireresponse.html)  into a final score and represent the score as an Observation.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Observation.hasMember",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ObservedItemGroup"
-            ]
-          }
-        ],
-        "mustSupport": true,
-        "isModifier": false,
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "Relationships established by OBX-4 usage"
-          },
-          {
-            "identity": "rim",
-            "map": "outBoundRelationship"
-          }
-        ]
-      },
-      {
-        "id": "Observation.hasMember:observedItemRegion",
-        "path": "Observation.hasMember",
-        "sliceName": "observedItemRegion",
-        "short": "'Observed ItemRegion' reference",
-        "definition": "This slice references the target 'Observed ItemRegion'.",
-        "comment": "When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.  Note that a system may calculate results from [QuestionnaireResponse](questionnaireresponse.html)  into a final score and represent the score as an Observation.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Observation.hasMember",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ObservedItemRegion"
-            ]
-          }
-        ],
-        "mustSupport": true,
-        "isModifier": false,
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "Relationships established by OBX-4 usage"
-          },
-          {
-            "identity": "rim",
-            "map": "outBoundRelationship"
-          }
-        ]
-      },
-      {
         "id": "Observation.derivedFrom",
         "path": "Observation.derivedFrom",
         "short": "Related measurements the observation is made from",
@@ -2568,9 +2496,9 @@
         ]
       },
       {
-        "id": "Observation.component:observedChanges",
+        "id": "Observation.component:obsChanges",
         "path": "Observation.component",
-        "sliceName": "observedChanges",
+        "sliceName": "obsChanges",
         "short": "Observed Change In Abnormality component",
         "definition": "This slice contains zero or more components that define observed changes in this abnormality.\n The value of this component is a codeable concept chosen from the ObservedChangesVS valueset.",
         "comment": "This is one component of a group of components that comprise the observation.",
@@ -2611,7 +2539,7 @@
         ]
       },
       {
-        "id": "Observation.component:observedChanges.id",
+        "id": "Observation.component:obsChanges.id",
         "path": "Observation.component.id",
         "representation": [
           "xmlAttr"
@@ -2640,7 +2568,7 @@
         ]
       },
       {
-        "id": "Observation.component:observedChanges.extension",
+        "id": "Observation.component:obsChanges.extension",
         "path": "Observation.component.extension",
         "short": "Additional content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
@@ -2671,7 +2599,7 @@
         ]
       },
       {
-        "id": "Observation.component:observedChanges.modifierExtension",
+        "id": "Observation.component:obsChanges.modifierExtension",
         "path": "Observation.component.modifierExtension",
         "short": "Extensions that cannot be ignored even if unrecognized",
         "definition": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
@@ -2705,7 +2633,7 @@
         ]
       },
       {
-        "id": "Observation.component:observedChanges.code",
+        "id": "Observation.component:obsChanges.code",
         "path": "Observation.component.code",
         "short": "Observed Change In Abnormality component code",
         "definition": "This code identifies the Observed Change In Abnormality components.",
@@ -2727,7 +2655,7 @@
           "coding": [
             {
               "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes",
-              "code": "observedChanges"
+              "code": "obsChanges"
             }
           ]
         },
@@ -2764,7 +2692,7 @@
         ]
       },
       {
-        "id": "Observation.component:observedChanges.value[x]",
+        "id": "Observation.component:obsChanges.value[x]",
         "path": "Observation.component.value[x]",
         "short": "Observed Change In Abnormality component value",
         "definition": "Value is a codeable concept.",
@@ -2808,7 +2736,7 @@
         ]
       },
       {
-        "id": "Observation.component:observedChanges.dataAbsentReason",
+        "id": "Observation.component:obsChanges.dataAbsentReason",
         "path": "Observation.component.dataAbsentReason",
         "short": "Why the component result is missing",
         "definition": "Provides a reason why the expected value in the element Observation.component.value[x] is missing.",
@@ -2854,7 +2782,7 @@
         ]
       },
       {
-        "id": "Observation.component:observedChanges.interpretation",
+        "id": "Observation.component:obsChanges.interpretation",
         "path": "Observation.component.interpretation",
         "short": "High, low, normal, etc.",
         "definition": "A categorical assessment of an observation value.  For example, high, low, normal.",
@@ -2908,7 +2836,7 @@
         ]
       },
       {
-        "id": "Observation.component:observedChanges.referenceRange",
+        "id": "Observation.component:obsChanges.referenceRange",
         "path": "Observation.component.referenceRange",
         "short": "Provides guide for interpretation of component result",
         "definition": "Guidance on how to interpret the value by comparison to a normal or recommended range.",
@@ -5841,52 +5769,6 @@
         ]
       },
       {
-        "id": "Observation.hasMember:observedItemGroup",
-        "path": "Observation.hasMember",
-        "sliceName": "observedItemGroup",
-        "short": "'Observed ItemGroup' reference",
-        "definition": "This slice references the target 'Observed ItemGroup'.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Observation.hasMember",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ObservedItemGroup"
-            ]
-          }
-        ],
-        "mustSupport": true
-      },
-      {
-        "id": "Observation.hasMember:observedItemRegion",
-        "path": "Observation.hasMember",
-        "sliceName": "observedItemRegion",
-        "short": "'Observed ItemRegion' reference",
-        "definition": "This slice references the target 'Observed ItemRegion'.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Observation.hasMember",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ObservedItemRegion"
-            ]
-          }
-        ],
-        "mustSupport": true
-      },
-      {
         "id": "Observation.component",
         "path": "Observation.component",
         "slicing": {
@@ -5907,9 +5789,9 @@
         }
       },
       {
-        "id": "Observation.component:observedChanges",
+        "id": "Observation.component:obsChanges",
         "path": "Observation.component",
-        "sliceName": "observedChanges",
+        "sliceName": "obsChanges",
         "short": "Observed Change In Abnormality component",
         "definition": "This slice contains zero or more components that define observed changes in this abnormality.\n The value of this component is a codeable concept chosen from the ObservedChangesVS valueset.",
         "comment": "This is one component of a group of components that comprise the observation.",
@@ -5922,7 +5804,7 @@
         }
       },
       {
-        "id": "Observation.component:observedChanges.code",
+        "id": "Observation.component:obsChanges.code",
         "path": "Observation.component.code",
         "short": "Observed Change In Abnormality component code",
         "definition": "This code identifies the Observed Change In Abnormality components.",
@@ -5937,13 +5819,13 @@
           "coding": [
             {
               "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes",
-              "code": "observedChanges"
+              "code": "obsChanges"
             }
           ]
         }
       },
       {
-        "id": "Observation.component:observedChanges.value[x]",
+        "id": "Observation.component:obsChanges.value[x]",
         "path": "Observation.component.value[x]",
         "short": "Observed Change In Abnormality component value",
         "definition": "Value is a codeable concept.",
