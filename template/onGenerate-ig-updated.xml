@@ -18,7 +18,7 @@
    <title value="Breast Radiology Reporting - 1st STU ballot"/>
    <status value="draft"/>
    <experimental value="false"/>
-   <date value="2020-02-05T19:18:32-06:00"/>
+   <date value="2020-02-06T17:52:24-06:00"/>
    <publisher value="Hl7 - Clinical Interoperability Council"/>
    <contact>
       <telecom>
@@ -101,7 +101,10 @@
          <name value="Terminology: Value Sets"/>
          <description value="These define sets of codes used by systems conforming with this implementation guide"/>
       </grouping>
-
+      <grouping id="_term_codesystem">
+         <name value="Terminology: Code Systems"/>
+         <description value="These define new code systems used by systems conforming with this implementation guide"/>
+      </grouping>
 
 
 
@@ -233,6 +236,21 @@
             <valueString value="CodeSystem"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-CalcificationDistributionCS.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/CalcificationDistributionCS"/>
+         </reference>
+         <name value="Calcification Distribution CodeSystem"/>
+         <description value="Calcification Distribution in an abnormality code system."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="CommonCodesCS"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
             <valueUri value="CodeSystem-CompositionSectionSliceCodes.html"/>
          </extension>
          <reference>
@@ -317,21 +335,6 @@
          <description value="Foreign objects observed during a Breast Radiology exam code system."/>
          <exampleBoolean value="false"/>
          <groupingId value="CommonCodesCS"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="CodeSystem"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="CodeSystem-MammoCalcificationDistributionCS.html"/>
-         </extension>
-         <reference>
-            <reference value="CodeSystem/MammoCalcificationDistributionCS"/>
-         </reference>
-         <name value="Mammography Calcification Distribution CodeSystem"/>
-         <description value="Mammography calcification distribution code system."/>
-         <exampleBoolean value="false"/>
-         <groupingId value="MGCodesCS"/>
       </resource>
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -495,21 +498,6 @@
          </reference>
          <name value="Observed Changes CodeSystem"/>
          <description value="Observed changes in an abnormality code system."/>
-         <exampleBoolean value="false"/>
-         <groupingId value="CommonCodesCS"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="CodeSystem"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="CodeSystem-ObservedDistributionCS.html"/>
-         </extension>
-         <reference>
-            <reference value="CodeSystem/ObservedDistributionCS"/>
-         </reference>
-         <name value="Observed Distribution CodeSystem"/>
-         <description value="Observed Distribution in an abnormality code system."/>
          <exampleBoolean value="false"/>
          <groupingId value="CommonCodesCS"/>
       </resource>
@@ -698,6 +686,21 @@
             <valueString value="ValueSet"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="ValueSet-CalcificationDistributionVS.html"/>
+         </extension>
+         <reference>
+            <reference value="ValueSet/CalcificationDistributionVS"/>
+         </reference>
+         <name value="Calcification Distribution ValueSet"/>
+         <description value="Calcification Distribution of an abnormality value set."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="CommonCodesVS"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="ValueSet"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
             <valueUri value="ValueSet-ConsistentWithQualifierVS.html"/>
          </extension>
          <reference>
@@ -767,21 +770,6 @@
          <description value="Foreign objects observed during a Breast Radiology exam value set"/>
          <exampleBoolean value="false"/>
          <groupingId value="CommonCodesVS"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="ValueSet"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="ValueSet-MammoCalcificationDistributionVS.html"/>
-         </extension>
-         <reference>
-            <reference value="ValueSet/MammoCalcificationDistributionVS"/>
-         </reference>
-         <name value="Mammography Calcification Distribution ValueSet"/>
-         <description value="Mammography calcification distribution value set."/>
-         <exampleBoolean value="false"/>
-         <groupingId value="MGCodesVS"/>
       </resource>
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -915,21 +903,6 @@
          </reference>
          <name value="Observed Changes ValueSet"/>
          <description value="Observed changes in an abnormality value set."/>
-         <exampleBoolean value="false"/>
-         <groupingId value="CommonCodesVS"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="ValueSet"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="ValueSet-ObservedDistributionVS.html"/>
-         </extension>
-         <reference>
-            <reference value="ValueSet/ObservedDistributionVS"/>
-         </reference>
-         <name value="Observed Distribution ValueSet"/>
-         <description value="Observed Distribution of an abnormality value set."/>
          <exampleBoolean value="false"/>
          <groupingId value="CommonCodesVS"/>
       </resource>
@@ -1715,6 +1688,34 @@
       </resource>
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-MammoCalcificationDistributionCS.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/MammoCalcificationDistributionCS"/>
+         </reference>
+         <name value="Mammography Calcification Distribution CodeSystem"/>
+         <description value="Mammography calcification distribution code system."/>
+         <groupingId value="_term_codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-ObservedDistributionCS.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/ObservedDistributionCS"/>
+         </reference>
+         <name value="Observed Distribution CodeSystem"/>
+         <description value="Observed Distribution in an abnormality code system."/>
+         <groupingId value="_term_codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
             <valueString value="StructureDefinition:resource"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
@@ -1739,6 +1740,34 @@
          </reference>
          <name value="Item Group Component Codes ValueSet"/>
          <description value="Item Group Component Codes value set."/>
+         <groupingId value="_term_valueset"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="ValueSet"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="ValueSet-MammoCalcificationDistributionVS.html"/>
+         </extension>
+         <reference>
+            <reference value="ValueSet/MammoCalcificationDistributionVS"/>
+         </reference>
+         <name value="Mammography Calcification Distribution ValueSet"/>
+         <description value="Mammography calcification distribution value set."/>
+         <groupingId value="_term_valueset"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="ValueSet"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="ValueSet-ObservedDistributionVS.html"/>
+         </extension>
+         <reference>
+            <reference value="ValueSet/ObservedDistributionVS"/>
+         </reference>
+         <name value="Observed Distribution ValueSet"/>
+         <description value="Observed Distribution of an abnormality value set."/>
          <groupingId value="_term_valueset"/>
       </resource>
       <page>
@@ -1910,6 +1939,11 @@
                <generation value="generated"/>
             </page>
             <page>
+               <nameUrl value="ValueSet-CalcificationDistributionVS.html"/>
+               <title value="Calcification Distribution ValueSet"/>
+               <generation value="generated"/>
+            </page>
+            <page>
                <nameUrl value="ValueSet-ConsistentWithQualifierVS.html"/>
                <title value="ConsistentWithQualifier ValueSet"/>
                <generation value="generated"/>
@@ -1952,11 +1986,6 @@
             <page>
                <nameUrl value="ValueSet-ObservedChangesVS.html"/>
                <title value="Observed Changes ValueSet"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="ValueSet-ObservedDistributionVS.html"/>
-               <title value="Observed Distribution ValueSet"/>
                <generation value="generated"/>
             </page>
             <page>
@@ -2025,6 +2054,11 @@
                <generation value="generated"/>
             </page>
             <page>
+               <nameUrl value="CodeSystem-CalcificationDistributionCS.html"/>
+               <title value="Calcification Distribution CodeSystem"/>
+               <generation value="generated"/>
+            </page>
+            <page>
                <nameUrl value="CodeSystem-CompositionSectionSliceCodes.html"/>
                <title value="Composition Section Slice Codes CodeSystem"/>
                <generation value="generated"/>
@@ -2085,11 +2119,6 @@
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="CodeSystem-ObservedDistributionCS.html"/>
-               <title value="Observed Distribution CodeSystem"/>
-               <generation value="generated"/>
-            </page>
-            <page>
                <nameUrl value="CodeSystem-ObservedFeatureCS.html"/>
                <title value="Observed Feature CodeSystem"/>
                <generation value="generated"/>
@@ -2145,11 +2174,6 @@
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="ValueSet-MammoCalcificationDistributionVS.html"/>
-               <title value="Mammography Calcification Distribution ValueSet"/>
-               <generation value="generated"/>
-            </page>
-            <page>
                <nameUrl value="ValueSet-MammoCalcificationTypeVS.html"/>
                <title value="Mammography Calcification Type ValueSet"/>
                <generation value="generated"/>
@@ -2172,11 +2196,6 @@
             <page>
                <nameUrl value="ValueSet-MGDensityVS.html"/>
                <title value="Mammography Density ValueSet"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="CodeSystem-MammoCalcificationDistributionCS.html"/>
-               <title value="Mammography Calcification Distribution CodeSystem"/>
                <generation value="generated"/>
             </page>
             <page>
@@ -2342,6 +2361,26 @@
             <page>
                <nameUrl value="ValueSet-ItemGroupComponentCodesVS.html"/>
                <title value="Item Group Component Codes ValueSet"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="ValueSet-MammoCalcificationDistributionVS.html"/>
+               <title value="Mammography Calcification Distribution ValueSet"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="ValueSet-ObservedDistributionVS.html"/>
+               <title value="Observed Distribution ValueSet"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="CodeSystem-MammoCalcificationDistributionCS.html"/>
+               <title value="Mammography Calcification Distribution CodeSystem"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="CodeSystem-ObservedDistributionCS.html"/>
+               <title value="Observed Distribution CodeSystem"/>
                <generation value="generated"/>
             </page>
          </page>
