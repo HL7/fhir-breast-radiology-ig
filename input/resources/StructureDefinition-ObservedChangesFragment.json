@@ -2155,7 +2155,7 @@
         "path": "Observation.component",
         "sliceName": "obsChanges",
         "short": "Observed Change In Abnormality component",
-        "definition": "This slice contains zero or more components that define observed changes in this abnormality.\n The value of this component is a codeable concept chosen from the ObservedChangesVS valueset.",
+        "definition": "This slice contains the optional components that define observed changes in this abnormality.\n The value of this component is a codeable concept chosen from the ObservedChangesVS valueset.",
         "comment": "This is one component of a group of components that comprise the observation.",
         "requirements": "Component observations share the same attributes in the Observation resource as the primary observation and are always treated a part of a single observation (they are not separable).   However, the reference range for the primary observation value is not inherited by the component values and is required when appropriate for each component observation.",
         "min": 0,
@@ -2291,7 +2291,7 @@
         "id": "Observation.component:obsChanges.code",
         "path": "Observation.component.code",
         "short": "Observed Change In Abnormality component code",
-        "definition": "This code identifies the Observed Change In Abnormality components.",
+        "definition": "This code identifies the Observed Change In Abnormality components.\n Its value shall always be the concept 'Component code for 'Observed Changes' slice'",
         "comment": "*All* code-value and  component.code-component.value pairs need to be taken into account to correctly understand the meaning of the observation.",
         "requirements": "Knowing what kind of observation is being made is essential to understanding the observation.",
         "min": 1,
@@ -2310,9 +2310,11 @@
           "coding": [
             {
               "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes",
-              "code": "obsChanges"
+              "code": "obsChanges",
+              "display": "Component code for 'Observed Changes' slice"
             }
-          ]
+          ],
+          "text": "Component code for 'Observed Changes' slice"
         },
         "isModifier": false,
         "isSummary": true,
@@ -2555,7 +2557,7 @@
         "path": "Observation.component",
         "sliceName": "obsChanges",
         "short": "Observed Change In Abnormality component",
-        "definition": "This slice contains zero or more components that define observed changes in this abnormality.\n The value of this component is a codeable concept chosen from the ObservedChangesVS valueset.",
+        "definition": "This slice contains the optional components that define observed changes in this abnormality.\n The value of this component is a codeable concept chosen from the ObservedChangesVS valueset.",
         "comment": "This is one component of a group of components that comprise the observation.",
         "min": 0,
         "max": "*",
@@ -2569,7 +2571,7 @@
         "id": "Observation.component:obsChanges.code",
         "path": "Observation.component.code",
         "short": "Observed Change In Abnormality component code",
-        "definition": "This code identifies the Observed Change In Abnormality components.",
+        "definition": "This code identifies the Observed Change In Abnormality components.\n Its value shall always be the concept 'Component code for 'Observed Changes' slice'",
         "min": 1,
         "max": "1",
         "base": {
@@ -2581,9 +2583,11 @@
           "coding": [
             {
               "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes",
-              "code": "obsChanges"
+              "code": "obsChanges",
+              "display": "Component code for 'Observed Changes' slice"
             }
-          ]
+          ],
+          "text": "Component code for 'Observed Changes' slice"
         }
       },
       {

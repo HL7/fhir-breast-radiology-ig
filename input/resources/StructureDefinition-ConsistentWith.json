@@ -691,9 +691,11 @@
           "coding": [
             {
               "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationCodes",
-              "code": "consistentWithObservation"
+              "code": "consistentWithObservation",
+              "display": "Consistent With observation"
             }
-          ]
+          ],
+          "text": "Consistent With observation"
         },
         "isModifier": false,
         "isSummary": true,
@@ -2372,7 +2374,7 @@
         "id": "Observation.component:value.code",
         "path": "Observation.component.code",
         "short": "Consistent With Value component code",
-        "definition": "This code identifies the Consistent With Value component.",
+        "definition": "This code identifies the Consistent With Value component.\n Its value shall always be the concept 'Component code for 'Consistent With Value' slice'",
         "comment": "*All* code-value and  component.code-component.value pairs need to be taken into account to correctly understand the meaning of the observation.",
         "requirements": "Knowing what kind of observation is being made is essential to understanding the observation.",
         "min": 1,
@@ -2391,9 +2393,11 @@
           "coding": [
             {
               "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes",
-              "code": "consistentWithValue"
+              "code": "consistentWithValue",
+              "display": "Component code for 'Consistent With Value' slice"
             }
-          ]
+          ],
+          "text": "Component code for 'Consistent With Value' slice"
         },
         "isModifier": false,
         "isSummary": true,
@@ -2604,7 +2608,7 @@
         "path": "Observation.component",
         "sliceName": "qualifier",
         "short": "Consistent With Qualifier component",
-        "definition": "This slice contains zero or more components that qualify the consistent with slice component value.\n The value of this component is a codeable concept chosen from the ConsistentWithVS valueset.",
+        "definition": "This slice contains the optional components that qualify the 'consistentWith' slice component value.\n The value of this component is a codeable concept chosen from the ConsistentWithQualifierVS valueset.",
         "comment": "This is one component of a group of components that comprise the observation.",
         "requirements": "Component observations share the same attributes in the Observation resource as the primary observation and are always treated a part of a single observation (they are not separable).   However, the reference range for the primary observation value is not inherited by the component values and is required when appropriate for each component observation.",
         "min": 0,
@@ -2740,7 +2744,7 @@
         "id": "Observation.component:qualifier.code",
         "path": "Observation.component.code",
         "short": "Consistent With Qualifier component code",
-        "definition": "This code identifies the Consistent With Qualifier components.",
+        "definition": "This code identifies the Consistent With Qualifier components.\n Its value shall always be the concept 'Component code for 'Consistent With Qualifier' slice'",
         "comment": "*All* code-value and  component.code-component.value pairs need to be taken into account to correctly understand the meaning of the observation.",
         "requirements": "Knowing what kind of observation is being made is essential to understanding the observation.",
         "min": 1,
@@ -2759,9 +2763,11 @@
           "coding": [
             {
               "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes",
-              "code": "consistentWithQualifier"
+              "code": "consistentWithQualifier",
+              "display": "Component code for 'Consistent With Qualifier' slice"
             }
-          ]
+          ],
+          "text": "Component code for 'Consistent With Qualifier' slice"
         },
         "isModifier": false,
         "isSummary": true,
@@ -3066,9 +3072,11 @@
           "coding": [
             {
               "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationCodes",
-              "code": "consistentWithObservation"
+              "code": "consistentWithObservation",
+              "display": "Consistent With observation"
             }
-          ]
+          ],
+          "text": "Consistent With observation"
         }
       },
       {
@@ -3326,7 +3334,7 @@
         "id": "Observation.component:value.code",
         "path": "Observation.component.code",
         "short": "Consistent With Value component code",
-        "definition": "This code identifies the Consistent With Value component.",
+        "definition": "This code identifies the Consistent With Value component.\n Its value shall always be the concept 'Component code for 'Consistent With Value' slice'",
         "comment": "*All* code-value and  component.code-component.value pairs need to be taken into account to correctly understand the meaning of the observation.",
         "requirements": "Knowing what kind of observation is being made is essential to understanding the observation.",
         "min": 1,
@@ -3345,9 +3353,11 @@
           "coding": [
             {
               "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes",
-              "code": "consistentWithValue"
+              "code": "consistentWithValue",
+              "display": "Component code for 'Consistent With Value' slice"
             }
-          ]
+          ],
+          "text": "Component code for 'Consistent With Value' slice"
         },
         "isModifier": false,
         "isSummary": true,
@@ -3558,7 +3568,7 @@
         "path": "Observation.component",
         "sliceName": "qualifier",
         "short": "Consistent With Qualifier component",
-        "definition": "This slice contains zero or more components that qualify the consistent with slice component value.\n The value of this component is a codeable concept chosen from the ConsistentWithVS valueset.",
+        "definition": "This slice contains the optional components that qualify the 'consistentWith' slice component value.\n The value of this component is a codeable concept chosen from the ConsistentWithQualifierVS valueset.",
         "comment": "This is one component of a group of components that comprise the observation.",
         "requirements": "Component observations share the same attributes in the Observation resource as the primary observation and are always treated a part of a single observation (they are not separable).   However, the reference range for the primary observation value is not inherited by the component values and is required when appropriate for each component observation.",
         "min": 0,
@@ -3694,7 +3704,7 @@
         "id": "Observation.component:qualifier.code",
         "path": "Observation.component.code",
         "short": "Consistent With Qualifier component code",
-        "definition": "This code identifies the Consistent With Qualifier components.",
+        "definition": "This code identifies the Consistent With Qualifier components.\n Its value shall always be the concept 'Component code for 'Consistent With Qualifier' slice'",
         "comment": "*All* code-value and  component.code-component.value pairs need to be taken into account to correctly understand the meaning of the observation.",
         "requirements": "Knowing what kind of observation is being made is essential to understanding the observation.",
         "min": 1,
@@ -3713,9 +3723,11 @@
           "coding": [
             {
               "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes",
-              "code": "consistentWithQualifier"
+              "code": "consistentWithQualifier",
+              "display": "Component code for 'Consistent With Qualifier' slice"
             }
-          ]
+          ],
+          "text": "Component code for 'Consistent With Qualifier' slice"
         },
         "isModifier": false,
         "isSummary": true,

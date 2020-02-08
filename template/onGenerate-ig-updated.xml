@@ -18,7 +18,7 @@
    <title value="Breast Radiology Reporting - 1st STU ballot"/>
    <status value="draft"/>
    <experimental value="false"/>
-   <date value="2020-02-06T19:42:35-06:00"/>
+   <date value="2020-02-08T17:10:36-06:00"/>
    <publisher value="Hl7 - Clinical Interoperability Council"/>
    <contact>
       <telecom>
@@ -91,20 +91,11 @@
 
 
 
-      <grouping id="_str_profile">
-         <name value="Structures: Resource Profiles"/>
-         <description value="These define constraints on FHIR resources that need to be complied with by conformant implementations"/>
-      </grouping>
 
 
-      <grouping id="_term_valueset">
-         <name value="Terminology: Value Sets"/>
-         <description value="These define sets of codes used by systems conforming with this implementation guide"/>
-      </grouping>
-      <grouping id="_term_codesystem">
-         <name value="Terminology: Code Systems"/>
-         <description value="These define new code systems used by systems conforming with this implementation guide"/>
-      </grouping>
+
+
+
 
 
 
@@ -536,6 +527,21 @@
             <valueString value="CodeSystem"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-PreviouslyDemonstratedByCodeSystemCS.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/PreviouslyDemonstratedByCodeSystemCS"/>
+         </reference>
+         <name value="Not Previously Seen CodeSystem"/>
+         <description value="PreviouslyDemonstratedBy code system"/>
+         <exampleBoolean value="false"/>
+         <groupingId value="CommonCodesCS"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
             <valueUri value="CodeSystem-RecommendationsCodeSystemCS.html"/>
          </extension>
          <reference>
@@ -933,6 +939,21 @@
          </reference>
          <name value="Orientation ValueSet"/>
          <description value="Orientation ValueSet"/>
+         <exampleBoolean value="false"/>
+         <groupingId value="CommonCodesVS"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="ValueSet"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="ValueSet-PreviouslyDemonstratedByVS.html"/>
+         </extension>
+         <reference>
+            <reference value="ValueSet/PreviouslyDemonstratedByVS"/>
+         </reference>
+         <name value="PreviouslyDemonstratedBy ValueSet"/>
+         <description value="PreviouslyDemonstratedBy value set."/>
          <exampleBoolean value="false"/>
          <groupingId value="CommonCodesVS"/>
       </resource>
@@ -1391,6 +1412,21 @@
             <valueString value="StructureDefinition:resource:abstract"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-AssociatedFeaturesHasMemberFragment.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/AssociatedFeaturesHasMemberFragment"/>
+         </reference>
+         <name value="AssociatedFeatures HasMember Fragment"/>
+         <description value="Fragment 'AssociatedFeatures HasMember fragment'"/>
+         <exampleBoolean value="false"/>
+         <groupingId value="Fragments"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:resource:abstract"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
             <valueUri value="StructureDefinition-BiRadFragment.html"/>
          </extension>
          <reference>
@@ -1503,6 +1539,21 @@
          </reference>
          <name value="Common Components Fragment"/>
          <description value="Fragment 'Common Components fragment'"/>
+         <exampleBoolean value="false"/>
+         <groupingId value="Fragments"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:resource:abstract"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-ConsistentWithHasMemberFragment.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/ConsistentWithHasMemberFragment"/>
+         </reference>
+         <name value="ConsistentWith HasMember Fragment"/>
+         <description value="Fragment 'ConsistentWith HasMember fragment'"/>
          <exampleBoolean value="false"/>
          <groupingId value="Fragments"/>
       </resource>
@@ -1661,6 +1712,21 @@
             <valueString value="StructureDefinition:resource:abstract"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-PreviouslyDemonstratedByFragment.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/PreviouslyDemonstratedByFragment"/>
+         </reference>
+         <name value="PreviouslyDemonstratedBy Fragment"/>
+         <description value="Fragment 'Observation 'Demonstrated By' Component Fragment'"/>
+         <exampleBoolean value="false"/>
+         <groupingId value="Fragments"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:resource:abstract"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
             <valueUri value="StructureDefinition-ShapeComponentsFragment.html"/>
          </extension>
          <reference>
@@ -1685,90 +1751,6 @@
          <description value="Fragment 'Tumor Satellite fragment'"/>
          <exampleBoolean value="false"/>
          <groupingId value="Fragments"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="CodeSystem"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="CodeSystem-MammoCalcificationDistributionCS.html"/>
-         </extension>
-         <reference>
-            <reference value="CodeSystem/MammoCalcificationDistributionCS"/>
-         </reference>
-         <name value="Mammography Calcification Distribution CodeSystem"/>
-         <description value="Mammography calcification distribution code system."/>
-         <groupingId value="_term_codesystem"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="CodeSystem"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="CodeSystem-ObservedDistributionCS.html"/>
-         </extension>
-         <reference>
-            <reference value="CodeSystem/ObservedDistributionCS"/>
-         </reference>
-         <name value="Observed Distribution CodeSystem"/>
-         <description value="Observed Distribution in an abnormality code system."/>
-         <groupingId value="_term_codesystem"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="StructureDefinition:resource"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="StructureDefinition-ObservedItemGroup.html"/>
-         </extension>
-         <reference>
-            <reference value="StructureDefinition/ObservedItemGroup"/>
-         </reference>
-         <name value="Observed ItemGroup"/>
-         <description value="&lt;b&gt;Observation of a size or size range in 1, 2, or 3 dimensions.&lt;/b&gt;&#xA;&#xA;Observation of a one or more items and the size and grouping of the item(s)&#xA;&#xA;The size can be one, two, or three dimensional.&#xA; The axes can be oriented to certain landmarks, or ordered by size.&#xA; Each dimention can be a quantity (i.e. 5 cm), or a range (1 cm to 5 cm).&#xA; If the lower bound of the range is set but not the upper bound, then it means {lower bound} cm or more.&#xA; If the upper bound of the range is set but not the lower bound, then it means {upper bound} cm or less."/>
-         <groupingId value="_str_profile"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="ValueSet"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="ValueSet-ItemGroupComponentCodesVS.html"/>
-         </extension>
-         <reference>
-            <reference value="ValueSet/ItemGroupComponentCodesVS"/>
-         </reference>
-         <name value="Item Group Component Codes ValueSet"/>
-         <description value="Item Group Component Codes value set."/>
-         <groupingId value="_term_valueset"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="ValueSet"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="ValueSet-MammoCalcificationDistributionVS.html"/>
-         </extension>
-         <reference>
-            <reference value="ValueSet/MammoCalcificationDistributionVS"/>
-         </reference>
-         <name value="Mammography Calcification Distribution ValueSet"/>
-         <description value="Mammography calcification distribution value set."/>
-         <groupingId value="_term_valueset"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="ValueSet"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="ValueSet-ObservedDistributionVS.html"/>
-         </extension>
-         <reference>
-            <reference value="ValueSet/ObservedDistributionVS"/>
-         </reference>
-         <name value="Observed Distribution ValueSet"/>
-         <description value="Observed Distribution of an abnormality value set."/>
-         <groupingId value="_term_valueset"/>
       </resource>
       <page>
          <nameUrl value="toc.html"/>
@@ -1999,6 +1981,11 @@
                <generation value="generated"/>
             </page>
             <page>
+               <nameUrl value="ValueSet-PreviouslyDemonstratedByVS.html"/>
+               <title value="PreviouslyDemonstratedBy ValueSet"/>
+               <generation value="generated"/>
+            </page>
+            <page>
                <nameUrl value="ValueSet-RecommendationsVS.html"/>
                <title value="Recommendations ValueSet"/>
                <generation value="generated"/>
@@ -2129,6 +2116,11 @@
                <generation value="generated"/>
             </page>
             <page>
+               <nameUrl value="CodeSystem-PreviouslyDemonstratedByCodeSystemCS.html"/>
+               <title value="Not Previously Seen CodeSystem"/>
+               <generation value="generated"/>
+            </page>
+            <page>
                <nameUrl value="CodeSystem-RecommendationsCodeSystemCS.html"/>
                <title value="Recommendations CodeSystem"/>
                <generation value="generated"/>
@@ -2239,6 +2231,11 @@
                <generation value="generated"/>
             </page>
             <page>
+               <nameUrl value="StructureDefinition-AssociatedFeaturesHasMemberFragment.html"/>
+               <title value="AssociatedFeatures HasMember Fragment"/>
+               <generation value="generated"/>
+            </page>
+            <page>
                <nameUrl value="StructureDefinition-BiRadFragment.html"/>
                <title value="BiRad Fragment"/>
                <generation value="generated"/>
@@ -2276,6 +2273,11 @@
             <page>
                <nameUrl value="StructureDefinition-CommonComponentsFragment.html"/>
                <title value="Common Components Fragment"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-ConsistentWithHasMemberFragment.html"/>
+               <title value="ConsistentWith HasMember Fragment"/>
                <generation value="generated"/>
             </page>
             <page>
@@ -2329,6 +2331,11 @@
                <generation value="generated"/>
             </page>
             <page>
+               <nameUrl value="StructureDefinition-PreviouslyDemonstratedByFragment.html"/>
+               <title value="PreviouslyDemonstratedBy Fragment"/>
+               <generation value="generated"/>
+            </page>
+            <page>
                <nameUrl value="StructureDefinition-ShapeComponentsFragment.html"/>
                <title value="Shape Components Fragment"/>
                <generation value="generated"/>
@@ -2351,36 +2358,6 @@
             <page>
                <nameUrl value="StructureDefinition-TumorSatelliteExtension.html"/>
                <title value="Tumor Satellite Extension"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="StructureDefinition-ObservedItemGroup.html"/>
-               <title value="Observed ItemGroup"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="ValueSet-ItemGroupComponentCodesVS.html"/>
-               <title value="Item Group Component Codes ValueSet"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="ValueSet-MammoCalcificationDistributionVS.html"/>
-               <title value="Mammography Calcification Distribution ValueSet"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="ValueSet-ObservedDistributionVS.html"/>
-               <title value="Observed Distribution ValueSet"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="CodeSystem-MammoCalcificationDistributionCS.html"/>
-               <title value="Mammography Calcification Distribution CodeSystem"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="CodeSystem-ObservedDistributionCS.html"/>
-               <title value="Observed Distribution CodeSystem"/>
                <generation value="generated"/>
             </page>
          </page>
