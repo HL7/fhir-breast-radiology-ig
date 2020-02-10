@@ -18,7 +18,7 @@
    <title value="Breast Radiology Reporting - 1st STU ballot"/>
    <status value="draft"/>
    <experimental value="false"/>
-   <date value="2020-02-09T21:35:59-06:00"/>
+   <date value="2020-02-10T14:30:55-06:00"/>
    <publisher value="Hl7 - Clinical Interoperability Council"/>
    <contact>
       <telecom>
@@ -1214,6 +1214,21 @@
       </resource>
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:resource"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-TumorSatellite.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/TumorSatellite"/>
+         </reference>
+         <name value="Tumor Satellite"/>
+         <description value="'Tumor Satellite' Observation"/>
+         <exampleBoolean value="false"/>
+         <groupingId value="CommonResources"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
             <valueString value="StructureDefinition:extension"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
@@ -1239,21 +1254,6 @@
          </reference>
          <name value="Breast Body Location Extension"/>
          <description value="Breast Body Location extension"/>
-         <exampleBoolean value="false"/>
-         <groupingId value="ExtensionResources"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="StructureDefinition:extension"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="StructureDefinition-TumorSatelliteExtension.html"/>
-         </extension>
-         <reference>
-            <reference value="StructureDefinition/TumorSatelliteExtension"/>
-         </reference>
-         <name value="Tumor Satellite Extension"/>
-         <description value="Tumor Satellite Extension"/>
          <exampleBoolean value="false"/>
          <groupingId value="ExtensionResources"/>
       </resource>
@@ -1881,6 +1881,11 @@
                <generation value="generated"/>
             </page>
             <page>
+               <nameUrl value="StructureDefinition-TumorSatellite.html"/>
+               <title value="Tumor Satellite"/>
+               <generation value="generated"/>
+            </page>
+            <page>
                <nameUrl value="ValueSet-AbnormalityCystTypeVS.html"/>
                <title value="Cyst Abnormalities ValueSet"/>
                <generation value="generated"/>
@@ -2353,11 +2358,6 @@
             <page>
                <nameUrl value="StructureDefinition-BreastBodyLocationExtension.html"/>
                <title value="Breast Body Location Extension"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="StructureDefinition-TumorSatelliteExtension.html"/>
-               <title value="Tumor Satellite Extension"/>
                <generation value="generated"/>
             </page>
          </page>

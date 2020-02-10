@@ -295,16 +295,6 @@
       {
         "id": "Observation.extension",
         "path": "Observation.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": true,
-          "rules": "openAtEnd"
-        },
         "short": "Additional content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
         "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
@@ -322,41 +312,6 @@
         "type": [
           {
             "code": "Extension"
-          }
-        ],
-        "isModifier": false,
-        "isSummary": false,
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "N/A"
-          }
-        ]
-      },
-      {
-        "id": "Observation.extension:tumorSatellite",
-        "path": "Observation.extension",
-        "sliceName": "tumorSatellite",
-        "short": "tumorSatellite extension",
-        "definition": "This extension slice contains the tumorSatellite extension.",
-        "comment": "This is one component of a group of components that comprise the observation.",
-        "alias": [
-          "extensions",
-          "user content"
-        ],
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "DomainResource.extension",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/TumorSatelliteExtension"
-            ]
           }
         ],
         "isModifier": false,
@@ -1729,6 +1684,16 @@
       {
         "id": "Observation.hasMember",
         "path": "Observation.hasMember",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "ordered": true,
+          "rules": "openAtEnd"
+        },
         "short": "Related resource that belongs to the Observation group",
         "definition": "This observation is a group observation (e.g. a battery, a panel of tests, a set of vital sign measurements) that includes the target as a member of the group.",
         "comment": "When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.  Note that a system may calculate results from [QuestionnaireResponse](questionnaireresponse.html)  into a final score and represent the score as an Observation.",
@@ -1746,6 +1711,41 @@
               "http://hl7.org/fhir/StructureDefinition/Observation",
               "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse",
               "http://hl7.org/fhir/StructureDefinition/MolecularSequence"
+            ]
+          }
+        ],
+        "isModifier": false,
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "Relationships established by OBX-4 usage"
+          },
+          {
+            "identity": "rim",
+            "map": "outBoundRelationship"
+          }
+        ]
+      },
+      {
+        "id": "Observation.hasMember:tumorSatellite",
+        "path": "Observation.hasMember",
+        "sliceName": "tumorSatellite",
+        "short": "'Tumor Satellite' reference",
+        "definition": "This slice references the target 'Tumor Satellite'.",
+        "comment": "When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.  Note that a system may calculate results from [QuestionnaireResponse](questionnaireresponse.html)  into a final score and represent the score as an Observation.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Observation.hasMember",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/TumorSatellite"
             ]
           }
         ],
@@ -2202,8 +2202,8 @@
         }
       },
       {
-        "id": "Observation.extension",
-        "path": "Observation.extension",
+        "id": "Observation.hasMember",
+        "path": "Observation.hasMember",
         "slicing": {
           "discriminator": [
             {
@@ -2215,34 +2215,32 @@
           "rules": "openAtEnd"
         },
         "base": {
-          "path": "Observation.extension",
+          "path": "Observation.hasMember",
           "min": 0,
           "max": "*"
         }
       },
       {
-        "id": "Observation.extension:tumorSatellite",
-        "path": "Observation.extension",
+        "id": "Observation.hasMember:tumorSatellite",
+        "path": "Observation.hasMember",
         "sliceName": "tumorSatellite",
-        "short": "tumorSatellite extension",
-        "definition": "This extension slice contains the tumorSatellite extension.",
-        "comment": "This is one component of a group of components that comprise the observation.",
+        "short": "'Tumor Satellite' reference",
+        "definition": "This slice references the target 'Tumor Satellite'.",
         "min": 0,
-        "max": "1",
+        "max": "*",
         "base": {
-          "path": "Observation.extension",
+          "path": "Observation.hasMember",
           "min": 0,
           "max": "*"
         },
         "type": [
           {
-            "code": "Extension",
-            "profile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/TumorSatelliteExtension"
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/TumorSatellite"
             ]
           }
-        ],
-        "isModifier": false
+        ]
       }
     ]
   }

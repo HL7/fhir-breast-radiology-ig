@@ -307,16 +307,6 @@
       {
         "id": "Observation.extension",
         "path": "Observation.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": true,
-          "rules": "openAtEnd"
-        },
         "short": "Additional content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
         "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
@@ -334,41 +324,6 @@
         "type": [
           {
             "code": "Extension"
-          }
-        ],
-        "isModifier": false,
-        "isSummary": false,
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "N/A"
-          }
-        ]
-      },
-      {
-        "id": "Observation.extension:tumorSatellite",
-        "path": "Observation.extension",
-        "sliceName": "tumorSatellite",
-        "short": "tumorSatellite extension",
-        "definition": "This extension slice contains the tumorSatellite extension.",
-        "comment": "This is one component of a group of components that comprise the observation.",
-        "alias": [
-          "extensions",
-          "user content"
-        ],
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "DomainResource.extension",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/TumorSatelliteExtension"
-            ]
           }
         ],
         "isModifier": false,
@@ -612,7 +567,7 @@
         "slicing": {
           "discriminator": [
             {
-              "type": "pattern",
+              "type": "type",
               "path": "$this"
             }
           ],
@@ -736,11 +691,9 @@
           "coding": [
             {
               "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationCodes",
-              "code": "abnormalityCyst",
-              "display": "Abnormality Cyst observation"
+              "code": "abnormalityCyst"
             }
-          ],
-          "text": "Abnormality Cyst observation"
+          ]
         },
         "isModifier": false,
         "isSummary": true,
@@ -2040,6 +1993,41 @@
         ]
       },
       {
+        "id": "Observation.hasMember:tumorSatellite",
+        "path": "Observation.hasMember",
+        "sliceName": "tumorSatellite",
+        "short": "'Tumor Satellite' reference",
+        "definition": "This slice references the target 'Tumor Satellite'.",
+        "comment": "When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.  Note that a system may calculate results from [QuestionnaireResponse](questionnaireresponse.html)  into a final score and represent the score as an Observation.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Observation.hasMember",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/TumorSatellite"
+            ]
+          }
+        ],
+        "isModifier": false,
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "Relationships established by OBX-4 usage"
+          },
+          {
+            "identity": "rim",
+            "map": "outBoundRelationship"
+          }
+        ]
+      },
+      {
         "id": "Observation.hasMember:consistentWith",
         "path": "Observation.hasMember",
         "sliceName": "consistentWith",
@@ -2702,11 +2690,9 @@
           "coding": [
             {
               "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes",
-              "code": "abnormalityCystType",
-              "display": "Component code for 'Cyst Type' slice"
+              "code": "abnormalityCystType"
             }
-          ],
-          "text": "Component code for 'Cyst Type' slice"
+          ]
         },
         "isModifier": false,
         "isSummary": true,
@@ -3072,11 +3058,9 @@
           "coding": [
             {
               "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes",
-              "code": "obsChanges",
-              "display": "Component code for 'Observed Changes' slice"
+              "code": "obsChanges"
             }
-          ],
-          "text": "Component code for 'Observed Changes' slice"
+          ]
         },
         "isModifier": false,
         "isSummary": true,
@@ -3442,11 +3426,9 @@
           "coding": [
             {
               "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes",
-              "code": "targetBiRads",
-              "display": "Component code for 'BiRads Code' slice"
+              "code": "targetBiRads"
             }
-          ],
-          "text": "Component code for 'BiRads Code' slice"
+          ]
         },
         "isModifier": false,
         "isSummary": true,
@@ -3812,11 +3794,9 @@
           "coding": [
             {
               "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes",
-              "code": "orientation",
-              "display": "Component code for 'Orientation' slice"
+              "code": "orientation"
             }
-          ],
-          "text": "Component code for 'Orientation' slice"
+          ]
         },
         "isModifier": false,
         "isSummary": true,
@@ -4182,11 +4162,9 @@
           "coding": [
             {
               "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes",
-              "code": "shape",
-              "display": "Component code for 'Shape' slice"
+              "code": "shape"
             }
-          ],
-          "text": "Component code for 'Shape' slice"
+          ]
         },
         "isModifier": false,
         "isSummary": true,
@@ -4552,11 +4530,9 @@
           "coding": [
             {
               "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes",
-              "code": "margin",
-              "display": "Component code for 'Margin' slice"
+              "code": "margin"
             }
-          ],
-          "text": "Component code for 'Margin' slice"
+          ]
         },
         "isModifier": false,
         "isSummary": true,
@@ -4922,11 +4898,9 @@
           "coding": [
             {
               "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes",
-              "code": "mgDensity",
-              "display": "Component code for 'MG Density' slice"
+              "code": "mgDensity"
             }
-          ],
-          "text": "Component code for 'MG Density' slice"
+          ]
         },
         "isModifier": false,
         "isSummary": true,
@@ -5670,11 +5644,9 @@
           "coding": [
             {
               "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes",
-              "code": "obsDistribution",
-              "display": "Component code for 'Observed Distribution' slice"
+              "code": "obsDistribution"
             }
-          ],
-          "text": "Component code for 'Observed Distribution' slice"
+          ]
         },
         "isModifier": false,
         "isSummary": true,
@@ -6982,11 +6954,9 @@
           "coding": [
             {
               "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes",
-              "code": "notPreviouslySeen",
-              "display": "Component code for 'Not Previously Seen' slice"
+              "code": "notPreviouslySeen"
             }
-          ],
-          "text": "Component code for 'Not Previously Seen' slice"
+          ]
         },
         "isModifier": false,
         "isSummary": true,
@@ -7352,11 +7322,9 @@
           "coding": [
             {
               "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes",
-              "code": "correspondsWith",
-              "display": "Component code for 'Corresponds With' slice"
+              "code": "correspondsWith"
             }
-          ],
-          "text": "Component code for 'Corresponds With' slice"
+          ]
         },
         "isModifier": false,
         "isSummary": true,
@@ -7722,11 +7690,9 @@
           "coding": [
             {
               "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes",
-              "code": "prevDemBy",
-              "display": "Component code for 'Previously Demonstrated By' slice"
+              "code": "prevDemBy"
             }
-          ],
-          "text": "Component code for 'Previously Demonstrated By' slice"
+          ]
         },
         "isModifier": false,
         "isSummary": true,
@@ -7959,49 +7925,6 @@
         }
       },
       {
-        "id": "Observation.extension",
-        "path": "Observation.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "ordered": true,
-          "rules": "openAtEnd"
-        },
-        "base": {
-          "path": "Observation.extension",
-          "min": 0,
-          "max": "*"
-        }
-      },
-      {
-        "id": "Observation.extension:tumorSatellite",
-        "path": "Observation.extension",
-        "sliceName": "tumorSatellite",
-        "short": "tumorSatellite extension",
-        "definition": "This extension slice contains the tumorSatellite extension.",
-        "comment": "This is one component of a group of components that comprise the observation.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Observation.extension",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/TumorSatelliteExtension"
-            ]
-          }
-        ],
-        "isModifier": false
-      },
-      {
         "id": "Observation.basedOn",
         "path": "Observation.basedOn",
         "min": 0,
@@ -8029,7 +7952,7 @@
         "slicing": {
           "discriminator": [
             {
-              "type": "pattern",
+              "type": "type",
               "path": "$this"
             }
           ],
@@ -8075,11 +7998,9 @@
           "coding": [
             {
               "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationCodes",
-              "code": "abnormalityCyst",
-              "display": "Abnormality Cyst observation"
+              "code": "abnormalityCyst"
             }
-          ],
-          "text": "Abnormality Cyst observation"
+          ]
         }
       },
       {
@@ -8236,6 +8157,28 @@
           "min": 0,
           "max": "*"
         }
+      },
+      {
+        "id": "Observation.hasMember:tumorSatellite",
+        "path": "Observation.hasMember",
+        "sliceName": "tumorSatellite",
+        "short": "'Tumor Satellite' reference",
+        "definition": "This slice references the target 'Tumor Satellite'.",
+        "min": 0,
+        "max": "*",
+        "base": {
+          "path": "Observation.hasMember",
+          "min": 0,
+          "max": "*"
+        },
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/TumorSatellite"
+            ]
+          }
+        ]
       },
       {
         "id": "Observation.hasMember:consistentWith",
@@ -8461,11 +8404,9 @@
           "coding": [
             {
               "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes",
-              "code": "abnormalityCystType",
-              "display": "Component code for 'Cyst Type' slice"
+              "code": "abnormalityCystType"
             }
-          ],
-          "text": "Component code for 'Cyst Type' slice"
+          ]
         },
         "isModifier": false,
         "isSummary": true,
@@ -8702,11 +8643,9 @@
           "coding": [
             {
               "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes",
-              "code": "obsChanges",
-              "display": "Component code for 'Observed Changes' slice"
+              "code": "obsChanges"
             }
-          ],
-          "text": "Component code for 'Observed Changes' slice"
+          ]
         }
       },
       {
@@ -8762,11 +8701,9 @@
           "coding": [
             {
               "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes",
-              "code": "targetBiRads",
-              "display": "Component code for 'BiRads Code' slice"
+              "code": "targetBiRads"
             }
-          ],
-          "text": "Component code for 'BiRads Code' slice"
+          ]
         }
       },
       {
@@ -8951,11 +8888,9 @@
           "coding": [
             {
               "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes",
-              "code": "orientation",
-              "display": "Component code for 'Orientation' slice"
+              "code": "orientation"
             }
-          ],
-          "text": "Component code for 'Orientation' slice"
+          ]
         },
         "isModifier": false,
         "isSummary": true,
@@ -9321,11 +9256,9 @@
           "coding": [
             {
               "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes",
-              "code": "shape",
-              "display": "Component code for 'Shape' slice"
+              "code": "shape"
             }
-          ],
-          "text": "Component code for 'Shape' slice"
+          ]
         },
         "isModifier": false,
         "isSummary": true,
@@ -9691,11 +9624,9 @@
           "coding": [
             {
               "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes",
-              "code": "margin",
-              "display": "Component code for 'Margin' slice"
+              "code": "margin"
             }
-          ],
-          "text": "Component code for 'Margin' slice"
+          ]
         },
         "isModifier": false,
         "isSummary": true,
@@ -10061,11 +9992,9 @@
           "coding": [
             {
               "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes",
-              "code": "mgDensity",
-              "display": "Component code for 'MG Density' slice"
+              "code": "mgDensity"
             }
-          ],
-          "text": "Component code for 'MG Density' slice"
+          ]
         },
         "isModifier": false,
         "isSummary": true,
@@ -10366,11 +10295,9 @@
           "coding": [
             {
               "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes",
-              "code": "obsDistribution",
-              "display": "Component code for 'Observed Distribution' slice"
+              "code": "obsDistribution"
             }
-          ],
-          "text": "Component code for 'Observed Distribution' slice"
+          ]
         }
       },
       {
@@ -10773,11 +10700,9 @@
           "coding": [
             {
               "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes",
-              "code": "notPreviouslySeen",
-              "display": "Component code for 'Not Previously Seen' slice"
+              "code": "notPreviouslySeen"
             }
-          ],
-          "text": "Component code for 'Not Previously Seen' slice"
+          ]
         },
         "isModifier": false,
         "isSummary": true,
@@ -11014,11 +10939,9 @@
           "coding": [
             {
               "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes",
-              "code": "correspondsWith",
-              "display": "Component code for 'Corresponds With' slice"
+              "code": "correspondsWith"
             }
-          ],
-          "text": "Component code for 'Corresponds With' slice"
+          ]
         }
       },
       {
@@ -11074,11 +10997,9 @@
           "coding": [
             {
               "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodes",
-              "code": "prevDemBy",
-              "display": "Component code for 'Previously Demonstrated By' slice"
+              "code": "prevDemBy"
             }
-          ],
-          "text": "Component code for 'Previously Demonstrated By' slice"
+          ]
         }
       },
       {
