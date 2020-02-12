@@ -2364,12 +2364,11 @@
             "code": "CodeableConcept"
           }
         ],
-        "fixedCodeableConcept": {
+        "patternCodeableConcept": {
           "coding": [
             {
               "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/CompositionSectionSliceCodes",
-              "code": "sectionReport",
-              "display": "Code to identify the 'Report' section slice"
+              "code": "sectionReport"
             }
           ]
         },
@@ -2719,8 +2718,8 @@
         "sliceName": "impressions",
         "short": "Impressions Section",
         "definition": "This section contains references to the report's clinical impressions.",
-        "min": 0,
-        "max": "*",
+        "min": 1,
+        "max": "1",
         "base": {
           "path": "Composition.section",
           "min": 0,
@@ -2920,12 +2919,11 @@
             "code": "CodeableConcept"
           }
         ],
-        "fixedCodeableConcept": {
+        "patternCodeableConcept": {
           "coding": [
             {
               "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/CompositionSectionSliceCodes",
-              "code": "sectionImpressions",
-              "display": "Code to identify the 'Impressions' section slice"
+              "code": "sectionImpressions"
             }
           ]
         },
@@ -3154,10 +3152,10 @@
         "id": "Composition.section:impressions.entry",
         "path": "Composition.section.entry",
         "short": "Clinical Impression reference",
-        "definition": "Reference to the clinical impression.",
+        "definition": "Reference to the clinical impression(s).",
         "comment": "If there are no entries in the list, an emptyReason SHOULD be provided.",
-        "min": 1,
-        "max": "1",
+        "min": 0,
+        "max": "*",
         "base": {
           "path": "Composition.section.entry",
           "min": 0,
@@ -3275,8 +3273,8 @@
         "sliceName": "relatedResources",
         "short": "Related Clinical Resources Section",
         "definition": "References to FHIR clinical resoruces used during the exam or referenced by this report.",
-        "min": 0,
-        "max": "*",
+        "min": 1,
+        "max": "1",
         "base": {
           "path": "Composition.section",
           "min": 0,
@@ -3476,12 +3474,11 @@
             "code": "CodeableConcept"
           }
         ],
-        "fixedCodeableConcept": {
+        "patternCodeableConcept": {
           "coding": [
             {
               "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/CompositionSectionSliceCodes",
-              "code": "sectionRelatedResources",
-              "display": "Code to identify the 'RelatedResources' section slice"
+              "code": "sectionRelatedResources"
             }
           ]
         },
@@ -3712,8 +3709,8 @@
         "short": "Related Resource reference",
         "definition": "Reference to the related resource.",
         "comment": "If there are no entries in the list, an emptyReason SHOULD be provided.",
-        "min": 1,
-        "max": "1",
+        "min": 0,
+        "max": "*",
         "base": {
           "path": "Composition.section.entry",
           "min": 0,
@@ -3831,8 +3828,8 @@
         "sliceName": "recommendations",
         "short": "Recommendations Section",
         "definition": "This section contains references to recommended actions taken in response to the observations and findings of this report.",
-        "min": 0,
-        "max": "*",
+        "min": 1,
+        "max": "1",
         "base": {
           "path": "Composition.section",
           "min": 0,
@@ -4032,12 +4029,11 @@
             "code": "CodeableConcept"
           }
         ],
-        "fixedCodeableConcept": {
+        "patternCodeableConcept": {
           "coding": [
             {
               "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/CompositionSectionSliceCodes",
-              "code": "sectionCodeRecommendations",
-              "display": "Code to identify the 'Recommendations' section slice"
+              "code": "sectionCodeRecommendations"
             }
           ]
         },
@@ -4268,8 +4264,8 @@
         "short": "Recommendation reference",
         "definition": "Reference to the recommended action.",
         "comment": "If there are no entries in the list, an emptyReason SHOULD be provided.",
-        "min": 1,
-        "max": "1",
+        "min": 0,
+        "max": "*",
         "base": {
           "path": "Composition.section.entry",
           "min": 0,
@@ -4453,12 +4449,11 @@
           "min": 0,
           "max": "1"
         },
-        "fixedCodeableConcept": {
+        "patternCodeableConcept": {
           "coding": [
             {
               "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/CompositionSectionSliceCodes",
-              "code": "sectionReport",
-              "display": "Code to identify the 'Report' section slice"
+              "code": "sectionReport"
             }
           ]
         }
@@ -4512,8 +4507,8 @@
         "sliceName": "impressions",
         "short": "Impressions Section",
         "definition": "This section contains references to the report's clinical impressions.",
-        "min": 0,
-        "max": "*",
+        "min": 1,
+        "max": "1",
         "base": {
           "path": "Composition.section",
           "min": 0,
@@ -4543,12 +4538,11 @@
           "min": 0,
           "max": "1"
         },
-        "fixedCodeableConcept": {
+        "patternCodeableConcept": {
           "coding": [
             {
               "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/CompositionSectionSliceCodes",
-              "code": "sectionImpressions",
-              "display": "Code to identify the 'Impressions' section slice"
+              "code": "sectionImpressions"
             }
           ]
         }
@@ -4568,9 +4562,9 @@
         "id": "Composition.section:impressions.entry",
         "path": "Composition.section.entry",
         "short": "Clinical Impression reference",
-        "definition": "Reference to the clinical impression.",
-        "min": 1,
-        "max": "1",
+        "definition": "Reference to the clinical impression(s).",
+        "min": 0,
+        "max": "*",
         "base": {
           "path": "Composition.section.entry",
           "min": 0,
@@ -4602,8 +4596,8 @@
         "sliceName": "relatedResources",
         "short": "Related Clinical Resources Section",
         "definition": "References to FHIR clinical resoruces used during the exam or referenced by this report.",
-        "min": 0,
-        "max": "*",
+        "min": 1,
+        "max": "1",
         "base": {
           "path": "Composition.section",
           "min": 0,
@@ -4633,12 +4627,11 @@
           "min": 0,
           "max": "1"
         },
-        "fixedCodeableConcept": {
+        "patternCodeableConcept": {
           "coding": [
             {
               "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/CompositionSectionSliceCodes",
-              "code": "sectionRelatedResources",
-              "display": "Code to identify the 'RelatedResources' section slice"
+              "code": "sectionRelatedResources"
             }
           ]
         }
@@ -4659,8 +4652,8 @@
         "path": "Composition.section.entry",
         "short": "Related Resource reference",
         "definition": "Reference to the related resource.",
-        "min": 1,
-        "max": "1",
+        "min": 0,
+        "max": "*",
         "base": {
           "path": "Composition.section.entry",
           "min": 0,
@@ -4692,8 +4685,8 @@
         "sliceName": "recommendations",
         "short": "Recommendations Section",
         "definition": "This section contains references to recommended actions taken in response to the observations and findings of this report.",
-        "min": 0,
-        "max": "*",
+        "min": 1,
+        "max": "1",
         "base": {
           "path": "Composition.section",
           "min": 0,
@@ -4723,12 +4716,11 @@
           "min": 0,
           "max": "1"
         },
-        "fixedCodeableConcept": {
+        "patternCodeableConcept": {
           "coding": [
             {
               "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/CompositionSectionSliceCodes",
-              "code": "sectionCodeRecommendations",
-              "display": "Code to identify the 'Recommendations' section slice"
+              "code": "sectionCodeRecommendations"
             }
           ]
         }
@@ -4749,8 +4741,8 @@
         "path": "Composition.section.entry",
         "short": "Recommendation reference",
         "definition": "Reference to the recommended action.",
-        "min": 1,
-        "max": "1",
+        "min": 0,
+        "max": "*",
         "base": {
           "path": "Composition.section.entry",
           "min": 0,
