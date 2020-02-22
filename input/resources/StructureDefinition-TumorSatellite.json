@@ -667,6 +667,21 @@
       },
       {
         "id": "Observation.code",
+        "extension": [
+          {
+            "url": "http://www.fragment.com/DefaultValue",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationCodes",
+                  "code": "tumorSatelliteObservation",
+                  "display": "Tumor Satellite observation"
+                }
+              ],
+              "text": "Tumor Satellite observation"
+            }
+          }
+        ],
         "path": "Observation.code",
         "short": "Type of observation (code / type)",
         "definition": "Describes what was observed. Sometimes this is called the observation \"name\".",
@@ -687,16 +702,6 @@
             "code": "CodeableConcept"
           }
         ],
-        "defaultValueCodeableConcept": {
-          "coding": [
-            {
-              "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationCodes",
-              "code": "tumorSatelliteObservation",
-              "display": "Tumor Satellite observation"
-            }
-          ],
-          "text": "Tumor Satellite observation"
-        },
         "patternCodeableConcept": {
           "coding": [
             {
@@ -2448,21 +2453,28 @@
       },
       {
         "id": "Observation.code",
+        "extension": [
+          {
+            "url": "http://www.fragment.com/DefaultValue",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationCodes",
+                  "code": "tumorSatelliteObservation",
+                  "display": "Tumor Satellite observation"
+                }
+              ],
+              "text": "Tumor Satellite observation"
+            }
+          }
+        ],
         "path": "Observation.code",
+        "min": 1,
+        "max": "1",
         "base": {
           "path": "Observation.code",
           "min": 1,
           "max": "1"
-        },
-        "defaultValueCodeableConcept": {
-          "coding": [
-            {
-              "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationCodes",
-              "code": "tumorSatelliteObservation",
-              "display": "Tumor Satellite observation"
-            }
-          ],
-          "text": "Tumor Satellite observation"
         },
         "patternCodeableConcept": {
           "coding": [
@@ -2502,6 +2514,8 @@
           ],
           "rules": "open"
         },
+        "min": 0,
+        "max": "1",
         "base": {
           "path": "Observation.value[x]",
           "min": 0,
@@ -2683,6 +2697,8 @@
           "ordered": true,
           "rules": "openAtEnd"
         },
+        "min": 0,
+        "max": "*",
         "base": {
           "path": "Observation.derivedFrom",
           "min": 0,

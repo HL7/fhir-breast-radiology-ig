@@ -618,6 +618,19 @@
       },
       {
         "id": "DiagnosticReport.code",
+        "extension": [
+          {
+            "url": "http://www.fragment.com/DefaultValue",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "10193-1"
+                }
+              ]
+            }
+          }
+        ],
         "path": "DiagnosticReport.code",
         "short": "Name/Code for this diagnostic report",
         "definition": "A code or name that describes this diagnostic report.",
@@ -636,14 +649,6 @@
             "code": "CodeableConcept"
           }
         ],
-        "defaultValueCodeableConcept": {
-          "coding": [
-            {
-              "system": "http://loinc.org",
-              "code": "10193-1"
-            }
-          ]
-        },
         "patternCodeableConcept": {
           "coding": [
             {
@@ -1443,19 +1448,26 @@
       },
       {
         "id": "DiagnosticReport.code",
+        "extension": [
+          {
+            "url": "http://www.fragment.com/DefaultValue",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "10193-1"
+                }
+              ]
+            }
+          }
+        ],
         "path": "DiagnosticReport.code",
+        "min": 1,
+        "max": "1",
         "base": {
           "path": "DiagnosticReport.code",
           "min": 1,
           "max": "1"
-        },
-        "defaultValueCodeableConcept": {
-          "coding": [
-            {
-              "system": "http://loinc.org",
-              "code": "10193-1"
-            }
-          ]
         },
         "patternCodeableConcept": {
           "coding": [

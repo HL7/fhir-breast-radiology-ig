@@ -667,6 +667,21 @@
       },
       {
         "id": "Observation.code",
+        "extension": [
+          {
+            "url": "http://www.fragment.com/DefaultValue",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationCodes",
+                  "code": "mriFindingObservation",
+                  "display": "MRI Finding observation"
+                }
+              ],
+              "text": "MRI Finding observation"
+            }
+          }
+        ],
         "path": "Observation.code",
         "short": "Type of observation (code / type)",
         "definition": "Describes what was observed. Sometimes this is called the observation \"name\".",
@@ -687,16 +702,6 @@
             "code": "CodeableConcept"
           }
         ],
-        "defaultValueCodeableConcept": {
-          "coding": [
-            {
-              "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationCodes",
-              "code": "mriFindingObservation",
-              "display": "MRI Finding observation"
-            }
-          ],
-          "text": "MRI Finding observation"
-        },
         "patternCodeableConcept": {
           "coding": [
             {
@@ -2321,21 +2326,28 @@
       },
       {
         "id": "Observation.code",
+        "extension": [
+          {
+            "url": "http://www.fragment.com/DefaultValue",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationCodes",
+                  "code": "mriFindingObservation",
+                  "display": "MRI Finding observation"
+                }
+              ],
+              "text": "MRI Finding observation"
+            }
+          }
+        ],
         "path": "Observation.code",
+        "min": 1,
+        "max": "1",
         "base": {
           "path": "Observation.code",
           "min": 1,
           "max": "1"
-        },
-        "defaultValueCodeableConcept": {
-          "coding": [
-            {
-              "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationCodes",
-              "code": "mriFindingObservation",
-              "display": "MRI Finding observation"
-            }
-          ],
-          "text": "MRI Finding observation"
         },
         "patternCodeableConcept": {
           "coding": [

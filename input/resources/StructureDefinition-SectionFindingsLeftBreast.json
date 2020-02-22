@@ -667,6 +667,21 @@
       },
       {
         "id": "Observation.code",
+        "extension": [
+          {
+            "url": "http://www.fragment.com/DefaultValue",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationCodes",
+                  "code": "findingsLeftBreastObservation",
+                  "display": "Findings Left Breast observation"
+                }
+              ],
+              "text": "Findings Left Breast observation"
+            }
+          }
+        ],
         "path": "Observation.code",
         "short": "Type of observation (code / type)",
         "definition": "Describes what was observed. Sometimes this is called the observation \"name\".",
@@ -687,16 +702,6 @@
             "code": "CodeableConcept"
           }
         ],
-        "defaultValueCodeableConcept": {
-          "coding": [
-            {
-              "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationCodes",
-              "code": "findingsLeftBreastObservation",
-              "display": "Findings Left Breast observation"
-            }
-          ],
-          "text": "Findings Left Breast observation"
-        },
         "patternCodeableConcept": {
           "coding": [
             {
@@ -1204,6 +1209,21 @@
       },
       {
         "id": "Observation.bodySite",
+        "extension": [
+          {
+            "url": "http://www.fragment.com/DefaultValue",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "80248007",
+                  "display": "Left breast structure (body structure)"
+                }
+              ],
+              "text": "Left breast structure (body structure)"
+            }
+          }
+        ],
         "path": "Observation.bodySite",
         "short": "Observed body part",
         "definition": "Indicates the site on the subject's body where the observation was made (i.e. the target site).",
@@ -1220,16 +1240,6 @@
             "code": "CodeableConcept"
           }
         ],
-        "defaultValueCodeableConcept": {
-          "coding": [
-            {
-              "system": "http://snomed.info/sct",
-              "code": "80248007",
-              "display": "Left breast structure (body structure)"
-            }
-          ],
-          "text": "Left breast structure (body structure)"
-        },
         "patternCodeableConcept": {
           "coding": [
             {
@@ -2468,21 +2478,28 @@
       },
       {
         "id": "Observation.code",
+        "extension": [
+          {
+            "url": "http://www.fragment.com/DefaultValue",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationCodes",
+                  "code": "findingsLeftBreastObservation",
+                  "display": "Findings Left Breast observation"
+                }
+              ],
+              "text": "Findings Left Breast observation"
+            }
+          }
+        ],
         "path": "Observation.code",
+        "min": 1,
+        "max": "1",
         "base": {
           "path": "Observation.code",
           "min": 1,
           "max": "1"
-        },
-        "defaultValueCodeableConcept": {
-          "coding": [
-            {
-              "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationCodes",
-              "code": "findingsLeftBreastObservation",
-              "display": "Findings Left Breast observation"
-            }
-          ],
-          "text": "Findings Left Breast observation"
         },
         "patternCodeableConcept": {
           "coding": [
@@ -2514,6 +2531,8 @@
         "id": "Observation.value[x]",
         "path": "Observation.value[x]",
         "definition": "Composite BiRad value for Left Breast.\n\nTypically this is the most severe of all the BiRad codes set in any of the child observations.",
+        "min": 0,
+        "max": "1",
         "base": {
           "path": "Observation.value[x]",
           "min": 0,
@@ -2542,21 +2561,28 @@
       },
       {
         "id": "Observation.bodySite",
+        "extension": [
+          {
+            "url": "http://www.fragment.com/DefaultValue",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "80248007",
+                  "display": "Left breast structure (body structure)"
+                }
+              ],
+              "text": "Left breast structure (body structure)"
+            }
+          }
+        ],
         "path": "Observation.bodySite",
+        "min": 0,
+        "max": "1",
         "base": {
           "path": "Observation.bodySite",
           "min": 0,
           "max": "1"
-        },
-        "defaultValueCodeableConcept": {
-          "coding": [
-            {
-              "system": "http://snomed.info/sct",
-              "code": "80248007",
-              "display": "Left breast structure (body structure)"
-            }
-          ],
-          "text": "Left breast structure (body structure)"
         },
         "patternCodeableConcept": {
           "coding": [
@@ -2613,6 +2639,8 @@
           "ordered": true,
           "rules": "openAtEnd"
         },
+        "min": 0,
+        "max": "*",
         "base": {
           "path": "Observation.hasMember",
           "min": 0,
