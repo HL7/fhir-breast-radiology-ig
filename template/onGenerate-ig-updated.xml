@@ -18,7 +18,7 @@
    <title value="Breast Radiology Reporting - 1st STU ballot"/>
    <status value="draft"/>
    <experimental value="false"/>
-   <date value="2020-03-04T22:49:24-06:00"/>
+   <date value="2020-03-09T20:44:25-05:00"/>
    <publisher value="Hl7 - Clinical Interoperability Council"/>
    <contact>
       <telecom>
@@ -144,6 +144,21 @@
          </reference>
          <name value="Lymph Node Type CodeSystem"/>
          <description value="Lymph node abnormality types code system."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="CommonCodesCS"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-AssociatedFeatureCS.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/AssociatedFeatureCS"/>
+         </reference>
+         <name value="Associated Feature CodeSystem"/>
+         <description value="Associated Feature seen during a breast examination."/>
          <exampleBoolean value="false"/>
          <groupingId value="CommonCodesCS"/>
       </resource>
@@ -497,21 +512,6 @@
             <valueString value="CodeSystem"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="CodeSystem-ObservedFeatureCS.html"/>
-         </extension>
-         <reference>
-            <reference value="CodeSystem/ObservedFeatureCS"/>
-         </reference>
-         <name value="Observed Feature CodeSystem"/>
-         <description value="Observed Feature seen during a breast examination."/>
-         <exampleBoolean value="false"/>
-         <groupingId value="CommonCodesCS"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="CodeSystem"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
             <valueUri value="CodeSystem-OrientationCS.html"/>
          </extension>
          <reference>
@@ -609,6 +609,21 @@
          </reference>
          <name value="Lymph Node ValueSet"/>
          <description value="lymph node abnormality types value set."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="CommonCodesVS"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="ValueSet"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="ValueSet-AssociatedFeatureVS.html"/>
+         </extension>
+         <reference>
+            <reference value="ValueSet/AssociatedFeatureVS"/>
+         </reference>
+         <name value="Associated Feature ValueSet"/>
+         <description value="Associated feature observed during a Breast Radiology exam value set"/>
          <exampleBoolean value="false"/>
          <groupingId value="CommonCodesVS"/>
       </resource>
@@ -917,21 +932,6 @@
             <valueString value="ValueSet"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="ValueSet-ObservedFeatureVS.html"/>
-         </extension>
-         <reference>
-            <reference value="ValueSet/ObservedFeatureVS"/>
-         </reference>
-         <name value="Observed Feature ValueSet"/>
-         <description value="Observed feature observed during a Breast Radiology exam value set"/>
-         <exampleBoolean value="false"/>
-         <groupingId value="CommonCodesVS"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="ValueSet"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
             <valueUri value="ValueSet-OrientationVS.html"/>
          </extension>
          <reference>
@@ -1022,13 +1022,13 @@
             <valueString value="StructureDefinition:resource"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="StructureDefinition-ServiceRecommendation.html"/>
+            <valueUri value="StructureDefinition-BreastRadReport.html"/>
          </extension>
          <reference>
-            <reference value="StructureDefinition/ServiceRecommendation"/>
+            <reference value="StructureDefinition/BreastRadReport"/>
          </reference>
-         <name value="Service Recommendation"/>
-         <description value="Service Recommendation"/>
+         <name value="Breast Radiology Report"/>
+         <description value="Breast Radiology Diagnostic Report"/>
          <exampleBoolean value="false"/>
          <groupingId value="BaseResources"/>
       </resource>
@@ -1037,13 +1037,13 @@
             <valueString value="StructureDefinition:resource"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="StructureDefinition-BreastRadReport.html"/>
+            <valueUri value="StructureDefinition-ServiceRecommendation.html"/>
          </extension>
          <reference>
-            <reference value="StructureDefinition/BreastRadReport"/>
+            <reference value="StructureDefinition/ServiceRecommendation"/>
          </reference>
-         <name value="Breast Radiology Report"/>
-         <description value="Breast Radiology Diagnostic Report"/>
+         <name value="Service Recommendation"/>
+         <description value="Service Recommendation"/>
          <exampleBoolean value="false"/>
          <groupingId value="BaseResources"/>
       </resource>
@@ -1157,28 +1157,13 @@
             <valueString value="StructureDefinition:resource"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="StructureDefinition-AssociatedFeatures.html"/>
+            <valueUri value="StructureDefinition-AssociatedFeature.html"/>
          </extension>
          <reference>
-            <reference value="StructureDefinition/AssociatedFeatures"/>
+            <reference value="StructureDefinition/AssociatedFeature"/>
          </reference>
-         <name value="Associated Features"/>
-         <description value="Associated Features Observation"/>
-         <exampleBoolean value="false"/>
-         <groupingId value="CommonResources"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="StructureDefinition:resource"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="StructureDefinition-ObservedFeature.html"/>
-         </extension>
-         <reference>
-            <reference value="StructureDefinition/ObservedFeature"/>
-         </reference>
-         <name value="Observed Feature"/>
-         <description value="Observed Feature Observation"/>
+         <name value="Associated Feature"/>
+         <description value="Associated Feature Observation"/>
          <exampleBoolean value="false"/>
          <groupingId value="CommonResources"/>
       </resource>
@@ -1232,13 +1217,13 @@
             <valueString value="StructureDefinition:extension"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="StructureDefinition-BodyDistanceFromExtension.html"/>
+            <valueUri value="StructureDefinition-BreastBodyLocationExtension.html"/>
          </extension>
          <reference>
-            <reference value="StructureDefinition/BodyDistanceFromExtension"/>
+            <reference value="StructureDefinition/BreastBodyLocationExtension"/>
          </reference>
-         <name value="Body Distance From Extension"/>
-         <description value="Body Distance From extension"/>
+         <name value="Breast Body Location Extension"/>
+         <description value="Breast Body Location extension"/>
          <exampleBoolean value="false"/>
          <groupingId value="ExtensionResources"/>
       </resource>
@@ -1247,13 +1232,13 @@
             <valueString value="StructureDefinition:extension"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="StructureDefinition-BreastBodyLocationExtension.html"/>
+            <valueUri value="StructureDefinition-BodyDistanceFromExtension.html"/>
          </extension>
          <reference>
-            <reference value="StructureDefinition/BreastBodyLocationExtension"/>
+            <reference value="StructureDefinition/BodyDistanceFromExtension"/>
          </reference>
-         <name value="Breast Body Location Extension"/>
-         <description value="Breast Body Location extension"/>
+         <name value="Body Distance From Extension"/>
+         <description value="Body Distance From extension"/>
          <exampleBoolean value="false"/>
          <groupingId value="ExtensionResources"/>
       </resource>
@@ -1816,13 +1801,13 @@
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="StructureDefinition-ServiceRecommendation.html"/>
-               <title value="Service Recommendation"/>
+               <nameUrl value="StructureDefinition-BreastRadReport.html"/>
+               <title value="Breast Radiology Report"/>
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="StructureDefinition-BreastRadReport.html"/>
-               <title value="Breast Radiology Report"/>
+               <nameUrl value="StructureDefinition-ServiceRecommendation.html"/>
+               <title value="Service Recommendation"/>
                <generation value="generated"/>
             </page>
             <page>
@@ -1861,13 +1846,8 @@
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="StructureDefinition-AssociatedFeatures.html"/>
-               <title value="Associated Features"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="StructureDefinition-ObservedFeature.html"/>
-               <title value="Observed Feature"/>
+               <nameUrl value="StructureDefinition-AssociatedFeature.html"/>
+               <title value="Associated Feature"/>
                <generation value="generated"/>
             </page>
             <page>
@@ -1898,6 +1878,11 @@
             <page>
                <nameUrl value="ValueSet-AbnormalityLymphNodeTypeVS.html"/>
                <title value="Lymph Node ValueSet"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="ValueSet-AssociatedFeatureVS.html"/>
+               <title value="Associated Feature ValueSet"/>
                <generation value="generated"/>
             </page>
             <page>
@@ -1976,11 +1961,6 @@
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="ValueSet-ObservedFeatureVS.html"/>
-               <title value="Observed Feature ValueSet"/>
-               <generation value="generated"/>
-            </page>
-            <page>
                <nameUrl value="ValueSet-OrientationVS.html"/>
                <title value="Orientation ValueSet"/>
                <generation value="generated"/>
@@ -2018,6 +1998,11 @@
             <page>
                <nameUrl value="CodeSystem-AbnormalityLymphNodeTypeCS.html"/>
                <title value="Lymph Node Type CodeSystem"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="CodeSystem-AssociatedFeatureCS.html"/>
+               <title value="Associated Feature CodeSystem"/>
                <generation value="generated"/>
             </page>
             <page>
@@ -2108,11 +2093,6 @@
             <page>
                <nameUrl value="CodeSystem-ObservedChangesCS.html"/>
                <title value="Observed Changes CodeSystem"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="CodeSystem-ObservedFeatureCS.html"/>
-               <title value="Observed Feature CodeSystem"/>
                <generation value="generated"/>
             </page>
             <page>
@@ -2351,13 +2331,13 @@
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="StructureDefinition-BodyDistanceFromExtension.html"/>
-               <title value="Body Distance From Extension"/>
+               <nameUrl value="StructureDefinition-BreastBodyLocationExtension.html"/>
+               <title value="Breast Body Location Extension"/>
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="StructureDefinition-BreastBodyLocationExtension.html"/>
-               <title value="Breast Body Location Extension"/>
+               <nameUrl value="StructureDefinition-BodyDistanceFromExtension.html"/>
+               <title value="Body Distance From Extension"/>
                <generation value="generated"/>
             </page>
          </page>
