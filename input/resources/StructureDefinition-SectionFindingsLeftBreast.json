@@ -17,7 +17,7 @@
       ]
     }
   ],
-  "description": "<b>Findings Left Breast Section</b>\n\nThis resource is the head of the tree of observations made of the left breast during a breast radiology exam.\n\nChild observations are referenced by the 'Observation.hasMember' field.",
+  "description": "<b>Findings Left Breast Section</b>\n\nThis Observation contains references to all the observations\n and exam information related to the left breast.",
   "fhirVersion": "4.0.0",
   "kind": "resource",
   "abstract": false,
@@ -30,7 +30,7 @@
         "id": "Observation",
         "path": "Observation",
         "short": "Findings Left Breast Section",
-        "definition": "This resource is the head of the tree of observations made of the left breast during a breast radiology exam.\n\nChild observations are referenced by the 'Observation.hasMember' field.",
+        "definition": "This Observation contains references to all the observations\n and exam information related to the left breast.",
         "comment": "Used for simple observations such as device measurements, laboratory atomic results, vital signs, height, weight, smoking status, comments, etc.  Other resources are used to provide context for observations such as laboratory reports, etc.",
         "alias": [
           "Vital Signs",
@@ -667,21 +667,6 @@
       },
       {
         "id": "Observation.code",
-        "extension": [
-          {
-            "url": "http://www.fragment.com/DefaultValue",
-            "valueCodeableConcept": {
-              "coding": [
-                {
-                  "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationCodes",
-                  "code": "findingsLeftBreastObservation",
-                  "display": "Findings Left Breast observation"
-                }
-              ],
-              "text": "Findings Left Breast observation"
-            }
-          }
-        ],
         "path": "Observation.code",
         "short": "Type of observation (code / type)",
         "definition": "Describes what was observed. Sometimes this is called the observation \"name\".",
@@ -1209,21 +1194,6 @@
       },
       {
         "id": "Observation.bodySite",
-        "extension": [
-          {
-            "url": "http://www.fragment.com/DefaultValue",
-            "valueCodeableConcept": {
-              "coding": [
-                {
-                  "system": "http://snomed.info/sct",
-                  "code": "80248007",
-                  "display": "Left breast structure (body structure)"
-                }
-              ],
-              "text": "Left breast structure (body structure)"
-            }
-          }
-        ],
         "path": "Observation.bodySite",
         "short": "Observed body part",
         "definition": "Indicates the site on the subject's body where the observation was made (i.e. the target site).",
@@ -2396,7 +2366,7 @@
         "id": "Observation",
         "path": "Observation",
         "short": "Findings Left Breast Section",
-        "definition": "This resource is the head of the tree of observations made of the left breast during a breast radiology exam.\n\nChild observations are referenced by the 'Observation.hasMember' field.",
+        "definition": "This Observation contains references to all the observations\n and exam information related to the left breast.",
         "base": {
           "path": "Observation",
           "min": 0,
@@ -2478,21 +2448,6 @@
       },
       {
         "id": "Observation.code",
-        "extension": [
-          {
-            "url": "http://www.fragment.com/DefaultValue",
-            "valueCodeableConcept": {
-              "coding": [
-                {
-                  "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationCodes",
-                  "code": "findingsLeftBreastObservation",
-                  "display": "Findings Left Breast observation"
-                }
-              ],
-              "text": "Findings Left Breast observation"
-            }
-          }
-        ],
         "path": "Observation.code",
         "min": 1,
         "max": "1",
@@ -2561,21 +2516,6 @@
       },
       {
         "id": "Observation.bodySite",
-        "extension": [
-          {
-            "url": "http://www.fragment.com/DefaultValue",
-            "valueCodeableConcept": {
-              "coding": [
-                {
-                  "system": "http://snomed.info/sct",
-                  "code": "80248007",
-                  "display": "Left breast structure (body structure)"
-                }
-              ],
-              "text": "Left breast structure (body structure)"
-            }
-          }
-        ],
         "path": "Observation.bodySite",
         "min": 1,
         "max": "1",

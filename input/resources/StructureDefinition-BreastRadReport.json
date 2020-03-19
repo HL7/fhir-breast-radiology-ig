@@ -17,7 +17,7 @@
       ]
     }
   ],
-  "description": "<b>Breast Radiology Diagnostic Report</b>\n\nThis resource is one of the components of a Breast Radiology Document.\n It is referenced in the document's 'Report' section \nand contains the report conclusions and findings.\n\nThis resource is a profile of the Fhir DiagnosticReport base resource.",
+  "description": "<b>Breast Radiology Diagnostic Report</b>\n\nThis resource is one of the components of a Breast Radiology Document.\n Each Breast Radiology Document bundle will contain exactly one Breast Radiology Document instance that is referenced in the document's 'Report' section.\n\nThis instance will contain the top level results of the exam, including the narrative result.\n\nThis resource is a profile of the Fhir DiagnosticReport base resource.",
   "fhirVersion": "4.0.0",
   "kind": "resource",
   "abstract": false,
@@ -30,7 +30,7 @@
         "id": "DiagnosticReport",
         "path": "DiagnosticReport",
         "short": "Breast Radiology Diagnostic Report",
-        "definition": "This resource is one of the components of a Breast Radiology Document.\n It is referenced in the document's 'Report' section \nand contains the report conclusions and findings.\n\nThis resource is a profile of the Fhir DiagnosticReport base resource.",
+        "definition": "This resource is one of the components of a Breast Radiology Document.\n Each Breast Radiology Document bundle will contain exactly one Breast Radiology Document instance that is referenced in the document's 'Report' section.\n\nThis instance will contain the top level results of the exam, including the narrative result.\n\nThis resource is a profile of the Fhir DiagnosticReport base resource.",
         "comment": "This is intended to capture a single report and is not suitable for use in displaying summary information that covers multiple reports.  For example, this resource has not been designed for laboratory cumulative reporting formats nor detailed structured reports for sequencing.",
         "alias": [
           "Report",
@@ -618,19 +618,6 @@
       },
       {
         "id": "DiagnosticReport.code",
-        "extension": [
-          {
-            "url": "http://www.fragment.com/DefaultValue",
-            "valueCodeableConcept": {
-              "coding": [
-                {
-                  "system": "http://loinc.org",
-                  "code": "10193-1"
-                }
-              ]
-            }
-          }
-        ],
         "path": "DiagnosticReport.code",
         "short": "Name/Code for this diagnostic report",
         "definition": "A code or name that describes this diagnostic report.",
@@ -1399,7 +1386,7 @@
         "id": "DiagnosticReport",
         "path": "DiagnosticReport",
         "short": "Breast Radiology Diagnostic Report",
-        "definition": "This resource is one of the components of a Breast Radiology Document.\n It is referenced in the document's 'Report' section \nand contains the report conclusions and findings.\n\nThis resource is a profile of the Fhir DiagnosticReport base resource.",
+        "definition": "This resource is one of the components of a Breast Radiology Document.\n Each Breast Radiology Document bundle will contain exactly one Breast Radiology Document instance that is referenced in the document's 'Report' section.\n\nThis instance will contain the top level results of the exam, including the narrative result.\n\nThis resource is a profile of the Fhir DiagnosticReport base resource.",
         "base": {
           "path": "DiagnosticReport",
           "min": 0,
@@ -1448,19 +1435,6 @@
       },
       {
         "id": "DiagnosticReport.code",
-        "extension": [
-          {
-            "url": "http://www.fragment.com/DefaultValue",
-            "valueCodeableConcept": {
-              "coding": [
-                {
-                  "system": "http://loinc.org",
-                  "code": "10193-1"
-                }
-              ]
-            }
-          }
-        ],
         "path": "DiagnosticReport.code",
         "min": 1,
         "max": "1",
