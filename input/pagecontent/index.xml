@@ -1,45 +1,103 @@
 <div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas-r5/fhir-single.xsd">
-  <!-- The spaces between the open and close "a" tag are mandatory.  (Cuz HTML renderers are dumb...) -->
-  <a name="intro"> </a>
-  <h3>Introduction</h3>
+	<a name="intro"> </a>
+	<h3>Introduction</h3>
 	<p>
-    What is this IG about (in patient/non-expert friendly terms).
-  </p>
-	<a name="technical"> </a>
+	Breast radiology is the branch of medicine 
+	which is predominantly focused on screening, diagnosing and guiding treatment 
+	of breast cancer.  
+	</p>
+	<p>
+	The FHIR artifacts defined in this IG are designed to capture, store, and communicate
+	the data from a Breast Radiology Exam to support the screening, diagnosing, and treament of
+	breast cancer.
+	</p>
+	<a name="scope"> </a>
+	<h3>Scope</h3>
+	<p>
+	This ballot focuses on defining the FHIR artifacts needed to support
+	Mammography examinations.
+	</p>
+	<p>
+	Later ballot(s) will add the FHIR artifacts to support Ultra-Sound, 
+	Magnetic Resonance Imaging, and Nuclear Medicine examinations..
+	</p>
+	<a name="technicalOverview"> </a>
 	<h3>Technical Overview</h3>
 	<p>
-    Additional detail/context setting for those who have significant background in the domain.  (Try to make as understandable as you can, but
-    set important context).
-  </p>
-  <a name="walkthrough"> </a>
-  <p>
-    The main sections of this IG are:
-  </p>
-  <ul>
-    <li>
-      <a href="background.html">Background</a> - provides business context for the implementation guide and information that implementers should be
-      familiar with before reading the remainder of the IG.  There could be multiple pages for this.
-    </li>
-    <li>
-      <a href="spec.html">Breast Radiology Document</a>
-    </li>
-    <li>
-      <a href="mgfinding.html">Mammography Finding</a>
-    </li>
-    <li>
-      <a href="usfinding.html">Ultra-Sound Finding</a>
-    </li>
-    <li>
-      <a href="mrifinding.html">MRI Finding</a>
-    </li>
-    <li>
-      <a href="nmfinding.html">NM Finding</a>
-    </li>
-    <li>
-      <a href="fragments.html">Resource Fragments</a>
-    </li>
-    <li>
-      <a href="downloads.html">Downloads</a> - Allows downloading a copy of this implementation guide and other useful information
-    </li>
-  </ul>
+		The main sections of this IG are:
+	</p>
+	<ul>
+		<li>
+		<a href="background.html">Background</a> - Background information about Breast Radiology.
+		</li>
+		<li>
+		<a href="spec.html">Breast Radiology Document</a> - Overview of the top level Breast Radiology FHIR Document.
+		</li>
+		<li>
+		<a href="mgfinding.html">Mammography Finding</a> - Mammography Finding Resources.
+		</li>
+		<li>
+		<a href="usfinding.html">Ultra-Sound Finding</a> - Ultra-Sound Finding Resources.
+		</li>
+		<li>
+		<a href="mrifinding.html">Magnetic Resonance Imaging Finding</a> - Magnetic Resonance Imaging Finding Resources.
+		</li>
+		<li>
+		<a href="nmfinding.html">Nuclear Medicine Finding</a> - Nuclear Medicine Finding Resources.
+		</li>
+		<li>
+		<a href="fragments.html">Resource Fragments</a> - Developer related information on resource fragments created and used to build this guid,
+		</li>
+		<li>
+		<a href="downloads.html">Downloads</a> - Allows downloading a copy of this implementation guide and other useful information
+		</li>
+	</ul>
+	<a name="authors"> </a>
+	<h3>Authors</h3>
+	The following people have been primarity responsible for the structure and 
+	implementation of this Implementation Guide and its associated profiles.
+	<ul>
+		<li>
+		Kurt W. Allen, Eir Solutions, Minneapolis MN.
+		</li>
+		<li>
+		Richard Esmond, CTO Penrad Technologies, Buffalo MN.
+		</li>
+		<li>
+		Doina Popescu, Sr. Engineering Manager MRS Systems, Inc., Seattle WA.
+		</li>
+	</ul>
+	<a name="committedImplementers"> </a>
+	<h3>Committed Implementers</h3>
+	The following companies have committed to supporting 
+	and implementing this specification
+	in their Mammography Products.
+	<ul>
+		<li>Penrad Technologies</li>
+		<li>Medical Reporting Software (MRS Systems, Inc.)</li>
+		<li>MagView</li>
+	</ul>
+	<a name="information"> </a>
+	<h3>Major sources of information</h3>
+	<p>Specifications consulted for the development of this IG include:</p>
+	<ul>
+		<li>American College of Radiology
+			<a 
+				href="https://www.acr.org/Clinical-Resources/Reporting-and-Data-Systems/Bi-Rads">
+				ACR BI-RADS Atlas® 5th Edition
+			</a>
+		</li>
+		<li>College of American Pathologists (CAP) Cancer Protocols:
+			<a 
+				href="http://www.cap.org/ShowProperty?nodePath=/UCMCon/Contribution%20Folders/WebContent/pdf/cp-breast-invasive-18protocol-4100.pdf">
+				Protocol for the Examination of Specimens From Patients WithInvasive Carcinoma of the Breast
+			</a>
+		</li>
+	</ul>
+	<a name="terminologySources"> </a>
+	<h3>Terminology Sources</h3>
+	<ul>
+		<li>SNOMED CT  <a href="https://www.snomed.org/snomed-ct/get-snomed-ct">SNOMED International</a></li>
+		<li>LOINC      <a href="https://loinc.org/license/">Regenstrief Institute</a></li>
+	</ul>
 </div>
