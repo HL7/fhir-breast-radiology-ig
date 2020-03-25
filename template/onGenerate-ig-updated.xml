@@ -13,12 +13,12 @@
       </div>
    </text>
    <url value="http://hl7.org/fhir/us/breast-radiology/ImplementationGuide/hl7.fhir.us.breast-radiology"/>
-   <version value="0.0.2"/>
+   <version value="0.2.0"/>
    <name value="Breast_Radiology_Reporting_1st_STU_ballot"/>
    <title value="Breast Radiology Reporting - 1st STU ballot"/>
    <status value="draft"/>
    <experimental value="false"/>
-   <date value="2020-03-23T13:52:55-05:00"/>
+   <date value="2020-03-25T17:49:11-05:00"/>
    <publisher value="Hl7 - Clinical Interoperability Council"/>
    <contact>
       <telecom>
@@ -76,6 +76,18 @@
       <grouping id="NMResources">
          <name value="Nuclear Medicine Resources"/>
          <description value="This section contains resources used specifically in a Nuclear Medicine exam"/>
+      </grouping>
+      <grouping id="AimResources">
+         <name value="AIM Resources"/>
+         <description value="This section contains resources used specifically by AIM"/>
+      </grouping>
+      <grouping id="AimCodesVS">
+         <name value="AIM ValueSets"/>
+         <description value="This section contains value sets used specifically by AIM"/>
+      </grouping>
+      <grouping id="AimCodesCS">
+         <name value="AIM CodeSystems"/>
+         <description value="This section contains code systems used specifically by AIM"/>
       </grouping>
       <grouping id="Fragments">
          <name value="Fragments"/>
@@ -1394,6 +1406,126 @@
       </resource>
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-GraphicTypeCS.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/GraphicTypeCS"/>
+         </reference>
+         <name value="GraphicType CodeSystem"/>
+         <description value="GraphicType code system."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="AimCodesCS"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="ValueSet"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="ValueSet-GraphicTypeVS.html"/>
+         </extension>
+         <reference>
+            <reference value="ValueSet/GraphicTypeVS"/>
+         </reference>
+         <name value="GraphicType ValueSet"/>
+         <description value="GraphicType value set."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="AimCodesVS"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:extension"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-ImageInstanceExtension.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/ImageInstanceExtension"/>
+         </reference>
+         <name value="Image Instance Extension"/>
+         <description value="Image Instance Extension"/>
+         <exampleBoolean value="false"/>
+         <groupingId value="AimResources"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:extension"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-ImageRegionExtension.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/ImageRegionExtension"/>
+         </reference>
+         <name value="Image Region Extension"/>
+         <description value="Image Region Extension"/>
+         <exampleBoolean value="false"/>
+         <groupingId value="AimResources"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:extension"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-ImageSeriesExtension.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/ImageSeriesExtension"/>
+         </reference>
+         <name value="Image Series Extension"/>
+         <description value="Image Series Extension"/>
+         <exampleBoolean value="false"/>
+         <groupingId value="AimResources"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:extension"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-ImageStudyDerivedFromExtension.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/ImageStudyDerivedFromExtension"/>
+         </reference>
+         <name value="Image Study Derived From Extension"/>
+         <description value="Image Study Derived From Extension"/>
+         <exampleBoolean value="false"/>
+         <groupingId value="AimResources"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:extension"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-ImageStudyExtension.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/ImageStudyExtension"/>
+         </reference>
+         <name value="Image Study Extension"/>
+         <description value="Image Study Extension"/>
+         <exampleBoolean value="false"/>
+         <groupingId value="AimResources"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:extension"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-ImagingContextExtension.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/ImagingContextExtension"/>
+         </reference>
+         <name value="Image Region Extension"/>
+         <description value="Imaging Context Extension"/>
+         <exampleBoolean value="false"/>
+         <groupingId value="AimResources"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
             <valueString value="StructureDefinition:resource:abstract"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
@@ -1759,6 +1891,11 @@
          <page>
             <nameUrl value="overview.html"/>
             <title value="Overview"/>
+            <generation value="html"/>
+         </page>
+         <page>
+            <nameUrl value="imageContextOverview.html"/>
+            <title value="Image Context Extensions"/>
             <generation value="html"/>
          </page>
          <page>
@@ -2218,6 +2355,46 @@
             <page>
                <nameUrl value="StructureDefinition-NMFinding.html"/>
                <title value="NM Finding"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-ImageInstanceExtension.html"/>
+               <title value="Image Instance Extension"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-ImageRegionExtension.html"/>
+               <title value="Image Region Extension"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-ImageSeriesExtension.html"/>
+               <title value="Image Series Extension"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-ImageStudyDerivedFromExtension.html"/>
+               <title value="Image Study Derived From Extension"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-ImageStudyExtension.html"/>
+               <title value="Image Study Extension"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-ImagingContextExtension.html"/>
+               <title value="Image Region Extension"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="ValueSet-GraphicTypeVS.html"/>
+               <title value="GraphicType ValueSet"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="CodeSystem-GraphicTypeCS.html"/>
+               <title value="GraphicType CodeSystem"/>
                <generation value="generated"/>
             </page>
             <page>
