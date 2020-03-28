@@ -1,0 +1,179 @@
+{
+  "resourceType": "Bundle",
+  "id": "FhirDocumentBundle",
+  "meta": {
+    "lastUpdated": "2020-03-28T14:06:57.5159722-05:00"
+  },
+  "identifier": {
+    "system": "urn:ietf:rfc:3986",
+    "value": "c7110f54-57a1-4d1f-9e30-4fb45a4b0fa0"
+  },
+  "type": "document",
+  "timestamp": "2020-03-28T14:06:57.5143597-05:00",
+  "entry": [
+    {
+      "fullUrl": "Composition/Index",
+      "resource": {
+        "resourceType": "Composition",
+        "id": "Index",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadComposition"
+          ]
+        },
+        "status": "final",
+        "type": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "42132-1"
+            }
+          ],
+          "text": "US Breast screening"
+        },
+        "subject": {
+          "reference": "Patient/Patient1"
+        },
+        "encounter": {
+          "reference": "Encounter/Encounter1"
+        },
+        "date": "2020-03-28T14:06:57.4753498-05:00",
+        "author": [
+          {
+            "reference": "Device/Device1"
+          }
+        ],
+        "title": "Simple Narrative Only Breast Radiology Report",
+        "section": [
+          {
+            "title": "Breast Radiology Report",
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/CompositionSectionSliceCodes",
+                  "code": "sectionReport"
+                }
+              ]
+            },
+            "entry": [
+              {
+                "reference": "DiagnosticReport/Report"
+              }
+            ]
+          },
+          {
+            "title": "Admin",
+            "code": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/CompositionSectionSliceCodes",
+                  "code": "sectionCodeAdmin"
+                }
+              ]
+            },
+            "entry": [
+              {
+                "reference": "Patient/Patient1"
+              },
+              {
+                "reference": "Encounter/Encounter1"
+              },
+              {
+                "reference": "Device/Device1"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "DiagnosticReport/Report",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "Report",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadReport"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "imaging"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "10193-1"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/Patient1"
+        },
+        "encounter": {
+          "reference": "Encounter/Encounter1"
+        },
+        "conclusion": "Report Narrative conclusion.",
+        "conclusionCode": [
+          {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BiRadsAssessmentCategoriesCS",
+                "code": "Category2"
+              }
+            ],
+            "text": "Category 2 (Benign)"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Patient/Patient1",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "Patient1",
+        "name": [
+          {
+            "family": "Moose",
+            "given": [
+              "Bullwinkle"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Encounter/Encounter1",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "Encounter1",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "CASH"
+        }
+      }
+    },
+    {
+      "fullUrl": "Device/Device1",
+      "resource": {
+        "resourceType": "Device",
+        "id": "Device1",
+        "deviceName": [
+          {
+            "name": "Test Author",
+            "type": "user-friendly-name"
+          }
+        ]
+      }
+    }
+  ]
+}

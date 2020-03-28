@@ -1,0 +1,151 @@
+{
+  "resourceType": "Composition",
+  "id": "Index",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadComposition"
+    ]
+  },
+  "contained": [
+    {
+      "resourceType": "Patient",
+      "id": "Patient.Patient1",
+      "name": [
+        {
+          "family": "Moose",
+          "given": [
+            "Bullwinkle"
+          ]
+        }
+      ]
+    },
+    {
+      "resourceType": "Encounter",
+      "id": "Encounter.Encounter1",
+      "status": "finished",
+      "class": {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "CASH"
+      }
+    },
+    {
+      "resourceType": "Device",
+      "id": "Device.Device1",
+      "deviceName": [
+        {
+          "name": "Test Author",
+          "type": "user-friendly-name"
+        }
+      ]
+    },
+    {
+      "resourceType": "DiagnosticReport",
+      "id": "DiagnosticReport.Report",
+      "meta": {
+        "profile": [
+          "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadReport"
+        ]
+      },
+      "status": "final",
+      "category": [
+        {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+              "code": "imaging"
+            }
+          ]
+        }
+      ],
+      "code": {
+        "coding": [
+          {
+            "system": "http://loinc.org",
+            "code": "10193-1"
+          }
+        ]
+      },
+      "subject": {
+        "reference": "#Patient.Patient1"
+      },
+      "encounter": {
+        "reference": "#Encounter.Encounter1"
+      },
+      "conclusion": "Report Narrative conclusion.",
+      "conclusionCode": [
+        {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BiRadsAssessmentCategoriesCS",
+              "code": "Category2"
+            }
+          ],
+          "text": "Category 2 (Benign)"
+        }
+      ]
+    }
+  ],
+  "status": "final",
+  "type": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "42132-1"
+      }
+    ],
+    "text": "US Breast screening"
+  },
+  "subject": {
+    "reference": "#Patient.Patient1"
+  },
+  "encounter": {
+    "reference": "#Encounter.Encounter1"
+  },
+  "date": "2020-03-28T14:06:57.4753498-05:00",
+  "author": [
+    {
+      "reference": "#Device.Device1"
+    }
+  ],
+  "title": "Simple Narrative Only Breast Radiology Report",
+  "section": [
+    {
+      "title": "Breast Radiology Report",
+      "code": {
+        "coding": [
+          {
+            "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/CompositionSectionSliceCodes",
+            "code": "sectionReport"
+          }
+        ]
+      },
+      "entry": [
+        {
+          "reference": "#DiagnosticReport.Report"
+        }
+      ]
+    },
+    {
+      "title": "Admin",
+      "code": {
+        "coding": [
+          {
+            "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/CompositionSectionSliceCodes",
+            "code": "sectionCodeAdmin"
+          }
+        ]
+      },
+      "entry": [
+        {
+          "reference": "#Patient.Patient1"
+        },
+        {
+          "reference": "#Encounter.Encounter1"
+        },
+        {
+          "reference": "#Device.Device1"
+        }
+      ]
+    }
+  ]
+}
