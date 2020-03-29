@@ -18,7 +18,7 @@
    <title value="Breast Radiology Reporting - 1st STU ballot"/>
    <status value="draft"/>
    <experimental value="false"/>
-   <date value="2020-03-29T15:43:39-05:00"/>
+   <date value="2020-03-29T17:29:02-05:00"/>
    <publisher value="Hl7 - Clinical Interoperability Council"/>
    <contact>
       <telecom>
@@ -96,6 +96,10 @@
       <grouping id="ExtensionResources">
          <name value="Extension"/>
          <description value="Extension Resource Definitions"/>
+      </grouping>
+      <grouping id="Examples">
+         <name value="Examples"/>
+         <description value="Example Definitions"/>
       </grouping>
 
 
@@ -1899,6 +1903,51 @@
          <exampleBoolean value="false"/>
          <groupingId value="Fragments"/>
       </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Bundle"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Bundle-FhirDocumentBundle.html"/>
+         </extension>
+         <reference>
+            <reference value="Bundle/FhirDocumentBundle"/>
+         </reference>
+         <name value="'Bundle' example."/>
+         <description value="'Bundle' example."/>
+         <exampleBoolean value="true"/>
+         <groupingId value="Examples"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Composition"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Composition-Index.html"/>
+         </extension>
+         <reference>
+            <reference value="Composition/Index"/>
+         </reference>
+         <name value="'Composition' example."/>
+         <description value="'Composition' example."/>
+         <exampleCanonical value="http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadComposition"/>
+         <groupingId value="Examples"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="DiagnosticReport"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="DiagnosticReport-Report.html"/>
+         </extension>
+         <reference>
+            <reference value="DiagnosticReport/Report"/>
+         </reference>
+         <name value="'DiagnosticReport' example."/>
+         <description value="'DiagnosticReport' example."/>
+         <exampleCanonical value="http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadReport"/>
+         <groupingId value="Examples"/>
+      </resource>
       <page>
          <nameUrl value="toc.html"/>
          <title value="Table of Contents"/>
@@ -2560,6 +2609,21 @@
             <page>
                <nameUrl value="StructureDefinition-BodyDistanceFromExtension.html"/>
                <title value="Body Distance From Extension"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Bundle-FhirDocumentBundle.html"/>
+               <title value="'Bundle' example."/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Composition-Index.html"/>
+               <title value="'Composition' example."/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="DiagnosticReport-Report.html"/>
+               <title value="'DiagnosticReport' example."/>
                <generation value="generated"/>
             </page>
          </page>
