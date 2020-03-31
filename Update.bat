@@ -6,14 +6,14 @@ del ig.ini
 del package-list.json
 
 mkdir .\input
-xcopy /Q /E /Y ..\BreastRadiologyProfiles\IG\guide\input .\input
+xcopy /Q /E /Y ..\BreastRadiologyProfilesV2\IG\guide\input .\input
 
 mkdir .\template
-xcopy /Q /E /Y ..\BreastRadiologyProfiles\IG\guide\template .\template
+xcopy /Q /E /Y ..\BreastRadiologyProfilesV2\IG\guide\template .\template
 
-copy ..\BreastRadiologyProfiles\IG\guide\.gitignore .\.gitignore
-copy ..\BreastRadiologyProfiles\IG\guide\ig.ini .\ig.ini
-copy ..\BreastRadiologyProfiles\IG\guide\package-list.json .\package-list.json
+copy ..\BreastRadiologyProfilesV2\IG\guide\.gitignore .\.gitignore
+copy ..\BreastRadiologyProfilesV2\IG\guide\ig.ini .\ig.ini
+copy ..\BreastRadiologyProfilesV2\IG\guide\package-list.json .\package-list.json
 
 pause
 
