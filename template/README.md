@@ -1,5 +1,4 @@
-# ig-template-fhir
+# ig-template-base
+package-id = fhir.base.template
 
-package hl7.fhir.template
-
-Template used for most HL7-defined FHIR implementation guides (based on ig-template-base - package = hl7.base.template).  Adds HL7 logos.
+Base IG template managed by HL7 but usable by anyone (no logos).  The foundation for most HL7-published IGs
