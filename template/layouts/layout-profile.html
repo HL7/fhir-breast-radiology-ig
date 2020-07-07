@@ -1,43 +1,10 @@
 ---
 ---
 {% include fragment-pagebegin.html %}
-{% assign excludexml = site.data.info.excludexml | downcase | slice: 0 %}
-{% assign excludejson = site.data.info.excludejson | downcase | slice: 0 %}
-{% assign excludettl = site.data.info.excludettl | downcase | slice: 0 %}
-{% assign excludemaps = site.data.info.excludemap | downcase | slice: 0 %}
 <div class="col-12">
   <!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
-  <ul class="nav nav-tabs">
-    <li class="active">
-      <a href="#">Content</a>
-    </li>
-    <li>
-      <a href="{{[type]}}-{{[id]}}-definitions.html">Detailed Descriptions</a>
-    </li>
-{% unless excludemaps == 'y' %}
-    <li>
-      <a href="{{[type]}}-{{[id]}}-mappings.html">Mappings</a>
-    </li>
-{% endunless %}
-    <li>
-      <a href="{{[type]}}-{{[id]}}-examples.html">Examples</a>
-    </li>
-{% unless excludexml == 'y' %}
-    <li>
-      <a href="{{[type]}}-{{[id]}}.profile.xml.html">XML</a>
-    </li>
-{% endunless %}
-{% unless excludejson == 'y' %}
-    <li>
-      <a href="{{[type]}}-{{[id]}}.profile.json.html">JSON</a>
-    </li>
-{% endunless %}
-{% unless excludettl == 'y' %}
-    <li>
-      <a href="{{[type]}}-{{[id]}}.profile.ttl.html">Turtle</a>
-    </li>
-{% endunless %}
-  </ul>
+  {% include fragment-profile-navtabs.html type='{{[type]}}' id='{{[id]}}' active='content' %}
+
   <a name="root"> </a>
 {% if site.data.structuredefinitions['{{[id]}}'].kind == 'logical' %}
   {% assign modelType = 'Logical Model' %}
@@ -53,21 +20,9 @@
   </p>
   <pre>{{site.data.structuredefinitions['{{[id]}}'].url}}</pre>
 
-  {% assign intro = site.data.pages[page.path].intro %}
-  {% if intro != null %}
-  {% if site.data.pages[page.path].intro-type == 'xml' %}
-  <div style="display:inline-block">
-  {% include {{intro}} %}
-  </div>
-  {% else %}
-  {% capture intro-content %}
-{% include {{intro}} %}
-  {% endcapture %}
-  <div style="display:inline-block">
-  {{ intro-content | markdownify }}
-  </div>
-  {% endif %}
-  {% endif %}
+<!-- insert intro if present -->
+{% include fragment-intro.html %}
+
   <!-- no uri -->
   <a name="profile"> </a>
   <h3 id="profile">Formal Views of Profile Content</h3>
@@ -226,28 +181,15 @@
   <p>Other representations of profile: <a href="{{[type]}}-{{[id]}}.sch">Schematron</a>
   </p>
   <a name="tx"> </a>
-  <h3 id="tx">Terminology Bindings</h3>
+  <!--Terminology Bindings heading in the fragment -->
   {%include StructureDefinition-{{[id]}}-tx.xhtml%}
 
   <a name="inv"> </a>
-  <h3 id="inv">Constraints</h3>
+  <!--Constraints  heading in the fragment -->
   {%include StructureDefinition-{{[id]}}-inv.xhtml%}
 
-  {% assign notes = site.data.pages[page.path].notes %}
-  {% if notes != null %}
-  {% if site.data.pages[page.path].notes-type == 'xml' %}
-  <div style="display:inline-block">
-  {% include {{notes}} %}
-  </div>
-  {% else %}
-  {% capture note-content %}
-{% include {{notes}} %}
-  {% endcapture %}
-  <div style="display:inline-block">
-  {{ note-content | markdownify }}
-  </div>
-  {% endif %}
-  {% endif %}
+<!-- insert notes if present -->
+{% include fragment-notes.html %}
 
   {%include StructureDefinition-{{[id]}}-history.xhtml%}
 </div>

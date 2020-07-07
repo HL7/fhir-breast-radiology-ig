@@ -137,7 +137,7 @@
           "extensions",
           "user content"
         ],
-        "min": 2,
+        "min": 0,
         "max": "*",
         "base": {
           "path": "Element.extension",
@@ -1282,9 +1282,9 @@
         ]
       },
       {
-        "id": "Extension.extension:landMark",
+        "id": "Extension.extension:landmark",
         "path": "Extension.extension",
-        "sliceName": "landMark",
+        "sliceName": "landmark",
         "short": "Body landmark. Origin of distance measurement.",
         "definition": "Body landmark which defines the origin of the measurement.\n\nCurrently the value set this is bound to does not contain the required breast \nlandmarks like nipple.",
         "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
@@ -1292,8 +1292,8 @@
           "extensions",
           "user content"
         ],
-        "min": 1,
-        "max": "1",
+        "min": 0,
+        "max": "*",
         "base": {
           "path": "Element.extension",
           "min": 0,
@@ -1332,7 +1332,7 @@
         ]
       },
       {
-        "id": "Extension.extension:landMark.id",
+        "id": "Extension.extension:landmark.id",
         "path": "Extension.extension.id",
         "representation": [
           "xmlAttr"
@@ -1367,7 +1367,7 @@
         ]
       },
       {
-        "id": "Extension.extension:landMark.extension",
+        "id": "Extension.extension:landmark.extension",
         "path": "Extension.extension.extension",
         "slicing": {
           "discriminator": [
@@ -1426,7 +1426,7 @@
         ]
       },
       {
-        "id": "Extension.extension:landMark.url",
+        "id": "Extension.extension:landmark.url",
         "path": "Extension.extension.url",
         "representation": [
           "xmlAttr"
@@ -1452,7 +1452,7 @@
             "code": "http://hl7.org/fhirpath/System.String"
           }
         ],
-        "fixedUri": "landMark",
+        "fixedUri": "landmark",
         "isModifier": false,
         "isSummary": false,
         "mapping": [
@@ -1463,7 +1463,7 @@
         ]
       },
       {
-        "id": "Extension.extension:landMark.value[x]",
+        "id": "Extension.extension:landmark.value[x]",
         "path": "Extension.extension.value[x]",
         "short": "Value of extension",
         "definition": "Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).",
@@ -1503,18 +1503,18 @@
         ]
       },
       {
-        "id": "Extension.extension:distanceFromLandMark",
+        "id": "Extension.extension:distanceFromLandmark",
         "path": "Extension.extension",
-        "sliceName": "distanceFromLandMark",
+        "sliceName": "distanceFromLandmark",
         "short": "Distance from landmark",
-        "definition": "Distance from body landmark to body location",
+        "definition": "Distance from body landmark to body location\n\nThe cardinality of distanceFromLandmark must match that of landmark, and each item in distanceFromLandmark will\nrelate to its corresponding element in landmark.",
         "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
         "alias": [
           "extensions",
           "user content"
         ],
-        "min": 1,
-        "max": "1",
+        "min": 0,
+        "max": "*",
         "base": {
           "path": "Element.extension",
           "min": 0,
@@ -1553,7 +1553,7 @@
         ]
       },
       {
-        "id": "Extension.extension:distanceFromLandMark.id",
+        "id": "Extension.extension:distanceFromLandmark.id",
         "path": "Extension.extension.id",
         "representation": [
           "xmlAttr"
@@ -1588,7 +1588,7 @@
         ]
       },
       {
-        "id": "Extension.extension:distanceFromLandMark.extension",
+        "id": "Extension.extension:distanceFromLandmark.extension",
         "path": "Extension.extension.extension",
         "slicing": {
           "discriminator": [
@@ -1647,7 +1647,7 @@
         ]
       },
       {
-        "id": "Extension.extension:distanceFromLandMark.url",
+        "id": "Extension.extension:distanceFromLandmark.url",
         "path": "Extension.extension.url",
         "representation": [
           "xmlAttr"
@@ -1673,7 +1673,7 @@
             "code": "http://hl7.org/fhirpath/System.String"
           }
         ],
-        "fixedUri": "distanceFromLandMark",
+        "fixedUri": "distanceFromLandmark",
         "isModifier": false,
         "isSummary": false,
         "mapping": [
@@ -1684,7 +1684,7 @@
         ]
       },
       {
-        "id": "Extension.extension:distanceFromLandMark.value[x]",
+        "id": "Extension.extension:distanceFromLandmark.value[x]",
         "path": "Extension.extension.value[x]",
         "slicing": {
           "discriminator": [
@@ -1730,7 +1730,7 @@
         ]
       },
       {
-        "id": "Extension.extension:distanceFromLandMark.value[x]:valueQuantity",
+        "id": "Extension.extension:distanceFromLandmark.value[x]:valueQuantity",
         "path": "Extension.extension.value[x]",
         "sliceName": "valueQuantity",
         "short": "Value of extension",
@@ -2000,11 +2000,6 @@
         "short": "Breast Body Location extension"
       },
       {
-        "id": "Extension.extension",
-        "path": "Extension.extension",
-        "min": 2
-      },
-      {
         "id": "Extension.extension:laterality",
         "path": "Extension.extension",
         "sliceName": "laterality",
@@ -2170,26 +2165,26 @@
         }
       },
       {
-        "id": "Extension.extension:landMark",
+        "id": "Extension.extension:landmark",
         "path": "Extension.extension",
-        "sliceName": "landMark",
+        "sliceName": "landmark",
         "short": "Body landmark. Origin of distance measurement.",
         "definition": "Body landmark which defines the origin of the measurement.\n\nCurrently the value set this is bound to does not contain the required breast \nlandmarks like nipple.",
-        "min": 1,
-        "max": "1"
+        "min": 0,
+        "max": "*"
       },
       {
-        "id": "Extension.extension:landMark.extension",
+        "id": "Extension.extension:landmark.extension",
         "path": "Extension.extension.extension",
         "max": "0"
       },
       {
-        "id": "Extension.extension:landMark.url",
+        "id": "Extension.extension:landmark.url",
         "path": "Extension.extension.url",
-        "fixedUri": "landMark"
+        "fixedUri": "landmark"
       },
       {
-        "id": "Extension.extension:landMark.value[x]",
+        "id": "Extension.extension:landmark.value[x]",
         "path": "Extension.extension.value[x]",
         "min": 1,
         "type": [
@@ -2203,26 +2198,26 @@
         }
       },
       {
-        "id": "Extension.extension:distanceFromLandMark",
+        "id": "Extension.extension:distanceFromLandmark",
         "path": "Extension.extension",
-        "sliceName": "distanceFromLandMark",
+        "sliceName": "distanceFromLandmark",
         "short": "Distance from landmark",
-        "definition": "Distance from body landmark to body location",
-        "min": 1,
-        "max": "1"
+        "definition": "Distance from body landmark to body location\n\nThe cardinality of distanceFromLandmark must match that of landmark, and each item in distanceFromLandmark will\nrelate to its corresponding element in landmark.",
+        "min": 0,
+        "max": "*"
       },
       {
-        "id": "Extension.extension:distanceFromLandMark.extension",
+        "id": "Extension.extension:distanceFromLandmark.extension",
         "path": "Extension.extension.extension",
         "max": "0"
       },
       {
-        "id": "Extension.extension:distanceFromLandMark.url",
+        "id": "Extension.extension:distanceFromLandmark.url",
         "path": "Extension.extension.url",
-        "fixedUri": "distanceFromLandMark"
+        "fixedUri": "distanceFromLandmark"
       },
       {
-        "id": "Extension.extension:distanceFromLandMark.value[x]",
+        "id": "Extension.extension:distanceFromLandmark.value[x]",
         "path": "Extension.extension.value[x]",
         "slicing": {
           "discriminator": [
@@ -2242,7 +2237,7 @@
         ]
       },
       {
-        "id": "Extension.extension:distanceFromLandMark.valueQuantity",
+        "id": "Extension.extension:distanceFromLandmark.valueQuantity",
         "path": "Extension.extension.valueQuantity",
         "min": 0,
         "max": "1",
