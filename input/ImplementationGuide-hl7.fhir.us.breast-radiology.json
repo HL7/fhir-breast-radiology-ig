@@ -58,6 +58,11 @@
         "id": "CommonCodesCS",
         "name": "Common CodeSystems",
         "description": "This section contains code systems that are defined in this Breast Radiology Implementation Guide."
+      },
+      {
+        "id": "Fragments",
+        "name": "Mammography Resources",
+        "description": "This section contains resource fragments that are used in the construction of the Breast Radiology Profiles.\r\n      They are included here to better convey the structure and composition of the components that are used to create the\r\n      Breast Radiology Resources."
       }
     ],
     "resource": [
@@ -816,6 +821,132 @@
         "description": "Breast Body Location Extension",
         "exampleBoolean": false,
         "groupingId": "ExtensionResources"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/AssociatedFeatureFragment"
+        },
+        "name": "Associated Feature Fragment",
+        "description": "This fragment adds the references for the Associated Feature hasMember slice.",
+        "exampleBoolean": false,
+        "groupingId": "Fragments"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/BiRadFragment"
+        },
+        "name": "BiRad Fragment",
+        "description": "Fragment that adds 'BiRad code' element to profile",
+        "exampleBoolean": false,
+        "groupingId": "Fragments"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/BreastBodyLocationRequiredFragment"
+        },
+        "name": "Breast Body Location (Required) Fragment",
+        "description": "This fragment adds the references for the breast body location extension.\nThe references are required, meaning that the breast body location must exist.",
+        "exampleBoolean": false,
+        "groupingId": "Fragments"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/CategoryFragment"
+        },
+        "name": "Category Fragment",
+        "description": "This fragment slices Observation.category and \nfixes the observation.code value to 'imaging'.",
+        "exampleBoolean": false,
+        "groupingId": "Fragments"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ConsistentWithFragment"
+        },
+        "name": "ConsistentWith HasMember Fragment",
+        "description": "This fragment adds the references for the ConsistentWith HasMember.",
+        "exampleBoolean": false,
+        "groupingId": "Fragments"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/CorrespondsWithFragment"
+        },
+        "name": "'Corresponds With' Component Fragment",
+        "description": "Observation 'Corresponds With' Component Fragment\nAdds CorrespondsWith component",
+        "exampleBoolean": false,
+        "groupingId": "Fragments"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/NotPreviouslySeenFragment"
+        },
+        "name": "NotPreviously Seen Component Fragment",
+        "description": "Adds NotPreviously Seen Component slice.",
+        "exampleBoolean": false,
+        "groupingId": "Fragments"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ObservedChangesFragment"
+        },
+        "name": "Observed Changes Component Fragment",
+        "description": "Add Observed Changes Component Slice",
+        "exampleBoolean": false,
+        "groupingId": "Fragments"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ObservedDistributionFragment"
+        },
+        "name": "Observed Distribution Fragment",
+        "description": "Fragment that adds 'Observed Distribution' components to Observation.",
+        "exampleBoolean": false,
+        "groupingId": "Fragments"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ObservedCountFragment"
+        },
+        "name": "ObservedCount Fragment",
+        "description": "Fragment that adds 'Observed Count' element to profile.",
+        "exampleBoolean": false,
+        "groupingId": "Fragments"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ObservedSizeFragment"
+        },
+        "name": "ObservedSize Fragment",
+        "description": "Fragment that adds 'Observed Size' components to Observation.",
+        "exampleBoolean": false,
+        "groupingId": "Fragments"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/PreviouslyDemonstratedByFragment"
+        },
+        "name": "PreviouslyDemonstratedBy Fragment",
+        "description": "Observation 'Demonstrated By' Component Fragment",
+        "exampleBoolean": false,
+        "groupingId": "Fragments"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ShapeFragment"
+        },
+        "name": "Shape Components Fragment",
+        "description": "Adds Orientation, Shape, Margin, and Density Components",
+        "exampleBoolean": false,
+        "groupingId": "Fragments"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/TumorSatelliteFragment"
+        },
+        "name": "Tumor Satellite Fragment",
+        "description": "This fragment adds the references for the Tumor Satellite extension.",
+        "exampleBoolean": false,
+        "groupingId": "Fragments"
       },
       {
         "reference": {

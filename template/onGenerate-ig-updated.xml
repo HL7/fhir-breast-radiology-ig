@@ -17,7 +17,7 @@
    <name value="BreastRadiologyReporting2ndSTUballot"/>
    <title value="Breast Radiology Reporting - 2nd STU ballot"/>
    <status value="active"/>
-   <date value="2020-07-07T09:23:05-05:00"/>
+   <date value="2020-07-21T16:02:38-05:00"/>
    <description value="Breast Radiology Reporting Implementation Guide"/>
    <packageId value="hl7.fhir.us.breast-radiology"/>
    <license value="CC0-1.0"/>
@@ -58,6 +58,10 @@
       <grouping id="CommonCodesCS">
          <name value="Common CodeSystems"/>
          <description value="This section contains code systems that are defined in this Breast Radiology Implementation Guide."/>
+      </grouping>
+      <grouping id="Fragments">
+         <name value="Mammography Resources"/>
+         <description value="This section contains resource fragments that are used in the construction of the Breast Radiology Profiles.&#xD;&#xA;      They are included here to better convey the structure and composition of the components that are used to create the&#xD;&#xA;      Breast Radiology Resources."/>
       </grouping>
 
 
@@ -1101,6 +1105,21 @@
             <valueString value="StructureDefinition:resource"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-AssociatedFeatureFragment.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/AssociatedFeatureFragment"/>
+         </reference>
+         <name value="Associated Feature Fragment"/>
+         <description value="This fragment adds the references for the Associated Feature hasMember slice."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="CommonResources"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:resource"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
             <valueUri value="StructureDefinition-AbnormalityAsymmetry.html"/>
          </extension>
          <reference>
@@ -1123,6 +1142,21 @@
          </reference>
          <name value="Consistent With"/>
          <description value="Consistent With"/>
+         <exampleBoolean value="false"/>
+         <groupingId value="CommonResources"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:resource"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-ConsistentWithFragment.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/ConsistentWithFragment"/>
+         </reference>
+         <name value="ConsistentWith HasMember Fragment"/>
+         <description value="This fragment adds the references for the ConsistentWith HasMember."/>
          <exampleBoolean value="false"/>
          <groupingId value="CommonResources"/>
       </resource>
@@ -1323,6 +1357,21 @@
       </resource>
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:resource"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-TumorSatelliteFragment.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/TumorSatelliteFragment"/>
+         </reference>
+         <name value="Tumor Satellite Fragment"/>
+         <description value="This fragment adds the references for the Tumor Satellite extension."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="CommonResources"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
             <valueString value="StructureDefinition:extension"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
@@ -1335,6 +1384,171 @@
          <description value="Breast Body Location Extension"/>
          <exampleBoolean value="false"/>
          <groupingId value="ExtensionResources"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:resource"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-BiRadFragment.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/BiRadFragment"/>
+         </reference>
+         <name value="BiRad Fragment"/>
+         <description value="Fragment that adds 'BiRad code' element to profile"/>
+         <exampleBoolean value="false"/>
+         <groupingId value="Fragments"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:resource"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-BreastBodyLocationRequiredFragment.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/BreastBodyLocationRequiredFragment"/>
+         </reference>
+         <name value="Breast Body Location (Required) Fragment"/>
+         <description value="This fragment adds the references for the breast body location extension.&#xA;The references are required, meaning that the breast body location must exist."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="Fragments"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:resource"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-CategoryFragment.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/CategoryFragment"/>
+         </reference>
+         <name value="Category Fragment"/>
+         <description value="This fragment slices Observation.category and &#xA;fixes the observation.code value to 'imaging'."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="Fragments"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:resource"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-CorrespondsWithFragment.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/CorrespondsWithFragment"/>
+         </reference>
+         <name value="'Corresponds With' Component Fragment"/>
+         <description value="Observation 'Corresponds With' Component Fragment&#xA;Adds CorrespondsWith component"/>
+         <exampleBoolean value="false"/>
+         <groupingId value="Fragments"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:resource"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-NotPreviouslySeenFragment.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/NotPreviouslySeenFragment"/>
+         </reference>
+         <name value="NotPreviously Seen Component Fragment"/>
+         <description value="Adds NotPreviously Seen Component slice."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="Fragments"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:resource"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-ObservedChangesFragment.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/ObservedChangesFragment"/>
+         </reference>
+         <name value="Observed Changes Component Fragment"/>
+         <description value="Add Observed Changes Component Slice"/>
+         <exampleBoolean value="false"/>
+         <groupingId value="Fragments"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:resource"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-ObservedDistributionFragment.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/ObservedDistributionFragment"/>
+         </reference>
+         <name value="Observed Distribution Fragment"/>
+         <description value="Fragment that adds 'Observed Distribution' components to Observation."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="Fragments"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:resource"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-ObservedCountFragment.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/ObservedCountFragment"/>
+         </reference>
+         <name value="ObservedCount Fragment"/>
+         <description value="Fragment that adds 'Observed Count' element to profile."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="Fragments"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:resource"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-ObservedSizeFragment.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/ObservedSizeFragment"/>
+         </reference>
+         <name value="ObservedSize Fragment"/>
+         <description value="Fragment that adds 'Observed Size' components to Observation."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="Fragments"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:resource"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-PreviouslyDemonstratedByFragment.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/PreviouslyDemonstratedByFragment"/>
+         </reference>
+         <name value="PreviouslyDemonstratedBy Fragment"/>
+         <description value="Observation 'Demonstrated By' Component Fragment"/>
+         <exampleBoolean value="false"/>
+         <groupingId value="Fragments"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:resource"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-ShapeFragment.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/ShapeFragment"/>
+         </reference>
+         <name value="Shape Components Fragment"/>
+         <description value="Adds Orientation, Shape, Margin, and Density Components"/>
+         <exampleBoolean value="false"/>
+         <groupingId value="Fragments"/>
       </resource>
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -1470,6 +1684,11 @@
                <generation value="generated"/>
             </page>
             <page>
+               <nameUrl value="StructureDefinition-AssociatedFeatureFragment.html"/>
+               <title value="Associated Feature Fragment"/>
+               <generation value="generated"/>
+            </page>
+            <page>
                <nameUrl value="StructureDefinition-AbnormalityAsymmetry.html"/>
                <title value="Asymmetry"/>
                <generation value="generated"/>
@@ -1477,6 +1696,11 @@
             <page>
                <nameUrl value="StructureDefinition-ConsistentWith.html"/>
                <title value="Consistent With"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-ConsistentWithFragment.html"/>
+               <title value="ConsistentWith HasMember Fragment"/>
                <generation value="generated"/>
             </page>
             <page>
@@ -1542,6 +1766,11 @@
             <page>
                <nameUrl value="StructureDefinition-TumorSatellite.html"/>
                <title value="Tumor Satellite"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-TumorSatelliteFragment.html"/>
+               <title value="Tumor Satellite Fragment"/>
                <generation value="generated"/>
             </page>
             <page>
@@ -1889,6 +2118,61 @@
                <title value="Shape CodeSystem"/>
                <generation value="generated"/>
             </page>
+            <page>
+               <nameUrl value="StructureDefinition-BiRadFragment.html"/>
+               <title value="BiRad Fragment"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-BreastBodyLocationRequiredFragment.html"/>
+               <title value="Breast Body Location (Required) Fragment"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-CategoryFragment.html"/>
+               <title value="Category Fragment"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-CorrespondsWithFragment.html"/>
+               <title value="'Corresponds With' Component Fragment"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-NotPreviouslySeenFragment.html"/>
+               <title value="NotPreviously Seen Component Fragment"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-ObservedChangesFragment.html"/>
+               <title value="Observed Changes Component Fragment"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-ObservedDistributionFragment.html"/>
+               <title value="Observed Distribution Fragment"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-ObservedCountFragment.html"/>
+               <title value="ObservedCount Fragment"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-ObservedSizeFragment.html"/>
+               <title value="ObservedSize Fragment"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-PreviouslyDemonstratedByFragment.html"/>
+               <title value="PreviouslyDemonstratedBy Fragment"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-ShapeFragment.html"/>
+               <title value="Shape Components Fragment"/>
+               <generation value="generated"/>
+            </page>
          </page>
       </page>
       <parameter>
@@ -1946,6 +2230,10 @@
       <parameter>
          <code value="path-resource"/>
          <value value="input/testing"/>
+      </parameter>
+      <parameter>
+         <code value="path-resource"/>
+         <value value="input/history"/>
       </parameter>
       <parameter>
          <code value="path-pages"/>
