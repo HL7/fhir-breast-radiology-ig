@@ -17,8 +17,7 @@
    <name value="BreastRadiologyReporting2ndSTUballot"/>
    <title value="Breast Radiology Reporting - 2nd STU ballot"/>
    <status value="active"/>
-   <date value="2020-07-25T12:57:02-05:00"/>
-   <publisher value="Kurt W. Allen"/>
+   <date value="2020-08-12T20:15:45-05:00"/>
    <description value="Breast Radiology Reporting Implementation Guide"/>
    <packageId value="hl7.fhir.us.breast-radiology"/>
    <license value="CC0-1.0"/>
@@ -73,6 +72,10 @@
 
 
 
+      <grouping id="_str_extension">
+         <name value="Structures: Extension Definitions"/>
+         <description value="These define constraints on FHIR data types that need to be complied with by conformant implementations"/>
+      </grouping>
 
 
 
@@ -81,6 +84,21 @@
 
 
 
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:extension"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-ImplementsFragmentExtension.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/ImplementsFragmentExtension"/>
+         </reference>
+         <name value="Implements Fragment Extension"/>
+         <description value="Implements FragmentExtension"/>
+         <exampleBoolean value="false"/>
+         <groupingId value="_str_extension"/>
+      </resource>
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
             <valueString value="StructureDefinition:resource"/>
@@ -2154,15 +2172,20 @@
                <title value="Tumor Satellite Fragment"/>
                <generation value="generated"/>
             </page>
+            <page>
+               <nameUrl value="StructureDefinition-ImplementsFragmentExtension.html"/>
+               <title value="Implements Fragment Extension"/>
+               <generation value="generated"/>
+            </page>
          </page>
       </page>
       <parameter>
          <code value="copyrightyear"/>
-         <value value="2020+"/>
+         <value value="2019+"/>
       </parameter>
       <parameter>
          <code value="releaselabel"/>
-         <value value="CI Build"/>
+         <value value="STU2"/>
       </parameter>
       <parameter>
          <code value="show-inherited-invariants"/>
@@ -2211,6 +2234,10 @@
       <parameter>
          <code value="path-resource"/>
          <value value="input/testing"/>
+      </parameter>
+      <parameter>
+         <code value="path-resource"/>
+         <value value="input/history"/>
       </parameter>
       <parameter>
          <code value="path-pages"/>

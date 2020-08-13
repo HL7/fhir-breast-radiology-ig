@@ -1,6 +1,16 @@
 {
   "resourceType": "StructureDefinition",
   "id": "BreastRadiologyReport",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
+      "valueString": "Clinical.Diagnostics"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category",
+      "valueCode": "patient"
+    }
+  ],
   "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastRadiologyReport",
   "version": "0.0.2",
   "name": "BreastRadiologyReport",
@@ -1741,10 +1751,6 @@
   },
   "differential": {
     "element": [
-      {
-        "id": "DiagnosticReport",
-        "path": "DiagnosticReport"
-      },
       {
         "id": "DiagnosticReport.category",
         "path": "DiagnosticReport.category",

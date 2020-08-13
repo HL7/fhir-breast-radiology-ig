@@ -1,6 +1,16 @@
 {
   "resourceType": "StructureDefinition",
   "id": "MRIFinding",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
+      "valueString": "Clinical.Diagnostics"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category",
+      "valueCode": "patient"
+    }
+  ],
   "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MRIFinding",
   "version": "0.3.0",
   "name": "MRIFinding",
@@ -2755,10 +2765,6 @@
   },
   "differential": {
     "element": [
-      {
-        "id": "Observation",
-        "path": "Observation"
-      },
       {
         "id": "Observation.contained",
         "path": "Observation.contained",

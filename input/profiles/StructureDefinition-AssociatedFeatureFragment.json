@@ -1,6 +1,16 @@
 {
   "resourceType": "StructureDefinition",
   "id": "AssociatedFeatureFragment",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
+      "valueString": "Clinical.Diagnostics"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category",
+      "valueCode": "patient"
+    }
+  ],
   "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AssociatedFeatureFragment",
   "version": "0.3.0",
   "name": "AssociatedFeatureFragment",
@@ -2730,10 +2740,6 @@
   },
   "differential": {
     "element": [
-      {
-        "id": "Observation",
-        "path": "Observation"
-      },
       {
         "id": "Observation.hasMember",
         "path": "Observation.hasMember",

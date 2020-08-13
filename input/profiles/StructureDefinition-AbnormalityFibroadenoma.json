@@ -1,6 +1,16 @@
 {
   "resourceType": "StructureDefinition",
   "id": "AbnormalityFibroadenoma",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
+      "valueString": "Clinical.Diagnostics"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category",
+      "valueCode": "patient"
+    }
+  ],
   "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityFibroadenoma",
   "version": "0.3.0",
   "name": "AbnormalityFibroadenoma",
@@ -5644,7 +5654,7 @@
         "isSummary": true,
         "binding": {
           "strength": "required",
-          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/ShapeVS"
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/MarginVS"
         },
         "mapping": [
           {
@@ -9197,10 +9207,6 @@
   "differential": {
     "element": [
       {
-        "id": "Observation",
-        "path": "Observation"
-      },
-      {
         "id": "Observation.contained",
         "path": "Observation.contained",
         "max": "0"
@@ -9591,7 +9597,7 @@
         ],
         "binding": {
           "strength": "required",
-          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/ShapeVS"
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/MarginVS"
         }
       },
       {

@@ -41,6 +41,7 @@
       <xsl:value-of select="f:description/@value"/>
     </p>
     <p>
+      <xsl:variable name="showDescriptions" select="count(parent::f:definition/f:resource[f:groupingId/@value=current()/@id]/f:description/@value)!=0"/>
       <table class="grid">
         <col style="width:20%"/>
         <tbody>
@@ -59,9 +60,14 @@
                   </xsl:choose>
                 </a>
               </td>
-              <td>
-                <xsl:value-of select="f:description/@value" disable-output-escaping="no"/>
-              </td>
+              <xsl:if test="$showDescriptions">
+                <td>
+                  <xsl:text>{% capture desc %}</xsl:text>
+                  <xsl:value-of select="f:description/@value" disable-output-escaping="no"/>
+                  <xsl:text>{% endcapture %}
+{{ desc | markdownify}}</xsl:text>
+                </td>
+              </xsl:if>
             </tr>
           </xsl:for-each>
         </tbody>

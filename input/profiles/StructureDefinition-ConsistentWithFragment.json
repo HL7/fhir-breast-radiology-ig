@@ -1,6 +1,16 @@
 {
   "resourceType": "StructureDefinition",
   "id": "ConsistentWithFragment",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
+      "valueString": "Clinical.Diagnostics"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category",
+      "valueCode": "patient"
+    }
+  ],
   "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ConsistentWithFragment",
   "version": "0.3.0",
   "name": "ConsistentWithFragment",
@@ -2730,10 +2740,6 @@
   },
   "differential": {
     "element": [
-      {
-        "id": "Observation",
-        "path": "Observation"
-      },
       {
         "id": "Observation.hasMember",
         "path": "Observation.hasMember",
