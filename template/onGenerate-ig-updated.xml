@@ -17,8 +17,15 @@
    <name value="BreastRadiologyReporting2ndSTUballot"/>
    <title value="Breast Radiology Reporting - 2nd STU ballot"/>
    <status value="active"/>
-   <date value="2020-08-12T20:15:45-05:00"/>
+   <date value="2020-10-07T09:05:10-05:00"/>
    <description value="Breast Radiology Reporting Implementation Guide"/>
+   <jurisdiction>
+      <coding>
+         <system value="urn:iso:std:iso:3166"/>
+         <code value="US"/>
+         <display value="United States of America"/>
+      </coding>
+   </jurisdiction>
    <packageId value="hl7.fhir.us.breast-radiology"/>
    <license value="CC0-1.0"/>
    <fhirVersion value="4.0.1"/>
@@ -37,19 +44,23 @@
       </grouping>
       <grouping id="MGResources">
          <name value="Mammography Resources"/>
-         <description value="This section contains resources that are defined in this Breast Radiology Implementation Guide specifically in a Mammography exam."/>
+         <description value="This section contains resources that are defined in this Breast Radiology Implementation Guide specifically in a mammography exam."/>
       </grouping>
       <grouping id="MRIResources">
          <name value="MRI Resources"/>
          <description value="This section contains resources that are defined in this Breast Radiology Implementation Guide specifically in an MRI exam."/>
       </grouping>
       <grouping id="USResources">
-         <name value="Ultra-Sound Resources"/>
-         <description value="This section contains resources that are defined in this Breast Radiology Implementation Guide specifically in a Ultra-Sound exam."/>
+         <name value="Ultrasound Resources"/>
+         <description value="This section contains resources that are defined in this Breast Radiology Implementation Guide specifically in an ultrasound exam."/>
       </grouping>
       <grouping id="NMResources">
          <name value="Nuclear Medicine Resources"/>
-         <description value="This section contains resources that are defined in this Breast Radiology Implementation Guide specifically in a Nuclear Medicine exam."/>
+         <description value="This section contains resources that are defined in this Breast Radiology Implementation Guide specifically in a nuclear medicine exam."/>
+      </grouping>
+      <grouping id="OtherResources">
+         <name value="Other Resources"/>
+         <description value="This section contains resources that are defined in this Breast Radiology Implementation Guide &#xD;&#xA;      that are not one of the predefined exam types."/>
       </grouping>
       <grouping id="CommonCodesVS">
          <name value="Common ValueSets"/>
@@ -1619,13 +1630,28 @@
             <valueString value="StructureDefinition:resource"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-OtherFinding.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/OtherFinding"/>
+         </reference>
+         <name value="Other Finding"/>
+         <description value="Other Finding"/>
+         <exampleBoolean value="false"/>
+         <groupingId value="OtherResources"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:resource"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
             <valueUri value="StructureDefinition-USFinding.html"/>
          </extension>
          <reference>
             <reference value="StructureDefinition/USFinding"/>
          </reference>
-         <name value="Ultra-Sound Finding"/>
-         <description value="Ultra-Sound Finding"/>
+         <name value="Ultrasound Finding"/>
+         <description value="Ultrasound Finding"/>
          <exampleBoolean value="false"/>
          <groupingId value="USResources"/>
       </resource>
@@ -1656,6 +1682,11 @@
          <page>
             <nameUrl value="fullGraph.html"/>
             <title value="Full Graph"/>
+            <generation value="html"/>
+         </page>
+         <page>
+            <nameUrl value="overview.html"/>
+            <title value="Overview"/>
             <generation value="html"/>
          </page>
          <page>
@@ -1784,12 +1815,17 @@
             </page>
             <page>
                <nameUrl value="StructureDefinition-USFinding.html"/>
-               <title value="Ultra-Sound Finding"/>
+               <title value="Ultrasound Finding"/>
                <generation value="generated"/>
             </page>
             <page>
                <nameUrl value="StructureDefinition-NMFinding.html"/>
                <title value="Nuclear Medicine Finding"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-OtherFinding.html"/>
+               <title value="Other Finding"/>
                <generation value="generated"/>
             </page>
             <page>
@@ -2181,11 +2217,11 @@
       </page>
       <parameter>
          <code value="copyrightyear"/>
-         <value value="2019+"/>
+         <value value="2020+"/>
       </parameter>
       <parameter>
          <code value="releaselabel"/>
-         <value value="STU2"/>
+         <value value="CI Build"/>
       </parameter>
       <parameter>
          <code value="show-inherited-invariants"/>
@@ -2238,6 +2274,10 @@
       <parameter>
          <code value="path-resource"/>
          <value value="input/history"/>
+      </parameter>
+      <parameter>
+         <code value="path-resource"/>
+         <value value="fsh-generated/resources"/>
       </parameter>
       <parameter>
          <code value="path-pages"/>

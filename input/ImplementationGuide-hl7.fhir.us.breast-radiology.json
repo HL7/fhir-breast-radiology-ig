@@ -7,6 +7,17 @@
   "title": "Breast Radiology Reporting - 2nd STU ballot",
   "status": "active",
   "description": "Breast Radiology Reporting Implementation Guide",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "urn:iso:std:iso:3166",
+          "code": "US",
+          "display": "United States of America"
+        }
+      ]
+    }
+  ],
   "packageId": "hl7.fhir.us.breast-radiology",
   "license": "CC0-1.0",
   "fhirVersion": [
@@ -32,7 +43,7 @@
       {
         "id": "MGResources",
         "name": "Mammography Resources",
-        "description": "This section contains resources that are defined in this Breast Radiology Implementation Guide specifically in a Mammography exam."
+        "description": "This section contains resources that are defined in this Breast Radiology Implementation Guide specifically in a mammography exam."
       },
       {
         "id": "MRIResources",
@@ -41,13 +52,18 @@
       },
       {
         "id": "USResources",
-        "name": "Ultra-Sound Resources",
-        "description": "This section contains resources that are defined in this Breast Radiology Implementation Guide specifically in a Ultra-Sound exam."
+        "name": "Ultrasound Resources",
+        "description": "This section contains resources that are defined in this Breast Radiology Implementation Guide specifically in an ultrasound exam."
       },
       {
         "id": "NMResources",
         "name": "Nuclear Medicine Resources",
-        "description": "This section contains resources that are defined in this Breast Radiology Implementation Guide specifically in a Nuclear Medicine exam."
+        "description": "This section contains resources that are defined in this Breast Radiology Implementation Guide specifically in a nuclear medicine exam."
+      },
+      {
+        "id": "OtherResources",
+        "name": "Other Resources",
+        "description": "This section contains resources that are defined in this Breast Radiology Implementation Guide \r\n      that are not one of the predefined exam types."
       },
       {
         "id": "CommonCodesVS",
@@ -985,10 +1001,19 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/OtherFinding"
+        },
+        "name": "Other Finding",
+        "description": "Other Finding",
+        "exampleBoolean": false,
+        "groupingId": "OtherResources"
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/USFinding"
         },
-        "name": "Ultra-Sound Finding",
-        "description": "Ultra-Sound Finding",
+        "name": "Ultrasound Finding",
+        "description": "Ultrasound Finding",
         "exampleBoolean": false,
         "groupingId": "USResources"
       }
@@ -1022,17 +1047,22 @@
           "nameUrl": "fullGraph.html",
           "title": "Full Graph",
           "generation": "html"
+        },
+        {
+          "nameUrl": "overview.html",
+          "title": "Overview",
+          "generation": "html"
         }
       ]
     },
     "parameter": [
       {
         "code": "copyrightyear",
-        "value": "2019+"
+        "value": "2020+"
       },
       {
         "code": "releaselabel",
-        "value": "STU2"
+        "value": "CI Build"
       },
       {
         "code": "show-inherited-invariants",
