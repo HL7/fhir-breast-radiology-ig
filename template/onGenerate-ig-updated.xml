@@ -17,7 +17,15 @@
    <name value="BreastRadiologyReporting2ndSTUballot"/>
    <title value="Breast Radiology Reporting - 2nd STU ballot"/>
    <status value="active"/>
-   <date value="2020-10-07T09:05:10-05:00"/>
+   <date value="2020-10-13T16:30:35-05:00"/>
+   <publisher value="HL7 International - Clinical Interoperability Council"/>
+   <contact>
+      <name value="HL7 International - Clinical Interoperability Council"/>
+      <telecom>
+         <system value="url"/>
+         <value value="http://www.hl7.org/Special/committees/cic"/>
+      </telecom>
+   </contact>
    <description value="Breast Radiology Reporting Implementation Guide"/>
    <jurisdiction>
       <coding>
@@ -83,10 +91,6 @@
 
 
 
-      <grouping id="_str_extension">
-         <name value="Structures: Extension Definitions"/>
-         <description value="These define constraints on FHIR data types that need to be complied with by conformant implementations"/>
-      </grouping>
 
 
 
@@ -95,21 +99,7 @@
 
 
 
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="StructureDefinition:extension"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="StructureDefinition-ImplementsFragmentExtension.html"/>
-         </extension>
-         <reference>
-            <reference value="StructureDefinition/ImplementsFragmentExtension"/>
-         </reference>
-         <name value="Implements Fragment Extension"/>
-         <description value="Implements FragmentExtension"/>
-         <exampleBoolean value="false"/>
-         <groupingId value="_str_extension"/>
-      </resource>
+
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
             <valueString value="StructureDefinition:resource"/>
@@ -250,10 +240,10 @@
             <valueString value="CodeSystem"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="CodeSystem-BreastBodyLocationRegionsCS.html"/>
+            <valueUri value="CodeSystem-BreastBodyLocationRegionCS.html"/>
          </extension>
          <reference>
-            <reference value="CodeSystem/BreastBodyLocationRegionsCS"/>
+            <reference value="CodeSystem/BreastBodyLocationRegionCS"/>
          </reference>
          <name value="Breast Body Location Regions CodeSystem"/>
          <description value="Breast Body Location Regions CodeSystem"/>
@@ -265,10 +255,10 @@
             <valueString value="CodeSystem"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="CodeSystem-BreastBodyLocationQuadrantsCS.html"/>
+            <valueUri value="CodeSystem-BreastBodyLocationQuadrantCS.html"/>
          </extension>
          <reference>
-            <reference value="CodeSystem/BreastBodyLocationQuadrantsCS"/>
+            <reference value="CodeSystem/BreastBodyLocationQuadrantCS"/>
          </reference>
          <name value="BreastBody Location Quadrants CodeSystem"/>
          <description value="BreastBodyLocationQuadrants CodeSystem"/>
@@ -377,21 +367,6 @@
          </reference>
          <name value="ConsistentWith Qualifier CodeSystem"/>
          <description value="ConsistentWithQualifier  code system"/>
-         <exampleBoolean value="false"/>
-         <groupingId value="CommonCodesCS"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="CodeSystem"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="CodeSystem-CorrespondsWithCodeSystemCS.html"/>
-         </extension>
-         <reference>
-            <reference value="CodeSystem/CorrespondsWithCodeSystemCS"/>
-         </reference>
-         <name value="Corresponds With CodeSystem"/>
-         <description value="CorrespondsWith code system"/>
          <exampleBoolean value="false"/>
          <groupingId value="CommonCodesCS"/>
       </resource>
@@ -745,10 +720,10 @@
             <valueString value="ValueSet"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="ValueSet-BreastBodyLocationQuadrantsVS.html"/>
+            <valueUri value="ValueSet-BreastBodyLocationQuadrantVS.html"/>
          </extension>
          <reference>
-            <reference value="ValueSet/BreastBodyLocationQuadrantsVS"/>
+            <reference value="ValueSet/BreastBodyLocationQuadrantVS"/>
          </reference>
          <name value="Breast Body Location Quadrants ValueSet"/>
          <description value="Breast Body Location Quadrants Value Set"/>
@@ -760,10 +735,10 @@
             <valueString value="ValueSet"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="ValueSet-BreastBodyLocationRegionsVS.html"/>
+            <valueUri value="ValueSet-BreastBodyLocationRegionVS.html"/>
          </extension>
          <reference>
-            <reference value="ValueSet/BreastBodyLocationRegionsVS"/>
+            <reference value="ValueSet/BreastBodyLocationRegionVS"/>
          </reference>
          <name value="Breast Body Location Regions ValueSet"/>
          <description value="Breast Body Location Regions Value Set"/>
@@ -1854,12 +1829,12 @@
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="ValueSet-BreastBodyLocationQuadrantsVS.html"/>
+               <nameUrl value="ValueSet-BreastBodyLocationQuadrantVS.html"/>
                <title value="Breast Body Location Quadrants ValueSet"/>
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="ValueSet-BreastBodyLocationRegionsVS.html"/>
+               <nameUrl value="ValueSet-BreastBodyLocationRegionVS.html"/>
                <title value="Breast Body Location Regions ValueSet"/>
                <generation value="generated"/>
             </page>
@@ -2004,12 +1979,12 @@
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="CodeSystem-BreastBodyLocationRegionsCS.html"/>
+               <nameUrl value="CodeSystem-BreastBodyLocationRegionCS.html"/>
                <title value="Breast Body Location Regions CodeSystem"/>
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="CodeSystem-BreastBodyLocationQuadrantsCS.html"/>
+               <nameUrl value="CodeSystem-BreastBodyLocationQuadrantCS.html"/>
                <title value="BreastBody Location Quadrants CodeSystem"/>
                <generation value="generated"/>
             </page>
@@ -2046,11 +2021,6 @@
             <page>
                <nameUrl value="CodeSystem-ConsistentWithQualifierCS.html"/>
                <title value="ConsistentWith Qualifier CodeSystem"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="CodeSystem-CorrespondsWithCodeSystemCS.html"/>
-               <title value="Corresponds With CodeSystem"/>
                <generation value="generated"/>
             </page>
             <page>
@@ -2206,11 +2176,6 @@
             <page>
                <nameUrl value="StructureDefinition-TumorSatelliteFragment.html"/>
                <title value="Tumor Satellite Fragment"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="StructureDefinition-ImplementsFragmentExtension.html"/>
-               <title value="Implements Fragment Extension"/>
                <generation value="generated"/>
             </page>
          </page>
