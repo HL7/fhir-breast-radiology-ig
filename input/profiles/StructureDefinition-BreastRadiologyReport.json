@@ -817,8 +817,8 @@
         "patternCodeableConcept": {
           "coding": [
             {
-              "system": "http://loinc.org",
-              "code": "10193-1"
+              "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationCodesCS",
+              "code": "LOINC#10193-1"
             }
           ]
         },
@@ -1664,9 +1664,9 @@
         "id": "DiagnosticReport.conclusionCode",
         "path": "DiagnosticReport.conclusionCode",
         "short": "Codes for the clinical conclusion of test results",
-        "definition": "One or more codes that represent the summary conclusion (interpretation/impression) of the diagnostic report.",
-        "min": 0,
-        "max": "*",
+        "definition": "A required summary conclusion of the breast radiology report. Typically this is the most severe BiRads code\n found in either of the right or left breast observation sections.",
+        "min": 1,
+        "max": "1",
         "base": {
           "path": "DiagnosticReport.conclusionCode",
           "min": 0,
@@ -1788,8 +1788,8 @@
         "patternCodeableConcept": {
           "coding": [
             {
-              "system": "http://loinc.org",
-              "code": "10193-1"
+              "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationCodesCS",
+              "code": "LOINC#10193-1"
             }
           ]
         }
@@ -1807,6 +1807,9 @@
       {
         "id": "DiagnosticReport.conclusionCode",
         "path": "DiagnosticReport.conclusionCode",
+        "definition": "A required summary conclusion of the breast radiology report. Typically this is the most severe BiRads code\n found in either of the right or left breast observation sections.",
+        "min": 1,
+        "max": "1",
         "binding": {
           "strength": "required",
           "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/BiRadsAssessmentCategoryVS"

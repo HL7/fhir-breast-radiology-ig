@@ -61,7 +61,7 @@
         "id": "Observation",
         "path": "Observation",
         "short": "Measurements and simple assertions",
-        "definition": "This resource contains information about an associated feature observation.\n\nThe feature observed is defined by the codeable concept in the value[x] field.",
+        "definition": "This resource contains information about an associated feature observation.\n\nThe feature observed is defined by the festureType conponent slice.",
         "comment": "Used for simple observations such as device measurements, laboratory atomic results, vital signs, height, weight, smoking status, comments, etc.  Other resources are used to provide context for observations such as laboratory reports, etc.",
         "alias": [
           "Vital Signs",
@@ -2548,7 +2548,7 @@
         "comment": "For a discussion on the ways Observations can be assembled in groups together see [Notes](observation.html#notes) below.",
         "requirements": "Component observations share the same attributes in the Observation resource as the primary observation and are always treated a part of a single observation (they are not separable).   However, the reference range for the primary observation value is not inherited by the component values and is required when appropriate for each component observation.",
         "min": 1,
-        "max": "*",
+        "max": "2",
         "base": {
           "path": "Observation.component",
           "min": 0,
@@ -3943,7 +3943,7 @@
       {
         "id": "Observation",
         "path": "Observation",
-        "definition": "This resource contains information about an associated feature observation.\n\nThe feature observed is defined by the codeable concept in the value[x] field."
+        "definition": "This resource contains information about an associated feature observation.\n\nThe feature observed is defined by the festureType conponent slice."
       },
       {
         "id": "Observation.contained",
@@ -4084,7 +4084,8 @@
           "ordered": false,
           "rules": "open"
         },
-        "min": 1
+        "min": 1,
+        "max": "2"
       },
       {
         "id": "Observation.component:featureType",

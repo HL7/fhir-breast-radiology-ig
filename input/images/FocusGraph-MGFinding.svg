@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/css" href="FocusGraph.css" ?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="957.37" height="667.5">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="1122.38" height="708.75">
 <defs>
 <marker id="arrowStart" markerWidth="3.75" markerHeight="3.75" markerUnits="px" refX="1.88" refY="1.88">
 <circle class="connector" cx="1.88" cy="1.88" r="1.88" />
@@ -49,12 +49,38 @@
 </a>
 </g>
 <line class="connector" marker-end="url(#arrowEnd)" x1="399" y1="24.38" x2="459" y2="24.38" />
-<text x="402.75" y="20.62" text-anchor="right" class="lhsText">1..*</text>
+<text x="402.75" y="20.62" text-anchor="right" class="lhsText">1..1</text>
+<line class="connector" marker-end="url(#arrowEnd)" x1="399" y1="65.62" x2="459" y2="65.62" />
+<text x="402.75" y="61.88" text-anchor="right" class="lhsText">1..*</text>
 <line class="connector" marker-start="url(#arrowStart)" x1="369" y1="24.38" x2="399" y2="24.38" />
-<line class="connector" x1="399" y1="24.38" x2="399" y2="24.38" />
+<line class="connector" x1="399" y1="24.38" x2="399" y2="65.62" />
 </g>
 <g>
 <g transform="translate(459 7.5)">
+<a href="StructureDefinition-MGFinding-definitions.html#Observation.code" target="_top">
+<rect class="element" x="0" y="0" width="57" height="33.75" rx="3.75" ry="3.75" />
+</a>
+<a href="StructureDefinition-MGFinding-definitions.html#Observation.code" target="_top">
+<text x="28.5" y="22.5" text-anchor="middle" class="element">Code</text>
+</a>
+</g>
+<line class="connector" marker-end="url(#arrowEnd)" x1="546" y1="24.38" x2="666" y2="24.38" />
+<text x="549.75" y="20.62" text-anchor="right" class="lhsText">pattern </text>
+<line class="connector" marker-start="url(#arrowStart)" x1="516" y1="24.38" x2="546" y2="24.38" />
+<line class="connector" x1="546" y1="24.38" x2="546" y2="24.38" />
+</g>
+<g>
+<g transform="translate(666 7.5)">
+<a href="http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationCodesCS" target="_top">
+<rect class="value" x="0" y="0" width="424.5" height="33.75" rx="3.75" ry="3.75" />
+</a>
+<a href="http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationCodesCS" target="_top">
+<text x="212.25" y="22.5" text-anchor="middle" class="value">ObservationCodesCS#mgFindingObservation</text>
+</a>
+</g>
+</g>
+<g>
+<g transform="translate(459 48.75)">
 <a href="StructureDefinition-MGFinding-definitions.html#Observation.hasMember" target="_top">
 <rect class="element" x="0" y="0" width="109.5" height="33.75" rx="3.75" ry="3.75" />
 </a>
@@ -62,16 +88,14 @@
 <text x="54.75" y="22.5" text-anchor="middle" class="element">HasMember</text>
 </a>
 </g>
-<line class="connector" marker-end="url(#arrowEnd)" x1="598.5" y1="24.38" x2="658.5" y2="24.38" />
-<text x="602.25" y="20.62" text-anchor="right" class="lhsText">0..*</text>
 <line class="connector" marker-end="url(#arrowEnd)" x1="598.5" y1="65.62" x2="658.5" y2="65.62" />
 <text x="602.25" y="61.88" text-anchor="right" class="lhsText">0..*</text>
 <line class="connector" marker-end="url(#arrowEnd)" x1="598.5" y1="106.88" x2="658.5" y2="106.88" />
 <text x="602.25" y="103.12" text-anchor="right" class="lhsText">0..*</text>
 <line class="connector" marker-end="url(#arrowEnd)" x1="598.5" y1="148.12" x2="658.5" y2="148.12" />
-<text x="602.25" y="144.38" text-anchor="right" class="lhsText">1..1</text>
+<text x="602.25" y="144.38" text-anchor="right" class="lhsText">0..*</text>
 <line class="connector" marker-end="url(#arrowEnd)" x1="598.5" y1="189.38" x2="658.5" y2="189.38" />
-<text x="602.25" y="185.62" text-anchor="right" class="lhsText">0..*</text>
+<text x="602.25" y="185.62" text-anchor="right" class="lhsText">1..1</text>
 <line class="connector" marker-end="url(#arrowEnd)" x1="598.5" y1="230.62" x2="658.5" y2="230.62" />
 <text x="602.25" y="226.88" text-anchor="right" class="lhsText">0..*</text>
 <line class="connector" marker-end="url(#arrowEnd)" x1="598.5" y1="271.88" x2="658.5" y2="271.88" />
@@ -88,11 +112,13 @@
 <text x="602.25" y="474.38" text-anchor="right" class="lhsText">0..*</text>
 <line class="connector" marker-end="url(#arrowEnd)" x1="598.5" y1="519.38" x2="658.5" y2="519.38" />
 <text x="602.25" y="515.62" text-anchor="right" class="lhsText">0..*</text>
-<line class="connector" marker-start="url(#arrowStart)" x1="568.5" y1="24.38" x2="598.5" y2="24.38" />
-<line class="connector" x1="598.5" y1="24.38" x2="598.5" y2="519.38" />
+<line class="connector" marker-end="url(#arrowEnd)" x1="598.5" y1="560.62" x2="658.5" y2="560.62" />
+<text x="602.25" y="556.88" text-anchor="right" class="lhsText">0..*</text>
+<line class="connector" marker-start="url(#arrowStart)" x1="568.5" y1="65.62" x2="598.5" y2="65.62" />
+<line class="connector" x1="598.5" y1="65.62" x2="598.5" y2="560.62" />
 </g>
 <g>
-<g transform="translate(658.5 7.5)">
+<g transform="translate(658.5 48.75)">
 <a href="StructureDefinition-AbnormalityArchitecturalDistortion.html" target="_top">
 <rect class="profile" x="0" y="0" width="267" height="33.75" rx="3.75" ry="3.75" />
 </a>
@@ -102,7 +128,7 @@
 </g>
 </g>
 <g>
-<g transform="translate(658.5 48.75)">
+<g transform="translate(658.5 90)">
 <a href="StructureDefinition-AssociatedFeature.html" target="_top">
 <rect class="profile" x="0" y="0" width="204" height="33.75" rx="3.75" ry="3.75" />
 </a>
@@ -112,7 +138,7 @@
 </g>
 </g>
 <g>
-<g transform="translate(658.5 90)">
+<g transform="translate(658.5 131.25)">
 <a href="StructureDefinition-AbnormalityAsymmetry.html" target="_top">
 <rect class="profile" x="0" y="0" width="109.5" height="33.75" rx="3.75" ry="3.75" />
 </a>
@@ -122,7 +148,7 @@
 </g>
 </g>
 <g>
-<g transform="translate(658.5 131.25)">
+<g transform="translate(658.5 172.5)">
 <a href="StructureDefinition-MGBreastDensity.html" target="_top">
 <rect class="profile" x="0" y="0" width="162" height="33.75" rx="3.75" ry="3.75" />
 </a>
@@ -132,7 +158,7 @@
 </g>
 </g>
 <g>
-<g transform="translate(658.5 172.5)">
+<g transform="translate(658.5 213.75)">
 <a href="StructureDefinition-AbnormalityCalcification.html" target="_top">
 <rect class="profile" x="0" y="0" width="151.5" height="33.75" rx="3.75" ry="3.75" />
 </a>
@@ -142,27 +168,27 @@
 </g>
 </g>
 <g>
-<g transform="translate(658.5 213.75)">
-<a href="StructureDefinition-AbnormalityCyst.html" target="_top">
-<rect class="profile" x="0" y="0" width="57" height="33.75" rx="3.75" ry="3.75" />
-</a>
-<a href="StructureDefinition-AbnormalityCyst.html" target="_top">
-<text x="28.5" y="22.5" text-anchor="middle" class="profile">Cyst</text>
-</a>
-</g>
-</g>
-<g>
 <g transform="translate(658.5 255)">
-<a href="StructureDefinition-AbnormalityLymphNode.html" target="_top">
+<a href="StructureDefinition-AbnormalityCyst.html" target="_top">
 <rect class="profile" x="0" y="0" width="57" height="33.75" rx="3.75" ry="3.75" />
 </a>
-<a href="StructureDefinition-AbnormalityLymphNode.html" target="_top">
+<a href="StructureDefinition-AbnormalityCyst.html" target="_top">
 <text x="28.5" y="22.5" text-anchor="middle" class="profile">Cyst</text>
 </a>
 </g>
 </g>
 <g>
 <g transform="translate(658.5 296.25)">
+<a href="StructureDefinition-AbnormalityLymphNode.html" target="_top">
+<rect class="profile" x="0" y="0" width="57" height="33.75" rx="3.75" ry="3.75" />
+</a>
+<a href="StructureDefinition-AbnormalityLymphNode.html" target="_top">
+<text x="28.5" y="22.5" text-anchor="middle" class="profile">Cyst</text>
+</a>
+</g>
+</g>
+<g>
+<g transform="translate(658.5 337.5)">
 <a href="StructureDefinition-AbnormalityDensity.html" target="_top">
 <rect class="profile" x="0" y="0" width="88.5" height="33.75" rx="3.75" ry="3.75" />
 </a>
@@ -172,7 +198,7 @@
 </g>
 </g>
 <g>
-<g transform="translate(658.5 337.5)">
+<g transform="translate(658.5 378.75)">
 <a href="StructureDefinition-AbnormalityDuct.html" target="_top">
 <rect class="profile" x="0" y="0" width="57" height="33.75" rx="3.75" ry="3.75" />
 </a>
@@ -182,7 +208,7 @@
 </g>
 </g>
 <g>
-<g transform="translate(658.5 378.75)">
+<g transform="translate(658.5 420)">
 <a href="StructureDefinition-AbnormalityFatNecrosis.html" target="_top">
 <rect class="profile" x="0" y="0" width="141" height="33.75" rx="3.75" ry="3.75" />
 </a>
@@ -192,7 +218,7 @@
 </g>
 </g>
 <g>
-<g transform="translate(658.5 420)">
+<g transform="translate(658.5 461.25)">
 <a href="StructureDefinition-AbnormalityFibroadenoma.html" target="_top">
 <rect class="profile" x="0" y="0" width="141" height="33.75" rx="3.75" ry="3.75" />
 </a>
@@ -202,7 +228,7 @@
 </g>
 </g>
 <g>
-<g transform="translate(658.5 461.25)">
+<g transform="translate(658.5 502.5)">
 <a href="StructureDefinition-AbnormalityForeignObject.html" target="_top">
 <rect class="profile" x="0" y="0" width="162" height="33.75" rx="3.75" ry="3.75" />
 </a>
@@ -212,7 +238,7 @@
 </g>
 </g>
 <g>
-<g transform="translate(658.5 502.5)">
+<g transform="translate(658.5 543.75)">
 <a href="StructureDefinition-AbnormalityMass.html" target="_top">
 <rect class="profile" x="0" y="0" width="57" height="33.75" rx="3.75" ry="3.75" />
 </a>
@@ -222,17 +248,21 @@
 </g>
 </g>
 <g>
-<g transform="translate(7.5 618.75)">
+<g transform="translate(7.5 660)">
 <rect class="focus" x="0" y="0" width="67.5" height="33.75" rx="3.75" ry="3.75" />
 <text x="33.75" y="22.5" text-anchor="middle" class="focus">Focus</text>
 </g>
-<g transform="translate(82.5 618.75)">
+<g transform="translate(82.5 660)">
 <rect class="profile" x="0" y="0" width="193.5" height="33.75" rx="3.75" ry="3.75" />
 <text x="96.75" y="22.5" text-anchor="middle" class="profile">Profiled Resource</text>
 </g>
-<g transform="translate(283.5 618.75)">
+<g transform="translate(283.5 660)">
 <rect class="element" x="0" y="0" width="183" height="33.75" rx="3.75" ry="3.75" />
 <text x="91.5" y="22.5" text-anchor="middle" class="element">Resource Element</text>
+</g>
+<g transform="translate(474 660)">
+<rect class="value" x="0" y="0" width="67.5" height="33.75" rx="3.75" ry="3.75" />
+<text x="33.75" y="22.5" text-anchor="middle" class="value">Value</text>
 </g>
 </g>
 </svg>
