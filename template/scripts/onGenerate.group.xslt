@@ -30,7 +30,7 @@
   </xsl:template>
   <xsl:template match="f:definition">
     <xsl:copy>
-      <xsl:apply-templates select="@*|f:id|f:extension|f:modwhenierExtension|f:grouping|comment()[not(preceding-sibling::f:resource|preceding-sibling::f:page)]"/>
+      <xsl:apply-templates select="@*|f:id|f:extension|f:modifierExtension|f:grouping|comment()[not(preceding-sibling::f:resource|preceding-sibling::f:page)]"/>
       <!-- This is a placeholder that will be replaced with the list of groups from this template.  (We use a separate file so they're easier to override/translate.) -->
       <xsl:comment>TEMPLATE_GROUPS_HERE</xsl:comment>
       <xsl:apply-templates select="f:resource|f:page|f:parameter|f:template|comment()[preceding-sibling::f:resource|preceding-sibling::f:page]"/>
@@ -59,6 +59,10 @@
         <xsl:when test="$infoExt='StructureMap'">_map_structuremap</xsl:when>
         <xsl:when test="$infoExt='ConceptMap'">_map_conceptmap</xsl:when>
         <xsl:when test="$infoExt='ExampleScenario'">_ex_examplescenario</xsl:when>
+        <xsl:when test="$infoExt='ActivityDefinition'">_ka_activitydefinition</xsl:when>
+        <xsl:when test="$infoExt='Library'">_ka_library</xsl:when>
+        <xsl:when test="$infoExt='Measure'">_ka_measure</xsl:when>
+        <xsl:when test="$infoExt='PlanDefinition'">_ka_plandefinition</xsl:when>
         <xsl:otherwise>_other</xsl:otherwise>
       </xsl:choose>
     </xsl:variable>
