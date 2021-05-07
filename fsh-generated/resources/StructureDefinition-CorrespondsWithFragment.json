@@ -1,0 +1,115 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "CorrespondsWithFragment",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
+      "valueString": "Clinical.Diagnostics"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category",
+      "valueCode": "patient"
+    }
+  ],
+  "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/CorrespondsWithFragment",
+  "version": "0.3.0",
+  "name": "CorrespondsWithFragment",
+  "title": "Corresponds With Fragment",
+  "status": "active",
+  "description": "'Corresponds With' Component Fragment\nAdds CorrespondsWith component",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "workflow",
+      "uri": "http://hl7.org/fhir/workflow",
+      "name": "Workflow Pattern"
+    },
+    {
+      "identity": "sct-concept",
+      "uri": "http://snomed.info/conceptdomain",
+      "name": "SNOMED CT Concept Domain Binding"
+    },
+    {
+      "identity": "v2",
+      "uri": "http://hl7.org/v2",
+      "name": "HL7 v2 Mapping"
+    },
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    },
+    {
+      "identity": "w5",
+      "uri": "http://hl7.org/fhir/fivews",
+      "name": "FiveWs Pattern Mapping"
+    },
+    {
+      "identity": "sct-attr",
+      "uri": "http://snomed.org/attributebinding",
+      "name": "SNOMED CT Attribute Binding"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "Observation",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Observation.component",
+        "path": "Observation.component",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "code"
+            }
+          ],
+          "rules": "open",
+          "ordered": false,
+          "description": "Component slicing"
+        }
+      },
+      {
+        "id": "Observation.component:correspondsWith",
+        "path": "Observation.component",
+        "sliceName": "correspondsWith",
+        "short": "Abnormality Corresponds With component.",
+        "definition": "This slice contains the optional components that define what this observation corresponds with.\nThe value of this component is a codeable concept chosen from the CorrespondsWithVS valueset.",
+        "comment": "This is one component of a group of components that are part of the observation.",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Observation.component:correspondsWith.code",
+        "path": "Observation.component.code",
+        "short": "Abnormality Corresponds With component code.",
+        "definition": "This code identifies the Abnormality Corresponds With component.",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "correspondsWith",
+              "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodesCS"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Observation.component:correspondsWith.value[x]",
+        "path": "Observation.component.value[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/CorrespondsWithVS"
+        }
+      }
+    ]
+  }
+}

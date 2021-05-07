@@ -1,0 +1,977 @@
+{
+  "resourceType": "ImplementationGuide",
+  "id": "hl7.fhir.us.breast-radiology",
+  "url": "http://hl7.org/fhir/us/breast-radiology/ImplementationGuide/hl7.fhir.us.breast-radiology",
+  "version": "0.3.0",
+  "name": "BreastRadiologyReporting2ndSTUballot",
+  "title": "Breast Radiology Reporting - 2nd STU ballot",
+  "status": "active",
+  "publisher": "HL7 International - Clinical Interoperability Council",
+  "contact": [
+    {
+      "name": "HL7 International - Clinical Interoperability Council",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://www.hl7.org/Special/committees/cic"
+        }
+      ]
+    }
+  ],
+  "description": "Breast Radiology Reporting Implementation Guide",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "US",
+          "system": "urn:iso:std:iso:3166",
+          "display": "United States of America"
+        }
+      ]
+    }
+  ],
+  "packageId": "hl7.fhir.us.breast-radiology",
+  "license": "CC0-1.0",
+  "fhirVersion": [
+    "4.0.1"
+  ],
+  "definition": {
+    "resource": [
+      {
+        "reference": {
+          "reference": "StructureDefinition/AbnormalityArchitecturalDistortion"
+        },
+        "name": "Mammography Architectural Distortion",
+        "description": "Mammography Architectural Distortion",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/AbnormalityAsymmetry"
+        },
+        "name": "Asymmetry",
+        "description": "Asymmetry",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/AbnormalityCalcification"
+        },
+        "name": "Mammography Calcification",
+        "description": "Mammography Calcification",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/AbnormalityCyst"
+        },
+        "name": "Cyst",
+        "description": "Cyst",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/AbnormalityDensity"
+        },
+        "name": "Mammography Density",
+        "description": "Mammography Density",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/AbnormalityDuct"
+        },
+        "name": "Duct",
+        "description": "Duct",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/AbnormalityFatNecrosis"
+        },
+        "name": "Mammography Fat Necrosis",
+        "description": "Mammography Fat Necrosis",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/AbnormalityFibroadenoma"
+        },
+        "name": "Fibroadenoma",
+        "description": "Fibroadenoma",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/AbnormalityForeignObject"
+        },
+        "name": "Foreign Object",
+        "description": "Foreign Object",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/AbnormalityLymphNode"
+        },
+        "name": "LymphNode Abnormality",
+        "description": "LymphNode Abnormality",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/AbnormalityMass"
+        },
+        "name": "Mass Abnormality",
+        "description": "Mass Abnormality",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/AbnormalitySkinLesion"
+        },
+        "name": "Skin Lesion Abnormality",
+        "description": "Skin Lesion Abnormality",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/AssociatedFeature"
+        },
+        "name": "Associated Feature",
+        "description": "Associated Feature",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/AssociatedFeatureFragment"
+        },
+        "name": "Associated Feature Fragment",
+        "description": "This fragment adds the references for the Associated Feature hasMember slice.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/BiRadAssessmentCategoryFragment"
+        },
+        "name": "BiRad Fragment",
+        "description": "Fragment that adds 'BiRad Assessment Category code' element to profile",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/BiRadBreastCompositionFragment"
+        },
+        "name": "BiRad Breast Composition Fragment",
+        "description": "Fragment that adds 'BiRad Breast Composition code' element to profile",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/BreastAssessmentCategory"
+        },
+        "name": "Breast AssessmentCategory",
+        "description": "Breast Assessment Category",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/BreastBodyLocationRequiredFragment"
+        },
+        "name": "Breast Body Location (Required) Fragment",
+        "description": "This fragment adds the references for the breast body location extension.\nThe references are required, meaning that the breast body location must exist.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/BreastComposition"
+        },
+        "name": "Breast Composition",
+        "description": "Breast Composition",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/BreastMedicationRequest"
+        },
+        "name": "Breast Radiology Medication Request",
+        "description": "Medication request with required breast laterality field.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/BreastRadiologyComposition"
+        },
+        "name": "Breast Radiology Composition",
+        "description": "Composition instance for the Breast Radiology FHIR Document.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/BreastRadiologyDocument"
+        },
+        "name": "Breast Radiology Document",
+        "description": "Breast Radiology Document Bundle.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/BreastRadiologyReport"
+        },
+        "name": "Breast Radiology Report",
+        "description": "Breast Radiology Diagnostic Report.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/BreastServiceRequest"
+        },
+        "name": "Breast Radiology Service Request",
+        "description": "Service request with required breast laterality field.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ConsistentWith"
+        },
+        "name": "Consistent With",
+        "description": "Consistent With",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ConsistentWithFragment"
+        },
+        "name": "Consistent With Fragment",
+        "description": "This fragment adds the references for the ConsistentWith HasMember.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/CorrespondsWithFragment"
+        },
+        "name": "Corresponds With Fragment",
+        "description": "'Corresponds With' Component Fragment\nAdds CorrespondsWith component",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/FindingsBiLateralBreast"
+        },
+        "name": "Findings BiLateral Breast",
+        "description": "Findings BiLateral Breast profile.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/FindingsLeftBreast"
+        },
+        "name": "Findings Left Breast",
+        "description": "Findings Left Breast profile.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/FindingsRightBreast"
+        },
+        "name": "Findings Right Breast",
+        "description": "Findings Right Breast profile.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/MGFinding"
+        },
+        "name": "Mammography Finding",
+        "description": "Mammography Finding",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/MRIFinding"
+        },
+        "name": "MRI Finding",
+        "description": "MRI Finding",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/NMFinding"
+        },
+        "name": "Nuclear Medicine Finding",
+        "description": "NM Finding",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/NotPreviouslySeenFragment"
+        },
+        "name": "NotPreviously Seen Fragment",
+        "description": "Adds NotPreviously Seen Component slice.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ObservedChangesFragment"
+        },
+        "name": "Observed Changes Fragment",
+        "description": "Add Observed Changes Component Slice",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ObservedCountFragment"
+        },
+        "name": "Observed Count Fragment",
+        "description": "Fragment that adds 'Observed Count' element to profile.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ObservedDistributionFragment"
+        },
+        "name": "Observed Distribution Fragment",
+        "description": "Fragment that adds 'Observed Distribution' components to Observation.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ObservedSizeFragment"
+        },
+        "name": "Observed Size Fragment",
+        "description": "Fragment that adds 'Observed Size' components to Observation.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/OtherModalityFinding"
+        },
+        "name": "Other Finding",
+        "description": "Other Finding",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/PreviouslyDemonstratedByFragment"
+        },
+        "name": "Previously Demonstrated By Fragment",
+        "description": "'Demonstrated By' Component Fragment",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ServiceRecommendation"
+        },
+        "name": "Service Recommendation",
+        "description": "Service Recommendation",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ShapeFragment"
+        },
+        "name": "Shape Components Fragment",
+        "description": "Adds Orientation, Shape, Margin, and Density Components",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/TumorSatellite"
+        },
+        "name": "Tumor Satellite",
+        "description": "Tumor Satellite",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/TumorSatelliteFragment"
+        },
+        "name": "Tumor Satellite Fragment",
+        "description": "This fragment adds the references for the Tumor Satellite extension.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/USFinding"
+        },
+        "name": "Ultrasound Finding",
+        "description": "Ultrasound Finding",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/BreastBodyLocationExtension"
+        },
+        "name": "Breast Body Location Extension",
+        "description": "Breast Body Location Extension",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/BreastLateralityExtension"
+        },
+        "name": "Breast Laterality Extension",
+        "description": "Breast Laterality Extension",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/AbnormalityAsymmetryTypeVS"
+        },
+        "name": "Asymmetry Type ValueSet",
+        "description": "Asymmetry Type Value Set",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/AbnormalityCystTypeVS"
+        },
+        "name": "Cyst Type Value Set",
+        "description": "Cyst type Value Set.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/AbnormalityDensityTypeVS"
+        },
+        "name": "Density Type ValueSet",
+        "description": "Density Type Value Set",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/AbnormalityDuctTypeVS"
+        },
+        "name": "Duct Type ValueSet",
+        "description": "Duct Type Value Set",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/AbnormalityFibroAdenomaTypeVS"
+        },
+        "name": "FibroAdenoma  Type ValueSet",
+        "description": "FibroAdenoma Type Value Set",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/AbnormalityForeignObjectTypeVS"
+        },
+        "name": "Foreign Object Type ValueSet",
+        "description": "Foreign Object Type Value Set",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/AbnormalityLymphNodeTypeVS"
+        },
+        "name": "Lymph Node Type ValueSet",
+        "description": "LymphNode Type Value Set",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/AbnormalityMassTypeVS"
+        },
+        "name": "Mass Type ValueSet",
+        "description": "Mass Type Value Set",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/AssociatedFeatureVS"
+        },
+        "name": "Associated Feature ValueSet",
+        "description": "AssociatedFeature Value Set",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/BiRadsAssessmentCategoryVS"
+        },
+        "name": "BiRads Assessment Category ValueSet",
+        "description": "BiRads Assessment Category Value Set",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/BiRadsBreastCompositionVS"
+        },
+        "name": "BiRadsBreastComposition ValueSet",
+        "description": "BiRadsBreastComposition Value Set",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/BreastBodyLocationClockPositionsVS"
+        },
+        "name": "Breast Body Location Clock Positions ValueSet",
+        "description": "Breast Body Location Clock Positions Value Set",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/BreastBodyLocationDepthVS"
+        },
+        "name": "Breast Body Location Depth ValueSet",
+        "description": "Breast Body Location Depth Value Set",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/BreastBodyLocationQuadrantVS"
+        },
+        "name": "Breast Body Location Quadrants ValueSet",
+        "description": "Breast Body Location Quadrants Value Set",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/BreastBodyLocationRegionVS"
+        },
+        "name": "Breast Body Location Regions ValueSet",
+        "description": "Breast Body Location Regions Value Set",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/BreastLandmarkVS"
+        },
+        "name": "BreastLandmark ValueSet",
+        "description": "BreastLandmark Value Set",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/BreastLateralityVS"
+        },
+        "name": "Breast Laterality ValueSet",
+        "description": "Breast Laterality Value Set",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/BreastRadReportTypesVS"
+        },
+        "name": "Breast Radiology Report Types ValueSet",
+        "description": "This value set defines that allowable codes that BreastRadiologyReport.code can be set to.\nBreastRadiologyReport.code defines the type of breast radiology report that this is.\n\nThis needs to have the complete set of desired report types added.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/CalcificationDistributionVS"
+        },
+        "name": "CalcificationDistribution ValueSet",
+        "description": "CalcificationDistribution Value Set",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/CalcificationTypeVS"
+        },
+        "name": "Calcification Type Value Set",
+        "description": "Calcification Type Value Set",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/ConsistentWithQualifierVS"
+        },
+        "name": "ConsistentWith Qualifier ValueSet",
+        "description": "ConsistentWith Qualifier Value Set",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/ConsistentWithVS"
+        },
+        "name": "ConsistentWith ValueSet",
+        "description": "ConsistentWith Value Set",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/CorrespondsWithVS"
+        },
+        "name": "CorrespondsWith ValueSet",
+        "description": "CorrespondsWith Value Set",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/LateralityVS"
+        },
+        "name": "Laterality ValueSet",
+        "description": "Laterality Value Set",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/MarginVS"
+        },
+        "name": "Margin ValueSet",
+        "description": "Margin Value Set",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/NotPreviouslySeenVS"
+        },
+        "name": "NotPreviouslySeen ValueSet",
+        "description": "NotPreviouslySeen Value Set",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/ObservedChangesVS"
+        },
+        "name": "ObservedChanges ValueSet",
+        "description": "ObservedChanges Value Set",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/OrientationVS"
+        },
+        "name": "Orientation ValueSet",
+        "description": "Orientation Value Set",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/PreviouslyDemonstratedByVS"
+        },
+        "name": "PreviouslyDemonstratedBy ValueSet",
+        "description": "PreviouslyDemonstratedBy Value Set",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/ServiceRecommendationsVS"
+        },
+        "name": "ServiceRecommendations ValueSet",
+        "description": "ServiceRecommendations Value Set",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/ShapeVS"
+        },
+        "name": "Shape ValueSet",
+        "description": "Shape Value Set",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/UnitsOfLengthVS"
+        },
+        "name": "Units of length value set",
+        "description": "Units of length used in Breast radiology.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/AbnormalityAsymmetryTypeCS"
+        },
+        "name": "Asymmetry Type CodeSystem",
+        "description": "Asymmetry type code system.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/AbnormalityCystTypeCS"
+        },
+        "name": "Cyst Type CodeSystem",
+        "description": "Cyst type CodeSystem.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/AbnormalityDensityTypeCS"
+        },
+        "name": "Density Type CodeSystem",
+        "description": "Density refinement types code system.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/AbnormalityDuctTypeCS"
+        },
+        "name": "Duct Type CodeSystem",
+        "description": "Duct types code system.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/AbnormalityFibroadenomaTypeCS"
+        },
+        "name": "Fibroadenoma Type CodeSystem",
+        "description": "Fibroadenoma  type code system.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/AbnormalityForeignObjectTypeCS"
+        },
+        "name": "Foreign Object Type CodeSystem",
+        "description": "Foreign Object Type CodeSystem",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/AbnormalityLymphNodeTypeCS"
+        },
+        "name": "Lymph Node Type CodeSystem",
+        "description": "Lymph node types code system.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/AbnormalityMassTypeCS"
+        },
+        "name": "Mass Type CodeSystem",
+        "description": "Mass Type CodeSystem",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/AssociatedFeatureCS"
+        },
+        "name": "Associated Feature CodeSystem",
+        "description": "Associated Feature seen during a breast examination.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/BiRadsAssessmentCategoryCS"
+        },
+        "name": "BiRads Assessment Category CodeSystem",
+        "description": "BiRads Assessment Category CodeSystem",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/BiRadsBreastCompositionCS"
+        },
+        "name": "Breast Composition CodeSystem",
+        "description": "Breast composition values code system.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/BreastBodyLocationClockPositionsCS"
+        },
+        "name": "Breast Body Location Clock Positions CodeSystem",
+        "description": "BreastBodyLocationClockPositions CodeSystem",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/BreastBodyLocationDepthCS"
+        },
+        "name": "Breast Body Location Depth CodeSystem",
+        "description": "Breast Body Location Depth CodeSystem",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/BreastBodyLocationQuadrantCS"
+        },
+        "name": "BreastBody Location Quadrants CodeSystem",
+        "description": "BreastBodyLocationQuadrants CodeSystem",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/BreastBodyLocationRegionCS"
+        },
+        "name": "Breast Body Location Regions CodeSystem",
+        "description": "Breast Body Location Regions CodeSystem",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/BreastLandmarkCS"
+        },
+        "name": "BreastLandmark CodeSystem",
+        "description": "Breast Landmark CodeSystem defines the various breast \nbody locations that can be used as a land mark.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/CalcificationDistributionCS"
+        },
+        "name": "Calcification Distribution CodeSystem",
+        "description": "Calcification Distribution in an abnormality code system.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/CalcificationTypeCS"
+        },
+        "name": "Calcification Type CodeSystem",
+        "description": "Mammography calcification type code system.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/CompositionSectionSliceCodesCS"
+        },
+        "name": "Composition Section Slice Codes CodeSystem",
+        "description": "Composition Section Slice Codes code system",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/ConsistentWithCS"
+        },
+        "name": "ConsistentWith CodeSystem",
+        "description": "ConsistentWith CodeSystem",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/ConsistentWithQualifierCS"
+        },
+        "name": "ConsistentWith Qualifier CodeSystem",
+        "description": "ConsistentWithQualifier  code system",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/CorrespondsWithCS"
+        },
+        "name": "CorrespondsWith CodeSystem",
+        "description": "CorrespondsWith CodeSystem",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/MarginCS"
+        },
+        "name": "Margin CodeSystem",
+        "description": "Margin code system.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/NotPreviouslySeenCS"
+        },
+        "name": "NotPreviouslySeen CodeSystem",
+        "description": "NotPreviouslySeen CodeSystem",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/ObservationCodesCS"
+        },
+        "name": "Observation Codes CodeSystem",
+        "description": "Observation Codes code system",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/ObservationComponentSliceCodesCS"
+        },
+        "name": "Component Slice Codes CodeSystem",
+        "description": "Component Slice Codes code system",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/ObservedChangesCS"
+        },
+        "name": "Observed Changes CodeSystem",
+        "description": "Observed changes in an abnormality code system.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/OrientationCS"
+        },
+        "name": "Orientation CodeSystem",
+        "description": "Orientation CodeSystem",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/PreviouslyDemonstratedByCS"
+        },
+        "name": "PreviouslyDemonstratedBy CodeSystem",
+        "description": "PreviouslyDemonstratedBy CodeSystem",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/ServiceRecommendationsCS"
+        },
+        "name": "ServiceRecommendations CodeSystem",
+        "description": "ServiceRecommendations CodeSystem",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/ShapeCS"
+        },
+        "name": "Shape CodeSystem",
+        "description": "Shape values code system.",
+        "exampleBoolean": false
+      }
+    ],
+    "page": {
+      "nameUrl": "toc.html",
+      "title": "Table of Contents",
+      "generation": "html",
+      "page": [
+        {
+          "nameUrl": "index.html",
+          "title": "Home",
+          "generation": "html"
+        },
+        {
+          "nameUrl": "background.html",
+          "title": "Background",
+          "generation": "html"
+        },
+        {
+          "nameUrl": "changes.html",
+          "title": "Changes",
+          "generation": "html"
+        },
+        {
+          "nameUrl": "downloads.html",
+          "title": "Downloads",
+          "generation": "html"
+        },
+        {
+          "nameUrl": "fullGraph.html",
+          "title": "Full Graph",
+          "generation": "html"
+        },
+        {
+          "nameUrl": "overview.html",
+          "title": "Overview",
+          "generation": "html"
+        }
+      ]
+    },
+    "parameter": [
+      {
+        "code": "copyrightyear",
+        "value": "2020+"
+      },
+      {
+        "code": "releaselabel",
+        "value": "CI Build"
+      },
+      {
+        "code": "show-inherited-invariants",
+        "value": "false"
+      },
+      {
+        "code": "path-history",
+        "value": "http://hl7.org/fhir/us/breast-radiology/history.html"
+      }
+    ]
+  }
+}
