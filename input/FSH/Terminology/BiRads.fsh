@@ -16,6 +16,7 @@ CodeSystem:  BiRadsAssessmentCategoryCS
 Title: "BiRads Assessment Category CodeSystem"
 Description:  "BiRads Assessment Category CodeSystem"
   // .SnomedDescription ClinicalFinding | 397138000 | Mammography assessment (Category 0)
+
   * #Category0 "Category 0 (Incomplete)"
     """
     Need additional Imaging Evaluation and/or prior Mammograms
@@ -142,4 +143,15 @@ Description:  "BiRads Assessment Category CodeSystem"
     Mammograms may be used in this way to see how well
     the cancer is responding to treatment.
     [Breast Imaging Reporting and Data System—Mammography, Fifth Edition]
+    """
+
+  * #Other "Other (Non BiRads Code) used"
+    """
+	This is used when the code that needs to be entered is a non BiRads code.
+	This should not be used for a Breast Exam where a BiRads code is required. When this code
+	is found, the actual non-BiRads code will be found in a separate slice of the FHIR CodeableConcept element
+	that contains this value or alternately (though not preferred) described in the text section of the report.
+	An example of this being used: A procedure is performed to implant a surgical marker. There is no BiRads code
+	associated with this completion of the procedure, though regulation may require a specific non Birads 
+	code to be used to descibe the completion of this procedure.
     """
