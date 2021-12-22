@@ -1,7 +1,7 @@
 /*
   Value set for ACR birads codes.
 */
-ValueSet:  BiRadsAssessmentCategory
+ValueSet:  BiRadsAssessmentCategoryVS
 Title: "BiRads Assessment Category ValueSet"
 Description:  "BiRads Assessment Category Value Set"
 * ^copyright = """
