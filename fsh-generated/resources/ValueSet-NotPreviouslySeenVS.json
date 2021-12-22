@@ -7,10 +7,67 @@
   "description": "NotPreviouslySeen Value Set",
   "version": "0.3.0",
   "url": "http://hl7.org/fhir/us/breast-radiology/ValueSet/NotPreviouslySeenVS",
+  "copyright": "This value set includes content from SNOMED CT, \nwhich is copyright © 2002+ International Health \nTerminology Standards Development Organisation (IHTSDO), \nand distributed by agreement between IHTSDO and HL7. \nImplementer use of SNOMED CT is not covered by this agreement\"",
   "compose": {
     "include": [
       {
-        "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/NotPreviouslySeenCS"
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "386053000",
+            "display": "Evaluation procedure (procedure)"
+          }
+        ]
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "420131003"
+          }
+        ]
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "71651007"
+          }
+        ]
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "241615005"
+          }
+        ]
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "418432003"
+          }
+        ]
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "47079000"
+          }
+        ]
       }
     ]
   }

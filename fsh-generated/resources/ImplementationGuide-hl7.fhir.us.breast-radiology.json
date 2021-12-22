@@ -346,7 +346,7 @@
           "reference": "StructureDefinition/OtherModalityFinding"
         },
         "name": "Other Finding",
-        "description": "Other Finding",
+        "description": "   Other Finding.\nThis provides a location to place modality specific finding that don't fit under any of the other\nfinding groups (i.e. MRIFinding, USFinding, MGFinding, etc).",
         "exampleBoolean": false
       },
       {
@@ -355,6 +355,22 @@
         },
         "name": "Previously Demonstrated By Fragment",
         "description": "'Demonstrated By' Component Fragment",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/SOLORConcept"
+        },
+        "name": "SOLOR Concept",
+        "description": "SOLOR Concept",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/STAMP"
+        },
+        "name": "SOLOR STAMP Fragment",
+        "description": "This fragment adds the SOLOR STAMP fields to a code system.",
         "exampleBoolean": false
       },
       {
@@ -487,7 +503,7 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/BiRadsAssessmentCategoryVS"
+          "reference": "ValueSet/BiRadsAssessmentCategory"
         },
         "name": "BiRads Assessment Category ValueSet",
         "description": "BiRads Assessment Category Value Set",
@@ -499,6 +515,14 @@
         },
         "name": "BiRadsBreastComposition ValueSet",
         "description": "BiRadsBreastComposition Value Set",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/BreastAssessmentCategoryVS"
+        },
+        "name": "Breast Assessment Category ValueSet",
+        "description": "Breast Assessment Category Value Set",
         "exampleBoolean": false
       },
       {
@@ -623,6 +647,14 @@
       },
       {
         "reference": {
+          "reference": "ValueSet/ObservationCodesFibroadenomaVS"
+        },
+        "name": "Observation Codes for Fibroadenoma ValueSet",
+        "description": "Observation Codes for Fibroadenoma ValueSet",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "ValueSet/ObservedChangesVS"
         },
         "name": "ObservedChanges ValueSet",
@@ -743,30 +775,6 @@
       },
       {
         "reference": {
-          "reference": "CodeSystem/BiRadsAssessmentCategoryCS"
-        },
-        "name": "BiRads Assessment Category CodeSystem",
-        "description": "BiRads Assessment Category CodeSystem",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "CodeSystem/BiRadsBreastCompositionCS"
-        },
-        "name": "Breast Composition CodeSystem",
-        "description": "Breast composition values code system.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "CodeSystem/BreastBodyLocationClockPositionsCS"
-        },
-        "name": "Breast Body Location Clock Positions CodeSystem",
-        "description": "BreastBodyLocationClockPositions CodeSystem",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "CodeSystem/BreastBodyLocationDepthCS"
         },
         "name": "Breast Body Location Depth CodeSystem",
@@ -791,30 +799,6 @@
       },
       {
         "reference": {
-          "reference": "CodeSystem/BreastLandmarkCS"
-        },
-        "name": "BreastLandmark CodeSystem",
-        "description": "Breast Landmark CodeSystem defines the various breast \nbody locations that can be used as a land mark.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "CodeSystem/CalcificationDistributionCS"
-        },
-        "name": "Calcification Distribution CodeSystem",
-        "description": "Calcification Distribution in an abnormality code system.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "CodeSystem/CalcificationTypeCS"
-        },
-        "name": "Calcification Type CodeSystem",
-        "description": "Mammography calcification type code system.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "CodeSystem/CompositionSectionSliceCodesCS"
         },
         "name": "Composition Section Slice Codes CodeSystem",
@@ -823,42 +807,10 @@
       },
       {
         "reference": {
-          "reference": "CodeSystem/ConsistentWithCS"
-        },
-        "name": "ConsistentWith CodeSystem",
-        "description": "ConsistentWith CodeSystem",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "CodeSystem/ConsistentWithQualifierCS"
-        },
-        "name": "ConsistentWith Qualifier CodeSystem",
-        "description": "ConsistentWithQualifier  code system",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "CodeSystem/CorrespondsWithCS"
         },
         "name": "CorrespondsWith CodeSystem",
         "description": "CorrespondsWith CodeSystem",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "CodeSystem/MarginCS"
-        },
-        "name": "Margin CodeSystem",
-        "description": "Margin code system.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "CodeSystem/NotPreviouslySeenCS"
-        },
-        "name": "NotPreviouslySeen CodeSystem",
-        "description": "NotPreviouslySeen CodeSystem",
         "exampleBoolean": false
       },
       {
@@ -879,14 +831,6 @@
       },
       {
         "reference": {
-          "reference": "CodeSystem/ObservedChangesCS"
-        },
-        "name": "Observed Changes CodeSystem",
-        "description": "Observed changes in an abnormality code system.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "CodeSystem/OrientationCS"
         },
         "name": "Orientation CodeSystem",
@@ -895,26 +839,10 @@
       },
       {
         "reference": {
-          "reference": "CodeSystem/PreviouslyDemonstratedByCS"
-        },
-        "name": "PreviouslyDemonstratedBy CodeSystem",
-        "description": "PreviouslyDemonstratedBy CodeSystem",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "CodeSystem/ServiceRecommendationsCS"
         },
         "name": "ServiceRecommendations CodeSystem",
         "description": "ServiceRecommendations CodeSystem",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "CodeSystem/ShapeCS"
-        },
-        "name": "Shape CodeSystem",
-        "description": "Shape values code system.",
         "exampleBoolean": false
       }
     ],

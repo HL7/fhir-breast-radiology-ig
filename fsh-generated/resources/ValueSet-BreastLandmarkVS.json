@@ -7,10 +7,25 @@
   "description": "BreastLandmark Value Set",
   "version": "0.3.0",
   "url": "http://hl7.org/fhir/us/breast-radiology/ValueSet/BreastLandmarkVS",
+  "copyright": "This value set includes content from SNOMED CT, \nwhich is copyright © 2002+ International Health \nTerminology Standards Development Organisation (IHTSDO), \nand distributed by agreement between IHTSDO and HL7. \nImplementer use of SNOMED CT is not covered by this agreement\"",
   "compose": {
     "include": [
       {
-        "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastLandmarkCS"
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "24142002",
+            "display": "Nipple structure (body structure)"
+          },
+          {
+            "code": "78904004",
+            "display": "Chest wall structure (body structure)"
+          },
+          {
+            "code": "39937001",
+            "display": "Skin structure (body structure)"
+          }
+        ]
       }
     ]
   }

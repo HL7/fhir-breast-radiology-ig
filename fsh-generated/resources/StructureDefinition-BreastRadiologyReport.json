@@ -132,20 +132,19 @@
           "rules": "open",
           "ordered": false,
           "description": "ConclusionCode slicing"
-        },
-        "min": 1
+        }
       },
       {
         "id": "DiagnosticReport.conclusionCode:BiRads",
         "path": "DiagnosticReport.conclusionCode",
         "sliceName": "BiRads",
         "short": "BiRads assessment value.",
-        "definition": "A required summary conclusion of the breast radiology report. Typically this is the most severe BiRads code\nfound in either of the right or left breast observation sections.",
-        "min": 1,
+        "definition": "   A required summary conclusion of the breast radiology report. Typically this is the most severe BiRads code\n   found in either of the right or left breast observation sections.\nIn general, it is expected that a BiRads conclusion code will be included, though there are cases \nwhere a BiRads conclusion code can not be included.\n\nIn these cases the actual non-BiRads code will be found in a separate slice of the FHIR CodeableConcept element\nthat contains this value or alternately (though not preferred) described in the text section of the report.\n\nAn example of this being used: A procedure is performed to implant a surgical marker. There is no BiRads code\nassociated with this completion of the procedure, though regulation may require a specific non Birads \ncode to be used to descibe the completion of this procedure.",
+        "min": 0,
         "max": "1",
         "binding": {
           "strength": "required",
-          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/BiRadsAssessmentCategoryVS"
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/BreastAssessmentCategoryVS"
         }
       }
     ]

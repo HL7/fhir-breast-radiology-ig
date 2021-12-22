@@ -7,10 +7,18 @@
   "description": "Breast Body Location Quadrants Value Set",
   "version": "0.3.0",
   "url": "http://hl7.org/fhir/us/breast-radiology/ValueSet/BreastBodyLocationQuadrantVS",
+  "copyright": "This value set includes content from SNOMED CT, \nwhich is copyright © 2002+ International Health \nTerminology Standards Development Organisation (IHTSDO), \nand distributed by agreement between IHTSDO and HL7. \nImplementer use of SNOMED CT is not covered by this agreement\"",
   "compose": {
     "include": [
       {
-        "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/BreastBodyLocationQuadrantCS"
+        "system": "http://snomed.info/sct",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "descendent-of",
+            "value": "272670002"
+          }
+        ]
       }
     ]
   }
