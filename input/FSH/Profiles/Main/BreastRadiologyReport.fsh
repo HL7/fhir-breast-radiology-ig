@@ -1,8 +1,8 @@
 Profile: BreastRadiologyReport
 Parent: DiagnosticReport
-Title: "Breast Radiology Report"
+Title: "Breast Imaging Report"
 Description: """
-	Breast Radiology Diagnostic Report.
+	Breast Imaging Diagnostic Report.
 	"""
 * ^contact[0].telecom.system = http://hl7.org/fhir/contact-point-system#url
 * ^contact[0].telecom.value = "http://hl7.org/Special/committees/cic"
@@ -30,7 +30,7 @@ Description: """
 * conclusionCode contains BiRads 0..1
 * conclusionCode[BiRads] ^short = "BiRads assessment value."
 * conclusionCode[BiRads] ^definition = """
-    A required summary conclusion of the breast radiology report. Typically this is the most severe BiRads code
+    A required summary conclusion of the breast imaging report. Typically this is the most severe BiRads code
     found in either of the right or left breast observation sections.
 	In general, it is expected that a BiRads conclusion code will be included, though there are cases 
 	where a BiRads conclusion code can not be included.

@@ -1,8 +1,8 @@
 Profile: BreastRadiologyComposition
 Parent: Composition
-Title: "Breast Radiology Composition"
+Title: "Breast Imaging Composition"
 Description: """
-    Composition instance for the Breast Radiology FHIR Document.
+    Composition instance for the Breast Imaging FHIR Document.
 """
 * ^contact[0].telecom.system = http://hl7.org/fhir/contact-point-system#url
 * ^contact[0].telecom.value = "http://hl7.org/Special/committees/cic"
@@ -18,7 +18,7 @@ Description: """
 * section ^slicing.rules = #open
 * section ^slicing.ordered = false
 * section ^slicing.description = """
-    Breast Radiology Report Section
+    Breast Imaging Report Section
     """
 
 * section contains report 1..1 MS
@@ -30,19 +30,19 @@ Description: """
 * section contains recommendations 0..1 MS
 * section contains admin 0..1 MS
 * section[report] ^definition = """
-    This section references the Breast Radiology Report.
+    This section references the Breast Imaging Report.
 
-    One and only one Breast Radiology Report must be included in this section.
+    One and only one Breast Imaging Report must be included in this section.
   """
 * section[report] ^short = "Report Section."
 * section[report].code = CompositionSectionSliceCodesCS#report
-* section[report].title = "Breast Radiology Report"
+* section[report].title = "Breast Imaging Report"
 
 * section[report].entry 1..1
 * section[report].entry only Reference(BreastRadiologyReport)
-* section[report].entry ^short = "Breast Radiology Report reference"
+* section[report].entry ^short = "Breast Imaging Report reference"
 * section[report].entry ^definition = """
-    Reference to the Breast Radiology Report.
+    Reference to the Breast Imaging Report.
 	"""
 * section[impressions] ^definition = """
     This section contains references to the report's clinical impressions.

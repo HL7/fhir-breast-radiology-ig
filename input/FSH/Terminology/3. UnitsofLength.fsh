@@ -1,10 +1,10 @@
 /*
- Definition of the units of length used in the breast radiology IG.
+ Definition of the units of length used in the breast imaging IG.
 */
 
 ValueSet:  UnitsOfLengthVS
 Title: "Units of length value set"
-Description:  "Units of length used in Breast radiology."
+Description:  "Units of length used in Breast imaging."
 * ^copyright =
     """
     This material contains content from UCUM (https://ucum.org/). 

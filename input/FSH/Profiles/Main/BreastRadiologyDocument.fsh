@@ -1,8 +1,8 @@
 Profile: BreastRadiologyDocument
 Parent: Bundle
-Title: "Breast Radiology Document"
+Title: "Breast Imaging Document"
 Description: """
-	Breast Radiology Document Bundle.
+	Breast Imaging Document Bundle.
     """
 * ^contact[0].telecom.system = http://hl7.org/fhir/contact-point-system#url
 * ^contact[0].telecom.value = "http://hl7.org/Special/committees/cic"

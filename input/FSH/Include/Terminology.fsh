@@ -1,6 +1,6 @@
 /*
  Observation.Fragment
- constraints used in all breast radiology observations.
+ constraints used in all breast imaging observations.
 */
  
 RuleSet: CodeSystem_Common

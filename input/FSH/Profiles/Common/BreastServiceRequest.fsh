@@ -1,6 +1,6 @@
 Profile: BreastServiceRequest
 Parent: ServiceRequest
-Title: "Breast Radiology Service Request"
+Title: "Breast Imaging Service Request"
 Description: """
   Service request with required breast laterality field.
   """
