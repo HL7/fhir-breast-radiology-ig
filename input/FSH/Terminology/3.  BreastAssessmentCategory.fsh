@@ -11,8 +11,8 @@ Description:  "Breast Assessment Category Value Set"
 	which is copyright © 2002+ International Health 
 	Terminology Standards Development Organisation (IHTSDO), 
 	and distributed by agreement between IHTSDO and HL7. 
-	Implementer use of SNOMED CT is not covered by this agreement"
+	Implementer use of SNOMED CT is not covered by this agreement
     """
 
-* include codes from valueset BiRadsAssessmentCategory
+* include codes from valueset BiRadsAssessmentCategoryVS
 * $SCT#470272007 "Implantable lesion localization marker (Object)"
