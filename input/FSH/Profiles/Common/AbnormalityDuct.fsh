@@ -4,7 +4,7 @@ Title: "Duct"
 Description: """
   Duct
   """
-* code = ObservationCodesCS#abnormalityDuct
+* code = ObservationCodesCS#abnormalityDuctObservation
 * code 1..1
 * component ^slicing.discriminator.type = #pattern
 * component ^slicing.discriminator.path = "code"
