@@ -6,6 +6,8 @@ ValueSet:  ConsistentWithVS
 Title: "ConsistentWith ValueSet"
 Description:  "ConsistentWith Value Set"
 
+//$FIXME: Ask GG if this should include all children of 399294002
+
 * include $SCT#404057003 "Angiolipoma (Disorder)"
 * include $SCT#37009001 "Apocrine metaplasia of breast (Disorder)"
 * include $SCT#245269009 "Axillary lymph node group (Bodypart)"
@@ -52,6 +54,17 @@ Description:  "ConsistentWith Value Set"
 * include $SCT#392090004 "Operation on breast (procedure)"
 * include $SCT#12402003 "Scar (morphologic abnormality)"
 * include $SCT#50916005 "Fibrosing adenosis (morphologic abnormality)"
+* include $SCT#129749001 "Coarse (popcorn-like) radiographic calcification (Finding)" 
+* include $SCT#442172002 "Papillary neoplasm (morphologic abnormality)"
+* include $SCT#129752009 "Large rod-like radiographic calcification (Finding)"
+
+//$FIXME: Validate this!
+// LymphNodeNormal "Lymph node normal"
+* include $SCT#301866000:363713009=17621005 "301866000 'Finding of size of lymph node (finding)': 363713009 'Has Interpretation' = 17621005 'Normal (qualifier value)'"
+
+//$FIXME: Validate this!
+//* #LymphNodePathological "Lymph node pathological"
+* include $SCT#301866000:363713009=263654008 "301866000 'Finding of size of lymph node (finding)': 363713009 'Has Interpretation' = 263654008 'Abnormal (qualifier value)'"
 
 /*
  * $FIXME
@@ -72,11 +85,6 @@ Description:  "ConsistentWith Value Set"
     [radiopaedia.org]
     """
 
-  // .Snomed 399294002
-  // 399294002 already used.
-  // .SnomedDescription ClinicalFinding |Cyst of breast (Disorder) ++++++
-  // * #ClusterOfCysts "Cluster of cysts"
-
 
 * #CystComplicated "Cyst complicated"
     """
@@ -96,25 +104,6 @@ Description:  "ConsistentWith Value Set"
     Oil cysts are filled with fluid that may feel smooth
     and squishy.
     Oil cysts are caused by the breakdown of fatty tissue.
-    """
-
-  // .Snomed 449837001
-  // .SnomedDescription ClinicalFinding | Complex cyst of breast (Disorder)
-  // 449837001 already used
-  // * #CystsComplex "Cysts complex"
-  //* include $SCT# ""
-
-* #CystsComplicated "Cysts complicated"
-    """
-    Complicated cysts are 'in between' simple and complex.
-    Although they share most of the features of simple
-    cysts, they tend to have some
-    debris inside them and echo back some of the ultrasound
-    waves.
-    However, they don't have the thick walls or obvious
-    solid components that a complex
-    cyst has.
-    [www.breastcancer.org]
     """
 
 * #CystsMicroClustered "Cysts micro clustered"
@@ -153,27 +142,6 @@ Description:  "ConsistentWith Value Set"
     The connective tissue (or stroma) in the breast is
     composed of various proportions
     of fat and fibrous tissue.
-    """
-
-* #Fibroadenolipoma "Fibroadenolipoma"
-    """
-    Another name for Hamartomas, Hamartomas represent
-    benign proliferation of fibrous,
-    glandular, and fatty tissue (hence fibro-adeno-lipoma)
-    surrounded by a thin capsule
-    of connective tissue.
-    All components are found in normal breast tissue,
-    which is why the lesions are considered
-    hamartomatous.
-    [radiopaedia.org]
-    """
-
-* #FibroadenomaDegenerating "Fibroadenoma degenerating"
-    """
-    These are non-cancerous breast lumps.
-    Fibroadenomas usually go away with age.
-    By the time an individual is menopausal, Fibroadenomas
-    degenerate.
     """
 
 * #FibroglandularTissue "Fibroglandular tissue"
@@ -221,36 +189,7 @@ Description:  "ConsistentWith Value Set"
     [www.ncbi.nlm.nih.gov/pubmed]
     """
 
-* #LymphNodeNormal "Lymph node normal"
-    """
-    Lymph nodes filter substances that travel through
-    the lymphatic fluid, and they contain
-    lymphocytes (white blood cells) that help the body
-    fight infection and disease.
-    There are hundreds of lymph nodes found throughout
-    the body.
-    The lymph nodes are connected to one another by
-    lymph vessels.
-    Clusters of lymph nodes are found in the neck, axilla
-    (underarm), chest, abdomen,
-    and groin.
-    A normal sized lymph node is about pea-sized or bean-sized
-    (or smaller than 1/2 inch
-    or 12mm).
-    """
-
-* #LymphNodePathological "Lymph node pathological"
-    """
-    Lymphadenopathy (or adenopathy) is, if anything,
-    a broader term, referring to any
-    pathology of lymph nodes, not necessarily resulting
-    in increased size; this includes
-    abnormal number of nodes, or derangement of internal
-    architecture (e.g.
-    cystic or necrotic nodes).
-    [radiopaedia.org]
-    """
-
+69757002 | Solid tumor configuration (finding) | + 59820001 | Blood vessel structure (body structure) |
 * #MassSolidW/tumorVasc "Mass solid w/tumor vasc"
     """
     An abnormal mass of tissue that usually does not
@@ -286,22 +225,6 @@ Description:  "ConsistentWith Value Set"
     [www.healthline.com]
     """
 
-  // .SnomedDescription need help
-* #PapillaryLesion "Papillary lesion"
-    """
-    Breast papillary lesions are characterised by growth
-    inside the milk ducts, and they
-    represent a heterogeneous pathology.
-    They are rare and constitute less than 10% of benign
-    breast lesions and less than
-    1% of malignant breast neoplasms.
-    Breast papillary lesions are usually detected by
-    imaging or clinically by the presence
-    of a palpable breast mass or unilateral spontaneous
-    nipple discharge.
-    [ecancer.org]
-    """
-
 * #ScarWithShadowing "Scar with shadowing"
     """
     In cases when the appropriate history is not available,
@@ -313,18 +236,6 @@ Description:  "ConsistentWith Value Set"
     a scar from a carcinoma, which has
     shadowing arising from a central mass.
     onlinelibrary.wiley.com > doi > full > jum.2004.23.1.73
-    """
-
-  // .SnomedDescription ??????????????
-* #SecretoryCalcification "Secretory calcification"
-    """
-    Secretory calcifications are benign calcifications
-    usually in women older than 60.
-    They classically appear as solid or discontinuous,
-    smooth, linear and rod-like calcifications.
-    Usually bilateral and symmetric and may appear lucent-centered.
-    Also known as plasma cell mastitis.
-    [radiopaedia.org]
     """
 
 * #SentinelNode "Sentinel node"

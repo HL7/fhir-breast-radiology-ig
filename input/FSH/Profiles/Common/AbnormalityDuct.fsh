@@ -77,6 +77,7 @@ Description: """
 * hasMember contains biRadAssessmentCategory 0..1
 * hasMember[biRadAssessmentCategory] ^short = "BiRads Assessment Category Code Code hasMember."
 * hasMember[biRadAssessmentCategory] only Reference(BreastAssessmentCategory)
+
   // Define Orientation Slice
 * component contains orientation 0..1
 * component[orientation] ^short = "Orientation component."
@@ -96,6 +97,8 @@ Description: """
 * component[orientation].value[x] 1..1
 * component[orientation].value[x] only CodeableConcept
 * component[orientation].value[x] from OrientationVS
+
+
   // Define Shape Slice
 * component contains shape 0..1
 * component[shape] ^short = "Shape component."
@@ -115,6 +118,8 @@ Description: """
 * component[shape].value[x] 1..1
 * component[shape].value[x] only CodeableConcept
 * component[shape].value[x] from ShapeVS
+
+  
   // Define Margin Slice
 * component contains margin 0..1
 * component[margin] ^short = "Margin component."
@@ -134,6 +139,27 @@ Description: """
 * component[margin].value[x] 1..1
 * component[margin].value[x] only CodeableConcept
 * component[margin].value[x] from MarginVS
+
+
+  // Define Density Slice
+* component contains density 0..1
+* component[density] ^short = "Density component."
+* component[density] ^comment = """
+    This is one component of a group of components that are part of the observation.
+    """
+* component[density] ^definition = """
+    This slice contains the optional component that define the density of the abnormality.
+    The value of this component is a codeable concept chosen from the LesionRadiographicDensityVS valueset.
+    """
+* component[density].code 1..1
+* component[density].code ^short = "Density component code."
+* component[density].code ^definition = """
+    This code identifies the Density component.
+	"""
+* component[density].code = ObservationComponentSliceCodesCS#density
+* component[density].value[x] 1..1
+* component[density].value[x] only CodeableConcept
+* component[density].value[x] from LesionRadiographicDensityVS
 * component contains observedCount 0..1
 * component[observedCount] ^short = "Observed Count component. component."
 * component[observedCount] ^comment = """

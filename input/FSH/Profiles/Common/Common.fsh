@@ -1,5 +1,8 @@
-Alias: LOINC = http://loinc.org 
-Alias: SNOMED = http://snomed.info/sct 
+Alias: $LOINC = http://loinc.org 
+Alias: $SCT = http://snomed.info/sct
+Alias: $DCM = http://dicom.nema.org/resources/ontology/DCM
+
+
 Alias: BREASTRADBASEURL = http://hl7.org/fhir/us/breast-radiology
 Alias: COMPOSITIONURL = http://hl7.org/fhir/StructureDefinition/Composition
 Alias: CLINICALIMPRESSIONURL = http://hl7.org/fhir/StructureDefinition/ClinicalImpression

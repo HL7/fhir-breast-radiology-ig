@@ -69,5 +69,5 @@ Description: """
 * hasMember[other] MS
 * code = ObservationCodesCS#findingsBiLateralBreastObservation
 * code 1..1
-* bodySite = SNOMED#181131000 "Entire breast (body structure)"
+* bodySite = $SCT#181131000 "Entire breast (body structure)"
 * bodySite 1..1

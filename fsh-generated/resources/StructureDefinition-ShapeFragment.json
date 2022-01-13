@@ -185,6 +185,44 @@
           "strength": "required",
           "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/MarginVS"
         }
+      },
+      {
+        "id": "Observation.component:density",
+        "path": "Observation.component",
+        "sliceName": "density",
+        "short": "Density component.",
+        "definition": "This slice contains the optional component that define the density of the abnormality.\nThe value of this component is a codeable concept chosen from the LesionRadiographicDensityVS valueset.",
+        "comment": "This is one component of a group of components that are part of the observation.",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Observation.component:density.code",
+        "path": "Observation.component.code",
+        "short": "Density component code.",
+        "definition": "This code identifies the Density component.",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "density",
+              "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodesCS"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Observation.component:density.value[x]",
+        "path": "Observation.component.value[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/LesionRadiographicDensityVS"
+        }
       }
     ]
   }

@@ -12,7 +12,7 @@ Description: """
 * ^version = "0.0.2"
 * ^jurisdiction.coding = urn:iso:std:iso:3166#US "United States of America"
 * . ^short = "US Core Race Extension"
-* type = LOINC#42132-1 "US Breast screening"
+* type = $LOINC#42132-1 "US Breast screening"
 * section ^slicing.discriminator.type = #pattern
 * section ^slicing.discriminator.path = "code"
 * section ^slicing.rules = #open

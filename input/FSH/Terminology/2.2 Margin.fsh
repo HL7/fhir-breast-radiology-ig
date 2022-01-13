@@ -1,4 +1,3 @@
-// $FIXME
 ValueSet:  MarginVS
 Title: "Margin ValueSet"
 Description:  "Margin Value Set"
@@ -20,7 +19,7 @@ Description:  "Margin Value Set"
 * include $DCM#112135 "Lobulated"
 
 /*
-* #IntraductalExtension "Intraductal extension"
+$FIXME* #IntraductalExtension "Intraductal extension"
     """
     Intraductal tumor extension is a characteristic feature
     of primary breast carcinoma,
@@ -29,14 +28,14 @@ Description:  "Margin Value Set"
     [www.ncbi.nlm.nih.gov/pubmed]
     """
 
-* #IrregularMargin "Irregular margin"
+$FIXME* #IrregularMargin "Irregular margin"
     """
     Edges around the soft tissue that don't look smooth.
     Indicative of some sort of growth or mass rather
     than a cyst.
     """
 
-* #MacrolobulatedMargin "Macrolobulated margin"
+$FIXME* #MacrolobulatedMargin "Macrolobulated margin"
     """
     Smooth margin with distinct separation between the
     mass and the surrounding border.
@@ -44,7 +43,7 @@ Description:  "Margin Value Set"
     a wide rather than tall formation.
     """
 
-* #MicrolobulatedMargin "Microlobulated margin"
+$FIXME* #MicrolobulatedMargin "Microlobulated margin"
     """
     The margin is characterized by short-cycle undulations
     or scalloped appearance,and
@@ -52,7 +51,7 @@ Description:  "Margin Value Set"
     [Breast Imaging Reporting and Data System—Mammography, Fifth Edition page 54]
     """
 
-* #NonCircumscribedMargin "Non circumscribed margin"
+$FIXME* #NonCircumscribedMargin "Non circumscribed margin"
     """
     The mass has one or more of the following features:
     indistinct,
@@ -64,7 +63,7 @@ Description:  "Margin Value Set"
     """
 
 
-* #SmoothMargin "Smooth margin"
+$FIXME* #SmoothMargin "Smooth margin"
     """
     The edges of the mass have a smooth appearance and
     distinct separation between the

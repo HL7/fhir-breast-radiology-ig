@@ -27,9 +27,6 @@ Description:  "ObservedChanges Value Set"
 
 
 /*
-  $FIXME missing
-
-  NoLongerSeen "No longer seen"
-  RepresentsChange "Represents change"
-  Stable "Stable"
+  $FIXME NoLongerSeen "No longer seen"
+  $FIXME RepresentsChange "Represents change"
   */
