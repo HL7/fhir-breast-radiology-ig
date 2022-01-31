@@ -5,7 +5,6 @@ Description: "Duct Type Value Set"
 * codes from system AbnormalityDuctTypeCS
 
 
-
 CodeSystem: AbnormalityDuctTypeCS
 Title: "Duct Type CodeSystem"
 Description: "Duct types code system."

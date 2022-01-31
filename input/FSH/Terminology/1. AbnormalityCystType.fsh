@@ -5,7 +5,6 @@ Description: "Cyst type Value Set."
 * codes from system AbnormalityCystTypeCS
 
 
-
   
 CodeSystem: AbnormalityCystTypeCS
 Title: "Cyst Type CodeSystem"

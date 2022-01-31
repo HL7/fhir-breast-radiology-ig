@@ -14,7 +14,7 @@ Description:  "Margin Value Set"
 	Copyright © 2011 by the National Electrical Manufacturers Association."
     """
 
-* include codes from system $SCT where concept descendent-of #129737002 " Radiographic lesion margin characteristics (finding)"
+* include codes from system $SCT where concept descendent-of #129737002 "Radiographic lesion margin characteristics (finding)"
 * include $DCM#111343 "Angular margin"
 * include $DCM#112135 "Lobulated"
 

@@ -18,7 +18,7 @@ Description: """
     """
 * component[calcificationType] ^definition = """
     This slice contains the optional component that refines the calcification type.
-    The value of this component is a codeable concept chosen from the CalcificationTypeVS valueset.
+    The value of this component is a codeable concept chosen from the RadiographicCalcificationFindingVS valueset.
     """
 * component[calcificationType].code 1..1
 * component[calcificationType].code ^short = "Calcification Type component code."
@@ -28,7 +28,7 @@ Description: """
 * component[calcificationType].code = ObservationComponentSliceCodesCS#calcificationType
 * component[calcificationType].value[x] 1..1
 * component[calcificationType].value[x] only CodeableConcept
-* component[calcificationType].value[x] from CalcificationTypeVS
+* component[calcificationType].value[x] from RadiographicCalcificationFindingVS
 * category ^slicing.discriminator.type = #pattern
 * category ^slicing.discriminator.path = "$this"
 * category ^slicing.rules = #open

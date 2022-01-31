@@ -1,6 +1,6 @@
-ValueSet:  CalcificationTypeVS
+ValueSet:  RadiographicCalcificationFindingVS
 Title: "Calcification Type Value Set"
-Description:  "Calcification Type Value Set"
+Description:  "Radiographic calcification finding Value Set"
 * ^copyright = """
 	This value set includes content from SNOMED CT, 
 	which is copyright © 2002+ International Health 
@@ -9,7 +9,7 @@ Description:  "Calcification Type Value Set"
 	Implementer use of SNOMED CT is not covered by this agreement"
     """
 
-* include codes from system $SCT where concept descendent-of #129748009 " Radiographic calcification finding (finding)"
+* include codes from system $SCT where concept descendent-of #129748009 "Radiographic calcification finding (finding)"
 
 /*
   $FIXME Missing

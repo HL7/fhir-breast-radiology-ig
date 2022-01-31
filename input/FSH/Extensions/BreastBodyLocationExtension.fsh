@@ -28,7 +28,7 @@ Description: """
 	"""
 * extension[quadrant].value[x] 1..1
 * extension[quadrant].value[x] only CodeableConcept
-* extension[quadrant].value[x] from BreastBodyLocationQuadrantVS
+* extension[quadrant].value[x] from BreastQuadrantVS
   
 * extension contains region 0..1
 * extension[region] ^short = "Region of the body location"
