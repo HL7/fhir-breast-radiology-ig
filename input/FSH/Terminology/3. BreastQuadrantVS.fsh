@@ -9,4 +9,7 @@ Description:  "Breast Quadrant Value Set"
 	Implementer use of SNOMED CT is not covered by this agreement"
     """
 
-* include codes from system $SCT where concept descendent-of #272670002 "Breast quadrant (body structure)"
+* include $SCT#19100000 "Structure of lower inner quadrant of breast (body structure)"
+* include $SCT#33564002 "Structure of lower outer quadrant of breast (body structure)"
+* include $SCT#77831004 "Structure of upper inner quadrant of breast (body structure)"
+* include $SCT#76365002 "Structure of upper outer quadrant of breast (body structure)"

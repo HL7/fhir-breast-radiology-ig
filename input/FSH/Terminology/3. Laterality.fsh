@@ -1,6 +1,6 @@
 ValueSet: LateralityVS
 Title: "Laterality ValueSet"
-Description:  "Laterality Value Set"
+Description:  "Side of the body being examined"
 * ^copyright = """
 	This value set includes content from SNOMED CT, 
 	which is copyright © 2002+ International Health 

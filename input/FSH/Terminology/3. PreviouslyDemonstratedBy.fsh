@@ -13,9 +13,17 @@ Description:  "PreviouslyDemonstratedBy Value Set"
 	Implementer use of SNOMED CT is not covered by this agreement"
     """
 
+//* #Aspiration "Aspiration
 * include $SCT#287572003 "Diagnostic aspiration of breast cyst (Procedure)"
+
+//* #Biopsy "Biopsy"
 * include $SCT#122548005 "Biopsy of breast (Procedure)"
+
+//* #MRI "MRI"
 * include $SCT#241615005 "Magnetic resonance imaging of breast (Procedure)"
+
+//* #US "US"
 * include $SCT#47079000 "Ultrasonography of breast (procedure)"
+
 * include $SCT#71651007 "Mammography (procedure)"
 * include $SCT#418432003  "Scintimammography (procedure)"

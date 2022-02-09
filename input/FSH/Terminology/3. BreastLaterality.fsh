@@ -1,6 +1,8 @@
 ValueSet: BreastLateralityVS
 Title: "Breast Laterality ValueSet"
-Description:  "Breast Laterality Value Set"
+Description:  """
+    Values that define the laterality of a breast being examined.
+	"""
 * ^copyright = """
 	This value set includes content from SNOMED CT, 
 	which is copyright © 2002+ International Health 

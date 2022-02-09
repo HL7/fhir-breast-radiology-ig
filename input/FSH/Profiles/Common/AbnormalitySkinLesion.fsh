@@ -142,7 +142,7 @@ Description: """
 * component[density].code = ObservationComponentSliceCodesCS#density
 * component[density].value[x] 1..1
 * component[density].value[x] only CodeableConcept
-* component[density].value[x] from LesionRadiographicDensityVS
+* component[density].value[x] from LesionDensityVS
 * component contains observedCount 0..1
 * component[observedCount] ^short = "Observed Count component. component."
 * component[observedCount] ^comment = """

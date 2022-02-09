@@ -1,6 +1,8 @@
 ValueSet:  BreastLandmarkVS
 Title: "BreastLandmark ValueSet"
-Description:  "BreastLandmark Value Set"
+Description:  """
+	Body landmarks which define the origin of a measurement in the Breast IG.
+	"""
 * ^copyright = """
 	This value set includes content from SNOMED CT, 
 	which is copyright © 2002+ International Health 

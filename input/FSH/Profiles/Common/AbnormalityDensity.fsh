@@ -160,7 +160,7 @@ Description: """
 * component[density].code = ObservationComponentSliceCodesCS#density
 * component[density].value[x] 1..1
 * component[density].value[x] only CodeableConcept
-* component[density].value[x] from LesionRadiographicDensityVS
+* component[density].value[x] from LesionDensityVS
 * component contains notPreviouslySeen 0..*
 * component[notPreviouslySeen] ^short = "Not Previously Seen component."
 * component[notPreviouslySeen] ^comment = """

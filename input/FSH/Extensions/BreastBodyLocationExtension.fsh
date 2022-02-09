@@ -21,10 +21,10 @@ Description: """
 * extension[laterality].value[x] from LateralityVS
   
 * extension contains quadrant 0..1
-* extension[quadrant] ^short = "Quadrant of the body location"
+* extension[quadrant] ^short = "Breast quadrant location"
 * extension[quadrant] ^definition =
     """
-	The quadrant  of the body location.
+	The quadrant of the breast location.
 	"""
 * extension[quadrant].value[x] 1..1
 * extension[quadrant].value[x] only CodeableConcept

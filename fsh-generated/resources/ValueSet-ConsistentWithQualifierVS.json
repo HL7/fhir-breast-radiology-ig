@@ -7,27 +7,10 @@
   "description": "ConsistentWith Qualifier Value Set",
   "version": "0.3.0",
   "url": "http://hl7.org/fhir/us/breast-radiology/ValueSet/ConsistentWithQualifierVS",
-  "copyright": "This value set includes content from SNOMED CT, \nwhich is copyright © 2002+ International Health \nTerminology Standards Development Organisation (IHTSDO), \nand distributed by agreement between IHTSDO and HL7. \nImplementer use of SNOMED CT is not covered by this agreement\"",
   "compose": {
     "include": [
       {
-        "system": "http://snomed.info/sct",
-        "filter": [
-          {
-            "property": "concept",
-            "op": "descendent-of",
-            "value": "106230009"
-          }
-        ]
-      },
-      {
-        "system": "http://snomed.info/sct",
-        "concept": [
-          {
-            "code": "47965005",
-            "display": "Differential diagnosis (contextual qualifier) (qualifier value)"
-          }
-        ]
+        "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ConsistentWithQualifierCS"
       }
     ]
   }

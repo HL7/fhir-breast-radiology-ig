@@ -410,7 +410,7 @@
           "reference": "StructureDefinition/BreastLateralityExtension"
         },
         "name": "Breast Laterality Extension",
-        "description": "Breast Laterality Extension",
+        "description": "Extension that defines the laterality of the breast being examined.",
         "exampleBoolean": false
       },
       {
@@ -519,10 +519,18 @@
       },
       {
         "reference": {
+          "reference": "ValueSet/BreastCompositonVS"
+        },
+        "name": "Breast Composition ValueSet",
+        "description": "Breast Composition Value Set\nCodes that describe the observed composition of \nthe breast.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "ValueSet/BreastLandmarkVS"
         },
         "name": "BreastLandmark ValueSet",
-        "description": "BreastLandmark Value Set",
+        "description": "Body landmarks which define the origin of a measurement in the Breast IG.",
         "exampleBoolean": false
       },
       {
@@ -530,7 +538,7 @@
           "reference": "ValueSet/BreastLateralityVS"
         },
         "name": "Breast Laterality ValueSet",
-        "description": "Breast Laterality Value Set",
+        "description": "Values that define the laterality of a breast being examined.",
         "exampleBoolean": false
       },
       {
@@ -586,15 +594,15 @@
           "reference": "ValueSet/LateralityVS"
         },
         "name": "Laterality ValueSet",
-        "description": "Laterality Value Set",
+        "description": "Side of the body being examined",
         "exampleBoolean": false
       },
       {
         "reference": {
-          "reference": "ValueSet/LesionRadiographicDensityVS"
+          "reference": "ValueSet/LesionDensityVS"
         },
-        "name": "Lesion radiographic density ValueSet",
-        "description": "Lesion radiographic density ValueSet",
+        "name": "Lesion density ValueSet",
+        "description": "Lesion density ValueSet",
         "exampleBoolean": false
       },
       {
@@ -603,14 +611,6 @@
         },
         "name": "Mammography assessment finding ValueSet",
         "description": "Mammography assessment finding Value Set",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/MammographyBreastCompositonFindingVS"
-        },
-        "name": "Mammography Breast Compositon Finding ValueSet",
-        "description": "Mammography Breast Compositon Finding Value Set",
         "exampleBoolean": false
       },
       {
@@ -658,7 +658,7 @@
           "reference": "ValueSet/RadiographicCalcificationFindingVS"
         },
         "name": "Calcification Type Value Set",
-        "description": "Radiographic calcification finding Value Set",
+        "description": "Calcification Type Value Set\nThis value set describes the types of calcification findings that may be found\nduring an exam.",
         "exampleBoolean": false
       },
       {
@@ -775,6 +775,22 @@
       },
       {
         "reference": {
+          "reference": "CodeSystem/BreastCompositionCS"
+        },
+        "name": "Breast Composition CodeSystem",
+        "description": "Breast composition values code system.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/CalcificationTypeCS"
+        },
+        "name": "Calcification Type CodeSystem",
+        "description": "Mammography calcification type code system.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "CodeSystem/CompositionSectionSliceCodesCS"
         },
         "name": "Composition Section Slice Codes CodeSystem",
@@ -783,10 +799,34 @@
       },
       {
         "reference": {
+          "reference": "CodeSystem/ConsistentWithQualifierCS"
+        },
+        "name": "ConsistentWith Qualifier CodeSystem",
+        "description": "ConsistentWithQualifier  code system",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "CodeSystem/CorrespondsWithCS"
         },
         "name": "CorrespondsWith CodeSystem",
         "description": "CorrespondsWith CodeSystem",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/LesionDensityCS"
+        },
+        "name": "Lesion density CodeSystem",
+        "description": "Lesion Density code system.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/MarginCS"
+        },
+        "name": "Margin CodeSystem",
+        "description": "Margin code system.",
         "exampleBoolean": false
       },
       {
@@ -803,6 +843,14 @@
         },
         "name": "Component Slice Codes CodeSystem",
         "description": "Component Slice Codes code system",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/ObservedChangesCS"
+        },
+        "name": "Observed Changes CodeSystem",
+        "description": "Observed changes in an abnormality code system.",
         "exampleBoolean": false
       },
       {

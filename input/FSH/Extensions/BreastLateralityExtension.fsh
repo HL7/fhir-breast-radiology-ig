@@ -5,7 +5,7 @@ Extension: BreastLateralityExtension
 Parent: Extension
 Title: "Breast Laterality Extension"
 Description: """
-    Breast Laterality Extension
+    Extension that defines the laterality of the breast being examined.
     """
 
 * . ^short = "Breast Laterality extension"

@@ -7,7 +7,7 @@ Description: """
 * code = ObservationCodesCS#breastCompositionObservation
 * code 1..1
 * value[x] 1..1
-* value[x] from MammographyBreastCompositonFindingVS
+* value[x] from BreastCompositonVS
 * value[x] only CodeableConcept
 * hasMember 0..0
 * category ^slicing.discriminator.type = #pattern

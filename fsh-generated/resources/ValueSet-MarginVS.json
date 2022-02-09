@@ -7,31 +7,10 @@
   "description": "Margin Value Set",
   "version": "0.3.0",
   "url": "http://hl7.org/fhir/us/breast-radiology/ValueSet/MarginVS",
-  "copyright": "This value set includes content from SNOMED CT, \nwhich is copyright © 2002+ International Health \nTerminology Standards Development Organisation (IHTSDO), \nand distributed by agreement between IHTSDO and HL7. \nImplementer use of SNOMED CT is not covered by this agreement\"\n\nThis value set includes content excerpted from Digital Imaging and \nCommunications in Medicine (DICOM) Standard, \nPart 16: Content Mapping Resource, \nCopyright © 2011 by the National Electrical Manufacturers Association.\"",
   "compose": {
     "include": [
       {
-        "system": "http://snomed.info/sct",
-        "filter": [
-          {
-            "property": "concept",
-            "op": "descendent-of",
-            "value": "129737002"
-          }
-        ]
-      },
-      {
-        "system": "http://dicom.nema.org/resources/ontology/DCM",
-        "concept": [
-          {
-            "code": "111343",
-            "display": "Angular margin"
-          },
-          {
-            "code": "112135",
-            "display": "Lobulated"
-          }
-        ]
+        "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/MarginCS"
       }
     ]
   }
