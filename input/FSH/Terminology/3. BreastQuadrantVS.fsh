@@ -1,6 +1,9 @@
 ValueSet:  BreastQuadrantVS
 Title: "Breast Quadrant ValueSet"
-Description:  "Breast Quadrant Value Set"
+Description:  """
+	This value set contains codes that describe the various breast quadrants.
+	It is used to describe the quadrant location of an item of interest.
+	"""
 * ^copyright = """
 	This value set includes content from SNOMED CT, 
 	which is copyright © 2002+ International Health 

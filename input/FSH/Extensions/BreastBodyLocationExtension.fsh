@@ -41,14 +41,14 @@ Description: """
 * extension[region].value[x] from BreastBodyLocationRegionVS
   
 * extension contains clockDirection 0..1
-* extension[clockDirection] ^short = "Clock direction of the body location"
+* extension[clockDirection] ^short = "Clock Position of the body location"
 * extension[clockDirection] ^definition =
     """
 	The clock direction of the body location.
 	"""
 * extension[clockDirection].value[x] 1..1
 * extension[clockDirection].value[x] only CodeableConcept
-* extension[clockDirection].value[x] from BreastBodyLocationClockPositionsVS
+* extension[clockDirection].value[x] from ClockPositionsVS
   
 * extension contains depth 0..1
 * extension[depth] ^short = "Depth of the body location"
