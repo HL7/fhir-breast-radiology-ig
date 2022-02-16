@@ -62,6 +62,6 @@ Description: """
 
 * component[obsDistRegionSize].value[x] 1..1
 * component[obsDistRegionSize].value[x] only Quantity or Range
-* component[obsDistRegionSize].valueQuantity from UNITSOFLENGTH
-* component[obsDistRegionSize].valueRange.low from UNITSOFLENGTH
-* component[obsDistRegionSize].valueRange.high from UNITSOFLENGTH
+* component[obsDistRegionSize].valueQuantity = UCUM#mm
+* component[obsDistRegionSize].valueRange.low = UCUM#mm
+* component[obsDistRegionSize].valueRange.high = UCUM#mm

@@ -4,7 +4,7 @@ Title: "Mammography Finding"
 Description: """
     Mammography Finding
     """
-* code = $SCT#129714008 "Mammography finding (finding)"
+* code = ObservationCodesCS#mgFindingObservation
 * code 1..1
 * category ^slicing.discriminator.type = #pattern
 * category ^slicing.discriminator.path = "$this"

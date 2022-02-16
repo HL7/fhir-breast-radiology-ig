@@ -4,9 +4,7 @@ Title: "Nuclear Medicine Finding"
 Description: """
     NM Finding
     """
-
-  // $SCT#365853002 "Imaging finding (finding)" : 363714003 "Interprets (attribute)" = 373205008 "Nuclear medicine imaging procedure (procedure)"
-* code = $SCT#365853002:363714003=373205008
+* code = ObservationCodesCS#nmFindingObservation
 * code 1..1
 * category ^slicing.discriminator.type = #pattern
 * category ^slicing.discriminator.path = "$this"

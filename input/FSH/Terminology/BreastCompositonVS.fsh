@@ -1,4 +1,4 @@
-ValueSet:  BreastCompositonVS
+ValueSet:  BreastCompositionVS
 Title: "Breast Composition ValueSet"
 Description:
 	"""

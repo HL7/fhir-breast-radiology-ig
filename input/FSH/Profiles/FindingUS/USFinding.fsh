@@ -4,9 +4,7 @@ Title: "Ultrasound Finding"
 Description: """
     Ultrasound Finding
     """
-
-  // $SCT#365853002 "Imaging finding (finding)" : 363714003 "Interprets (attribute)" = 16310003 "Diagnostic ultrasonography (procedure)"
-* code = $SCT#365853002:363714003=16310003
+* code = ObservationCodesCS#usFindingObservation
 * code 1..1
 * category ^slicing.discriminator.type = #pattern
 * category ^slicing.discriminator.path = "$this"

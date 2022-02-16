@@ -261,7 +261,7 @@
         "path": "Observation.component",
         "sliceName": "calcificationType",
         "short": "Calcification Type component.",
-        "definition": "This slice contains the optional component that refines the calcification type.\nThe value of this component is a codeable concept chosen from the RadiographicCalcificationFindingVS valueset.",
+        "definition": "This slice contains the optional component that refines the calcification type.\nThe value of this component is a codeable concept chosen from the CalcificationTypeVS valueset.",
         "comment": "This is one component of a group of components that are part of the observation.",
         "min": 1,
         "max": "1"
@@ -291,7 +291,7 @@
         ],
         "binding": {
           "strength": "required",
-          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/RadiographicCalcificationFindingVS"
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/CalcificationTypeVS"
         }
       },
       {
@@ -464,9 +464,9 @@
             "code": "Quantity"
           }
         ],
-        "binding": {
-          "strength": "required",
-          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/UnitsOfLengthVS"
+        "patternQuantity": {
+          "code": "mm",
+          "system": "http://unitsofmeasure.org"
         }
       },
       {
@@ -483,17 +483,17 @@
       {
         "id": "Observation.component:obsSize.valueRange.low",
         "path": "Observation.component.valueRange.low",
-        "binding": {
-          "strength": "required",
-          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/UnitsOfLengthVS"
+        "patternQuantity": {
+          "code": "mm",
+          "system": "http://unitsofmeasure.org"
         }
       },
       {
         "id": "Observation.component:obsSize.valueRange.high",
         "path": "Observation.component.valueRange.high",
-        "binding": {
-          "strength": "required",
-          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/UnitsOfLengthVS"
+        "patternQuantity": {
+          "code": "mm",
+          "system": "http://unitsofmeasure.org"
         }
       },
       {
@@ -591,9 +591,9 @@
             "code": "Quantity"
           }
         ],
-        "binding": {
-          "strength": "required",
-          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/UnitsOfLengthVS"
+        "patternQuantity": {
+          "code": "mm",
+          "system": "http://unitsofmeasure.org"
         }
       },
       {
@@ -610,17 +610,17 @@
       {
         "id": "Observation.component:obsDistRegionSize.valueRange.low",
         "path": "Observation.component.valueRange.low",
-        "binding": {
-          "strength": "required",
-          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/UnitsOfLengthVS"
+        "patternQuantity": {
+          "code": "mm",
+          "system": "http://unitsofmeasure.org"
         }
       },
       {
         "id": "Observation.component:obsDistRegionSize.valueRange.high",
         "path": "Observation.component.valueRange.high",
-        "binding": {
-          "strength": "required",
-          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/UnitsOfLengthVS"
+        "patternQuantity": {
+          "code": "mm",
+          "system": "http://unitsofmeasure.org"
         }
       },
       {

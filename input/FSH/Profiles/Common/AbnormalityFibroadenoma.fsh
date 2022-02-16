@@ -4,7 +4,7 @@ Title: "Fibroadenoma"
 Description: """
   Fibroadenoma
   """
-* code = $SCT#1156873009
+* code = ObservationCodesCS#abnormalityFibroadenomaObservation
 * code 1..1
 * component ^slicing.discriminator.type = #pattern
 * component ^slicing.discriminator.path = "code"
@@ -158,7 +158,7 @@ Description: """
     This code identifies the Density component.
 	"""
 * component[density].code = ObservationComponentSliceCodesCS#density
-* component[density].value[x] 1..1
+* component[density].value[x] 0..1
 * component[density].value[x] only CodeableConcept
 * component[density].value[x] from LesionDensityVS
 * component contains observedCount 0..1
@@ -237,9 +237,9 @@ Description: """
 
 * component[obsDistRegionSize].value[x] 1..1
 * component[obsDistRegionSize].value[x] only Quantity or Range
-* component[obsDistRegionSize].valueQuantity from UNITSOFLENGTH
-* component[obsDistRegionSize].valueRange.low from UNITSOFLENGTH
-* component[obsDistRegionSize].valueRange.high from UNITSOFLENGTH
+* component[obsDistRegionSize].valueQuantity = UCUM#mm
+* component[obsDistRegionSize].valueRange.low = UCUM#mm
+* component[obsDistRegionSize].valueRange.high = UCUM#mm
   // Define distribution region size.
 * component contains obsSize 0..3
 * component[obsSize] ^short = "Observed size. component."
@@ -267,9 +267,9 @@ Description: """
 * component[obsSize].code = ObservationComponentSliceCodesCS#obsSize
 * component[obsSize].value[x] 1..1
 * component[obsSize].value[x] only Quantity or Range
-* component[obsSize].valueQuantity from UNITSOFLENGTH
-* component[obsSize].valueRange.low from UNITSOFLENGTH
-* component[obsSize].valueRange.high from UNITSOFLENGTH
+* component[obsSize].valueQuantity = UCUM#mm
+* component[obsSize].valueRange.low = UCUM#mm
+* component[obsSize].valueRange.high = UCUM#mm
 * component contains prevDemBy 0..*
 * component[prevDemBy] ^short = "Previously Demonstrated by component."
 * component[prevDemBy] ^comment = """
