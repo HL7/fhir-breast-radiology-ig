@@ -7,16 +7,16 @@ del ig.ini
 del package-list.json
 
 mkdir .\fsh-generated
-xcopy /Q /E /Y ..\BreastRadiologyProfilesV3\Projects\IG\fsh-generated .\fsh-generated
+xcopy /Q /E /Y ..\Fhir.BreastRadiologyProfiles\Projects\IG\fsh-generated .\fsh-generated
 
 mkdir .\input
-xcopy /Q /E /Y ..\BreastRadiologyProfilesV3\Projects\IG\input .\input
+xcopy /Q /E /Y ..\Fhir.BreastRadiologyProfiles\Projects\IG\input .\input
 
 mkdir .\template
-xcopy /Q /E /Y ..\BreastRadiologyProfilesV3\Projects\IG\template .\template
+xcopy /Q /E /Y ..\Fhir.BreastRadiologyProfiles\Projects\IG\template .\template
 
-copy ..\BreastRadiologyProfilesV3\Projects\IG\ig.ini .\ig.ini
-copy ..\BreastRadiologyProfilesV3\Projects\IG\package-list.json .\package-list.json
+copy ..\Fhir.BreastRadiologyProfiles\Projects\IG\ig.ini .\ig.ini
+copy ..\Fhir.BreastRadiologyProfiles\Projects\IG\package-list.json .\package-list.json
 
 pause
 
