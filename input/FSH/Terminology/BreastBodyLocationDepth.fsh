@@ -2,6 +2,7 @@
 ValueSet:  BreastBodyLocationDepthVS
 Title: "Breast Body Location Depth ValueSet"
 Description:  "Breast Body Location Depth Value Set"
+* insert ValueSet_Common
 * codes from system BreastBodyLocationDepthCS
 
 

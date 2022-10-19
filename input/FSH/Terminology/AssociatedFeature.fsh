@@ -2,6 +2,7 @@
 ValueSet:  AssociatedFeatureVS
 Title: "Associated Feature ValueSet"
 Description:  "AssociatedFeature Value Set"
+* insert ValueSet_Common
 * codes from system AssociatedFeatureCS
 
 

@@ -3,7 +3,7 @@
 */
  
 Profile: TumorSatellite
-Parent: Observation
+Parent: us-core-observation-imaging
 Title: "Tumor Satellite"
 Description: """
     Tumor Satellite
@@ -23,6 +23,8 @@ Description: """
 * category ^slicing.description = "Observation Category = imaging"
 * category contains categoryImaging 1..1
 * category[categoryImaging] = http://terminology.hl7.org/CodeSystem/observation-category#imaging
+    ///#apply DefineElement("category:categoryImaging", "Category", "Category")
+    ///#apply SetElement("category:categoryImaging", "Category", "http://terminology.hl7.org/CodeSystem/observation-category#imaging")
 * interpretation 0..0
 * referenceRange 0..0
 * basedOn 0..0
@@ -35,15 +37,15 @@ Description: """
 
 * . ^definition = """
     Tumor Satellite Observation.
-	"""
+    """
 * code = ObservationCodesCS#tumorSatelliteObservation
 * code 1..1
 
 * value[x] 0..1
 * value[x] only Quantity or Range
-* valueQuantity = UCUM#mm
-* valueRange.low = UCUM#mm
-* valueRange.high = UCUM#mm
+* valueQuantity = $UCUM#mm
+* valueRange.low = $UCUM#mm
+* valueRange.high = $UCUM#mm
 
 * derivedFrom 0..1
 * derivedFrom ^slicing.discriminator.type = #value

@@ -6,7 +6,12 @@ Description: "Observation Codes code system"
 
 * #abnormalityCyst "Abnormality Cyst observation"
     """
-    Observation.code to identify an AbnormalityCyst observation.
+    Observation.code to identify a AbnormalityCyst observation.
+    """
+
+* #abnormalityFibroadenomaObservation "Abnormality Fibroadenoma observation"
+    """
+    Observation.code to identify a Fibroadenoma observation.
     """
 
 * #associatedFeaturesObservation "Associated Features observation"
@@ -97,4 +102,29 @@ Description: "Observation Codes code system"
 * #findingsBiLateralBreastObservation "Findings BiLateral Breast observation"
     """
     Observation.code to identify a SectionFindingsBiLateralBreast observation.
+    """
+
+* #mgFindingObservation "Mammography Findings observation"
+    """
+    Observation.code to identify a Mammography Findings observation.
+    """
+
+* #nmFindingObservation "Nuclear Medicine Findings observation"
+    """
+    Observation.code to identify a Nuclear Medicine Findings observation.
+    """
+
+* #mriFindingObservation "Magnetic Resonance Imaging Findings observation"
+    """
+    Observation.code to identify a Magnetic Resonance Imaging  Findings observation.
+    """
+
+* #usFindingObservation "Ultrasound Findings observation"
+    """
+    Observation.code to identify a Ultrasound Imaging Findings observation.
+    """
+
+* #otherModalityFindingObservation "Other Modality Findings observation"
+    """
+    Observation.code to identify an Other Modality Findings observation.
     """

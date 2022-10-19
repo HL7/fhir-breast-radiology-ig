@@ -1,12 +1,14 @@
 ValueSet:  ObservedChangesVS
 Title: "ObservedChanges ValueSet"
 Description:  "ObservedChanges Value Set"
+* insert ValueSet_Common
 * codes from system ObservedChangesCS
-
-
+  
+  
 CodeSystem: ObservedChangesCS
 Title: "Observed Changes CodeSystem"
 Description: "Observed changes in an abnormality code system."
+* insert CodeSystem_Common
 * #DecreaseInCalcifications "Decrease in calcifications"
     """
     There is an decrease in the number of calcifications associated with the item being observed.

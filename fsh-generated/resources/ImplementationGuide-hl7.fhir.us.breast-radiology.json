@@ -3,8 +3,8 @@
   "id": "hl7.fhir.us.breast-radiology",
   "url": "http://hl7.org/fhir/us/breast-radiology/ImplementationGuide/hl7.fhir.us.breast-radiology",
   "version": "0.3.0",
-  "name": "BreastRadiologyReporting2ndSTUballot",
-  "title": "Breast Radiology Reporting - 2nd STU ballot",
+  "name": "BreastImagingReporting2ndSTUballot",
+  "title": "Breast Imaging Reporting - 2nd STU ballot",
   "status": "active",
   "publisher": "HL7 International - Clinical Interoperability Council",
   "contact": [
@@ -18,7 +18,7 @@
       ]
     }
   ],
-  "description": "Breast Radiology Reporting Implementation Guide",
+  "description": "Breast Imaging Reporting Implementation Guide",
   "jurisdiction": [
     {
       "coding": [
@@ -35,103 +35,76 @@
   "fhirVersion": [
     "4.0.1"
   ],
+  "dependsOn": [
+    {
+      "packageId": "hl7.fhir.us.core",
+      "version": "5.0.1",
+      "uri": "http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core",
+      "id": "hl7_fhir_us_core"
+    }
+  ],
   "definition": {
+    "grouping": [
+      {
+        "id": "MainResources",
+        "name": "Main Resources",
+        "description": "This section contains the main top level resources that are defined in this Breast Imaging Implementation Guide."
+      },
+      {
+        "id": "CommonResources",
+        "name": "Common Resources",
+        "description": "This section contains resources that are defined in this Breast Imaging Implementation Guide."
+      },
+      {
+        "id": "MGResources",
+        "name": "Mammography Resources",
+        "description": "This section contains resources that are defined in this Breast Imaging Implementation Guide specifically in a mammography exam."
+      },
+      {
+        "id": "MRIResources",
+        "name": "MRI Resources",
+        "description": "This section contains resources that are defined in this Breast Imaging Implementation Guide specifically in an MRI exam."
+      },
+      {
+        "id": "NMResources",
+        "name": "Nuclear Medicine Resources",
+        "description": "This section contains resources that are defined in this Breast Imaging Implementation Guide specifically in a nuclear medicine exam."
+      },
+      {
+        "id": "USResources",
+        "name": "Ultrasound Resources",
+        "description": "This section contains resources that are defined in this Breast Imaging Implementation Guide specifically in an ultrasound exam."
+      },
+      {
+        "id": "OtherResources",
+        "name": "Other Resources",
+        "description": "This section contains resources that are defined in this Breast Imaging Implementation Guide that are not one of the predefined exam types."
+      },
+      {
+        "id": "ExtensionResources",
+        "name": "Extension Resources",
+        "description": "This section contains extension resources that are defined in this Breast Imaging Implementation Guide."
+      },
+      {
+        "id": "CommonCodesCS",
+        "name": "Common CodeSystems",
+        "description": "This section contains code systems that are defined in this Breast Imaging Implementation Guide."
+      },
+      {
+        "id": "CommonCodesVS",
+        "name": "Common ValueSets",
+        "description": "This section contains value sets that are defined in this Breast Imaging Implementation Guide."
+      }
+    ],
     "resource": [
       {
         "reference": {
-          "reference": "StructureDefinition/AbnormalityArchitecturalDistortion"
+          "reference": "StructureDefinition/ArchitecturalDistortionAbnormality"
         },
-        "name": "Mammography Architectural Distortion",
-        "description": "Mammography Architectural Distortion",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/AbnormalityAsymmetry"
-        },
-        "name": "Asymmetry",
-        "description": "Asymmetry",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/AbnormalityCalcification"
-        },
-        "name": "Mammography Calcification",
-        "description": "Mammography Calcification",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/AbnormalityCyst"
-        },
-        "name": "Cyst",
-        "description": "Cyst",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/AbnormalityDensity"
-        },
-        "name": "Mammography Density",
-        "description": "Mammography Density",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/AbnormalityDuct"
-        },
-        "name": "Duct",
-        "description": "Duct",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/AbnormalityFatNecrosis"
-        },
-        "name": "Mammography Fat Necrosis",
-        "description": "Mammography Fat Necrosis",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/AbnormalityFibroadenoma"
-        },
-        "name": "Fibroadenoma",
-        "description": "Fibroadenoma",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/AbnormalityForeignObject"
-        },
-        "name": "Foreign Object",
-        "description": "Foreign Object",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/AbnormalityLymphNode"
-        },
-        "name": "LymphNode Abnormality",
-        "description": "LymphNode Abnormality",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/AbnormalityMass"
-        },
-        "name": "Mass Abnormality",
-        "description": "Mass Abnormality",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/AbnormalitySkinLesion"
-        },
-        "name": "Skin Lesion Abnormality",
-        "description": "Skin Lesion Abnormality",
-        "exampleBoolean": false
+        "name": "Architectural Distortion Abnormality",
+        "description": "Architectural Distortion abnormality observation.",
+        "exampleBoolean": false,
+        "groupingId": "CommonResources"
       },
       {
         "reference": {
@@ -139,31 +112,17 @@
         },
         "name": "Associated Feature",
         "description": "Associated Feature",
-        "exampleBoolean": false
+        "exampleBoolean": false,
+        "groupingId": "CommonResources"
       },
       {
         "reference": {
-          "reference": "StructureDefinition/AssociatedFeatureFragment"
+          "reference": "StructureDefinition/AsymmetryAbnormality"
         },
-        "name": "Associated Feature Fragment",
-        "description": "This fragment adds the references for the Associated Feature hasMember slice.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/BiRadAssessmentCategoryFragment"
-        },
-        "name": "BiRad Fragment",
-        "description": "Fragment that adds 'BiRad Assessment Category code' element to profile",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/BiRadBreastCompositionFragment"
-        },
-        "name": "BiRad Breast Composition Fragment",
-        "description": "Fragment that adds 'BiRad Breast Composition code' element to profile",
-        "exampleBoolean": false
+        "name": "Asymmetry Abnormality",
+        "description": "Asymmetry abnormality observation.",
+        "exampleBoolean": false,
+        "groupingId": "CommonResources"
       },
       {
         "reference": {
@@ -171,15 +130,8 @@
         },
         "name": "Breast AssessmentCategory",
         "description": "Breast Assessment Category",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/BreastBodyLocationRequiredFragment"
-        },
-        "name": "Breast Body Location (Required) Fragment",
-        "description": "This fragment adds the references for the breast body location extension.\nThe references are required, meaning that the breast body location must exist.",
-        "exampleBoolean": false
+        "exampleBoolean": false,
+        "groupingId": "CommonResources"
       },
       {
         "reference": {
@@ -187,7 +139,35 @@
         },
         "name": "Breast Composition",
         "description": "Breast Composition",
-        "exampleBoolean": false
+        "exampleBoolean": false,
+        "groupingId": "CommonResources"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/BreastImagingComposition"
+        },
+        "name": "Breast Imaging Composition",
+        "description": "Composition instance for the Breast Imaging FHIR Document.",
+        "exampleBoolean": false,
+        "groupingId": "MainResources"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/BreastImagingDocument"
+        },
+        "name": "Breast Imaging Document",
+        "description": "Breast Imaging Document Bundle.",
+        "exampleBoolean": false,
+        "groupingId": "MainResources"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/BreastImagingReport"
+        },
+        "name": "Breast Imaging Report",
+        "description": "Breast Imaging Diagnostic Report.",
+        "exampleBoolean": false,
+        "groupingId": "MainResources"
       },
       {
         "reference": {
@@ -195,31 +175,8 @@
         },
         "name": "Breast Imaging Medication Request",
         "description": "Medication request with required breast laterality field.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/BreastRadiologyComposition"
-        },
-        "name": "Breast Imaging Composition",
-        "description": "Composition instance for the Breast Imaging FHIR Document.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/BreastRadiologyDocument"
-        },
-        "name": "Breast Imaging Document",
-        "description": "Breast Imaging Document Bundle.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/BreastRadiologyReport"
-        },
-        "name": "Breast Imaging Report",
-        "description": "Breast Imaging Diagnostic Report.",
-        "exampleBoolean": false
+        "exampleBoolean": false,
+        "groupingId": "CommonResources"
       },
       {
         "reference": {
@@ -227,7 +184,17 @@
         },
         "name": "Breast Imaging Service Request",
         "description": "Service request with required breast laterality field.",
-        "exampleBoolean": false
+        "exampleBoolean": false,
+        "groupingId": "CommonResources"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/CalcificationAbnormality"
+        },
+        "name": "Calcification Abnormality",
+        "description": "Calcification abnormality observation.",
+        "exampleBoolean": false,
+        "groupingId": "CommonResources"
       },
       {
         "reference": {
@@ -235,47 +202,98 @@
         },
         "name": "Consistent With",
         "description": "Consistent With",
-        "exampleBoolean": false
+        "exampleBoolean": false,
+        "groupingId": "CommonResources"
       },
       {
         "reference": {
-          "reference": "StructureDefinition/ConsistentWithFragment"
+          "reference": "StructureDefinition/CystAbnormality"
         },
-        "name": "Consistent With Fragment",
-        "description": "This fragment adds the references for the ConsistentWith HasMember.",
-        "exampleBoolean": false
+        "name": "Cyst Abnormality",
+        "description": "Cyst abnormality observation.",
+        "exampleBoolean": false,
+        "groupingId": "CommonResources"
       },
       {
         "reference": {
-          "reference": "StructureDefinition/CorrespondsWithFragment"
+          "reference": "StructureDefinition/DensityAbnormality"
         },
-        "name": "Corresponds With Fragment",
-        "description": "'Corresponds With' Component Fragment\nAdds CorrespondsWith component",
-        "exampleBoolean": false
+        "name": "Density Abnormality",
+        "description": "Density abnormality observation.",
+        "exampleBoolean": false,
+        "groupingId": "CommonResources"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/DuctAbnormality"
+        },
+        "name": "Duct Abnormality",
+        "description": "Duct abnormality observation.",
+        "exampleBoolean": false,
+        "groupingId": "CommonResources"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/FatNecrosisAbnormality"
+        },
+        "name": "Fat Necrosis Abnormality",
+        "description": "Fat necrosis abnormality observation.",
+        "exampleBoolean": false,
+        "groupingId": "CommonResources"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/FibroadenomaAbnormality"
+        },
+        "name": "Fibroadenoma Abnormality",
+        "description": "Fibroadenoma abnormality observation.",
+        "exampleBoolean": false,
+        "groupingId": "CommonResources"
       },
       {
         "reference": {
           "reference": "StructureDefinition/FindingsBiLateralBreast"
         },
-        "name": "Findings BiLateral Breast",
-        "description": "Findings BiLateral Breast profile.",
-        "exampleBoolean": false
+        "name": "BiLateral Breast Findings",
+        "description": "BiLateral breast findings profile.",
+        "exampleBoolean": false,
+        "groupingId": "MainResources"
       },
       {
         "reference": {
           "reference": "StructureDefinition/FindingsLeftBreast"
         },
-        "name": "Findings Left Breast",
-        "description": "Findings Left Breast profile.",
-        "exampleBoolean": false
+        "name": "Left Breast Findings",
+        "description": "Left breast findings profile.",
+        "exampleBoolean": false,
+        "groupingId": "MainResources"
       },
       {
         "reference": {
           "reference": "StructureDefinition/FindingsRightBreast"
         },
-        "name": "Findings Right Breast",
-        "description": "Findings Right Breast profile.",
-        "exampleBoolean": false
+        "name": "Right Breast Findings",
+        "description": "Right breast findings profile.",
+        "exampleBoolean": false,
+        "groupingId": "MainResources"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ForeignObjectAbnormality"
+        },
+        "name": "Foreign Object Abnormality",
+        "description": "Foreign Object abnormality observation.",
+        "exampleBoolean": false,
+        "groupingId": "CommonResources"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/LymphNodeAbnormality"
+        },
+        "name": "LymphNode Abnormality Abnormality",
+        "description": "Lymph node abnormality observation.",
+        "exampleBoolean": false,
+        "groupingId": "CommonResources"
       },
       {
         "reference": {
@@ -283,7 +301,8 @@
         },
         "name": "Mammography Finding",
         "description": "Mammography Finding",
-        "exampleBoolean": false
+        "exampleBoolean": false,
+        "groupingId": "MGResources"
       },
       {
         "reference": {
@@ -291,7 +310,17 @@
         },
         "name": "MRI Finding",
         "description": "MRI Finding",
-        "exampleBoolean": false
+        "exampleBoolean": false,
+        "groupingId": "MRIResources"
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/MassAbnormality"
+        },
+        "name": "Mass Abnormality",
+        "description": "Mass Abnormality abnormality observation.",
+        "exampleBoolean": false,
+        "groupingId": "CommonResources"
       },
       {
         "reference": {
@@ -299,63 +328,17 @@
         },
         "name": "Nuclear Medicine Finding",
         "description": "NM Finding",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/NotPreviouslySeenFragment"
-        },
-        "name": "NotPreviously Seen Fragment",
-        "description": "Adds NotPreviously Seen Component slice.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/ObservedChangesFragment"
-        },
-        "name": "Observed Changes Fragment",
-        "description": "Add Observed Changes Component Slice",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/ObservedCountFragment"
-        },
-        "name": "Observed Count Fragment",
-        "description": "Fragment that adds 'Observed Count' element to profile.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/ObservedDistributionFragment"
-        },
-        "name": "Observed Distribution Fragment",
-        "description": "Fragment that adds 'Observed Distribution' components to Observation.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/ObservedSizeFragment"
-        },
-        "name": "Observed Size Fragment",
-        "description": "Fragment that adds 'Observed Size' components to Observation.",
-        "exampleBoolean": false
+        "exampleBoolean": false,
+        "groupingId": "NMResources"
       },
       {
         "reference": {
           "reference": "StructureDefinition/OtherModalityFinding"
         },
         "name": "Other Finding",
-        "description": "   Other Finding.\nThis provides a location to place modality specific finding that don't fit under any of the other\nfinding groups (i.e. MRIFinding, USFinding, MGFinding, etc).",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/PreviouslyDemonstratedByFragment"
-        },
-        "name": "Previously Demonstrated By Fragment",
-        "description": "'Demonstrated By' Component Fragment",
-        "exampleBoolean": false
+        "description": "Other Finding.\nThis provides a location to place modality specific finding that don't fit under any of the other\nfinding groups (i.e. MRIFinding, USFinding, MGFinding, etc).",
+        "exampleBoolean": false,
+        "groupingId": "OtherResources"
       },
       {
         "reference": {
@@ -363,15 +346,17 @@
         },
         "name": "Service Recommendation",
         "description": "Service Recommendation",
-        "exampleBoolean": false
+        "exampleBoolean": false,
+        "groupingId": "CommonResources"
       },
       {
         "reference": {
-          "reference": "StructureDefinition/ShapeFragment"
+          "reference": "StructureDefinition/SkinLesionAbnormality"
         },
-        "name": "Shape Components Fragment",
-        "description": "Adds Orientation, Shape, Margin, and Density Components",
-        "exampleBoolean": false
+        "name": "Skin Lesion Abnormality",
+        "description": "Skin Lesion abnormality observation.",
+        "exampleBoolean": false,
+        "groupingId": "CommonResources"
       },
       {
         "reference": {
@@ -379,15 +364,8 @@
         },
         "name": "Tumor Satellite",
         "description": "Tumor Satellite",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "StructureDefinition/TumorSatelliteFragment"
-        },
-        "name": "Tumor Satellite Fragment",
-        "description": "This fragment adds the references for the Tumor Satellite extension.",
-        "exampleBoolean": false
+        "exampleBoolean": false,
+        "groupingId": "CommonResources"
       },
       {
         "reference": {
@@ -395,7 +373,8 @@
         },
         "name": "Ultrasound Finding",
         "description": "Ultrasound Finding",
-        "exampleBoolean": false
+        "exampleBoolean": false,
+        "groupingId": "USResources"
       },
       {
         "reference": {
@@ -403,7 +382,8 @@
         },
         "name": "Breast Body Location Extension",
         "description": "Breast Body Location Extension",
-        "exampleBoolean": false
+        "exampleBoolean": false,
+        "groupingId": "ExtensionResources"
       },
       {
         "reference": {
@@ -411,71 +391,8 @@
         },
         "name": "Breast Laterality Extension",
         "description": "Extension that defines the laterality of the breast being examined.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/AbnormalityAsymmetryTypeVS"
-        },
-        "name": "Asymmetry Type ValueSet",
-        "description": "Asymmetry Type Value Set",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/AbnormalityCystTypeVS"
-        },
-        "name": "Cyst Type Value Set",
-        "description": "Cyst type Value Set.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/AbnormalityDensityTypeVS"
-        },
-        "name": "Density Type ValueSet",
-        "description": "Density Type Value Set",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/AbnormalityDuctTypeVS"
-        },
-        "name": "Duct Type ValueSet",
-        "description": "Duct Type Value Set",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/AbnormalityFibroAdenomaTypeVS"
-        },
-        "name": "FibroAdenoma  Type ValueSet",
-        "description": "FibroAdenoma Type Value Set",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/AbnormalityForeignObjectTypeVS"
-        },
-        "name": "Foreign Object Type ValueSet",
-        "description": "Foreign Object Type Value Set",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/AbnormalityLymphNodeTypeVS"
-        },
-        "name": "Lymph Node Type ValueSet",
-        "description": "LymphNode Type Value Set",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/AbnormalityMassTypeVS"
-        },
-        "name": "Mass Type ValueSet",
-        "description": "Mass Type Value Set",
-        "exampleBoolean": false
+        "exampleBoolean": false,
+        "groupingId": "ExtensionResources"
       },
       {
         "reference": {
@@ -483,7 +400,17 @@
         },
         "name": "Associated Feature ValueSet",
         "description": "AssociatedFeature Value Set",
-        "exampleBoolean": false
+        "exampleBoolean": false,
+        "groupingId": "CommonCodesVS"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/AsymmetryAbnormalityTypeVS"
+        },
+        "name": "Asymmetry Abnormality Type ValueSet",
+        "description": "Asymmetry Type Value Set",
+        "exampleBoolean": false,
+        "groupingId": "CommonCodesVS"
       },
       {
         "reference": {
@@ -491,7 +418,8 @@
         },
         "name": "Breast Assessment Category ValueSet",
         "description": "Breast Assessment Category Value Set",
-        "exampleBoolean": false
+        "exampleBoolean": false,
+        "groupingId": "CommonCodesVS"
       },
       {
         "reference": {
@@ -499,7 +427,8 @@
         },
         "name": "Breast Body Location Depth ValueSet",
         "description": "Breast Body Location Depth Value Set",
-        "exampleBoolean": false
+        "exampleBoolean": false,
+        "groupingId": "CommonCodesVS"
       },
       {
         "reference": {
@@ -507,7 +436,8 @@
         },
         "name": "Breast Body Location Regions ValueSet",
         "description": "Breast Body Location Regions Value Set",
-        "exampleBoolean": false
+        "exampleBoolean": false,
+        "groupingId": "CommonCodesVS"
       },
       {
         "reference": {
@@ -515,7 +445,17 @@
         },
         "name": "Breast Composition ValueSet",
         "description": "Breast Composition Value Set\nCodes that describe the observed composition of \nthe breast.",
-        "exampleBoolean": false
+        "exampleBoolean": false,
+        "groupingId": "CommonCodesVS"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/BreastImagingReportTypesVS"
+        },
+        "name": "Breast Imaging Report Types ValueSet",
+        "description": "This value set defines that allowable codes that BreastImagingReport.code can be set to.\nBreastImagingReport.code defines the type of breast imaging report that this is.\n\nThis needs to have the complete set of desired report types added.",
+        "exampleBoolean": false,
+        "groupingId": "CommonCodesVS"
       },
       {
         "reference": {
@@ -523,7 +463,8 @@
         },
         "name": "BreastLandmark ValueSet",
         "description": "Body landmarks which define the origin of a measurement in the Breast IG.",
-        "exampleBoolean": false
+        "exampleBoolean": false,
+        "groupingId": "CommonCodesVS"
       },
       {
         "reference": {
@@ -531,7 +472,8 @@
         },
         "name": "Breast Laterality ValueSet",
         "description": "Values that define the laterality of a breast being examined.",
-        "exampleBoolean": false
+        "exampleBoolean": false,
+        "groupingId": "CommonCodesVS"
       },
       {
         "reference": {
@@ -539,15 +481,8 @@
         },
         "name": "Breast Quadrant ValueSet",
         "description": "This value set contains codes that describe the various breast quadrants.\nIt is used to describe the quadrant location of an item of interest.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "ValueSet/BreastRadReportTypesVS"
-        },
-        "name": "Breast Imaging Report Types ValueSet",
-        "description": "This value set defines that allowable codes that BreastRadiologyReport.code can be set to.\nBreastRadiologyReport.code defines the type of breast imaging report that this is.\n\nThis needs to have the complete set of desired report types added.",
-        "exampleBoolean": false
+        "exampleBoolean": false,
+        "groupingId": "CommonCodesVS"
       },
       {
         "reference": {
@@ -555,7 +490,8 @@
         },
         "name": "CalcificationDistribution ValueSet",
         "description": "CalcificationDistribution Value Set",
-        "exampleBoolean": false
+        "exampleBoolean": false,
+        "groupingId": "CommonCodesVS"
       },
       {
         "reference": {
@@ -563,7 +499,8 @@
         },
         "name": "Calcification Type Value Set",
         "description": "Calcification Type Value Set\nThis value set describes the types of calcification findings that may be found\nduring an exam.",
-        "exampleBoolean": false
+        "exampleBoolean": false,
+        "groupingId": "CommonCodesVS"
       },
       {
         "reference": {
@@ -571,7 +508,8 @@
         },
         "name": "Clock Positions ValueSet",
         "description": "This value set contains the codes that describe the location \nof an item of interest as a clock face position.",
-        "exampleBoolean": false
+        "exampleBoolean": false,
+        "groupingId": "CommonCodesVS"
       },
       {
         "reference": {
@@ -579,7 +517,8 @@
         },
         "name": "ConsistentWith Qualifier ValueSet",
         "description": "ConsistentWith Qualifier Value Set",
-        "exampleBoolean": false
+        "exampleBoolean": false,
+        "groupingId": "CommonCodesVS"
       },
       {
         "reference": {
@@ -587,7 +526,8 @@
         },
         "name": "ConsistentWith ValueSet",
         "description": "ConsistentWith Value Set",
-        "exampleBoolean": false
+        "exampleBoolean": false,
+        "groupingId": "CommonCodesVS"
       },
       {
         "reference": {
@@ -595,7 +535,53 @@
         },
         "name": "CorrespondsWith ValueSet",
         "description": "CorrespondsWith Value Set",
-        "exampleBoolean": false
+        "exampleBoolean": false,
+        "groupingId": "CommonCodesVS"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/CystAbnormalityTypeVS"
+        },
+        "name": "Cyst Abnormality Type Value Set",
+        "description": "Cyst type Value Set.",
+        "exampleBoolean": false,
+        "groupingId": "CommonCodesVS"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/DensityAbnormalityTypeVS"
+        },
+        "name": "Density Abnormality Type ValueSet",
+        "description": "Density Type Value Set",
+        "exampleBoolean": false,
+        "groupingId": "CommonCodesVS"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/DuctAbnormalityTypeVS"
+        },
+        "name": "Duct Abnormality Type ValueSet",
+        "description": "Duct Type Value Set",
+        "exampleBoolean": false,
+        "groupingId": "CommonCodesVS"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/FibroAdenomaAbnormalityTypeVS"
+        },
+        "name": "FibroAdenoma Abnormality Type ValueSet",
+        "description": "FibroAdenoma Type Value Set",
+        "exampleBoolean": false,
+        "groupingId": "CommonCodesVS"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/ForeignObjectAbnormalityTypeVS"
+        },
+        "name": "Foreign Object Abnormality Type ValueSet",
+        "description": "Foreign Object Type Value Set",
+        "exampleBoolean": false,
+        "groupingId": "CommonCodesVS"
       },
       {
         "reference": {
@@ -603,7 +589,8 @@
         },
         "name": "Laterality ValueSet",
         "description": "Side of the body being examined",
-        "exampleBoolean": false
+        "exampleBoolean": false,
+        "groupingId": "CommonCodesVS"
       },
       {
         "reference": {
@@ -611,7 +598,17 @@
         },
         "name": "Lesion density ValueSet",
         "description": "Lesion density ValueSet",
-        "exampleBoolean": false
+        "exampleBoolean": false,
+        "groupingId": "CommonCodesVS"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/LymphNodeAbnormalityTypeVS"
+        },
+        "name": "Lymph Node Type ValueSet",
+        "description": "LymphNode Type Value Set",
+        "exampleBoolean": false,
+        "groupingId": "CommonCodesVS"
       },
       {
         "reference": {
@@ -619,7 +616,8 @@
         },
         "name": "Mammography assessment finding ValueSet",
         "description": "Mammography assessment finding Value Set",
-        "exampleBoolean": false
+        "exampleBoolean": false,
+        "groupingId": "CommonCodesVS"
       },
       {
         "reference": {
@@ -627,7 +625,17 @@
         },
         "name": "Margin ValueSet",
         "description": "Margin Value Set",
-        "exampleBoolean": false
+        "exampleBoolean": false,
+        "groupingId": "CommonCodesVS"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/MassAbnormalityTypeVS"
+        },
+        "name": "Mass Abnormality Type ValueSet",
+        "description": "Mass Type Value Set",
+        "exampleBoolean": false,
+        "groupingId": "CommonCodesVS"
       },
       {
         "reference": {
@@ -635,7 +643,8 @@
         },
         "name": "NotPreviouslySeen ValueSet",
         "description": "NotPreviouslySeen Value Set",
-        "exampleBoolean": false
+        "exampleBoolean": false,
+        "groupingId": "CommonCodesVS"
       },
       {
         "reference": {
@@ -643,7 +652,8 @@
         },
         "name": "ObservedChanges ValueSet",
         "description": "ObservedChanges Value Set",
-        "exampleBoolean": false
+        "exampleBoolean": false,
+        "groupingId": "CommonCodesVS"
       },
       {
         "reference": {
@@ -651,15 +661,17 @@
         },
         "name": "Orientation ValueSet",
         "description": "Orientation Value Set",
-        "exampleBoolean": false
+        "exampleBoolean": false,
+        "groupingId": "CommonCodesVS"
       },
       {
         "reference": {
           "reference": "ValueSet/PreviouslyDemonstratedByVS"
         },
         "name": "PreviouslyDemonstratedBy ValueSet",
-        "description": "This is a valueset of codes that describe medical procedures that\nwere previously used to demonstrate an observation. ",
-        "exampleBoolean": false
+        "description": "This is a valueset of codes that describe medical procedures that\nwere previously used to demonstrate an observation.",
+        "exampleBoolean": false,
+        "groupingId": "CommonCodesVS"
       },
       {
         "reference": {
@@ -667,7 +679,8 @@
         },
         "name": "ServiceRecommendations ValueSet",
         "description": "ServiceRecommendations Value Set",
-        "exampleBoolean": false
+        "exampleBoolean": false,
+        "groupingId": "CommonCodesVS"
       },
       {
         "reference": {
@@ -675,71 +688,17 @@
         },
         "name": "Shape ValueSet",
         "description": "Shape Value Set",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "CodeSystem/AbnormalityAsymmetryTypeCS"
-        },
-        "name": "Asymmetry Type CodeSystem",
-        "description": "Asymmetry type code system.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "CodeSystem/AbnormalityCystTypeCS"
-        },
-        "name": "Cyst Type CodeSystem",
-        "description": "Cyst type CodeSystem.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "CodeSystem/AbnormalityDensityTypeCS"
-        },
-        "name": "Density Type CodeSystem",
-        "description": "Density refinement types code system.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "CodeSystem/AbnormalityDuctTypeCS"
-        },
-        "name": "Duct Type CodeSystem",
-        "description": "Duct types code system.",
-        "exampleBoolean": false
+        "exampleBoolean": false,
+        "groupingId": "CommonCodesVS"
       },
       {
         "reference": {
           "reference": "CodeSystem/AbnormalityFibroadenomaTypeCS"
         },
-        "name": "Fibroadenoma Type CodeSystem",
+        "name": "Fibroadenoma Abnormality Type CodeSystem",
         "description": "Fibroadenoma  type code system.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "CodeSystem/AbnormalityForeignObjectTypeCS"
-        },
-        "name": "Foreign Object Type CodeSystem",
-        "description": "Foreign Object Type CodeSystem",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "CodeSystem/AbnormalityLymphNodeTypeCS"
-        },
-        "name": "Lymph Node Type CodeSystem",
-        "description": "Lymph node types code system.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "CodeSystem/AbnormalityMassTypeCS"
-        },
-        "name": "Mass Type CodeSystem",
-        "description": "Mass Type CodeSystem",
-        "exampleBoolean": false
+        "exampleBoolean": false,
+        "groupingId": "CommonCodesCS"
       },
       {
         "reference": {
@@ -747,7 +706,17 @@
         },
         "name": "Associated Feature CodeSystem",
         "description": "Associated Feature seen during a breast examination.",
-        "exampleBoolean": false
+        "exampleBoolean": false,
+        "groupingId": "CommonCodesCS"
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/AsymmetryAbnormalityTypeCS"
+        },
+        "name": "Asymmetry Abnormality Type CodeSystem",
+        "description": "Asymmetry type code system.",
+        "exampleBoolean": false,
+        "groupingId": "CommonCodesCS"
       },
       {
         "reference": {
@@ -755,7 +724,8 @@
         },
         "name": "Breast Body Location Depth CodeSystem",
         "description": "Breast Body Location Depth CodeSystem",
-        "exampleBoolean": false
+        "exampleBoolean": false,
+        "groupingId": "CommonCodesCS"
       },
       {
         "reference": {
@@ -763,7 +733,8 @@
         },
         "name": "Breast Body Location Regions CodeSystem",
         "description": "Breast Body Location Regions CodeSystem",
-        "exampleBoolean": false
+        "exampleBoolean": false,
+        "groupingId": "CommonCodesCS"
       },
       {
         "reference": {
@@ -771,7 +742,8 @@
         },
         "name": "Breast Composition CodeSystem",
         "description": "Breast composition values code system.",
-        "exampleBoolean": false
+        "exampleBoolean": false,
+        "groupingId": "CommonCodesCS"
       },
       {
         "reference": {
@@ -779,7 +751,8 @@
         },
         "name": "Calcification Type CodeSystem",
         "description": "Mammography calcification type code system.",
-        "exampleBoolean": false
+        "exampleBoolean": false,
+        "groupingId": "CommonCodesCS"
       },
       {
         "reference": {
@@ -787,7 +760,8 @@
         },
         "name": "Composition Section Slice Codes CodeSystem",
         "description": "Composition Section Slice Codes code system",
-        "exampleBoolean": false
+        "exampleBoolean": false,
+        "groupingId": "CommonCodesCS"
       },
       {
         "reference": {
@@ -795,7 +769,8 @@
         },
         "name": "ConsistentWith Qualifier CodeSystem",
         "description": "ConsistentWithQualifier  code system",
-        "exampleBoolean": false
+        "exampleBoolean": false,
+        "groupingId": "CommonCodesCS"
       },
       {
         "reference": {
@@ -803,7 +778,44 @@
         },
         "name": "CorrespondsWith CodeSystem",
         "description": "CorrespondsWith CodeSystem",
-        "exampleBoolean": false
+        "exampleBoolean": false,
+        "groupingId": "CommonCodesCS"
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/CystAbnormalityTypeCS"
+        },
+        "name": "Cyst Abnormality Type CodeSystem",
+        "description": "Cyst type CodeSystem.",
+        "exampleBoolean": false,
+        "groupingId": "CommonCodesCS"
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/DensityAbnormalityTypeCS"
+        },
+        "name": "Density Abnormality Type CodeSystem",
+        "description": "Density refinement types code system.",
+        "exampleBoolean": false,
+        "groupingId": "CommonCodesCS"
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/DuctAbnormalityTypeCS"
+        },
+        "name": "Duct Abnormality Type CodeSystem",
+        "description": "Duct types code system.",
+        "exampleBoolean": false,
+        "groupingId": "CommonCodesCS"
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/ForeignObjectAbnormalityTypeCS"
+        },
+        "name": "Foreign Object Abnormality Type CodeSystem",
+        "description": "Foreign Object Type CodeSystem",
+        "exampleBoolean": false,
+        "groupingId": "CommonCodesCS"
       },
       {
         "reference": {
@@ -811,7 +823,17 @@
         },
         "name": "Lesion density CodeSystem",
         "description": "Lesion Density code system.",
-        "exampleBoolean": false
+        "exampleBoolean": false,
+        "groupingId": "CommonCodesCS"
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/LymphNodeAbnormalityTypeCS"
+        },
+        "name": "Lymph Node Type CodeSystem",
+        "description": "Lymph node types code system.",
+        "exampleBoolean": false,
+        "groupingId": "CommonCodesCS"
       },
       {
         "reference": {
@@ -819,7 +841,17 @@
         },
         "name": "Margin CodeSystem",
         "description": "Margin code system.",
-        "exampleBoolean": false
+        "exampleBoolean": false,
+        "groupingId": "CommonCodesCS"
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/MassAbnormalityTypeCS"
+        },
+        "name": "Mass Abnormality Type CodeSystem",
+        "description": "Mass Type CodeSystem",
+        "exampleBoolean": false,
+        "groupingId": "CommonCodesCS"
       },
       {
         "reference": {
@@ -827,7 +859,8 @@
         },
         "name": "Observation Codes CodeSystem",
         "description": "Observation Codes code system",
-        "exampleBoolean": false
+        "exampleBoolean": false,
+        "groupingId": "CommonCodesCS"
       },
       {
         "reference": {
@@ -835,7 +868,8 @@
         },
         "name": "Component Slice Codes CodeSystem",
         "description": "Component Slice Codes code system",
-        "exampleBoolean": false
+        "exampleBoolean": false,
+        "groupingId": "CommonCodesCS"
       },
       {
         "reference": {
@@ -843,7 +877,8 @@
         },
         "name": "Observed Changes CodeSystem",
         "description": "Observed changes in an abnormality code system.",
-        "exampleBoolean": false
+        "exampleBoolean": false,
+        "groupingId": "CommonCodesCS"
       },
       {
         "reference": {
@@ -851,7 +886,8 @@
         },
         "name": "Orientation CodeSystem",
         "description": "Orientation CodeSystem",
-        "exampleBoolean": false
+        "exampleBoolean": false,
+        "groupingId": "CommonCodesCS"
       },
       {
         "reference": {
@@ -859,7 +895,8 @@
         },
         "name": "ServiceRecommendations CodeSystem",
         "description": "ServiceRecommendations CodeSystem",
-        "exampleBoolean": false
+        "exampleBoolean": false,
+        "groupingId": "CommonCodesCS"
       }
     ],
     "page": {

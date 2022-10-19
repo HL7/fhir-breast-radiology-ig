@@ -1,16 +1,6 @@
 {
   "resourceType": "StructureDefinition",
   "id": "TumorSatellite",
-  "extension": [
-    {
-      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
-      "valueString": "Clinical.Diagnostics"
-    },
-    {
-      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category",
-      "valueCode": "patient"
-    }
-  ],
   "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/TumorSatellite",
   "version": "0.0.2",
   "name": "TumorSatellite",
@@ -76,7 +66,7 @@
   "kind": "resource",
   "abstract": false,
   "type": "Observation",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
+  "baseDefinition": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-imaging",
   "derivation": "constraint",
   "differential": {
     "element": [
@@ -114,7 +104,7 @@
           "ordered": false,
           "description": "Observation Category = imaging"
         },
-        "min": 1
+        "min": 2
       },
       {
         "id": "Observation.category:categoryImaging",
@@ -163,7 +153,13 @@
         },
         "type": [
           {
-            "code": "Quantity"
+            "code": "Quantity",
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                "valueBoolean": true
+              }
+            ]
           },
           {
             "code": "Range"
@@ -177,7 +173,13 @@
         "max": "1",
         "type": [
           {
-            "code": "Quantity"
+            "code": "Quantity",
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
+                "valueBoolean": true
+              }
+            ]
           }
         ],
         "patternQuantity": {

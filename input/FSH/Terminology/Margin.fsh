@@ -1,14 +1,14 @@
 ValueSet:  MarginVS
 Title: "Margin ValueSet"
 Description:  "Margin Value Set"
+* insert ValueSet_Common
 * codes from system MarginCS
-
-
 
 
 CodeSystem: MarginCS
 Title: "Margin CodeSystem"
 Description: "Margin code system."
+* insert CodeSystem_Common
 * #AngularMargin "Angular margin"
     """
     Some or all of the margin has sharp corners, often

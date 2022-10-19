@@ -1,0 +1,141 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "BreastImagingReport",
+  "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastImagingReport",
+  "version": "0.0.2",
+  "name": "BreastImagingReport",
+  "title": "Breast Imaging Report",
+  "status": "draft",
+  "date": "2019-11-01",
+  "publisher": "Hl7-Clinical Interoperability Council",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://hl7.org/Special/committees/cic"
+        }
+      ]
+    }
+  ],
+  "description": "Breast Imaging Diagnostic Report.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "US",
+          "system": "urn:iso:std:iso:3166",
+          "display": "United States of America"
+        }
+      ]
+    }
+  ],
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "workflow",
+      "uri": "http://hl7.org/fhir/workflow",
+      "name": "Workflow Pattern"
+    },
+    {
+      "identity": "v2",
+      "uri": "http://hl7.org/v2",
+      "name": "HL7 v2 Mapping"
+    },
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    },
+    {
+      "identity": "w5",
+      "uri": "http://hl7.org/fhir/fivews",
+      "name": "FiveWs Pattern Mapping"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "DiagnosticReport",
+  "baseDefinition": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-note",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "DiagnosticReport.category",
+        "path": "DiagnosticReport.category",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "open",
+          "ordered": false,
+          "description": "Observation Category = imaging"
+        }
+      },
+      {
+        "id": "DiagnosticReport.category:categoryImaging",
+        "path": "DiagnosticReport.category",
+        "sliceName": "categoryImaging",
+        "min": 1,
+        "max": "1",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "imaging",
+              "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+            }
+          ]
+        }
+      },
+      {
+        "id": "DiagnosticReport.code",
+        "path": "DiagnosticReport.code",
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/BreastImagingReportTypesVS"
+        }
+      },
+      {
+        "id": "DiagnosticReport.specimen",
+        "path": "DiagnosticReport.specimen",
+        "max": "0"
+      },
+      {
+        "id": "DiagnosticReport.result",
+        "path": "DiagnosticReport.result",
+        "max": "0"
+      },
+      {
+        "id": "DiagnosticReport.conclusionCode",
+        "path": "DiagnosticReport.conclusionCode",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "open",
+          "ordered": false,
+          "description": "ConclusionCode slicing"
+        }
+      },
+      {
+        "id": "DiagnosticReport.conclusionCode:BiRads",
+        "path": "DiagnosticReport.conclusionCode",
+        "sliceName": "BiRads",
+        "short": "BiRads assessment value.",
+        "definition": "A required summary conclusion of the breast imaging report. Typically this is the most severe BiRads code\nfound in either of the right or left breast observation sections.\nIn general, it is expected that a BiRads conclusion code will be included, though there are cases \nwhere a BiRads conclusion code can not be included.\n\nIn these cases the actual non-BiRads code will be found in a separate slice of the FHIR CodeableConcept element\nthat contains this value or alternately (though not preferred) described in the text section of the report.\n\nAn example of this being used: A procedure is performed to implant a surgical marker. There is no BiRads code\nassociated with this completion of the procedure, though regulation may require a specific non Birads \ncode to be used to descibe the completion of this procedure.",
+        "min": 0,
+        "max": "1",
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/BreastAssessmentCategoryVS"
+        }
+      }
+    ]
+  }
+}

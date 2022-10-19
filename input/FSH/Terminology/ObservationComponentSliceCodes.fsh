@@ -6,22 +6,22 @@ Description: "Component Slice Codes code system"
 
 * #abnormalityCystType "Component code for 'Cyst Type' slice"
     """
-    Code to identify the component slice AbnormalityCystType.
+    Code to identify the component slice CystAbnormalityType.
     """
 
 * #abnormalityDuctType "Component code for 'Duct Type' slice"
     """
-    Code to identify the component slice AbnormalityDuctType.
+    Code to identify the component slice DuctAbnormalityType.
     """
 
 * #abnormalityFibroAdenomaType "Component code for 'FibroAdenoma Type' slice"
     """
-    Code to identify the component slice AbnormalityFibroAdenomaType.
+    Code to identify the component slice FibroAdenomaAbnormalityType.
     """
 
 * #abnormalityForeignObjectType "Component code for 'Foreign Object Type' slice"
     """
-    Code to identify the component slice AbnormalityForeignObjectType.
+    Code to identify the component slice ForeignObjectAbnormalityType.
     """
 
 * #abnormalityLymphNodeType "Component code for 'Lymph Node Type' slice"
@@ -31,17 +31,17 @@ Description: "Component Slice Codes code system"
 
 * #abnormalityMassType "Component code for 'Abnormality Mass Type' slice"
     """
-    Code to identify the component slice AbnormalityMassType.
+    Code to identify the component slice MassAbnormalityType.
     """
 
 * #abnormalityAsymmetryType "Component code for 'Abnormality Asymmetry Type' slice"
     """
-    Code to identify the component slice MGCodeAbnormalityAsymmetryType.
+    Code to identify the component slice MGCodeAsymmetryAbnormalityType.
     """
 
 * #abnormalityDensityType "Component code for 'Abnormality Density Type' slice"
     """
-    Code to identify the component slice MGCodeAbnormalityDensityType.
+    Code to identify the component slice MGCodeDensityAbnormalityType.
     """
 
 * #biRadsAssessmentCategory "Component code for 'BiRads Code' slice"
@@ -67,6 +67,11 @@ Description: "Component Slice Codes code system"
 * #correspondsWith "Component code for 'Corresponds With' slice"
     """
     Code to identify the component slice CorrespondsWith.
+    """
+
+* #density "Component code for 'density' slice"
+    """
+    Code to identify the component slice Density.
     """
 
 * #prevDemBy "Component code for 'Previously Demonstrated By' slice"

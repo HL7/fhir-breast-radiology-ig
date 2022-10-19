@@ -6,6 +6,8 @@ ValueSet:  ConsistentWithVS
 Title: "ConsistentWith ValueSet"
 Description:  "ConsistentWith Value Set"
 
+* insert ValueSet_Common
+
 //$FIXME: Ask GG if this should include all children of 399294002
 
 * include $SCT#404057003 "Angiolipoma (Disorder)"
@@ -60,11 +62,11 @@ Description:  "ConsistentWith Value Set"
 
 //$FIXME: Validate this!
 // LymphNodeNormal "Lymph node normal"
-* include $SCT#301866000:363713009=17621005 "301866000 'Finding of size of lymph node (finding)': 363713009 'Has Interpretation' = 17621005 'Normal (qualifier value)'"
+//* include $SCT#301866000:363713009=17621005 "301866000 'Finding of size of lymph node (finding)': 363713009 'Has Interpretation' = 17621005 'Normal (qualifier value)'"
 
 //$FIXME: Validate this!
 //* #LymphNodePathological "Lymph node pathological"
-* include $SCT#301866000:363713009=263654008 "301866000 'Finding of size of lymph node (finding)': 363713009 'Has Interpretation' = 263654008 'Abnormal (qualifier value)'"
+//* include $SCT#301866000:363713009=263654008 "301866000 'Finding of size of lymph node (finding)': 363713009 'Has Interpretation' = 263654008 'Abnormal (qualifier value)'"
 
 /*
  * $FIXME

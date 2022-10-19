@@ -1,16 +1,6 @@
 {
   "resourceType": "StructureDefinition",
   "id": "USFinding",
-  "extension": [
-    {
-      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
-      "valueString": "Clinical.Diagnostics"
-    },
-    {
-      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category",
-      "valueCode": "patient"
-    }
-  ],
   "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/USFinding",
   "version": "0.3.0",
   "name": "USFinding",
@@ -53,7 +43,7 @@
   "kind": "resource",
   "abstract": false,
   "type": "Observation",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
+  "baseDefinition": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-imaging",
   "derivation": "constraint",
   "differential": {
     "element": [
@@ -86,7 +76,7 @@
           "ordered": false,
           "description": "Observation Category = imaging"
         },
-        "min": 1
+        "min": 2
       },
       {
         "id": "Observation.category:categoryImaging",

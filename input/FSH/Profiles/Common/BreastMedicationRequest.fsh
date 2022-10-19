@@ -1,5 +1,5 @@
 Profile: BreastMedicationRequest
-Parent: MedicationRequest
+Parent: us-core-medicationrequest 
 Title: "Breast Imaging Medication Request"
 Description: """
   Medication request with required breast laterality field.

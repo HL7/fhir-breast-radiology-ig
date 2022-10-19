@@ -1,5 +1,5 @@
 Profile: BreastServiceRequest
-Parent: ServiceRequest
+Parent: us-core-servicerequest
 Title: "Breast Imaging Service Request"
 Description: """
   Service request with required breast laterality field.

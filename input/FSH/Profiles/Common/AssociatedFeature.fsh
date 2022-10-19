@@ -1,5 +1,5 @@
 Profile: AssociatedFeature
-Parent: Observation
+Parent: us-core-observation-imaging
 Title: "Associated Feature"
 Description: """
     Associated Feature
@@ -33,7 +33,7 @@ Description: """
 * component[featureType].code ^short = "Associated Feature Type component code."
 * component[featureType].code ^definition = """
     This code identifies the Associated Feature Type component.
-	"""
+    """
 * component[featureType].code = ObservationComponentSliceCodesCS#featureType
 * component[featureType].value[x] 1..1
 * component[featureType].value[x] only CodeableConcept
@@ -46,6 +46,8 @@ Description: """
 * category ^slicing.description = "Observation Category = imaging"
 * category contains categoryImaging 1..1
 * category[categoryImaging] = http://terminology.hl7.org/CodeSystem/observation-category#imaging
+    ///#apply DefineElement("category:categoryImaging", "Category", "Category")
+    ///#apply SetElement("category:categoryImaging", "Category", "http://terminology.hl7.org/CodeSystem/observation-category#imaging")
 * interpretation 0..0
 * referenceRange 0..0
 * basedOn 0..0
@@ -81,7 +83,7 @@ Description: """
 * component[observedCount].code ^short = "Observed Count component. component code."
 * component[observedCount].code ^definition = """
     This code identifies the Observed Count component. component.
-	"""
+    """
 * component[observedCount].code = ObservationComponentSliceCodesCS#obsCount
 * component[observedCount].value[x] 1..1
 * component[observedCount].value[x] only Quantity or Range

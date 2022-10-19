@@ -1,5 +1,5 @@
 Profile: ServiceRecommendation
-Parent: ServiceRequest
+Parent:  us-core-servicerequest
 Title: "Service Recommendation"
 Description: """
   Service Recommendation

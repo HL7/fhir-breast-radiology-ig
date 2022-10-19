@@ -1,10 +1,10 @@
 Profile: OtherModalityFinding
-Parent: Observation
+Parent: us-core-observation-imaging
 Title: "Other Finding"
 Description: """
     Other Finding.
-	This provides a location to place modality specific finding that don't fit under any of the other
-	finding groups (i.e. MRIFinding, USFinding, MGFinding, etc).
+    This provides a location to place modality specific finding that don't fit under any of the other
+    finding groups (i.e. MRIFinding, USFinding, MGFinding, etc).
     """
 * code = ObservationCodesCS#otherModalityFindingObservation
 * code 1..1
@@ -15,6 +15,8 @@ Description: """
 * category ^slicing.description = "Observation Category = imaging"
 * category contains categoryImaging 1..1
 * category[categoryImaging] = http://terminology.hl7.org/CodeSystem/observation-category#imaging
+    ///#apply DefineElement("category:categoryImaging", "Category", "Category")
+    ///#apply SetElement("category:categoryImaging", "Category", "http://terminology.hl7.org/CodeSystem/observation-category#imaging")
 * interpretation 0..0
 * referenceRange 0..0
 * basedOn 0..0

@@ -1,20 +1,10 @@
 {
   "resourceType": "StructureDefinition",
   "id": "FindingsRightBreast",
-  "extension": [
-    {
-      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
-      "valueString": "Clinical.Diagnostics"
-    },
-    {
-      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category",
-      "valueCode": "patient"
-    }
-  ],
   "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/FindingsRightBreast",
   "version": "0.0.2",
   "name": "FindingsRightBreast",
-  "title": "Findings Right Breast",
+  "title": "Right Breast Findings",
   "status": "draft",
   "date": "2019-11-01",
   "publisher": "Hl7-Clinical Interoperability Council",
@@ -28,7 +18,7 @@
       ]
     }
   ],
-  "description": "Findings Right Breast profile.",
+  "description": "Right breast findings profile.",
   "jurisdiction": [
     {
       "coding": [
@@ -76,7 +66,7 @@
   "kind": "resource",
   "abstract": false,
   "type": "Observation",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
+  "baseDefinition": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-imaging",
   "derivation": "constraint",
   "differential": {
     "element": [
@@ -109,7 +99,7 @@
           "ordered": false,
           "description": "Observation Category = imaging"
         },
-        "min": 1
+        "min": 2
       },
       {
         "id": "Observation.category:categoryImaging",

@@ -1,19 +1,19 @@
 ValueSet:  BreastCompositionVS
 Title: "Breast Composition ValueSet"
 Description:
-	"""
-	Breast Composition Value Set
-	Codes that describe the observed composition of 
-	the breast.
-	"""
+    """
+    Breast Composition Value Set
+    Codes that describe the observed composition of 
+    the breast.
+    """
+* insert ValueSet_Common
 * codes from system BreastCompositionCS
-
-
 
 
 CodeSystem: BreastCompositionCS
 Title: "Breast Composition CodeSystem"
 Description: "Breast composition values code system."
+* insert CodeSystem_Common
 * #AlmostEntirelyFat "(a) Almost entirely fat"
     """
     A term used to describe breast tissue that is made
@@ -39,5 +39,6 @@ Description: "Breast composition values code system."
     A term used to describe breast tissue that is made
     up of almost all dense fibrous tissue and glandular tissue.
     """
+
 
 // * include codes from system $SCT where concept descendent-of #129715009 "Mammographic breast composition finding (finding)"

@@ -1,16 +1,6 @@
 {
   "resourceType": "StructureDefinition",
   "id": "AssociatedFeature",
-  "extension": [
-    {
-      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
-      "valueString": "Clinical.Diagnostics"
-    },
-    {
-      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category",
-      "valueCode": "patient"
-    }
-  ],
   "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AssociatedFeature",
   "version": "0.3.0",
   "name": "AssociatedFeature",
@@ -53,7 +43,7 @@
   "kind": "resource",
   "abstract": false,
   "type": "Observation",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
+  "baseDefinition": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-imaging",
   "derivation": "constraint",
   "differential": {
     "element": [
@@ -91,7 +81,7 @@
           "ordered": false,
           "description": "Observation Category = imaging"
         },
-        "min": 1
+        "min": 2
       },
       {
         "id": "Observation.category:categoryImaging",

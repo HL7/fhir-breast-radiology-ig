@@ -1,16 +1,6 @@
 {
   "resourceType": "StructureDefinition",
   "id": "MGFinding",
-  "extension": [
-    {
-      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
-      "valueString": "Clinical.Diagnostics"
-    },
-    {
-      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category",
-      "valueCode": "patient"
-    }
-  ],
   "url": "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MGFinding",
   "version": "0.3.0",
   "name": "MGFinding",
@@ -53,7 +43,7 @@
   "kind": "resource",
   "abstract": false,
   "type": "Observation",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
+  "baseDefinition": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-observation-imaging",
   "derivation": "constraint",
   "differential": {
     "element": [
@@ -86,7 +76,7 @@
           "ordered": false,
           "description": "Observation Category = imaging"
         },
-        "min": 1
+        "min": 2
       },
       {
         "id": "Observation.category:categoryImaging",
@@ -176,7 +166,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityCyst"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/CystAbnormality"
             ]
           }
         ]
@@ -192,7 +182,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityDuct"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/DuctAbnormality"
             ]
           }
         ]
@@ -208,7 +198,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityForeignObject"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ForeignObjectAbnormality"
             ]
           }
         ]
@@ -224,7 +214,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityLymphNode"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/LymphNodeAbnormality"
             ]
           }
         ]
@@ -240,7 +230,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityMass"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/MassAbnormality"
             ]
           }
         ]
@@ -256,7 +246,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalitySkinLesion"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/SkinLesionAbnormality"
             ]
           }
         ]
@@ -288,7 +278,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityFibroadenoma"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/FibroadenomaAbnormality"
             ]
           }
         ]
@@ -304,7 +294,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityArchitecturalDistortion"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/ArchitecturalDistortionAbnormality"
             ]
           }
         ]
@@ -320,7 +310,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityAsymmetry"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AsymmetryAbnormality"
             ]
           }
         ]
@@ -336,7 +326,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityCalcification"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/CalcificationAbnormality"
             ]
           }
         ]
@@ -352,7 +342,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityDensity"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/DensityAbnormality"
             ]
           }
         ]
@@ -368,7 +358,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/AbnormalityFatNecrosis"
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/FatNecrosisAbnormality"
             ]
           }
         ]

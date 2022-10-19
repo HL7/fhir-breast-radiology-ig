@@ -1,5 +1,5 @@
 Profile: BreastAssessmentCategory
-Parent: Observation
+Parent: us-core-observation-imaging
 Title: "Breast AssessmentCategory"
 Description: """
     Breast Assessment Category
@@ -17,6 +17,8 @@ Description: """
 * category ^slicing.description = "Observation Category = imaging"
 * category contains categoryImaging 1..1
 * category[categoryImaging] = http://terminology.hl7.org/CodeSystem/observation-category#imaging
+    ///#apply DefineElement("category:categoryImaging", "Category", "Category")
+    ///#apply SetElement("category:categoryImaging", "Category", "http://terminology.hl7.org/CodeSystem/observation-category#imaging")
 * interpretation 0..0
 * referenceRange 0..0
 * basedOn 0..0

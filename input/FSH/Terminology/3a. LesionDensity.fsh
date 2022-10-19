@@ -1,9 +1,8 @@
 ValueSet:  LesionDensityVS
 Title: "Lesion density ValueSet"
 Description:  "Lesion density ValueSet"
+* insert ValueSet_Common
 * codes from system LesionDensityCS
-
-
 
 
 CodeSystem: LesionDensityCS
@@ -11,7 +10,8 @@ Title: "Lesion density CodeSystem"
 Description: 
     """
     Lesion Density code system.
-	"""
+    """
+* insert CodeSystem_Common
 * #EqualDensity "Equal (Isodense) density"
     """
     Equal (Isodense) density
@@ -31,8 +31,6 @@ Description:
     """
     Low density
     """
-
-
 
 
 // * include codes from system $SCT where concept descendent-of #129743000 "Lesion radiographic density modifiers (finding)"

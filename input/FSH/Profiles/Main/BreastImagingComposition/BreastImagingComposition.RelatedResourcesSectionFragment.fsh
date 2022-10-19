@@ -1,0 +1,3 @@
+/*
+   Breast Composition RelatedResources Section Fragment.
+*/

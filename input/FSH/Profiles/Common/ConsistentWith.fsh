@@ -1,5 +1,5 @@
 Profile: ConsistentWith
-Parent: Observation
+Parent: us-core-observation-imaging
 Title: "Consistent With"
 Description: """
     Consistent With
@@ -7,7 +7,7 @@ Description: """
 
 * . ^definition = """
     Consistent With Observation.
-	"""
+    """
 * code = ObservationCodesCS#consistentWithObservation
 * code 1..1
 * hasMember 0..0
@@ -18,6 +18,8 @@ Description: """
 * category ^slicing.description = "Observation Category = imaging"
 * category contains categoryImaging 1..1
 * category[categoryImaging] = http://terminology.hl7.org/CodeSystem/observation-category#imaging
+    ///#apply DefineElement("category:categoryImaging", "Category", "Category")
+    ///#apply SetElement("category:categoryImaging", "Category", "http://terminology.hl7.org/CodeSystem/observation-category#imaging")
 * interpretation 0..0
 * referenceRange 0..0
 * basedOn 0..0
@@ -53,7 +55,7 @@ Description: """
 * component[consistentWith].code ^short = "Consistent With component code."
 * component[consistentWith].code ^definition = """
     This code identifies the Consistent With component.
-	"""
+    """
 * component[consistentWith].code = ObservationComponentSliceCodesCS#consistentWithValue
 * component[consistentWith].value[x] 1..1
 * component[consistentWith].value[x] only CodeableConcept
@@ -74,7 +76,7 @@ Description: """
 * component[qualifier].code ^short = "Consistent With Qualifier component code."
 * component[qualifier].code ^definition = """
     This code identifies the Consistent With Qualifier component.
-	"""
+    """
 * component[qualifier].code = ObservationComponentSliceCodesCS#consistentWithQualifier
 * component[qualifier].value[x] 0..1
 * component[qualifier].value[x] only CodeableConcept

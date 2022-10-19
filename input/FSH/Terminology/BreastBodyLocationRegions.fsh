@@ -2,6 +2,7 @@
 ValueSet:  BreastBodyLocationRegionVS
 Title: "Breast Body Location Regions ValueSet"
 Description:  "Breast Body Location Regions Value Set"
+* insert ValueSet_Common
 * codes from system BreastBodyLocationRegionCS
 
 

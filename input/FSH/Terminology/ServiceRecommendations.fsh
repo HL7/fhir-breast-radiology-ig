@@ -2,6 +2,7 @@
 ValueSet:  ServiceRecommendationsVS
 Title: "ServiceRecommendations ValueSet"
 Description:  "ServiceRecommendations Value Set"
+* insert ValueSet_Common
 * codes from system ServiceRecommendationsCS
 
 
