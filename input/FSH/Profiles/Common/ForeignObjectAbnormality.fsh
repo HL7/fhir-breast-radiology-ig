@@ -96,7 +96,7 @@ Description: """
 * component[obsSize].code ^definition = """
     This code identifies the Observed size. component.
     """
-* component[obsSize].code = ObservationComponentSliceCodesCS#obsSize
+* component[obsSize].code = RadLexCDE#RDE1570
 * component[obsSize].value[x] 1..1
 * component[obsSize].value[x] only Quantity or Range
 * component[obsSize].valueQuantity = $UCUM#mm

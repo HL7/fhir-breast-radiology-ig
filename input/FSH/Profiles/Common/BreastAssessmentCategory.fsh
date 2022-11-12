@@ -4,10 +4,10 @@ Title: "Breast AssessmentCategory"
 Description: """
     Breast Assessment Category
     """
-* code = ObservationCodesCS#breastAssessmentCategoryObservation
+* code = RadLexCDE#RDE1586
 * code 1..1
 * value[x] 1..1
-* value[x] from BreastAssessmentCategoryVS
+* value[x] from RDE1586_AssessmentCategory
 * value[x] only CodeableConcept
 * hasMember 0..0
 * category ^slicing.discriminator.type = #pattern

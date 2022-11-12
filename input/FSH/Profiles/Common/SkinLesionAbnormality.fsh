@@ -79,10 +79,10 @@ Description: """
 * component[shape].code ^definition = """
     This code identifies the Shape component.
     """
-* component[shape].code = ObservationComponentSliceCodesCS#shape
+* component[shape].code = RadLexCDE#RDE1576
 * component[shape].value[x] 1..1
 * component[shape].value[x] only CodeableConcept
-* component[shape].value[x] from ShapeVS
+* component[shape].value[x] from rde1576-shape
 
   // Define Density Slice
 * component contains density 0..1
@@ -92,17 +92,17 @@ Description: """
     """
 * component[density] ^definition = """
     This slice contains the optional component that define the density of the abnormality.
-    The value of this component is a codeable concept chosen from the LesionRadiographicDensityVS valueset.
+    The value of this component is a codeable concept chosen from the RDE1578 Density valueset.
     """
 * component[density].code 1..1
 * component[density].code ^short = "Density component code."
 * component[density].code ^definition = """
     This code identifies the Density component.
     """
-* component[density].code = ObservationComponentSliceCodesCS#density
+* component[density].code = RadLexCDE#RDE1578
 * component[density].value[x] 0..1
 * component[density].value[x] only CodeableConcept
-* component[density].value[x] from LesionDensityVS
+* component[density].value[x] from rde1578-density
 
 
   // Define Margin Slice
@@ -113,17 +113,17 @@ Description: """
     """
 * component[margin] ^definition = """
     This slice contains the optional component that define the margin of the abnormality.
-    The value of this component is a codeable concept chosen from the MarginVS valueset.
+    The value of this component is a codeable concept chosen from the "RDE1579 Margin" valueset.
     """
 * component[margin].code 1..1
 * component[margin].code ^short = "Margin component code."
 * component[margin].code ^definition = """
     This code identifies the Margin component.
     """
-* component[margin].code = ObservationComponentSliceCodesCS#margin
+* component[margin].code = RadLexCDE#RDE1579
 * component[margin].value[x] 1..1
 * component[margin].value[x] only CodeableConcept
-* component[margin].value[x] from MarginVS
+* component[margin].value[x] from rde1579-margin
 
   // Define Orientation Slice
 * component contains orientation 0..1
@@ -133,17 +133,17 @@ Description: """
     """
 * component[orientation] ^definition = """
     This slice contains the optional component that define the orientation of the abnormality.
-    The value of this component is a codeable concept chosen from the OrientationVS valueset.
+    The value of this component is a codeable concept chosen from the "RDE1580 Orientation" valueset.
     """
 * component[orientation].code 1..1
 * component[orientation].code ^short = "Orientation component code."
 * component[orientation].code ^definition = """
     This code identifies the Orientation component.
     """
-* component[orientation].code = ObservationComponentSliceCodesCS#orientation
+* component[orientation].code = RadLexCDE#RDE1580
 * component[orientation].value[x] 1..1
 * component[orientation].value[x] only CodeableConcept
-* component[orientation].value[x] from OrientationVS
+* component[orientation].value[x] from rde1580-orientation
 * component contains observedCount 0..1
 * component[observedCount] ^short = "Observed Count component. component."
 * component[observedCount] ^comment = """
@@ -164,7 +164,7 @@ Description: """
 * component[observedCount].code ^definition = """
     This code identifies the Observed Count component. component.
     """
-* component[observedCount].code = ObservationComponentSliceCodesCS#obsCount
+* component[observedCount].code = RadLexCDE#RDE1567
 * component[observedCount].value[x] 1..1
 * component[observedCount].value[x] only Quantity or Range
   // Define distribution region size.
@@ -191,7 +191,7 @@ Description: """
 * component[obsSize].code ^definition = """
     This code identifies the Observed size. component.
     """
-* component[obsSize].code = ObservationComponentSliceCodesCS#obsSize
+* component[obsSize].code = RadLexCDE#RDE1570
 * component[obsSize].value[x] 1..1
 * component[obsSize].value[x] only Quantity or Range
 * component[obsSize].valueQuantity = $UCUM#mm
@@ -207,17 +207,17 @@ Description: """
     This slice contains the optional components that describe the distribution of
     a group of abnormalities.
     The value of this component is a codeable concept chosen from the 
-    CalcificationDistributionVS valueset.
+    "RDE1568 Observed Distribution"  valueset.
     """
 * component[obsDistribution].code 1..1
 * component[obsDistribution].code ^short = "Observed distribution of abnormalities component code."
 * component[obsDistribution].code ^definition = """
     This code identifies the Observed distribution of abnormalities component.
     """
-* component[obsDistribution].code = ObservationComponentSliceCodesCS#obsDistribution
+* component[obsDistribution].code = RadLexCDE#RDE1568
 * component[obsDistribution].value[x] 1..1
 * component[obsDistribution].value[x] only CodeableConcept
-* component[obsDistribution].value[x] from CalcificationDistributionVS
+* component[obsDistribution].value[x] from rde1568-observed-distribution
   // Define distribution region size.
 * component contains obsDistRegionSize 0..1
 * component[obsDistRegionSize] ^short = "Observed size of distribution region. component."
@@ -246,7 +246,7 @@ Description: """
 * component[obsDistRegionSize].code ^definition = """
     This code identifies the Observed size of distribution region. component.
     """
-* component[obsDistRegionSize].code = ObservationComponentSliceCodesCS#obsDistRegionSize
+* component[obsDistRegionSize].code = RadLexCDE#RDE1569
 
 * component[obsDistRegionSize].value[x] 1..1
 * component[obsDistRegionSize].value[x] only Quantity or Range

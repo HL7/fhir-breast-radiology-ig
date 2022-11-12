@@ -99,8 +99,8 @@
         "patternCodeableConcept": {
           "coding": [
             {
-              "code": "abnormalityCyst",
-              "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationCodesCS"
+              "code": "RDES243",
+              "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/RadLexCDE"
             }
           ]
         }
@@ -124,33 +124,6 @@
         "id": "Observation.interpretation",
         "path": "Observation.interpretation",
         "max": "0"
-      },
-      {
-        "id": "Observation.bodySite",
-        "path": "Observation.bodySite",
-        "min": 1
-      },
-      {
-        "id": "Observation.bodySite.extension",
-        "path": "Observation.bodySite.extension",
-        "min": 1
-      },
-      {
-        "id": "Observation.bodySite.extension:breastBodyLocation",
-        "path": "Observation.bodySite.extension",
-        "sliceName": "breastBodyLocation",
-        "short": "breastBodyLocation extension.",
-        "definition": "This extension slice contains the breastBodyLocation extension.",
-        "min": 1,
-        "max": "1",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastBodyLocationExtension"
-            ]
-          }
-        ]
       },
       {
         "id": "Observation.specimen",
@@ -259,6 +232,45 @@
           "rules": "open",
           "ordered": false,
           "description": "Component slicing"
+        },
+        "min": 1
+      },
+      {
+        "id": "Observation.component:cystPresence",
+        "path": "Observation.component",
+        "sliceName": "cystPresence",
+        "short": "Cyst Presence component.",
+        "definition": "This slice contains the required component that specifies the presence or absence of a cyst.\nThe value of this component is a codeable concept chosen from the rde1575-cyst valueset.",
+        "comment": "This is one component of a group of components that are part of the observation.",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Observation.component:cystPresence.code",
+        "path": "Observation.component.code",
+        "short": "Cyst Presence component code.",
+        "definition": "This code identifies the Cyst Presence component.",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "RDE1575",
+              "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/RadLexCDE"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Observation.component:cystPresence.value[x]",
+        "path": "Observation.component.value[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/rde1575-cyst"
         }
       },
       {
@@ -266,7 +278,7 @@
         "path": "Observation.component",
         "sliceName": "cystType",
         "short": "Cyst Type component.",
-        "definition": "This slice contains the optional component that refine the cyst type.\nThe value of this component is a codeable concept chosen from the CystAbnormalityTypeVS valueset.",
+        "definition": "This slice contains the optional component that refines the cyst type.\nThe value of this component is a codeable concept chosen from the rde1577-type valueset.",
         "comment": "This is one component of a group of components that are part of the observation.",
         "min": 0,
         "max": "1"
@@ -279,8 +291,8 @@
         "patternCodeableConcept": {
           "coding": [
             {
-              "code": "abnormalityCystType",
-              "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodesCS"
+              "code": "RDE1577",
+              "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/RadLexCDE"
             }
           ]
         }
@@ -296,7 +308,7 @@
         ],
         "binding": {
           "strength": "required",
-          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/CystAbnormalityTypeVS"
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/rde1577-type"
         }
       },
       {
@@ -355,8 +367,8 @@
         "patternCodeableConcept": {
           "coding": [
             {
-              "code": "shape",
-              "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodesCS"
+              "code": "RDE1576",
+              "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/RadLexCDE"
             }
           ]
         }
@@ -372,7 +384,7 @@
         ],
         "binding": {
           "strength": "required",
-          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/ShapeVS"
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/rde1576-shape"
         }
       },
       {
@@ -380,7 +392,7 @@
         "path": "Observation.component",
         "sliceName": "density",
         "short": "Density component.",
-        "definition": "This slice contains the optional component that define the density of the abnormality.\nThe value of this component is a codeable concept chosen from the LesionRadiographicDensityVS valueset.",
+        "definition": "This slice contains the optional component that define the density of the abnormality.\nThe value of this component is a codeable concept chosen from the RDE1578 Density valueset.",
         "comment": "This is one component of a group of components that are part of the observation.",
         "min": 0,
         "max": "1"
@@ -393,8 +405,8 @@
         "patternCodeableConcept": {
           "coding": [
             {
-              "code": "density",
-              "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodesCS"
+              "code": "RDE1578",
+              "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/RadLexCDE"
             }
           ]
         }
@@ -409,7 +421,7 @@
         ],
         "binding": {
           "strength": "required",
-          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/LesionDensityVS"
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/rde1578-density"
         }
       },
       {
@@ -417,7 +429,7 @@
         "path": "Observation.component",
         "sliceName": "margin",
         "short": "Margin component.",
-        "definition": "This slice contains the optional component that define the margin of the abnormality.\nThe value of this component is a codeable concept chosen from the MarginVS valueset.",
+        "definition": "This slice contains the optional component that define the margin of the abnormality.\nThe value of this component is a codeable concept chosen from the \"RDE1579 Margin\" valueset.",
         "comment": "This is one component of a group of components that are part of the observation.",
         "min": 0,
         "max": "1"
@@ -430,8 +442,8 @@
         "patternCodeableConcept": {
           "coding": [
             {
-              "code": "margin",
-              "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodesCS"
+              "code": "RDE1579",
+              "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/RadLexCDE"
             }
           ]
         }
@@ -447,7 +459,7 @@
         ],
         "binding": {
           "strength": "required",
-          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/MarginVS"
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/rde1579-margin"
         }
       },
       {
@@ -455,7 +467,7 @@
         "path": "Observation.component",
         "sliceName": "orientation",
         "short": "Orientation component.",
-        "definition": "This slice contains the optional component that define the orientation of the abnormality.\nThe value of this component is a codeable concept chosen from the OrientationVS valueset.",
+        "definition": "This slice contains the optional component that define the orientation of the abnormality.\nThe value of this component is a codeable concept chosen from the \"RDE1580 Orientation\" valueset.",
         "comment": "This is one component of a group of components that are part of the observation.",
         "min": 0,
         "max": "1"
@@ -468,8 +480,8 @@
         "patternCodeableConcept": {
           "coding": [
             {
-              "code": "orientation",
-              "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodesCS"
+              "code": "RDE1580",
+              "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/RadLexCDE"
             }
           ]
         }
@@ -485,7 +497,7 @@
         ],
         "binding": {
           "strength": "required",
-          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/OrientationVS"
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/rde1580-orientation"
         }
       },
       {
@@ -506,8 +518,8 @@
         "patternCodeableConcept": {
           "coding": [
             {
-              "code": "obsCount",
-              "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodesCS"
+              "code": "RDE1567",
+              "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/RadLexCDE"
             }
           ]
         }
@@ -530,7 +542,7 @@
         "path": "Observation.component",
         "sliceName": "obsDistribution",
         "short": "Observed distribution of abnormalities component.",
-        "definition": "This slice contains the optional components that describe the distribution of\na group of abnormalities.\nThe value of this component is a codeable concept chosen from the \nCalcificationDistributionVS valueset.",
+        "definition": "This slice contains the optional components that describe the distribution of\na group of abnormalities.\nThe value of this component is a codeable concept chosen from the \n\"RDE1568 Observed Distribution\"  valueset.",
         "comment": "This is one component of a group of components that are part of the observation.",
         "min": 0,
         "max": "*"
@@ -543,8 +555,8 @@
         "patternCodeableConcept": {
           "coding": [
             {
-              "code": "obsDistribution",
-              "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodesCS"
+              "code": "RDE1568",
+              "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/RadLexCDE"
             }
           ]
         }
@@ -560,7 +572,7 @@
         ],
         "binding": {
           "strength": "required",
-          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/CalcificationDistributionVS"
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/rde1568-observed-distribution"
         }
       },
       {
@@ -581,8 +593,8 @@
         "patternCodeableConcept": {
           "coding": [
             {
-              "code": "obsDistRegionSize",
-              "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodesCS"
+              "code": "RDE1569",
+              "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/RadLexCDE"
             }
           ]
         }
@@ -670,8 +682,8 @@
         "patternCodeableConcept": {
           "coding": [
             {
-              "code": "obsSize",
-              "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodesCS"
+              "code": "RDE1570",
+              "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/RadLexCDE"
             }
           ]
         }

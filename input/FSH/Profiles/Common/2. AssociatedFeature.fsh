@@ -11,7 +11,7 @@ Description: """
     The feature observed is defined by the featureType component slice.
     """
 * component 1..2
-* code = ObservationCodesCS#associatedFeaturesObservation
+* code = RadLexCDE#RDE1571
 * code 1..1
 * component ^slicing.discriminator.type = #pattern
 * component ^slicing.discriminator.path = "code"
@@ -34,10 +34,10 @@ Description: """
 * component[featureType].code ^definition = """
     This code identifies the Associated Feature Type component.
     """
-* component[featureType].code = ObservationComponentSliceCodesCS#featureType
+* component[featureType].code = RadLexCDE#RDE1571
 * component[featureType].value[x] 1..1
 * component[featureType].value[x] only CodeableConcept
-* component[featureType].value[x] from AssociatedFeatureVS
+* component[featureType].value[x] from rde1571-associated-feature
 * hasMember 0..0
 * category ^slicing.discriminator.type = #pattern
 * category ^slicing.discriminator.path = "$this"
@@ -84,6 +84,6 @@ Description: """
 * component[observedCount].code ^definition = """
     This code identifies the Observed Count component. component.
     """
-* component[observedCount].code = ObservationComponentSliceCodesCS#obsCount
+* component[observedCount].code = RadLexCDE#RDE1567
 * component[observedCount].value[x] 1..1
 * component[observedCount].value[x] only Quantity or Range

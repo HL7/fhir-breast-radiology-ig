@@ -4,19 +4,9 @@ Title: "Observation Codes CodeSystem"
 Description: "Observation Codes code system"
 * insert CodeSystem_Common
 
-* #abnormalityCyst "Abnormality Cyst observation"
-    """
-    Observation.code to identify a AbnormalityCyst observation.
-    """
-
 * #abnormalityFibroadenomaObservation "Abnormality Fibroadenoma observation"
     """
     Observation.code to identify a Fibroadenoma observation.
-    """
-
-* #associatedFeaturesObservation "Associated Features observation"
-    """
-    Observation.code to identify an AssociatedFeatures observation.
     """
 
 * #abnormalityArchitecturalDistortionObservation "Abnormality Architectural Distortion observation"
@@ -82,11 +72,6 @@ Description: "Observation Codes code system"
 * #breastCompositionObservation "Breast Composition observation"
     """
     Observation.code to identify an BreastComposition observation.
-    """
-
-* #breastAssessmentCategoryObservation "Breast assessment category observation"
-    """
-    Observation.code to identify an BreastAssessmentCategory observation.
     """
 
 * #findingsLeftBreastObservation "Findings Left Breast observation"

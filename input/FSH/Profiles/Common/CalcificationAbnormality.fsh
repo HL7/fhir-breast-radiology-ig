@@ -120,7 +120,7 @@ Description: """
 * component[observedCount].code ^definition = """
     This code identifies the Observed Count component. component.
     """
-* component[observedCount].code = ObservationComponentSliceCodesCS#obsCount
+* component[observedCount].code = RadLexCDE#RDE1567
 * component[observedCount].value[x] 1..1
 * component[observedCount].value[x] only Quantity or Range
   // Define distribution region size.
@@ -147,7 +147,7 @@ Description: """
 * component[obsSize].code ^definition = """
     This code identifies the Observed size. component.
     """
-* component[obsSize].code = ObservationComponentSliceCodesCS#obsSize
+* component[obsSize].code = RadLexCDE#RDE1570
 * component[obsSize].value[x] 1..1
 * component[obsSize].value[x] only Quantity or Range
 * component[obsSize].valueQuantity = $UCUM#mm
@@ -163,17 +163,17 @@ Description: """
     This slice contains the optional components that describe the distribution of
     a group of abnormalities.
     The value of this component is a codeable concept chosen from the 
-    CalcificationDistributionVS valueset.
+    "RDE1568 Observed Distribution"  valueset.
     """
 * component[obsDistribution].code 1..1
 * component[obsDistribution].code ^short = "Observed distribution of abnormalities component code."
 * component[obsDistribution].code ^definition = """
     This code identifies the Observed distribution of abnormalities component.
     """
-* component[obsDistribution].code = ObservationComponentSliceCodesCS#obsDistribution
+* component[obsDistribution].code = RadLexCDE#RDE1568
 * component[obsDistribution].value[x] 1..1
 * component[obsDistribution].value[x] only CodeableConcept
-* component[obsDistribution].value[x] from CalcificationDistributionVS
+* component[obsDistribution].value[x] from rde1568-observed-distribution
   // Define distribution region size.
 * component contains obsDistRegionSize 0..1
 * component[obsDistRegionSize] ^short = "Observed size of distribution region. component."
@@ -202,7 +202,7 @@ Description: """
 * component[obsDistRegionSize].code ^definition = """
     This code identifies the Observed size of distribution region. component.
     """
-* component[obsDistRegionSize].code = ObservationComponentSliceCodesCS#obsDistRegionSize
+* component[obsDistRegionSize].code = RadLexCDE#RDE1569
 
 * component[obsDistRegionSize].value[x] 1..1
 * component[obsDistRegionSize].value[x] only Quantity or Range

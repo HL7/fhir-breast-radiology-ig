@@ -120,7 +120,7 @@ Description: """
 * component[observedCount].code ^definition = """
     This code identifies the Observed Count component. component.
     """
-* component[observedCount].code = ObservationComponentSliceCodesCS#obsCount
+* component[observedCount].code = RadLexCDE#RDE1567
 * component[observedCount].value[x] 1..1
 * component[observedCount].value[x] only Quantity or Range
 * component contains correspondsWith 0..*
