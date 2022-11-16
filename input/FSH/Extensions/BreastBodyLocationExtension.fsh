@@ -28,7 +28,7 @@ Description: """
     """
 * extension[quadrant].value[x] 1..1
 * extension[quadrant].value[x] only CodeableConcept
-* extension[quadrant].value[x] from BreastQuadrantVS
+* extension[quadrant].value[x] from RDE1563_QuadrantOfBreast
   
 * extension contains region 0..1
 * extension[region] ^short = "Region of the body location"
@@ -38,7 +38,7 @@ Description: """
     """
 * extension[region].value[x] 1..1
 * extension[region].value[x] only CodeableConcept
-* extension[region].value[x] from BreastBodyLocationRegionVS
+* extension[region].value[x] from RDE1564_RegionOfBreast
   
 * extension contains clockDirection 0..1
 * extension[clockDirection] ^short = "Clock Position of the body location"
@@ -48,7 +48,7 @@ Description: """
     """
 * extension[clockDirection].value[x] 1..1
 * extension[clockDirection].value[x] only CodeableConcept
-* extension[clockDirection].value[x] from ClockPositionsVS
+* extension[clockDirection].value[x] from RDE1558_BreastBodyLocationClockPosition
   
 * extension contains depth 0..1
 * extension[depth] ^short = "Depth of the body location"
@@ -58,7 +58,7 @@ Description: """
     """
 * extension[depth].value[x] 1..1
 * extension[depth].value[x] only CodeableConcept
-* extension[depth].value[x] from BreastBodyLocationDepthVS
+* extension[depth].value[x] from RDE1559_BreastBodyLocationDepth
   
 * extension contains landmark 0..*
 * extension[landmark] ^short = "Body landmark. Origin of distance measurement."
@@ -68,7 +68,7 @@ Description: """
     """
 * extension[landmark].value[x] 1..1
 * extension[landmark].value[x] only CodeableConcept
-* extension[landmark].value[x] from BreastLandmarkVS
+* extension[landmark].value[x] from RDE1560_BreastBodyLandmark
  
 * extension contains distanceFromLandmark 0..*
 * extension[distanceFromLandmark] ^short = "Distance from landmark. There is a one item here for each item in landmark. Each item is the distance from the coresponding landmark."

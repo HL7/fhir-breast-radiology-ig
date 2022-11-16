@@ -1,0 +1,30 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "BreastAssessmentCategoryVS",
+  "id": "BreastAssessmentCategoryVS",
+  "title": "Breast Assessment Category ValueSet",
+  "description": "Breast Assessment Category Value Set",
+  "version": "0.3.0",
+  "url": "http://hl7.org/fhir/us/breast-radiology/ValueSet/BreastAssessmentCategoryVS",
+  "copyright": "This value set includes content from American College of Radiology, \nwhich is copyright © 2022+ American College of Radiology all rights reserved.\n\nThis value set includes content from SNOMED CT, \nwhich is copyright © 2002+ International Health \nTerminology Standards Development Organisation (IHTSDO), \nand distributed by agreement between IHTSDO and HL7.\nImplementer use of SNOMED CT is not covered by this agreement",
+  "experimental": false,
+  "compose": {
+    "include": [
+      {
+        "valueSet": [
+          "http://hl7.org/fhir/us/breast-radiology/ValueSet/rde1586-assessment-category"
+        ]
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "470272007",
+            "display": "Implantable lesion localization marker (Object)"
+          }
+        ]
+      }
+    ]
+  }
+}

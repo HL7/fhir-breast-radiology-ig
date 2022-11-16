@@ -4,10 +4,10 @@ Title: "Breast Composition"
 Description: """
     Breast Composition
     """
-* code = ObservationCodesCS#breastCompositionObservation
+* code = RadLexCDE#RDE1587
 * code 1..1
 * value[x] 1..1
-* value[x] from BreastCompositionVS
+* value[x] from rde1587-breast-composition-category
 * value[x] only CodeableConcept
 * hasMember 0..0
 * category ^slicing.discriminator.type = #pattern

@@ -105,7 +105,7 @@ Description: """
     """
 * component[shape] ^definition = """
     This slice contains the optional component that define the shape of the abnormality.
-    The value of this component is a codeable concept chosen from the ShapeVS valueset.
+    The value of this component is a codeable concept chosen from the ACR RDE1576 Shape valueset.
     """
 * component[shape].code 1..1
 * component[shape].code ^short = "Shape component code."

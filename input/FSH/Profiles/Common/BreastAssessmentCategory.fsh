@@ -7,7 +7,7 @@ Description: """
 * code = RadLexCDE#RDE1586
 * code 1..1
 * value[x] 1..1
-* value[x] from RDE1586_AssessmentCategory
+* value[x] from BreastAssessmentCategoryVS
 * value[x] only CodeableConcept
 * hasMember 0..0
 * category ^slicing.discriminator.type = #pattern

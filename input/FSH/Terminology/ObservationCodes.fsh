@@ -69,11 +69,6 @@ Description: "Observation Codes code system"
     Observation.code to identify an MGAbnormalityFatNecrosis observation.
     """
 
-* #breastCompositionObservation "Breast Composition observation"
-    """
-    Observation.code to identify an BreastComposition observation.
-    """
-
 * #findingsLeftBreastObservation "Findings Left Breast observation"
     """
     Observation.code to identify a SectionFindingsLeftBreast observation.

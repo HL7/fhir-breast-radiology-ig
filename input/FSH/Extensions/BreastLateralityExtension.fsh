@@ -9,5 +9,5 @@ Description: """
     """
 
 * . ^short = "Breast Laterality extension"
-* valueCodeableConcept from BreastLateralityVS (required)
+* valueCodeableConcept from RDE1588_BreastLaterality (required)
 * valueCodeableConcept 1..1

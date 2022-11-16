@@ -44,7 +44,7 @@ Description: """
     associated with this completion of the procedure, though regulation may require a specific non Birads 
     code to be used to descibe the completion of this procedure.
     """
-* conclusionCode[BiRads] from RDE1586_AssessmentCategory
+* conclusionCode[BiRads] from BreastAssessmentCategoryVS
 
 * specimen 0..0
 * result 0..0

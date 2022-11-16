@@ -27,7 +27,7 @@ Description: """
     This slice contains the required component that 
     defines the observed feature. The value of this 
     component is a codeable concept chosen from the 
-    AssociatedFeatureVS valueset.",
+    ACR RDE1571 Associated Feature valueset.",
     """
 * component[featureType].code 1..1
 * component[featureType].code ^short = "Associated Feature Type component code."
