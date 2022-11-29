@@ -24,11 +24,6 @@ Description: "Observation Codes code system"
     Observation.code to identify a TumorSatellite observation.
     """
 
-* #abnormalityCalcificationObservation "Abnormality Calcification observation"
-    """
-    Observation.code to identify an MGAbnormalityCalcification observation.
-    """
-
 * #abnormalityDuctObservation "Abnormality Duct observation"
     """
     Observation.code to identify an ObservationCodeAbnormalityDuct observation.

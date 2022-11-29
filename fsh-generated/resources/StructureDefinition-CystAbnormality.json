@@ -126,6 +126,33 @@
         "max": "0"
       },
       {
+        "id": "Observation.bodySite",
+        "path": "Observation.bodySite",
+        "min": 1
+      },
+      {
+        "id": "Observation.bodySite.extension",
+        "path": "Observation.bodySite.extension",
+        "min": 1
+      },
+      {
+        "id": "Observation.bodySite.extension:breastBodyLocation",
+        "path": "Observation.bodySite.extension",
+        "sliceName": "breastBodyLocation",
+        "short": "breastBodyLocation extension.",
+        "definition": "This extension slice contains the breastBodyLocation extension.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastBodyLocationExtension"
+            ]
+          }
+        ]
+      },
+      {
         "id": "Observation.specimen",
         "path": "Observation.specimen",
         "max": "0"
@@ -154,22 +181,6 @@
           "ordered": false,
           "description": "hasMember slicing"
         }
-      },
-      {
-        "id": "Observation.hasMember:biRadAssessmentCategory",
-        "path": "Observation.hasMember",
-        "sliceName": "biRadAssessmentCategory",
-        "short": "BiRads Assessment Category Code Code hasMember.",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastAssessmentCategory"
-            ]
-          }
-        ]
       },
       {
         "id": "Observation.hasMember:associatedFeature",
@@ -270,7 +281,7 @@
         ],
         "binding": {
           "strength": "required",
-          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/rde1575-cyst"
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/rde1575-cyst-presence"
         }
       },
       {
@@ -316,7 +327,7 @@
         "path": "Observation.component",
         "sliceName": "obsChanges",
         "short": "Observed Change In Abnormality component.",
-        "definition": "This slice contains the optional components that define observed changes in this abnormality.\nThe value of this component is a codeable concept chosen from the ObservedChangesVS valueset.",
+        "definition": "This slice contains the optional components that define observed changes in this abnormality.\nThe value of this component is a codeable concept chosen from the RDE1566_ObservedChanges valueset.",
         "comment": "This is one component of a group of components that are part of the observation.",
         "min": 0,
         "max": "*"
@@ -329,8 +340,8 @@
         "patternCodeableConcept": {
           "coding": [
             {
-              "code": "obsChanges",
-              "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodesCS"
+              "code": "RDE1566",
+              "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/RadLexCDE"
             }
           ]
         }
@@ -346,7 +357,45 @@
         ],
         "binding": {
           "strength": "required",
-          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/ObservedChangesVS"
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/rde1566-observed-changes"
+        }
+      },
+      {
+        "id": "Observation.component:breastAssessmentCategory",
+        "path": "Observation.component",
+        "sliceName": "breastAssessmentCategory",
+        "short": "Breast  Assessment Category Code component.",
+        "definition": "This slice contains the optional components that define the breast assessment category.\nThe value of this component is a codeable concept chosen from the BreastAssessmentCategoryVS valueset.",
+        "comment": "This is one component of a group of components that are part of the observation.",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Observation.component:breastAssessmentCategory.code",
+        "path": "Observation.component.code",
+        "short": "Breast  Assessment Category Code component code.",
+        "definition": "This code identifies the Breast  Assessment Category Code component.",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "RDE1586",
+              "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/RadLexCDE"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Observation.component:breastAssessmentCategory.value[x]",
+        "path": "Observation.component.value[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/BreastAssessmentCategoryVS"
         }
       },
       {

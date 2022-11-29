@@ -188,40 +188,6 @@
         }
       },
       {
-        "id": "Observation.hasMember:biRadAssessmentCategory",
-        "path": "Observation.hasMember",
-        "sliceName": "biRadAssessmentCategory",
-        "short": "BiRads Assessment Category Code Code hasMember.",
-        "definition": "Composite BiRad value for Right Breast.\nTypically this is the most severe of all the BiRad \ncodes set in any of the child observations of the Right Breast.",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastAssessmentCategory"
-            ]
-          }
-        ]
-      },
-      {
-        "id": "Observation.hasMember:biRadsBreastComposition",
-        "path": "Observation.hasMember",
-        "sliceName": "biRadsBreastComposition",
-        "short": "BiRads Breast Composition Code hasMember.",
-        "definition": "BiRad Breast Composition value for Right Breast.",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastComposition"
-            ]
-          }
-        ]
-      },
-      {
         "id": "Observation.hasMember:mgFinding",
         "path": "Observation.hasMember",
         "sliceName": "mgFinding",
@@ -305,6 +271,97 @@
           }
         ],
         "mustSupport": true
+      },
+      {
+        "id": "Observation.component",
+        "path": "Observation.component",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "code"
+            }
+          ],
+          "rules": "open",
+          "ordered": false,
+          "description": "Component slicing"
+        }
+      },
+      {
+        "id": "Observation.component:breastAssessmentCategory",
+        "path": "Observation.component",
+        "sliceName": "breastAssessmentCategory",
+        "short": "Breast  Assessment Category Code component.",
+        "definition": "Composite BiRad value for Right Breast.\nTypically this is the most severe of all the BiRad \ncodes set in any of the child observations of the Right Breast.",
+        "comment": "This is one component of a group of components that are part of the observation.",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Observation.component:breastAssessmentCategory.code",
+        "path": "Observation.component.code",
+        "short": "Breast  Assessment Category Code component code.",
+        "definition": "This code identifies the Breast  Assessment Category Code component.",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "RDE1586",
+              "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/RadLexCDE"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Observation.component:breastAssessmentCategory.value[x]",
+        "path": "Observation.component.value[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/BreastAssessmentCategoryVS"
+        }
+      },
+      {
+        "id": "Observation.component:breastComposition",
+        "path": "Observation.component",
+        "sliceName": "breastComposition",
+        "short": "Breast  Composition Category component.",
+        "definition": "Breast Composition value for Right Breast.",
+        "comment": "This is one component of a group of components that are part of the observation.",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Observation.component:breastComposition.code",
+        "path": "Observation.component.code",
+        "short": "Breast  Composition Category component code.",
+        "definition": "This code identifies the Breast  Composition Category component.",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "RDE1587",
+              "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/RadLexCDE"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Observation.component:breastComposition.value[x]",
+        "path": "Observation.component.value[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/rde1587-breast-composition-category"
+        }
       }
     ]
   }

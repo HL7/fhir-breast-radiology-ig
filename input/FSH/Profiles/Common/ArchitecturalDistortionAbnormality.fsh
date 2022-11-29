@@ -43,25 +43,35 @@ Description: """
     """
 * component[obsChanges] ^definition = """
     This slice contains the optional components that define observed changes in this abnormality.
-    The value of this component is a codeable concept chosen from the ObservedChangesVS valueset.
+    The value of this component is a codeable concept chosen from the RDE1566_ObservedChanges valueset.
     """
 * component[obsChanges].code 1..1
 * component[obsChanges].code ^short = "Observed Change In Abnormality component code."
 * component[obsChanges].code ^definition = """
     This code identifies the Observed Change In Abnormality component.
     """
-* component[obsChanges].code = ObservationComponentSliceCodesCS#obsChanges
+* component[obsChanges].code = RadLexCDE#RDE1566
 * component[obsChanges].value[x] 1..1
 * component[obsChanges].value[x] only CodeableConcept
-* component[obsChanges].value[x] from ObservedChangesVS
-* hasMember ^slicing.discriminator.type = #value
-* hasMember ^slicing.discriminator.path = "url"
-* hasMember ^slicing.rules = #open
-* hasMember ^slicing.ordered = false
-* hasMember ^slicing.description = "hasMember slicing"
-* hasMember contains biRadAssessmentCategory 0..1
-* hasMember[biRadAssessmentCategory] ^short = "BiRads Assessment Category Code Code hasMember."
-* hasMember[biRadAssessmentCategory] only Reference(BreastAssessmentCategory)
+* component[obsChanges].value[x] from rde1566-observed-changes
+* component contains breastAssessmentCategory 0..*
+* component[breastAssessmentCategory] ^short = "Breast  Assessment Category Code component."
+* component[breastAssessmentCategory] ^comment = """
+    This is one component of a group of components that are part of the observation.
+    """
+* component[breastAssessmentCategory] ^definition = """
+    This slice contains the optional components that define the breast assessment category.
+    The value of this component is a codeable concept chosen from the BreastAssessmentCategoryVS valueset.
+    """
+* component[breastAssessmentCategory].code 1..1
+* component[breastAssessmentCategory].code ^short = "Breast  Assessment Category Code component code."
+* component[breastAssessmentCategory].code ^definition = """
+    This code identifies the Breast  Assessment Category Code component.
+    """
+* component[breastAssessmentCategory].code = RadLexCDE#RDE1586
+* component[breastAssessmentCategory].value[x] 1..1
+* component[breastAssessmentCategory].value[x] only CodeableConcept
+* component[breastAssessmentCategory].value[x] from BreastAssessmentCategoryVS
 * component contains notPreviouslySeen 0..*
 * component[notPreviouslySeen] ^short = "Not Previously Seen component."
 * component[notPreviouslySeen] ^comment = """
@@ -120,6 +130,11 @@ Description: """
 * component[prevDemBy].value[x] 1..1
 * component[prevDemBy].value[x] only CodeableConcept
 * component[prevDemBy].value[x] from PreviouslyDemonstratedByVS
+* hasMember ^slicing.discriminator.type = #value
+* hasMember ^slicing.discriminator.path = "url"
+* hasMember ^slicing.rules = #open
+* hasMember ^slicing.ordered = false
+* hasMember ^slicing.description = "hasMember slicing"
 * hasMember contains associatedFeature 0..*
 * hasMember[associatedFeature] ^short = "'Associated Feature' reference. hasMember."
 * hasMember[associatedFeature] only Reference(AssociatedFeature)

@@ -99,8 +99,8 @@
         "patternCodeableConcept": {
           "coding": [
             {
-              "code": "abnormalityCalcificationObservation",
-              "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationCodesCS"
+              "code": "RDES241",
+              "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/RadLexCDE"
             }
           ]
         }
@@ -183,22 +183,6 @@
         }
       },
       {
-        "id": "Observation.hasMember:biRadAssessmentCategory",
-        "path": "Observation.hasMember",
-        "sliceName": "biRadAssessmentCategory",
-        "short": "BiRads Assessment Category Code Code hasMember.",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/us/breast-radiology/StructureDefinition/BreastAssessmentCategory"
-            ]
-          }
-        ]
-      },
-      {
         "id": "Observation.hasMember:associatedFeature",
         "path": "Observation.hasMember",
         "sliceName": "associatedFeature",
@@ -244,14 +228,52 @@
           "ordered": false,
           "description": "Component slicing"
         },
-        "min": 1
+        "min": 2
+      },
+      {
+        "id": "Observation.component:calcificationPresence",
+        "path": "Observation.component",
+        "sliceName": "calcificationPresence",
+        "short": "Calcification Presence component.",
+        "definition": "This slice contains the required component that specifies the presence or absence of a calcification.\nThe value of this component is a codeable concept chosen from the rde1556-calcification-presence.",
+        "comment": "This is one component of a group of components that are part of the observation.",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Observation.component:calcificationPresence.code",
+        "path": "Observation.component.code",
+        "short": "Calcification Presence component code.",
+        "definition": "This code identifies the Calcification Presence component.",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "RDE1556",
+              "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/RadLexCDE"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Observation.component:calcificationPresence.value[x]",
+        "path": "Observation.component.value[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/rde1556-calcification-presence"
+        }
       },
       {
         "id": "Observation.component:calcificationType",
         "path": "Observation.component",
         "sliceName": "calcificationType",
         "short": "Calcification Type component.",
-        "definition": "This slice contains the optional component that refines the calcification type.\nThe value of this component is a codeable concept chosen from the CalcificationTypeVS valueset.",
+        "definition": "This slice contains the optional component that refines the calcification type.\nThe value of this component is a codeable concept chosen from the rde1565-type valueset.",
         "comment": "This is one component of a group of components that are part of the observation.",
         "min": 1,
         "max": "1"
@@ -264,8 +286,8 @@
         "patternCodeableConcept": {
           "coding": [
             {
-              "code": "calcificationType",
-              "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodesCS"
+              "code": "RDE1565",
+              "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/RadLexCDE"
             }
           ]
         }
@@ -281,7 +303,7 @@
         ],
         "binding": {
           "strength": "required",
-          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/CalcificationTypeVS"
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/rde1565-type"
         }
       },
       {
@@ -289,7 +311,7 @@
         "path": "Observation.component",
         "sliceName": "obsChanges",
         "short": "Observed Change In Abnormality component.",
-        "definition": "This slice contains the optional components that define observed changes in this abnormality.\nThe value of this component is a codeable concept chosen from the ObservedChangesVS valueset.",
+        "definition": "This slice contains the optional components that define observed changes in this abnormality.\nThe value of this component is a codeable concept chosen from the RDE1566_ObservedChanges valueset.",
         "comment": "This is one component of a group of components that are part of the observation.",
         "min": 0,
         "max": "*"
@@ -302,8 +324,8 @@
         "patternCodeableConcept": {
           "coding": [
             {
-              "code": "obsChanges",
-              "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodesCS"
+              "code": "RDE1566",
+              "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/RadLexCDE"
             }
           ]
         }
@@ -319,7 +341,45 @@
         ],
         "binding": {
           "strength": "required",
-          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/ObservedChangesVS"
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/rde1566-observed-changes"
+        }
+      },
+      {
+        "id": "Observation.component:breastAssessmentCategory",
+        "path": "Observation.component",
+        "sliceName": "breastAssessmentCategory",
+        "short": "Breast  Assessment Category Code component.",
+        "definition": "This slice contains the optional components that define the breast assessment category.\nThe value of this component is a codeable concept chosen from the BreastAssessmentCategoryVS valueset.",
+        "comment": "This is one component of a group of components that are part of the observation.",
+        "min": 0,
+        "max": "*"
+      },
+      {
+        "id": "Observation.component:breastAssessmentCategory.code",
+        "path": "Observation.component.code",
+        "short": "Breast  Assessment Category Code component code.",
+        "definition": "This code identifies the Breast  Assessment Category Code component.",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "RDE1586",
+              "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/RadLexCDE"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Observation.component:breastAssessmentCategory.value[x]",
+        "path": "Observation.component.value[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/BreastAssessmentCategoryVS"
         }
       },
       {

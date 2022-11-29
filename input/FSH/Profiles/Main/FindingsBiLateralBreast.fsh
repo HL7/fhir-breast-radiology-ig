@@ -30,25 +30,60 @@ Description: """
 * device 0..0
 
 * value[x] 0..0
+* component ^slicing.discriminator.type = #pattern
+* component ^slicing.discriminator.path = "code"
+* component ^slicing.rules = #open
+* component ^slicing.ordered = false
+* component ^slicing.description = "Component slicing"
+* component contains breastAssessmentCategory 0..*
+* component[breastAssessmentCategory] ^short = "Breast  Assessment Category Code component."
+* component[breastAssessmentCategory] ^comment = """
+    This is one component of a group of components that are part of the observation.
+    """
+* component[breastAssessmentCategory] ^definition = """
+    This slice contains the optional components that define the breast assessment category.
+    The value of this component is a codeable concept chosen from the BreastAssessmentCategoryVS valueset.
+    """
+* component[breastAssessmentCategory].code 1..1
+* component[breastAssessmentCategory].code ^short = "Breast  Assessment Category Code component code."
+* component[breastAssessmentCategory].code ^definition = """
+    This code identifies the Breast  Assessment Category Code component.
+    """
+* component[breastAssessmentCategory].code = RadLexCDE#RDE1586
+* component[breastAssessmentCategory].value[x] 1..1
+* component[breastAssessmentCategory].value[x] only CodeableConcept
+* component[breastAssessmentCategory].value[x] from BreastAssessmentCategoryVS
+* component[breastAssessmentCategory] ^definition = """
+   Composite BiRad value for BiLateral Breast.
+   Typically this is the most severe of all the BiRad 
+   codes set in any of the child observations of the BiLateral Breast.
+    """
+* component contains breastComposition 0..*
+* component[breastComposition] ^short = "Breast  Composition Category component."
+* component[breastComposition] ^comment = """
+    This is one component of a group of components that are part of the observation.
+    """
+* component[breastComposition] ^definition = """
+    This slice contains the optional components that define the breast composition category.
+    The value of this component is a codeable concept chosen from the rde1587-breast-composition-category valueset.
+    """
+* component[breastComposition].code 1..1
+* component[breastComposition].code ^short = "Breast  Composition Category component code."
+* component[breastComposition].code ^definition = """
+    This code identifies the Breast  Composition Category component.
+    """
+* component[breastComposition].code = RadLexCDE#RDE1587
+* component[breastComposition].value[x] 1..1
+* component[breastComposition].value[x] only CodeableConcept
+* component[breastComposition].value[x] from rde1587-breast-composition-category
+* component[breastComposition] ^definition = """
+   Breast Composition value for BiLateral Breast.
+   """
 * hasMember ^slicing.discriminator.type = #value
 * hasMember ^slicing.discriminator.path = "url"
 * hasMember ^slicing.rules = #open
 * hasMember ^slicing.ordered = false
 * hasMember ^slicing.description = "hasMember slicing"
-* hasMember contains biRadAssessmentCategory 0..1
-* hasMember[biRadAssessmentCategory] ^short = "BiRads Assessment Category Code Code hasMember."
-* hasMember[biRadAssessmentCategory] only Reference(BreastAssessmentCategory)
-* hasMember[biRadAssessmentCategory] ^definition = """
-   Composite BiRad value for BiLateral Breast.
-   Typically this is the most severe of all the BiRad 
-   codes set in any of the child observations of the BiLateral Breast.
-    """
-* hasMember contains biRadsBreastComposition 0..1
-* hasMember[biRadsBreastComposition] ^short = "BiRads Breast Composition Code hasMember."
-* hasMember[biRadsBreastComposition] only Reference(BreastComposition)
-* hasMember[biRadsBreastComposition] ^definition = """
-   BiRad Breast Composition value for BiLateral Breast.
-   """
 * hasMember contains mgFinding 0..1
 * hasMember[mgFinding] ^short = "'MG Finding' reference. hasMember."
 * hasMember[mgFinding] only Reference(MGFinding)

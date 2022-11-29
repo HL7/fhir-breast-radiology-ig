@@ -18,7 +18,7 @@ Description: """
     """
 * extension[laterality].value[x] 1..1
 * extension[laterality].value[x] only CodeableConcept
-* extension[laterality].value[x] from LateralityVS
+* extension[laterality].value[x] from RDE1557_BodySide
   
 * extension contains quadrant 0..1
 * extension[quadrant] ^short = "Breast quadrant location"

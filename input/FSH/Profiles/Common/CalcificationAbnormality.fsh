@@ -4,13 +4,31 @@ Title: "Calcification Abnormality"
 Description: """
     Calcification abnormality observation.
     """
-* code = ObservationCodesCS#abnormalityCalcificationObservation
+* code = RadLexCDE#RDES241
 * code 1..1
 * component ^slicing.discriminator.type = #pattern
 * component ^slicing.discriminator.path = "code"
 * component ^slicing.rules = #open
 * component ^slicing.ordered = false
 * component ^slicing.description = "Component slicing"
+* component contains calcificationPresence 1..1
+* component[calcificationPresence] ^short = "Calcification Presence component."
+* component[calcificationPresence] ^comment = """
+    This is one component of a group of components that are part of the observation.
+    """
+* component[calcificationPresence] ^definition = """
+    This slice contains the required component that specifies the presence or absence of a calcification.
+    The value of this component is a codeable concept chosen from the rde1556-calcification-presence.
+    """
+* component[calcificationPresence].code 1..1
+* component[calcificationPresence].code ^short = "Calcification Presence component code."
+* component[calcificationPresence].code ^definition = """
+    This code identifies the Calcification Presence component.
+    """
+* component[calcificationPresence].code = RadLexCDE#RDE1556
+* component[calcificationPresence].value[x] 1..1
+* component[calcificationPresence].value[x] only CodeableConcept
+* component[calcificationPresence].value[x] from rde1556-calcification-presence
 * component contains calcificationType 1..1
 * component[calcificationType] ^short = "Calcification Type component."
 * component[calcificationType] ^comment = """
@@ -18,17 +36,17 @@ Description: """
     """
 * component[calcificationType] ^definition = """
     This slice contains the optional component that refines the calcification type.
-    The value of this component is a codeable concept chosen from the CalcificationTypeVS valueset.
+    The value of this component is a codeable concept chosen from the rde1565-type valueset.
     """
 * component[calcificationType].code 1..1
 * component[calcificationType].code ^short = "Calcification Type component code."
 * component[calcificationType].code ^definition = """
     This code identifies the Calcification Type component.
     """
-* component[calcificationType].code = ObservationComponentSliceCodesCS#calcificationType
+* component[calcificationType].code = RadLexCDE#RDE1565
 * component[calcificationType].value[x] 1..1
 * component[calcificationType].value[x] only CodeableConcept
-* component[calcificationType].value[x] from CalcificationTypeVS
+* component[calcificationType].value[x] from rde1565-type
 * category ^slicing.discriminator.type = #pattern
 * category ^slicing.discriminator.path = "$this"
 * category ^slicing.rules = #open
@@ -61,25 +79,35 @@ Description: """
     """
 * component[obsChanges] ^definition = """
     This slice contains the optional components that define observed changes in this abnormality.
-    The value of this component is a codeable concept chosen from the ObservedChangesVS valueset.
+    The value of this component is a codeable concept chosen from the RDE1566_ObservedChanges valueset.
     """
 * component[obsChanges].code 1..1
 * component[obsChanges].code ^short = "Observed Change In Abnormality component code."
 * component[obsChanges].code ^definition = """
     This code identifies the Observed Change In Abnormality component.
     """
-* component[obsChanges].code = ObservationComponentSliceCodesCS#obsChanges
+* component[obsChanges].code = RadLexCDE#RDE1566
 * component[obsChanges].value[x] 1..1
 * component[obsChanges].value[x] only CodeableConcept
-* component[obsChanges].value[x] from ObservedChangesVS
-* hasMember ^slicing.discriminator.type = #value
-* hasMember ^slicing.discriminator.path = "url"
-* hasMember ^slicing.rules = #open
-* hasMember ^slicing.ordered = false
-* hasMember ^slicing.description = "hasMember slicing"
-* hasMember contains biRadAssessmentCategory 0..1
-* hasMember[biRadAssessmentCategory] ^short = "BiRads Assessment Category Code Code hasMember."
-* hasMember[biRadAssessmentCategory] only Reference(BreastAssessmentCategory)
+* component[obsChanges].value[x] from rde1566-observed-changes
+* component contains breastAssessmentCategory 0..*
+* component[breastAssessmentCategory] ^short = "Breast  Assessment Category Code component."
+* component[breastAssessmentCategory] ^comment = """
+    This is one component of a group of components that are part of the observation.
+    """
+* component[breastAssessmentCategory] ^definition = """
+    This slice contains the optional components that define the breast assessment category.
+    The value of this component is a codeable concept chosen from the BreastAssessmentCategoryVS valueset.
+    """
+* component[breastAssessmentCategory].code 1..1
+* component[breastAssessmentCategory].code ^short = "Breast  Assessment Category Code component code."
+* component[breastAssessmentCategory].code ^definition = """
+    This code identifies the Breast  Assessment Category Code component.
+    """
+* component[breastAssessmentCategory].code = RadLexCDE#RDE1586
+* component[breastAssessmentCategory].value[x] 1..1
+* component[breastAssessmentCategory].value[x] only CodeableConcept
+* component[breastAssessmentCategory].value[x] from BreastAssessmentCategoryVS
 * component contains notPreviouslySeen 0..*
 * component[notPreviouslySeen] ^short = "Not Previously Seen component."
 * component[notPreviouslySeen] ^comment = """
@@ -247,6 +275,11 @@ Description: """
 * component[prevDemBy].value[x] 1..1
 * component[prevDemBy].value[x] only CodeableConcept
 * component[prevDemBy].value[x] from PreviouslyDemonstratedByVS
+* hasMember ^slicing.discriminator.type = #value
+* hasMember ^slicing.discriminator.path = "url"
+* hasMember ^slicing.rules = #open
+* hasMember ^slicing.ordered = false
+* hasMember ^slicing.description = "hasMember slicing"
 * hasMember contains associatedFeature 0..*
 * hasMember[associatedFeature] ^short = "'Associated Feature' reference. hasMember."
 * hasMember[associatedFeature] only Reference(AssociatedFeature)

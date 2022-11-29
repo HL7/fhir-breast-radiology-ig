@@ -37,7 +37,7 @@ Description: """
 * component[featureType].code = RadLexCDE#RDE1571
 * component[featureType].value[x] 1..1
 * component[featureType].value[x] only CodeableConcept
-* component[featureType].value[x] from rde1571-associated-feature
+* component[featureType].value[x] from RDE1571_AssociatedFeatures
 * hasMember 0..0
 * category ^slicing.discriminator.type = #pattern
 * category ^slicing.discriminator.path = "$this"

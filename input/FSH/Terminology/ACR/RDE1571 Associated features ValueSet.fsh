@@ -1,10 +1,10 @@
-ValueSet: RDE1571_AssociatedFeature
-Id: rde1571-associated-feature
-Title: "RDE1571 Associated feature"
+ValueSet: RDE1571_AssociatedFeatures
+Id: rde1571-associated-features
+Title: "RDE1571 Associated features"
 Description: """
     ACR Common Data Element (CDE) {element.Id} value set"
     """
-* ^date = 2022-10-18
+* ^date = 2022-11-16
 * ^status = #draft
 * insert ACRValueSetCommon
 * include codes from system RadLexCDE where concept is-a #RDE1571

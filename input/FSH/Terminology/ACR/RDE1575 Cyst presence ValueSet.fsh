@@ -1,10 +1,10 @@
-ValueSet: RDE1575_Cyst
-Id: rde1575-cyst
-Title: "RDE1575 Cyst"
+ValueSet: RDE1575_CystPresence
+Id: rde1575-cyst-presence
+Title: "RDE1575 Cyst presence"
 Description: """
     Cystabnormalityobservationonmammography
     """
-* ^date = 2022-10-27
+* ^date = 2022-11-16
 * ^status = #draft
 * insert ACRValueSetCommon
 * include codes from system RadLexCDE where concept is-a #RDE1575

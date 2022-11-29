@@ -74,17 +74,8 @@ Description: "Component Slice Codes code system"
     Code to identify the component slice Not Previously Seen.
     """
 
-* #obsChanges "Component code for 'Observed Changes' slice"
-    """
-    Code to identify the component slice Observed Changes.
-    """
 
 * #featureType "Component code for 'Feature Type' slice"
     """
     Code to identify the component slice ObservedFeatureType.
-    """
-
-* #calcificationType "Component code for 'Calcification Type' slice"
-    """
-    Code to identify the component slice MGCalcificationType.
     """
