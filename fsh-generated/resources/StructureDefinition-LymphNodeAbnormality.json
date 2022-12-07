@@ -273,7 +273,7 @@
         "path": "Observation.component",
         "sliceName": "obsChanges",
         "short": "Observed Change In Abnormality component.",
-        "definition": "This slice contains the optional components that define observed changes in this abnormality.\nThe value of this component is a codeable concept chosen from the RDE1566_ObservedChanges valueset.",
+        "definition": "This slice contains the optional components that define observed changes in this abnormality.\nThe value of this component is a codeable concept chosen from the ObservedChangesVS valueset.",
         "comment": "This is one component of a group of components that are part of the observation.",
         "min": 0,
         "max": "*"
@@ -286,8 +286,8 @@
         "patternCodeableConcept": {
           "coding": [
             {
-              "code": "RDE1566",
-              "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/RadLexCDE"
+              "code": "obsChanges",
+              "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodesCS"
             }
           ]
         }
@@ -303,7 +303,7 @@
         ],
         "binding": {
           "strength": "required",
-          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/rde1566-observed-changes"
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/ObservedChangesVS"
         }
       },
       {
@@ -567,7 +567,7 @@
         ],
         "binding": {
           "strength": "required",
-          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/rde1568-observed-distribution"
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/rde1568-distribution"
         }
       },
       {

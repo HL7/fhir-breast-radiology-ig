@@ -18,7 +18,7 @@ Description: """
     """
 * component[calcificationPresence] ^definition = """
     This slice contains the required component that specifies the presence or absence of a calcification.
-    The value of this component is a codeable concept chosen from the rde1556-calcification-presence.
+    The value of this component is a codeable concept chosen from the rde1556-presence.
     """
 * component[calcificationPresence].code 1..1
 * component[calcificationPresence].code ^short = "Calcification Presence component code."
@@ -28,7 +28,7 @@ Description: """
 * component[calcificationPresence].code = RadLexCDE#RDE1556
 * component[calcificationPresence].value[x] 1..1
 * component[calcificationPresence].value[x] only CodeableConcept
-* component[calcificationPresence].value[x] from rde1556-calcification-presence
+* component[calcificationPresence].value[x] from rde1556-presence
 * component contains calcificationType 1..1
 * component[calcificationType] ^short = "Calcification Type component."
 * component[calcificationType] ^comment = """
@@ -79,17 +79,17 @@ Description: """
     """
 * component[obsChanges] ^definition = """
     This slice contains the optional components that define observed changes in this abnormality.
-    The value of this component is a codeable concept chosen from the RDE1566_ObservedChanges valueset.
+    The value of this component is a codeable concept chosen from the ObservedChangesVS valueset.
     """
 * component[obsChanges].code 1..1
 * component[obsChanges].code ^short = "Observed Change In Abnormality component code."
 * component[obsChanges].code ^definition = """
     This code identifies the Observed Change In Abnormality component.
     """
-* component[obsChanges].code = RadLexCDE#RDE1566
+* component[obsChanges].code = ObservationComponentSliceCodesCS#obsChanges
 * component[obsChanges].value[x] 1..1
 * component[obsChanges].value[x] only CodeableConcept
-* component[obsChanges].value[x] from rde1566-observed-changes
+* component[obsChanges].value[x] from ObservedChangesVS
 * component contains breastAssessmentCategory 0..*
 * component[breastAssessmentCategory] ^short = "Breast  Assessment Category Code component."
 * component[breastAssessmentCategory] ^comment = """
@@ -201,7 +201,7 @@ Description: """
 * component[obsDistribution].code = RadLexCDE#RDE1568
 * component[obsDistribution].value[x] 1..1
 * component[obsDistribution].value[x] only CodeableConcept
-* component[obsDistribution].value[x] from rde1568-observed-distribution
+* component[obsDistribution].value[x] from rde1568-distribution
   // Define distribution region size.
 * component contains obsDistRegionSize 0..1
 * component[obsDistRegionSize] ^short = "Observed size of distribution region. component."

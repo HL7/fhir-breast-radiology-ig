@@ -4,31 +4,49 @@ Title: "Mass Abnormality"
 Description: """
   Mass Abnormality abnormality observation.
   """
-* code = ObservationCodesCS#abnormalityMassObservation
+* code = RadLexCDE#RDES246
 * code 1..1
 * component ^slicing.discriminator.type = #pattern
 * component ^slicing.discriminator.path = "code"
 * component ^slicing.rules = #open
 * component ^slicing.ordered = false
 * component ^slicing.description = "Component slicing"
-* component contains massType 1..1
-* component[massType] ^short = "Mass Abnormality Type component."
-* component[massType] ^comment = """
+* component contains breastMassPresence 1..1
+* component[breastMassPresence] ^short = "Breast Mass Presence component."
+* component[breastMassPresence] ^comment = """
     This is one component of a group of components that are part of the observation.
     """
-* component[massType] ^definition = """
-    This slice contains the optional component that refine the Mass Abnormality type.
-    The value of this component is a codeable concept chosen from the MassAbnormalityTypeVS valueset.
+* component[breastMassPresence] ^definition = """
+    This slice contains the required component that specifies the presence or absence of a cyst.
+    The value of this component is a codeable concept chosen from the rde1556-presence valueset.
     """
-* component[massType].code 1..1
-* component[massType].code ^short = "Mass Abnormality Type component code."
-* component[massType].code ^definition = """
+* component[breastMassPresence].code 1..1
+* component[breastMassPresence].code ^short = "Breast Mass Presence component code."
+* component[breastMassPresence].code ^definition = """
+    This code identifies the Breast Mass Presence component.
+    """
+* component[breastMassPresence].code = RadLexCDE#RDE1556
+* component[breastMassPresence].value[x] 1..1
+* component[breastMassPresence].value[x] only CodeableConcept
+* component[breastMassPresence].value[x] from rde1556-presence
+* component contains breastMassType 1..1
+* component[breastMassType] ^short = "Mass Abnormality Type component."
+* component[breastMassType] ^comment = """
+    This is one component of a group of components that are part of the observation.
+    """
+* component[breastMassType] ^definition = """
+    This slice contains the optional component that refine the Mass Abnormality type.
+    The value of this component is a codeable concept chosen from the rde1602-type valueset.
+    """
+* component[breastMassType].code 1..1
+* component[breastMassType].code ^short = "Mass Abnormality Type component code."
+* component[breastMassType].code ^definition = """
     This code identifies the Mass Abnormality Type component.
     """
-* component[massType].code = ObservationComponentSliceCodesCS#abnormalityMassType
-* component[massType].value[x] 1..1
-* component[massType].value[x] only CodeableConcept
-* component[massType].value[x] from MassAbnormalityTypeVS
+* component[breastMassType].code = RadLexCDE#RDE1602
+* component[breastMassType].value[x] 1..1
+* component[breastMassType].value[x] only CodeableConcept
+* component[breastMassType].value[x] from rde1602-type
 * category ^slicing.discriminator.type = #pattern
 * category ^slicing.discriminator.path = "$this"
 * category ^slicing.rules = #open
@@ -61,17 +79,17 @@ Description: """
     """
 * component[obsChanges] ^definition = """
     This slice contains the optional components that define observed changes in this abnormality.
-    The value of this component is a codeable concept chosen from the RDE1566_ObservedChanges valueset.
+    The value of this component is a codeable concept chosen from the ObservedChangesVS valueset.
     """
 * component[obsChanges].code 1..1
 * component[obsChanges].code ^short = "Observed Change In Abnormality component code."
 * component[obsChanges].code ^definition = """
     This code identifies the Observed Change In Abnormality component.
     """
-* component[obsChanges].code = RadLexCDE#RDE1566
+* component[obsChanges].code = ObservationComponentSliceCodesCS#obsChanges
 * component[obsChanges].value[x] 1..1
 * component[obsChanges].value[x] only CodeableConcept
-* component[obsChanges].value[x] from rde1566-observed-changes
+* component[obsChanges].value[x] from ObservedChangesVS
 * component contains breastAssessmentCategory 0..*
 * component[breastAssessmentCategory] ^short = "Breast  Assessment Category Code component."
 * component[breastAssessmentCategory] ^comment = """
@@ -245,7 +263,7 @@ Description: """
 * component[obsDistribution].code = RadLexCDE#RDE1568
 * component[obsDistribution].value[x] 1..1
 * component[obsDistribution].value[x] only CodeableConcept
-* component[obsDistribution].value[x] from rde1568-observed-distribution
+* component[obsDistribution].value[x] from rde1568-distribution
   // Define distribution region size.
 * component contains obsDistRegionSize 0..1
 * component[obsDistRegionSize] ^short = "Observed size of distribution region. component."

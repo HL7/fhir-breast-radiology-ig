@@ -1,10 +1,10 @@
-ValueSet: RDE1557_BodySide
-Id: rde1557-body-side
-Title: "RDE1557 Body side"
+ValueSet: RDE1557_Side
+Id: rde1557-side
+Title: "RDE1557 Side"
 Description: """
     Breastlateralityofabnormalityobserved
     """
-* ^date = 2022-10-27
+* ^date = 2022-12-02
 * ^status = #draft
 * insert ACRValueSetCommon
 * include codes from system RadLexCDE where concept is-a #RDE1557

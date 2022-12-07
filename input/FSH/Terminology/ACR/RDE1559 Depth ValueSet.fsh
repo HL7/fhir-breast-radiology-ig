@@ -1,10 +1,10 @@
-ValueSet: RDE1559_BreastBodyLocationDepth
-Id: rde1559-breast-body-location-depth
-Title: "RDE1559 Breast body location depth"
+ValueSet: RDE1559_Depth
+Id: rde1559-depth
+Title: "RDE1559 Depth"
 Description: """
     AnteriordepthistheoutermostdepthclosesttothenippleofthebreastMiddledepthinbetweentheanteriorandposteriorportionofthebreastPosteriordepthclosesttothechestwallofthebreast
     """
-* ^date = 2022-10-27
+* ^date = 2022-12-02
 * ^status = #draft
 * insert ACRValueSetCommon
 * include codes from system RadLexCDE where concept is-a #RDE1559

@@ -39,11 +39,6 @@ Description: "Observation Codes code system"
     Observation.code to identify an AbnormalityLymphNode observation.
     """
 
-* #abnormalityMassObservation "Abnormality Mass observation"
-    """
-    Observation.code to identify an AbnormalityMass observation.
-    """
-
 * #abnormalitySkinLesionObservation "Abnormality Skin Lesion observation"
     """
     Observation.code to identify an AbnormalitySkinLesion observation.

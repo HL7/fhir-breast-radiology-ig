@@ -18,7 +18,7 @@ Description: """
     """
 * extension[laterality].value[x] 1..1
 * extension[laterality].value[x] only CodeableConcept
-* extension[laterality].value[x] from RDE1557_BodySide
+* extension[laterality].value[x] from rde1557-side
   
 * extension contains quadrant 0..1
 * extension[quadrant] ^short = "Breast quadrant location"
@@ -28,7 +28,7 @@ Description: """
     """
 * extension[quadrant].value[x] 1..1
 * extension[quadrant].value[x] only CodeableConcept
-* extension[quadrant].value[x] from RDE1563_QuadrantOfBreast
+* extension[quadrant].value[x] from rde1563-quadrant
   
 * extension contains region 0..1
 * extension[region] ^short = "Region of the body location"
@@ -38,7 +38,7 @@ Description: """
     """
 * extension[region].value[x] 1..1
 * extension[region].value[x] only CodeableConcept
-* extension[region].value[x] from RDE1564_RegionOfBreast
+* extension[region].value[x] from rde1564-region
   
 * extension contains clockDirection 0..1
 * extension[clockDirection] ^short = "Clock Position of the body location"
@@ -48,7 +48,7 @@ Description: """
     """
 * extension[clockDirection].value[x] 1..1
 * extension[clockDirection].value[x] only CodeableConcept
-* extension[clockDirection].value[x] from RDE1558_BreastBodyLocationClockPosition
+* extension[clockDirection].value[x] from rde1558-location
   
 * extension contains depth 0..1
 * extension[depth] ^short = "Depth of the body location"
@@ -58,7 +58,7 @@ Description: """
     """
 * extension[depth].value[x] 1..1
 * extension[depth].value[x] only CodeableConcept
-* extension[depth].value[x] from RDE1559_BreastBodyLocationDepth
+* extension[depth].value[x] from rde1559-depth
   
 * extension contains landmark 0..*
 * extension[landmark] ^short = "Body landmark. Origin of distance measurement."
@@ -68,7 +68,7 @@ Description: """
     """
 * extension[landmark].value[x] 1..1
 * extension[landmark].value[x] only CodeableConcept
-* extension[landmark].value[x] from RDE1560_BreastBodyLandmark
+* extension[landmark].value[x] from rde1560-breast-body-landmark
  
 * extension contains distanceFromLandmark 0..*
 * extension[distanceFromLandmark] ^short = "Distance from landmark. There is a one item here for each item in landmark. Each item is the distance from the coresponding landmark."

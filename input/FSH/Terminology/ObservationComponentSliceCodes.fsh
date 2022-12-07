@@ -24,11 +24,6 @@ Description: "Component Slice Codes code system"
     Code to identify the component slice AbnormalityLymphNodeType.
     """
 
-* #abnormalityMassType "Component code for 'Abnormality Mass Type' slice"
-    """
-    Code to identify the component slice MassAbnormalityType.
-    """
-
 * #abnormalityAsymmetryType "Component code for 'Abnormality Asymmetry Type' slice"
     """
     Code to identify the component slice MGCodeAsymmetryAbnormalityType.
@@ -75,6 +70,11 @@ Description: "Component Slice Codes code system"
     """
 
 
+* #obsChanges "Component code for 'Observed Changes' slice"
+    """
+    Code to identify the component slice Observed Changes.
+    """
+	
 * #featureType "Component code for 'Feature Type' slice"
     """
     Code to identify the component slice ObservedFeatureType.

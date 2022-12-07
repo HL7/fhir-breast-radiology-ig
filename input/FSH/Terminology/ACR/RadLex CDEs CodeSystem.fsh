@@ -18,10 +18,14 @@ Description: "ACR Common Data Element (CDE) code system"
   """
   Breast Mass Detection on Mammography
   """
+* #RDES246 "Breast Mass"
+  """
+  Breast Mass
+  """
 
 
 // Common Data Elements
-* #RDE1556 "Calcification presence"
+* #RDE1556 "Presence"
   """
   Abnormalcalcificationobservation
   """
@@ -42,7 +46,7 @@ Description: "ACR Common Data Element (CDE) code system"
     RDE1556_unknown
     """
 
-* #RDE1557 "Body side"
+* #RDE1557 "Side"
   """
   Breastlateralityofabnormalityobserved
   """
@@ -59,7 +63,7 @@ Description: "ACR Common Data Element (CDE) code system"
     RDE1557_bilateral
     """
 
-* #RDE1558 "Breast body location clock position"
+* #RDE1558 "Location"
   """
   Clockpositionsoftheabnormalityobserved
   """
@@ -112,7 +116,7 @@ Description: "ACR Common Data Element (CDE) code system"
     RDE1558_twelve o'clock position
     """
 
-* #RDE1559 "Breast body location depth"
+* #RDE1559 "Depth"
   """
   AnteriordepthistheoutermostdepthclosesttothenippleofthebreastMiddledepthinbetweentheanteriorandposteriorportionofthebreastPosteriordepthclosesttothechestwallofthebreast
   """
@@ -172,9 +176,9 @@ Description: "ACR Common Data Element (CDE) code system"
     RDE1562_structure of left half of body
     """
 
-* #RDE1563 "Quadrant of breast"
+* #RDE1563 "Quadrant"
   """
-  RDE1563
+  Quadrant of breast
   """
   * #RDE1563_lowerInner "lowerinner"
     """
@@ -193,9 +197,9 @@ Description: "ACR Common Data Element (CDE) code system"
     RDE1563_upper outer
     """
 
-* #RDE1564 "Region of breast"
+* #RDE1564 "Region"
   """
-  RDE1564
+  Region of breast
   """
   * #RDE1564_axilla "axilla"
     """
@@ -329,84 +333,12 @@ Description: "ACR Common Data Element (CDE) code system"
     RDE1565_vascular
     """
 
-* #RDE1566 "Observed changes"
-  """
-  RDE1566
-  """
-  * #RDE1566_decreaseInCalcifications "decreaseincalcifications"
-    """
-    There is an decrease in the number of calcifications associated
-    with the item being observed. This decrease is from the previous
-    observation of this item.
-    """
-  * #RDE1566_decreaseInNumber "decreaseinnumber"
-    """
-    There is an decrease in the number of items being observed. This
-    decrease is from the previous observation of this item.
-    """
-  * #RDE1566_decreaseInSize "decreaseinsize"
-    """
-    The lesion/mass has decreased in size since. This decrease is
-    from the previous observation of this item.
-    """
-  * #RDE1566_increaseInCalcifications "increaseincalcifications"
-    """
-    increase in calcifications
-    """
-  * #RDE1566_increaseInNumber "increaseinnumber"
-    """
-    There is an increase in the number of items being observed. This
-    increase is from the previous observation of this item.
-    """
-  * #RDE1566_increaseInSize "increaseinsize"
-    """
-    The item being observed has increased in size. This increase is
-    from the previous observation of this item.
-    """
-  * #RDE1566_lessProminent "lessprominent"
-    """
-    The item being observed has decreased in prominance. This decrease
-    is from the previous observation of this item.
-    """
-  * #RDE1566_moreProminent "moreprominent"
-    """
-    The item being observed has increased in prominance. This increase
-    is from the previous observation of this item.
-    """
-  * #RDE1566_new "new"
-    """
-    The item being observed has increased in prominance. This increase
-    is from the previous observation of this item.
-    """
-  * #RDE1566_noLongerSeen "nolongerseen"
-    """
-    The item being observed is no longer visible. It was visible on
-    previous observations.
-    """
-  * #RDE1566_notSignificantlyChanged "notsignificantlychanged"
-    """
-    The item being observed has not significantly changed since the
-    last Mammogram.
-    """
-  * #RDE1566_partiallyRemoved "partiallyremoved"
-    """
-    The item being observed was partially removed since last observation.
-    """
-  * #RDE1566_representsChange "representschange"
-    """
-    The item being observed has changed since the last observation.
-    """
-  * #RDE1566_stable "stable"
-    """
-    The item being observed has remained stable since the last observation.
-    """
-
-* #RDE1567 "Observed count"
+* #RDE1567 "Count"
   """
   RDE1567
   """
 
-* #RDE1568 "Observed distribution"
+* #RDE1568 "Distribution"
   """
   RDE1568
   """
@@ -439,12 +371,12 @@ Description: "ACR Common Data Element (CDE) code system"
     RDE1568_segmental
     """
 
-* #RDE1569 "Observed distribution region width"
+* #RDE1569 "Distribution width"
   """
   Sizeoftheentireregionaffectedbyabnormalityinmm
   """
 
-* #RDE1570 "Observed size"
+* #RDE1570 "Size"
   """
   Sizeofasinglefindingobservedinmm
   """
@@ -661,46 +593,25 @@ Description: "ACR Common Data Element (CDE) code system"
     cysts are the most common 'rim' calcifications.
     """
 
-* #RDE1575 "Cyst presence"
-  """
-  Cystabnormalityobservationonmammography
-  """
-  * #RDE1575_present "present"
-    """
-    RDE1575_present
-    """
-  * #RDE1575_absent "absent"
-    """
-    RDE1575_absent
-    """
-  * #RDE1575_indeterminate "indeterminate"
-    """
-    RDE1575_indeterminate
-    """
-  * #RDE1575_unknown "unknown"
-    """
-    RDE1575_unknown
-    """
-
 * #RDE1576 "Shape"
   """
   RDE1576
   """
-  * #RDE1576_irregularShaped "irregularshaped"
+  * #RDE1576_irregular "irregular"
     """
-    RDE1576_irregular shaped
+    RDE1576_irregular
     """
-  * #RDE1576_lobularShaped "lobularshaped"
+  * #RDE1576_lobular "lobular"
     """
-    RDE1576_lobular shaped
+    RDE1576_lobular
     """
-  * #RDE1576_ovalShaped "ovalshaped"
+  * #RDE1576_oval "oval"
     """
-    RDE1576_oval shaped
+    RDE1576_oval
     """
-  * #RDE1576_roundShaped "roundshaped"
+  * #RDE1576_round "round"
     """
-    RDE1576_round shaped
+    RDE1576_round
     """
 
 * #RDE1577 "Type"
@@ -999,4 +910,25 @@ Description: "ACR Common Data Element (CDE) code system"
   * #RDE1590_none "none"
     """
     RDE1590_none
+    """
+
+* #RDE1602 "Type"
+  """
+  RDE1602
+  """
+  * #RDE1602_mass "mass"
+    """
+    RDE1602_mass
+    """
+  * #RDE1602_intraductal "intraductal"
+    """
+    RDE1602_intraductal
+    """
+  * #RDE1602_partiallySolid "partiallysolid"
+    """
+    RDE1602_partially solid
+    """
+  * #RDE1602_solid "solid"
+    """
+    RDE1602_solid
     """

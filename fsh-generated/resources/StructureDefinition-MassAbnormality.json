@@ -99,8 +99,8 @@
         "patternCodeableConcept": {
           "coding": [
             {
-              "code": "abnormalityMassObservation",
-              "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationCodesCS"
+              "code": "RDES246",
+              "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/RadLexCDE"
             }
           ]
         }
@@ -244,34 +244,34 @@
           "ordered": false,
           "description": "Component slicing"
         },
-        "min": 1
+        "min": 2
       },
       {
-        "id": "Observation.component:massType",
+        "id": "Observation.component:breastMassPresence",
         "path": "Observation.component",
-        "sliceName": "massType",
-        "short": "Mass Abnormality Type component.",
-        "definition": "This slice contains the optional component that refine the Mass Abnormality type.\nThe value of this component is a codeable concept chosen from the MassAbnormalityTypeVS valueset.",
+        "sliceName": "breastMassPresence",
+        "short": "Breast Mass Presence component.",
+        "definition": "This slice contains the required component that specifies the presence or absence of a cyst.\nThe value of this component is a codeable concept chosen from the rde1556-presence valueset.",
         "comment": "This is one component of a group of components that are part of the observation.",
         "min": 1,
         "max": "1"
       },
       {
-        "id": "Observation.component:massType.code",
+        "id": "Observation.component:breastMassPresence.code",
         "path": "Observation.component.code",
-        "short": "Mass Abnormality Type component code.",
-        "definition": "This code identifies the Mass Abnormality Type component.",
+        "short": "Breast Mass Presence component code.",
+        "definition": "This code identifies the Breast Mass Presence component.",
         "patternCodeableConcept": {
           "coding": [
             {
-              "code": "abnormalityMassType",
-              "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodesCS"
+              "code": "RDE1556",
+              "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/RadLexCDE"
             }
           ]
         }
       },
       {
-        "id": "Observation.component:massType.value[x]",
+        "id": "Observation.component:breastMassPresence.value[x]",
         "path": "Observation.component.value[x]",
         "min": 1,
         "type": [
@@ -281,7 +281,45 @@
         ],
         "binding": {
           "strength": "required",
-          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/MassAbnormalityTypeVS"
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/rde1556-presence"
+        }
+      },
+      {
+        "id": "Observation.component:breastMassType",
+        "path": "Observation.component",
+        "sliceName": "breastMassType",
+        "short": "Mass Abnormality Type component.",
+        "definition": "This slice contains the optional component that refine the Mass Abnormality type.\nThe value of this component is a codeable concept chosen from the rde1602-type valueset.",
+        "comment": "This is one component of a group of components that are part of the observation.",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Observation.component:breastMassType.code",
+        "path": "Observation.component.code",
+        "short": "Mass Abnormality Type component code.",
+        "definition": "This code identifies the Mass Abnormality Type component.",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "code": "RDE1602",
+              "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/RadLexCDE"
+            }
+          ]
+        }
+      },
+      {
+        "id": "Observation.component:breastMassType.value[x]",
+        "path": "Observation.component.value[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/rde1602-type"
         }
       },
       {
@@ -289,7 +327,7 @@
         "path": "Observation.component",
         "sliceName": "obsChanges",
         "short": "Observed Change In Abnormality component.",
-        "definition": "This slice contains the optional components that define observed changes in this abnormality.\nThe value of this component is a codeable concept chosen from the RDE1566_ObservedChanges valueset.",
+        "definition": "This slice contains the optional components that define observed changes in this abnormality.\nThe value of this component is a codeable concept chosen from the ObservedChangesVS valueset.",
         "comment": "This is one component of a group of components that are part of the observation.",
         "min": 0,
         "max": "*"
@@ -302,8 +340,8 @@
         "patternCodeableConcept": {
           "coding": [
             {
-              "code": "RDE1566",
-              "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/RadLexCDE"
+              "code": "obsChanges",
+              "system": "http://hl7.org/fhir/us/breast-radiology/CodeSystem/ObservationComponentSliceCodesCS"
             }
           ]
         }
@@ -319,7 +357,7 @@
         ],
         "binding": {
           "strength": "required",
-          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/rde1566-observed-changes"
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/ObservedChangesVS"
         }
       },
       {
@@ -672,7 +710,7 @@
         ],
         "binding": {
           "strength": "required",
-          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/rde1568-observed-distribution"
+          "valueSet": "http://hl7.org/fhir/us/breast-radiology/ValueSet/rde1568-distribution"
         }
       },
       {
